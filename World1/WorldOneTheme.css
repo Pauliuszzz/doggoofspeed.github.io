@@ -1,0 +1,25 @@
+body {
+    font-family: "Arial", sans-serif;
+	background-color: #22C386;
+}
+
+header {
+	background: rgb(34,195,134);
+	background: linear-gradient(0deg, rgba(34,195,134,1) 0%, rgba(184,221,60,1) 100%);
+    text-align: center;
+}
+
+h1, h3, .center {
+    text-align: center;
+	font-weight: bold;
+}
+
+p {
+	background-color: #D38601;
+	background-size: 50%;
+	text-align: center;
+}
+
+button {
+    font-size: 24pt;
+}
