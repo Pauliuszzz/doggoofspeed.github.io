@@ -1,7 +1,7 @@
 randomNumber = Math.floor(Math.random()*10+1);
 
 window.onload = function() {
-	document.getElementById("One").style.display = "none";
+		document.getElementById("One").style.display = "none";
 	document.getElementById("Two").style.display = "none";
 	document.getElementById("Three").style.display = "none";
 	document.getElementById("Four").style.display = "none";
@@ -11,6 +11,16 @@ window.onload = function() {
 	document.getElementById("Eight").style.display = "none";
 	document.getElementById("Nine").style.display = "none";
 	document.getElementById("Ten").style.display = "none";
+		document.getElementById("OneOne").style.display = "none";
+	document.getElementById("TwoTwo").style.display = "none";
+	document.getElementById("ThreeThree").style.display = "none";
+	document.getElementById("FourFour").style.display = "none";
+	document.getElementById("FiveFive").style.display = "none";
+	document.getElementById("SixSix").style.display = "none";
+	document.getElementById("SevenSeven").style.display = "none";
+	document.getElementById("EightEight").style.display = "none";
+	document.getElementById("NineNine").style.display = "none";
+	document.getElementById("TenTen").style.display = "none";
 	
 	if (randomNumber == 1) {
 	document.getElementById("One").style.display = "block";
