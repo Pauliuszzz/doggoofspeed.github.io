@@ -21,6 +21,16 @@ window.onload = function() {
 	document.getElementById("EightEight").style.display = "none";
 	document.getElementById("NineNine").style.display = "none";
 	document.getElementById("TenTen").style.display = "none";
+		document.getElementById("OneOneOne").style.display = "none";
+	document.getElementById("TwoTwoTwo").style.display = "none";
+	document.getElementById("ThreeThreeThree").style.display = "none";
+	document.getElementById("FourFourFour").style.display = "none";
+	document.getElementById("FiveFiveFive").style.display = "none";
+	document.getElementById("SixSixSix").style.display = "none";
+	document.getElementById("SevenSevenSeven").style.display = "none";
+	document.getElementById("EightEightEight").style.display = "none";
+	document.getElementById("NineNineNine").style.display = "none";
+	document.getElementById("TenTenTen").style.display = "none";
 	
 	if (randomNumber == 1) {
 	document.getElementById("One").style.display = "block";
