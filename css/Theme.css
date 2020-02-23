@@ -16,9 +16,29 @@ h1, .center {
 }
 
 p {
-	background-color: #D38601;
-	background-size: 50%;
 	text-align: center;
+	background: #D38601;
+	background-size: 50%;
+	width: 50%;
+	margin:0 auto;
+	border-radius: 10px;
+	border: 5px solid;
+	border-color: #996100;
+	padding: 5px;
+	padding-bottom: 5px;
+}
+
+.reply {
+	text-align: center;
+	background: #D38601;
+	background-size: 50%;
+	width: 50%;
+	margin:0 auto;
+	border-radius: 10px;
+	border: 5px solid;
+	border-color: #9A4800;
+	padding: 5px;
+	padding-bottom: 5px;
 }
 
 button {

@@ -30,6 +30,7 @@ document.getElementById("ButtonOne").onclick = function AnswersOne(){
 	document.getElementById("TenTen").style.display = "block";
 	}
 	document.getElementById("ButtonTwo").disabled = true;
+	document.getElementById("ButtonThree").disabled = false;
 }
 document.getElementById("ButtonTwo").onclick = function AnswersTwo(){
 	if (randomNumber == 1) {
@@ -63,4 +64,5 @@ document.getElementById("ButtonTwo").onclick = function AnswersTwo(){
 	document.getElementById("TenTenTen").style.display = "block";
 	}
 	document.getElementById("ButtonOne").disabled = true;
+	document.getElementById("ButtonThree").disabled = false;
 }

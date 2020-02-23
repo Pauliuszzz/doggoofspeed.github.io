@@ -32,6 +32,8 @@ window.onload = function() {
 	document.getElementById("NineNineNine").style.display = "none";
 	document.getElementById("TenTenTen").style.display = "none";
 	
+	document.getElementById("ButtonThree").disabled = true;
+	
 	if (randomNumber == 1) {
 	document.getElementById("One").style.display = "block";
 	}
