@@ -13,32 +13,31 @@
 <header>
 	<br><h1>The Great Adventure</h1><br>
 <body>
-	<p class="question" id="question-text"></p><br>
+	<p class="scenario" id="scenario-text"></p><br>
 	<p class="reply" id="reply-text"></p><br>
 	<h3><button id="ButtonOne" type="button" class="btn btn-primary" onClick="reply1()">Answer 1</button></h3>
 	<h3><button id="ButtonTwo" type="button" class="btn btn-primary" onClick="reply2()">Answer 2</button></h3>
-	<h3><button id="ButtonThree" type="button" class="btn btn-danger" onClick="next_question()">Continue</button></h3>
+	<h3><button id="ButtonThree" type="button" class="btn btn-danger" onClick="next_scenario()">Continue</button></h3>
 	<script>
-    var qn = 0;
+    var sc = 0;
     text();
     function text() {
-        document.getElementById("question-text").innerHTML = questions[qn].question;
-		document.getElementById("reply-text").innerHTML = replies[qn].reply;
+        document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
     }
 	function reply1() {
-		document.getElementById("reply-text").innerHTML = replies1[qn].reply;
+		document.getElementById("reply-text").innerHTML = scenarios[sc].reply1;
 		document.getElementById("reply-text").style.display = "block";
 		document.getElementById("ButtonThree").disabled = false;
 		document.getElementById("ButtonTwo").disabled = true;
 	}
 	function reply2() {
-		document.getElementById("reply-text").innerHTML = replies2[qn].reply;
+		document.getElementById("reply-text").innerHTML = scenarios[sc].reply2;
 		document.getElementById("reply-text").style.display = "block";
 		document.getElementById("ButtonThree").disabled = false;
 		document.getElementById("ButtonOne").disabled = true;
 	}
-    function next_question(mult) {
-        qn++;
+    function next_scenario(mult) {
+        sc++;
 		document.getElementById("reply-text").style.display = "none";
 		document.getElementById("ButtonOne").disabled = false;
 		document.getElementById("ButtonTwo").disabled = false;
