@@ -64,4 +64,11 @@ scenarios = [
 		"scenario": "You were sleeping, when you overheard festive music. After going to the source, you found a travelling circus. You go to the popcorn stand (1), or talk to a clown sitting on a bench (2)",
 		"reply1": "After going to the popcorn stand you find out that it's closed since it is midnight after all. The stand is painted in very bright colous. If it wasn't next to a circus, it would really <i>pop</i> out.",
 		"reply2": "You go to the clown, but he doesn't respond. He just watches the sunset smiling with his freakish smile."
+	},
+	{
+		//End
+		"scenario": "You have reached the (current) end. To go to the main menu, press \"Continue\".",
+		"reply1": "Press \"Continue\".",
+		"reply2": "Press \"Continue\"."
+	}
 ];

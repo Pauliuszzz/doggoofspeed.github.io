@@ -38,6 +38,12 @@
 	}
     function next_scenario(mult) {
         sc++;
+		if(sc == 12){
+		document.getElementById("ButtonOne").style.display = "none";
+		document.getElementById("ButtonTwo").style.display = "none";
+		document.getElementById("ButtonThree").disabled = false;
+		window.location = "https://doggoofspeed.github.io/";
+		}
 		document.getElementById("reply-text").style.display = "none";
 		document.getElementById("ButtonOne").disabled = false;
 		document.getElementById("ButtonTwo").disabled = false;
