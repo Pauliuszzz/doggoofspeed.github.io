@@ -23,6 +23,11 @@
     text();
     function text() {
         document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
+		if(sc == 11){
+			document.getElementById("ButtonOne").style.display = "none";
+			document.getElementById("ButtonTwo").style.display = "none";
+			document.getElementById("ButtonThree").disabled = false;
+		}
     }
 	function reply1() {
 		document.getElementById("reply-text").innerHTML = scenarios[sc].reply1;
@@ -37,13 +42,10 @@
 		document.getElementById("ButtonOne").disabled = true;
 	}
     function next_scenario(mult) {
-        sc++;
-		if(sc == 12){
-		document.getElementById("ButtonOne").style.display = "none";
-		document.getElementById("ButtonTwo").style.display = "none";
-		document.getElementById("ButtonThree").disabled = false;
-		window.location = "https://doggoofspeed.github.io/";
+		if(sc == 11){
+			window.location = "index.html";
 		}
+        sc++;
 		document.getElementById("reply-text").style.display = "none";
 		document.getElementById("ButtonOne").disabled = false;
 		document.getElementById("ButtonTwo").disabled = false;

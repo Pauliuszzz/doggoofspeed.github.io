@@ -68,7 +68,5 @@ scenarios = [
 	{
 		//End
 		"scenario": "You have reached the (current) end. To go to the main menu, press \"Continue\".",
-		"reply1": "Press \"Continue\".",
-		"reply2": "Press \"Continue\"."
 	}
 ];
