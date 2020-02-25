@@ -1,2 +1,2 @@
 # Adventure
- A project by Vytautas Butėnas
+ A project for fun :)
