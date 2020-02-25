@@ -86,5 +86,21 @@ scenarios = [
 		"score1": 500,
 		"reply2": "You go to the clown, but he doesn't respond. He just watches the sunset smiling with his freakish smile.",
 		"score2": 500
+	},
+	{
+		//Stasiukas the Donkey
+		"scenario": "While walking through a quite densly populated area you hear a donkey. A donkey who is screeching. You can help it (1), or take it for yourself (2)",
+		"reply1": "Apparently the donkey was stuck in a hole where one of the townspeople was going to be buried. After you help him, you investigate its tag. Apparently he is the Stasiukas - the town mayor's personal donkey. Such a weird town this is...",
+		"score1": 500,
+		"reply2": "While you were pleased with your finding, the town's guards weren't. Apparently this wasn't an ordinary animal. He was Stasiukas - the town mayor's personal donkey. Thankfully the guards thought that bringing Stasiukas back to his home was more important than catching you.",
+		"score2": 0
+	},
+	{
+		//Poppie field
+		"scenario": "Out of nowhere a poppy field appeard. It wouldn't be a problem, if your path went around it. But no, it went straight thru the middle of this mesmorising field. You can try your luck and go straight through (1), or just walk around it (2).",
+		"reply1": "After 10 minutes of going throug this red sea of flowers you are safely back on the road. Now you even have some sleeping pills - poppies.",
+		"score1": 1000,
+		"reply2": "When walking you hear something behind the bushes (probably wolves). Oh no. OH NO. <b>OH FUCK!</b>",
+		"score2": 0
 	}
 ];
