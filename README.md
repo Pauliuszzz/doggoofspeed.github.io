@@ -1,2 +1,2 @@
 # Adventure
- This is the real deal
+ A project by Vytautas Butėnas
