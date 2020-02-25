@@ -81,7 +81,7 @@ scenarios = [
 	},
 	{
 		//Circus
-		"scenario": "You were sleeping, when you overheard festive music. After going to the source, you found a travelling circus. You go to the popcorn stand (1), or talk to a clown sitting on a bench (2)",
+		"scenario": "You were sleeping, when you overheard festive music. After going to the source, you found a travelling circus. You can go to the popcorn stand (1), or talk to a clown sitting on a bench (2)",
 		"reply1": "After going to the popcorn stand you find out that it's closed since it is midnight after all. The stand is painted in very bright colous. If it wasn't next to a circus, it would really <i>pop</i> out.",
 		"score1": 500,
 		"reply2": "You go to the clown, but he doesn't respond. He just watches the sunset smiling with his freakish smile.",
@@ -101,6 +101,14 @@ scenarios = [
 		"reply1": "After 10 minutes of going throug this red sea of flowers you are safely back on the road. Now you even have some sleeping pills - poppies.",
 		"score1": 1000,
 		"reply2": "When walking you hear something behind the bushes (probably wolves). Oh no. OH NO. <b>OH FUCK!</b>",
+		"score2": 0
+	},
+	{	
+		//Sweet House
+		"scenario": "While walking through a forest you find a rather sweet looking house. It may or may not be made out of candy. You can knock on the door (1), or you can try to eat the house (2).",
+		"reply1": "The door opens an you meet a rather old black woman who can only say \"Sweetie\" for some reason. She gives you some cookies, and wishes you luck.",
+		"score1": 1000,
+		"reply2": "You try to eat it, but it's wood. I know, such a surprise, such a plot twist. A house that isn't made out of candy? Outrageus! Why would anyone with a grain of brain make a house out of candy? Anyways, your mouth hurts now.",
 		"score2": 0
 	}
 ];
