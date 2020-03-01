@@ -1,6 +1,6 @@
 @font-face {
-    font-family: 'silkscreennormal';
-    src: url('slkscr-webfont.woff') format('woff');
+    font-family: 'Bitmgothic';
+    src: url('Bitmgothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -15,22 +15,33 @@ header {
     text-align: center;
 }
 
-h1, .center {
-	font-family: silkscreennormal;
+h1 {
+	color: #FCF6F5FF;
 	font-size: 300%;
     text-align: center;
 	font-weight: bold;
 }
 
+.project {
+	font-family: Century Gothic;
+}
+
+.passage {
+	text-shadow: 2px 2px #2BAE66FF;
+	font-family: Bitmgothic;
+}
+
 p {
 	text-align: center;
-	background: #D38601;
+	background-color:rgba(196,223,230,0);
 	background-size: 50%;
+	color: white;
+	font-size: 1rem;
 	width: 50%;
 	margin: 10px auto;
 	border-radius: 10px;
-	border: 5px solid;
-	border-color: #996100;
+	border: 2px solid;
+	border-color: #66A5AD;
 	padding: 5px;
 	padding-bottom: 5px;
 }

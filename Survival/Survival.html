@@ -2,11 +2,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
-	<title>Project Passage - Arcade</title>
+	<title>Project Passage - Survival</title>
 	<meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="..\css\Theme.css" rel="stylesheet" type="text/css">
-	<link href="ArcadeTheme.css" rel="stylesheet" type="text/css">
+	<link href="SurvivalTheme.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="..\js\Onload.js"></script>
 	<script type="text/javascript" src="Scenarios.js"></script>
@@ -28,6 +28,7 @@
 	<h3><button id="ButtonFive" type="button" class="btn btn-outline-success shadow" onClick="location.reload();">Retry</button></h3>
 	<script>
     var sc = 0;
+	var death = 0;
 	var score = 0;
 	
 	//Randomiser
@@ -44,13 +45,14 @@
     function text() {
         document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
 		document.getElementById("score-text").innerHTML = "Score: " + score;
-		if(sc == 10){
-			document.getElementById("scenario-text").innerHTML = "You have reached the (current) end. To go to the main menu, press \"Continue\".";
+		if(death == 1){
+			document.getElementById("scenario-text").innerHTML = "You have died. To go to the main menu, press \"Continue\".";
 			document.getElementById("ButtonOne").style.display = "none";
 			document.getElementById("ButtonTwo").style.display = "none";
 			document.getElementById("ButtonThree").style.display = "none";
 			document.getElementById("ButtonFour").disabled = false;
 			document.getElementById("ButtonFive").style.display = "initial";
+			death = 2;
 		}
     }
 	
@@ -62,6 +64,7 @@
 		document.getElementById("ButtonTwo").disabled = true;
 		document.getElementById("ButtonThree").disabled = true;
 		score = score + scenarios[sc].score1;
+		death = scenarios[sc].death1;
 	}
 	function reply2() {
 		document.getElementById("reply-text").innerHTML = scenarios[sc].reply2;
@@ -70,6 +73,7 @@
 		document.getElementById("ButtonOne").disabled = true;
 		document.getElementById("ButtonThree").disabled = true;
 		score = score + scenarios[sc].score2;
+		death = scenarios[sc].death2;
 	}
 	function reply3() {
 		document.getElementById("reply-text").innerHTML = scenarios[sc].reply3;
@@ -78,11 +82,12 @@
 		document.getElementById("ButtonOne").disabled = true;
 		document.getElementById("ButtonTwo").disabled = true;
 		score = score + scenarios[sc].score3;
+		death = scenarios[sc].death3;
 	}
 	
 	//Next scenario
     function next_scenario(mult) {
-		if(sc == 10){
+		if(death == 2){
 			window.history.back();;
 		}
         sc++;
