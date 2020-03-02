@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
 <head>
 	<title>Project Passage - Arcade</title>
-	<meta name="google" content="notranslate">
+    <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<link href="..\css\Theme.css" rel="stylesheet" type="text/css">
 	<link href="ArcadeTheme.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script language="javascript" type="text/javascript" src="..\js\Onload.js"></script>
 	<script type="text/javascript" src="Scenarios.js"></script>
 </head>
 
 <header>
+	<a href="..\index.html" class="navigation" style="float: left"><i class="material-icons-outlined" style="color: #FFFFFF">home</i></a>
+	<a onClick="location.reload();" class="navigation" style="float: right"><i class="material-icons-outlined" style="color: #FFFFFF">refresh</i></a>
 	<div>
 	<br><h1 class="project">Project</h1>
 	<h1 class="passage">Passage</h1><br>
@@ -21,9 +24,9 @@
 	<p class="scenario shadow" id="scenario-text"></p>
 	<p class="reply shadow" id="reply-text"></p>
 	<p class="score shadow" id="score-text"></p>
-	<h3><button id="ButtonOne" type="button" class="btn btn-outline-primary shadow" onClick="reply1()">Answer 1</button></h3>
-	<h3><button id="ButtonTwo" type="button" class="btn btn-outline-primary shadow" onClick="reply2()">Answer 2</button></h3>
-	<h3><button id="ButtonThree" type="button" class="btn btn-outline-primary shadow" onClick="reply3()">Answer 3</button></h3>
+	<h3><button id="ButtonOne" type="button" class="btn btn-outline-secondary shadow" onClick="reply1()">Answer 1</button></h3>
+	<h3><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()">Answer 2</button></h3>
+	<h3><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()">Answer 3</button></h3>
 	<h3><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></h3>
 	<h3><button id="ButtonFive" type="button" class="btn btn-outline-success shadow" onClick="location.reload();">Retry</button></h3>
 	<script>
@@ -83,7 +86,7 @@
 	//Next scenario
     function next_scenario(mult) {
 		if(sc == 10){
-			window.history.back();;
+			window.history.back();
 		}
         sc++;
 		document.getElementById("reply-text").style.display = "none";

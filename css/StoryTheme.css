@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff') format('woff');
+    src: url('..\css\Bitmgothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 body {
     font-family: "Arial", sans-serif;
-	background-color: #0a7900;
+	background-color: #003b46;
 }
 
 header {
-	background: #DCE35B;
-	background: -webkit-linear-gradient(to bottom, #1d9f0e, #0a7900);
-	background: linear-gradient(to bottom, #1d9f0e, #0a7900);
+	background: rgb(0,59,70);
+	background: linear-gradient(0deg, rgba(0,59,70,1) 0%, rgba(7,87,91,1) 100%);
     text-align: center;
 }
+
 
 h1 {
 	color: #FCF6F5FF;
@@ -28,7 +28,7 @@ h1 {
 }
 
 .passage {
-	text-shadow: 2px 2px #00B655;
+	text-shadow: 2px 2px #2BAE66FF;
 	font-family: Bitmgothic;
 }
 
@@ -52,6 +52,8 @@ p {
 }
 
 .score{
+	background-color:rgba(164,228,164,0);
+	border-color: rgb(100, 200, 100);
 	width: fit-content;
 	display: inline-block;
 }
@@ -59,4 +61,7 @@ p {
 button {
 	width: 25%;
 	text-align: center;
+}
+.navigation{ 
+	margin: 10px 10px 10px;
 }
