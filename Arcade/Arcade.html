@@ -3,11 +3,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
 <head>
 	<title>Project Passage - Arcade</title>
+	<link rel="shortcut icon" href="..\favicon.ico" />
     <meta name="google" content="notranslate">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<link href="..\css\Theme.css" rel="stylesheet" type="text/css">
 	<link href="ArcadeTheme.css" rel="stylesheet" type="text/css">
 	<script language="javascript" type="text/javascript" src="..\js\Onload.js"></script>
 	<script type="text/javascript" src="Scenarios.js"></script>
@@ -46,6 +46,9 @@
 	//Text
     function text() {
         document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
+		document.getElementById("ButtonOne").innerHTML = scenarios[sc].answer1;
+		document.getElementById("ButtonTwo").innerHTML = scenarios[sc].answer2;
+		document.getElementById("ButtonThree").innerHTML = scenarios[sc].answer3;
 		document.getElementById("score-text").innerHTML = "Score: " + score;
 		if(sc == 10){
 			document.getElementById("scenario-text").innerHTML = "You have reached the (current) end. To go to the main menu, press \"Continue\".";
