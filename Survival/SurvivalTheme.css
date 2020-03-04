@@ -59,8 +59,15 @@ p {
 }
 
 button {
-	width: 25%;
 	text-align: center;
+}
+
+.desktop{
+	width: 25%;
+}
+
+.mobile{
+	width: 50%;
 }
 
 .navigation{ 
