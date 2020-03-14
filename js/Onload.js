@@ -1,21 +1,18 @@
 window.onload = function onload() {
-	document.getElementById("ButtonFour").disabled = true;
-	document.getElementById("ButtonFive").style.display = "none"
-	document.getElementById("reply-text").style.display = "none";
+	$("#ButtonFour").prop('disabled', true);
+	$("#reply-text").hide()
 	if(window.innerWidth < 600){
-	document.getElementById("ButtonOne").classList.add("mobile", "btn-sm")
-	document.getElementById("ButtonTwo").classList.add("mobile", "btn-sm")
-	document.getElementById("ButtonTwo").classList.add("mobile", "btn-sm")
-	document.getElementById("ButtonThree").classList.add("mobile", "btn-sm")
-	document.getElementById("ButtonFour").classList.add("mobile", "btn-sm")
-	document.getElementById("ButtonFive").classList.add("mobile", "btn-sm")
+	$("#ButtonOne").addClass("mobile btn-sm")
+	$("#ButtonTwo").addClass("mobile btn-sm")
+	$("#ButtonTwo").addClass("mobile btn-sm")
+	$("#ButtonThree").addClass("mobile btn-sm")
+	$("#ButtonFour").addClass("mobile btn-sm")
 	}
 	if(window.innerWidth > 600){
-	document.getElementById("ButtonOne").classList.add('desktop')
-	document.getElementById("ButtonTwo").classList.add('desktop')
-	document.getElementById("ButtonTwo").classList.add('desktop')
-	document.getElementById("ButtonThree").classList.add('desktop')
-	document.getElementById("ButtonFour").classList.add('desktop')
-	document.getElementById("ButtonFive").classList.add('desktop')
+	$("#ButtonOne").addClass("desktop")
+	$("#ButtonTwo").addClass("desktop")
+	$("#ButtonTwo").addClass("desktop")
+	$("#ButtonThree").addClass("desktop")
+	$("#ButtonFour").addClass("desktop")
 	}
 }

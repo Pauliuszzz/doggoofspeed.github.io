@@ -127,14 +127,12 @@ button {
     color: #424242;
     box-shadow: -1px -1px #000 !important;
     outline: 0 !important;
-    background: url(background.bmp);
 }
 .btn:active {
     border: 2px inset #fff !important;
     color: #424242;
     box-shadow: -1px -1px #000 !important;
     outline: 0 !important;
-    background: url(background.bmp);
 }
 
 .btn-primary{

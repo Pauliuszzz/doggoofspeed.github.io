@@ -51,7 +51,7 @@ p {
 	width: 50%;
 }
 
-.score{
+.hp {
 	background-color:rgba(0,0,0,0);
 	border-color: #FF0000;
 	width: fit-content;
@@ -62,14 +62,14 @@ button {
 	text-align: center;
 }
 
-.desktop{
+.desktop {
 	width: 25%;
 }
 
-.mobile{
+.mobile {
 	width: 50%;
 }
 
-.navigation{ 
+.navigation { 
 	margin: 10px 10px 10px;
 }

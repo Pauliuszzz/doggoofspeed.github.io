@@ -52,7 +52,6 @@
 	<h3><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()"></button></h3>
 	<h3><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()"></button></h3>
 	<h3><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></h3>
-	<h3><button id="ButtonFive" type="button" class="btn btn-outline-success shadow" onClick="location.reload();">Retry</button></h3>
 	<script>
     var sc = 0;
 	var hp = 100;
@@ -81,16 +80,15 @@
 		}
 		if(hp <= 0 || sc == 15){
 			if(sc == 15){
-			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home... To go to the main menu, press \"Continue\".");
+			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
 			}
 			if(hp <= 0){
-			$("#scenario-text").html("You have died. To go to the main menu, press \"Continue\".");
+			$("#scenario-text").html("You have died. To go to the main menu, press the home button.");
 			}
 			$("#ButtonOne").hide();
 			$("#ButtonTwo").hide();
 			$("#ButtonThree").hide();
-			$("#ButtonFour").prop('disabled', false);
-			$("#ButtonFive").show();
+			$("#ButtonFour").hide();
 		}
     }
 	
@@ -122,9 +120,6 @@
 	
 	//Next scenario
     function next_scenario(mult) {
-		if(hp <= 0 || sc == 15){
-			window.history.back();
-		}
         sc++;
 		$("#reply-text").hide();
 		$("#ButtonOne").prop('disabled', false);
