@@ -24,9 +24,9 @@
 	<p class="scenario shadow" id="scenario-text"></p>
 	<p class="reply shadow" id="reply-text"></p>
 	<p class="score shadow" id="score-text"></p>
-	<h3><button id="ButtonOne" type="button" class="btn btn-outline-secondary shadow" onClick="reply1()">Answer 1</button></h3>
-	<h3><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()">Answer 2</button></h3>
-	<h3><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()">Answer 3</button></h3>
+	<h3><button id="ButtonOne" type="button" class="btn btn-outline-secondary shadow" onClick="reply1()"></button></h3>
+	<h3><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()"></button></h3>
+	<h3><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()"></button></h3>
 	<h3><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></h3>
 	<h3><button id="ButtonFive" type="button" class="btn btn-outline-success shadow" onClick="location.reload();">Retry</button></h3>
 	<script>
@@ -45,44 +45,44 @@
 	
 	//Text
     function text() {
-        document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
-		document.getElementById("ButtonOne").innerHTML = scenarios[sc].answer1;
-		document.getElementById("ButtonTwo").innerHTML = scenarios[sc].answer2;
-		document.getElementById("ButtonThree").innerHTML = scenarios[sc].answer3;
-		document.getElementById("score-text").innerHTML = "Score: " + score;
+        $("#scenario-text").html(scenarios[sc].scenario);
+		$("#ButtonOne").html(scenarios[sc].answer1);
+		$("#ButtonTwo").html(scenarios[sc].answer2);
+		$("#ButtonThree").html(scenarios[sc].answer3);
+		$("#score-text").html("Score: " + score);
 		if(sc == 10){
-			document.getElementById("scenario-text").innerHTML = "You have reached the (current) end. To go to the main menu, press \"Continue\".";
-			document.getElementById("ButtonOne").style.display = "none";
-			document.getElementById("ButtonTwo").style.display = "none";
-			document.getElementById("ButtonThree").style.display = "none";
-			document.getElementById("ButtonFour").disabled = false;
-			document.getElementById("ButtonFive").style.display = "initial";
+			$("#scenario-text").html("Your final score is:");
+			$("#ButtonOne").hide();
+			$("#ButtonTwo").hide();
+			$("#ButtonThree").hide();
+			$("#ButtonFour").prop('disabled', false);
+			$("#ButtonFive").show();
 		}
     }
 	
 	//Replies
 	function reply1() {
-		document.getElementById("reply-text").innerHTML = scenarios[sc].reply1;
-		document.getElementById("reply-text").style.display = "block";
-		document.getElementById("ButtonFour").disabled = false;
-		document.getElementById("ButtonTwo").disabled = true;
-		document.getElementById("ButtonThree").disabled = true;
+		$("#reply-text").html(scenarios[sc].reply1);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
 		score = score + scenarios[sc].score1;
 	}
 	function reply2() {
-		document.getElementById("reply-text").innerHTML = scenarios[sc].reply2;
-		document.getElementById("reply-text").style.display = "block";
-		document.getElementById("ButtonFour").disabled = false;
-		document.getElementById("ButtonOne").disabled = true;
-		document.getElementById("ButtonThree").disabled = true;
+		$("#reply-text").html(scenarios[sc].reply2);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
 		score = score + scenarios[sc].score2;
 	}
 	function reply3() {
-		document.getElementById("reply-text").innerHTML = scenarios[sc].reply3;
-		document.getElementById("reply-text").style.display = "block";
-		document.getElementById("ButtonFour").disabled = false;
-		document.getElementById("ButtonOne").disabled = true;
-		document.getElementById("ButtonTwo").disabled = true;
+		$("#reply-text").html(scenarios[sc].reply3);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonTwo").prop('disabled', true);
 		score = score + scenarios[sc].score3;
 	}
 	
@@ -92,12 +92,11 @@
 			window.history.back();
 		}
         sc++;
-		document.getElementById("reply-text").style.display = "none";
-		document.getElementById("ButtonOne").disabled = false;
-		document.getElementById("ButtonTwo").disabled = false;
-		document.getElementById("ButtonThree").disabled = false;
-		document.getElementById("ButtonFour").disabled = true;
-        prev_answer = mult;
+		$("#reply-text").hide();
+		$("#ButtonOne").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', false);
+		$("#ButtonThree").prop('disabled', false);
+		$("#ButtonFour").prop('disabled', true);
         text();
     }
 </script>

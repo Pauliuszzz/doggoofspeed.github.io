@@ -43,72 +43,68 @@
 	
 	//Text
     function text() {
-        document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
-		document.getElementById("ButtonOne").innerHTML = scenarios[sc].answer1;
-		document.getElementById("ButtonTwo").innerHTML = scenarios[sc].answer2;
-		document.getElementById("ButtonThree").innerHTML = scenarios[sc].answer3;
+        $("#scenario-text").html(scenarios[sc].scenario);
+		$("#ButtonOne").html(scenarios[sc].answer1);
+		$("#ButtonTwo").html(scenarios[sc].answer2);
+		$("#ButtonThree").html(scenarios[sc].answer3);
 		if(hp >=0){
-		document.getElementById("hp-text").innerHTML = "HP: " + hp;
+		$("#hp-text").html("HP: " + hp);
 		}
 		if(hp < 0){
-		document.getElementById("hp-text").innerHTML = "HP: 0";
+		$("#hp-text").html("HP: 0");
 		}
 		if(hp <= 0 || sc == 15){
 			if(sc == 15){
-			document.getElementById("scenario-text").innerHTML = "You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home... To go to the main menu, press \"Continue\".";
+			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home... To go to the main menu, press \"Continue\".");
 			}
 			if(hp <= 0){
-			document.getElementById("scenario-text").innerHTML = "You have died. To go to the main menu, press \"Continue\".";
+			$("#scenario-text").html("You have died. To go to the main menu, press \"Continue\".");
 			}
-			document.getElementById("ButtonOne").style.display = "none";
-			document.getElementById("ButtonTwo").style.display = "none";
-			document.getElementById("ButtonThree").style.display = "none";
-			document.getElementById("ButtonFour").disabled = false;
-			document.getElementById("ButtonFive").style.display = "initial";
+			$("#ButtonOne").hide();
+			$("#ButtonTwo").hide();
+			$("#ButtonThree").hide();
+			$("#ButtonFour").prop('disabled', false);
+			$("#ButtonFive").show();
 		}
     }
 	
 	//Replies
 	function reply1() {
-		document.getElementById("reply-text").innerHTML = scenarios[sc].reply1;
-		document.getElementById("reply-text").style.display = "block";
-		document.getElementById("ButtonFour").disabled = false;
-		document.getElementById("ButtonTwo").disabled = true;
-		document.getElementById("ButtonThree").disabled = true;
+		$("#reply-text").html(scenarios[sc].reply1);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
 		hp = hp - scenarios[sc].damage1;
-		death = scenarios[sc].death1;
 	}
 	function reply2() {
-		document.getElementById("reply-text").innerHTML = scenarios[sc].reply2;
-		document.getElementById("reply-text").style.display = "block";
-		document.getElementById("ButtonFour").disabled = false;
-		document.getElementById("ButtonOne").disabled = true;
-		document.getElementById("ButtonThree").disabled = true;
+		$("#reply-text").html(scenarios[sc].reply2);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
 		hp = hp - scenarios[sc].damage2;
-		death = scenarios[sc].death2;
 	}
 	function reply3() {
-		document.getElementById("reply-text").innerHTML = scenarios[sc].reply3;
-		document.getElementById("reply-text").style.display = "block";
-		document.getElementById("ButtonFour").disabled = false;
-		document.getElementById("ButtonOne").disabled = true;
-		document.getElementById("ButtonTwo").disabled = true;
+		$("#reply-text").html(scenarios[sc].reply3);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonTwo").prop('disabled', true);
 		hp = hp - scenarios[sc].damage3;
-		death = scenarios[sc].death3;
 	}
 	
 	//Next scenario
     function next_scenario(mult) {
-		if(document.getElementById("ButtonThree").style.display == "none"){
+		if(hp <= 0 || sc == 15){
 			window.history.back();
 		}
         sc++;
-		document.getElementById("reply-text").style.display = "none";
-		document.getElementById("ButtonOne").disabled = false;
-		document.getElementById("ButtonTwo").disabled = false;
-		document.getElementById("ButtonThree").disabled = false;
-		document.getElementById("ButtonFour").disabled = true;
-        prev_answer = mult;
+		$("#reply-text").hide();
+		$("#ButtonOne").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', false);
+		$("#ButtonThree").prop('disabled', false);
+		$("#ButtonFour").prop('disabled', true);
         text();
     }
 </script>
