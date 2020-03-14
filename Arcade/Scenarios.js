@@ -157,16 +157,16 @@ scenarios = [
 	},
 	{
 		//Poppy field
-		"scenario": "Out of nowhere a poppy field appeared. It wouldn't be a problem if your path went around it. But no, it went straight through the middle of this mesmerizing field.",
-		"reply1": "After 10 minutes of going through this red sea of flowers, you are safely back on the road. Now you even have some sleeping pills - poppies.",
+		"scenario": "Out of nowhere a poppy field appeared. It wouldn't be a problem if your path went around it. But no, it went straight through.",
+		"reply1": "After 10 minutes of going through the flowers, you are safely back on the road. Now you even have some sleeping pills - poppies.",
 		"answer1": "Go straight through",
 		"score1": 1000,
 		"reply2": "When walking you hear something behind the bushes (probably wolves). Oh no. OH NO. <b>OH FUCK!</b>.",
 		"answer2": "Just walk around it",
 		"score2": 0,
-		"reply3": "You turn around and go back until you find an intersection. You choose to go some other way and skip the poppy field.",
-		"answer3": "Turn around and go back",
-		"score3": 500
+		"reply3": "Apparently you started screaming like an idiot, you ran like one too. Atleast that is what the townsfolk told you after you woke up in a hospital. They didn't let you out for 2 days.",
+		"answer3": "Have a mental breakdown",
+		"score3": 250,
 	},
 	{	
 		//Sweet House
@@ -174,7 +174,7 @@ scenarios = [
 		"reply1": "The door opens and you meet a rather old black woman who can only say \"Sweetie\" for some reason. She gives you some cookies, and wishes you luck.",
 		"answer1": "Knock on the door",
 		"score1": 1000,
-		"reply2": "You try to eat it, but it's wood. I know, such a surprise, such a plot twist. A house that isn't made out of candy? Outrageous! Why would anyone with a grain of brain make a house out of candy? Anyway, your mouth hurts now.",
+		"reply2": "You try to eat it, but it's wood. I know, such a surprise, such a plot twist. A house that isn't made out of candy? Outrageous!  Why would anyone with a brain not make a house out of candy? Anyway, your mouth hurts now.",
 		"answer2": "Try to eat the house",
 		"score2": 0,
 		"reply3": "Ƭ̶͇̬̈́̑́̋̀̀̎̽́̾̓̔͒̌́̚̚н̴̢̨̙͙̞̹̯̘͈̠̼̣̹̩͚̖̩̰̠͕͍̦͂̆̀̿͋͊͑ͅɛ̴̨̢̛̪͖̬̩̰̰̠̯̻̟̙͓̹͉̒͐͛̑̐̉̽̾̊͊̐̇̐̀̓́̀̑́͒̈́̈́͋̈̔͆͆̿̽̓̿̎̕͝ ̶̧̞̩̫͕̰̠̮̣̮̱̞͍̆͗̈́͒̐͛̀̋͗̎̈́͆̋͌͐͒́͗̏̋̿̋̇͂̔͂̾͑͊͋̇̊̀̊͗͗͘̕͜͝ͅͅʌ̷̧̡̨̧̮̬̤͚̰̬̘͚͖̮̙͇̯̝̠̬̪͚̬͖̬̥̹̺̰̬̖̪͊̑͗͝ͅσ̴͕̻̬̜̪̠̤̫̥͎̠͖̲̗̞̟͉̞͙͚͇̺̩͈̝̯̖̦̌̿̈́̅͘͜͜͜͝ΐ̶̧̛̛̛̣͙̯͚̤̱̦͈̩͙͌͂̊́͌͗̑͆̎̀̆͌̒̍͋̈́̆͂̑́̓̅̅̒̕͘͘̚͝∂̸̡̢̛̬̳͚͔͇̹̝̰͕̰̣̣̯͈̝̭̲̗̦̬̰̤̼̿͌̆͒͑̔̋͒͋͊̋̿̈́́̒̅̈́̓̾͑͘͘̕͝ ̸̡̛̠̜͙̤̘̥̺̠̥̺͍͕̝̈́̽̈́̒̄̔̀̌̌̿̐͑̎̋̾̿̐͌̄̉̍̇̅͆̏́͐͐̎̌͛̕̕͝ͅc̷̢̧̢̨̖̬̲̲͓͙̟̳̝̜̯͉̦͓̰̯̝͈̰̬̰͍̯̰͎̜̎̅̈́͒̃̿͆̀́̾̔̂̆͛̇̚̕͝͠͠σ̸̢̡̡̛͍̱̹̲̟̰͍͔̝̻͚̳̖͉͆͐̆̿̊̇̔͌̏̍͊̈́͊͌́͂̀̃̓̂͂͐͒́͊̄͌̇͘͝͠͝и̷̜͖̫̹̠̫̗̭̫̔͊̄̈͂̈́͋̎̍̃̍͌̔ƨ̴̡̛̟̟̤̲̺͔̙͔̖̪̈́͛͊̅͛̂̉̔͊͌̈́͐̀̿̓͗̅̑̅͆̔̒̕̕͝͝͠͝ͅʋ̸̝̣̱̈̋͂̃͆̏́̔͑̊͑̔̆̓̉͗̅͐͂̃̀͗̄͂̎̉̽͒̋̄͂̀̃̕̚̕͝͝м̸̢̡̡̢̨͓̣̬̹̩͔̮̜̙̥̮̟̩̺̫̤̗͎̟̻̝̼͉̣̥̞͎̺̒͛̍͗̋͊̃̆͊̏̐ɛ̵̧̧̧̡̳̯̺͚̩̳͓͓̭̟̺̰̟̦͔̘̠̟̤̬̟̰͖̪͚͉̣͎̄̄̽͊͌̓͊̐̉̐͆͜͜ƨ̸̧̞̙̲̱̗̤̥̖̹̞͍͍̜̘̭̐̂̀̾̇̅͋͋̆̃̽́̃̌̿́̈́̐̇̑̄̄̐́͂͐͘͜ͅ ̴̢̟̮̳̗͕̫̖͍̪̻̳̦̯̭̳̲̥̝̌̔͑̅̎́̓̚ͅɛ̶̫̳̩͓̈́̉̓̈͋͊̉̆̉͗̓͗̈̌̿̓͑̀͆̓̂̓͋͑̏́̈́̅̐̀͝͝͠ʌ̵̳̟̘̼͈̠̥͑̐̄̊̓̄̐̈́͗͆̊͛̔ɛ̸̢̧̧̙̳̺̟͉̠̺̗̩̻̣͓̗̺̟̮̜̰̰̓̌̂̈̂̍̍͑̊̍̓͑̋̒̄̈́̂̇͌̃̏̑͌͌̔͘͘̚͜͜͝͝ͅя̸̛̛̛͍̥̱̖̻̻̹̹̤̬̭̺͇̤͈̯̤͕͕͈̥̰̅̎͌̆͐͐̏̆̅͑̉͂̏̐̄͋͑̿͑̿͆̎̃̒͒̓̑̓͒̊͌͘͝ͅʏ̴̢̥̬͙̪͓̙̻͎̰̜̄̉̐̊̀̊̽̒̾̽̈̋͋͗̇͛̅̕͠т̴̝̯͇͔̬͖̐̉̉͛̐̉̑͛̌̚̚͠н̵̧̨̨͖͈͓̬̳͉̳͈̯̟͓̻̞̹̜̟͍̤̯̱̜̣͓̞͔͕͍̜̬̪̍̋̒̇̈́̔͐͐̽̀̉ͅι̶̳̐̀̒̈́̿̈͗͑͂͊̄̎͂̀̌̓́̍̍͒̾̑̀̏̒̈́̏̓̐̃͘͘̕͠и̴̧̧̡̛̯̺̬̻̰̖̮̇̌͑͐̎͐̾̒̓̓̐͑͋͘͘̕͜͝͝ɢ̶̧̛̛̩̙̜͔̀̈̏̉̀͗͐̀͐̀̈́͗̑͆́̀͐̎͑͒̈́͛̒͆̿̂̂͑́͗̌̇̑͜͠",
@@ -192,6 +192,19 @@ scenarios = [
 		"score2": 0,
 		"reply3": "After talking with him for 5 minutes you are sure that he is a <i>noob</i>, who doesn't even know he's a noob who doesn't even know all the chemical compounds inside the most popular modern-day fizzy drinks.",
 		"answer3": "Talk with him about soda",
+		"score3": 1000
+	},
+	{
+		//GPS
+		"scenario": "In the middle of the road you find a GPS that somebody lost",
+		"reply1": "You leave it. It is not like anyone needs that <em>boomer</em> trash anymore...",
+		"answer1": "Leave it",
+		"score1": 500,
+		"reply2": "You try to turn this ancient machine on, but it doesn't respond. Of course even if it had some power inside, it wouldn't be of any use to you.",
+		"answer2": "See if it's working",
+		"score2": 500,
+		"reply3": "After an hour you realise how lucky you were, when a GPS collector approches you asking for help. Of course you realise what he needs, you give your findings back and get a \"Thank you\" in return.",
+		"answer3": "Take it just because",
 		"score3": 1000
 	}
 ];

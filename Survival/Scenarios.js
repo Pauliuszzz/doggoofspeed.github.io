@@ -8,7 +8,7 @@ scenarios = [
 		"reply2": "You try to power it up, but the badly damaged engine blows up. You die.",
 		"answer2": "Try to power it up",
 		"damage2": 100,
-		"reply3": "It started raining in the midnight, so I guess staying in the plane was definitely worth it,",
+		"reply3": "It rained during the night, so I guess staying in the plane was worth it,",
 		"answer3": "Use it as a bed",
 		"damage3": 0,
 	},
@@ -148,7 +148,7 @@ scenarios = [
 		"reply1": "Apparently the donkey was stuck in a hole where one of the townspeople was going to be buried. After you help him, you investigate its tag. Apparently, he is the Stasiukas - the town mayor's personal donkey. Such a weird town this is...",
 		"answer1": "Help it",
 		"damage1": 0,
-		"reply2": "While you were pleased with your finding, the town's guards weren't. Apparently, this wasn't an ordinary animal. He was Stasiukas - the town mayor's personal donkey. You tried to run, but the guard's arrows were faster than you. You died.",
+		"reply2": "While you were pleased with your finding, the town's guards weren't. Apparently, that wasn't an ordinary animal. He was Stasiukas - the town mayor's personal donkey. You tried to run, but the guard's arrows were faster than you. You died.",
 		"answer2": "Take it for yourself",
 		"damage2": 100,
 		"reply3": "You put it inside, grab some popcorn, and watch the two battle it out. It's animal cruelty, but no one else sees it, so it's fine.",
@@ -157,16 +157,16 @@ scenarios = [
 	},
 	{
 		//Poppy field
-		"scenario": "Out of nowhere a poppy field appeared. It wouldn't be a problem if your path went around it. But no, it went straight through the middle of this mesmerizing field.",
-		"reply1": "After 10 minutes of going through this red sea of flowers, you are safely back on the road. Now you even have some sleeping pills - poppies.",
+		"scenario": "Out of nowhere a poppy field appeared. It wouldn't be a problem if your path went around it. But no, it went straight through.",
+		"reply1": "After 10 minutes of going through the flowers, you are safely back on the road. Now you even have some sleeping pills - poppies.",
 		"answer1": "Go straight through",
 		"damage1": 0,
 		"reply2": "When walking you hear something behind the bushes (probably wolves). Oh no. OH NO. <b>OH FUCK!</b>.",
 		"answer2": "Just walk around it",
 		"damage2": 100,
-		"reply3": "You turn around and go back until you find an intersection. You choose to go some other way and skip the poppy field.",
-		"answer3": "Turn around and go back",
-		"damage3": 0,
+		"reply3": "Apparently you started screaming like an idiot, you ran like one too. Atleast that is what the townsfolk told you after you woke up in a hospital. They didn't let you out for 2 days.",
+		"answer3": "Have a mental breakdown",
+		"damage3": 20,
 	},
 	{	
 		//Sweet House
@@ -174,7 +174,7 @@ scenarios = [
 		"reply1": "The door opens and you meet a rather old black woman who can only say \"Sweetie\" for some reason. She gives you some cookies, and wishes you luck.",
 		"answer1": "Knock on the door",
 		"damage1": 0,
-		"reply2": "You try to eat it, but it's wood. I know, such a surprise, such a plot twist. A house that isn't made out of candy? Outrageous! Why would anyone with a grain of brain make a house out of candy? Anyway, your mouth hurts now.",
+		"reply2": "You try to eat it, but it's wood. I know, such a surprise, such a plot twist. A house that isn't made out of candy? Outrageous! Why would anyone with a brain not make a house out of candy? Anyway, your mouth hurts now.",
 		"answer2": "Try to eat the house",
 		"damage2": 40,
 		"reply3": "Ƭ̶͇̬̈́̑́̋̀̀̎̽́̾̓̔͒̌́̚̚н̴̢̨̙͙̞̹̯̘͈̠̼̣̹̩͚̖̩̰̠͕͍̦͂̆̀̿͋͊͑ͅɛ̴̨̢̛̪͖̬̩̰̰̠̯̻̟̙͓̹͉̒͐͛̑̐̉̽̾̊͊̐̇̐̀̓́̀̑́͒̈́̈́͋̈̔͆͆̿̽̓̿̎̕͝ ̶̧̞̩̫͕̰̠̮̣̮̱̞͍̆͗̈́͒̐͛̀̋͗̎̈́͆̋͌͐͒́͗̏̋̿̋̇͂̔͂̾͑͊͋̇̊̀̊͗͗͘̕͜͝ͅͅʌ̷̧̡̨̧̮̬̤͚̰̬̘͚͖̮̙͇̯̝̠̬̪͚̬͖̬̥̹̺̰̬̖̪͊̑͗͝ͅσ̴͕̻̬̜̪̠̤̫̥͎̠͖̲̗̞̟͉̞͙͚͇̺̩͈̝̯̖̦̌̿̈́̅͘͜͜͜͝ΐ̶̧̛̛̛̣͙̯͚̤̱̦͈̩͙͌͂̊́͌͗̑͆̎̀̆͌̒̍͋̈́̆͂̑́̓̅̅̒̕͘͘̚͝∂̸̡̢̛̬̳͚͔͇̹̝̰͕̰̣̣̯͈̝̭̲̗̦̬̰̤̼̿͌̆͒͑̔̋͒͋͊̋̿̈́́̒̅̈́̓̾͑͘͘̕͝ ̸̡̛̠̜͙̤̘̥̺̠̥̺͍͕̝̈́̽̈́̒̄̔̀̌̌̿̐͑̎̋̾̿̐͌̄̉̍̇̅͆̏́͐͐̎̌͛̕̕͝ͅc̷̢̧̢̨̖̬̲̲͓͙̟̳̝̜̯͉̦͓̰̯̝͈̰̬̰͍̯̰͎̜̎̅̈́͒̃̿͆̀́̾̔̂̆͛̇̚̕͝͠͠σ̸̢̡̡̛͍̱̹̲̟̰͍͔̝̻͚̳̖͉͆͐̆̿̊̇̔͌̏̍͊̈́͊͌́͂̀̃̓̂͂͐͒́͊̄͌̇͘͝͠͝и̷̜͖̫̹̠̫̗̭̫̔͊̄̈͂̈́͋̎̍̃̍͌̔ƨ̴̡̛̟̟̤̲̺͔̙͔̖̪̈́͛͊̅͛̂̉̔͊͌̈́͐̀̿̓͗̅̑̅͆̔̒̕̕͝͝͠͝ͅʋ̸̝̣̱̈̋͂̃͆̏́̔͑̊͑̔̆̓̉͗̅͐͂̃̀͗̄͂̎̉̽͒̋̄͂̀̃̕̚̕͝͝м̸̢̡̡̢̨͓̣̬̹̩͔̮̜̙̥̮̟̩̺̫̤̗͎̟̻̝̼͉̣̥̞͎̺̒͛̍͗̋͊̃̆͊̏̐ɛ̵̧̧̧̡̳̯̺͚̩̳͓͓̭̟̺̰̟̦͔̘̠̟̤̬̟̰͖̪͚͉̣͎̄̄̽͊͌̓͊̐̉̐͆͜͜ƨ̸̧̞̙̲̱̗̤̥̖̹̞͍͍̜̘̭̐̂̀̾̇̅͋͋̆̃̽́̃̌̿́̈́̐̇̑̄̄̐́͂͐͘͜ͅ ̴̢̟̮̳̗͕̫̖͍̪̻̳̦̯̭̳̲̥̝̌̔͑̅̎́̓̚ͅɛ̶̫̳̩͓̈́̉̓̈͋͊̉̆̉͗̓͗̈̌̿̓͑̀͆̓̂̓͋͑̏́̈́̅̐̀͝͝͠ʌ̵̳̟̘̼͈̠̥͑̐̄̊̓̄̐̈́͗͆̊͛̔ɛ̸̢̧̧̙̳̺̟͉̠̺̗̩̻̣͓̗̺̟̮̜̰̰̓̌̂̈̂̍̍͑̊̍̓͑̋̒̄̈́̂̇͌̃̏̑͌͌̔͘͘̚͜͜͝͝ͅя̸̛̛̛͍̥̱̖̻̻̹̹̤̬̭̺͇̤͈̯̤͕͕͈̥̰̅̎͌̆͐͐̏̆̅͑̉͂̏̐̄͋͑̿͑̿͆̎̃̒͒̓̑̓͒̊͌͘͝ͅʏ̴̢̥̬͙̪͓̙̻͎̰̜̄̉̐̊̀̊̽̒̾̽̈̋͋͗̇͛̅̕͠т̴̝̯͇͔̬͖̐̉̉͛̐̉̑͛̌̚̚͠н̵̧̨̨͖͈͓̬̳͉̳͈̯̟͓̻̞̹̜̟͍̤̯̱̜̣͓̞͔͕͍̜̬̪̍̋̒̇̈́̔͐͐̽̀̉ͅι̶̳̐̀̒̈́̿̈͗͑͂͊̄̎͂̀̌̓́̍̍͒̾̑̀̏̒̈́̏̓̐̃͘͘̕͠и̴̧̧̡̛̯̺̬̻̰̖̮̇̌͑͐̎͐̾̒̓̓̐͑͋͘͘̕͜͝͝ɢ̶̧̛̛̩̙̜͔̀̈̏̉̀͗͐̀͐̀̈́͗̑͆́̀͐̎͑͒̈́͛̒͆̿̂̂͑́͗̌̇̑͜͠",
@@ -183,7 +183,7 @@ scenarios = [
 	},
 	{	
 		//Jonas the coke addict
-		"scenario": "You find a house with an interesting inhabitant. That's right! It's Jonas - the soda addict!",
+		"scenario": "You find a house with a rather interesting inhabitant. That's right! It's Jonas - the soda addict!",
 		"reply1": "He chugs the bottle in one big gulp and doesn't even taste the difference. He even asks for more...",
 		"answer1": "Give him a soda bottle filled with dirty water",
 		"damage1": 0,
@@ -193,5 +193,18 @@ scenarios = [
 		"reply3": "After talking with him for 5 minutes you are sure that he is a <i>noob</i>, who doesn't even know he's a noob who doesn't even know all the chemical compounds inside the most popular modern-day fizzy drinks.",
 		"answer3": "Talk with him about soda",
 		"damage3": 0,
+	},
+	{
+		//GPS
+		"scenario": "In the middle of the road you find a GPS that somebody lost",
+		"reply1": "You leave it. It is not like anyone needs that <em>boomer</em> trash anymore...",
+		"answer1": "Leave it",
+		"damage1": 500,
+		"reply2": "You try to turn this ancient machine on, but it doesn't respond. Of course even if it had some power inside, it wouldn't be of any use to you.",
+		"answer2": "See if it's working",
+		"damage2": 500,
+		"reply3": "After an hour you find a GPS collector who needs help. You give him your findings, but he decided that you stole it from him. You got hit so hard your soul escaped the body.",
+		"answer3": "Take it just because",
+		"damage3": 100
 	}
 ];
