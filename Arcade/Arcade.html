@@ -24,6 +24,13 @@
 	ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
+	<!-- Anti-flicker snippet -->
+	<style>.async-hide { opacity: 0 !important} </style>
+	<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
+	h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
+	(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+	)(window,document.documentElement,'async-hide','dataLayer',4000,
+	{'CONTAINER_ID':true});</script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
