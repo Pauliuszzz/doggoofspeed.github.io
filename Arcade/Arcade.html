@@ -73,43 +73,6 @@
 			$("#ButtonFour").hide();
 		}
     }
-	
-	//Replies
-	function reply1() {
-		$("#reply-text").html(scenarios[sc].reply1);
-		$("#reply-text").show();
-		$("#ButtonFour").prop('disabled', false);
-		$("#ButtonTwo").prop('disabled', true);
-		$("#ButtonThree").prop('disabled', true);
-		score = score + scenarios[sc].score1;
-	}
-	function reply2() {
-		$("#reply-text").html(scenarios[sc].reply2);
-		$("#reply-text").show();
-		$("#ButtonFour").prop('disabled', false);
-		$("#ButtonOne").prop('disabled', true);
-		$("#ButtonThree").prop('disabled', true);
-		score = score + scenarios[sc].score2;
-	}
-	function reply3() {
-		$("#reply-text").html(scenarios[sc].reply3);
-		$("#reply-text").show();
-		$("#ButtonFour").prop('disabled', false);
-		$("#ButtonOne").prop('disabled', true);
-		$("#ButtonTwo").prop('disabled', true);
-		score = score + scenarios[sc].score3;
-	}
-	
-	//Next scenario
-    function next_scenario(mult) {
-        sc++;
-		$("#reply-text").hide();
-		$("#ButtonOne").prop('disabled', false);
-		$("#ButtonTwo").prop('disabled', false);
-		$("#ButtonThree").prop('disabled', false);
-		$("#ButtonFour").prop('disabled', true);
-        text();
-    }
 </script>
 </body>
 </html>
