@@ -55,17 +55,7 @@
 	<script>
     var sc = 0;
 	var hp = 100;
-	
-	//Randomiser
-	var i = scenarios.length, k , temp;
-	while(--i > 0){
-    k = Math.floor(Math.random() * (i+1));
-    temp = scenarios[k];
-    scenarios[k] = scenarios[i];
-    scenarios[i] = temp;
-	}
-    text();
-	
+
 	//Text
     function text() {
         $("#scenario-text").html(scenarios[sc].scenario);

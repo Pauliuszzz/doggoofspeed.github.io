@@ -15,4 +15,12 @@ window.onload = function onload() {
 	$("#ButtonThree").addClass("desktop")
 	$("#ButtonFour").addClass("desktop")
 	}
+	var i = scenarios.length, k , temp;
+	while(--i > 0){
+    k = Math.floor(Math.random() * (i+1));
+    temp = scenarios[k];
+    scenarios[k] = scenarios[i];
+    scenarios[i] = temp;
+	}
+    text();
 }

@@ -122,17 +122,17 @@ button {
     box-shadow: -1px -1px #000;
 }
 .btn:focus {
-    border: 2px inset #fff !important;
+    border: 2px inset #fff;
     background: silver;
     color: #424242;
-    box-shadow: -1px -1px #000 !important;
-    outline: 0 !important;
+    box-shadow: -1px -1px #000;
+    outline: 0;
 }
 .btn:active {
-    border: 2px inset #fff !important;
+    border: 2px inset #fff;
     color: #424242;
-    box-shadow: -1px -1px #000 !important;
-    outline: 0 !important;
+    box-shadow: -1px -1px #000;
+    outline: 0;
 }
 
 .btn-primary{

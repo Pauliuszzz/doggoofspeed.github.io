@@ -40,8 +40,8 @@
 </head>
 
 <header>
-	<a href="..\index.html" class="navigation" style="float: left"><img src="home.png" width=42px</img></a>
-	<a onClick="location.reload();" class="navigation" style="float: right"><img src="refresh.png" width=36px</img></a>
+	<a href="..\index.html" class="navigation" style="float: left"><img src="../resources/home.png" width=42px</img></a>
+	<a onClick="location.reload();" class="navigation" style="float: right"><img src="../resources/refresh.png" width=36px</img></a>
 	<div>
 	<br><h1 class="project">Project</h1>
 	<h1 class="passage">Passage</h1><br>
@@ -57,16 +57,6 @@
 	<script>
     var sc = 0;
 	var score = 0;
-	
-	//Randomiser
-	var i = scenarios.length, k , temp;
-	while(--i > 0){
-    k = Math.floor(Math.random() * (i+1));
-    temp = scenarios[k];
-    scenarios[k] = scenarios[i];
-    scenarios[i] = temp;
-	}
-    text();
 	
 	//Text
     function text() {
