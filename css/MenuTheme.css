@@ -1,0 +1,77 @@
+@font-face {
+    font-family: 'Bitmgothic';
+    src: url('Bitmgothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: "Arial", sans-serif;
+	background: #21d190;
+	background: -webkit-linear-gradient(to bottom, #21d190, #d65bca) fixed;
+	background: linear-gradient(to bottom, #21d190, #d65bca) fixed;
+	text-align: center;
+}
+
+header {
+    text-align: center;
+}
+
+h1 {
+	color: white;
+	font-size: 300%;
+    margin: auto;
+	font-weight: bold;
+}
+
+.project {
+	font-family: Century Gothic;
+}
+
+.passage {
+	text-shadow: 2px 2px #FF00CA;
+	font-family: Bitmgothic;
+}
+
+div.card {
+	background-color:rgba(255, 255, 255, 0.5);
+}
+
+p {
+	text-align: center;
+	color: black;
+	font-size: 1rem;
+	padding: 5px;
+	padding-bottom: 5px;
+}
+
+.score {
+	width: fit-content;
+	display: inline-block;
+}
+
+.popover {
+  text-align: center;
+}
+
+@media (min-width: 840px) {
+.card-deck{
+	max-width: 50%;
+	margin: auto;
+	}
+}
+
+@media (max-width: 840px) {
+	.card-deck{
+		max-width: 90%;
+		margin: auto;
+	}
+}
+
+.navigation { 
+	margin: 10px 10px 10px;
+}
+
+.flex-container {
+	display: flex;
+}

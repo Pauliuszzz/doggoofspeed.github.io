@@ -15,44 +15,67 @@ window.onload = function onload() {
 	$("#ButtonThree").addClass("desktop")
 	$("#ButtonFour").addClass("desktop")
 	}
-	var i = scenarios.length, k , temp;
-	while(--i > 0){
-    k = Math.floor(Math.random() * (i+1));
-    temp = scenarios[k];
-    scenarios[k] = scenarios[i];
-    scenarios[i] = temp;
-	}
-    text();
+	text();
 }
 //Replies
 function reply1() {
-	$("#reply-text").html(scenarios[sc].reply1);
+	if (path == 0){
+		$("#reply-text").html(scenarios0[count].reply1);
+	}
+	if (path == 1){
+		$("#reply-text").html(scenarios1[count].reply1);
+	}
+	if (path == 2){
+		$("#reply-text").html(scenarios2[count].reply1);
+	}
+	if (path == 3){
+		$("#reply-text").html(scenarios3[count].reply1);
+	}
 	$("#reply-text").show();
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonTwo").prop('disabled', true);
 	$("#ButtonThree").prop('disabled', true);
-	score = score + scenarios[sc].score1;
 }
 function reply2() {
-	$("#reply-text").html(scenarios[sc].reply2);
+	if (path == 0){
+		$("#reply-text").html(scenarios0[count].reply2);
+	}
+	if (path == 1){
+		$("#reply-text").html(scenarios1[count].reply2);
+	}
+	if (path == 2){
+		$("#reply-text").html(scenarios2[count].reply2);
+	}
+	if (path == 3){
+		$("#reply-text").html(scenarios3[count].reply2);
+	}
 	$("#reply-text").show();
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne").prop('disabled', true);
 	$("#ButtonThree").prop('disabled', true);
-	score = score + scenarios[sc].score2;
 }
 function reply3() {
-	$("#reply-text").html(scenarios[sc].reply3);
+	if (path == 0){
+		$("#reply-text").html(scenarios0[count].reply3);
+	}
+	if (path == 1){
+		$("#reply-text").html(scenarios1[count].reply3);
+	}
+	if (path == 2){
+		$("#reply-text").html(scenarios2[count].reply3);
+	}
+	if (path == 3){
+		$("#reply-text").html(scenarios3[count].reply3);
+	}
 	$("#reply-text").show();
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne").prop('disabled', true);
 	$("#ButtonTwo").prop('disabled', true);
-	score = score + scenarios[sc].score3;
 }
 	
 	//Next scenario
 function next_scenario(mult) {
-    sc++;
+    count++;
 	$("#reply-text").hide();
 	$("#ButtonOne").prop('disabled', false);
 	$("#ButtonTwo").prop('disabled', false);

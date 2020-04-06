@@ -4,20 +4,21 @@
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     font-family: "Arial", sans-serif;
 	background-color: #003b46;
 }
 
 header {
-	background: rgb(0,59,70);
-	background: linear-gradient(0deg, rgba(0,59,70,1) 0%, rgba(7,87,91,1) 100%);
+	background: #003b46;
+	background: -webkit-linear-gradient(to bottom, #07575b, #003b46);
+	background: linear-gradient(to bottom, #07575b, #003b46);
     text-align: center;
 }
 
-
 h1 {
-	color: #FCF6F5FF;
+	color: white;
 	font-size: 300%;
     text-align: center;
 	font-weight: bold;
@@ -28,13 +29,13 @@ h1 {
 }
 
 .passage {
-	text-shadow: 2px 2px #2BAE66FF;
+	text-shadow: 2px 2px #2BAE66;
 	font-family: Bitmgothic;
 }
 
 p {
 	text-align: center;
-	background-color:rgba(196,223,230,0);
+	background-color:rgba(0,0,0,0);
 	background-size: 50%;
 	color: white;
 	font-size: 1rem;
@@ -51,9 +52,9 @@ p {
 	width: 50%;
 }
 
-.score{
-	background-color:rgba(164,228,164,0);
-	border-color: rgb(100, 200, 100);
+.score {
+	background-color:rgba(0,0,0,0);
+	border-color: #64c864;
 	width: fit-content;
 	display: inline-block;
 }
@@ -62,6 +63,11 @@ button {
 	width: 25%;
 	text-align: center;
 }
-.navigation{ 
+
+.navigation { 
 	margin: 10px 10px 10px;
+}
+
+.flex-container {
+	display: flex;
 }

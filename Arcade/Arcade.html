@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+<html lang="en">
 <head>
 	<title>Project Passage - Arcade</title>
-	<link rel="shortcut icon" href="..\favicon.ico" />
-    <meta name="google" content="notranslate">
+	<link rel="shortcut icon" href="../favicon.ico" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="google" content="notranslate">
 	<!--Google Analytics-->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160710856-1"></script>
 	<script>
@@ -24,40 +25,41 @@
 	ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
-	<!-- Anti-flicker snippet -->
-	<style>.async-hide { opacity: 0 !important} </style>
-	<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;
-	h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};
-	(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
-	})(window,document.documentElement,'async-hide','dataLayer',4000,
-	{'GTM-NWTHXJN':true});</script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<link href="ArcadeTheme.css" rel="stylesheet" type="text/css">
-	<script language="javascript" type="text/javascript" src="..\js\Onload.js"></script>
-	<script type="text/javascript" src="Scenarios.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/ArcadeTheme.css">
+	<script src="../js/Onload.js"></script>
+	<script src="Scenarios.js"></script>
 </head>
 
-<header>
-	<a href="..\index.html" class="navigation" style="float: left"><img src="../resources/home.png" width=42px</img></a>
-	<a onClick="location.reload();" class="navigation" style="float: right"><img src="../resources/refresh.png" width=36px</img></a>
-	<div>
-	<br><h1 class="project">Project</h1>
-	<h1 class="passage">Passage</h1><br>
-	</div>
 <body>
+	<header>
+		<div class="flex-container">
+			<div style="flex-basis: 33.3%">
+				<a href="../index.html" class="navigation" style="float: left"><img src="../resources/home.png" alt="Restart" width=42></a><br>
+			</div>
+			<div style="flex-basis: 33.3%">
+				<br>
+				<h1 class="project">Project</h1>
+				<h1 class="passage">Passage</h1>
+			</div>
+			<div style="flex-basis: 33.3%">
+				<a onClick="location.reload();" class="navigation" style="float: right"><img src="../resources/refresh.png" alt="Home" width=36></a>
+			</div>
+		</div>
+	</header>
+	<br>
 	<p class="scenario shadow" id="scenario-text"></p>
 	<p class="reply shadow" id="reply-text"></p>
 	<p class="score shadow" id="score-text"></p>
-	<h3><button id="ButtonOne" type="button" class="btn btn-outline-secondary shadow" onClick="reply1()"></button></h3>
-	<h3><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()"></button></h3>
-	<h3><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()"></button></h3>
-	<h3><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></h3>
+	<p><button id="ButtonOne" type="button" class="btn btn-outline-secondary shadow" onClick="reply1()"></button></p>
+	<p><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()"></button></p>
+	<p><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()"></button></p>
+	<p><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></p>
 	<script>
     var sc = 0;
 	var score = 0;
-	
 	//Text
     function text() {
         $("#scenario-text").html(scenarios[sc].scenario);
