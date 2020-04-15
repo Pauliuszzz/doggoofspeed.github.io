@@ -1,4 +1,4 @@
-scenarios0 = [
+scenarios = [
 	{
 		"scenario": "September 17, 1343. The crops are being terrorised by crows and you can do nothing. Starving really isn't an option, it's a necessity. But you still must eat. You'll have to go to Ìgil. One way or another.",
 		"reply1": "You hastly ran out of the house. Not a wise decision, but a decision nonetheless.",
@@ -14,7 +14,7 @@ scenarios0 = [
 		"answer1": "Ask where he is going",
 		"reply2": "\"None of your buisness\" he said.",
 		"answer2": "Ask which way is Ìgil",
-		"reply3": "He hatly gave you a blessing and ran away.",
+		"reply3": "He hastly gave you a blessing and ran away.",
 		"answer3": "Ask for a blessing"
 	},
 	{
@@ -25,7 +25,6 @@ scenarios0 = [
 		"answer2": "Ask where are they going",
 		"reply3": "You joined the group. Apparently, they were accusing one of the monks from the monastery of protecting witches. Since the monastery denied any wrong doings, the villagers decided to take matters into their own hands.",
 		"answer3": "Join them",
-		"path3": 1
 	},
 	{
 		"scenario": "After 1h you find a nice place to rest. You find some interesting things. Most likely somebody from the group you saw lost it",
@@ -48,13 +47,10 @@ scenarios0 = [
 	{
 		"scenario": "Now you must pick which road you will go.",
 		"answer1": "Go the longer route",
-		"path1": 2,
 		"answer2": "Go the shorter route",
-		"path2": 3
-	}
-]
+	},
 
-scenarios1 = [
+	//Route Monk
 	{
 		"scenario": "The monk ran into a forest and you did too. The trees were huge, it felt like they were judging the mob. You weren't angry at the monk, just curious. After a fruitless day some villagers decided to leave. While you and the others set up a camp for the night. The villagers were poor, but friendly. They gave you some bread.",
 		"reply1": "The bread finally gave you something to chew. You haven't been glad to eat a bread like this your whole life.",
@@ -85,10 +81,9 @@ scenarios1 = [
 	},
 	{
 		"scenario": "You and the other villagers decided to go to Ìgil. You told them your problem and they recommended you go to the monastery. Apparently, they help people who suffer from nature's mischief."
-	}
-]
+	},
 
-scenarios2 = [
+	//Route Bandit
 	{
 		"scenario": "You decide to go the longer route. After an hour of walking you hear a loud bang somewhere in front of you.",
 		"reply1": "You hid. But you hid very poorly. Thus, when the noise makers went back on their duties, they saw you. You weren't in the hands of regular villagers, you were in the hands of bandits.",
@@ -106,43 +101,32 @@ scenarios2 = [
 		"reply2": "You stole your kidnappers’ horse and ran away. You came to Ìgil exhausted. You tried to report the thugs to local guards, but they didn't care enough, saying that this didn't compromise the town's safety. The monastery hospital took you, although not very gracefully.",
 		"answer2": "Steal their horses and run away"
 	},
-]
-
-scenarios3 = [		
+	
+	//Route Stream
 	{
 		"scenario": "After a good hour of walking you notice a small stream beside the road.",
 		"reply1": "The water is cold and refreshing. You feel like you've ascended.",
 		"answer1": "Drink from it",
-		"ending1": 1,
 		"reply2": "You put your feet there and sigh. It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
 		"answer2": "Wash your feet",
 		"answer3": "Follow it instead of the road",
-		"ending3": 2
-	}
+	},
+	{
+		"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily you are quite close to the city.",
+		"reply1": "While you did reach a house, it was locked, with no-one inside. You passed out. A wagon passing by saw and took you.",
+		"answer1": "Hurry up and run to the closest house",
+		"reply2": "It really didn't get better. You passed out. A wagon passing by saw and took you.",
+		"answer2": "Sit down and hope it will get better",
+		"reply3": "You fainted. A wagon passing by saw and took you.",
+		"answer3": "Just faint"
+	},
+	{
+		"scenario": "The water is cold, refreshing and relaxing. You know what isn't relaxing? The fact that without even noticing you ended up in a bandit camp.",
+		"reply1": "They were guarding the road, but not their actual camp. You put some grass and some dirt in their soup. You even managed to eat some of it.",
+		"answer1": "Try to sabotage them",
+		"reply2": "You managed to sneak out of the camp and ran as fast as you could. When you reached Ìgil, you went straight to the monastery in hopes of getting at least some food.",
+		"rnswer2": "Steal some of their food",
+		"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone.",
+		"answer3": "Sneak around and try to avoid trouble"
+	},
 ]
-		if (ending == 1) {
-			scenarios = [
-				{
-					"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily you are quite close to the city.",
-					"reply1": "While you did reach a house, it was locked, with no-one inside. You passed out. A wagon passing by saw and took you.",
-					"answer1": "Hurry up and run to the closest house",
-					"reply2": "It really didn't get better. You passed out. A wagon passing by saw and took you.",
-					"answer2": "Sit down and hope it will get better",
-					"reply3": "You fainted. A wagon passing by saw and took you.",
-					"answer3": "Just faint"
-				}
-			]
-		}
-		if (ending == 2){
-			scenarios = [
-				{
-					"scenario": "The water is cold, refreshing and relaxing. You know what isn't relaxing? The fact that without even noticing you ended up in a bandit camp.",
-					"reply1": "They were guarding the road, but not their actual camp. You put some grass and some dirt in their soup. You even managed to eat some of it.",
-					"answer1": "Try to sabotage them",
-					"reply2": "You managed to sneak out of the camp and ran as fast as you could. When you reached Ìgil, you went straight to the monastery in hopes of getting at least some food.",
-					"rnswer2": "Steal some of their food",
-					"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone.",
-					"answer3": "Sneak around and try to avoid trouble"
-				}
-			]
-		}

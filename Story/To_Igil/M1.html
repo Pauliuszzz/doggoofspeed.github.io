@@ -62,67 +62,21 @@
 	var count = 0;
 	//Text
     function text() {
-		if (path == 0) {
-			if (scenarios0[count].answer1 == null) {
+			if (scenarios[count].answer1 == null) {
 				$("#ButtonOne").hide()
 			}
-			if (scenarios0[count].answer2 == null) {
+			if (scenarios[count].answer2 == null) {
 				$("#ButtonTwo").hide()
 			}
-			if (scenarios0[count].answer3 == null) {
+			if (scenarios[count].answer3 == null) {
 				$("#ButtonThree").hide()
 			}
-        	$("#scenario-text").html(path);
-			$("#ButtonOne").html(scenarios0[count].answer1);
-			$("#ButtonTwo").html(scenarios0[count].answer2);
-			$("#ButtonThree").html(scenarios0[count].answer3);
+        	$("#scenario-text").html(scenarios[count].scenario);
+			$("#ButtonOne").html(scenarios[count].answer1);
+			$("#ButtonTwo").html(scenarios[count].answer2);
+			$("#ButtonThree").html(scenarios[count].answer3);
 		}
-		if (path == 1) {
-			if (scenarios1[count].answer1 == null) {
-				$("#ButtonOne").hide()
-			}
-			if (scenarios1[count].answer2 == null) {
-				$("#ButtonTwo").hide()
-			}
-			if (scenarios1[count].answer3 == null) {
-				$("#ButtonThree").hide()
-			}
-   	    	$("#scenario-text").html(scenarios1[count].scenario);
-			$("#ButtonOne").html(scenarios1[count].answer1);
-			$("#ButtonTwo").html(scenarios1[count].answer2);
-			$("#ButtonThree").html(scenarios1[count].answer3);
-		}
-		if (path == 2) {
-			if (scenarios2[count].answer1 == null) {
-				$("#ButtonOne").hide()
-			}
-			if (scenarios2[count].answer2 == null) {
-				$("#ButtonTwo").hide()
-			}
-			if (scenarios2[count].answer3 == null) {
-				$("#ButtonThree").hide()
-			}
-    	    $("#scenario-text").html(scenarios2[count].scenario);
-			$("#ButtonOne").html(scenarios2[count].answer1);
-			$("#ButtonTwo").html(scenarios2[count].answer2);
-			$("#ButtonThree").html(scenarios2[count].answer3);
-		}
-		if (path == 3) {
-			if (scenarios3[count].answer1 == null) {
-				$("#ButtonOne").hide()
-			}
-			if (scenarios3[count].answer2 == null) {
-				$("#ButtonTwo").hide()
-			}
-			if (scenarios3[count].answer3 == null) {
-				$("#ButtonThree").hide()
-			}
-    		$("#scenario-text").html(scenario3[count].scenario);
-			$("#ButtonOne").html(scenarios3[count].answer1);
-			$("#ButtonTwo").html(scenarios3[count].answer2);
-			$("#ButtonThree").html(scenarios3[count].answer3);
-		}
-	}
+
 </script>
 </body>
 </html>

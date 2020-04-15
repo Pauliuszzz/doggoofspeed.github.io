@@ -18,68 +18,35 @@ window.onload = function onload() {
 	text();
 }
 //Replies
-function reply1() {
-	if (path == 0){
-		$("#reply-text").html(scenarios0[count].reply1);
+	function reply1() {
+		$("#reply-text").html(scenarios[count].reply1);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
 	}
-	if (path == 1){
-		$("#reply-text").html(scenarios1[count].reply1);
+	function reply2() {
+		$("#reply-text").html(scenarios[count].reply2);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
 	}
-	if (path == 2){
-		$("#reply-text").html(scenarios2[count].reply1);
+	function reply3() {
+		$("#reply-text").html(scenarios[count].reply3);
+		$("#reply-text").show();
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonTwo").prop('disabled', true);
 	}
-	if (path == 3){
-		$("#reply-text").html(scenarios3[count].reply1);
-	}
-	$("#reply-text").show();
-	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonTwo").prop('disabled', true);
-	$("#ButtonThree").prop('disabled', true);
-}
-function reply2() {
-	if (path == 0){
-		$("#reply-text").html(scenarios0[count].reply2);
-	}
-	if (path == 1){
-		$("#reply-text").html(scenarios1[count].reply2);
-	}
-	if (path == 2){
-		$("#reply-text").html(scenarios2[count].reply2);
-	}
-	if (path == 3){
-		$("#reply-text").html(scenarios3[count].reply2);
-	}
-	$("#reply-text").show();
-	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonOne").prop('disabled', true);
-	$("#ButtonThree").prop('disabled', true);
-}
-function reply3() {
-	if (path == 0){
-		$("#reply-text").html(scenarios0[count].reply3);
-	}
-	if (path == 1){
-		$("#reply-text").html(scenarios1[count].reply3);
-	}
-	if (path == 2){
-		$("#reply-text").html(scenarios2[count].reply3);
-	}
-	if (path == 3){
-		$("#reply-text").html(scenarios3[count].reply3);
-	}
-	$("#reply-text").show();
-	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonOne").prop('disabled', true);
-	$("#ButtonTwo").prop('disabled', true);
-}
 	
-	//Next scenario
-function next_scenario(mult) {
-    count++;
-	$("#reply-text").hide();
-	$("#ButtonOne").prop('disabled', false);
-	$("#ButtonTwo").prop('disabled', false);
-	$("#ButtonThree").prop('disabled', false);
-	$("#ButtonFour").prop('disabled', true);
-    text();
+//Next scenario
+	function next_scenario(mult) {
+		count++;
+		$("#reply-text").hide();
+		$("#ButtonOne").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', false);
+		$("#ButtonThree").prop('disabled', false);
+		$("#ButtonFour").prop('disabled', true);
+		text();
 }
