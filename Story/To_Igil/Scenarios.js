@@ -39,7 +39,7 @@ scenarios = [
 	{
 		"scenario": "After another hour of walking you see a beggar residing on the sidewalk. He is warni-, no, insisting that you to don't go through the shorter road.",
 		"reply1": "To your question he answers with only one word: \"Life\".",
-		"answer1": "You can ask him about how he ended up.",
+		"answer1": "Ask how he ended up on the road.",
 		"reply2": "\"You're the one who needs help. If you go the way you are heading, you will die a gruesome death.\" He sais with passion. Are those just an old man's tales, or is he serious?",
 		"answer2": "Ask if he needs any help.",
 		"reply3":  "\"There are monsters, there are giant beasts that have taken lives of many travellers.\" He warns you.",
@@ -95,8 +95,8 @@ scenarios = [
 		"reply2": "You found out that the noises were coming from a bandit camp. They were shouting and screaming. Apparently, somebody sabotaged them. When they saw you, they attacked at once, and you were forced to surrender.",
 		"answer2": "Go and investigate",
 		"reply3": "You went back to the intersection. The beggar was no longer there. You chose the main road this time.",
-		"answer3": "Go back, and go the shorter route",
-		"skipto1": 10
+		"answer3": "Go back to the intersection, and pick the shorter route instead",
+		"skipto3": 12
 	},
 	{
 		"scenario": "You were kidnapped. From what the pirates were speaking, you understood, that they were planning to sell you as a serf to a local lord. They were planning to kidnap more people in the meantime. Next day another farmer joined you in the suffering. One night you and the farmer managed to untie yourselves.",
@@ -115,23 +115,26 @@ scenarios = [
 		"reply2": "You put your feet there and sigh. It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
 		"answer2": "Wash your feet",
 		"answer3": "Follow it instead of the road",
+		"skipto3": 14
 	},
 	{
 		"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily you are quite close to the city.",
-		"reply1": "While you did reach a house, it was locked, with no-one inside. You passed out. A wagon passing by saw and took you.",
+		"reply1": "While you did reach a house, it was locked, with no-one inside. You passed out. A wagon passing by saw and took you and brought you to the monastery hospital in Ìgil.",
 		"answer1": "Hurry up and run to the closest house",
-		"reply2": "It really didn't get better. You passed out. A wagon passing by saw and took you.",
+		"reply2": "It really didn't get better. You passed out. A wagon passing by saw and took you and brought you to the monastery hospital in Ìgil.",
 		"answer2": "Sit down and hope it will get better",
-		"reply3": "You fainted. A wagon passing by saw and took you.",
-		"answer3": "Just faint"
+		"reply3": "You fainted. A wagon passing by saw and took you to the monastery hospital in Ìgil.",
+		"answer3": "Just faint",
+		"quit": true
 	},
 	{
 		"scenario": "The water is cold, refreshing and relaxing. You know what isn't relaxing? The fact that without even noticing you ended up in a bandit camp.",
-		"reply1": "They were guarding the road, but not their actual camp. You put some grass and some dirt in their soup. You even managed to eat some of it.",
+		"reply1": "They were guarding the road, but not their actual camp. You put some grass and some dirt in their soup. You even managed to eat some of it. That soup might have been tasty, but you can't erase days of hungriness with just a spoon of soup. That is whay when you came to Ìgil your first destination was monastery - the only place to get free food.",
 		"answer1": "Try to sabotage them",
-		"reply2": "You managed to sneak out of the camp and ran as fast as you could. When you reached Ìgil, you went straight to the monastery in hopes of getting at least some food.",
+		"reply2": "You managed to sneak out of the camp and ran as fast as you could. When you reached Ìgil, you went straight to the monastery in hopes of getting food.",
 		"rnswer2": "Steal some of their food",
-		"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone.",
+		"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone. You sucesfully escaped the camp. When you reached Ìgil, you went straight to the monastery in hopes of getting some food.",
 		"answer3": "Sneak around and try to avoid trouble",
+		"quit": true
 	},
 ]

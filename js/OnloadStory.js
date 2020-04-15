@@ -56,7 +56,7 @@ window.onload = function onload() {
 	}
 	
 //Next scenario
-	function next_scenario(mult) {
+	function next_scenario(mult){
 		count++;
 		$("#reply-text").hide();
 		$("#ButtonOne").prop('disabled', false).show();

@@ -55,7 +55,6 @@ p {
 .score {
 	background-color:rgba(0,0,0,0);
 	border-color: #64c864;
-	width: fit-content;
 	display: inline-block;
 }
 
