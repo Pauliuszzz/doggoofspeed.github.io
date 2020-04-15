@@ -19,12 +19,13 @@ scenarios = [
 	},
 	{
 		"scenario": "After 10 minutes of walking you see a large group of people coming your way.",
-		"reply1": "You hid and they didn't see you",
+		"reply1": "You hid and they didn't see you.",
 		"answer1": "Hide from them",
 		"reply2": "They said they were looking for a monk, who is being accused of witchcraft.",
 		"answer2": "Ask where are they going",
 		"reply3": "You joined the group. Apparently, they were accusing one of the monks from the monastery of protecting witches. Since the monastery denied any wrong doings, the villagers decided to take matters into their own hands.",
 		"answer3": "Join them",
+		"skipto3": 5
 	},
 	{
 		"scenario": "After 1h you find a nice place to rest. You find some interesting things. Most likely somebody from the group you saw lost it",
@@ -47,7 +48,9 @@ scenarios = [
 	{
 		"scenario": "Now you must pick which road you will go.",
 		"answer1": "Go the longer route",
+		"skipto1": 10,
 		"answer2": "Go the shorter route",
+		"skipto2": 12
 	},
 
 	//Route Monk
@@ -80,7 +83,8 @@ scenarios = [
 		"answer3": "Run away screaming"
 	},
 	{
-		"scenario": "You and the other villagers decided to go to Ìgil. You told them your problem and they recommended you go to the monastery. Apparently, they help people who suffer from nature's mischief."
+		"scenario": "You and the other villagers decided to go to Ìgil. You told them your problem and they recommended you go to the monastery. Apparently, they help people who suffer from nature's mischief.",
+		"quit": true
 	},
 
 	//Route Bandit
@@ -92,14 +96,15 @@ scenarios = [
 		"answer2": "Go and investigate",
 		"reply3": "You went back to the intersection. The beggar was no longer there. You chose the main road this time.",
 		"answer3": "Go back, and go the shorter route",
-		"path1": 2
+		"skipto1": 10
 	},
 	{
-		"scenario": "You were kidnapped. From what the pirates were speaking, you understood, they were planning to sell you as a serf to a local lord. They were planning to kidnap more people in the meantime. Next day another farmer joined you in the suffering. One night you and the farmer managed to untie yourselves.",
+		"scenario": "You were kidnapped. From what the pirates were speaking, you understood, that they were planning to sell you as a serf to a local lord. They were planning to kidnap more people in the meantime. Next day another farmer joined you in the suffering. One night you and the farmer managed to untie yourselves.",
 		"reply1": "You tried to choke the kidnappers, but you were 2, and there were 3 bandits. You barely managed to run away. You came to Ìgil exhausted. You tried to report the thugs to local guards, but they didn't care enough, saying that this didn't compromise the town's safety. The monastery hospital took you, although not very gratefully.",
 		"answer1": "Try to choke your kidnappers",
 		"reply2": "You stole your kidnappers’ horse and ran away. You came to Ìgil exhausted. You tried to report the thugs to local guards, but they didn't care enough, saying that this didn't compromise the town's safety. The monastery hospital took you, although not very gracefully.",
-		"answer2": "Steal their horses and run away"
+		"answer2": "Steal their horses and run away",
+		"quit": true
 	},
 	
 	//Route Stream
@@ -127,6 +132,6 @@ scenarios = [
 		"reply2": "You managed to sneak out of the camp and ran as fast as you could. When you reached Ìgil, you went straight to the monastery in hopes of getting at least some food.",
 		"rnswer2": "Steal some of their food",
 		"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone.",
-		"answer3": "Sneak around and try to avoid trouble"
+		"answer3": "Sneak around and try to avoid trouble",
 	},
 ]

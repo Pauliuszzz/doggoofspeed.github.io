@@ -57,26 +57,36 @@
 	<p><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></p>
 	<script>
+	var quit = false;
     var path = 0;
 	var ending = 1;
 	var count = 0;
-	//Text
+//Text
     function text() {
-			if (scenarios[count].answer1 == null) {
-				$("#ButtonOne").hide()
-			}
-			if (scenarios[count].answer2 == null) {
-				$("#ButtonTwo").hide()
-			}
-			if (scenarios[count].answer3 == null) {
-				$("#ButtonThree").hide()
-			}
-        	$("#scenario-text").html(scenarios[count].scenario);
-			$("#ButtonOne").html(scenarios[count].answer1);
-			$("#ButtonTwo").html(scenarios[count].answer2);
-			$("#ButtonThree").html(scenarios[count].answer3);
+    	$("#scenario-text").html(scenarios[count].scenario);
+		$("#ButtonOne").html(scenarios[count].answer1);
+		$("#ButtonTwo").html(scenarios[count].answer2);
+		$("#ButtonThree").html(scenarios[count].answer3);
+		if (scenarios[count].answer1 == null) {
+			$("#ButtonOne").hide()
 		}
-
+		if (scenarios[count].answer2 == null) {
+			$("#ButtonTwo").hide()
+		}
+		if (scenarios[count].answer3 == null) {
+			$("#ButtonThree").hide()
+		}
+		if(scenarios[count].answer1 == null){
+			if(scenarios[count].answer2 == null){
+				if(scenarios[count].answer3 == null){
+					$("#ButtonFour").prop('disabled', false);
+				}
+			}
+		}
+		else{
+			$("#ButtonFour").prop('disabled', true);
+		}
+	}
 </script>
 </body>
 </html>
