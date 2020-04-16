@@ -61,20 +61,8 @@ h1 {
     background: silver;
     color:#212529;
 }
-
-.reply {
-	width: 50%;
-}
-
 .score{
-	text-align: center;
-    font-size: 1rem;
     display: inline-block;
-	margin: 10px auto;
-	padding: 5px;
-	padding-bottom: 5px;
-	border: solid;
-    border-width: 2px;
     border-right-color: #545C4F;
     border-bottom-color: #545C4F;
     border-left-color: #EFF7EA;
@@ -83,16 +71,16 @@ h1 {
     color: black;
 }
 
-button {
-	text-align: center;
-}
-
-.desktop {
-	width: 25%;
-}
-
-.mobile {
-	width: 50%;
+@media (min-width: 576px) {
+	button{
+		width: 25%;
+		}
+	}
+	
+@media (max-width: 576px) {
+	button{
+		width: 50%;
+	}
 }
 
 .navigation { 

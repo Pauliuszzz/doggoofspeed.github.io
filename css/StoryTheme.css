@@ -7,20 +7,20 @@
 
 body {
     font-family: "Arial", sans-serif;
-	background-color: #003b46;
+	background: #004445;
+	background: -webkit-linear-gradient(to bottom, #2C7873, #004445, #021C1E) fixed;
+	background: linear-gradient(to bottom, #2C7873, #004445, #021C1E) fixed;
+	text-align: center;
 }
 
 header {
-	background: #003b46;
-	background: -webkit-linear-gradient(to bottom, #07575b, #003b46);
-	background: linear-gradient(to bottom, #07575b, #003b46);
-    text-align: center;
+	text-align: center;
 }
 
 h1 {
 	color: white;
 	font-size: 300%;
-    text-align: center;
+    margin: auto;
 	font-weight: bold;
 }
 
@@ -29,38 +29,34 @@ h1 {
 }
 
 .passage {
-	text-shadow: 2px 2px #2BAE66;
+	text-shadow: 2px 2px #6FB98F;
 	font-family: Bitmgothic;
 }
 
-p {
+.scenario, .reply {
 	text-align: center;
 	background-color:rgba(0,0,0,0);
-	background-size: 50%;
 	color: white;
 	font-size: 1rem;
 	width: 50%;
 	margin: 10px auto;
 	border-radius: 10px;
 	border: 2px solid;
-	border-color: #66A5AD;
+	border-color: #6FB98F;
 	padding: 5px;
 	padding-bottom: 5px;
 }
 
-.reply {
-	width: 50%;
-}
-
-.score {
-	background-color:rgba(0,0,0,0);
-	border-color: #64c864;
-	display: inline-block;
-}
-
-button {
-	width: 25%;
-	text-align: center;
+@media (min-width: 576px) {
+	button{
+		width: 25%;
+		}
+	}
+	
+@media (max-width: 576px) {
+	button{
+		width: 50%;
+	}
 }
 
 .navigation { 
@@ -69,4 +65,4 @@ button {
 
 .flex-container {
 	display: flex;
-}
+  }

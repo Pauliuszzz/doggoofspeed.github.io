@@ -45,25 +45,20 @@ p {
 	padding-bottom: 5px;
 }
 
-.score {
-	width: fit-content;
-	display: inline-block;
-}
-
 .popover {
   text-align: center;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 576px) {
 .card-deck{
 	max-width: 50%;
 	margin: auto;
 	}
 }
 
-@media (max-width: 840px) {
+@media (max-width: 576px) {
 	.card-deck{
-		max-width: 90%;
+		max-width: 85%;
 		margin: auto;
 	}
 }
