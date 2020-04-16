@@ -45,10 +45,10 @@ h1 {
 	font-family: Bitmgothic;
 }
 
-.scenario, .reply {
+.scenario, .reply, .score {
 	text-align: center;
 	font-size: 1rem;
-	width: 50%;
+	max-width: 50%;
 	margin: 10px auto;
 	padding: 5px;
 	padding-bottom: 5px;
@@ -74,8 +74,8 @@ h1 {
 @media (min-width: 576px) {
 	button{
 		width: 25%;
-		}
 	}
+}
 	
 @media (max-width: 576px) {
 	button{
@@ -145,4 +145,4 @@ button:focus{
 
 .flex-container {
 	display: flex;
-  }
+}

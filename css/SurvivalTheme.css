@@ -29,16 +29,16 @@ h1 {
 }
 
 .passage {
-	text-shadow: 2px 2px #FF0000;
+	text-shadow: 2px 2px red;
 	font-family: Bitmgothic;
 }
 
-.scenario, .reply {
+.scenario, .reply, .hp {
 	text-align: center;
-	background-color:rgba(0,0,0,0);
+	background-color: transparent;
 	color: white;
 	font-size: 1rem;
-	width: 50%;
+	max-width: 50%;
 	margin: 10px auto;
 	border-radius: 10px;
 	border: 2px solid;
@@ -48,17 +48,8 @@ h1 {
 }
 
 .hp {
-	text-align: center;
-	background-color:rgba(0,0,0,0);
-	color: white;
-	font-size: 1rem;
 	display: inline-block;
-	margin: 10px auto;
-	border-radius: 10px;
-	border: 2px solid;
-	border-color: #FF0000;
-	padding: 5px;
-	padding-bottom: 5px;
+	border-color: red;
 }
 
 @media (min-width: 576px) {
@@ -79,4 +70,4 @@ h1 {
 
 .flex-container {
 	display: flex;
-  }
+}

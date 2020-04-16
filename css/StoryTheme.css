@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Bitmgothic';
-    src: url('..\css\Bitmgothic.woff') format('woff');
+    src: url('Bitmgothic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
