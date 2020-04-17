@@ -50,8 +50,8 @@ h1 {
 @media (min-width: 576px) {
 	button{
 		width: 25%;
-		}
 	}
+}
 	
 @media (max-width: 576px) {
 	button{
@@ -65,4 +65,8 @@ h1 {
 
 .flex-container {
 	display: flex;
-  }
+}
+
+.material-icons-outlined{
+	color: white;
+}

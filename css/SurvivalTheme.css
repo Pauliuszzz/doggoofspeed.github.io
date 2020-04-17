@@ -71,3 +71,7 @@ h1 {
 .flex-container {
 	display: flex;
 }
+
+.material-icons-outlined{
+	color: white;
+}

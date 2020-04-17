@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"
+<html lang="en">
 <head>
-	<title>Project Passage</title>
+	<title>Project Passage - Mission select</title>
 	<link rel="shortcut icon" href="../favicon.ico" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="google" content="notranslate">
 	<!--Google Analytics-->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160710856-1"></script>
@@ -24,44 +25,51 @@
 	ga('send', 'pageview');
 	</script>
 	<!-- End Google Analytics -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../css/MenuTheme.css">
 </head>
-
-<header>
-	<div class="flex-container">
-	<div style="flex-basis: 33.3%">
-		<a href="../index.html" class="navigation" style="float:left;"><i class="material-icons-outlined" style="color: white">arrow_back</i></a><br>
-	</div>
-	<div style="flex-basis: 33.3%">
-		<br>
-		<h1 class="project">Project</h1>
-		<h1 class="passage">Passage</h1>
-	</div>
-	<div style="flex-basis: 33.3%"></div>
-	</div>
 <body>
-	<br>
-	<br>
-	<div class="card-deck">
+	<header>
+		<div class="flex-container">
+		<div style="flex-basis: 33.3%">
+			<a href="../index.html" class="navigation" style="float:left;"><i class="material-icons-outlined">arrow_back</i></a><br>
+		</div>
+		<div style="flex-basis: 33.3%">
+			<br>
+			<h1 class="project">Project</h1>
+			<h1 class="passage">Passage</h1>
+		</div>
+		<div style="flex-basis: 33.3%"></div>
+		</div>
+	</header>
+	<div class="missions">
 		<div class="card">
 		  <div class="card-body">
 			<h5 class="card-title">To Ìgil</h5>
-			<p class="card-text">Endings achieved = ?/?</p>
+			<p class="card-text" id="M1"></p>
 			<a href="To_Igil/M1.html" class="btn btn-primary">Play</a>
 		  </div>
 		</div>
 		<div class="card">
 		  <div class="card-body">
 			<h5 class="card-title">Fight to survive</h5>
-			<p class="card-text">Endings achieved = ?/?</p>
+			<p class="card-text">Endings achieved: 0/0</p>
 			<a href="#" class="btn btn-primary disabled">Play</a>
 		  </div>
 		</div>
+		<div class="card">
+			<div class="card-body">
+			  <h5 class="card-title">Witch hunt</h5>
+			  <p class="card-text">Endings achieved: 0/0</p>
+			  <a href="#" class="btn btn-primary disabled">Play</a>
+			</div>
+		  </div>
 	  </div>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script>
+		document.getElementById('M1').innerHTML = "Endings achieved: " + localStorage.getItem("M1-Endings") + "/5";
+	</script>
 </body>
 </html>

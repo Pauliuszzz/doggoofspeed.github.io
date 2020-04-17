@@ -206,5 +206,31 @@ scenarios = [
 		"reply3": "After an hour you realise how lucky you were, when a GPS collector approches you asking for help. Of course you realise what he needs, you give your findings back and get a \"Thank you\" in return.",
 		"answer3": "Take it just because",
 		"score3": 1000
+	},
+	{
+		//Lettuce Tower
+		"scenario": "While walking through a very very deep forest you find the fabled lettuce tower. It is basically a giant lettuce. People say that you could feed an entire family for a month with this thing",
+		"reply1": "You can't. I mean what did you expect? It is a giant tower, bigger than you, and you wanted to take it... The nerve of some people.",
+		"answer1": "Take it with you",
+		"score1": 0,
+		"reply2": "The problem is that there are no families nearby. It is black death's fault, not mine.",
+		"answer2": "Feed a family",
+		"score2": 0,
+		"reply3": "You try to eat it, but it isn't that tasty. That is what happens when plants pick quantity over quality. But atleast you aren't as hungry as before.",
+		"answer3": "Eat it",
+		"score3": 1000
+	},
+	{
+		//Merchant
+		"scenario": "A weird looking marchant passes by.",
+		"reply1": "Apparently he is selling some old school technology called \"GPS\".",
+		"answer1": "Catch up to him and ask what is he selling",
+		"score1": 750,
+		"reply2": "You catch up to him and try to sell your stuff. He angrily replies saying that he is a merchant, not a trash bin for stuff travellers no longer need.",
+		"answer2": "Catch up to him and try to sell hare meat you found 10 minutes ago.",
+		"score2": 0,
+		"reply3": "You ignored him.",
+		"answer3": "Ignore him",
+		"score3": 500
 	}
 ];

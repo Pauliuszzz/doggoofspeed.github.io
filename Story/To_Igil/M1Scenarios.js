@@ -84,7 +84,8 @@ scenarios = [
 	},
 	{
 		"scenario": "You and the other villagers decided to go to Ìgil. You told them your problem and they recommended you go to the monastery. Apparently, they help people who suffer from nature's mischief.",
-		"quit": true
+		"quit": true,
+		"ending1": true
 	},
 
 	//Route Bandit
@@ -104,7 +105,8 @@ scenarios = [
 		"answer1": "Try to choke your kidnappers",
 		"reply2": "You stole your kidnappers’ horse and ran away. You came to Ìgil exhausted. You tried to report the thugs to local guards, but they didn't care enough, saying that this didn't compromise the town's safety. The monastery hospital took you, although not very gracefully.",
 		"answer2": "Steal their horses and run away",
-		"quit": true
+		"quit": true,
+		"ending2": true
 	},
 	
 	//Route Stream
@@ -112,10 +114,11 @@ scenarios = [
 		"scenario": "After a good hour of walking you notice a small stream beside the road.",
 		"reply1": "The water is cold and refreshing. You feel like you've ascended.",
 		"answer1": "Drink from it",
-		"reply2": "You put your feet there and sigh. It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
+		"reply2": "You put your feet there and sigh... It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
+		"skipto2": 14,
 		"answer2": "Wash your feet",
 		"answer3": "Follow it instead of the road",
-		"skipto3": 14
+		"skipto3": 15
 	},
 	{
 		"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily you are quite close to the city.",
@@ -125,7 +128,13 @@ scenarios = [
 		"answer2": "Sit down and hope it will get better",
 		"reply3": "You fainted. A wagon passing by saw and took you to the monastery hospital in Ìgil.",
 		"answer3": "Just faint",
-		"quit": true
+		"quit": true,
+		"ending3": true
+	},
+	{
+		"scenario": "...It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
+		"quit": true,
+		"ending4": true
 	},
 	{
 		"scenario": "The water is cold, refreshing and relaxing. You know what isn't relaxing? The fact that without even noticing you ended up in a bandit camp.",
@@ -135,6 +144,7 @@ scenarios = [
 		"rnswer2": "Steal some of their food",
 		"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone. You sucesfully escaped the camp. When you reached Ìgil, you went straight to the monastery in hopes of getting some food.",
 		"answer3": "Sneak around and try to avoid trouble",
-		"quit": true
+		"quit": true,
+		"ending5": true
 	},
 ]

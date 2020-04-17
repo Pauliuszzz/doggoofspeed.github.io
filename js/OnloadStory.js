@@ -10,6 +10,33 @@ window.onload = function onload() {
 		}
 	text();
 }
+
+function text() {
+	$("#scenario-text").html(scenarios[count].scenario);
+	$("#ButtonOne").html(scenarios[count].answer1);
+	$("#ButtonTwo").html(scenarios[count].answer2);
+	$("#ButtonThree").html(scenarios[count].answer3);
+	if (scenarios[count].answer1 == null) {
+		$("#ButtonOne").hide()
+	}
+	if (scenarios[count].answer2 == null) {
+		$("#ButtonTwo").hide()
+	}
+	if (scenarios[count].answer3 == null) {
+		$("#ButtonThree").hide()
+	}
+	if(scenarios[count].answer1 == null){
+		if(scenarios[count].answer2 == null){
+			if(scenarios[count].answer3 == null){
+				$("#ButtonFour").prop('disabled', false);
+			}
+		}
+	}
+	else{
+		$("#ButtonFour").prop('disabled', true);
+	}
+}
+
 //Replies
 	function reply1() {
 		if(scenarios[count].reply1 != null){
@@ -61,4 +88,5 @@ window.onload = function onload() {
 			$("#ButtonFour").hide();
 		}
 		text();
+		endingcounter();
 }

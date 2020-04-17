@@ -199,12 +199,38 @@ scenarios = [
 		"scenario": "In the middle of the road you find a GPS that somebody lost",
 		"reply1": "You leave it. It is not like anyone needs that <em>boomer</em> trash anymore...",
 		"answer1": "Leave it",
-		"damage1": 500,
+		"damage1": 0,
 		"reply2": "You try to turn this ancient machine on, but it doesn't respond. Of course even if it had some power inside, it wouldn't be of any use to you.",
 		"answer2": "See if it's working",
-		"damage2": 500,
+		"damage2": 0,
 		"reply3": "After an hour you find a GPS collector who needs help. You give him your findings, but he decided that you stole it from him. You got hit so hard your soul escaped the body.",
 		"answer3": "Take it just because",
 		"damage3": 100
+	},
+	{
+		//Lettuce Tower
+		"scenario": "While walking through a very very deep forest you find the fabled lettuce tower. It is basically a giant lettuce. People say that you could feed an entire family for a month with this thing",
+		"reply1": "You can't. I mean what did you expect? It is a giant tower, bigger than you, and you wanted to take it... The nerve of some people.",
+		"answer1": "Take it with you",
+		"damage1": 10,
+		"reply2": "The problem is that there are no families nearby. It is black death's fault, not mine.",
+		"answer2": "Feed a family",
+		"damage2": 0,
+		"reply3": "You try to eat it, but it isn't that tasty. In fact you feel a bit dizzy. That is what happens when plants pick quantity over quality.",
+		"answer3": "Eat it",
+		"damage3": 50,
+	},
+	{
+		//Merchant
+		"scenario": "A weird looking marchant passes by.",
+		"reply1": "Apparently he is selling some old school technology called \"GPS\".",
+		"answer1": "Catch up to him and ask what is he selling",
+		"damage1": 0,
+		"reply2": "You catch up to him and try to sell your stuff. He angrily replies saying that he is a merchant, not a trash bin for stuff travellers no longer need.",
+		"answer2": "Catch up to him and try to sell hare meat you found 10 minutes ago.",
+		"damage2": 0,
+		"reply3": "You ignored him.",
+		"answer3": "Ignore him",
+		"damage3": 0,
 	}
 ];

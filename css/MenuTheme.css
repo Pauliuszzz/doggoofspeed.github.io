@@ -31,6 +31,7 @@ h1 {
 .passage {
 	text-shadow: 2px 2px #FF00CA;
 	font-family: Bitmgothic;
+	margin-bottom: 20px;
 }
 
 div.card {
@@ -50,16 +51,17 @@ p {
 }
 
 @media (min-width: 576px) {
-.card-deck{
+div.card{
+	width:25%;
 	max-width: 50%;
-	margin: auto;
+	margin: 5px;
 	}
 }
 
 @media (max-width: 576px) {
-	.card-deck{
-		max-width: 85%;
-		margin: auto;
+div.card{
+	max-width: 85%;
+	margin: 5px;
 	}
 }
 
@@ -69,4 +71,15 @@ p {
 
 .flex-container {
 	display: flex;
+}
+
+.missions{
+	display: flex;
+	margin-top: 20px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.material-icons-outlined{
+	color: white;
 }

@@ -27,17 +27,13 @@
 	<!-- End Google Analytics -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../css/StoryTheme.css">
-	<script src="../../js/OnloadStory.js"></script>
-	<script src="M1Scenarios.js"></script>
 </head>
-
 <body>
 	<header>
 		<div class="flex-container">
 			<div style="flex-basis: 33.3%">
-				<a href="../../index.html" class="navigation" style="float: left"><i class="material-icons-outlined" style="color: white">home</i></a>
+				<a href="../../index.html" class="navigation" style="float: left"><i class="material-icons-outlined">home</i></a>
 			</div>
 			<div style="flex-basis: 33.3%">
 				<br>
@@ -45,7 +41,7 @@
 				<h1 class="passage">Passage</h1>
 			</div>
 			<div style="flex-basis: 33.3%">
-				<a onClick="location.reload();" class="navigation" style="float: right"><i class="material-icons-outlined" style="color: white">refresh</i></a>
+				<a onClick="location.reload();" class="navigation" style="float: right"><i class="material-icons-outlined">refresh</i></a>
 			</div>
 		</div>
 	</header>
@@ -56,36 +52,38 @@
 	<p><button id="ButtonTwo" type="button" class="btn btn-outline-success shadow" onClick="reply2()"></button></p>
 	<p><button id="ButtonThree" type="button" class="btn btn-outline-success shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn btn-outline-primary shadow" onClick="next_scenario()">Continue</button></p>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="../../js/OnloadStory.js"></script>
+	<script src="M1Scenarios.js"></script>
 	<script>
+	var endings = localStorage.getItem('M1-Endings');
 	var quit = false;
     var path = 0;
 	var ending = 1;
 	var count = 0;
 //Text
-    function text() {
-    	$("#scenario-text").html(scenarios[count].scenario);
-		$("#ButtonOne").html(scenarios[count].answer1);
-		$("#ButtonTwo").html(scenarios[count].answer2);
-		$("#ButtonThree").html(scenarios[count].answer3);
-		if (scenarios[count].answer1 == null) {
-			$("#ButtonOne").hide()
+	function endingcounter(){
+		if(scenarios[count].ending1 == true && localStorage.getItem('M1-1') == null){
+			endings++;
+			localStorage.setItem('M1-1', 1);
 		}
-		if (scenarios[count].answer2 == null) {
-			$("#ButtonTwo").hide()
+		if(scenarios[count].ending2 == true && localStorage.getItem('M1-2') == null){
+			endings++;
+			localStorage.setItem('M1-2', 1);
 		}
-		if (scenarios[count].answer3 == null) {
-			$("#ButtonThree").hide()
+		if(scenarios[count].ending3 == true && localStorage.getItem('M1-3') == null){
+			endings++;
+			localStorage.setItem('M1-3', 1);
 		}
-		if(scenarios[count].answer1 == null){
-			if(scenarios[count].answer2 == null){
-				if(scenarios[count].answer3 == null){
-					$("#ButtonFour").prop('disabled', false);
-				}
-			}
+		if(scenarios[count].ending4 == true && localStorage.getItem('M1-4') == null){
+			endings++;
+			localStorage.setItem('M1-4', 1);
 		}
-		else{
-			$("#ButtonFour").prop('disabled', true);
+		if(scenarios[count].ending5 == true && localStorage.getItem('M1-5') == null){
+			endings++;
+			localStorage.setItem('M1-5', 1);
 		}
+		localStorage.setItem('M1-Endings', endings);
 	}
 </script>
 </body>
