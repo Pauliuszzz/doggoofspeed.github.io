@@ -74,6 +74,13 @@ div.card{
 	display: flex;
 }
 
+.flex-navigation {
+	width: 100%;
+	display: flex;
+	position: fixed;
+	bottom: 0;
+}
+
 .missions{
 	display: flex;
 	margin-top: 20px;
