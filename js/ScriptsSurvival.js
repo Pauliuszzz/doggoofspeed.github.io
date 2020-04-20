@@ -5,17 +5,17 @@ window.onload = function onload() {
 	$("#ButtonFour").prop('disabled', true);
 	$("#reply-text").hide();
 	if(window.innerWidth < 576){
-	$("#ButtonOne").addClass("btn-sm");
-	$("#ButtonTwo").addClass("btn-sm");
-	$("#ButtonThree").addClass("btn-sm");
-	$("#ButtonFour").addClass("btn-sm");
+		$("#ButtonOne").addClass("btn-sm");
+		$("#ButtonTwo").addClass("btn-sm");
+		$("#ButtonThree").addClass("btn-sm");
+		$("#ButtonFour").addClass("btn-sm");
 	}
 	var i = scenarios.length, k , temp;
 	while(--i > 0){
-    k = Math.floor(Math.random() * (i+1));
-    temp = scenarios[k];
-    scenarios[k] = scenarios[i];
-    scenarios[i] = temp;
+		k = Math.floor(Math.random() * (i+1));
+		temp = scenarios[k];
+		scenarios[k] = scenarios[i];
+		scenarios[i] = temp;
 	}
 	text();
 }
@@ -86,11 +86,11 @@ function reply3() {
 	
 //Next scenario
 function next_scenario(mult) {
-    count++;
+	count++;
 	$("#reply-text").hide();
 	$("#ButtonOne").prop('disabled', false);
 	$("#ButtonTwo").prop('disabled', false);
 	$("#ButtonThree").prop('disabled', false);
 	$("#ButtonFour").prop('disabled', true);
-    text();
+	text();
 }

@@ -1,6 +1,6 @@
 scenarios = [
 	{
-		"scenario": "September 17, 1343. The crops are being terrorised by crows and you can do nothing. Starving really isn't an option, it's a necessity. But you still must eat. You'll have to go to Ìgil. One way or another.",
+		"scenario": "The crops are being terrorised by crows and you can do nothing. Starving really isn't an option, it's a necessity. But you still must eat. You'll have to go to Ìgil. One way or another.",
 		"reply1": "You hastly ran out of the house. Not a wise decision, but a decision nonetheless.",
 		"answer1": "Go there asap",
 		"reply2": "You picked up the last loaf of bread and headed out.",

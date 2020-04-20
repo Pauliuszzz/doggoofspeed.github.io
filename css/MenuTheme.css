@@ -81,20 +81,25 @@ div.card{
 	bottom: 0;
 }
 
-.missions{
+.missions {
 	display: flex;
 	margin-top: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
-.modes{
+.modes {
 	display: flex;
 	margin-top: 20px;
 	flex-flow: column wrap;
 	align-items: center;
 }
 
-.material-icons-outlined{
+.material-icons-outlined {
 	color: white;
+}
+
+.link { 
+	background: none;
+	border: none;
 }
