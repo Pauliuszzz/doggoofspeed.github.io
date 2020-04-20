@@ -56,36 +56,7 @@
 	<p><button id="ButtonThree" type="button" class="btn btn-outline-light shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn btn-outline-light shadow" onClick="next_scenario()">Continue</button></p>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-	<script src="../js/OnloadArcade-Survival.js"></script>
+	<script src="../js/ScriptsSurvival.js"></script>
 	<script src="SurvivalScenarios.js"></script>
-	<script>
-    var sc = 0;
-	var hp = 100;
-	//Text
-    function text() {
-        $("#scenario-text").html(scenarios[sc].scenario);
-		$("#ButtonOne").html(scenarios[sc].answer1);
-		$("#ButtonTwo").html(scenarios[sc].answer2);
-		$("#ButtonThree").html(scenarios[sc].answer3);
-		if(hp >=0){
-		$("#hp-text").html("HP: " + hp);
-		}
-		if(hp < 0){
-		$("#hp-text").html("HP: 0");
-		}
-		if(hp <= 0 || sc == 17){
-			if(sc == 17){
-			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
-			}
-			if(hp <= 0){
-			$("#scenario-text").html("You have died. To go to the main menu, press the home button.");
-			}
-			$("#ButtonOne").hide();
-			$("#ButtonTwo").hide();
-			$("#ButtonThree").hide();
-			$("#ButtonFour").hide();
-		}
-    }
-</script>
 </body>
 </html>

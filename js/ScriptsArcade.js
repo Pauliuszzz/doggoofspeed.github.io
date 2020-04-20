@@ -1,12 +1,14 @@
+var sc = 0;
+var score = 0;
+
 window.onload = function onload() {
 	$("#ButtonFour").prop('disabled', true);
-	$("#reply-text").hide()
+	$("#reply-text").hide();
 	if(window.innerWidth < 576){
-	$("#ButtonOne").addClass("btn-sm")
-	$("#ButtonTwo").addClass("btn-sm")
-	$("#ButtonTwo").addClass("btn-sm")
-	$("#ButtonThree").addClass("btn-sm")
-	$("#ButtonFour").addClass("btn-sm")
+	$("#ButtonOne").addClass("btn-sm");
+	$("#ButtonTwo").addClass("btn-sm");
+	$("#ButtonThree").addClass("btn-sm");
+	$("#ButtonFour").addClass("btn-sm");
 	}
 	var i = scenarios.length, k , temp;
 	while(--i > 0){
@@ -17,6 +19,35 @@ window.onload = function onload() {
 	}
     text();
 }
+
+//Text
+function text() {
+	$("#scenario-text").html(scenarios[sc].scenario);
+	$("#ButtonOne").html(scenarios[sc].answer1);
+	$("#ButtonTwo").html(scenarios[sc].answer2);
+	$("#ButtonThree").html(scenarios[sc].answer3);
+	$("#score-text").html("Score: " + score);
+	if(sc >= 10){
+		$("#scenario-text").html("Your final score is:");
+		$("#ButtonOne").hide();
+		$("#ButtonTwo").hide();
+		$("#ButtonThree").hide();
+		$("#ButtonFour").hide();
+		if(localStorage.getItem('Highscore') < score){
+			localStorage.setItem('Highscore', score);
+		}
+	}
+	if (scenarios[count].answer1 == null) {
+		$("#ButtonOne").hide();
+	}
+	if (scenarios[count].answer2 == null) {
+		$("#ButtonTwo").hide();
+	}
+	if (scenarios[count].answer3 == null) {
+		$("#ButtonThree").hide();
+	}
+}
+
 //Replies
 function reply1() {
 	$("#reply-text").html(scenarios[sc].reply1);

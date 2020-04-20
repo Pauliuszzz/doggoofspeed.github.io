@@ -55,26 +55,7 @@
 	<p><button id="ButtonThree" type="button" class="btn shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn shadow" onClick="next_scenario()">Continue</button></p>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-	<script src="../js/OnloadArcade-Survival.js"></script>
+	<script src="../js/ScriptsArcade.js"></script>
 	<script src="ArcadeScenarios.js"></script>
-	<script>
-    var sc = 0;
-	var score = 0;
-	//Text
-    function text() {
-        $("#scenario-text").html(scenarios[sc].scenario);
-		$("#ButtonOne").html(scenarios[sc].answer1);
-		$("#ButtonTwo").html(scenarios[sc].answer2);
-		$("#ButtonThree").html(scenarios[sc].answer3);
-		$("#score-text").html("Score: " + score);
-		if(sc == 10){
-			$("#scenario-text").html("Your final score is:");
-			$("#ButtonOne").hide();
-			$("#ButtonTwo").hide();
-			$("#ButtonThree").hide();
-			$("#ButtonFour").hide();
-		}
-    }
-</script>
 </body>
 </html>

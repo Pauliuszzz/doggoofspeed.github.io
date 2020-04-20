@@ -24,8 +24,10 @@ h1 {
 	font-weight: bold;
 }
 
-.project {
+.project, h4 {
 	font-family: Century Gothic;
+	color: white;
+	font-weight: bold;
 }
 
 .passage {
@@ -35,12 +37,12 @@ h1 {
 }
 
 div.card {
-	background-color:rgba(255, 255, 255, 0.5);
+	background-color:rgba(0, 0, 0, 0.5);
 }
 
 p {
 	text-align: center;
-	color: black;
+	color: white;
 	font-size: 1rem;
 	padding: 5px;
 	padding-bottom: 5px;
@@ -52,15 +54,14 @@ p {
 
 @media (min-width: 576px) {
 div.card{
-	width:25%;
-	max-width: 50%;
+	width: 35%;
 	margin: 5px;
 	}
 }
 
 @media (max-width: 576px) {
 div.card{
-	max-width: 85%;
+	width: 70%;
 	margin: 5px;
 	}
 }
@@ -78,6 +79,13 @@ div.card{
 	margin-top: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+.modes{
+	display: flex;
+	margin-top: 20px;
+	flex-flow: column wrap;
+	align-items: center;
 }
 
 .material-icons-outlined{

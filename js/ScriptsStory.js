@@ -2,11 +2,11 @@ window.onload = function onload() {
 	$("#ButtonFour").prop('disabled', true);
 	$("#reply-text").hide();
 	if(window.innerWidth < 576){
-		$("#ButtonOne").addClass("btn-sm")
-		$("#ButtonTwo").addClass("btn-sm")
-		$("#ButtonTwo").addClass("btn-sm")
-		$("#ButtonThree").addClass("btn-sm")
-		$("#ButtonFour").addClass("btn-sm")
+		$("#ButtonOne").addClass("btn-sm");
+		$("#ButtonTwo").addClass("btn-sm");
+		$("#ButtonTwo").addClass("btn-sm");
+		$("#ButtonThree").addClass("btn-sm");
+		$("#ButtonFour").addClass("btn-sm");
 		}
 	text();
 }
@@ -17,20 +17,16 @@ function text() {
 	$("#ButtonTwo").html(scenarios[count].answer2);
 	$("#ButtonThree").html(scenarios[count].answer3);
 	if (scenarios[count].answer1 == null) {
-		$("#ButtonOne").hide()
+		$("#ButtonOne").hide();
 	}
 	if (scenarios[count].answer2 == null) {
-		$("#ButtonTwo").hide()
+		$("#ButtonTwo").hide();
 	}
 	if (scenarios[count].answer3 == null) {
-		$("#ButtonThree").hide()
+		$("#ButtonThree").hide();
 	}
-	if(scenarios[count].answer1 == null){
-		if(scenarios[count].answer2 == null){
-			if(scenarios[count].answer3 == null){
-				$("#ButtonFour").prop('disabled', false);
-			}
-		}
+	if(scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
+		$("#ButtonFour").prop('disabled', false);
 	}
 	else{
 		$("#ButtonFour").prop('disabled', true);

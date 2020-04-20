@@ -141,7 +141,7 @@ scenarios = [
 		"reply1": "They were guarding the road, but not their actual camp. You put some grass and some dirt in their soup. You even managed to eat some of it. That soup might have been tasty, but you can't erase days of hungriness with just a spoon of soup. That is whay when you came to Ìgil your first destination was monastery - the only place to get free food.",
 		"answer1": "Try to sabotage them",
 		"reply2": "You managed to sneak out of the camp and ran as fast as you could. When you reached Ìgil, you went straight to the monastery in hopes of getting food.",
-		"rnswer2": "Steal some of their food",
+		"answer2": "Steal some of their food",
 		"reply3":"You managed to sneak around them, mostly because they weren't in the camp. They were on the road waiting for someone. It seems like they were planning to ambush someone. You sucesfully escaped the camp. When you reached Ìgil, you went straight to the monastery in hopes of getting some food.",
 		"answer3": "Sneak around and try to avoid trouble",
 		"quit": true,
