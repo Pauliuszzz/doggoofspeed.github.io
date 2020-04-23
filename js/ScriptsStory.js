@@ -70,9 +70,21 @@ function text() {
 				count = scenarios[count].skipto3;
 			}
 	}
-	
+
 //Next scenario
 	function next_scenario(mult){
+		if(quit == true){
+			endingcounter();
+			$("#scenario-text").hide();
+			$("#ButtonOne").hide();
+			$("#ButtonTwo").hide();
+			$("#ButtonThree").hide();
+			$("#ButtonFour").hide();
+			document.getElementById("body").style.animationName = "endScreen";
+			document.getElementById("body").style.animationDuration = "3s";
+			document.getElementById("body").style.animationFillMode = "forwards";
+		}
+		else{
 		count++;
 		$("#reply-text").hide();
 		$("#ButtonOne").prop('disabled', false).show();
@@ -80,9 +92,6 @@ function text() {
 		$("#ButtonThree").prop('disabled', false).show();
 		$("#ButtonFour").show();
 		quit = scenarios[count].quit;
-		if(quit == true){
-			$("#ButtonFour").hide();
-		}
 		text();
-		endingcounter();
+	}
 }

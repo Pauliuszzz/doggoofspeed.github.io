@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Project Passage - Story</title>
+	<link rel="shortcut icon" href="../../favicon.ico" type='image/x-icon' />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="google" content="notranslate">
+	<!--Google Analytics-->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160710856-1"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-160710856-1');
+	</script>
+	<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-160710856-1', 'auto');
+	ga('require', 'GTM-NWTHXJN');
+	ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="../../css/StoryThemes/StoryThemeUniversal.css">
+	<link rel="stylesheet" type="text/css" href="../../css/StoryThemes/M2Theme.css">
+</head>
+<body id="body">
+	<header>
+		<div class="flex-container">
+			<div style="flex-basis: 100%">
+				<br>
+				<h1 class="project">Project</h1>
+				<h1 class="passage">Passage</h1>
+			</div>
+		</div>
+	</header>
+	<br>
+	<p class="scenario shadow" id="scenario-text"></p>
+	<p class="reply shadow" id="reply-text"></p>
+	<p><button id="ButtonOne" type="button" class="btn btn-outline-success shadow" onClick="reply1()"></button></p>
+	<p><button id="ButtonTwo" type="button" class="btn btn-outline-success shadow" onClick="reply2()"></button></p>
+	<p><button id="ButtonThree" type="button" class="btn btn-outline-success shadow" onClick="reply3()"></button></p>
+	<p><button id="ButtonFour" type="button" class="btn btn-outline-primary shadow" onClick="next_scenario()">Continue</button></p>
+	<div class="card hidden" id="EndCard">
+		<div class="card-body">
+		  <h4 class="card-title">Mission 2 Completed</h4>
+		  <p class="card-text" id="M2"></p>
+		  <a href="../../index.html" class="btn btn-primary shadow"><img src="../../resources/home.svg" alt="Home"></a>
+		  <a href="./M2.html" class="btn btn-primary shadow"><img src="../../resources/refresh.svg" alt="Refresh"></a>
+		  <a href="./M2.html" class="btn btn-primary shadow"><img src="../../resources/forward.svg" alt="Forward"></a>
+		</div>
+	  </div>
+	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="../../js/ScriptsStory.js"></script>
+	<script src="../Scenarios/M2Scenarios.js"></script>
+	<script>
+	var endings = localStorage.getItem('M2-Endings');
+	var quit = false;
+	var path = 0;
+	var ending = 1;
+	var count = 0;
+
+//Ending Counter
+function endingcounter(){
+	if(scenarios[count].ending1 == true && localStorage.getItem('M2-1') == null){
+		endings++;
+		localStorage.setItem('M2-1', 1);
+	}
+	if(scenarios[count].ending2 == true && localStorage.getItem('M2-2') == null){
+		endings++;
+		localStorage.setItem('M2-2', 1);
+	}
+	if(scenarios[count].ending3 == true && localStorage.getItem('M2-3') == null){
+		endings++;
+		localStorage.setItem('M2-3', 1);
+	}
+	if(scenarios[count].ending4 == true && localStorage.getItem('M2-4') == null){
+		endings++;
+		localStorage.setItem('M2-4', 1);
+	}
+	if(scenarios[count].ending5 == true && localStorage.getItem('M2-5') == null){
+		endings++;
+		localStorage.setItem('M2-5', 1);
+	}
+	if(scenarios[count].ending6 == true && localStorage.getItem('M2-6') == null){
+		endings++;
+		localStorage.setItem('M2-6', 1);
+	}
+	if(scenarios[count].ending7 == true && localStorage.getItem('M2-7') == null){
+		endings++;
+		localStorage.setItem('M2-7', 1);
+	}
+	if(scenarios[count].ending8 == true && localStorage.getItem('M2-8') == null){
+		endings++;
+		localStorage.setItem('M2-8', 1);
+	}
+	if(scenarios[count].ending9 == true && localStorage.getItem('M2-9') == null){
+		endings++;
+		localStorage.setItem('M2-9', 1);
+	}
+	if(scenarios[count].ending10 == true && localStorage.getItem('M2-10') == null){
+		endings++;
+		localStorage.setItem('M2-10', 1);
+	}
+	localStorage.setItem('M2-Endings', endings);
+	document.getElementById('M2').innerHTML = "Endings achieved: " + localStorage.getItem("M2-Endings") + "/10";
+	$("div#EndCard").removeClass("hidden");
+}
+</script>
+</body>
+</html>

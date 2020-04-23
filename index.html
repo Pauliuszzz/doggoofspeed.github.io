@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Project Passage</title>
-	<link rel="shortcut icon" href="favicon.ico" />
+	<link rel="shortcut icon" href="favicon.ico" type='image/x-icon' />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="google" content="notranslate">
@@ -26,7 +26,6 @@
 	</script>
 	<!-- End Google Analytics -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/MenuTheme.css">
 </head>
 <body>
@@ -46,30 +45,30 @@
 		  <div class="card-body">
 			<h4 class="card-title">Story mode</h4>
 			<p class="card-text" id="StoryMode"></p>
-			<a href="Story/MissionSelect.html" class="btn btn-primary shadow">Play <i class="material-icons-outlined" style="vertical-align: -25%;">book</i></a>
+			<a href="Story/MissionSelect.html" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
 		  </div>
 		</div>
 		<div class="card" style="background-color: rgba(40, 167, 69, 0.5)">
 		  <div class="card-body">
 			<h4 class="card-title">Arcade mode</h4>
 			<p class="card-text" id="ArcadeMode"></p>
-			<a href="Arcade/Arcade.html" class="btn btn-success shadow">Play <i class="material-icons-outlined" style="vertical-align: -25%;">videogame_asset</i></a>
+			<a href="Arcade/Arcade.html" class="btn btn-success shadow"><img src="resources/play.svg" alt="Play"></a>
 		  </div>
 		</div>
 		<div class="card" style="background-color: rgba(220, 53, 69, 0.5)">
 			<div class="card-body">
 			  <h4 class="card-title">Survival mode</h4>
 			  <p class="card-text" id="SurvivalMode"></p>
-			  <a href="Survival/Survival.html" class="btn btn-danger shadow">Play <i class="material-icons-outlined" style="vertical-align: -25%;">sentiment_very_dissatisfied</i></a>
+			  <a href="Survival/Survival.html" class="btn btn-danger shadow"><img src="resources/play.svg" alt="Play"></a>
 			</div>
 		  </div>
 		</div>
 	  <div class="flex-navigation">
 		<div style="flex-grow: 1">
-			<button type="button" class="btn btn-link" style="float: left" data-toggle="popover" data-trigger="focus" title="Credits" data-placement="top" data-html="true" data-content="Made by:<br>DoggoOfSpeed<br>Retro font in the title:<br>Bitmgothic<br>Windows 95 theme:<br><a href=https://alexbsoft.github.io/win95.css/>Alex B</a><br>Arcade background:<br>YuriNikolai"><i class="material-icons-outlined">info</i></button>
+			<button type="button" class="btn btn-link" style="float: left" data-toggle="popover" data-trigger="focus" title="Credits" data-placement="top" data-html="true" data-content="Made by:<br>DoggoOfSpeed<br>Retro font in the title:<br>Bitmgothic<br>Windows 95 theme:<br><a href=https://alexbsoft.github.io/win95.css/>Alex B</a><br>Arcade background:<br>YuriNikolai"><img src="resources/info.svg" alt="Info"></button>
 		</div>
 		<div style="flex-grow: 1">
-			<button type="button" class="btn btn-link" style="float: right" data-toggle="popover" data-trigger="focus" title="Contact Me" data-placement="top" data-html="true" data-content="Got some scenario ideas?<br> You can contact me via Discord, and they will (probably) be added:<br> DoggoOfSpeed#0296<br>"><i class="material-icons-outlined">email</i></button>
+			<button type="button" class="btn btn-link" style="float: right" data-toggle="popover" data-trigger="focus" title="Contact Me" data-placement="top" data-html="true" data-content="Got some scenario ideas?<br> You can contact me via Discord, and they will (probably) be added:<br> DoggoOfSpeed#0296<br>"><img src="resources/contacts.svg" alt="Contacts"></button>
 		</div>
 	</div>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
@@ -87,7 +86,10 @@
 	if(localStorage.getItem('M1-Endings') >= 1){
 		missionsDone++;
 	}
-	document.getElementById('StoryMode').innerHTML = "Missions completed: " + missionsDone + "/1";
+	if(localStorage.getItem('M2-Endings') >= 1){
+		missionsDone++;
+	}
+	document.getElementById('StoryMode').innerHTML = "Missions completed: " + missionsDone + "/2";
 	if(localStorage.getItem('Highscore') > 0){
 		document.getElementById('ArcadeMode').innerHTML = "Highscore: " + localStorage.getItem('Highscore');
 	}

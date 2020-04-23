@@ -232,5 +232,18 @@ scenarios = [
 		"reply3": "You ignored him.",
 		"answer3": "Ignore him",
 		"score3": 500
+	},
+	{
+		//Leprechaun
+		"scenario": "You were walking through a deep forest when a leprechaun jumped in front of you.",
+		"reply1": "You tried to kick him off, but failed. He got up and looked at you. One of his eyes was blue. At this point you knew, you fucked up.",
+		"answer1": "Kick him off the road",
+		"score1": 250,
+		"reply2": "Leprechauns are like dumb children. If you tell them to do one thing, they'll do the opposite. So the he just took a nap. In the middle of the road.",
+		"answer2": "Ask him to go away",
+		"score2": 500,
+		"reply3": "Ask for money",
+		"answer3": "He gives you money in excange for you soul. Such a wonderful deal!",
+		"score3": 250,
 	}
 ];

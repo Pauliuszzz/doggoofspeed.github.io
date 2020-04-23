@@ -1,0 +1,108 @@
+@font-face {
+    font-family: 'Bitmgothic';
+    src: url('../Bitmgothic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+	text-align: center;
+}
+
+h1 {
+	color: white;
+	font-size: 300%;
+    margin: auto;
+	font-weight: bold;
+}
+
+.project {
+	font-family: Century Gothic;
+}
+
+.scenario, .reply {
+	text-align: center;
+	background-color:rgba(0,0,0,0);
+	color: white;
+	font-size: 1rem;
+	width: 50%;
+	margin: 10px auto;
+	border-radius: 10px;
+	border: 2px solid;
+	border-color: #6FB98F;
+	padding: 5px;
+	padding-bottom: 5px;
+}
+
+@media (min-width: 576px) {
+	button{
+		width: 25%;
+	}
+	@keyframes appear {
+		from { 
+			width: 25%;
+			opacity: 0; 
+		}
+		to { 
+			width: 50%;
+			opacity: 1; 
+		}
+	}
+	div#EndCard {
+		width: 50%
+	}
+}
+	
+@media (max-width: 576px) {
+	button{
+		width: 50%;
+	}
+	@keyframes appear {
+		from { 
+			width: 50%;
+			opacity: 0; 
+		}
+		to { 
+			width: 70%;
+			opacity: 1; 
+		}
+	}
+	div#EndCard {
+		width: 70%
+	}
+}
+
+.navigation { 
+	margin: 10px 10px 10px;
+}
+
+.flex-container {
+	display: flex;
+}
+
+img {
+    width: 24px;
+    max-height: 24px;
+}
+
+div#EndCard {
+	background-color:rgb(255, 217, 0, 0.8);
+	animation-name: appear;
+	animation-duration: 3s;
+	margin: auto;
+}
+
+@keyframes endScreen {
+	from {
+		background-position: 0% 100%;
+		background-size: 100% 100%;
+	}
+	to {
+		background-size: 600% 600%;
+		background-position: 0% 100%;
+	}
+}
+
+.hidden {
+   display: none;
+}

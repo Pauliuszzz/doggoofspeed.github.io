@@ -95,11 +95,13 @@ div.card{
 	align-items: center;
 }
 
-.material-icons-outlined {
-	color: white;
-}
-
 .link { 
 	background: none;
 	border: none;
+	outline: 0 !important;
+}
+
+img {
+    width: 24px;
+    max-height: 24px;
 }

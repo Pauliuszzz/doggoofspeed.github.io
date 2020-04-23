@@ -1,0 +1,10 @@
+body {
+	background: linear-gradient(0deg, #142D12, #1D5429, #5B9753) fixed;
+	background-position: 0% 100%;
+	text-align: center;
+}
+
+.passage {
+	text-shadow: 2px 2px #63BE64;
+	font-family: Bitmgothic;
+}

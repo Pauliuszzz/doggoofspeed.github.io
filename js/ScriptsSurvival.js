@@ -41,8 +41,8 @@ function text() {
 	if(hp <= 0){
 		$("#hp-text").html("HP: 0");
 	}
-	if(hp <= 0 || count == 17){
-		if(count == 17){
+	if(hp <= 0 || count == 18){
+		if(count == 18){
 			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
 		}
 		if(hp <= 0){

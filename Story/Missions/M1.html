@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<title>Project Passage - Story</title>
-	<link rel="shortcut icon" href="../../favicon.ico" />
+	<link rel="shortcut icon" href="../../favicon.ico" type='image/x-icon' />
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="google" content="notranslate">
@@ -26,22 +26,16 @@
 	</script>
 	<!-- End Google Analytics -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../../css/StoryTheme.css">
+	<link rel="stylesheet" type="text/css" href="../../css/StoryThemes/StoryThemeUniversal.css">
+	<link rel="stylesheet" type="text/css" href="../../css/StoryThemes/M1Theme.css">
 </head>
-<body>
+<body id="body">
 	<header>
 		<div class="flex-container">
-			<div style="flex-basis: 33.3%">
-				<a href="../../index.html" class="navigation" style="float: left"><i class="material-icons-outlined">home</i></a>
-			</div>
-			<div style="flex-basis: 33.3%">
+			<div style="flex-basis: 100%">
 				<br>
 				<h1 class="project">Project</h1>
 				<h1 class="passage">Passage</h1>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<a onClick="location.reload();" class="navigation" style="float: right"><i class="material-icons-outlined">refresh</i></a>
 			</div>
 		</div>
 	</header>
@@ -52,16 +46,26 @@
 	<p><button id="ButtonTwo" type="button" class="btn btn-outline-success shadow" onClick="reply2()"></button></p>
 	<p><button id="ButtonThree" type="button" class="btn btn-outline-success shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn btn-outline-primary shadow" onClick="next_scenario()">Continue</button></p>
+	<div class="card hidden" id="EndCard">
+		<div class="card-body">
+		  <h4 class="card-title">Mission 1 Completed</h4>
+		  <p class="card-text" id="M1"></p>
+		  <a href="../../index.html" class="btn btn-primary shadow"><img src="../../resources/home.svg" alt="Home"></a>
+		  <a href="./M1.html" class="btn btn-primary shadow"><img src="../../resources/refresh.svg" alt="Refresh"></a>
+		  <a href="./M2.html" class="btn btn-primary shadow"><img src="../../resources/forward.svg" alt="Forward"></a>
+		</div>
+	  </div>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="../../js/ScriptsStory.js"></script>
-	<script src="M1Scenarios.js"></script>
+	<script src="../Scenarios/M1Scenarios.js"></script>
 	<script>
 	var endings = localStorage.getItem('M1-Endings');
 	var quit = false;
 	var path = 0;
 	var ending = 1;
 	var count = 0;
-//Text
+
+//Ending Counter
 	function endingcounter(){
 		if(scenarios[count].ending1 == true && localStorage.getItem('M1-1') == null){
 			endings++;
@@ -84,6 +88,8 @@
 			localStorage.setItem('M1-5', 1);
 		}
 		localStorage.setItem('M1-Endings', endings);
+		document.getElementById('M1').innerHTML = "Endings achieved: " + localStorage.getItem("M1-Endings") + "/5";
+		$("div#EndCard").removeClass("hidden");
 	}
 </script>
 </body>

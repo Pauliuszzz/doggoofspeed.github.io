@@ -72,6 +72,7 @@ h1 {
 	display: flex;
 }
 
-.material-icons-outlined{
-	color: white;
+img {
+    width: 24px;
+    max-height: 24px;
 }
