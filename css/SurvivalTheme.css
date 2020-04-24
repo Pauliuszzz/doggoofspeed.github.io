@@ -71,8 +71,3 @@ h1 {
 .flex-container {
 	display: flex;
 }
-
-img {
-    width: 24px;
-    max-height: 24px;
-}

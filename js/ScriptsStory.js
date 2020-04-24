@@ -76,6 +76,7 @@ function text() {
 		if(quit == true){
 			endingcounter();
 			$("#scenario-text").hide();
+			$("#reply-text").hide();
 			$("#ButtonOne").hide();
 			$("#ButtonTwo").hide();
 			$("#ButtonThree").hide();
