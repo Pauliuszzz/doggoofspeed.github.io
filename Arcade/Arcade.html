@@ -41,7 +41,7 @@
 				<h1 class="passage">Passage</h1>
 			</div>
 			<div style="flex-basis: 33.3%">
-				<a onClick="location.reload();" class="navigation" style="float: right"><img src="../resources/refresh.png" alt="Home" width=36></a>
+				<a href="./Arcade.html" class="navigation" style="float: right"><img src="../resources/refresh.png" alt="Home" width=36></a>
 			</div>
 		</div>
 	</header>
@@ -53,6 +53,14 @@
 	<p><button id="ButtonTwo" type="button" class="btn shadow" onClick="reply2()"></button></p>
 	<p><button id="ButtonThree" type="button" class="btn shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn shadow" onClick="next_scenario()">Continue</button></p>
+	<div class="card hidden shadow" id="EndCard">
+		<div class="card-header">
+			<h4 class="my-0 font-weight-normal">Arcade mode completed</h4>
+		</div>
+		<div class="card-body">
+			<p id="EndScore"></p>
+		</div>
+	</div>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="../js/ScriptsArcade.js"></script>
 	<script src="ArcadeScenarios.js"></script>

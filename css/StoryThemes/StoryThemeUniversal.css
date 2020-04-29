@@ -80,13 +80,9 @@ h1 {
 	display: flex;
 }
 
-img {
-    width: 24px;
-    max-height: 24px;
-}
-
 div#EndCard {
-	background-color:rgb(255, 217, 0, 0.8);
+	background-color:rgba(0, 0, 0, 0.2);
+	color: white;
 	animation-name: appear;
 	animation-duration: 3s;
 	margin: auto;
@@ -94,12 +90,11 @@ div#EndCard {
 
 @keyframes endScreen {
 	from {
-		background-position: 0% 100%;
 		background-size: 100% 100%;
 	}
 	to {
-		background-size: 600% 600%;
-		background-position: 0% 100%;
+		background-size: 300% 300%;
+		background-position: 0% 50%;
 	}
 }
 

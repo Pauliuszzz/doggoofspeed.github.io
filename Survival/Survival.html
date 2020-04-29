@@ -41,7 +41,7 @@
 				<h1 class="passage">Passage</h1>
 			</div>
 			<div style="flex-basis: 33.3%">
-				<a onClick="location.reload();" class="navigation" style="float: right;"><img src="../resources/refresh.svg" alt="Refresh"></a>
+				<a href="./Survival.html" class="navigation" style="float: right;"><img src="../resources/refresh.svg" alt="Refresh"></a>
 			</div>
 		</div>
 	</header>
@@ -53,11 +53,20 @@
 	<p><button id="ButtonTwo" type="button" class="btn btn-outline-light shadow" onClick="reply2()"></button></p>
 	<p><button id="ButtonThree" type="button" class="btn btn-outline-light shadow" onClick="reply3()"></button></p>
 	<p><button id="ButtonFour" type="button" class="btn btn-outline-light shadow" onClick="next_scenario()">Continue</button></p>
+	<div class="card hidden shadow" id="DeadCard">
+		<div class="card-body">
+			<h4 class="card-title">You have died</h4>
+		  <p class="card-text" id="DeadText"></p>
+		</div>
+	  </div>
+	  <div class="card hidden shadow" id="EndCard">
+		<div class="card-body">
+		  <h4 class="card-title">You have completed survival mode!</h4>
+		  <p class="card-text" id="EndText"></p>
+		</div>
+	  </div>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="../js/ScriptsSurvival.js"></script>
 	<script src="SurvivalScenarios.js"></script>
-	<script>
-		console.log(scenarios.length);
-	</script>
 </body>
 </html>

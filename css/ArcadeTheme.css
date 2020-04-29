@@ -88,9 +88,8 @@ h1 {
 }
 
 /*
-    Button styles
+Button styles
 */
-
 .btn{
     border-width: 2px;
     border-style: outset;
@@ -143,6 +142,97 @@ button:focus{
     text-shadow: 1px 1px white;
 }
 
+/*
+CARDS
+*/
+.card{
+    border: solid;
+    border-width: 2px;
+    border-bottom-color: #424242;
+    border-right-color: #424242;
+    border-left-color: #fff;
+    border-top-color: #fff;
+    background: silver;
+    color:#212529;
+}
+
+.card.square{
+    border-radius: 0px;
+}
+
+.card.square .card-header{
+    border-radius: 0px;
+}
+
+.card.w95 .card-header{
+    background: #08216b;
+    /* OR #000082 is better?*/
+}
+
+.card-header{
+    background: -webkit-linear-gradient(left,#08216b,#a5cef7);
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 2px;
+    padding-bottom: 1px;
+    text-align: left;
+}
+
+.card-header.icon{
+    padding-left: 4px;
+}
+
 .flex-container {
 	display: flex;
 }
+
+@media (min-width: 576px) {
+	button{
+		width: 25%;
+	}
+	@keyframes appear {
+		from { 
+			width: 25%;
+			opacity: 0; 
+		}
+		to { 
+			width: 50%;
+			opacity: 1; 
+		}
+	}
+	div#EndCard {
+		width: 50%
+	}
+}
+	
+@media (max-width: 576px) {
+	button{
+		width: 50%;
+	}
+	@keyframes appear {
+		from { 
+			width: 50%;
+			opacity: 0; 
+		}
+		to { 
+			width: 70%;
+			opacity: 1; 
+		}
+	}
+	div#EndCard {
+		width: 70%
+	}
+}
+
+div#EndCard {
+	animation-name: appear;
+	animation-duration: 3s;
+	margin: auto;
+}
+
+.hidden {
+    display: none;
+ }

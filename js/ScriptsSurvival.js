@@ -41,21 +41,6 @@ function text() {
 	if(hp <= 0){
 		$("#hp-text").html("HP: 0");
 	}
-	if(hp <= 0 || count == 18){
-		if(count == 18){
-			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
-		}
-		if(hp <= 0){
-			$("#scenario-text").html("You have died. To go to the main menu, press the home button.");
-		}
-		$("#ButtonOne").hide();
-		$("#ButtonTwo").hide();
-		$("#ButtonThree").hide();
-		$("#ButtonFour").hide();
-		if(localStorage.getItem('MaxSurvived') < count){
-			localStorage.setItem('MaxSurvived', count);
-		}
-	}
 }
 
 //Replies
@@ -86,6 +71,26 @@ function reply3() {
 	
 //Next scenario
 function next_scenario(mult) {
+	if(hp <= 0 || count == 18){
+		if(localStorage.getItem('MaxSurvived') < count){
+			localStorage.setItem('MaxSurvived', count);
+		}
+		if(count == 18){
+			$("#EndCard").removeClass("hidden");
+		}
+		if(hp <= 0){
+			$("#DeadCard").removeClass("hidden");
+		}
+		$("#scenario-text").hide();
+		$("#reply-text").hide();
+		$("#hp-text").hide();
+		$("#ButtonOne").hide();
+		$("#ButtonTwo").hide();
+		$("#ButtonThree").hide();
+		$("#ButtonFour").hide();
+		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
+		$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
+	}
 	count++;
 	$("#reply-text").hide();
 	$("#ButtonOne").prop('disabled', false);

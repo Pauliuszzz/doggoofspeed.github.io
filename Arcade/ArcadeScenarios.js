@@ -242,8 +242,8 @@ scenarios = [
 		"reply2": "Leprechauns are like dumb children. If you tell them to do one thing, they'll do the opposite. So the he just took a nap. In the middle of the road.",
 		"answer2": "Ask him to go away",
 		"score2": 500,
-		"reply3": "Ask for money",
-		"answer3": "He gives you money in excange for you soul. Such a wonderful deal!",
+		"reply3": "He gives you money in excange for you soul. Such a wonderful deal!",
+		"answer3": "Ask for money",
 		"score3": 250,
 	}
 ];

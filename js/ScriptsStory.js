@@ -81,9 +81,7 @@ function text() {
 			$("#ButtonTwo").hide();
 			$("#ButtonThree").hide();
 			$("#ButtonFour").hide();
-			document.getElementById("body").style.animationName = "endScreen";
-			document.getElementById("body").style.animationDuration = "3s";
-			document.getElementById("body").style.animationFillMode = "forwards";
+			$("#body").css({"animation": "endScreen 3s ease forwards" });
 		}
 		else{
 		count++;

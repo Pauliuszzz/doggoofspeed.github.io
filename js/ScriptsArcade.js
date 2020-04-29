@@ -27,16 +27,6 @@ function text() {
 	$("#ButtonTwo").html(scenarios[count].answer2);
 	$("#ButtonThree").html(scenarios[count].answer3);
 	$("#score-text").html("Score: " + score);
-	if(count >= 10){
-		$("#scenario-text").html("Your final score is:");
-		$("#ButtonOne").hide();
-		$("#ButtonTwo").hide();
-		$("#ButtonThree").hide();
-		$("#ButtonFour").hide();
-		if(localStorage.getItem('Highscore') < score){
-			localStorage.setItem('Highscore', score);
-		}
-	}
 	if (scenarios[count].answer1 == null) {
 		$("#ButtonOne").hide();
 	}
@@ -76,6 +66,20 @@ function reply3() {
 	
 //Next scenario
 function next_scenario(mult) {
+	if(count >= 10){
+		if(localStorage.getItem('Highscore') < score){
+			localStorage.setItem('Highscore', score);
+		}
+		$("#scenario-text").hide();
+		$("#reply-text").hide();
+		$("#score-text").hide();
+		$("#ButtonOne").hide();
+		$("#ButtonTwo").hide();
+		$("#ButtonThree").hide();
+		$("#ButtonFour").hide();
+		$("#EndCard").removeClass("hidden");
+		$("#EndScore").html("Your score: " + score + "<br>Highscore: " + localStorage.getItem("Highscore"));
+	}
 	count++;
 	$("#reply-text").hide();
 	$("#ButtonOne").prop('disabled', false);

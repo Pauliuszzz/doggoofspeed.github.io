@@ -52,18 +52,6 @@ h1 {
 	border-color: red;
 }
 
-@media (min-width: 576px) {
-	button{
-		width: 25%;
-		}
-	}
-	
-@media (max-width: 576px) {
-	button{
-		width: 50%;
-	}
-}
-
 .navigation { 
 	margin: 10px 10px 10px;
 }
@@ -71,3 +59,53 @@ h1 {
 .flex-container {
 	display: flex;
 }
+
+@media (min-width: 576px) {
+	button{
+		width: 25%;
+	}
+	@keyframes appear {
+		from { 
+			width: 25%;
+			opacity: 0; 
+		}
+		to { 
+			width: 50%;
+			opacity: 1; 
+		}
+	}
+	div#EndCard,  div#DeadCard{
+		width: 50%
+	}
+}
+	
+@media (max-width: 576px) {
+	button{
+		width: 50%;
+	}
+	@keyframes appear {
+		from { 
+			width: 50%;
+			opacity: 0; 
+		}
+		to { 
+			width: 70%;
+			opacity: 1; 
+		}
+	}
+	div#EndCard,  div#DeadCard{
+		width: 70%
+	}
+}
+
+div#EndCard,  div#DeadCard{
+	background-color: rgb(25, 0, 0);
+	color: white;
+	animation-name: appear;
+	animation-duration: 3s;
+	margin: auto;
+}
+
+.hidden {
+    display: none;
+ }
