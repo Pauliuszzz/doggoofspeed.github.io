@@ -5,8 +5,9 @@
     font-style: normal;
 }
 
-header {
+body {
 	text-align: center;
+	background-position: 50% 50%;
 }
 
 h1 {
@@ -20,12 +21,14 @@ h1 {
 	font-family: Century Gothic;
 }
 
+.passage {
+	font-family: Bitmgothic;
+}
+
 .scenario, .reply {
-	text-align: center;
 	background-color:rgba(0,0,0,0);
 	color: white;
 	font-size: 1rem;
-	width: 50%;
 	margin: 10px auto;
 	border-radius: 10px;
 	border: 2px solid;
@@ -38,6 +41,12 @@ h1 {
 	button{
 		width: 25%;
 	}
+	.scenario, .reply{
+		width: 50%;
+	}
+	div#EndCard {
+		width: 50%;
+	}
 	@keyframes appear {
 		from { 
 			width: 25%;
@@ -48,14 +57,17 @@ h1 {
 			opacity: 1; 
 		}
 	}
-	div#EndCard {
-		width: 50%
-	}
 }
 	
 @media (max-width: 576px) {
 	button{
 		width: 50%;
+	}
+	.scenario, .reply{
+		width: 75%;
+	}
+	div#EndCard {
+		width: 75%;
 	}
 	@keyframes appear {
 		from { 
@@ -66,9 +78,6 @@ h1 {
 			width: 70%;
 			opacity: 1; 
 		}
-	}
-	div#EndCard {
-		width: 70%
 	}
 }
 

@@ -34,20 +34,19 @@ h1 {
 }
 
 .scenario, .reply, .hp {
-	text-align: center;
 	background-color: transparent;
 	color: white;
 	font-size: 1rem;
-	max-width: 50%;
 	margin: 10px auto;
+	padding: 5px;
 	border-radius: 10px;
 	border: 2px solid;
 	border-color: #B50000;
-	padding: 5px;
-	padding-bottom: 5px;
 }
 
 .hp {
+	margin: 0px;
+	margin-bottom: 10px;
 	display: inline-block;
 	border-color: red;
 }
@@ -64,6 +63,12 @@ h1 {
 	button{
 		width: 25%;
 	}
+	.scenario, .reply{
+		width: 50%;
+	}
+	div#EndCard,  div#DeadCard{
+		width: 50%;
+	}
 	@keyframes appear {
 		from { 
 			width: 25%;
@@ -74,27 +79,27 @@ h1 {
 			opacity: 1; 
 		}
 	}
-	div#EndCard,  div#DeadCard{
-		width: 50%
-	}
 }
 	
 @media (max-width: 576px) {
 	button{
 		width: 50%;
 	}
+	.scenario, .reply{
+		width: 75%;
+	}
+	div#EndCard,  div#DeadCard{
+		width: 75%;
+	}
 	@keyframes appear {
 		from { 
-			width: 50%;
+			width: 60%;
 			opacity: 0; 
 		}
 		to { 
-			width: 70%;
+			width: 75%;
 			opacity: 1; 
 		}
-	}
-	div#EndCard,  div#DeadCard{
-		width: 70%
 	}
 }
 
@@ -108,4 +113,4 @@ div#EndCard,  div#DeadCard{
 
 .hidden {
     display: none;
- }
+}

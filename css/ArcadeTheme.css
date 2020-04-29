@@ -46,12 +46,9 @@ h1 {
 }
 
 .scenario, .reply, .score {
-	text-align: center;
 	font-size: 1rem;
-	max-width: 50%;
 	margin: 10px auto;
 	padding: 5px;
-	padding-bottom: 5px;
 	border: solid;
     border-width: 2px;
     border-bottom-color: #424242;
@@ -61,7 +58,10 @@ h1 {
     background: silver;
     color:#212529;
 }
-.score{
+
+.score {
+    margin: 0px;
+	margin-bottom: 10px;
     display: inline-block;
     border-right-color: #545C4F;
     border-bottom-color: #545C4F;
@@ -71,18 +71,6 @@ h1 {
     color: black;
 }
 
-@media (min-width: 576px) {
-	button{
-		width: 25%;
-	}
-}
-	
-@media (max-width: 576px) {
-	button{
-		width: 50%;
-	}
-}
-
 .navigation { 
 	margin: 10px 10px 10px;
 }
@@ -90,7 +78,7 @@ h1 {
 /*
 Button styles
 */
-.btn{
+.btn {
     border-width: 2px;
     border-style: outset;
     border-right-color: #424242;
@@ -123,16 +111,16 @@ Button styles
     outline: 0;
 }
 
-.btn-primary{
+.btn-primary {
     padding-left: 8px;
     padding-right: 8px;
 }
 
-button:focus{
+button:focus {
     outline: 1px dotted;
 }
 
-.btn.disabled,.btn:disabled{
+.btn.disabled, .btn:disabled {
     cursor: default;
     background-color: silver;
     border-style: outset;
@@ -145,7 +133,7 @@ button:focus{
 /*
 CARDS
 */
-.card{
+.card {
     border: solid;
     border-width: 2px;
     border-bottom-color: #424242;
@@ -156,20 +144,15 @@ CARDS
     color:#212529;
 }
 
-.card.square{
+.card.square {
     border-radius: 0px;
 }
 
-.card.square .card-header{
+.card.square .card-header {
     border-radius: 0px;
 }
 
-.card.w95 .card-header{
-    background: #08216b;
-    /* OR #000082 is better?*/
-}
-
-.card-header{
+.card-header {
     background: -webkit-linear-gradient(left,#08216b,#a5cef7);
     color: #fff;
     display: block;
@@ -181,7 +164,7 @@ CARDS
     text-align: left;
 }
 
-.card-header.icon{
+.card-header.icon {
     padding-left: 4px;
 }
 
@@ -192,6 +175,12 @@ CARDS
 @media (min-width: 576px) {
 	button{
 		width: 25%;
+    }
+    .scenario, .reply{
+		width: 50%;
+    }
+    div#EndCard {
+		width: 50%;
 	}
 	@keyframes appear {
 		from { 
@@ -203,27 +192,27 @@ CARDS
 			opacity: 1; 
 		}
 	}
-	div#EndCard {
-		width: 50%
-	}
 }
 	
 @media (max-width: 576px) {
 	button{
 		width: 50%;
+    }
+    .scenario, .reply{
+		width: 75%;
+    }
+    div#EndCard {
+		width: 75%;
 	}
 	@keyframes appear {
 		from { 
-			width: 50%;
+			width: 60%;
 			opacity: 0; 
 		}
 		to { 
-			width: 70%;
+			width: 7%;
 			opacity: 1; 
 		}
-	}
-	div#EndCard {
-		width: 70%
 	}
 }
 
