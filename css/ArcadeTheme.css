@@ -11,9 +11,14 @@ Body styles
 
 @font-face {
     font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff') format('woff');
+    src: url('Bitmgothic.woff2');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century Gothic Bold';
+	src: url('CenturyGothic-Bold.woff2');
 }
 
 body {
@@ -37,7 +42,7 @@ h1 {
 }
 
 .project {
-	font-family: Century Gothic;
+	font-family: Century Gothic Bold;
 }
 
 .passage {
@@ -206,11 +211,11 @@ CARDS
 	}
 	@keyframes appear {
 		from { 
-			width: 60%;
+			width: 65%;
 			opacity: 0; 
 		}
 		to { 
-			width: 7%;
+			width: 75%;
 			opacity: 1; 
 		}
 	}

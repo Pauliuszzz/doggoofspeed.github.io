@@ -1,8 +1,13 @@
 @font-face {
     font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff') format('woff');
+    src: url('Bitmgothic.woff2');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century Gothic Bold';
+	src: url('CenturyGothic-Bold.woff2');
 }
 
 body {
@@ -25,7 +30,7 @@ h1 {
 }
 
 .project, h4 {
-	font-family: Century Gothic;
+	font-family: Century Gothic Bold;
 	color: white;
 	font-weight: bold;
 }

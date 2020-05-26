@@ -1,8 +1,13 @@
 @font-face {
     font-family: 'Bitmgothic';
-    src: url('../Bitmgothic.woff') format('woff');
+    src: url('../Bitmgothic.woff2');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Century Gothic Bold';
+	src: url('CenturyGothic-Bold.woff2');
 }
 
 body {
@@ -18,7 +23,7 @@ h1 {
 }
 
 .project {
-	font-family: Century Gothic;
+	font-family: Century Gothic Bold;
 }
 
 .passage {
@@ -71,11 +76,11 @@ h1 {
 	}
 	@keyframes appear {
 		from { 
-			width: 50%;
+			width: 65%;
 			opacity: 0; 
 		}
 		to { 
-			width: 70%;
+			width: 75%;
 			opacity: 1; 
 		}
 	}

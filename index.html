@@ -89,18 +89,18 @@
 	if(localStorage.getItem('M2-Endings') >= 1){
 		missionsDone++;
 	}
-	document.getElementById('StoryMode').innerHTML = "Missions completed: " + missionsDone + "/2";
+	$('#StoryMode').html("Missions completed: " + missionsDone + "/2");
 	if(localStorage.getItem('Highscore') > 0){
-		document.getElementById('ArcadeMode').innerHTML = "Highscore: " + localStorage.getItem('Highscore');
+		$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
 	}
 	else{
-		document.getElementById('ArcadeMode').innerHTML = "Highscore: 0";
+		$('#ArcadeMode').html("Highscore: 0");
 	}
 	if(localStorage.getItem('MaxSurvived') > 0){
-		document.getElementById('SurvivalMode').innerHTML = "Max scenarios survived: " + localStorage.getItem('MaxSurvived');
+		$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived'));
 	}
 	else{
-		document.getElementById('SurvivalMode').innerHTML = "Max scenarios survived: 0";
+		$('#SurvivalMode').html("Max scenarios survived: 0");
 	}
 
 	function clearStorage(){

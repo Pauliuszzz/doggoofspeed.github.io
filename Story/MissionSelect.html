@@ -69,17 +69,17 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	<script>
 		if(localStorage.getItem("M1-Endings") != null){
-			document.getElementById('M1').innerHTML = "Endings achieved: " + localStorage.getItem("M1-Endings") + "/5";
+			$('#M1').html("Endings achieved: " + localStorage.getItem("M1-Endings") + "/5");
 		}
 		else{
-			document.getElementById('M1').innerHTML = "Endings achieved: 0/5"
+			$('#M1').html("Endings achieved: 0/5");
 			$('#M2-play').addClass("disabled");
 		}
 		if(localStorage.getItem("M2-Endings") != null){
-			document.getElementById('M2').innerHTML = "Endings achieved: " + localStorage.getItem("M2-Endings") + "/10";
+			$('#M2').html("Endings achieved: " + localStorage.getItem("M2-Endings") + "/10");
 		}
 		else{
-			document.getElementById('M2').innerHTML = "Endings achieved: 0/10"
+			$('#M2').html("Endings achieved: 0/10");
 		}
 	</script>
 </body>
