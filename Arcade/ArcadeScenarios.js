@@ -53,7 +53,7 @@ scenarios = [
 	},
 	{
 		//Frog
-		"scenario": "It was a rainy day when you saw an abandoned wagon and decided to hide there for a bit. You found a frog there. You can kiss it (1), eat it (2), or throw out it of the wagon (3).",
+		"scenario": "It was a rainy day when you saw an abandoned wagon and decided to hide there for a bit. You found a frog there.",
 		"reply1": "You kissed it and nothing happened. Such a surprise!",
 		"answer1": "Kiss it",
 		"score1": 500,

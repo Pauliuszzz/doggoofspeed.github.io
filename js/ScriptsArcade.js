@@ -10,14 +10,18 @@ window.onload = function onload() {
 		$("#ButtonThree").addClass("btn-sm");
 		$("#ButtonFour").addClass("btn-sm");
 	}
-	var i = scenarios.length, k , temp;
-	while(--i > 0){
-		k = Math.floor(Math.random() * (i+1));
-		temp = scenarios[k];
-		scenarios[k] = scenarios[i];
-		scenarios[i] = temp;
-	}
+	shuffle(scenarios);
 	text();
+}
+
+//Array Shuffle
+function shuffle(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
 }
 
 //Text

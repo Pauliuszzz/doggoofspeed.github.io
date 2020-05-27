@@ -1,8 +1,6 @@
 @font-face {
     font-family: 'Bitmgothic';
     src: url('Bitmgothic.woff2');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
@@ -18,27 +16,21 @@ body {
 	text-align: center;
 }
 
-header {
-    text-align: center;
-}
-
 h1 {
 	color: white;
 	font-size: 300%;
     margin: auto;
-	font-weight: bold;
 }
 
 .project, h4 {
 	font-family: Century Gothic Bold;
 	color: white;
-	font-weight: bold;
 }
 
 .passage {
 	text-shadow: 2px 2px #FF00CA;
 	font-family: Bitmgothic;
-	margin-bottom: 20px;
+	font-weight: bold;
 }
 
 div.card {
@@ -60,14 +52,14 @@ p {
 @media (min-width: 576px) {
 div.card{
 	width: 35%;
-	margin: 5px;
+	margin: 10px 10px 5px;
 	}
 }
 
 @media (max-width: 576px) {
 div.card{
 	width: 70%;
-	margin: 5px;
+	margin: 10px 10px 5px;
 	}
 }
 
@@ -77,6 +69,8 @@ div.card{
 
 .flex-container {
 	display: flex;
+	justify-content: center;
+	margin-bottom: 20px;
 }
 
 .flex-navigation {
@@ -88,20 +82,12 @@ div.card{
 
 .missions {
 	display: flex;
-	margin-top: 20px;
 	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .modes {
 	display: flex;
-	margin-top: 20px;
 	flex-flow: column wrap;
 	align-items: center;
-}
-
-.link { 
-	background: none;
-	border: none;
-	outline: 0 !important;
 }

@@ -6,14 +6,11 @@
     https://github.com/AlexBSoft/win95.css
     Author: Alex B (alex-b.me)
 
-Body styles
 */
 
 @font-face {
     font-family: 'Bitmgothic';
     src: url('Bitmgothic.woff2');
-    font-weight: normal;
-    font-style: normal;
 }
 
 @font-face {
@@ -38,7 +35,6 @@ h1 {
 	color: white;
 	font-size: 300%;
     margin: auto;
-	font-weight: bold;
 }
 
 .project {
@@ -47,7 +43,8 @@ h1 {
 
 .passage {
 	text-shadow: 2px 2px #ff00f3;
-	font-family: Bitmgothic;
+    font-family: Bitmgothic;
+    font-weight: bold;
 }
 
 .scenario, .reply, .score {
