@@ -58,7 +58,7 @@ h1 {
 	justify-content: center;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 	button{
 		width: 25%;
 	}
@@ -80,7 +80,7 @@ h1 {
 	}
 }
 	
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 	button{
 		width: 50%;
 	}

@@ -49,14 +49,14 @@ p {
   text-align: center;
 }
 
-@media (min-width: 576px) {
+@media (min-width: 768px) {
 div.card{
 	width: 35%;
 	margin: 10px 10px 5px;
 	}
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
 div.card{
 	width: 70%;
 	margin: 10px 10px 5px;

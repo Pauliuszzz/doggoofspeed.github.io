@@ -2,14 +2,14 @@ var count = 0;
 var hp = 100;
 
 window.onload = function onload() {
-	$("#ButtonFour").prop('disabled', true);
-	$("#reply-text").hide();
-	if(window.innerWidth < 576){
+	if(window.innerWidth < 768){
 		$("#ButtonOne").addClass("btn-sm");
 		$("#ButtonTwo").addClass("btn-sm");
 		$("#ButtonThree").addClass("btn-sm");
 		$("#ButtonFour").addClass("btn-sm");
 	}
+	$("#ButtonFour").prop('disabled', true);
+	$("#reply-text").hide();
 	shuffle(scenarios);
 	text();
 }
