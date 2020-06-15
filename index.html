@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/MenuTheme.css">
 </head>
-<body>
+<body id="body">
 	<header>
 		<a style="user-select: none" onClick="clearStorage()">
 			<div class="flex-container">
@@ -20,80 +20,52 @@
 			</div>
 		</a>
 	</header>
-	<div class="modes">
-		<div class="card" style="background-color: rgba(0, 123, 255, 0.5)">
-		  <div class="card-body">
-			<h4 class="card-title">Story mode</h4>
-			<p class="card-text" id="StoryMode"></p>
-			<a href="Story/MissionSelect.html" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
-		  </div>
-		</div>
-		<div class="card" style="background-color: rgba(40, 167, 69, 0.5)">
-		  <div class="card-body">
-			<h4 class="card-title">Arcade mode</h4>
-			<p class="card-text" id="ArcadeMode"></p>
-			<a href="Arcade/Arcade.html" class="btn btn-success shadow"><img src="resources/play.svg" alt="Play"></a>
-		  </div>
-		</div>
-		<div class="card" style="background-color: rgba(220, 53, 69, 0.5)">
-			<div class="card-body">
-			  <h4 class="card-title">Survival mode</h4>
-			  <p class="card-text" id="SurvivalMode"></p>
-			  <a href="Survival/Survival.html" class="btn btn-danger shadow"><img src="resources/play.svg" alt="Play"></a>
-			</div>
-		  </div>
-		</div>
-	  <div class="flex-navigation">
-		<div style="flex-grow: 1">
-			<button type="button" class="btn btn-link" style="float: left" data-toggle="popover" data-trigger="focus" title="Credits" data-placement="top" data-html="true" data-content="Made by:<br>DoggoOfSpeed<br>Retro font in the title:<br>Bitmgothic<br>Windows 95 theme:<br><a href=https://alexbsoft.github.io/win95.css/>Alex B</a><br>Arcade background:<br>YuriNikolai"><img src="resources/info.svg" alt="Info"></button>
-		</div>
-		<div style="flex-grow: 1">
-			<button type="button" class="btn btn-link" style="float: right" data-toggle="popover" data-trigger="focus" title="Contact Me" data-placement="top" data-html="true" data-content="Got some scenario ideas?<br> You can contact me via Discord, and they will (probably) be added:<br> DoggoOfSpeed#0296<br>"><img src="resources/contacts.svg" alt="Contacts"></button>
-		</div>
+	<div class="modes" id="home">
+		<p>New mission coming 06-18!</p>
+		<p style="position: absolute; bottom: 50px;">v0.9</p>
 	</div>
+	<div class="modes hidden" id="story">
+		<h1>Story Mode</h1>
+			<div class="card">
+			  <div class="card-body">
+				<h4 class="card-title">To Ìgil</h4>
+				<p class="card-text" id="M1"></p>
+				<a href="Story/Missions/M1.html" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
+			  </div>
+			</div>
+			<div class="card">
+			  <div class="card-body">
+				<h4 class="card-title">Fight to survive</h4>
+				<p class="card-text" id="M2"></p>
+				<a href="Story/Missions/M2.html" id="M2-play" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
+			  </div>
+			</div>
+			<div class="card">
+				<div class="card-body">
+				  <h4 class="card-title">Flower Fest</h4>
+				  <p class="card-text">Endings achieved: 0/0</p>
+				  <a href="#" class="btn btn-primary disabled">WIP</a>
+				</div>
+			  </div>
+		  </div>
+	<div class="modes hidden" id="arcade">
+		<h1>Arcade Mode</h1>
+		<a class="play" href="Arcade/Arcade.html"><img src="resources/playbig.svg"></img></a>
+		<p id="ArcadeMode" style="position: absolute; bottom: 50px;"></p>
+	</div>
+	<div class="modes hidden" id="survival">
+		<h1>Survival Mode</h1>
+		<a class="play" href="survival/Survival.html"><img src="resources/playbig.svg"></img></a>
+		<p id="SurvivalMode" style="position: absolute; bottom: 50px;"></p>
+	</div>
+	<nav class="navbar fixed-bottom navbar-dark bg-dark">
+		<a class="switches" onclick="StorySwitch()"><img src="resources/storymode.svg" alt="Play"></a>
+		<a class="switches" onclick="ArcadeSwitch()"><img src="resources/arcademode.svg" alt="Play"></a>
+		<a class="switches" onclick="SurvivalSwitch()"><img src="resources/survivalmode.svg" alt="Play"></a>
+	  </nav>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-	<script>
-	var clicks = 0;
-	var missionsDone = 0;
-	$('.popover-dismiss').popover({
-	trigger: 'focus'
-	})
-	$(function () {
-		$('[data-toggle="popover"]').popover()
-	})
-	if(localStorage.getItem('M1-Endings') >= 1){
-		missionsDone++;
-	}
-	if(localStorage.getItem('M2-Endings') >= 1){
-		missionsDone++;
-	}
-	$('#StoryMode').html("Missions completed: " + missionsDone + "/2");
-	if(localStorage.getItem('Highscore') > 0){
-		$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
-	}
-	else{
-		$('#ArcadeMode').html("Highscore: 0");
-	}
-	if(localStorage.getItem('MaxSurvived') > 0){
-		$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived'));
-	}
-	else{
-		$('#SurvivalMode').html("Max scenarios survived: 0");
-	}
-
-	function clearStorage(){
-		if(clicks < 5){
-			clicks++;
-			console.log(clicks)
-		}
-		if(clicks == 5){
-			alert("You have found an easter egg. Your save data has been deleted.");
-			localStorage.clear();
-			location.reload();
-		}
-	}
-	</script>
+	<script src="js/ScriptsMenu.js"></script>
 </body>
 </html>

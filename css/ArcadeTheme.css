@@ -25,10 +25,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     text-align: center;
-}
-
-header {
-    text-align: center;
+    height: 100%;
 }
 
 h1 {
@@ -74,7 +71,7 @@ h1 {
 }
 
 .navigation { 
-	margin: 10px 10px 10px;
+	margin: 10px;
 }
 
 /*

@@ -8,11 +8,13 @@
 	src: url('CenturyGothic-Bold.woff2');
 }
 
+html, body{
+	min-height: 100%;
+}
+
 body {
     font-family: "Arial", sans-serif;
-	background: black;
-	background: -webkit-linear-gradient(to bottom, #8E0E00, black) fixed;
-	background: linear-gradient(to bottom, #8E0E00, black) fixed;
+	background: linear-gradient(to bottom, #8E0E00, black);
 	text-align: center;
 }
 
@@ -50,7 +52,7 @@ h1 {
 }
 
 .navigation { 
-	margin: 10px 10px 10px;
+	margin: 10px;
 }
 
 .flex-container {
