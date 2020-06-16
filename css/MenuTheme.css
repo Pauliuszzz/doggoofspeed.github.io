@@ -110,9 +110,16 @@ nav {
 	margin-right: 10%;
 }
 
-.play {
-	font-family: Bitmgothic;
-	color: white !important;
+.playa {
 	font-size: 50px;
 	margin-top: 5rem;
+	-webkit-filter: drop-shadow(3px 3px 3px rgba(255, 0, 243, .5));
+	filter: drop-shadow(3px 3px 3px rgba(255, 0, 243, .5));
+}
+
+.plays {
+	font-size: 50px;
+	margin-top: 5rem;
+	-webkit-filter: drop-shadow(3px 3px 3px rgba(142, 14, 0, .5));
+	filter: drop-shadow(3px 3px 3px rgba(142, 14, 0, .5));
 }
