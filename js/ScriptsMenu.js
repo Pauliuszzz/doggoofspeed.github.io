@@ -1,12 +1,6 @@
 //Main scripts
 var clicks = 0;
 var missionsDone = 0;
-$('.popover-dismiss').popover({
-	trigger: 'focus'
-})
-$(function () {
-	$('[data-toggle="popover"]').popover()
-})
 //Tells progress
 if(localStorage.getItem('M1-Endings') >= 1){
 	missionsDone++;
@@ -14,7 +8,10 @@ if(localStorage.getItem('M1-Endings') >= 1){
 if(localStorage.getItem('M2-Endings') >= 1){
 	missionsDone++;
 }
-$('#StoryMode').html("Missions completed: " + missionsDone + "/2");
+if(localStorage.getItem('M3-Endings') >= 1){
+	missionsDone++;
+}
+$('#StoryMode').html("Missions completed: " + missionsDone + "/3");
 if(localStorage.getItem('Highscore') > 0){
 	$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
 }
@@ -81,4 +78,11 @@ if(localStorage.getItem("M2-Endings") != null){
 }
     else{
         $('#M2').html("Endings achieved: 0/10");
+        $('#M3-play').addClass("disabled");
+    }
+if(localStorage.getItem("M3-Endings") != null){
+    $('#M3').html("Endings achieved: " + localStorage.getItem("M3-Endings") + "/7");
+}
+    else{
+       $('#M3').html("Endings achieved: 0/7");
     }
