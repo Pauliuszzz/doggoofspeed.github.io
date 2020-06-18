@@ -36,13 +36,13 @@ h1 {
 		text-shadow: 2px 2px red;
 	}
 	25% {
-		text-shadow: 2px 2px rgb(152, 182, 18);
+		text-shadow: 2px 2px rgb(111, 185, 143);
 	}
 	50% {
-		text-shadow: 2px 2px green;
+		text-shadow: 2px 2px rgb(255, 0, 243);
 	}
 	75% {
-		text-shadow: 2px 2px blue;
+		text-shadow: 2px 2px rgb(142, 14, 0);
 	}
 	100% {
 		text-shadow: 2px 2px red;
