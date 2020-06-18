@@ -27,6 +27,26 @@ h1 {
 .passage {
 	font-family: Bitmgothic;
 	font-weight: bold;
+	text-shadow: 2px 2px red;
+	animation: NameShadow 10s linear 0s infinite;
+}
+
+@keyframes NameShadow {
+	0% {
+		text-shadow: 2px 2px red;
+	}
+	25% {
+		text-shadow: 2px 2px rgb(152, 182, 18);
+	}
+	50% {
+		text-shadow: 2px 2px green;
+	}
+	75% {
+		text-shadow: 2px 2px blue;
+	}
+	100% {
+		text-shadow: 2px 2px red;
+	}
 }
 
 div.card {
@@ -113,13 +133,13 @@ nav {
 .playa {
 	font-size: 50px;
 	margin-top: 5rem;
-	-webkit-filter: drop-shadow(3px 3px 3px rgba(255, 0, 243, .5));
-	filter: drop-shadow(3px 3px 3px rgba(255, 0, 243, .5));
+	-webkit-filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
+	filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
 }
 
 .plays {
 	font-size: 50px;
 	margin-top: 5rem;
-	-webkit-filter: drop-shadow(3px 3px 3px rgba(142, 14, 0, .5));
-	filter: drop-shadow(3px 3px 3px rgba(142, 14, 0, .5));
+	-webkit-filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
+	filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
 }
