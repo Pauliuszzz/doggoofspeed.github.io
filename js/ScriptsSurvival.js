@@ -2,12 +2,6 @@ var count = 0;
 var hp = 100;
 
 window.onload = function onload() {
-	if(window.innerWidth < 768){
-		$("#ButtonOne").addClass("btn-sm");
-		$("#ButtonTwo").addClass("btn-sm");
-		$("#ButtonThree").addClass("btn-sm");
-		$("#ButtonFour").addClass("btn-sm");
-	}
 	$("#ButtonFour").prop('disabled', true);
 	$("#reply-text").hide();
 	shuffle(scenarios);
@@ -40,10 +34,10 @@ function text() {
 		$("#ButtonThree").hide();
 	}
 	if(hp >= 0){
-		$("#hp-text").html("HP: " + hp);
+		$("#hp-text").html(hp);
 	}
 	if(hp <= 0){
-		$("#hp-text").html("HP: 0");
+		$("#hp-text").html("0");
 	}
 }
 
@@ -91,11 +85,14 @@ function next_scenario(mult) {
 		$("#ButtonOne").hide();
 		$("#ButtonTwo").hide();
 		$("#ButtonThree").hide();
-		$("#ButtonFour").hide();
 		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
 		$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
 	}
+	if(hp < 100) {
+		hp = hp + 5;
+	}
 	count++;
+	$("#progressslider").width(hp);
 	$("#reply-text").hide();
 	$("#ButtonOne").prop('disabled', false);
 	$("#ButtonTwo").prop('disabled', false);

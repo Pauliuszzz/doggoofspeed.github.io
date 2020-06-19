@@ -1,12 +1,8 @@
-/*
-	
-	A modified version of Windows 95 Theme
+/*  A modified version of Windows 95 Theme
 
     WIN95.CSS
     https://github.com/AlexBSoft/win95.css
-    Author: Alex B (alex-b.me)
-
-*/
+    Author: Alex B (alex-b.me) */
 
 @font-face {
     font-family: 'Bitmgothic';
@@ -18,30 +14,52 @@
 	src: url('CenturyGothic-Bold.woff2');
 }
 
+html, body{
+	min-height: 100%;
+}
+
 body {
-	font-family: "MS Sans Serif",Tahoma,Verdana,sans-serif;
-    background-image: url(../resources/vaporwave.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	font-family: "MS Sans Serif";
+    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+CiAgPHBhdGggZD0iTS0xLDEgbDIsLTIKICAgICAgICAgICBNMCwxMCBsMTAsLTEwCiAgICAgICAgICAgTTksMTEgbDIsLTIiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg=="),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGMTkiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMENGIj48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
+    width: 100%;
     text-align: center;
     height: 100%;
+    color:#212529;
+    animation: fadein 1s;
 }
 
 h1 {
 	color: white;
-	font-size: 300%;
-    margin: auto;
+    font-weight: bold;
+}
+
+button {
+    width: 50%;
+}
+
+nav {
+    background: rgb(214, 211, 206);
+    margin: 0;
+    border: 1px outset #fff;
+    height: 3em;
+    padding: 0 6px;
+    color:#212529;
+}
+
+div#EndCard {
+	animation: EndCardAppear 3s;
+	margin: auto;
 }
 
 .project {
-	font-family: Century Gothic Bold;
+    font-family: Century Gothic Bold;
+    font-size: 40px;
 }
 
 .passage {
 	text-shadow: 2px 2px #ff00f3;
     font-family: Bitmgothic;
-    font-weight: bold;
+    font-size: 40px;
 }
 
 .scenario, .reply, .score {
@@ -50,42 +68,41 @@ h1 {
 	padding: 5px;
 	border: solid;
     border-width: 2px;
-    border-bottom-color: #424242;
-    border-right-color: #424242;
-    border-left-color: white;
-    border-top-color: white;
+    border-color: white #424242 #424242 white;
     background: silver;
-    color:#212529;
+    animation: fadein 0.35s;
 }
 
 .score {
     margin: 0px;
-	margin-bottom: 10px;
     display: inline-block;
-    border-right-color: #545C4F;
-    border-bottom-color: #545C4F;
-    border-left-color: #EFF7EA;
-    border-top-color: #EFF7EA;
+    border-color: #EFF7EA #545C4F #545C4F #EFF7EA;
     background: #A7D18C;
-    color: black;
 }
 
-.navigation { 
-	margin: 10px;
+.navigation {
+    margin: 0% 10%;
 }
 
-/*
-Button styles
-*/
+.scenario, .reply, div#EndCard {
+    width: 75%;
+}
+
+.hidden {
+    display: none;
+}
+
+/* BUTTONS */
+
 .btn {
     border-width: 2px;
     border-style: outset;
     border-right-color: #424242;
     border-bottom-color: #424242;
     background: silver;
-    color: black;
     padding: 0 0 4px;
     border-radius: 1px;
+    margin-top: 10px;
 }
 
 .btn:hover {
@@ -95,31 +112,7 @@ Button styles
     box-shadow: -1px -1px #000;
 }
 
-.btn:focus {
-    border: 2px inset white;
-    background: silver;
-    color: #424242;
-    box-shadow: -1px -1px black;
-    outline: 0;
-}
-
-.btn:active {
-    border: 2px inset white;
-    color: #424242;
-    box-shadow: -1px -1px black;
-    outline: 0;
-}
-
-.btn-primary {
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-button:focus {
-    outline: 1px dotted;
-}
-
-.btn.disabled, .btn:disabled {
+.btn:disabled {
     cursor: default;
     background-color: silver;
     border-style: outset;
@@ -129,98 +122,45 @@ button:focus {
     text-shadow: 1px 1px white;
 }
 
-/*
-CARDS
-*/
+/* CARDS */
+
 .card {
     border: solid;
     border-width: 2px;
-    border-bottom-color: #424242;
-    border-right-color: #424242;
-    border-left-color: #fff;
-    border-top-color: #fff;
+    border-color: white #424242 #424242 white;
     background: silver;
     color:#212529;
 }
 
-.card.square {
-    border-radius: 0px;
-}
-
-.card.square .card-header {
-    border-radius: 0px;
-}
-
 .card-header {
     background: -webkit-linear-gradient(left,#08216b,#a5cef7);
-    color: #fff;
+    color: white;
     display: block;
     white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
     padding-top: 2px;
     padding-bottom: 1px;
     text-align: left;
 }
 
-.card-header.icon {
-    padding-left: 4px;
-}
+/* ANIMATIONS */
 
-.flex-container {
-	display: flex;
-}
-
-@media (min-width: 768px) {
-	button{
-		width: 25%;
-    }
-    .scenario, .reply{
-		width: 50%;
-    }
-    div#EndCard {
-		width: 50%;
+@keyframes EndCardAppear {
+	from { 
+		width: 65%;
+		opacity: 0; 
 	}
-	@keyframes appear {
-		from { 
-			width: 25%;
-			opacity: 0; 
-		}
-		to { 
-			width: 50%;
-			opacity: 1; 
-		}
-	}
-}
-	
-@media (max-width: 768px) {
-	button{
-		width: 50%;
-    }
-    .scenario, .reply{
+	to { 
 		width: 75%;
-    }
-    div#EndCard {
-		width: 75%;
-	}
-	@keyframes appear {
-		from { 
-			width: 65%;
-			opacity: 0; 
-		}
-		to { 
-			width: 75%;
-			opacity: 1; 
-		}
+		opacity: 1; 
 	}
 }
 
-div#EndCard {
-	animation-name: appear;
-	animation-duration: 3s;
-	margin: auto;
+@keyframes fadein {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
 }
-
-.hidden {
-    display: none;
- }

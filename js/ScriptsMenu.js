@@ -1,17 +1,5 @@
-//Main scripts
 var clicks = 0;
-var missionsDone = 0;
 //Tells progress
-if(localStorage.getItem('M1-Endings') >= 1){
-	missionsDone++;
-}
-if(localStorage.getItem('M2-Endings') >= 1){
-	missionsDone++;
-}
-if(localStorage.getItem('M3-Endings') >= 1){
-	missionsDone++;
-}
-$('#StoryMode').html("Missions completed: " + missionsDone + "/3");
 if(localStorage.getItem('Highscore') > 0){
 	$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
 }
@@ -24,6 +12,7 @@ if(localStorage.getItem('MaxSurvived') > 0){
     else{
 	    $('#SurvivalMode').html("Max scenarios survived: 0");
     }
+
 //Debugging easter egg
 function clearStorage(){
 	if(clicks < 5){
@@ -35,36 +24,29 @@ function clearStorage(){
 		location.reload();
 	}
 }
+
 //Switcher machanism
 function StorySwitch(){
-	document.getElementById("home").classList.add("hidden");
-	document.getElementById("story").classList.remove("hidden");
-	document.getElementById("arcade").classList.add("hidden");
-    document.getElementById("survival").classList.add("hidden");
-    document.getElementById("body").classList.add("story");
-    document.getElementById("body").classList.remove("arcade");
-    document.getElementById("body").classList.remove("survival");
+    $("#home, #arcade, #survival").addClass("hidden");
+    $("#body").addClass("story");
+    $("#story").removeClass("hidden");
+    $("#body").removeClass("arcade survival");
 }
 
 function ArcadeSwitch(){
-	document.getElementById("home").classList.add("hidden");
-	document.getElementById("story").classList.add("hidden");
-	document.getElementById("arcade").classList.remove("hidden");
-    document.getElementById("survival").classList.add("hidden");
-    document.getElementById("body").classList.add("arcade");
-    document.getElementById("body").classList.remove("story");
-    document.getElementById("body").classList.remove("survival");
+	$("#home, #story, #survival").addClass("hidden");
+    $("#body").addClass("arcade");
+    $("#arcade").removeClass("hidden");
+    $("#body").removeClass("story survival");
 }
 function SurvivalSwitch(){
-	document.getElementById("home").classList.add("hidden");
-	document.getElementById("story").classList.add("hidden");
-	document.getElementById("arcade").classList.add("hidden");
-    document.getElementById("survival").classList.remove("hidden");
-    document.getElementById("body").classList.add("survival");
-    document.getElementById("body").classList.remove("story");
-    document.getElementById("body").classList.remove("arcade");
+	$("#home, #story, #arcade").addClass("hidden");
+    $("#body").addClass("survival");
+    $("#survival").removeClass("hidden");
+    $("#body").removeClass("story arcade");
 
 }
+
 //Story mode ending counter
 if(localStorage.getItem("M1-Endings") != null){
     $('#M1').html("Endings achieved: " + localStorage.getItem("M1-Endings") + "/5");

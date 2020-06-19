@@ -12,26 +12,20 @@
 
 <body>
 	<header>
-		<div class="flex-container">
-			<div style="flex-basis: 33.3%">
-				<a href="../index.html" class="navigation" style="float: left;"><img src="../resources/home.svg" alt="Home"></a>
-			</div>
-			<div style="flex-basis: 33.3%;margin: 1em">
-				<h1 class="project">Project</h1>
-				<h1 class="passage">Passage</h1>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<a href="./Survival.html" class="navigation" style="float: right;"><img src="../resources/refresh.svg" alt="Refresh"></a>
-			</div>
+		<div style="margin: 1em">
+			<h1 class="project">Project</h1>
+			<h1 class="passage">Passage</h1>
 		</div>
+	</div>
 	</header>
+	<div id="progressbar" style="width: 75%; margin: auto;">
+		<div id="progressslider"role="progressbar" style="width: 100%; font-size: 0.90em;">HP</div>
+	</div>
 	<p class="scenario shadow" id="scenario-text"></p>
 	<p class="reply shadow" id="reply-text"></p>
-	<p class="hp shadow" id="hp-text"></p>
-	<p><button id="ButtonOne" type="button" class="btn btn-outline-light shadow" onClick="reply1()"></button></p>
-	<p><button id="ButtonTwo" type="button" class="btn btn-outline-light shadow" onClick="reply2()"></button></p>
-	<p><button id="ButtonThree" type="button" class="btn btn-outline-light shadow" onClick="reply3()"></button></p>
-	<p><button id="ButtonFour" type="button" class="btn btn-outline-light shadow" onClick="next_scenario()">Continue</button></p>
+	<p><button id="ButtonOne" type="button" class="btn btn-sm btn-outline-light shadow" onClick="reply1()"></button></p>
+	<p><button id="ButtonTwo" type="button" class="btn btn-sm btn-outline-light shadow" onClick="reply2()"></button></p>
+	<p><button id="ButtonThree" type="button" class="btn btn-sm btn-outline-light shadow" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
 	<div class="card hidden shadow" id="DeadCard">
 		<div class="card-body">
 			<h4 class="card-title">You have died</h4>
@@ -44,6 +38,11 @@
 		  <p class="card-text" id="EndText"></p>
 		</div>
 	  </div>
+	<nav class="navbar fixed-bottom navbar-dark bg-dark">
+		<a href="../index.html" class="navigation"><img src="../resources/home.svg" alt="Home"></a>
+		<button id="ButtonFour" type="button" class="btn btn-sm btn-outline-light shadow navigation" style="width: 30%; margin: auto;" onClick="next_scenario()">Continue</button>
+		<a href="./Survival.html" class="navigation"><img src="../resources/refresh.svg" alt="Home"></a>
+	</nav>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="../js/ScriptsSurvival.js"></script>
 	<script src="SurvivalScenarios.js"></script>

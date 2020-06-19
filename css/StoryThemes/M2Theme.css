@@ -1,5 +1,5 @@
 body {
-	background: linear-gradient(0deg, #0B2418, #0E4C37, #448763) fixed;
+	background: linear-gradient(to bottom, #448763, #0E4C37, #0B2418) fixed;
 }
 
 .passage {

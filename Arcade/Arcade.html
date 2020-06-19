@@ -12,28 +12,18 @@
 
 <body>
 	<header>
-		<div class="flex-container">
-			<div style="flex-basis: 33.3%">
-				<a href="../index.html" class="navigation" style="float: left"><img src="../resources/home.png" alt="Restart" width=42></a><br>
-			</div>
-			<div style="flex-basis: 33.3%;margin-top: 1em">
-				<h1 class="project">Project</h1>
-				<h1 class="passage">Passage</h1>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<a href="./Arcade.html" class="navigation" style="float: right"><img src="../resources/refresh.png" alt="Home" width=36></a>
-			</div>
+		<div style="margin: 1em">
+			<h1 class="project">Project</h1>
+			<h1 class="passage">Passage</h1>
 		</div>
 	</header>
-	<br>
-	<p class="scenario shadow" id="scenario-text"></p>
-	<p class="reply shadow" id="reply-text"></p>
-	<p class="score shadow" id="score-text"></p>
-	<p><button id="ButtonOne" type="button" class="btn shadow" onClick="reply1()"></button></p>
-	<p><button id="ButtonTwo" type="button" class="btn shadow" onClick="reply2()"></button></p>
-	<p><button id="ButtonThree" type="button" class="btn shadow" onClick="reply3()"></button></p>
-	<p><button id="ButtonFour" type="button" class="btn shadow" onClick="next_scenario()">Continue</button></p>
-	<div class="card hidden shadow" id="EndCard">
+	<p class="scenario" id="scenario-text"></p>
+	<p class="reply" id="reply-text"></p>
+	<p class="score" id="score-text"></p><br>
+	<button id="ButtonOne" type="button" class="btn btn-sm" onClick="reply1()"></button><br>
+	<button id="ButtonTwo" type="button" class="btn btn-sm" onClick="reply2()"></button><br>
+	<button id="ButtonThree" type="button" class="btn btn-sm" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
+	<div class="card hidden" id="EndCard">
 		<div class="card-header">
 			<h4 class="my-0 font-weight-normal">Game Over</h4>
 		</div>
@@ -41,6 +31,11 @@
 			<p id="EndScore"></p>
 		</div>
 	</div>
+	<nav class="navbar fixed-bottom">
+		<a href="../index.html" class="navigation"><img src="../resources/home.png" alt="Home" width=36px></a>
+		<button id="ButtonFour" class="btn btn-sm navigation" style="width: 30%; margin: 0;" onClick="next_scenario()">Continue</button> 
+		<a href="./Arcade.html" class="navigation"><img src="../resources/refresh.png" alt="Restart" width=30px></a>
+	</nav>
 	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
 	<script src="../js/ScriptsArcade.js"></script>
 	<script src="ArcadeScenarios.js"></script>

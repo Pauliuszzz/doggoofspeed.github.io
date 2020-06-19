@@ -17,18 +17,97 @@ body {
 	color: white;
 	background: linear-gradient(to bottom, grey, #1A1D20) fixed;
 	text-align: center;
+	animation: fadein 0.35s;
 }
 
 h1 {
 	color: white;
-    margin: auto;
+	margin: auto;
+	font-weight: bold;
+}
+
+p {
+	color: white;
+	font-size: 1rem;
+	padding: 5px;
+	padding-bottom: 5px;
+}
+
+nav {
+	margin: 0px 5px;
+	border-radius: 15px 15px 0px 0px;
+	height: 3em;
 }
 
 .passage {
 	font-family: Bitmgothic;
-	font-weight: bold;
 	text-shadow: 2px 2px red;
 	animation: NameShadow 10s linear 0s infinite;
+}
+
+div.card {
+	background-color:rgba(0, 0, 0, 0.5);
+	margin: 10px 10px 5px;
+	width: 70%;
+}
+
+@media (min-width: 768px) {
+	.pcwarning {
+	display: inline;
+	}
+}
+
+@media (max-width: 768px) {
+	.pcwarning {
+		display: none;
+	}
+}
+
+.missions {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.modes {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	margin-bottom: 50px;
+	animation: fadein 0.35s;
+}
+
+.hidden {
+	display: none;
+}
+
+.switches {
+	margin: 0% 10%;
+}
+
+.playa {
+	font-size: 50px;
+	margin-top: 5rem;
+	-webkit-filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
+	filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
+}
+
+.plays {
+	font-size: 50px;
+	margin-top: 5rem;
+	-webkit-filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
+	filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
+}
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+	from {
+		opacity: 0
+	}
+	to {
+		opacity: 1
+	}
 }
 
 @keyframes NameShadow {
@@ -47,99 +126,4 @@ h1 {
 	100% {
 		text-shadow: 2px 2px red;
 	}
-}
-
-div.card {
-	background-color:rgba(0, 0, 0, 0.5);
-	margin: 10px 10px 5px;
-}
-
-p {
-	text-align: center;
-	color: white;
-	font-size: 1rem;
-	padding: 5px;
-	padding-bottom: 5px;
-}
-
-.popover {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-div.card{
-	width: 35%;
-	}
-}
-
-@media (max-width: 768px) {
-div.card{
-	width: 70%;
-	}
-}
-
-.flex-container {
-	display: flex;
-	justify-content: center;
-	margin-bottom: 20px;
-}
-
-.flex-navigation {
-	width: 100%;
-	display: flex;
-	position: fixed;
-	bottom: 0;
-}
-
-.missions {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.modes {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
-	margin-bottom: 50px;
-	animation-name: fadein;
-	animation-duration: 1s;
-}
-
-@keyframes fadein {
-	from {
-		opacity: 0
-	}
-	to {
-		opacity: 1
-	}
-}
-
-.hidden {
-	display: none;
-}
-
-nav {
-	margin-left: 5px;
-	margin-right: 5px;
-	border-radius: 15px 15px 0px 0px;
-}
-
-.switches {
-	margin-left: 10%;
-	margin-right: 10%;
-}
-
-.playa {
-	font-size: 50px;
-	margin-top: 5rem;
-	-webkit-filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
-	filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
-}
-
-.plays {
-	font-size: 50px;
-	margin-top: 5rem;
-	-webkit-filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
-	filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
 }
