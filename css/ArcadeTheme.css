@@ -25,7 +25,7 @@ body {
     text-align: center;
     height: 100%;
     color:#212529;
-    animation: fadein 1s;
+    animation: fadein 0.35s;
 }
 
 h1 {

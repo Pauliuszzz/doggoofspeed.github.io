@@ -1,4 +1,5 @@
 var count = 0;
+var hpbfr;
 var hp = 100;
 
 window.onload = function onload() {
@@ -48,6 +49,7 @@ function reply1() {
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonTwo").prop('disabled', true);
 	$("#ButtonThree").prop('disabled', true);
+	hpbfr = hp;
 	hp = hp - scenarios[count].damage1;
 }
 function reply2() {
@@ -56,6 +58,7 @@ function reply2() {
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne").prop('disabled', true);
 	$("#ButtonThree").prop('disabled', true);
+	hpbfr = hp;
 	hp = hp - scenarios[count].damage2;
 }
 function reply3() {
@@ -64,11 +67,13 @@ function reply3() {
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne").prop('disabled', true);
 	$("#ButtonTwo").prop('disabled', true);
+	hpbfr = hp;
 	hp = hp - scenarios[count].damage3;
 }
 	
 //Next scenario
 function next_scenario(mult) {
+
 	if(hp <= 0 || count == 18){
 		if(localStorage.getItem('MaxSurvived') < count){
 			localStorage.setItem('MaxSurvived', count);
@@ -88,11 +93,11 @@ function next_scenario(mult) {
 		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
 		$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
 	}
-	if(hp < 100) {
-		hp = hp + 5;
+	if(hp <= 90 && hp == hpbfr) {
+		hp = hp + 10;
 	}
 	count++;
-	$("#progressslider").width(hp);
+	$("#progressslider").css('width', hp + '%');
 	$("#reply-text").hide();
 	$("#ButtonOne").prop('disabled', false);
 	$("#ButtonTwo").prop('disabled', false);

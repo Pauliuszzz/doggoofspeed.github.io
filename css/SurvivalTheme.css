@@ -17,7 +17,7 @@ body {
 	background: linear-gradient(to bottom, #8E0E00, black);
 	text-align: center;
 	color: white;
-	animation: fadein 1s;
+	animation: fadein 0.35s;
 }
 
 h1 {
@@ -36,7 +36,7 @@ nav {
 }
 
 div#EndCard,  div#DeadCard{
-	background-color: rgb(25, 0, 0);
+	background-color: #410600;
 	animation: EndCardAppear 3s;
 	margin: auto;
 	width: 75%;
