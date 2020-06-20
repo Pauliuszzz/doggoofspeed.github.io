@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="google" content="notranslate">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="css/MenuTheme.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+	<link rel="stylesheet" href="css/MenuTheme.css">
 </head>
 <body id="body">
 	<header>
@@ -21,53 +21,51 @@
 		</a>
 	</header>
 	<div class="modes" id="home">
-		<p>New: Mission 3 - "Flower Fest" has been released. Many UI improvemenmts.</p>
-		<p>Upcoming: Story/Arcade/Survival mode UI Refresh;<br>Survival mode rework;<br>And of course new missions!</p>
-		<p class="pcwarning" style="color: darkred">Warning! Your device's screen is too big and you may experience UI issues.<br>As of v0.10 this page is mobile first meaning that PCs and possibly other large devices are no longer supported.</p>
-		<p style="position: absolute; bottom: 50px;">v0.11</p>
+		<h5>New:</h5><p>Mission 3 - "Flower Fest" has been released. Bootstrap has been replaced with Miligram introduzing quite a lot of optimisation. A lot of performance improvements.</p>
+		<h5>Upcoming:</h5><p>Story mode UI Refresh;<br>And of course new missions!</p>
+		<h5 class="pcwarning" style="color: #490000">Warning:</h5><p class="pcwarning" style="color: #490000">Your device's screen is too big and you may experience UI issues.<br>As of v0.10 this page is mobile first meaning that PCs and possibly other large devices are no longer supported.</p>
+		<p style="position: absolute; bottom: 50px;">v0.11.1</p>
 	</div>
 	<div class="modes hidden" id="story">
-		<h1 style="text-shadow: 2px 2px rgba(111, 185, 143, .5)">Story Mode</h1>
+		<h1 style="text-shadow: 2px 2px rgba(111, 185, 143, .5); margin: 0.5em;">Story Mode</h1>
 			<div class="card">
 			  	<div class="card-body">
-					<h4 class="card-title">To Ìgil</h4>
+					<h4 class="card-title" style="text-shadow: 2px 2px rgba(111, 185, 143, 0.5)">To Ìgil</h4>
 					<p class="card-text" id="M1"></p>
-					<a href="Story/Missions/M1.html" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
+					<a href="Story/Missions/M1.html" class="button button-outline shadow"><img src="resources/play.svg" alt="Play"></a>
 			  	</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">Fight to survive</h4>
+					<h4 class="card-title" style="text-shadow: 2px 2px rgba(105, 187, 121, 0.5)">Fight to survive</h4>
 					<p class="card-text" id="M2"></p>
-					<a href="Story/Missions/M2.html" id="M2-play" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
+					<a href="Story/Missions/M2.html" id="M2-play" class="button button-outline shadow"><img src="resources/play.svg" alt="Play"></a>
 				</div>
 			</div>
 			<div class="card">
 				<div class="card-body">
-					<h4 class="card-title">Flower Fest</h4>
+					<h4 class="card-title" style="text-shadow: 2px 2px rgba(99, 190, 100, 0.5)">Flower Fest</h4>
 					<p class="card-text" id="M3"></p>
-					<a href="Story/Missions/M3.html" id="M3-play" class="btn btn-primary shadow"><img src="resources/play.svg" alt="Play"></a>
+					<a href="Story/Missions/M3.html" id="M3-play" class="button button-outline shadow"><img src="resources/play.svg" alt="Play"></a>
 				</div>
 			  </div>
 		  </div>
 	<div class="modes hidden" id="arcade">
-		<h1 style="text-shadow: 2px 2px rgba(255, 0, 243, .5)">Arcade Mode</h1>
+		<h1 style="text-shadow: 2px 2px rgba(255, 0, 243, .5); margin: 0.5em;">Arcade Mode</h1>
 		<a class="playa" href="Arcade/Arcade.html"><img src="resources/playbig.svg" alt="Play"></a>
 		<p id="ArcadeMode" style="position: absolute; bottom: 50px;"></p>
 	</div>
 	<div class="modes hidden" id="survival">
-		<h1 style="text-shadow: 2px 2px rgba(142, 14, 0, .5)">Survival Mode</h1>
+		<h1 style="text-shadow: 2px 2px rgba(142, 14, 0, .5); margin: 0.5em;">Survival Mode</h1>
 		<a class="plays" href="Survival/Survival.html"><img src="resources/playbig.svg" alt="Play"></a>
 		<p id="SurvivalMode" style="position: absolute; bottom: 50px;"></p>
 	</div>
-	<nav class="navbar fixed-bottom navbar-dark bg-dark">
+	<nav>
 		<a class="switches" onclick="StorySwitch()"><img src="resources/storymode.svg" alt="Play"></a>
 		<a class="switches" onclick="ArcadeSwitch()"><img src="resources/arcademode.svg" alt="Play"></a>
 		<a class="switches" onclick="SurvivalSwitch()"><img src="resources/survivalmode.svg" alt="Play"></a>
 	</nav>
-	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="js/ScriptsMenu.js"></script>
 </body>
 </html>

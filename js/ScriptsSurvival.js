@@ -34,12 +34,6 @@ function text() {
 	if (scenarios[count].answer3 == null) {
 		$("#ButtonThree").hide();
 	}
-	if(hp >= 0){
-		$("#hp-text").html(hp);
-	}
-	if(hp <= 0){
-		$("#hp-text").html("0");
-	}
 }
 
 //Replies
@@ -47,8 +41,7 @@ function reply1() {
 	$("#reply-text").html(scenarios[count].reply1);
 	$("#reply-text").show();
 	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonTwo").prop('disabled', true);
-	$("#ButtonThree").prop('disabled', true);
+	$("#ButtonTwo, #ButtonThree").prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage1;
 }
@@ -56,8 +49,7 @@ function reply2() {
 	$("#reply-text").html(scenarios[count].reply2);
 	$("#reply-text").show();
 	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonOne").prop('disabled', true);
-	$("#ButtonThree").prop('disabled', true);
+	$("#ButtonOne, #ButtonThree").prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage2;
 }
@@ -65,8 +57,7 @@ function reply3() {
 	$("#reply-text").html(scenarios[count].reply3);
 	$("#reply-text").show();
 	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonOne").prop('disabled', true);
-	$("#ButtonTwo").prop('disabled', true);
+	$("#ButtonOne, #ButtonTwo").prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage3;
 }
@@ -84,13 +75,8 @@ function next_scenario(mult) {
 		if(hp <= 0){
 			$("#DeadCard").removeClass("hidden");
 		}
-		$("#scenario-text").hide();
-		$("#reply-text").hide();
-		$("#hp-text").hide();
-		$("#ButtonOne").hide();
-		$("#ButtonTwo").hide();
-		$("#ButtonThree").hide();
-		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
+		$("#scenario-text, #reply-text, #hp-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
+		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...");
 		$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
 	}
 	if(hp <= 90 && hp == hpbfr) {
@@ -99,9 +85,7 @@ function next_scenario(mult) {
 	count++;
 	$("#progressslider").css('width', hp + '%');
 	$("#reply-text").hide();
-	$("#ButtonOne").prop('disabled', false);
-	$("#ButtonTwo").prop('disabled', false);
-	$("#ButtonThree").prop('disabled', false);
+	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false);
 	$("#ButtonFour").prop('disabled', true);
 	text();
 }

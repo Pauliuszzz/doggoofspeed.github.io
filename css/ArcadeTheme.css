@@ -20,21 +20,17 @@ html, body{
 
 body {
 	font-family: "MS Sans Serif";
-    background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMCIgaGVpZ2h0PSIxMCI+CiAgPHBhdGggZD0iTS0xLDEgbDIsLTIKICAgICAgICAgICBNMCwxMCBsMTAsLTEwCiAgICAgICAgICAgTTksMTEgbDIsLTIiIHN0cm9rZT0iIzIyMiIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg=="),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGMTkiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMENGIj48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
-    width: 100%;
+    background: repeating-linear-gradient(-45deg, transparent, transparent 28px, rgb(42,35,41) 28px, rgb(42,35,41) 34px ),url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPgo8bGluZWFyR3JhZGllbnQgaWQ9ImciIHgyPSIxIiB5Mj0iMSI+CjxzdG9wIHN0b3AtY29sb3I9IiNGMTkiPjwvc3RvcD4KPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMENGIj48L3N0b3A+CjwvbGluZWFyR3JhZGllbnQ+CjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZykiPjwvcmVjdD4KPC9zdmc+");
     text-align: center;
-    height: 100%;
-    color:#212529;
+    color: #212529;
     animation: fadein 0.35s;
+    margin: 0;
 }
 
 h1 {
 	color: white;
     font-weight: bold;
-}
-
-button {
-    width: 50%;
+    margin: 0;
 }
 
 nav {
@@ -43,11 +39,16 @@ nav {
     border: 1px outset #fff;
     height: 3em;
     padding: 0 6px;
-    color:#212529;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
 }
 
 div#EndCard {
-	animation: EndCardAppear 3s;
+	animation: fadein 3s;
 	margin: auto;
 }
 
@@ -63,7 +64,7 @@ div#EndCard {
 }
 
 .scenario, .reply, .score {
-	font-size: 1rem;
+	font-size: 1em;
 	margin: 10px auto;
 	padding: 5px;
 	border: solid;
@@ -81,7 +82,10 @@ div#EndCard {
 }
 
 .navigation {
-    margin: 0% 10%;
+    margin: auto 10%;
+	font-size: .8em;
+	height: 2.2em;
+	line-height: 2.8em;
 }
 
 .scenario, .reply, div#EndCard {
@@ -97,12 +101,21 @@ div#EndCard {
 .btn {
     border-width: 2px;
     border-style: outset;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
+    border-color: white #424242 #424242 white;
     background: silver;
-    padding: 0 0 4px;
     border-radius: 1px;
     margin-top: 10px;
+    width: 50%;
+	font-size: .8em;
+	height: auto;
+	line-height: 2.8em;
+	padding: .5em 1em;
+	white-space: normal;
+	line-height: normal;
+    margin: 5px;
+    color: #212529;
+    font-weight: 400;
+    text-transform: none;
 }
 
 .btn:hover {
@@ -116,8 +129,7 @@ div#EndCard {
     cursor: default;
     background-color: silver;
     border-style: outset;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
+    border-color: white #424242 #424242 white;
     color: grey;
     text-shadow: 1px 1px white;
 }
@@ -129,7 +141,6 @@ div#EndCard {
     border-width: 2px;
     border-color: white #424242 #424242 white;
     background: silver;
-    color:#212529;
 }
 
 .card-header {
@@ -144,17 +155,6 @@ div#EndCard {
 }
 
 /* ANIMATIONS */
-
-@keyframes EndCardAppear {
-	from { 
-		width: 65%;
-		opacity: 0; 
-	}
-	to { 
-		width: 75%;
-		opacity: 1; 
-	}
-}
 
 @keyframes fadein {
 	from {

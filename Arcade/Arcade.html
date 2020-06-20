@@ -6,8 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="notranslate">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/ArcadeTheme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+	<link rel="stylesheet" href="../css/ArcadeTheme.css">
 </head>
 
 <body>
@@ -20,9 +20,9 @@
 	<p class="scenario" id="scenario-text"></p>
 	<p class="reply" id="reply-text"></p>
 	<p class="score" id="score-text"></p><br>
-	<button id="ButtonOne" type="button" class="btn btn-sm" onClick="reply1()"></button><br>
-	<button id="ButtonTwo" type="button" class="btn btn-sm" onClick="reply2()"></button><br>
-	<button id="ButtonThree" type="button" class="btn btn-sm" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
+	<button id="ButtonOne" class="btn" onClick="reply1()"></button><br>
+	<button id="ButtonTwo" class="btn" onClick="reply2()"></button><br>
+	<button id="ButtonThree" class="btn" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
 	<div class="card hidden" id="EndCard">
 		<div class="card-header">
 			<h4 class="my-0 font-weight-normal">Game Over</h4>
@@ -32,11 +32,11 @@
 		</div>
 	</div>
 	<nav class="navbar fixed-bottom">
-		<a href="../index.html" class="navigation"><img src="../resources/home.png" alt="Home" width=36px></a>
-		<button id="ButtonFour" class="btn btn-sm navigation" style="width: 30%; margin: 0;" onClick="next_scenario()">Continue</button> 
+		<a href="../index.html" class="navigation"><img src="../resources/home.png" alt="Home" width=34px></a>
+		<button id="ButtonFour" class="btn navigation" style="width: 30%;" onClick="next_scenario()">Continue</button> 
 		<a href="./Arcade.html" class="navigation"><img src="../resources/refresh.png" alt="Restart" width=30px></a>
 	</nav>
-	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../js/ScriptsArcade.js"></script>
 	<script src="ArcadeScenarios.js"></script>
 </body>

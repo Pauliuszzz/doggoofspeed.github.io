@@ -4,10 +4,10 @@
 	<title>Project Passage - Survival</title>
 	<link rel="icon" type="image/png" href="../resources/Project_Passage.png"/>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<meta name="google" content="notranslate">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="../css/SurvivalTheme.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+	<link rel="stylesheet" href="../css/SurvivalTheme.css">
 </head>
 
 <body>
@@ -23,27 +23,27 @@
 	</div>
 	<p class="scenario shadow" id="scenario-text"></p>
 	<p class="reply shadow" id="reply-text"></p>
-	<p><button id="ButtonOne" type="button" class="btn btn-sm btn-outline-light shadow" onClick="reply1()"></button></p>
-	<p><button id="ButtonTwo" type="button" class="btn btn-sm btn-outline-light shadow" onClick="reply2()"></button></p>
-	<p><button id="ButtonThree" type="button" class="btn btn-sm btn-outline-light shadow" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
+	<button id="ButtonOne" type="button" class="button button-outline shadow" onClick="reply1()"></button><br>
+	<button id="ButtonTwo" type="button" class="button button-outline shadow" onClick="reply2()"></button><br>
+	<button id="ButtonThree" type="button" class="button button-outline shadow" style="margin-bottom: 55px;" onClick="reply3()"></button>
 	<div class="card hidden shadow" id="DeadCard">
 		<div class="card-body">
 			<h4 class="card-title">You have died</h4>
-		  <p class="card-text" id="DeadText"></p>
+		  <p class="card-text" id="DeadText" style="margin-bottom: 0;"></p>
 		</div>
 	  </div>
 	  <div class="card hidden shadow" id="EndCard">
 		<div class="card-body">
-		  <h4 class="card-title">You have completed survival mode!</h4>
-		  <p class="card-text" id="EndText"></p>
+		  <h4 class="card-title" >You have completed survival mode!</h4>
+		  <p class="card-text" id="EndText" style="margin-bottom: 0;"></p>
 		</div>
 	  </div>
 	<nav class="navbar fixed-bottom navbar-dark bg-dark">
 		<a href="../index.html" class="navigation"><img src="../resources/home.svg" alt="Home"></a>
-		<button id="ButtonFour" type="button" class="btn btn-sm btn-outline-light shadow navigation" style="width: 30%; margin: auto;" onClick="next_scenario()">Continue</button>
+		<button id="ButtonFour" type="button" class="button button-outline shadow" style="width: 30%; border-color: white" onClick="next_scenario()">Continue</button>
 		<a href="./Survival.html" class="navigation"><img src="../resources/refresh.svg" alt="Home"></a>
 	</nav>
-	<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../js/ScriptsSurvival.js"></script>
 	<script src="SurvivalScenarios.js"></script>
 </body>

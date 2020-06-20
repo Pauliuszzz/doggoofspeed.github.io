@@ -13,11 +13,12 @@ html, body{
 }
 
 body {
-    font-family: "Arial", sans-serif;
+	font-family: "Arial", sans-serif;
 	background: linear-gradient(to bottom, #8E0E00, black);
 	text-align: center;
 	color: white;
 	animation: fadein 0.35s;
+	margin: 0;
 }
 
 h1 {
@@ -25,21 +26,25 @@ h1 {
 	font-weight: bold;
 }
 
-button{
-	width: 50%;
-}
-
 nav {
-	margin: 0px 5px;
 	border-radius: 15px 15px 0px 0px;
 	height: 3em;
+	bottom: 0;
+	background-color: #343a40;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
 }
 
 div#EndCard,  div#DeadCard{
 	background-color: #410600;
-	animation: EndCardAppear 3s;
+	animation: fadein 3s;
 	margin: auto;
 	width: 75%;
+	border-radius: 15px;
+	padding: 1em;
 }
 
 #progressbar {
@@ -67,15 +72,29 @@ div#EndCard,  div#DeadCard{
 	font-size: 40px;
 }
 
+.button {
+	width: 50%;
+	font-size: .8em;
+	font-weight: 400;
+	height: auto;
+	line-height: 2.8em;
+	padding: .5em 1em;
+	white-space: normal;
+	line-height: normal;
+	margin: 5px;
+	color: white !important;
+	border: 2px solid #8E0E00;
+	text-transform: none;
+}
+
 .scenario, .reply {
 	background-color: transparent;
-	font-size: 1rem;
+	font-size: 1em;
 	width: 75%;
 	margin: 10px auto;
 	padding: 5px;
 	border-radius: 10px;
-	border: 2px solid;
-	border-color: #8E0E00;
+	border: 2px solid #8E0E00;
 	animation: fadein 0.35s;
 }
 
@@ -86,7 +105,10 @@ div#EndCard,  div#DeadCard{
 }
 
 .navigation { 
-	margin: 0% 10%;
+	margin: auto 10%;
+	font-size: .8em;
+	height: 2.2em;
+	line-height: 2.8em;
 }
 
 .hidden {
@@ -94,17 +116,6 @@ div#EndCard,  div#DeadCard{
 }
 
 /* ANIMATIONS */
-
-@keyframes EndCardAppear {
-	from { 
-		width: 65%;
-		opacity: 0; 
-	}
-	to { 
-		width: 75%;
-		opacity: 1; 
-	}
-}
 
 @keyframes fadein {
 	from {

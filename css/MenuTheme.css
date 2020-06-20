@@ -10,6 +10,7 @@
 
 html, body{
 	min-height: 100%;
+	font-size: 1em;
 }
 
 body {
@@ -18,46 +19,66 @@ body {
 	background: linear-gradient(to bottom, grey, #1A1D20) fixed;
 	text-align: center;
 	animation: fadein 0.35s;
+	margin: 0;
 }
 
 h1 {
-	color: white;
 	margin: auto;
 	font-weight: bold;
+	font-size: 2.5em;
 }
 
 p {
-	color: white;
-	font-size: 1rem;
+	font-size: 1em;
 	padding: 5px;
-	padding-bottom: 5px;
+	margin: 5px;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: white;
 }
 
 nav {
-	margin: 0px 5px;
 	border-radius: 15px 15px 0px 0px;
 	height: 3em;
+	bottom: 0;
+	background-color: #343a40;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
 }
 
 .passage {
 	font-family: Bitmgothic;
-	text-shadow: 2px 2px red;
-	animation: NameShadow 10s linear 0s infinite;
+	text-shadow: 2px 2px #1A1D20;
 }
 
 div.card {
-	background-color:rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.5);
 	margin: 10px 10px 5px;
 	width: 70%;
+	border: 2px solid rgba(255, 255, 255, 0.5);
+	border-radius: 15px;
 }
 
-@media (min-width: 768px) {
+.card-title, h5 {
+	margin: 10px;
+	font-size: 2em;
+}
+
+@media (min-width: 80em) {
 	.pcwarning {
 	display: inline;
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 80em) {
 	.pcwarning {
 		display: none;
 	}
@@ -82,7 +103,18 @@ div.card {
 }
 
 .switches {
-	margin: 0% 10%;
+	margin: 12px 10%;
+}
+
+.button {
+	font-size: .8em;
+	height: 2.2em;
+	line-height: 2.8em;
+	padding: 0 1em;
+}
+
+.button-outline {
+	border-color: rgba(255, 255, 255, 0.5);
 }
 
 .playa {
@@ -107,23 +139,5 @@ div.card {
 	}
 	to {
 		opacity: 1
-	}
-}
-
-@keyframes NameShadow {
-	0% {
-		text-shadow: 2px 2px red;
-	}
-	25% {
-		text-shadow: 2px 2px rgb(111, 185, 143);
-	}
-	50% {
-		text-shadow: 2px 2px rgb(255, 0, 243);
-	}
-	75% {
-		text-shadow: 2px 2px rgb(142, 14, 0);
-	}
-	100% {
-		text-shadow: 2px 2px red;
 	}
 }
