@@ -26,7 +26,7 @@ scenarios = [
 		"answer3": "Ignore it",
   },
   {
-		"scenario": "You had a night's sleep. In the morning you decided to  find some work and get some mony, to stop doing nothing and to do something, to stand up and move your hands to improve your society, or yourself, to stop singing around, to stop rolling on the ground, to stop yawning all day round.",
+		"scenario": "You had a night's sleep. In the morning you decided to  find some work and get some money, to stop doing nothing and to do something, to stand up and move your hands to improve your society, or yourself, to stop singing around, to stop rolling on the ground, to stop yawning all day round.",
 		"answer1": "Go to the bar",
 		"answer2": "Read the announcement board",
 		"skipto2": 15,
