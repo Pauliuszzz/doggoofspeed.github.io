@@ -64,7 +64,6 @@ function reply3() {
 	
 //Next scenario
 function next_scenario(mult) {
-
 	if(hp <= 0 || count == 18){
 		if(localStorage.getItem('MaxSurvived') < count){
 			localStorage.setItem('MaxSurvived', count);

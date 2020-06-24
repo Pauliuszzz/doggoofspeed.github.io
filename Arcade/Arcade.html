@@ -6,7 +6,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="notranslate">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/chota@latest">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 	<link rel="stylesheet" href="../css/ArcadeTheme.css">
 </head>
 
@@ -20,20 +21,20 @@
 	<p class="scenario" id="scenario-text"></p>
 	<p class="reply" id="reply-text"></p>
 	<p class="score" id="score-text"></p><br>
-	<button id="ButtonOne" class="btn" onClick="reply1()"></button><br>
-	<button id="ButtonTwo" class="btn" onClick="reply2()"></button><br>
-	<button id="ButtonThree" class="btn" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
+	<button id="ButtonOne" class="button" onClick="reply1()"></button><br>
+	<button id="ButtonTwo" class="button" onClick="reply2()"></button><br>
+	<button id="ButtonThree" class="button" style="margin-bottom: 40px;" onClick="reply3()"></button></p>
 	<div class="card hidden" id="EndCard">
 		<div class="card-header">
-			<h4 class="my-0 font-weight-normal">Game Over</h4>
+			<h3>Game Over</h3>
 		</div>
 		<div class="card-body">
 			<p id="EndScore"></p>
 		</div>
 	</div>
-	<nav class="navbar fixed-bottom">
+	<nav>
 		<a href="../index.html" class="navigation"><img src="../resources/home.png" alt="Home" width=34px></a>
-		<button id="ButtonFour" class="btn navigation" style="width: 30%;" onClick="next_scenario()">Continue</button> 
+		<button id="ButtonFour" class="button navigation" style="width: 30%;" onClick="next_scenario()">Continue</button> 
 		<a href="./Arcade.html" class="navigation"><img src="../resources/refresh.png" alt="Restart" width=30px></a>
 	</nav>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

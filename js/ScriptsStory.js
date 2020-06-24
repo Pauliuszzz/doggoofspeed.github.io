@@ -73,24 +73,17 @@ function text() {
 
 //Next scenario
 	function next_scenario(mult){
-		if(quit == true){
-			endingcounter();
-			$("#scenario-text").hide();
-			$("#reply-text").hide();
-			$("#ButtonOne").hide();
-			$("#ButtonTwo").hide();
-			$("#ButtonThree").hide();
-			$("#ButtonFour").hide();
-			$("#body").css({"animation": "endScreen 3s ease forwards" });
-		}
-		else{
-		count++;
-		$("#reply-text").hide();
-		$("#ButtonOne").prop('disabled', false).show();
-		$("#ButtonTwo").prop('disabled', false).show();
-		$("#ButtonThree").prop('disabled', false).show();
-		$("#ButtonFour").show();
-		quit = scenarios[count].quit;
-		text();
+	$("#ButtonOne").prop('disabled', false).show();
+	$("#ButtonTwo").prop('disabled', false).show();
+	$("#ButtonThree").prop('disabled', false).show();
+	if(quit == true){
+		endingcounter();
+		$("#scenario-text, #reply-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
+		$("#body").css({"animation": "endScreen 3s ease forwards" });
 	}
+	count++;
+	$("#reply-text").hide();
+	$("#ButtonFour").show();
+	quit = scenarios[count].quit;
+	text();
 }

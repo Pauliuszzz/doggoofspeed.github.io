@@ -1,29 +1,27 @@
 @font-face {
-    font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff2');
+    font-family: "Bitmgothic";
+    src: url("Bitmgothic.woff2");
 }
 
 @font-face {
-    font-family: 'Century Gothic Bold';
-	src: url('CenturyGothic-Bold.woff2');
-}
-
-html, body{
-	min-height: 100%;
+    font-family: "Century Gothic Bold";
+	src: url("CenturyGothic-Bold.woff2");
 }
 
 body {
-	font-family: "Arial", sans-serif;
-	background: linear-gradient(to bottom, #8E0E00, black);
+	font-family: "Arial", "sans-serif";
+	background: linear-gradient(to bottom, #8E0E00, black) fixed;
 	text-align: center;
 	color: white;
 	animation: fadein 0.35s;
-	margin: 0;
 }
 
 h1 {
-	margin: auto;
+	margin: 0;
 	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2;
+	letter-spacing: -.1rem;
 }
 
 nav {
@@ -31,7 +29,8 @@ nav {
 	height: 3em;
 	bottom: 0;
 	background-color: #343a40;
-	padding: 0.2em;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -46,6 +45,7 @@ div#EndCard,  div#DeadCard{
 	width: 75%;
 	border-radius: 15px;
 	padding: 1em;
+	box-shadow: none;
 }
 
 #progressbar {
@@ -63,14 +63,12 @@ div#EndCard,  div#DeadCard{
 }
 
 .project {
-	font-family: Century Gothic Bold;
-	font-size: 40px;
+	font-family: "Century Gothic Bold";
 }
 
 .passage {
 	text-shadow: 2px 2px red;
 	font-family: Bitmgothic;
-	font-size: 40px;
 }
 
 .button {
@@ -86,6 +84,7 @@ div#EndCard,  div#DeadCard{
 	color: white !important;
 	border: 2px solid #8E0E00;
 	text-transform: none;
+	background: transparent;
 }
 
 .scenario, .reply {
@@ -94,7 +93,7 @@ div#EndCard,  div#DeadCard{
 	width: 75%;
 	margin: 10px auto;
 	padding: 5px;
-	border-radius: 10px;
+	border-radius: 15px;
 	border: 2px solid #8E0E00;
 	animation: fadein 0.35s;
 }
@@ -106,23 +105,28 @@ div#EndCard,  div#DeadCard{
 }
 
 .navigation { 
-	margin: auto 10%;
+	margin: 12px 10%;
 	font-size: .8em;
 	height: 2.2em;
 	line-height: 2.8em;
+	-webkit-tap-highlight-color: transparent;
 }
 
 .hidden {
     display: none;
 }
 
+.shadow {
+	filter: drop-shadow(2px 2px 4px black);
+}
+
 /* ANIMATIONS */
 
 @keyframes fadein {
 	from {
-		opacity: 0
+		opacity: 0;
 	}
 	to {
-		opacity: 1
+		opacity: 1;
 	}
 }

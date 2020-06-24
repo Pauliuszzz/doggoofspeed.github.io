@@ -1,106 +1,98 @@
 @font-face {
-    font-family: 'Bitmgothic';
-    src: url('../Bitmgothic.woff2');
+    font-family: "Bitmgothic";
+    src: url("../Bitmgothic.woff2");
 }
 
 @font-face {
-    font-family: 'Century Gothic Bold';
-	src: url('../CenturyGothic-Bold.woff2');
+    font-family: "Century Gothic Bold";
+	src: url("../CenturyGothic-Bold.woff2");
 }
 
 body {
+	font-family: "Arial", "sans-serif";
 	text-align: center;
 	background-position: 50% 50%;
+	color: white;
+	animation: fadein 0.35s;
 }
 
 h1 {
-	color: white;
-	font-size: 300%;
-    margin: auto;
+	margin: 0;
 	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2;
+	letter-spacing: -.1rem;
+}
+
+nav {
+	border-radius: 15px 15px 0px 0px;
+	height: 3em;
+	bottom: 0;
+	background-color: #343a40;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
+}
+
+.button {
+	width: 50%;
+	font-size: .8em;
+	font-weight: 400;
+	height: auto;
+	line-height: 2.8em;
+	padding: .5em 1em;
+	white-space: normal;
+	line-height: normal;
+	margin: 5px;
+	color: white !important;
+	border: 2px solid #8E0E00;
+	text-transform: none;
+	background: transparent;
+}
+
+.icon-only {
+	margin: 10px;
 }
 
 .project {
-	font-family: Century Gothic Bold;
-	font-size: 40px;
+	font-family: "Century Gothic Bold";
 }
 
 .passage {
 	font-family: Bitmgothic;
-	font-size: 40px;
 }
 
 .scenario, .reply {
 	background-color:rgba(0,0,0,0);
-	color: white;
-	font-size: 1rem;
+	font-size: 1em;
+	width: 75%;
 	margin: 10px auto;
-	border-radius: 10px;
-	border: 2px solid;
-	border-color: rgb(111, 185, 143);
 	padding: 5px;
-	padding-bottom: 5px;
-}
-
-@media (min-width: 768px) {
-	button{
-		width: 25%;
-	}
-	.scenario, .reply{
-		width: 50%;
-	}
-	div#EndCard {
-		width: 50%;
-	}
-	@keyframes appear {
-		from { 
-			width: 25%;
-			opacity: 0; 
-		}
-		to { 
-			width: 50%;
-			opacity: 1; 
-		}
-	}
-}
-	
-@media (max-width: 768px) {
-	button{
-		width: 50%;
-	}
-	.scenario, .reply{
-		width: 75%;
-	}
-	div#EndCard {
-		width: 75%;
-	}
-	@keyframes appear {
-		from { 
-			width: 65%;
-			opacity: 0; 
-		}
-		to { 
-			width: 75%;
-			opacity: 1; 
-		}
-	}
-}
-
-.navigation { 
-	margin: 10px;
-}
-
-.flex-container {
-	display: flex;
-	margin-top: 1em;
+	border-radius: 15px;
+	border: 2px solid rgb(111, 185, 143);
 }
 
 div#EndCard {
 	background-color:rgba(0, 0, 0, 0.2);
-	color: white;
-	animation-name: appear;
-	animation-duration: 3s;
+	animation: fadein 0.35s;
 	margin: auto;
+	width: 75%;
+	border-radius: 15px;
+	padding: 1em;
+	box-shadow: none;
+}
+
+.hidden {
+   display: none;
+}
+
+.disabled {
+    pointer-events:none;
+    opacity: 0.65;
 }
 
 @keyframes endScreen {
@@ -112,6 +104,11 @@ div#EndCard {
 	}
 }
 
-.hidden {
-   display: none;
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }
