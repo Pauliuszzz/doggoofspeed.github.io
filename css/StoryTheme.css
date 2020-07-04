@@ -1,11 +1,11 @@
 @font-face {
     font-family: "Bitmgothic";
-    src: url("../Bitmgothic.woff2");
+    src: url("Bitmgothic.woff2");
 }
 
 @font-face {
     font-family: "Century Gothic Bold";
-	src: url("../CenturyGothic-Bold.woff2");
+	src: url("CenturyGothic-Bold.woff2");
 }
 
 body {
