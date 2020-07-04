@@ -44,7 +44,6 @@ function SurvivalSwitch(){
     $("#body").addClass("survival");
     $("#survival").removeClass("hidden");
     $("#body").removeClass("story arcade");
-
 }
 
 //Story mode ending counter

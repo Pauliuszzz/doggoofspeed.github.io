@@ -23,7 +23,7 @@ scenarios = [
 		"answer1": "Hide from them",
 		"reply2": "They said they were looking for a monk, who is being accused of witchcraft.",
 		"answer2": "Ask where are they going",
-		"reply3": "You joined the group. Apparently, they were accusing one of the monks from the monastery of protecting witches. Since the monastery denied any wrong doings, the villagers decided to take matters into their own hands.",
+		"reply3": "You joined the group. Apparently, they were accusing one of the monks from the monastery of protecting witches. Monk's name was Brother Theo. Since the monastery denied any wrong doings, the villagers decided to take matters into their own hands.",
 		"answer3": "Join them",
 		"skipto3": 5
 	},
@@ -55,14 +55,14 @@ scenarios = [
 
 	//Route Monk
 	{
-		"scenario": "The monk ran into a forest and you did too. The trees were huge, it felt like they were judging the mob. You weren't angry at the monk, just curious. After a fruitless day some villagers decided to leave. While you and the others set up a camp for the night. The villagers were poor, but friendly. They gave you some bread.",
+		"scenario": "The monk ran into a field and you did too. The trees were huge, it felt like they were judging the mob. You weren't angry at the monk, just curious. After a fruitless day some villagers decided to leave. While you and the others set up a camp for the night. The villagers were poor, but friendly. They gave you some bread.",
 		"reply1": "The bread finally gave you something to chew. You haven't been glad to eat a bread like this your whole life.",
 		"answer1": "Accept the bread",
 		"reply2": "Gotta be hungry for another day then...",
 		"answer2": "Decline the bread"
 	},
 	{
-		"scenario": "After a night's rest you continued walking in hopes that the monk didn't get far. The road split and so did the group. You and 3 other people decided to go the left road."
+		"scenario": "After a night's rest you continued walking in hopes that the monk didn't get far. The road split and so did the group - three people went into the swamp, while you and everyone else decided to go to the forest."
 	},
 	{
 		"scenario": "The search continued, and the forest was getting deeper. The trees blocked out the light. It was getting scarier and scarier.",
