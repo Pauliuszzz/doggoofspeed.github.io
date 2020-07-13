@@ -26,7 +26,7 @@ const assets = [
     'resources/refresh.svg',
     'resources/storymode.svg',
     'resources/survivalmode.svg',
-    'Surival/Survival.html',
+    'Survival/Survival.html',
     'Survival/SurvivalScenarios.js',
     'index.html',
 ];
