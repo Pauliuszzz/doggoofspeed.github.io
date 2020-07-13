@@ -1,14 +1,17 @@
 const staticCacheName = 'PP1.0.1.1';
 const assets = [
-  '/',
   'index.html',
   'js/ScriptsArcade.js',
   'js/ScriptsMenu.js',
   'js/ScriptsStory.js',
   'js/ScriptsSurvival.js',
-  'css/MenuTheme.css',
+  'css/ArcadeTheme.css',
   'css/Bitmgothic.woff2',
   'css/CenturyGothic-Bold.woff2',
+  'css/MenuTheme.css',
+  'css/StoryTheme.css',
+  'css/SurvivalTheme.css',
+  '/surival'
 ];
 // install event
 self.addEventListener('install', evt => {

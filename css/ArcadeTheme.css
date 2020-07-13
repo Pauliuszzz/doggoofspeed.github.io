@@ -22,7 +22,7 @@ html {
 
 body {
 	font-family: "MS Sans Serif", "Tahoma", "Verdana", "sans-serif";
-    background: repeating-linear-gradient(-45deg, transparent, transparent 3px, rgb(42,35,41) 3px, rgb(42,35,41) 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
+    background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
     text-align: center;
     color: #212529;
     animation: fadein 0.35s;

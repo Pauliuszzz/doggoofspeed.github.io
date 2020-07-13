@@ -1,16 +1,16 @@
 {
     "name": "Project Passage",
-    "short_name": "ProjectPassage",
+    "short_name": "Project Passage",
     "start_url": "index.html",
     "display": "standalone",
     "background_color": "#555555",
     "theme_color": "#555555", 
     "orientation": "portrait-primary",
     "icons": [
-      {
-        "src": "resources/Project_Passage.png",
-        "type": "image/png", 
-        "sizes": "1024x1024"
-      }
+        {
+            "src": "resources/Project_Passage.png",
+            "type": "image/png", 
+            "sizes": "512x512"
+        }
     ]
-  }
+}

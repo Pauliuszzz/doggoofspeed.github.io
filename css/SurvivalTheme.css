@@ -52,14 +52,14 @@ div#EndCard,  div#DeadCard{
 
 #progressbar {
 	background: transparent;
-	border: 2px solid #8E0E00;
+	background: #8E0E00;
 	border-radius: 10px;
 	padding: 3px;
 	height: 2em;
 }
   
 #progressbar div {
-	background-color: #410600;
+	background: #410600;
 	width: 40%;
 	height: 100%;
 	border-radius: 8px;
