@@ -28,22 +28,25 @@ function clearStorage(){
 //Switcher machanism
 function StorySwitch(){
     $("#home, #arcade, #survival").addClass("hidden");
-    $("#body").addClass("story");
-    $("#story").removeClass("hidden");
-    $("#body").removeClass("arcade survival");
+    $("body").addClass("story");
+    $("#story, nav").removeClass("hidden");
+    $("body").removeClass("arcade survival");
+    $("body").css("background-color", "#5E7668");
 }
 
 function ArcadeSwitch(){
 	$("#home, #story, #survival").addClass("hidden");
-    $("#body").addClass("arcade");
-    $("#arcade").removeClass("hidden");
-    $("#body").removeClass("story survival");
+    $("body").addClass("arcade");
+    $("#arcade, nav").removeClass("hidden");
+    $("body").removeClass("story survival");
+    $("body").css("background-color", "#8E3E6C");
 }
 function SurvivalSwitch(){
 	$("#home, #story, #arcade").addClass("hidden");
-    $("#body").addClass("survival");
-    $("#survival").removeClass("hidden");
-    $("#body").removeClass("story arcade");
+    $("body").addClass("survival");
+    $("#survival, nav").removeClass("hidden");
+    $("body").removeClass("story arcade");
+    $("body").css("background-color", "#8E3939");
 }
 
 //Story mode ending counter

@@ -49,16 +49,18 @@ div#EndCard,  div#DeadCard{
 }
 
 #progressbar {
-	background-color: #410600;
-	border-radius: 7px;
+	background: transparent;
+	border: 2px solid #8E0E00;
+	border-radius: 10px;
 	padding: 3px;
+	height: 2em;
 }
   
 #progressbar div {
-	background-color: #8E0E00;
+	background-color: #410600;
 	width: 40%;
-	height: 20px;
-	border-radius: 5px;
+	height: 100%;
+	border-radius: 8px;
 	transition: width .35s ease-in-out;
 }
 
@@ -83,6 +85,7 @@ div#EndCard,  div#DeadCard{
 	margin: 5px;
 	color: white !important;
 	border: 2px solid #8E0E00;
+	border-radius: 10px;
 	text-transform: none;
 	background: transparent;
 }

@@ -4,13 +4,13 @@
 	<title>Project Passage</title>
 	<link rel="icon" type="image/png" href="resources/Project_Passage.png"/>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="notranslate">
 	<link rel="stylesheet" href="https://unpkg.com/chota@latest">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
 	<link rel="stylesheet" href="css/MenuTheme.css">
 </head>
-<body id="body">
+<body>
 	<header>
 		<a onClick="clearStorage()">
 			<div style="margin-top: 1em">
@@ -19,54 +19,65 @@
 			</div>
 		</a>
 	</header>
-	<div class="modes" id="home">
-		<h3>New:</h3><p>Bootstrap has been replaced with Chota introducing a lot of optimisation. Preparations for Mission 4.</p>
-		<h3>Upcoming:</h3>Mission 4</p>
+	<div class="modes" id="home" style="margin: 0">
 		<h5 class="pcwarning" style="color: #490000">Warning:</h5><p class="pcwarning" style="color: #490000">Your device's screen is too big and you may experience UI issues.<br>As of v0.10 this page is mobile first meaning that PCs and possibly other large devices are no longer supported.</p>
-		<p style="position: absolute; bottom: 50px;">v0.11.3</p>
+		<div class="shadow greeter">
+			<div class="switchesmain" onclick="StorySwitch()"><img src="resources/storymode.svg" alt="Play"><p>Story Mode</p></div>
+			<div class="switchesmain" onclick="ArcadeSwitch()"><img src="resources/arcademode.svg" alt="Play"><p>Arcade Mode</p></div>
+			<div class="switchesmain" onclick="SurvivalSwitch()"><img src="resources/survivalmode.svg" alt="Play"><p style="margin: 0">Survival Mode</p></div>
+		</div>
+		<div class="shadow info">
+			<h2 style="text-align: left">New:</h2>
+			<p style="text-align: left">Mission 4, 2 new scenarios in Arcade and Survival modes. Many overall improvements.</p>
+		</div>
+		<div class="shadow info">
+			<h2 style="text-align: left">Up next:</h2>
+			<p style="text-align: left">Mission 5</p>
+		</div>
+		<p style="bottom: 0; margin: 5px auto">v1.0a</p>
 	</div>
 	<div class="modes hidden" id="story">
-		<h1 style="text-shadow: 2px 2px rgba(111, 185, 143, .5); margin: 0.5em;">Story Mode</h1>
+		<h1 style="margin: 0.5em;">Story Mode</h1>
 			<div class="card shadow">
 			  	<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(111, 185, 143, 0.5)">To Ìgil</h2>
+					<h2 class="card-title" style="text-shadow: 2px 2px rgba(111, 185, 143, .5)">To Ìgil</h2>
 					<p class="card-text" id="M1"></p>
 					<a href="Story/Missions/M1.html" class="button outline shadow"><img src="resources/play.svg" alt="Play"></a>
 			  	</div>
 			</div>
 			<div class="card shadow">
 				<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(105, 187, 121, 0.5)">Fight to survive</h2>
+					<h2 class="card-title" style="text-shadow: 2px 2px rgba(105, 187, 121, .5)">Fight to survive</h2>
 					<p class="card-text" id="M2"></p>
 					<a href="Story/Missions/M2.html" id="M2-play" type="button" class="button outline shadow"><img src="resources/play.svg" alt="Play"></a>
 				</div>
 			</div>
 			<div class="card shadow">
 				<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(99, 190, 100, 0.5)">Flower Fest</h2>
+					<h2 class="card-title" style="text-shadow: 2px 2px rgba(99, 190, 100, .5)">Flower Fest</h2>
 					<p class="card-text" id="M3"></p>
 					<a href="Story/Missions/M3.html" id="M3-play" type="button" class="button outline shadow"><img src="resources/play.svg" alt="Play"></a>
 				</div>
 			  </div>
 			  <div class="card shadow">
 				<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(93, 192, 78, 0.5)">Conspiracy</h2>
+					<h2 class="card-title" style="text-shadow: 2px 2px rgba(93, 192, 78, .5)">Conspiracy</h2>
 					<p class="card-text" id="M4">Conspiracists found: 0/3</p>
 					<a href="Story/Missions/M4.html" id="M4-play" type="button" class="button outline disabled shadow"><img src="resources/play.svg" alt="Play"></a>
 				</div>
 			  </div>
 		  </div>
 	<div class="modes hidden" id="arcade">
-		<h1 style="text-shadow: 2px 2px rgba(255, 0, 243, .5); margin: 0.5em;">Arcade Mode</h1>
+		<h1 style="margin: 0.5em;">Arcade Mode</h1>
 		<a class="playa" href="Arcade/Arcade.html"><img src="resources/playbig.svg" alt="Play"></a>
 		<p id="ArcadeMode" style="position: absolute; bottom: 50px;"></p>
 	</div>
 	<div class="modes hidden" id="survival">
-		<h1 style="text-shadow: 2px 2px rgba(142, 14, 0, .5); margin: 0.5em;">Survival Mode</h1>
+		<h1 style="margin: 0.5em;">Survival Mode</h1>
 		<a class="plays" href="Survival/Survival.html"><img src="resources/playbig.svg" alt="Play"></a>
 		<p id="SurvivalMode" style="position: absolute; bottom: 50px;"></p>
 	</div>
-	<nav>
+	<nav class="shadow hidden">
 		<a class="switches" onclick="StorySwitch()"><img src="resources/storymode.svg" alt="Play"></a>
 		<a class="switches" onclick="ArcadeSwitch()"><img src="resources/arcademode.svg" alt="Play"></a>
 		<a class="switches" onclick="SurvivalSwitch()"><img src="resources/survivalmode.svg" alt="Play"></a>

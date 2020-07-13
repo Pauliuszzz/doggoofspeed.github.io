@@ -76,7 +76,12 @@ function next_scenario(mult) {
 		}
 		$("#scenario-text, #reply-text, #hp-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
 		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...");
-		$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
+		if (localStorage.getItem("MaxSurvived") == null) {
+			$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: 0");
+		}
+			else {
+				$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
+			}
 	}
 	if(hp <= 90 && hp == hpbfr) {
 		hp = hp + 10;
