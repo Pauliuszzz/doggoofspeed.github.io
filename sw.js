@@ -1,4 +1,4 @@
-const staticCacheName = 'site-static-v1';
+const staticCacheName = 'PP1.0.1.1';
 const assets = [
   '/',
   'index.html',
