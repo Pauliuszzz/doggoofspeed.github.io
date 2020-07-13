@@ -21,7 +21,7 @@ const assets = [
     'resources/play.svg',
     'resources/playbig.svg',
     'resources/Project_Passage.png',
-    'resources/Project_Passage.png',
+    'resources/Project_PassageApple.png',
     'resources/refresh.png',
     'resources/refresh.svg',
     'resources/storymode.svg',
