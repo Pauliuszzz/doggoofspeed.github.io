@@ -1,0 +1,89 @@
+window.onload = function onload() {
+	if(window.innerWidth < 768){
+		$("#ButtonOne").addClass("btn-sm");
+		$("#ButtonTwo").addClass("btn-sm");
+		$("#ButtonTwo").addClass("btn-sm");
+		$("#ButtonThree").addClass("btn-sm");
+		$("#ButtonFour").addClass("btn-sm");
+		}
+	$("#ButtonFour").prop('disabled', true);
+	$("#reply-text").hide();
+	text();
+}
+
+function text() {
+	$("#scenario-text").html(scenarios[count].scenario);
+	$("#ButtonOne").html(scenarios[count].answer1);
+	$("#ButtonTwo").html(scenarios[count].answer2);
+	$("#ButtonThree").html(scenarios[count].answer3);
+	if (scenarios[count].answer1 == null) {
+		$("#ButtonOne").hide();
+	}
+	if (scenarios[count].answer2 == null) {
+		$("#ButtonTwo").hide();
+	}
+	if (scenarios[count].answer3 == null) {
+		$("#ButtonThree").hide();
+	}
+	if(scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
+		$("#ButtonFour").prop('disabled', false);
+	}
+	else{
+		$("#ButtonFour").prop('disabled', true);
+	}
+}
+
+//Replies
+	function reply1() {
+		if(scenarios[count].reply1 != null){
+			$("#reply-text").html(scenarios[count].reply1);
+			$("#reply-text").show();
+		}
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonTwo").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
+			if (scenarios[count].skipto1 != null){
+				count = scenarios[count].skipto1;
+			}
+	}
+	function reply2() {
+		if(scenarios[count].reply2 != null){
+			$("#reply-text").html(scenarios[count].reply2);
+			$("#reply-text").show();
+		}
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonThree").prop('disabled', true);
+			if (scenarios[count].skipto2 != null){
+				count = scenarios[count].skipto2;
+			}
+	}
+	function reply3() {
+		if(scenarios[count].reply3 != null){
+			$("#reply-text").html(scenarios[count].reply3);
+			$("#reply-text").show();
+		}
+		$("#ButtonFour").prop('disabled', false);
+		$("#ButtonOne").prop('disabled', true);
+		$("#ButtonTwo").prop('disabled', true);
+			if (scenarios[count].skipto3 != null){
+				count = scenarios[count].skipto3;
+			}
+	}
+
+//Next scenario
+	function next_scenario(mult){
+	$("#ButtonOne").prop('disabled', false).show();
+	$("#ButtonTwo").prop('disabled', false).show();
+	$("#ButtonThree").prop('disabled', false).show();
+	if(quit == true){
+		endingcounter();
+		$("#scenario-text, #reply-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
+		$("#body").css({"animation": "endScreen 3s ease forwards" });
+	}
+	count++;
+	$("#reply-text").hide();
+	$("#ButtonFour").show();
+	quit = scenarios[count].quit;
+	text();
+}
