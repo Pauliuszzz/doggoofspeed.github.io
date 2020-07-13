@@ -5,6 +5,7 @@ const assets = [
     'css/ArcadeTheme.css',
     'css/Bitmgothic.woff2',
     'css/CenturyGothic-Bold.woff2',
+    'css/Chota_0.7.2.css',
     'css/MenuTheme.css',
     'css/StoryTheme.css',
     'css/SurvivalTheme.css',
