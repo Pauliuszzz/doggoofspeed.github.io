@@ -118,8 +118,7 @@ h3 {
 /* BUTTONS */
 
 .button {
-    border-width: 2px;
-    border-style: outset;
+    border: 2px outset;
     border-color: transparent #424242 #424242 transparent;
     background: silver;
     border-radius: 1px;
@@ -135,6 +134,10 @@ h3 {
     color: #212529;
     font-weight: 400;
     text-transform: none;
+}
+
+*,*:focus,*:hover{
+    outline: none;
 }
 
 .button:hover {
@@ -175,8 +178,5 @@ h3 {
 @keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
-		opacity: 1;
 	}
 }

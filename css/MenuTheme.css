@@ -63,7 +63,7 @@ div.card {
 	background-color: rgba(0, 0, 0, 0.5);
 	margin: 10px 10px 5px;
 	width: 70%;
-	border: 2px solid rgba(255, 255, 255, 0.5);
+	border: 2px solid whitesmoke;
 	border-radius: 15px;
 	padding: 0;
 	box-shadow: none;
@@ -79,11 +79,6 @@ div.card {
 	margin-top: 2em;
 }
 
-.greeter.p {
-	margin: 0;
-	padding: 0;
-}
-
 .info {
 	background-color: #343a40;
 	width: 70%;
@@ -94,12 +89,6 @@ div.card {
 
 .pcwarning {
 	display: none;
-}
-
-.missions {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
 }
 
 .modes {
@@ -120,19 +109,20 @@ div.card {
 
 .button {
 	font-size: .8em;
-	height: 2.2em;
-	line-height: 2.8em;
-	padding: 0 1em;
-	margin-bottom: 1em;
+	font-weight: 400;
+	height: auto;
+	padding: 0 .5em;
+	margin: 5px;
+	color: white !important;
+	border: 2px solid whitesmoke;
+	border-radius: 10px;
+	background: transparent;
+	display: inline-block;
 }
 
 .disabled {
-    pointer-events:none;
+    pointer-events: none;
     opacity: 0.65;
-}
-
-.button-outline {
-	border-color: rgba(255, 255, 255, 0.5);
 }
 
 .playa {
@@ -156,9 +146,6 @@ div.card {
 @keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
-		opacity: 1;
 	}
 }
 

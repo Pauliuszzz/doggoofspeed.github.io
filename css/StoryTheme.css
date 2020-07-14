@@ -45,16 +45,16 @@ nav {
 	font-size: .8em;
 	font-weight: 400;
 	height: auto;
-	line-height: 2.8em;
-	padding: .5em 1em;
-	white-space: normal;
-	line-height: normal;
+	padding: .5em;
 	margin: 5px;
 	color: white !important;
-	border: 2px solid #8E0E00;
-	text-transform: none;
-	background: transparent;
+	border: 2px solid whitesmoke;
 	border-radius: 10px;
+	background: transparent;
+}
+
+*,*:focus,*:hover{
+    outline: none;
 }
 
 .icon-only {
@@ -93,25 +93,8 @@ div#EndCard {
    display: none;
 }
 
-.disabled {
-    pointer-events:none;
-    opacity: 0.65;
-}
-
-@keyframes endScreen {
-	from {
-		background-size: 100% 100%;
-	}
-	to {
-		background-size: 300% 300%;
-	}
-}
-
 @keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
-		opacity: 1;
 	}
 }

@@ -7,8 +7,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="notranslate">
-	<link rel="stylesheet" href="/css/Chota_0.7.2.css" media="screen">
-	<link rel="stylesheet" href="/css/StoryTheme.css" media="screen">
+	<meta name="description" content="Mission 1 of the text based adventure game Project Passage.">
+	<link rel="stylesheet" href="../../css/Chota_0.7.2.css" media="screen">
+	<link rel="stylesheet" href="../../css/StoryTheme.css" media="screen">
 	<style>
 		body {
 			background: linear-gradient(to bottom, #2C7873, #004445, #021C1E) fixed;
@@ -31,19 +32,18 @@
 	<button id="ButtonTwo" class="button outline shadow" onClick="reply2()"></button><br>
 	<button id="ButtonThree" class="button outline shadow" style="margin-bottom: 55px;" onClick="reply3()"></button><br>
 	<div class="card hidden shadow" id="EndCard">
-		  <h4>Mission 1 Completed</h4>
-		  <p id="M1"></p>
-		  <a href="../../index.html" class="shadow icon-only"><img src="../../resources/home.svg" alt="Home"></a>
-		  <a href="./M1.html" class="shadow icon-only"><img src="../../resources/refresh.svg" alt="Refresh"></a>
-		  <a href="./M2.html" class="shadow icon-only"><img src="../../resources/forward.svg" alt="Forward"></a>
-		</div>
-	  </div>
+		<h4>Mission 1 Completed</h4>
+		<p id="M1"></p>
+		<a href="../../index.html" class="shadow icon-only"><img src="../../resources/home.svg" alt="Home"></a>
+		<a href="./M1.html" class="shadow icon-only"><img src="../../resources/refresh.svg" alt="Refresh"></a>
+		<a href="./M2.html" class="shadow icon-only"><img src="../../resources/forward.svg" alt="Forward"></a>
+	</div>
 	<nav>
 		<button id="ButtonFour" class="button outline shadow" onClick="next_scenario()">Continue</button>
 	</nav>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 	<script src="../../js/ScriptsStory.js" defer></script>
-	<script src="../Scenarios/M1Scenarios.js"async></script>
+	<script src="../Scenarios/M1Scenarios.js" async></script>
 	<script>
 	var endings = localStorage.getItem('M1-Endings');
 	var quit = false;

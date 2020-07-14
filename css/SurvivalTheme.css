@@ -54,7 +54,7 @@ div#EndCard,  div#DeadCard{
 	background: transparent;
 	background: #8E0E00;
 	border-radius: 10px;
-	padding: 3px;
+	padding: 2px;
 	height: 2em;
 }
   
@@ -80,16 +80,16 @@ div#EndCard,  div#DeadCard{
 	font-size: .8em;
 	font-weight: 400;
 	height: auto;
-	line-height: 2.8em;
-	padding: .5em 1em;
-	white-space: normal;
-	line-height: normal;
+	padding: .5em;
 	margin: 5px;
 	color: white !important;
 	border: 2px solid #8E0E00;
 	border-radius: 10px;
-	text-transform: none;
 	background: transparent;
+}
+
+*,*:focus,*:hover{
+    outline: none;
 }
 
 .scenario, .reply {
@@ -101,12 +101,6 @@ div#EndCard,  div#DeadCard{
 	border-radius: 15px;
 	border: 2px solid #8E0E00;
 	animation: fadein 0.35s;
-}
-
-.hp {
-	background-image: url("../resources/heart.svg");
-	background-size: 3.5em;
-	background-size: cover;
 }
 
 .navigation { 
@@ -130,8 +124,5 @@ div#EndCard,  div#DeadCard{
 @keyframes fadein {
 	from {
 		opacity: 0;
-	}
-	to {
-		opacity: 1;
 	}
 }
