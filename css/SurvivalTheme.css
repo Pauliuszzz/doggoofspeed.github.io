@@ -30,7 +30,7 @@ nav {
 	border-radius: 15px 15px 0px 0px;
 	height: 3em;
 	bottom: 0;
-	background-color: #343a40;
+	background-color: #410600;
 	padding-left: 0.2em;
 	padding-right: 0.2em;
 	width: 100%;
@@ -41,7 +41,7 @@ nav {
 }
 
 div#EndCard,  div#DeadCard{
-	background-color: #410600;
+	background-color: #8E0E00;
 	animation: fadein 3s;
 	margin: auto;
 	width: 75%;
