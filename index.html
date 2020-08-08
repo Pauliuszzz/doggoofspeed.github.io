@@ -23,53 +23,49 @@
 		</a>
 	</header>
 	<div class="modes" id="home" style="margin: 0">
-		<h5 class="pcwarning" style="color: #490000">Warning:</h5><p class="pcwarning" style="color: #490000">Your device's screen is too big and you may experience UI issues.<br>As of v0.10 this page is mobile first meaning that PCs and possibly other large devices are no longer supported.</p>
-		<div class="shadow greeter">
-			<div class="switchesmain" onclick="StorySwitch()"><img src="resources/storymode.svg" alt="Play"><p>Story Mode</p></div>
-			<div class="switchesmain" onclick="ArcadeSwitch()"><img src="resources/arcademode.svg" alt="Play"><p>Arcade Mode</p></div>
-			<div class="switchesmain" onclick="SurvivalSwitch()"><img src="resources/survivalmode.svg" alt="Play"><p style="margin: 0">Survival Mode</p></div>
+		<div class="flexhome">
+			<div class="shadow greeter">
+				<div class="switchesmain" onclick="StorySwitch()"><img src="resources/storymode.svg" alt="Play"><p>Story Mode</p></div>
+				<div class="switchesmain" onclick="ArcadeSwitch()"><img src="resources/arcademode.svg" alt="Play"><p>Arcade Mode</p></div>
+				<div class="switchesmain" onclick="SurvivalSwitch()"><img src="resources/survivalmode.svg" alt="Play"><p style="margin: 0">Survival Mode</p></div>
+			</div>
+			<div class="shadow info" style="text-align: left">
+				<h2>New:</h2>
+				<p>Mission 4, 2 new scenarios in Arcade and Survival modes. This website now supports PWA installation.</p>
+			</div>
+			<div class="shadow info" style="text-align: left">
+				<h2>Up next:</h2>
+				<p>Mission 5</p>
+				<h2>Version:</h2>
+				<p>v1.0a</p>
+			</div>
 		</div>
-		<div class="shadow info" style="text-align: left">
-			<h2>New:</h2>
-			<p>Mission 4, 2 new scenarios in Arcade and Survival modes. This website now supports PWA installation.</p>
-		</div>
-		<div class="shadow info" style="text-align: left">
-			<h2>Up next:</h2>
-			<p>Mission 5</p>
-		</div>
-		<p style="margin: 5px">v1.0a</p>
 	</div>
 	<div class="modes hidden" id="story">
 		<h1 style="margin: 0.5em;">Story Mode</h1>
+		<div class="flexmissions">
 			<div class="card shadow">
-			  	<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(111, 185, 143, .5)">To Ìgil</h2>
-					<p class="card-text" id="M1"></p>
-					<a href="Story/Missions/M1.html" class="button outline shadow"><img src="resources/play.svg" alt="Play"></a>
-			  	</div>
+				<h2 class="card-title" style="text-shadow: 2px 2px rgba(111, 185, 143, .5)">To Ìgil</h2>
+				<p class="card-text" id="M1"></p>
+				<a href="Story/Missions/M1.html" class="button shadow"><img src="resources/play.svg" alt="Play"></a>
 			</div>
 			<div class="card shadow">
-				<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(105, 187, 121, .5)">Fight to survive</h2>
-					<p class="card-text" id="M2"></p>
-					<a href="Story/Missions/M2.html" id="M2-play" class="button outline shadow"><img src="resources/play.svg" alt="Play"></a>
-				</div>
+				<h2 class="card-title" style="text-shadow: 2px 2px rgba(105, 187, 121, .5)">Fight to survive</h2>
+				<p class="card-text" id="M2"></p>
+				<a href="Story/Missions/M2.html" id="M2-play" class="button shadow"><img src="resources/play.svg" alt="Play"></a>
 			</div>
 			<div class="card shadow">
-				<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(99, 190, 100, .5)">Flower Fest</h2>
-					<p class="card-text" id="M3"></p>
-					<a href="Story/Missions/M3.html" id="M3-play" class="button outline shadow"><img src="resources/play.svg" alt="Play"></a>
-				</div>
+				<h2 class="card-title" style="text-shadow: 2px 2px rgba(99, 190, 100, .5)">Flower Fest</h2>
+				<p class="card-text" id="M3"></p>
+				<a href="Story/Missions/M3.html" id="M3-play" class="button shadow"><img src="resources/play.svg" alt="Play"></a>
 			  </div>
 			  <div class="card shadow">
-				<div class="card-body">
-					<h2 class="card-title" style="text-shadow: 2px 2px rgba(93, 192, 78, .5)">Conspiracy</h2>
-					<p class="card-text" id="M4">Conspiracists found: 0/3</p>
-					<a href="Story/Missions/M4.html" id="M4-play" class="button outline disabled shadow"><img src="resources/play.svg" alt="Play"></a>
-				</div>
+				<h2 class="card-title" style="text-shadow: 2px 2px rgba(93, 192, 78, .5)">Conspiracy</h2>
+				<p class="card-text" id="M4">Conspiracists found: 0/3</p>
+				<a href="Story/Missions/M4.html" id="M4-play" class="button disabled shadow"><img src="resources/play.svg" alt="Play"></a>
 			  </div>
-		  </div>
+		</div>
+	</div>
 	<div class="modes hidden" id="arcade">
 		<h1 style="margin: 0.5em;">Arcade Mode</h1>
 		<a class="playa" href="Arcade/Arcade.html"><img src="resources/playbig.svg" alt="Play"></a>

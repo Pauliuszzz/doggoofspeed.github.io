@@ -16,8 +16,7 @@ body {
 	background-color: #555555;
 	text-align: center;
 	margin: 0;
-	animation: fadein 0.35s;
-	transition: background-color 2s;
+	transition: background-color 1s;
 }
 
 h1 {
@@ -60,10 +59,18 @@ nav {
 	text-shadow: 2px 2px #1A1D20;
 }
 
+.flexmissions, .flexhome {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+}
+
 div.card {
 	background-color: rgba(0, 0, 0, 0.5);
 	margin: 10px 10px 5px;
-	width: 70%;
+	width: 100%;
 	border: 2px solid whitesmoke;
 	border-radius: 15px;
 	padding: 0;
@@ -104,16 +111,14 @@ div.card {
 	display: none;
 }
 
-.switches {
+.switches, .switchesmain {
 	margin: 12px 10%;
 }
 
 .button {
-	font-size: .8em;
-	font-weight: 400;
 	height: auto;
 	padding: 0 .5em;
-	margin: 5px;
+	margin: 7px;
 	color: white !important;
 	border: 2px solid whitesmoke;
 	border-radius: 10px;
@@ -128,13 +133,11 @@ div.card {
 
 .playa {
 	font-size: 50px;
-	margin-top: 5rem;
 	filter: drop-shadow(3px 3px rgba(255, 0, 243, .5));
 }
 
 .plays {
 	font-size: 50px;
-	margin-top: 5rem;
 	filter: drop-shadow(3px 3px rgba(142, 14, 0, .5));
 }
 
@@ -157,7 +160,52 @@ div.card {
 }
 
 @media (min-width: 80em) {
-	.pcwarning {
-	display: inline;
+	body {
+		font-size: 28px; 
+	}
+	img {
+		transform: scale(2);
+	}
+	.flexhome {
+		flex-flow: row wrap;
+		width: 100%;
+		transform: translateY(50%);
+	}
+	.flexmissions{
+		flex-flow: row wrap;
+		width: 100%;
+	}
+	.modes{
+		margin-bottom: 0;
+	}
+	div.card {
+		width: 25%;
+		height: 20vh;
+		margin: 1%;
+		padding-top: 5vh;
+	}
+	.greeter, .info {
+		width: 25%;
+		height: 30vh;
+		margin: 0 3%;
+	}
+	nav {
+		border-radius: 0px 15px 15px 0px;
+		left: -3em;
+		bottom: 0;
+		width: 72px;
+		height: 100vh;
+		flex-direction: column;
+		justify-content: center;
+		position: fixed;
+		animation: slidein 0.35s forwards;
+	}
+	.switches {
+		margin: 100% 24px;
+	}
+	@keyframes slidein {
+		to {
+			left: 0;
+		}
 	}
 }
