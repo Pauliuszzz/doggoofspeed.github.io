@@ -1,6 +1,6 @@
 window.onload = function onload() {
 	$("#ButtonFour").prop('disabled', true);
-	$("#reply-text").hide();
+	$(".replydiv").hide();
 	text();
 }
 
@@ -20,6 +20,8 @@ function text() {
 	}
 	if(scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
 		$("#ButtonFour").prop('disabled', false);
+		$(".replydiv").hide();
+		$(".buttondiv").hide();
 	}
 	else{
 		$("#ButtonFour").prop('disabled', true);
@@ -30,7 +32,7 @@ function text() {
 	function reply1() {
 		if(scenarios[count].reply1 != null){
 			$("#reply-text").html(scenarios[count].reply1);
-			$("#reply-text").show();
+			$(".replydiv").show();
 		}
 		$("#ButtonFour").prop('disabled', false);
 		$("#ButtonTwo, #ButtonThree").prop('disabled', true);
@@ -41,7 +43,7 @@ function text() {
 	function reply2() {
 		if(scenarios[count].reply2 != null){
 			$("#reply-text").html(scenarios[count].reply2);
-			$("#reply-text").show();
+			$(".replydiv").show();
 		}
 		$("#ButtonFour").prop('disabled', false);
 		$("#ButtonOne, #ButtonThree").prop('disabled', true);
@@ -52,7 +54,7 @@ function text() {
 	function reply3() {
 		if(scenarios[count].reply3 != null){
 			$("#reply-text").html(scenarios[count].reply3);
-			$("#reply-text").show();
+			$(".replydiv").show();
 		}
 		$("#ButtonFour").prop('disabled', false);
 		$("#ButtonOne, #ButtonTwo").prop('disabled', true);
@@ -66,11 +68,11 @@ function text() {
 	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false).show();
 	if(quit == true){
 		endingcounter();
-		$("#scenario-text, #reply-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
+		$(".flexmain").hide();
 	}
 	count++;
-	$("#reply-text").hide();
-	$("#ButtonFour").show();
+	$(".replydiv").hide();
+	$(".buttondiv").show();
 	quit = scenarios[count].quit;
 	text();
 }
