@@ -28,6 +28,7 @@ h1 {
 
 nav {
 	border-radius: 15px 15px 0px 0px !important;
+	-webkit-backdrop-filter: blur(4px);
 	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: 0;
