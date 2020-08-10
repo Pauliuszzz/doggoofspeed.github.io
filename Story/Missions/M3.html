@@ -28,26 +28,26 @@
 	</header>
 	<div class="flexmain">
 		<div class="textdiv">
-			<p class="scenario shadow" id="scenario-text"></p>
+			<p class="scenario acrylic shadow" id="scenario-text"></p>
 		</div>
 		<div class="replydiv">
-			<p class="reply shadow" id="reply-text"></p>
+			<p class="reply acrylic shadow" id="reply-text"></p>
 		</div>
 		<div class="buttondiv">
-			<button id="ButtonOne" class="button outline shadow" onClick="reply1()"></button>
-			<button id="ButtonTwo" class="button outline shadow" onClick="reply2()"></button>
-			<button id="ButtonThree" class="button outline shadow" onClick="reply3()"></button>
+			<button id="ButtonOne" class="button acrylic shadow" onClick="reply1()"></button>
+			<button id="ButtonTwo" class="button acrylic shadow" onClick="reply2()"></button>
+			<button id="ButtonThree" class="button acrylic shadow" onClick="reply3()"></button>
 		</div>
 	</div>
-	<div class="card hidden shadow" id="EndCard">
+	<div class="card hidden acrylic shadow" id="EndCard">
 		<h4>Mission 3 Completed</h4>
 		<p id="M3"></p>
 		<a href="../../index.html" class="shadow icon-only"><img src="../../resources/home.svg" alt="Home"></a>
 		<a href="./M3.html" class="shadow icon-only"><img src="../../resources/refresh.svg" alt="Refresh"></a>
-		<a href="./M3.html" class="shadow disabled icon-only"><img src="../../resources/forward.svg" alt="Forward"></a>
+		<a href="./M4.html" class="shadow icon-only"><img src="../../resources/forward.svg" alt="Forward"></a>
 	</div>
-	<nav>
-		<button id="ButtonFour" class="button outline shadow" onClick="next_scenario()">Continue</button>
+	<nav class="shadow acrylic">
+		<button id="ButtonFour" class="button acrylic shadow" style="margin: 0.5em" onClick="next_scenario()">Continue</button>
 	</nav>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
 	<script src="../../js/ScriptsStory.js" defer></script>
@@ -60,31 +60,31 @@
 	
 	//Ending Counter
 	function endingcounter(){
-		if(scenarios[count].ending1 == true && localStorage.getItem('M3-1') == null){
+		if(scenarios[count].ending1 == true && localStorage.getItem('M3-1') == null) {
 			endings++;
 			localStorage.setItem('M3-1', 1);
 		}
-		if(scenarios[count].ending2 == true && localStorage.getItem('M3-2') == null){
+		if(scenarios[count].ending2 == true && localStorage.getItem('M3-2') == null) {
 			endings++;
 			localStorage.setItem('M3-2', 1);
 		}
-		if(scenarios[count].ending3 == true && localStorage.getItem('M3-3') == null){
+		if(scenarios[count].ending3 == true && localStorage.getItem('M3-3') == null) {
 			endings++;
 			localStorage.setItem('M3-3', 1);
 		}
-		if(scenarios[count].ending4 == true && localStorage.getItem('M3-4') == null){
+		if(scenarios[count].ending4 == true && localStorage.getItem('M3-4') == null) {
 			endings++;
 			localStorage.setItem('M3-4', 1);
 		}
-		if(scenarios[count].ending5 == true && localStorage.getItem('M3-5') == null){
+		if(scenarios[count].ending5 == true && localStorage.getItem('M3-5') == null) {
 			endings++;
 			localStorage.setItem('M3-5', 1);
 		}
-		if(scenarios[count].ending6 == true && localStorage.getItem('M3-6') == null){
+		if(scenarios[count].ending6 == true && localStorage.getItem('M3-6') == null) {
 			endings++;
 			localStorage.setItem('M3-6', 1);
 		}
-		if(scenarios[count].ending7 == true && localStorage.getItem('M3-7') == null){
+		if(scenarios[count].ending7 == true && localStorage.getItem('M3-7') == null) {
 			endings++;
 			localStorage.setItem('M3-7', 1);
 		}

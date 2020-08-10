@@ -1,17 +1,4 @@
 var clicks = 0;
-//Tells progress
-if(localStorage.getItem('Highscore') > 0){
-	$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
-}
-    else{
-	$('#ArcadeMode').html("Highscore: 0");
-    }
-if(localStorage.getItem('MaxSurvived') > 0){
-	$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived'));
-}
-    else{
-	    $('#SurvivalMode').html("Max scenarios survived: 0");
-    }
 
 //Debugging easter egg
 function clearStorage(){
@@ -69,4 +56,25 @@ if(localStorage.getItem("M3-Endings") != null){
 }
     else{
        $('#M3').html("Endings achieved: 0/7");
+       $('#M4-play').addClass("disabled");
+    }
+if(localStorage.getItem("M3-Endings") != null){
+    $('#M4').html("Conspiracists found: " + localStorage.getItem("M3-Endings") + "/3");
+}
+    else{
+        $('#M4').html("Conspiracists found: 0/3");
+    }
+
+//Tells progress
+if(localStorage.getItem('Highscore') > 0){
+	$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
+}
+    else{
+	    $('#ArcadeMode').html("Highscore: 0");
+    }
+if(localStorage.getItem('MaxSurvived') > 0){
+	$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived'));
+}
+    else{
+	    $('#SurvivalMode').html("Max scenarios survived: 0");
     }

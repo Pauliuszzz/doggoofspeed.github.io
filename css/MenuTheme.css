@@ -17,6 +17,7 @@ body {
 	text-align: center;
 	margin: 0;
 	transition: background-color 0.35s;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -42,11 +43,13 @@ a {
 }
 
 nav {
-	border-radius: 15px 15px 0px 0px;
+	border-radius: 15px 15px 0px 0px !important;
+	backdrop-filter: blur(4px);
 	height: 3em;
-	bottom: 0;
+	bottom: -1px;
+	left: -1px;
+	right: -1px;
 	transform: translateY(3em);
-	background-color: #343a40;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -72,7 +75,6 @@ nav {
 div.card {
 	margin: 10px 10px 5px;
 	width: 100%;
-	border-radius: 15px;
 	padding: 0;
 	box-shadow: none;
 }
@@ -80,17 +82,13 @@ div.card {
 .greeter {
 	display: flex;
 	flex-direction: column;
-	background-color: #343a40;
 	width: 100%;
-	border-radius: 15px;
 	padding: 5px;
 	margin-top: 2em;
 }
 
 .info {
-	background-color: #343a40;
 	width: 100%;
-	border-radius: 15px;
 	padding: 5px;
 	margin-top: 2em;
 }
@@ -179,10 +177,8 @@ div.card {
 }
 
 .acrylic {
-	backdrop-filter: blur(10px);
-	-webkit-backdrop-filter: blur(10px);
+	border-radius: 15px;
 	border: 1px solid #ddd;
-	background-blend-mode: exclusion;
 	background-color: rgba(0, 0, 0, .3);
 }
 
@@ -243,7 +239,7 @@ div.card {
 	}
 
 	nav {
-		border-radius: 0px 15px 15px 0px;
+		border-radius: 0px 15px 15px 0px !important;
 		transform: translateX(-3em);
 		bottom: 0;
 		width: 72px;
@@ -255,7 +251,7 @@ div.card {
 	}
 	
 	.switches {
-		margin: 100% 24px;
+		margin: 100% auto;
 	}
 
 	@keyframes slidein {

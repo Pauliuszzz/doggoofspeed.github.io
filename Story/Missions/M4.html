@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Project Passage - Story</title>
+	<link rel="icon" type="image/png" href="../../resources/Project_Passage.png"/>
+	<meta name="theme-color" content="#5B9753">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="google" content="notranslate">
+	<meta name="description" content="Mission 4 of the text based adventure game Project Passage.">
+	<link rel="stylesheet" href="../../css/Chota_0.7.2.css" media="screen">
+	<link rel="stylesheet" href="../../css/StoryTheme.css" media="screen">
+	<style>
+		body {
+			background: linear-gradient(to bottom, #73A643, #2B5B1C, #1C350C) fixed;
+		}
+		.passage {
+			text-shadow: 2px 2px #5DC04E;
+		}
+	</style>
+</head>
+<body id="body">
+	<header>
+		<div style="margin: 1em">
+			<h1 class="project">Project</h1>
+			<h1 class="passage">Passage</h1>
+		</div>
+	</header>
+	<div class="flexmain">
+		<div class="textdiv">
+			<p class="scenario acrylic shadow" id="scenario-text"></p>
+		</div>
+		<div class="replydiv">
+			<p class="reply acrylic shadow" id="reply-text"></p>
+		</div>
+		<div class="buttondiv">
+			<button id="ButtonOne" class="button acrylic shadow" onClick="reply1()"></button>
+			<button id="ButtonTwo" class="button acrylic shadow" onClick="reply2()"></button>
+			<button id="ButtonThree" class="button acrylic shadow" onClick="reply3()"></button>
+		</div>
+	</div>
+	<div class="hidden acrylic shadow" id="EndCard">
+		<h4>Mission 4 Completed</h4>
+		<p id="M4"></p>
+		<a href="../../index.html" class="shadow icon-only"><img src="../../resources/home.svg" alt="Home"></a>
+		<a href="./M4.html" class="shadow icon-only"><img src="../../resources/refresh.svg" alt="Refresh"></a>
+	</div>
+	<div class="hidden acrylic shadow" id="TheoCard">
+		<h4>The Conspirator is:</h4>
+		<input type="text" id="Theoname" class="acrylic" name="fname">
+		<button onclick="validateTheo()">Submit</button>
+	</div>
+	<div class="hidden acrylic shadow" id="StarragCard">
+		<h4>The Conspirator is:</h4>
+		<input type="text" id="Starragname" class="acrylic" name="fname">
+		<button onclick="validateStarrag()">Submit</button>
+	</div>
+	<div class="hidden acrylic shadow" id="DuddingCard">
+		<h4>The Conspirator is:</h4>
+		<input type="text" id="Duddingname" class="acrylic" name="fname">
+		<button onclick="validateDudding()">Submit</button>
+	</div>
+	<nav class="shadow acrylic">
+		<button id="ButtonFour" class="button acrylic shadow" style="margin: 0.5em"  onClick="next_scenario()">Continue</button>
+	</nav>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+	<script src="../../js/ScriptsStory.js" defer></script>
+	<script src="../Scenarios/M4Scenarios.js" async></script>
+	<script>
+		var endings = localStorage.getItem('M4-Endings');
+		var quit = false;
+		var path = 0;
+		var count = 0;
+	
+	//Ending Counter
+	function endingcounter(){
+		if(scenarios[count].ending1 == true) {
+			if (localStorage.getItem('M4-1') == null) {
+				endings++;
+				localStorage.setItem('M4-1', 1);
+			}
+			$("#TheoCard").removeClass("hidden");
+		}
+		if(scenarios[count].ending2 == true) {
+			if (localStorage.getItem('M4-2') == null) {
+				endings++;
+				localStorage.setItem('M4-2', 1);
+			}
+			$("#StarragCard").removeClass("hidden");
+		}
+		if(scenarios[count].ending3 == true && localStorage.getItem('M4-3') == null) {
+			if (localStorage.getItem('M4-3') == null) {
+				endings++;
+				localStorage.setItem('M4-3', 1);
+			}
+			$("#DuddingCard").removeClass("hidden");
+		}
+		localStorage.setItem('M4-Endings', endings);
+		document.getElementById('M4').innerHTML = "Conspiracists found: " + localStorage.getItem("M4-Endings") + "/3";
+	}
+	function validateTheo() {
+		var x = document.getElementById('Theoname').value;
+		if (x == "Brother Theo") {
+			$("#EndCard").removeClass("hidden");
+			$("#TheoCard").addClass("hidden");
+		}
+  		else {
+    		alert("Wrong answer");
+		}
+	}
+	function validateStarrag() {
+		var x = document.getElementById('Starragname').value;
+		if (x == "Rogan Starrag" || x == "Starrag Rogan") {
+			$("#EndCard").removeClass("hidden");
+			$("#StarragCard").addClass("hidden");
+		}
+  		else {
+    		alert("Wrong answer");
+		}
+	}
+	function validateDudding() {
+		var x = document.getElementById('Duddingname').value;
+		if (x == "Finn Dudding" || x == "Dudding Finn") {
+			$("#EndCard").removeClass("hidden");
+			$("#DuddingCard").addClass("hidden");
+		}
+  		else {
+    		alert("Wrong answer");
+		}
+	}
+	</script>
+</body>
+</html>
