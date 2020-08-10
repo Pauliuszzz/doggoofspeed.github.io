@@ -40,17 +40,16 @@ p {
 a {
 	color: white;
 	-webkit-tap-highlight-color: transparent;
+	user-select: none;
 }
 
 nav {
 	border-radius: 15px 15px 0px 0px !important;
-	-webkit-backdrop-filter: blur(4px);
 	backdrop-filter: blur(4px);
 	height: 3em;
-	bottom: -1px;
+	bottom: -4em;
 	left: -1px;
 	right: -1px;
-	transform: translateY(3em);
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -64,7 +63,7 @@ nav {
 	text-shadow: 2px 2px #1A1D20;
 }
 
-.flexmissions, .flexhome {
+.flexmissions, .flexhome, .flexarcadesurvival {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
@@ -73,7 +72,7 @@ nav {
 	margin-bottom: 2em;
 }
 
-div.card {
+.card {
 	margin: 10px 10px 5px;
 	width: 100%;
 	padding: 0;
@@ -169,8 +168,6 @@ div.card {
 
 .playbig {
 	font-size: 50px;
-	position: absolute;
-	bottom: 50px;
 }
 
 .shadow {
@@ -194,7 +191,7 @@ div.card {
 
 @keyframes slidein {
 	to {
-		transform: translateY(0em);
+		bottom: -1px;
 	}
 }
 
@@ -213,7 +210,7 @@ div.card {
 		height: 36px;
 	}
 
-	.flexmissions, .flexhome{
+	.flexmissions, .flexhome, .flexarcadesurvival {
 		flex-flow: row wrap;
 		width: 100%;
 	}
@@ -222,11 +219,11 @@ div.card {
 		transform: translateY(25%);
 	}
 
-	.modes{
+	.modes {
 		margin-bottom: 0;
 	}
 
-	div.card {
+	.card {
 		width: 25%;
 		height: 10em;
 		margin: 1%;

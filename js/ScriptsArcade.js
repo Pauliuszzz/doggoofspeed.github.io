@@ -66,8 +66,17 @@ function next_scenario() {
 			localStorage.setItem('Highscore', score);
 		}
 		$("#scenario-text, #reply-text, #score-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
-		$("#EndCard").removeClass("hidden");
-		$("#EndScore").html("Your score: " + score + "<br>Highscore: " + localStorage.getItem("Highscore"));
+		$("#EndCard").removeClass('hidden');
+		$("#EndScore").html("Your score: " + score + "<br>Highscore: " + localStorage.getItem('Highscore'));
+		var matches = localStorage.getItem('ArcadeMatches');
+		localStorage.setItem('ArcadeMatches', ++matches);
+		if (localStorage.getItem('AverageHighscore') == null){
+			localStorage.setItem('AverageHighscore', score);
+		}
+		else {
+			console.log((localStorage.getItem('AverageHighscore') * (localStorage.getItem('ArcadeMatches')-1) + score)/localStorage.getItem('ArcadeMatches'));
+		}
+		console.log(localStorage.getItem('ArcadeMatches'));
 	}
 	$("#reply-text").hide();
 	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false);

@@ -82,13 +82,27 @@
 	</div>
 	<div class="modes hidden" id="arcade">
 		<h1 style="margin: 0.5em;">Arcade Mode</h1>
-		<a class="playbig" href="Arcade/Arcade.html"><img src="resources/playbig.svg" alt="Play"></a>
-		<p id="ArcadeMode"></p>
+		<div class="flexarcadesurvival">
+			<div class="card acrylic shadow">
+				<a class="playbig" href="Arcade/Arcade.html"><img src="resources/playbig.svg" alt="Play"></a>
+			</div>
+			<div class="card acrylic shadow">
+				<p id="ArcadeMode"></p>
+				<a onClick="clearArcade()" class="button shadow">Reset Stats</a>
+			</div>
+		</div>
 	</div>
 	<div class="modes hidden" id="survival">
 		<h1 style="margin: 0.5em;">Survival Mode</h1>
-		<a class="playbig" href="Survival/Survival.html"><img src="resources/playbig.svg" alt="Play"></a>
-		<p id="SurvivalMode"></p>
+		<div class="flexarcadesurvival">
+			<div class="card acrylic shadow">
+				<a class="playbig" href="Survival/Survival.html"><img src="resources/playbig.svg" alt="Play"></a>
+			</div>
+			<div class="card acrylic shadow">
+				<p id="SurvivalMode"></p>
+				<a onClick="clearSurvival()" class="button shadow">Reset Stats</a>
+			</div>
+		</div>
 	</div>
 	<nav class="shadow acrylic hidden">
 		<a class="switches" onclick="StorySwitch()"><svg class="iconsmol storyicon" alt="Play"><use xlink:href="#storyicon"/></svg></a>
