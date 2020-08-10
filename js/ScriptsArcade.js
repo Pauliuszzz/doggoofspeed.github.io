@@ -73,10 +73,9 @@ function next_scenario() {
 		if (localStorage.getItem('AverageHighscore') == null){
 			localStorage.setItem('AverageHighscore', score);
 		}
-		else {
-			console.log((localStorage.getItem('AverageHighscore') * (localStorage.getItem('ArcadeMatches')-1) + score)/localStorage.getItem('ArcadeMatches'));
-		}
-		console.log(localStorage.getItem('ArcadeMatches'));
+			else {
+				localStorage.setItem('AverageHighscore', (localStorage.getItem('AverageHighscore') * (localStorage.getItem('ArcadeMatches')-1) + score)/localStorage.getItem('ArcadeMatches'));
+			}
 	}
 	$("#reply-text").hide();
 	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false);

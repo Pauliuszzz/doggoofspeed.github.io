@@ -82,6 +82,15 @@ function next_scenario(mult) {
 			else {
 				$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
 			}
+		var matches = localStorage.getItem('SurvivalMatches');
+		localStorage.setItem('SurvivalMatches', ++matches);
+		if (localStorage.getItem('AverageCount') == null){
+			localStorage.setItem('AverageCount', count);
+		}
+			else {
+				localStorage.setItem('AverageCount', (localStorage.getItem('AverageCount') * (localStorage.getItem('SurvivalMatches')-1) + count)/localStorage.getItem('SurvivalMatches'));
+				console.log(localStorage.getItem('AverageCount'));
+			}
 	}
 	if(hp <= 90 && hp == hpbfr) {
 		hp = hp + 10;

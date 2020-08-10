@@ -67,14 +67,25 @@ if(localStorage.getItem("M3-Endings") != null){
 
 //Tells progress
 if(localStorage.getItem('Highscore') > 0){
-	$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore'));
+	$('#ArcadeMode').html("Highscore: " + localStorage.getItem('Highscore') + "<br>Average Score: " + localStorage.getItem('AverageHighscore') + "<br>Matches played: " + localStorage.getItem('ArcadeMatches'));
 }
     else{
-	    $('#ArcadeMode').html("Highscore: 0");
+	    $('#ArcadeMode').html("Highscore: 0<br>Average Score: 0<br>Matches played: 0");
     }
 if(localStorage.getItem('MaxSurvived') > 0){
-	$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived'));
+	$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived') + "<br>Average scenarios survived: " + localStorage.getItem('AverageCount') + "<br>Matches played: " + localStorage.getItem('SurvivalMatches'));
 }
     else{
 	    $('#SurvivalMode').html("Max scenarios survived: 0");
     }
+
+//Clears progress
+function clearArcade() {
+    localStorage.removeItem('Highscore', 'AverageHighscore', 'ArcadeMatches');
+    location.reload();
+}
+
+function clearArcade() {
+    localStorage.removeItem('MaxSurvived', 'AverageCount', 'SurvivalMatches');
+    location.reload();
+}
