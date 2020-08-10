@@ -245,7 +245,6 @@ nav {
 		flex-direction: column;
 		justify-content: center;
 		position: fixed;
-		animation: slidein 0.35s forwards;
 	}
 	
 	.switches {

@@ -76,7 +76,7 @@ if(localStorage.getItem('MaxSurvived') > 0){
 	$('#SurvivalMode').html("Max scenarios survived: " + localStorage.getItem('MaxSurvived') + "<br>Average scenarios survived: " + localStorage.getItem('AverageCount') + "<br>Matches played: " + localStorage.getItem('SurvivalMatches'));
 }
     else{
-	    $('#SurvivalMode').html("Max scenarios survived: 0");
+	    $('#SurvivalMode').html("Max scenarios survived: 0<br>Average scenarios survived: 0<br>Matches played: 0");
     }
 
 //Clears progress
