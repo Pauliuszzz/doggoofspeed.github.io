@@ -52,7 +52,8 @@ nav {
 }
 
 #EndCard {
-	animation: fadein 0.35s;
+    animation: fadein 0.35s;
+    width: 75%;
     margin: auto;
     padding: 0;
 }
@@ -103,10 +104,6 @@ h3 {
 	height: 2.2em;
     line-height: 2.8em;
     -webkit-tap-highlight-color: transparent;
-}
-
-.scenario, .reply, div#EndCard {
-    width: 75%;
 }
 
 .hidden {
@@ -196,6 +193,10 @@ h3 {
 @media (min-width: 80em) {
 	body {
 		font-size: 24px; 
+    }
+    
+    .scenario, .reply {
+		margin: 5px auto;
     }
     
     img {

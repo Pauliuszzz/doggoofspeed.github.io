@@ -92,7 +92,7 @@ div#EndCard,  div#DeadCard{
 
 .scenario, .reply {
 	font-size: 1em;
-	width: 75%;
+	width: 100%;
 	margin: 10px auto;
 	padding: 5px;
 	border-radius: 15px;
@@ -149,7 +149,11 @@ div#EndCard,  div#DeadCard{
 	body {
 		font-size: 24px; 
     }
-    
+	
+	.scenario, .reply {
+		margin: 5px auto;
+	}
+
     img {
         transform: scale(1.5);
     }
