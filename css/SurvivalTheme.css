@@ -29,6 +29,7 @@ h1 {
 
 nav {
 	border-radius: 15px 15px 0px 0px !important;
+	border-style: solid none none none !important;
 	height: 3em;
 	bottom: 0;
 	background-color: #410600;

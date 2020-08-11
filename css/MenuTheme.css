@@ -48,13 +48,12 @@ nav {
 	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: -4em;
-	left: -1px;
-	right: -1px;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	position: fixed;
+	border-style: solid none none none !important;
 	animation: slidein .35s forwards;
 }
 
@@ -239,6 +238,7 @@ nav {
 
 	nav {
 		border-radius: 0px 15px 15px 0px !important;
+		border-style: none solid none none !important;
 		transform: translateX(-3em);
 		bottom: 0;
 		width: 72px;
