@@ -71,7 +71,7 @@ scenarios = [
   },
   {
 		"scenario": "Lucky for you, the club is open every evening. You can bet on:<br>Rogan Starag - the richest brawler in the club.<br>Edgar Wiggins - the small and quick one.<br>Nilus Stone - his name doesn't decieve. He is as strong as a rock.",
-		"answer1": "Rogan Starag",
+		"answer1": "Rogan Starrag",
     "answer2": "Edgar Wiggins",
     "skipto2": 13,
 		"answer3": "Nilus Stone",

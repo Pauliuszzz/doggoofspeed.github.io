@@ -51,8 +51,8 @@ nav {
 	position: fixed;
 }
 
-div#EndCard {
-	animation: fadein 3s;
+#EndCard {
+	animation: fadein 0.35s;
     margin: auto;
     padding: 0;
 }
@@ -68,7 +68,7 @@ h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
-    margin-left: 0, 0, 0, .5em;
+    margin: 0 0 0 .5em;
 }
 
 .project {

@@ -100,6 +100,6 @@ scenarios = [
   {
     "scenario": "You quietly went to the merchant's bedroom and took a random paper from his desk and ran away as fast as you could. After going back to a safe location - your tent, you decided to read what was written. The letter itself was just a draft, since it had no signature, but it still said a lot.\nThe letter said:\n\"Dear brother. Your time as a ruler has come to an end. I have already gathered some great people to help me build the tower. The flower fest helped me to gain some money too. With it you will be just a peasant soon. Give up your power to me, and maybe you won't be stoned to death later.\"",
     "quit": true,
-    "ending2": true,
+    "ending3": true,
   },
 ]

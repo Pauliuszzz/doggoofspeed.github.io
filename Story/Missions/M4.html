@@ -5,7 +5,7 @@
 	<link rel="icon" type="image/png" href="../../resources/Project_Passage.png"/>
 	<meta name="theme-color" content="#5B9753">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="google" content="notranslate">
 	<meta name="description" content="Mission 4 of the text based adventure game Project Passage.">
 	<link rel="stylesheet" href="../../css/Chota_0.7.2.css" media="screen">
@@ -74,21 +74,21 @@
 	
 	//Ending Counter
 	function endingcounter(){
-		if(scenarios[count].ending1 == true) {
+		if (scenarios[count].ending1 == true) {
 			if (localStorage.getItem('M4-1') == null) {
 				endings++;
 				localStorage.setItem('M4-1', 1);
 			}
 			$("#TheoCard").removeClass("hidden");
 		}
-		if(scenarios[count].ending2 == true) {
+		if (scenarios[count].ending2 == true) {
 			if (localStorage.getItem('M4-2') == null) {
 				endings++;
 				localStorage.setItem('M4-2', 1);
 			}
 			$("#StarragCard").removeClass("hidden");
 		}
-		if(scenarios[count].ending3 == true && localStorage.getItem('M4-3') == null) {
+		if (scenarios[count].ending3 == true && localStorage.getItem('M4-3') == null) {
 			if (localStorage.getItem('M4-3') == null) {
 				endings++;
 				localStorage.setItem('M4-3', 1);
