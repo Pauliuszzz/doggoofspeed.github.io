@@ -2,89 +2,57 @@
 <html lang="en">
 <head>
 	<title>Project Passage - Survival</title>
-	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="icon" type="image/png" href="../resources/Project_Passage.png"/>
+	<meta name="theme-color" content="#8E0E00">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
 	<meta name="google" content="notranslate">
-	<!--Google Analytics-->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160710856-1"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-160710856-1');
-	</script>
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-160710856-1', 'auto');
-	ga('require', 'GTM-NWTHXJN');
-	ga('send', 'pageview');
-	</script>
-	<!-- End Google Analytics -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/SurvivalTheme.css">
-	<script src="../js/Onload.js"></script>
-	<script src="Scenarios.js"></script>
+	<meta name="description" content="Survival mode of the text based adventure game Project Passage.">
+	<link rel="stylesheet" href="../css/Chota_0.7.2.css" media="screen">
+	<link rel="stylesheet" href="../css/SurvivalTheme.css" media="screen">
 </head>
-
 <body>
 	<header>
-		<div class="flex-container">
-			<div style="flex-basis: 33.3%">
-				<a href="../index.html" class="navigation" style="float: left"><i class="material-icons-outlined" style="color: white">home</i></a>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<br>
-				<h1 class="project">Project</h1>
-				<h1 class="passage">Passage</h1>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<a onClick="location.reload();" class="navigation" style="float: right"><i class="material-icons-outlined" style="color: white">refresh</i></a>
-			</div>
+		<div style="margin: 1em">
+			<h1 class="project">Project</h1>
+			<h1 class="passage">Passage</h1>
 		</div>
 	</header>
-	<br>
-	<p class="scenario shadow" id="scenario-text"></p>
-	<p class="reply shadow" id="reply-text"></p>
-	<p class="hp shadow" id="hp-text"></p>
-	<p><button id="ButtonOne" type="button" class="btn btn-outline-light shadow" onClick="reply1()"></button></p>
-	<p><button id="ButtonTwo" type="button" class="btn btn-outline-light shadow" onClick="reply2()"></button></p>
-	<p><button id="ButtonThree" type="button" class="btn btn-outline-light shadow" onClick="reply3()"></button></p>
-	<p><button id="ButtonFour" type="button" class="btn btn-outline-light shadow" onClick="next_scenario()">Continue</button></p>
-	<script>
-    var sc = 0;
-	var hp = 100;
-	//Text
-    function text() {
-        $("#scenario-text").html(scenarios[sc].scenario);
-		$("#ButtonOne").html(scenarios[sc].answer1);
-		$("#ButtonTwo").html(scenarios[sc].answer2);
-		$("#ButtonThree").html(scenarios[sc].answer3);
-		if(hp >=0){
-		$("#hp-text").html("HP: " + hp);
-		}
-		if(hp < 0){
-		$("#hp-text").html("HP: 0");
-		}
-		if(hp <= 0 || sc == 15){
-			if(sc == 15){
-			$("#scenario-text").html("You finally reached your destination - a shop. You bought some eggs and some bread. Welp time to go home...");
-			}
-			if(hp <= 0){
-			$("#scenario-text").html("You have died. To go to the main menu, press the home button.");
-			}
-			$("#ButtonOne").hide();
-			$("#ButtonTwo").hide();
-			$("#ButtonThree").hide();
-			$("#ButtonFour").hide();
-		}
-    }
-</script>
+	<div class="shadow acrylic" id="progressbar" style="width: 75%; margin: auto;">
+		<div class="acrylic" id="progressslider" role="progressbar"><p style="line-height: 2em-2px; margin: auto 1em">HP</p></div>
+	</div>
+	<div class="flexmain">
+		<div class="textdiv">
+			<p class="scenario acrylic" id="scenario-text"></p>
+		</div>
+		<div class="replydiv ">
+			<p class="reply acrylic" id="reply-text"></p>
+		</div>
+		<div class="buttondiv">
+			<button id="ButtonOne" class="button acrylic shadow" onClick="reply1()"></button>
+			<button id="ButtonTwo" class="button acrylic shadow" onClick="reply2()"></button>
+			<button id="ButtonThree" class="button acrylic shadow" onClick="reply3()"></button>
+		</div>
+	</div>
+	<div class="hidden shadow acrylic" id="DeadCard">
+		<div>
+			<h3>You have died</h3>
+		  <p id="DeadText" style="margin: 0;"></p>
+		</div>
+	  </div>
+	  <div class="hidden shadow acrylic" id="EndCard">
+		<div>
+		  <h3>You have completed survival mode!</h3>
+		  <p id="EndText" style="margin: 0;"></p>
+		</div>
+	  </div>
+	<nav class="shadow acrylic">
+		<a href="../index.html" class="navigation"><img src="../resources/home.svg" alt="Home"></a>
+		<button id="ButtonFour" type="button" class="button acrylic shadow" style="width: 30%;" onClick="next_scenario()">Continue</button>
+		<a href="./Survival.html" class="navigation"><img src="../resources/refresh.svg" alt="Home"></a>
+	</nav>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+	<script src="../js/ScriptsSurvival.js" defer></script>
+	<script src="SurvivalScenarios.js" async></script>
 </body>
 </html>

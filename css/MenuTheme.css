@@ -1,77 +1,270 @@
 @font-face {
-    font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Bitmgothic";
+	src: url('Bitmgothic.woff2');
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "Century Gothic Bold";
+	src: url('CenturyGothic-Bold.woff2');
+	font-display: swap;
 }
 
 body {
-    font-family: "Arial", sans-serif;
-	background: #21d190;
-	background: -webkit-linear-gradient(to bottom, #21d190, #d65bca) fixed;
-	background: linear-gradient(to bottom, #21d190, #d65bca) fixed;
+	font-family: "Century Gothic Bold";
+	color: white;
+	background-color: #555555;
 	text-align: center;
-}
-
-header {
-    text-align: center;
+	margin: 0;
+	transition: background-color .35s;
+	overflow-x: hidden;
 }
 
 h1 {
-	color: white;
-	font-size: 300%;
-    margin: auto;
+	margin: 0;
 	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2;
+	letter-spacing: -.1rem;
 }
 
-.project {
-	font-family: Century Gothic;
-}
-
-.passage {
-	text-shadow: 2px 2px #FF00CA;
-	font-family: Bitmgothic;
-}
-
-div.card {
-	background-color:rgba(255, 255, 255, 0.5);
+h2, h3 {
+	margin: 10px;
 }
 
 p {
-	text-align: center;
-	color: black;
-	font-size: 1rem;
+	margin: 5px;
 	padding: 5px;
-	padding-bottom: 5px;
 }
 
-.score {
-	width: fit-content;
+a {
+	color: white;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+}
+
+nav {
+	border-radius: 15px 15px 0px 0px !important;
+	backdrop-filter: blur(4px);
+	height: 3em;
+	bottom: -4em;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
+	border-style: solid none none none !important;
+	animation: slidein .35s forwards;
+}
+
+.passage {
+	font-family: Bitmgothic;
+	text-shadow: 2px 2px #1A1D20;
+}
+
+.flexmissions, .flexhome, .flexarcadesurvival {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	width: 70%;
+	margin-bottom: 2em;
+}
+
+.card {
+	margin: 10px 10px 5px;
+	width: 100%;
+	padding: 0;
+	box-shadow: none;
+}
+
+.greeter {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 5px;
+	margin-top: 2em;
+}
+
+.info {
+	width: 100%;
+	padding: 5px;
+	margin-top: 2em;
+}
+
+.modes {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	margin-bottom: 4em;
+	animation: fadein .35s;
+}
+
+.hidden {
+	display: none;
+}
+
+.switches, .switchesmain {
+	margin: 12px 10%;
+}
+
+.icon {
+	fill: white;
+	width: 36px;
+	height: 36px;
+}
+
+.iconsmol {
+	fill: white;
+	width: 24px;
+	height: 24px;
+}
+
+.switchestory:hover, .storyicon:hover {
+	fill: #6fb98f;
+	color: #6fb98f;
+}
+
+.switchestory:active, .storyicon:active {
+	fill: #48775c;
+	color: #48775c;
+}
+
+.switcharcade:hover, .arcadeicon:hover {
+	fill: #8E3E6C;
+	color: #8E3E6C;
+}
+
+.switcharcade:active, .arcadeicon:active {
+	fill: #642c4c;
+	color: #642c4c;
+}
+
+.switchsurvival:hover, .survivalicon:hover {
+	fill: #8E3939;
+	color: #8E3939;
+}
+
+.switchsurvival:active, .survivalicon:active {
+	fill: #662929;
+	color: #662929;
+}
+
+.button {
+	height: auto;
+	padding: .125em 1em;
+	border: 1px solid #ddd;
+	margin: 7px;
+	border-radius: 10px;
+	background: transparent;
 	display: inline-block;
 }
 
-.popover {
-  text-align: center;
+.disabled {
+    pointer-events: none;
+    opacity: .65;
 }
 
-@media (min-width: 840px) {
-.card-deck{
-	max-width: 50%;
-	margin: auto;
+.playbig > svg {
+	height: 160px;
+	width: 160px;
+}
+
+.shadow {
+	filter: drop-shadow(2px 2px 4px black);
+}
+
+.acrylic {
+	border-radius: 15px;
+	border: 1px solid #ddd;
+	background-color: rgba(0, 0, 0, .3);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+	from {
+		transform: scale(1.25);
+		opacity: 0;
 	}
 }
 
-@media (max-width: 840px) {
-	.card-deck{
-		max-width: 90%;
-		margin: auto;
+@keyframes slidein {
+	to {
+		bottom: 0;
 	}
 }
 
-.navigation { 
-	margin: 10px 10px 10px;
+@media (min-width: 80em) {
+	body {
+		font-size: 24px; 
+	}
+
+	.icon {
+		width: 48px;
+		height: 48px;
+	}
+
+	.iconsmol {
+		width: 36px;
+		height: 36px;
+	}
+
+	.flexmissions, .flexhome, .flexarcadesurvival {
+		flex-flow: row wrap;
+		width: 100%;
+	}
+
+	.flexhome {
+		transform: translateY(25%);
+	}
+
+	.modes {
+		margin-bottom: 0;
+	}
+
+	.card {
+		width: 25%;
+		height: 10em;
+		margin: 1%;
+		padding-top: 2em;
+	}
+
+	.greeter, .info {
+		width: 25%;
+		height: 15em;
+		margin: 0 3%;
+	}
+
+	nav {
+		border-radius: 0px 15px 15px 0px !important;
+		border-style: none solid none none !important;
+		transform: translateX(-3em);
+		bottom: 0;
+		width: 72px;
+		height: 100vh;
+		flex-direction: column;
+		justify-content: center;
+		position: fixed;
+	}
+	
+	.switches {
+		margin: 100% auto;
+	}
+
+	@keyframes slidein {
+		to {
+			transform: translateX(0em);
+		}
+	}
 }
 
-.flex-container {
-	display: flex;
+@media (min-width: 120em) {
+	body {
+		font-size: 28px; 
+	}
+
+	div.card {
+		padding-top: 3em;
+	}
 }

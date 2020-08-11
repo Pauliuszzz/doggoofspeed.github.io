@@ -1,86 +1,188 @@
 @font-face {
-    font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Bitmgothic";
+	src: url("Bitmgothic.woff2");
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "Century Gothic Bold";
+	src: url("CenturyGothic-Bold.woff2");
+	font-display: swap;
 }
 
 body {
-    font-family: "Arial", sans-serif;
-	background: black;
-	background: -webkit-linear-gradient(to bottom, #8E0E00, black) fixed;
+	font-family: "Arial", "sans-serif";
 	background: linear-gradient(to bottom, #8E0E00, black) fixed;
 	text-align: center;
-}
-
-header {
-	text-align: center;
+	color: white;
+	width: 100%;
+	overflow-x: hidden;
 }
 
 h1 {
-	color: white;
-	font-size: 300%;
-    margin: auto;
+	margin: 0;
 	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2;
+	letter-spacing: -.1rem;
+}
+
+nav {
+	border-radius: 15px 15px 0px 0px !important;
+	border-style: solid none none none !important;
+	height: 3em;
+	bottom: 0;
+	background-color: #410600;
+	padding-left: .2em;
+	padding-right: .2em;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
+}
+
+div#EndCard,  div#DeadCard{
+	animation: fadein .35s;
+	margin: 1em auto;
+	width: 75%;
+	border-radius: 15px;
+	padding: 1em;
+	box-shadow: none;
+}
+
+#progressbar {
+	border-radius: 10px;
+	padding: 2px;
+	height: 2em;
+}
+  
+#progressbar > div {
+	background: rgba(65, 6, 0, .7);
+	height: 100%;
+	border-radius: 8px;
+	font-size: .90em;
+	transition: width .35s ease-in-out;
 }
 
 .project {
-	font-family: Century Gothic;
+	font-family: "Century Gothic Bold";
 }
 
 .passage {
-	text-shadow: 2px 2px #FF0000;
+	text-shadow: 2px 2px red;
 	font-family: Bitmgothic;
 }
 
+.button {
+	width: 50%;
+	font-size: .8em;
+	font-weight: 400;
+	height: auto;
+	padding: .5em;
+	margin: 5px;
+	color: white !important;
+	border: 2px solid #8E0E00;
+	border-radius: 10px;
+}
+
+*,*:focus,*:hover{
+    outline: none;
+}
+
 .scenario, .reply {
-	text-align: center;
-	background-color:rgba(0,0,0,0);
-	color: white;
-	font-size: 1rem;
-	width: 50%;
+	font-size: 1em;
+	width: 75%;
 	margin: 10px auto;
-	border-radius: 10px;
-	border: 2px solid;
-	border-color: #B50000;
 	padding: 5px;
-	padding-bottom: 5px;
-}
-
-.reply {
-	width: 50%;
-}
-
-.hp {
-	text-align: center;
-	background-color:rgba(0,0,0,0);
-	color: white;
-	font-size: 1rem;
-	width: fit-content;
-	margin: 10px auto;
-	border-radius: 10px;
-	border: 2px solid;
-	border-color: #FF0000;
-	padding: 5px;
-	padding-bottom: 5px;
-}
-
-button {
-	text-align: center;
-}
-
-.desktop {
-	width: 25%;
-}
-
-.mobile {
-	width: 50%;
+	border-radius: 15px;
+	animation: fadein .35s;
 }
 
 .navigation { 
-	margin: 10px 10px 10px;
+	margin: 12px 10%;
+	font-size: .8em;
+	height: 2.2em;
+	line-height: 2.8em;
+	-webkit-tap-highlight-color: transparent;
 }
 
-.flex-container {
+.hidden {
+    display: none;
+}
+
+.shadow {
+	filter: drop-shadow(2px 2px 4px black);
+}
+
+.flexmain {
 	display: flex;
-  }
+	flex-flow: column;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 4em;
+	animation: fadein .35s;
+}
+
+.flexmain > div {
+    width: 70%;
+    margin: auto;
+	animation: fadein .35s;
+}
+
+.acrylic {
+	border-radius: 15px;
+	border: 1px solid #8E0E00;
+	background: rgba(0, 0, 0, .3);
+}
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+	from {
+        transform: scale(1.25);
+		opacity: 0;
+	}
+}
+
+@media (min-width: 80em) {
+	body {
+		font-size: 24px; 
+    }
+    
+    img {
+        transform: scale(1.5);
+    }
+
+	.flexmain {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.flexmain > div {
+		padding-top: 2em;
+		width: 25%;
+		min-height: 15em;
+		margin: 0 3%;
+	}
+
+	.flexmain > div > .button {
+		width: 100%;
+	}
+
+	#progressbar > div{
+		font-size: 1em;
+		transform: translateY(0%);
+	}
+}
+
+@media (min-width: 120em) {
+	body {
+		font-size: 28px; 
+    }
+    
+    img {
+        transform: scale(2);
+    }
+}

@@ -2,79 +2,51 @@
 <html lang="en">
 <head>
 	<title>Project Passage - Arcade</title>
-	<link rel="shortcut icon" href="../favicon.ico" />
+	<link rel="icon" type="image/png" href="../resources/Project_Passage.png"/>
+	<meta name="theme-color" content="#2a2329">
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="google" content="notranslate">
-	<!--Google Analytics-->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-160710856-1"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-	gtag('config', 'UA-160710856-1');
-	</script>
-	<script>
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-160710856-1', 'auto');
-	ga('require', 'GTM-NWTHXJN');
-	ga('send', 'pageview');
-	</script>
-	<!-- End Google Analytics -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="../css/ArcadeTheme.css">
-	<script src="../js/Onload.js"></script>
-	<script src="Scenarios.js"></script>
+	<meta name="description" content="Arcade mode of the text based adventure game Project Passage.">
+	<link rel="stylesheet" href="../css/Chota_0.7.2.css" media="screen">
+	<link rel="stylesheet" href="../css/ArcadeTheme.css" media="screen">
 </head>
-
 <body>
 	<header>
-		<div class="flex-container">
-			<div style="flex-basis: 33.3%">
-				<a href="../index.html" class="navigation" style="float: left"><img src="../resources/home.png" alt="Restart" width=42></a><br>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<br>
-				<h1 class="project">Project</h1>
-				<h1 class="passage">Passage</h1>
-			</div>
-			<div style="flex-basis: 33.3%">
-				<a onClick="location.reload();" class="navigation" style="float: right"><img src="../resources/refresh.png" alt="Home" width=36></a>
-			</div>
+		<div style="margin: 1em">
+			<h1 class="project">Project</h1>
+			<h1 class="passage">Passage</h1>
 		</div>
 	</header>
-	<br>
-	<p class="scenario shadow" id="scenario-text"></p>
-	<p class="reply shadow" id="reply-text"></p>
-	<p class="score shadow" id="score-text"></p>
-	<p><button id="ButtonOne" type="button" class="btn btn-outline-secondary shadow" onClick="reply1()"></button></p>
-	<p><button id="ButtonTwo" type="button" class="btn btn-outline-secondary shadow" onClick="reply2()"></button></p>
-	<p><button id="ButtonThree" type="button" class="btn btn-outline-secondary shadow" onClick="reply3()"></button></p>
-	<p><button id="ButtonFour" type="button" class="btn btn-outline-danger shadow" onClick="next_scenario()">Continue</button></p>
-	<script>
-    var sc = 0;
-	var score = 0;
-	//Text
-    function text() {
-        $("#scenario-text").html(scenarios[sc].scenario);
-		$("#ButtonOne").html(scenarios[sc].answer1);
-		$("#ButtonTwo").html(scenarios[sc].answer2);
-		$("#ButtonThree").html(scenarios[sc].answer3);
-		$("#score-text").html("Score: " + score);
-		if(sc == 10){
-			$("#scenario-text").html("Your final score is:");
-			$("#ButtonOne").hide();
-			$("#ButtonTwo").hide();
-			$("#ButtonThree").hide();
-			$("#ButtonFour").hide();
-		}
-    }
-</script>
+	<p class="score" id="score-text"></p>
+	<div class="flexmain">
+		<div class="textdiv">
+			<p class="scenario" id="scenario-text"></p>
+		</div>
+		<div class="replydiv">
+			<p class="reply" id="reply-text"></p>
+		</div>
+		<div class="buttondiv">
+			<button id="ButtonOne" class="button" onClick="reply1()"></button>
+			<button id="ButtonTwo" class="button" onClick="reply2()"></button>
+			<button id="ButtonThree" class="button" onClick="reply3()"></button>
+		</div>
+	</div>
+	<div class="card hidden" id="EndCard">
+		<div class="card-header">
+			<h3>Game Over</h3>
+		</div>
+		<div class="card-body">
+			<p id="EndScore"></p>
+		</div>
+	</div>
+	<nav>
+		<a href="../index.html" class="navigation"><img src="../resources/home.png" alt="Home" width="34"></a>
+		<button id="ButtonFour" class="button navigation" style="width: 30%;" onClick="next_scenario()">Continue</button> 
+		<a href="./Arcade.html" class="navigation"><img src="../resources/refresh.png" alt="Restart" width="30"></a>
+	</nav>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+	<script src="../js/ScriptsArcade.js" defer></script>
+	<script src="ArcadeScenarios.js" async></script>
 </body>
 </html>

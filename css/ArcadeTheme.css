@@ -1,160 +1,233 @@
-/*
-	
-	A modified version of Windows 95 Theme
+/*  A modified version of Windows 95 Theme
 
     WIN95.CSS
     https://github.com/AlexBSoft/win95.css
-    Author: Alex B (alex-b.me)
-
-Body styles
-*/
+    Author: Alex B (alex-b.me) */
 
 @font-face {
-    font-family: 'Bitmgothic';
-    src: url('Bitmgothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Bitmgothic";
+    src: url('Bitmgothic.woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Century Gothic Bold";
+    src: url('CenturyGothic-Bold.woff2');
+    font-display: swap;
+}
+
+html {
+    min-height: 100%;
 }
 
 body {
-	font-family: "MS Sans Serif",Tahoma,Verdana,sans-serif;
-    background-image: url(../resources/vaporwave.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+	font-family: "MS Sans Serif", "Tahoma", "Verdana", "sans-serif";
+    background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
     text-align: center;
-}
-
-header {
-    text-align: center;
+    color: #212529;
+    overflow-x: hidden;
 }
 
 h1 {
-	color: white;
-	font-size: 300%;
-    margin: auto;
+	margin: 0;
 	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2;
+    letter-spacing: -.1rem;
+    color: white;
+}
+
+nav {
+    background: rgb(214, 211, 206);
+    margin: 0;
+    border: 1px outset #fff;
+    height: 3em;
+    padding: .2em;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
+}
+
+#EndCard {
+	animation: fadein 0.35s;
+    margin: auto;
+    padding: 0;
+}
+
+#EndScore {
+    margin: 1em;
+}
+
+h3 {
+    color: white;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+    margin: 0 0 0 .5em;
 }
 
 .project {
-	font-family: Century Gothic;
+    font-family: "Century Gothic Bold";
+    font-size: 40px;
 }
 
 .passage {
 	text-shadow: 2px 2px #ff00f3;
-	font-family: Bitmgothic;
+    font-family: Bitmgothic;
+    font-size: 40px;
 }
 
-.scenario, .reply {
-	text-align: center;
-	font-size: 1rem;
-	width: 50%;
+.scenario, .reply, .score {
+	font-size: 1em;
 	margin: 10px auto;
 	padding: 5px;
-	padding-bottom: 5px;
-	border: solid;
-    border-width: 2px;
-    border-bottom-color: #424242;
-    border-right-color: #424242;
-    border-left-color: white;
-    border-top-color: white;
+    border: 2px solid;
+    border-color: transparent #424242 #424242 transparent;
     background: silver;
-    color:#212529;
+    animation: fadein .35s;
 }
 
-.reply {
-	width: 50%;
-}
-
-.score{
-	text-align: center;
-    font-size: 1rem;
-    width: fit-content;
-	margin: 10px auto;
-	padding: 5px;
-	padding-bottom: 5px;
-	border: solid;
-    border-width: 2px;
-    border-right-color: #545C4F;
-    border-bottom-color: #545C4F;
-    border-left-color: #EFF7EA;
-    border-top-color: #EFF7EA;
+.score {
+    margin: 0px;
+    display: inline-block;
+    border-color: transparent #545C4F #545C4F transparent;
     background: #A7D18C;
-    color: black;
 }
 
-button {
-	text-align: center;
+.navigation {
+    margin: auto 10%;
+	font-size: .8em;
+	height: 2.2em;
+    line-height: 2.8em;
+    -webkit-tap-highlight-color: transparent;
 }
 
-.desktop {
-	width: 25%;
+.scenario, .reply, div#EndCard {
+    width: 75%;
 }
 
-.mobile {
-	width: 50%;
+.hidden {
+	display: none;
 }
 
-.navigation { 
-	margin: 10px 10px 10px;
-}
-
-/*
-    Button styles
-*/
-
-.btn{
-    border-width: 2px;
-    border-style: outset;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
+.button {
+    border: 2px outset;
+    border-color: transparent #424242 #424242 transparent;
     background: silver;
-    color: black;
-    padding: 0 0 4px;
     border-radius: 1px;
+    margin-top: 10px;
+    width: 50%;
+	font-size: .8em;
+	min-height: 2.5em;
+	line-height: 2.8em;
+	padding: .25em 1em;
+	white-space: normal;
+	line-height: normal;
+    margin: 5px;
+    color: #212529;
+    font-weight: 400;
+    text-transform: none;
 }
 
-.btn:hover {
+*,*:focus,*:hover{
+    outline: none;
+}
+
+.button:hover {
     border: 2px inset white;
     background: silver;
     color: #424242;
     box-shadow: -1px -1px #000;
 }
 
-.btn:focus {
-    border: 2px inset white;
-    background: silver;
-    color: #424242;
-    box-shadow: -1px -1px black;
-    outline: 0;
-}
-
-.btn:active {
-    border: 2px inset white;
-    color: #424242;
-    box-shadow: -1px -1px black;
-    outline: 0;
-}
-
-.btn-primary{
-    padding-left: 8px;
-    padding-right: 8px;
-}
-
-button:focus{
-    outline: 1px dotted;
-}
-
-.btn.disabled,.btn:disabled{
+.button:disabled {
     cursor: default;
     background-color: silver;
     border-style: outset;
-    border-right-color: #424242;
-    border-bottom-color: #424242;
     color: grey;
     text-shadow: 1px 1px white;
 }
 
-.flex-container {
+.card {
+    border: 2px solid;
+    border-color: transparent #424242 #424242 transparent;
+    background: silver;
+}
+
+.card-header{
+    background: linear-gradient(to left,#08216b,#a5cef7);
+    color: #fff;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 5px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+}
+
+.flexmain {
 	display: flex;
-  }
+	flex-flow: column;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 4em;
+	animation: fadein .35s;
+}
+
+.flexmain > div {
+    width: 70%;
+    margin: auto;
+	animation: fadein .35s;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadein {
+	from {
+        transform: scale(1.25);
+		opacity: 0;
+	}
+}
+
+@media (min-width: 80em) {
+	body {
+		font-size: 24px; 
+    }
+    
+    img {
+        transform: scale(1.5);
+    }
+
+	.flexmain {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.flexmain > div {
+		padding-top: 2em;
+		width: 25%;
+		min-height: 15em;
+		margin: 0 3%;
+	}
+
+	.flexmain > div > .button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 120em) {
+	body {
+		font-size: 28px; 
+    }
+    
+    img {
+        transform: scale(2);
+    }
+}

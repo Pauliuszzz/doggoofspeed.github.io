@@ -1,73 +1,155 @@
 @font-face {
-    font-family: 'Bitmgothic';
-    src: url('..\css\Bitmgothic.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: "Bitmgothic";
+	src: url("Bitmgothic.woff2");
+	font-display: swap;
+}
+
+@font-face {
+    font-family: "Century Gothic Bold";
+	src: url("CenturyGothic-Bold.woff2");
+	font-display: swap;
 }
 
 body {
-    font-family: "Arial", sans-serif;
-	background-color: #003b46;
-}
-
-header {
-	background: #003b46;
-	background: -webkit-linear-gradient(to bottom, #07575b, #003b46);
-	background: linear-gradient(to bottom, #07575b, #003b46);
-    text-align: center;
+	font-family: "Arial", "sans-serif";
+	text-align: center;
+	background-position: 50% 50%;
+	color: white;
+	overflow-x: hidden;
 }
 
 h1 {
-	color: white;
-	font-size: 300%;
-    text-align: center;
+	margin: 0;
 	font-weight: bold;
+	font-size: 2.5em;
+	line-height: 1.2;
+	letter-spacing: -.1rem;
+}
+
+nav {
+	border-radius: 15px 15px 0px 0px !important;
+	border-style: solid none none none !important;
+	backdrop-filter: blur(4px);
+	height: 3em;
+	bottom: 0;
+	padding-left: .2em;
+	padding-right: .2em;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
+}
+
+.button {
+	width: 50%;
+	font-size: .8em;
+	font-weight: 400;
+	height: auto;
+	padding: .5em;
+	margin: 5px auto;
+	color: white !important;
+	border-radius: 10px;
+	background: transparent;
+	transition: all .35s;
+}
+
+*,*:focus,*:hover{
+    outline: none;
+}
+
+.flexmain {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 4em;
+	animation: fadein .35s;
+}
+
+.flexmain > div {
+	width: 70%;
+	margin: auto;
+	animation: fadein .35s;
+}
+
+.icon-only {
+	margin: 10px;
 }
 
 .project {
-	font-family: Century Gothic;
+	font-family: "Century Gothic Bold";
 }
 
 .passage {
-	text-shadow: 2px 2px #2BAE66;
 	font-family: Bitmgothic;
 }
 
-p {
-	text-align: center;
-	background-color:rgba(0,0,0,0);
-	background-size: 50%;
-	color: white;
-	font-size: 1rem;
-	width: 50%;
+.scenario, .reply {
+	display: block;
+	font-size: 1em;
 	margin: 10px auto;
-	border-radius: 10px;
-	border: 2px solid;
-	border-color: #66A5AD;
 	padding: 5px;
-	padding-bottom: 5px;
+	border: 1px solid rgb(111, 185, 143);
+	animation: fadein .35s;
+	transition: width .35s;
 }
 
-.reply {
-	width: 50%;
+#EndCard, #TheoCard, #StarragCard, #DuddingCard {
+	margin: .5em auto;
+	width: 75%;
+	padding: 1em;
+	box-shadow: none;
+	animation: fadein .35s;
 }
 
-.score {
-	background-color:rgba(0,0,0,0);
-	border-color: #64c864;
-	width: fit-content;
-	display: inline-block;
+.acrylic {
+	border-radius: 15px;
+	border: 1px solid #ddd;
+	background: rgba(0, 0, 0, .3);
 }
 
-button {
-	width: 25%;
-	text-align: center;
+.hidden {
+	display: none;
 }
 
-.navigation { 
-	margin: 10px 10px 10px;
+input {
+	width: 70%;
+	color: white;
 }
 
-.flex-container {
-	display: flex;
+@keyframes fadein {
+	from {
+		transform: scale(1.25);
+		opacity: 0;
+	}
+}
+
+@media (min-width: 80em) {
+	body {
+		font-size: 24px; 
+	}
+
+	.flexmain {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.flexmain > div {
+		padding-top: 2em;
+		width: 25%;
+		min-height: 15em;
+		margin: 0 3%;
+	}
+
+	.flexmain > div > .button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 120em) {
+	body {
+		font-size: 28px; 
+	}
 }
