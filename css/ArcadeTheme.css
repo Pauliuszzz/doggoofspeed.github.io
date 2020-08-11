@@ -73,13 +73,11 @@ h3 {
 
 .project {
     font-family: "Century Gothic Bold";
-    font-size: 40px;
 }
 
 .passage {
 	text-shadow: 2px 2px #ff00f3;
     font-family: Bitmgothic;
-    font-size: 40px;
 }
 
 .scenario, .reply, .score {
