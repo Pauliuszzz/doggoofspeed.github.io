@@ -191,7 +191,7 @@ nav {
 
 @keyframes slidein {
 	to {
-		bottom: -1px;
+		bottom: 0;
 	}
 }
 
