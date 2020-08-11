@@ -23,9 +23,9 @@ function text() {
 		$(".replydiv").hide();
 		$(".buttondiv").hide();
 	}
-	else{
-		$("#ButtonFour").prop('disabled', true);
-	}
+		else{
+			$("#ButtonFour").prop('disabled', true);
+		}
 }
 
 //Replies

@@ -25,7 +25,7 @@ body {
     background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
     text-align: center;
     color: #212529;
-    animation: fadein 0.35s;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -42,7 +42,7 @@ nav {
     margin: 0;
     border: 1px outset #fff;
     height: 3em;
-    padding: 0.2em;
+    padding: .2em;
     bottom: 0;
     width: 100%;
     display: flex;
@@ -68,7 +68,7 @@ h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
-    margin: 0;
+    margin-left: 0, 0, 0, .5em;
 }
 
 .project {
@@ -89,7 +89,7 @@ h3 {
     border: 2px solid;
     border-color: transparent #424242 #424242 transparent;
     background: silver;
-    animation: fadein 0.35s;
+    animation: fadein .35s;
 }
 
 .score {
@@ -112,7 +112,7 @@ h3 {
 }
 
 .hidden {
-    display: none;
+	display: none;
 }
 
 .button {
@@ -171,10 +171,63 @@ h3 {
     border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
+.flexmain {
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	width: 100%;
+	margin-bottom: 4em;
+	animation: fadein .35s;
+}
+
+.flexmain > div {
+    width: 70%;
+    margin: auto;
+	animation: fadein .35s;
+}
+
 /* ANIMATIONS */
 
 @keyframes fadein {
 	from {
+        transform: scale(1.25);
 		opacity: 0;
 	}
+}
+
+@media (min-width: 80em) {
+	body {
+		font-size: 24px; 
+    }
+    
+    img {
+        transform: scale(1.5);
+    }
+
+	.flexmain {
+		flex-direction: row;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.flexmain > div {
+		padding-top: 2em;
+		width: 25%;
+		min-height: 15em;
+		margin: 0 3%;
+	}
+
+	.flexmain > div > .button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 120em) {
+	body {
+		font-size: 28px; 
+    }
+    
+    img {
+        transform: scale(2);
+    }
 }

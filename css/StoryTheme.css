@@ -31,8 +31,8 @@ nav {
 	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: 0;
-	padding-left: 0.2em;
-	padding-right: 0.2em;
+	padding-left: .2em;
+	padding-right: .2em;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -50,7 +50,7 @@ nav {
 	color: white !important;
 	border-radius: 10px;
 	background: transparent;
-	transition: all 0.35s;
+	transition: all .35s;
 }
 
 *,*:focus,*:hover{
@@ -61,15 +61,15 @@ nav {
 	display: flex;
 	flex-flow: column;
 	justify-content: center;
-	margin: auto;
 	width: 100%;
 	margin-bottom: 4em;
-	animation: fadein 0.35s;
+	animation: fadein .35s;
 }
 
 .flexmain > div {
 	width: 70%;
-	animation: fadein 0.35s;
+	margin: auto;
+	animation: fadein .35s;
 }
 
 .icon-only {
@@ -90,16 +90,16 @@ nav {
 	margin: 10px auto;
 	padding: 5px;
 	border: 1px solid rgb(111, 185, 143);
-	animation: fadein 0.35s;
-	transition: width 0.35s;
+	animation: fadein .35s;
+	transition: width .35s;
 }
 
 #EndCard, #TheoCard, #StarragCard, #DuddingCard {
-	margin: 0.5em auto;
+	margin: .5em auto;
 	width: 75%;
 	padding: 1em;
 	box-shadow: none;
-	animation: fadein 0.35s;
+	animation: fadein .35s;
 }
 
 .acrylic {

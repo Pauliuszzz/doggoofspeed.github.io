@@ -18,12 +18,20 @@
 			<h1 class="passage">Passage</h1>
 		</div>
 	</header>
-	<p class="scenario" id="scenario-text"></p>
-	<p class="reply" id="reply-text"></p>
-	<p class="score" id="score-text"></p><br>
-	<button id="ButtonOne" class="button" onClick="reply1()"></button><br>
-	<button id="ButtonTwo" class="button" onClick="reply2()"></button><br>
-	<button id="ButtonThree" class="button" style="margin-bottom: 40px;" onClick="reply3()"></button>
+	<p class="score" id="score-text"></p>
+	<div class="flexmain">
+		<div class="textdiv">
+			<p class="scenario" id="scenario-text"></p>
+		</div>
+		<div class="replydiv">
+			<p class="reply" id="reply-text"></p>
+		</div>
+		<div class="buttondiv">
+			<button id="ButtonOne" class="button" onClick="reply1()"></button>
+			<button id="ButtonTwo" class="button" onClick="reply2()"></button>
+			<button id="ButtonThree" class="button" onClick="reply3()"></button>
+		</div>
+	</div>
 	<div class="card hidden" id="EndCard">
 		<div class="card-header">
 			<h3>Game Over</h3>

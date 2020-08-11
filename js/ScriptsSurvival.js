@@ -4,7 +4,7 @@ var hp = 100;
 
 window.onload = function onload() {
 	$("#ButtonFour").prop('disabled', true);
-	$("#reply-text").hide();
+	$(".replydiv").hide();
 	shuffle(scenarios);
 	text();
 }
@@ -39,7 +39,7 @@ function text() {
 //Replies
 function reply1() {
 	$("#reply-text").html(scenarios[count].reply1);
-	$("#reply-text").show();
+	$(".replydiv").show();
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonTwo, #ButtonThree").prop('disabled', true);
 	hpbfr = hp;
@@ -47,7 +47,7 @@ function reply1() {
 }
 function reply2() {
 	$("#reply-text").html(scenarios[count].reply2);
-	$("#reply-text").show();
+	$(".replydiv").show();
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne, #ButtonThree").prop('disabled', true);
 	hpbfr = hp;
@@ -55,7 +55,7 @@ function reply2() {
 }
 function reply3() {
 	$("#reply-text").html(scenarios[count].reply3);
-	$("#reply-text").show();
+	$(".replydiv").show();
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne, #ButtonTwo").prop('disabled', true);
 	hpbfr = hp;
@@ -74,14 +74,7 @@ function next_scenario(mult) {
 		if(hp <= 0){
 			$("#DeadCard").removeClass("hidden");
 		}
-		$("#scenario-text, #reply-text, #hp-text, #ButtonOne, #ButtonTwo, #ButtonThree").hide();
-		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...");
-		if (localStorage.getItem("MaxSurvived") == null) {
-			$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: 0");
-		}
-			else {
-				$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived"));
-			}
+		$(".flexmain").hide();
 		var matches = localStorage.getItem('SurvivalMatches');
 		localStorage.setItem('SurvivalMatches', ++matches);
 		if (localStorage.getItem('AverageCount') == null){
@@ -91,13 +84,20 @@ function next_scenario(mult) {
 				localStorage.setItem('AverageCount', (localStorage.getItem('AverageCount') * (localStorage.getItem('SurvivalMatches')-1) + count)/localStorage.getItem('SurvivalMatches'));
 				console.log(localStorage.getItem('AverageCount'));
 			}
+		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...");
+		if (localStorage.getItem("MaxSurvived") == null) {
+			$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: 0");
+		}
+			else {
+				$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived")  + "<br>Average scenarios survived: " + Math.round(localStorage.getItem('AverageCount')) + "<br>Matches played: " + localStorage.getItem('SurvivalMatches'));
+			}
 	}
 	if(hp <= 90 && hp == hpbfr) {
 		hp = hp + 10;
 	}
 	count++;
 	$("#progressslider").css('width', hp + '%');
-	$("#reply-text").hide();
+	$(".replydiv").hide();
 	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false);
 	$("#ButtonFour").prop('disabled', true);
 	text();

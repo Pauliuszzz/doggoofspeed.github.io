@@ -25,6 +25,9 @@
 		<symbol id="playicon" viewBox="0 0 24 24">
 			<path d="M0 0h24v24H0V0z" fill="none"/><path d="M10 8.64L15.27 12 10 15.36V8.64M8 5v14l11-7L8 5z"/>
 		</symbol>
+		<symbol id="playbig" viewBox="0 0 24 24">
+			<path d="M8 6.82v10.36c0 .79.87 1.27 1.54.84l8.14-5.18c.62-.39.62-1.29 0-1.69L9.54 5.98C8.87 5.55 8 6.03 8 6.82z"/>
+		</symbol>
 	  </svg>
 </head>
 <body>
@@ -56,7 +59,7 @@
 		</div>
 	</div>
 	<div class="modes hidden" id="story">
-		<h1 style="margin: 0.5em;">Story Mode</h1>
+		<h1 style="margin: .5em;">Story Mode</h1>
 		<div class="flexmissions">
 			<div class="card acrylic shadow">
 				<h2 style="text-shadow: 2px 2px rgba(111, 185, 143, .5)">To Ìgil</h2>
@@ -81,10 +84,10 @@
 		</div>
 	</div>
 	<div class="modes hidden" id="arcade">
-		<h1 style="margin: 0.5em;">Arcade Mode</h1>
+		<h1 style="margin: .5em;">Arcade Mode</h1>
 		<div class="flexarcadesurvival">
 			<div class="card acrylic shadow">
-				<a class="playbig" href="Arcade/Arcade.html"><img src="resources/playbig.svg" alt="Play"></a>
+				<a class="playbig" href="Arcade/Arcade.html"><svg class="icon" alt="Play"><use xlink:href="#playbig"/></svg></a>
 			</div>
 			<div class="card acrylic shadow">
 				<p id="ArcadeMode"></p>
@@ -93,7 +96,7 @@
 		</div>
 	</div>
 	<div class="modes hidden" id="survival">
-		<h1 style="margin: 0.5em;">Survival Mode</h1>
+		<h1 style="margin: .5em;">Survival Mode</h1>
 		<div class="flexarcadesurvival">
 			<div class="card acrylic shadow">
 				<a class="playbig" href="Survival/Survival.html"><img src="resources/playbig.svg" alt="Play"></a>
