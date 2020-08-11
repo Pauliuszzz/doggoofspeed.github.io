@@ -1,4 +1,4 @@
-scenarios = [
+var scenarios = [
   {
 		"scenario": "You woke up on the ground. It seems that you weren't the only one unlucky. People were sick due to malnutrition and they couldn't spare you a bed. The monastery was the only place they could go.",
 		"reply1": "They give you free food and you ask for more? That is very rude. It is no surprize they kicked you out for being a spoiled brat. ",
@@ -161,4 +161,4 @@ scenarios = [
     "quit": true,
 		"ending10": true
   },
-]
+];

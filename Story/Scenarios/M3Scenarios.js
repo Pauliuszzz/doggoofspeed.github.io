@@ -1,4 +1,4 @@
-scenarios = [
+var scenarios = [
     {
 		"scenario": "You now had some money... You were already in alot better position than the others living here. You bought a little shed in the outskirts of Ìgil. The future was looking bright.",
     },
@@ -116,4 +116,4 @@ scenarios = [
       "quit": true,
       "ending7": true
     },
-]
+];

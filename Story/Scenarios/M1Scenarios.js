@@ -1,4 +1,4 @@
-scenarios = [
+var scenarios = [
 	{
 		"scenario": "The crops are being terrorised by crows and you can do nothing. Starving really isn't an option, it's a necessity. But you still must eat. You'll have to go to Ìgil. One way or another.",
 		"reply1": "You hastly ran out of the house. Not a wise decision, but a decision nonetheless.",
@@ -147,4 +147,4 @@ scenarios = [
 		"quit": true,
 		"ending5": true
 	},
-]
+];

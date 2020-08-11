@@ -54,6 +54,10 @@ nav {
 	transition: all .35s;
 }
 
+input {
+	border-radius: 15px !important;
+}
+
 *,*:focus,*:hover{
     outline: none;
 }
@@ -129,6 +133,10 @@ input {
 	body {
 		font-size: 24px; 
 	}
+
+	.scenario, .reply {
+		margin: 5px auto;
+    }
 
 	.flexmain {
 		flex-direction: row;
