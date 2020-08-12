@@ -129,6 +129,7 @@ h3 {
     color: #212529;
     font-weight: 400;
     text-transform: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 *,*:focus,*:hover{
