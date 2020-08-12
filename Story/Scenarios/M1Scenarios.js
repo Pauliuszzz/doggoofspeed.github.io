@@ -114,7 +114,7 @@ var scenarios = [
 		"scenario": "After a good hour of walking you notice a small stream beside the road.",
 		"reply1": "The water is cold and refreshing. You feel like you've ascended.",
 		"answer1": "Drink from it",
-		"reply2": "You put your feet there and sigh... It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
+		"reply2": "You put your feet there and sigh...",
 		"skipto2": 14,
 		"answer2": "Wash your feet",
 		"answer3": "Follow it instead of the road",

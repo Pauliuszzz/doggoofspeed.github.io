@@ -65,14 +65,16 @@ function text() {
 
 //Next scenario
 	function next_scenario(mult){
-	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false).show();
-	if(quit == true){
-		endingcounter();
-		$(".flexmain").hide();
+		$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false).show();
+		if(quit == true){
+			endingcounter();
+			$(".flexmain").hide();
+		}
+		if (scenarios.length > count + 1) {
+			count++;
+		}
+		$(".replydiv").hide();
+		$(".buttondiv").show();
+		quit = scenarios[count].quit;
+		text();
 	}
-	count++;
-	$(".replydiv").hide();
-	$(".buttondiv").show();
-	quit = scenarios[count].quit;
-	text();
-}
