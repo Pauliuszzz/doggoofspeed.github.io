@@ -17,7 +17,6 @@ body {
 	text-align: center;
 	margin: 0;
 	transition: background-color .35s;
-	-moz-transition: background-color .35s;
 	overflow-x: hidden;
 }
 
