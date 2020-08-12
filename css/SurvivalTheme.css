@@ -49,6 +49,7 @@ div#EndCard,  div#DeadCard{
 	border-radius: 15px;
 	padding: 1em;
 	box-shadow: none;
+	will-change: opacity, transform;
 }
 
 #progressbar {
@@ -97,6 +98,7 @@ div#EndCard,  div#DeadCard{
 	padding: 5px;
 	border-radius: 15px;
 	animation: fadein .35s;
+	will-change: opacity, transform;
 }
 
 .navigation { 
@@ -122,12 +124,14 @@ div#EndCard,  div#DeadCard{
 	width: 100%;
 	margin-bottom: 4em;
 	animation: fadein .35s;
+	will-change: opacity, transform;
 }
 
 .flexmain > div {
     width: 70%;
     margin: auto;
 	animation: fadein .35s;
+	will-change: opacity, transform;
 }
 
 .acrylic {

@@ -56,6 +56,7 @@ nav {
     width: 75%;
     margin: auto;
     padding: 0;
+    will-change: opacity, transform;
 }
 
 #EndScore {
@@ -89,6 +90,7 @@ h3 {
     border-color: transparent #424242 #424242 transparent;
     background: silver;
     animation: fadein .35s;
+    will-change: opacity, transform;
 }
 
 .score {
@@ -172,13 +174,15 @@ h3 {
 	justify-content: center;
 	width: 100%;
 	margin-bottom: 4em;
-	animation: fadein .35s;
+    animation: fadein .35s;
+    will-change: opacity, transform;
 }
 
 .flexmain > div {
     width: 70%;
     margin: auto;
-	animation: fadein .35s;
+    animation: fadein .35s;
+    will-change: opacity, transform;
 }
 
 /* ANIMATIONS */

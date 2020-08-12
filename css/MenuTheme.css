@@ -98,6 +98,7 @@ nav {
 	align-items: center;
 	margin-bottom: 4em;
 	animation: fadein .35s;
+	will-change: opacity, transform;
 }
 
 .hidden {
