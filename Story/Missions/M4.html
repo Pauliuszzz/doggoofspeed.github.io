@@ -12,11 +12,16 @@
 	<link rel="stylesheet" href="../../css/StoryTheme.css" media="screen">
 	<style>
 		body {
-			background: linear-gradient(to bottom, #73A643, #2B5B1C, #1C350C) fixed;
+			background: linear-gradient(to bottom right, #f3904f, #3b4371) fixed;
 		}
 		.passage {
-			text-shadow: 2px 2px #5DC04E;
+			text-shadow: 2px 2px #3b4371;
 		}
+		.wrong > h1 {
+			text-shadow: 4px 4px #3b4371;
+			margin-top: 33vh;
+		}
+
 	</style>
 </head>
 <body id="body">
@@ -59,6 +64,9 @@
 		<h4>The Conspirator is:</h4>
 		<input type="text" id="Duddingname" class="acrylic" name="fname">
 		<button onclick="validateDudding()" class="button acrylic">Submit</button>
+	</div>
+	<div class="wrong hidden">
+		<h1>Wrong<br>Answer</h1>
 	</div>
 	<nav class="shadow acrylic">
 		<button id="ButtonFour" class="button acrylic shadow" style="margin: .5em"  onClick="next_scenario()">Continue</button>
@@ -105,7 +113,8 @@
 			$("#TheoCard").addClass("hidden");
 		}
   			else {
-    			alert("Wrong answer");
+    			$('.wrong').removeClass('hidden');
+				setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
 			}
 	}
 	function validateStarrag() {
@@ -115,7 +124,8 @@
 			$("#StarragCard").addClass("hidden");
 		}
   			else {
-    			alert("Wrong answer");
+				$('.wrong').removeClass('hidden');
+				setTimeout(function(){ $('.wrong').addClass('hidden'); }, 3000);
 			}
 	}
 	function validateDudding() {
@@ -125,7 +135,8 @@
 			$("#DuddingCard").addClass("hidden");
 		}
   			else {
-    			alert("Wrong answer");
+    			$('.wrong').removeClass('hidden');
+				setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
 			}
 	}
 	</script>

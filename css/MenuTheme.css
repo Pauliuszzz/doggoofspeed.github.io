@@ -181,6 +181,14 @@ nav {
 	background-color: rgba(0, 0, 0, .3);
 }
 
+.trophy {
+	right: 0;
+	position: absolute;
+	margin: 10px;
+	height: 24px;
+	width: 24px;
+}
+
 /* ANIMATIONS */
 
 @keyframes fadein {
@@ -251,6 +259,10 @@ nav {
 	
 	.switches {
 		margin: 100% auto;
+	}
+
+	.trophy {
+		margin-top: -1.5em;
 	}
 
 	@keyframes slidein {

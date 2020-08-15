@@ -37,33 +37,57 @@ function SurvivalSwitch(){
 }
 
 //Story mode ending counter
-if(localStorage.getItem("M1-Endings") != null){
+if (localStorage.getItem("M1-Endings") != null) {
     $('#M1').html("Endings achieved: " + localStorage.getItem("M1-Endings") + "/5");
+    if (localStorage.getItem("M1-Endings") == 5) {
+        $('.finM1').css('fill', 'gold');
+    }
 }
-    else{
+    else {
         $('#M1').html("Endings achieved: 0/5");
         $('#M2-play').addClass("disabled");
     }
-if(localStorage.getItem("M2-Endings") != null){
+
+if (localStorage.getItem("M2-Endings") != null) {
     $('#M2').html("Endings achieved: " + localStorage.getItem("M2-Endings") + "/10");
-}
-    else{
-        $('#M2').html("Endings achieved: 0/10");
-        $('#M3-play').addClass("disabled");
+    if (localStorage.getItem("M2-Endings") == 10) {
+        $('.finM2').css('fill', 'gold');
     }
-if(localStorage.getItem("M3-Endings") != null){
+}
+    else if (localStorage.getItem("M1-Endings") == null) {
+        $('#M2').html("Finish previous missions to unlock");
+    }
+        else {
+            $('#M2').html("Endings achieved: 0/10");
+            $('#M3-play').addClass("disabled");
+        }
+
+if (localStorage.getItem("M3-Endings") != null) {
     $('#M3').html("Endings achieved: " + localStorage.getItem("M3-Endings") + "/7");
-}
-    else{
-       $('#M3').html("Endings achieved: 0/7");
-       $('#M4-play').addClass("disabled");
+    if (localStorage.getItem("M3-Endings") == 7) {
+        $('.finM3').css('fill', 'gold');
     }
-if(localStorage.getItem("M4-Endings") != null){
+}
+    else if (localStorage.getItem("M2-Endings") == null) {
+        $('#M3').html("Finish previous missions to unlock");
+    }   
+        else {
+            $('#M3').html("Endings achieved: 0/7");
+            $('#M4-play').addClass("disabled");
+        }
+
+if (localStorage.getItem("M4-Endings") != null) {
     $('#M4').html("Conspiracists found: " + localStorage.getItem("M4-Endings") + "/3");
-}
-    else{
-        $('#M4').html("Conspiracists found: 0/3");
+    if (localStorage.getItem("M4-Endings") == 3) {
+        $('.finM4').css('fill', 'gold');
     }
+}
+    else if (localStorage.getItem("M3-Endings") == null) {
+        $('#M4').html("Finish previous missions to unlock");
+    }
+        else {
+            $('#M4').html("Conspiracists found: 0/3");
+        }
 
 //Tells progress
 if(localStorage.getItem('Highscore') > 0){

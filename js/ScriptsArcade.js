@@ -43,6 +43,9 @@ function reply1() {
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonTwo, #ButtonThree").prop('disabled', true);
 	score = score + scenarios[count].score1;
+	if ($('.xpmessage').hasClass('hidden') == true) {
+		$('.xptext').html('+' + scenarios[count].score1 + 'Xp');
+	}
 }
 function reply2() {
 	$("#reply-text").html(scenarios[count].reply2);
@@ -50,6 +53,9 @@ function reply2() {
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne, #ButtonThree").prop('disabled', true);
 	score = score + scenarios[count].score2;
+	if ($('.xpmessage').hasClass('hidden') == true) {
+		$('.xptext').html('+' + scenarios[count].score2 + 'Xp');
+	}
 }
 function reply3() {
 	$("#reply-text").html(scenarios[count].reply3);
@@ -57,6 +63,9 @@ function reply3() {
 	$("#ButtonFour").prop('disabled', false);
 	$("#ButtonOne, #ButtonTwo").prop('disabled', true);
 	score = score + scenarios[count].score3;
+	if ($('.xpmessage').hasClass('hidden') == true) {
+		$('.xptext').html('+' + scenarios[count].score3 + 'Xp');
+	}
 }
 	
 //Next scenario
@@ -77,6 +86,8 @@ function next_scenario() {
 			}
 			$("#EndScore").html("Your score: " + score + "<br>Highscore: " + localStorage.getItem('Highscore') + "<br>Average Score: " + Math.round(localStorage.getItem('AverageHighscore')) + "<br>Matches played: " + localStorage.getItem('ArcadeMatches'));
 	}
+	$('.xpmessage').removeClass('hidden');
+	setTimeout(function(){ $('.xpmessage').addClass('hidden');}, 3000);
 	$(".replydiv").hide();
 	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false);
 	$("#ButtonFour").prop('disabled', true);
