@@ -3,11 +3,11 @@ var hpbfr;
 var hp = 100;
 
 window.onload = function onload() {
-	$("#ButtonFour").prop('disabled', true);
-	$(".replydiv").hide();
+	$('#ButtonFour').prop('disabled', true);
+	$('.replydiv').hide();
 	shuffle(scenarios);
 	text();
-}
+};
 
 //Array Shuffle
 function shuffle(array) {
@@ -21,43 +21,43 @@ function shuffle(array) {
 
 //Text
 function text() {
-	$("#scenario-text").html(scenarios[count].scenario);
-	$("#ButtonOne").html(scenarios[count].answer1);
-	$("#ButtonTwo").html(scenarios[count].answer2);
-	$("#ButtonThree").html(scenarios[count].answer3);
-	if (scenarios[count].answer1 == null) {
-		$("#ButtonOne").hide();
+	$('#scenario-text').html(scenarios[count].scenario);
+	$('#ButtonOne').html(scenarios[count].answer1);
+	$('#ButtonTwo').html(scenarios[count].answer2);
+	$('#ButtonThree').html(scenarios[count].answer3);
+	if (scenarios[count].answer1 === null) {
+		$('#ButtonOne').hide();
 	}
-	if (scenarios[count].answer2 == null) {
-		$("#ButtonTwo").hide();
+	if (scenarios[count].answer2 === null) {
+		$('#ButtonTwo').hide();
 	}
-	if (scenarios[count].answer3 == null) {
-		$("#ButtonThree").hide();
+	if (scenarios[count].answer3 === null) {
+		$('#ButtonThree').hide();
 	}
 }
 
 //Replies
 function reply1() {
-	$("#reply-text").html(scenarios[count].reply1);
-	$(".replydiv").show();
-	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonTwo, #ButtonThree").prop('disabled', true);
+	$('#reply-text').html(scenarios[count].reply1);
+	$('.replydiv').show();
+	$('#ButtonFour').prop('disabled', false);
+	$('#ButtonTwo, #ButtonThree').prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage1;
 }
 function reply2() {
-	$("#reply-text").html(scenarios[count].reply2);
-	$(".replydiv").show();
-	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonOne, #ButtonThree").prop('disabled', true);
+	$('#reply-text').html(scenarios[count].reply2);
+	$('.replydiv').show();
+	$('#ButtonFour').prop('disabled', false);
+	$('#ButtonOne, #ButtonThree').prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage2;
 }
 function reply3() {
-	$("#reply-text").html(scenarios[count].reply3);
-	$(".replydiv").show();
-	$("#ButtonFour").prop('disabled', false);
-	$("#ButtonOne, #ButtonTwo").prop('disabled', true);
+	$('#reply-text').html(scenarios[count].reply3);
+	$('.replydiv').show();
+	$('#ButtonFour').prop('disabled', false);
+	$('#ButtonOne, #ButtonTwo').prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage3;
 }
@@ -69,36 +69,36 @@ function next_scenario(mult) {
 			localStorage.setItem('MaxSurvived', count);
 		}
 		if(count == 18){
-			$("#EndCard").removeClass("hidden");
+			$('#EndCard').removeClass('hidden');
 		}
 		if(hp <= 0){
-			$("#DeadCard").removeClass("hidden");
+			$('#DeadCard').removeClass('hidden');
 		}
-		$(".flexmain").hide();
+		$('.flexmain').hide();
 		var matches = localStorage.getItem('SurvivalMatches');
 		localStorage.setItem('SurvivalMatches', ++matches);
-		if (localStorage.getItem('AverageCount') == null){
+		if (localStorage.getItem('AverageCount') === null){
 			localStorage.setItem('AverageCount', count);
 		}
 			else {
 				localStorage.setItem('AverageCount', (localStorage.getItem('AverageCount') * (localStorage.getItem('SurvivalMatches')-1) + count)/localStorage.getItem('SurvivalMatches'));
 				console.log(localStorage.getItem('AverageCount'));
 			}
-		$("#EndText").html("You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...");
-		if (localStorage.getItem("MaxSurvived") == null) {
-			$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: 0");
+		$('#EndText').html('You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...');
+		if (localStorage.getItem('MaxSurvived') === null) {
+			$('#DeadText').html('Scenarios survived: ' + count + '<br>Max scenarios survived: 0');
 		}
 			else {
-				$("#DeadText").html("Scenarios survived: " + count + "<br>Max scenarios survived: " + localStorage.getItem("MaxSurvived")  + "<br>Average scenarios survived: " + Math.round(localStorage.getItem('AverageCount')) + "<br>Matches played: " + localStorage.getItem('SurvivalMatches'));
+				$('#DeadText').html('Scenarios survived: ' + count + '<br>Max scenarios survived: ' + localStorage.getItem('MaxSurvived')  + '<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
 			}
 	}
 	if(hp <= 90 && hp == hpbfr) {
 		hp = hp + 10;
 	}
 	count++;
-	$("#progressslider").css('width', hp + '%');
-	$(".replydiv").hide();
-	$("#ButtonOne, #ButtonTwo, #ButtonThree").prop('disabled', false);
-	$("#ButtonFour").prop('disabled', true);
+	$('#progressslider').css('width', hp + '%');
+	$('.replydiv').hide();
+	$('#ButtonOne, #ButtonTwo, #ButtonThree').prop('disabled', false);
+	$('#ButtonFour').prop('disabled', true);
 	text();
 }

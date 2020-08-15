@@ -1,54 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 <head>
 	<title>Project Passage - Arcade</title>
-	<link rel="icon" type="image/png" href="../resources/Project_Passage.png"/>
-	<meta name="theme-color" content="#2a2329">
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="google" content="notranslate">
-	<meta name="description" content="Arcade mode of the text based adventure game Project Passage.">
-	<link rel="stylesheet" href="../css/ArcadeTheme.css" media="screen">
+	<link rel='icon' type='image/png' href='../resources/Project_Passage.png'/>
+	<meta name='theme-color' content='#2a2329'>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<meta name='google' content='notranslate'>
+	<meta name='description' content='Arcade mode of the text based adventure game Project Passage.'>
+	<link rel='stylesheet' href='../css/ArcadeTheme.css' media='screen'>
 </head>
 <body>
 	<header>
-		<div style="margin: 1em">
-			<h1 class="project">Project</h1>
-			<h1 class="passage">Passage</h1>
+		<div style='margin: 1em'>
+			<h1 class='project'>Project</h1>
+			<h1 class='passage'>Passage</h1>
 		</div>
 	</header>
-	<p class="score" id="score-text"></p>
-	<div class="flexmain">
-		<div class="textdiv">
-			<p class="scenario" id="scenario-text"></p>
+	<p class='score' id='score-text'></p>
+	<div class='flexmain'>
+		<div class='textdiv'>
+			<p class='scenario' id='scenario-text'></p>
 		</div>
-		<div class="replydiv">
-			<p class="reply" id="reply-text"></p>
+		<div class='replydiv'>
+			<p class='reply' id='reply-text'></p>
 		</div>
-		<div class="buttondiv">
-			<button id="ButtonOne" class="button" onClick="reply1()"></button>
-			<button id="ButtonTwo" class="button" onClick="reply2()"></button>
-			<button id="ButtonThree" class="button" onClick="reply3()"></button>
+		<div class='buttondiv'>
+			<button id='ButtonOne' class='button' onClick='reply1()'></button>
+			<button id='ButtonTwo' class='button' onClick='reply2()'></button>
+			<button id='ButtonThree' class='button' onClick='reply3()'></button>
 		</div>
 	</div>
-	<div class="card hidden" id="EndCard">
-		<div class="card-header">
+	<div class='card hidden' id='EndCard'>
+		<div class='card-header'>
 			<h3>Game Over</h3>
 		</div>
-		<div class="card-body">
-			<p id="EndScore"></p>
+		<div class='card-body'>
+			<p id='EndScore'></p>
 		</div>
 	</div>
 	<div class='xpmessage hidden'>
 		<p class='xptext'></p>
 	</div>
 	<nav>
-		<a href="../index.html" class="navigation"><img src="../resources/home.png" alt="Home" width="34"></a>
-		<button id="ButtonFour" class="button navigation" style="width: 30%;" onClick="next_scenario()">Continue</button> 
-		<a href="./Arcade.html" class="navigation"><img src="../resources/refresh.png" alt="Restart" width="30"></a>
+		<a href='../index.html' class='navigation'><img src='../resources/home.png' alt='Home' width='34'></a>
+		<button id='ButtonFour' class='button navigation' style='width: 30%;' onClick='next_scenario()'>Continue</button> 
+		<a href='./Arcade.html' class='navigation'><img src='../resources/refresh.png' alt='Restart' width='30'></a>
 	</nav>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
-	<script src="../js/ScriptsArcade.js" defer></script>
-	<script src="ArcadeScenarios.js" async></script>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
+	<script src='../js/ScriptsArcade.js' defer></script>
+	<script src='ArcadeScenarios.js' async></script>
 </body>
 </html>
