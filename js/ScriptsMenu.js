@@ -45,7 +45,6 @@ if (localStorage.getItem("M1-Endings") != null) {
 }
     else {
         $('#M1').html("Endings achieved: 0/5");
-        $('#M2-play').addClass("disabled");
     }
 
 if (localStorage.getItem("M2-Endings") != null) {
@@ -56,10 +55,10 @@ if (localStorage.getItem("M2-Endings") != null) {
 }
     else if (localStorage.getItem("M1-Endings") == null) {
         $('#M2').html("Finish previous missions to unlock");
+        $('#M2-play').addClass("disabled");
     }
         else {
             $('#M2').html("Endings achieved: 0/10");
-            $('#M3-play').addClass("disabled");
         }
 
 if (localStorage.getItem("M3-Endings") != null) {
@@ -70,6 +69,7 @@ if (localStorage.getItem("M3-Endings") != null) {
 }
     else if (localStorage.getItem("M2-Endings") == null) {
         $('#M3').html("Finish previous missions to unlock");
+        $('#M3-play').addClass("disabled");
     }   
         else {
             $('#M3').html("Endings achieved: 0/7");
@@ -84,6 +84,7 @@ if (localStorage.getItem("M4-Endings") != null) {
 }
     else if (localStorage.getItem("M3-Endings") == null) {
         $('#M4').html("Finish previous missions to unlock");
+        $('#M4-play').addClass("disabled");
     }
         else {
             $('#M4').html("Conspiracists found: 0/3");

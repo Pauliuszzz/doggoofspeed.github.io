@@ -18,6 +18,7 @@
 
 html {
     min-height: 100%;
+    box-sizing: border-box;
 }
 
 body {
@@ -26,6 +27,8 @@ body {
     text-align: center;
     color: #212529;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -71,7 +74,9 @@ h3 {
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: left;
-    margin: 0 0 0 .5em;
+    font-size: 1.5em;
+	margin: .5em;
+    font-weight: normal;
 }
 
 .project {
@@ -121,8 +126,8 @@ h3 {
     margin-top: 10px;
     width: 50%;
 	font-size: .8em;
-	min-height: 2.5em;
-	line-height: 2.8em;
+	min-height: 1.5em;
+	line-height: 2em;
 	padding: .25em 1em;
 	white-space: normal;
 	line-height: normal;
@@ -131,6 +136,10 @@ h3 {
     font-weight: 400;
     text-transform: none;
     -webkit-tap-highlight-color: transparent;
+}
+
+button:active {
+	transform:scale(.98)
 }
 
 *,*:focus,*:hover{
@@ -150,6 +159,8 @@ h3 {
     border-style: outset;
     color: grey;
     text-shadow: 1px 1px white;
+    opacity:.4;
+	cursor: not-allowed
 }
 
 .card {
@@ -193,9 +204,12 @@ h3 {
     position: absolute;
     bottom: 3em;
     width: 100%;
-    animation: comein 3s;
+    animation: comein 2s;
 }
 
+*, :after, :before {
+    box-sizing: inherit;
+}
 
 /* ANIMATIONS */
 
