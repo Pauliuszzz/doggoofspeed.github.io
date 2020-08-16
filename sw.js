@@ -1,5 +1,6 @@
 const staticCacheName = 'ProjectPassageCache';
 const assets = [
+    'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js',
     '/Arcade/Arcade.html',
     '/Arcade/ArcadeScenarios.js',
     '/css/ArcadeTheme.css',
