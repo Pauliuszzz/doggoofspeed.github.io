@@ -11,6 +11,7 @@
 }
 
 html {
+	min-height: 100%;
 	box-sizing: border-box;
 }
 
@@ -160,7 +161,7 @@ button:disabled {
 
 .acrylic {
 	border-radius: 15px;
-	border: 1px solid #8E0E00;
+	border: thin solid #8E0E00;
 	background: rgba(0, 0, 0, .3);
 }
 

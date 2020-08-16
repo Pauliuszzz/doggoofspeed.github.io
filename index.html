@@ -94,24 +94,36 @@
 		<h1 style='margin: .5em;'>Arcade Mode</h1>
 		<div class='flexarcadesurvival'>
 			<div class='card acrylic shadow'>
-				<a class='playbig' href='Arcade/Arcade.html'><svg class='icon'><use xlink:href='#playbig'/></svg></a>
+				<a href='Arcade/Arcade.html'><svg class='icon' style='width: 160px; height: 160px'><use xlink:href='#playbig'/></svg></a>
 			</div>
 			<div class='card acrylic shadow'>
 				<p id='ArcadeMode'></p>
-				<a onClick='clearArcade()' class='button shadow'>Reset Stats</a>
 			</div>
+		</div>
+		<div class='acrylic shadow reset'>
+			<a onClick='clearArcade()' class='button shadow'>Reset Stats</a>
 		</div>
 	</div>
 	<div class='modes hidden' id='survival'>
 		<h1 style='margin: .5em;'>Survival Mode</h1>
 		<div class='flexarcadesurvival'>
-			<div class='card acrylic shadow'>
-				<a class='playbig' href='Survival/Survival.html'><svg class='icon'><use xlink:href='#playbig'/></svg></a>
+			<div class='card acrylic shadow flexarcadesurvival surviv'>
+				<div>
+					<h3>Normal</h3>
+					<a class='playbig' href='Survival/Survival.html'><svg class='icon'><use xlink:href='#playbig'/></svg></a>
+				</div>
+				<div>
+					<h3>Hard</h3>
+					<a class='playbig' href='Survival/Hardcore.html'><svg class='icon'><use xlink:href='#playbig'/></svg></a>
+				</div>
 			</div>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic shadow surviv' style='padding-top: 0.25em; height: 11.75em'>
 				<p id='SurvivalMode'></p>
-				<a onClick='clearSurvival()' class='button shadow'>Reset Stats</a>
+				<p style='text-align: left;'>Easy:<svg class='icon trophy easy'><use xlink:href='#trophy'/></svg></p><p style='text-align: left;'>Hard:<svg class='icon trophy hard'><use xlink:href='#trophy'/></svg></p>
 			</div>
+		</div>
+		<div class='acrylic shadow reset'>
+			<a onClick='clearSurvival()' class='button shadow'>Reset Stats</a>
 		</div>
 	</div>
 	<nav class='shadow acrylic hidden'>

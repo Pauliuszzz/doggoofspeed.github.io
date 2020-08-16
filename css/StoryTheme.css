@@ -11,6 +11,7 @@
 }
 
 html {
+	min-height: 100%;
 	box-sizing: border-box;
 }
 
@@ -119,7 +120,7 @@ input {
 	font-size: 1em;
 	margin: 10px auto;
 	padding: 5px;
-	border: 1px solid rgb(111, 185, 143);
+	border: thin solid rgb(111, 185, 143);
 	animation: fadein .35s;
 	will-change: opacity, transform;
 }
@@ -135,7 +136,7 @@ input {
 
 .acrylic {
 	border-radius: 15px;
-	border: 1px solid #ddd;
+	border: thin solid #ddd;
 	background: rgba(0, 0, 0, .3);
 }
 

@@ -68,7 +68,7 @@ nav {
 	align-items: center;
 	justify-content: center;
 	width: 70%;
-	margin-bottom: 2em;
+	margin-bottom: .5em;
 }
 
 .card {
@@ -96,7 +96,7 @@ nav {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: center;
-	margin-bottom: 2em;
+	margin-bottom: 4em;
 }
 
 .modes > div {
@@ -157,7 +157,7 @@ nav {
 .button {
 	height: auto;
 	padding: .125em 1em;
-	border: 1px solid #ddd;
+	border: thin solid #ddd;
 	margin: 7px;
 	border-radius: 10px;
 	background: transparent;
@@ -170,8 +170,8 @@ nav {
 }
 
 .playbig > svg {
-	height: 160px;
-	width: 160px;
+	height: 5em;
+	width: 5em;
 }
 
 .shadow {
@@ -180,7 +180,7 @@ nav {
 
 .acrylic {
 	border-radius: 15px;
-	border: 1px solid #ddd;
+	border: thin solid #ddd;
 	background-color: rgba(0, 0, 0, .3);
 }
 
@@ -190,6 +190,10 @@ nav {
 	margin: 10px;
 	height: 24px;
 	width: 24px;
+}
+
+.reset {
+	width: 70%;
 }
 
 /* ANIMATIONS */
@@ -266,6 +270,21 @@ nav {
 
 	.trophy {
 		margin-top: -1.5em;
+	}
+
+	.surviv {
+		height: 12em;
+		padding-top: 0;
+	}
+
+	.easy, .hard {
+		width: 32px;
+		height: 32px;
+		margin: 2px;
+	}
+
+	.reset {
+		width: 52%;
 	}
 
 	@keyframes slidein {

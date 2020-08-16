@@ -25,13 +25,13 @@ function text() {
 	$('#ButtonTwo').html(scenarios[count].answer2);
 	$('#ButtonThree').html(scenarios[count].answer3);
 	$('#score-text').html('Score: ' + score);
-	if (scenarios[count].answer1 === null) {
+	if (scenarios[count].answer1 == null) {
 		$('#ButtonOne').hide();
 	}
-	if (scenarios[count].answer2 === null) {
+	if (scenarios[count].answer2 == null) {
 		$('#ButtonTwo').hide();
 	}
-	if (scenarios[count].answer3 === null) {
+	if (scenarios[count].answer3 == null) {
 		$('#ButtonThree').hide();
 	}
 }
@@ -43,7 +43,7 @@ function reply1() {
 	$('#ButtonFour').prop('disabled', false);
 	$('#ButtonTwo, #ButtonThree').prop('disabled', true);
 	score = score + scenarios[count].score1;
-	if ($('.xpmessage').hasClass('hidden') === true) {
+	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score1 + 'Xp');
 	}
 }
@@ -53,7 +53,7 @@ function reply2() {
 	$('#ButtonFour').prop('disabled', false);
 	$('#ButtonOne, #ButtonThree').prop('disabled', true);
 	score = score + scenarios[count].score2;
-	if ($('.xpmessage').hasClass('hidden') === true) {
+	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score2 + 'Xp');
 	}
 }
@@ -63,7 +63,7 @@ function reply3() {
 	$('#ButtonFour').prop('disabled', false);
 	$('#ButtonOne, #ButtonTwo').prop('disabled', true);
 	score = score + scenarios[count].score3;
-	if ($('.xpmessage').hasClass('hidden') === true) {
+	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score3 + 'Xp');
 	}
 }
@@ -78,7 +78,7 @@ function next_scenario() {
 		$('#EndCard').removeClass('hidden');
 		var matches = localStorage.getItem('ArcadeMatches');
 		localStorage.setItem('ArcadeMatches', ++matches);
-		if (localStorage.getItem('AverageHighscore') === null){
+		if (localStorage.getItem('AverageHighscore') == null){
 			localStorage.setItem('AverageHighscore', score);
 		}
 			else {

@@ -28,6 +28,7 @@ const assets = [
     '/Story/Scenarios/M2Scenarios.js',
     '/Story/Scenarios/M3Scenarios.js',
     '/Story/Scenarios/M4Scenarios.js',
+    '/Survival/Hardcore.html',
     '/Survival/Survival.html',
     '/Survival/SurvivalScenarios.js',
     '/index.html',
