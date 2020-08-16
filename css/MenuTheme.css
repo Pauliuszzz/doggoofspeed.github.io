@@ -187,13 +187,22 @@ nav {
 .trophy {
 	right: 0;
 	position: absolute;
-	margin: 10px;
+	margin-right: 5px;
 	height: 24px;
 	width: 24px;
 }
 
 .reset {
 	width: 70%;
+}
+
+.surviv {
+	height: auto !important;
+	padding-top: 0;
+}
+
+.surviv > p {
+	font-size: 16px; 
 }
 
 /* ANIMATIONS */
@@ -275,6 +284,10 @@ nav {
 	.surviv {
 		height: 12em;
 		padding-top: 0;
+	}
+
+	.surviv > p {
+		font-size: 20px; 
 	}
 
 	.easy, .hard {
