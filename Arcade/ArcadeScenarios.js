@@ -245,5 +245,31 @@ scenarios = [
 		"reply3": "He gives you money in excange for you soul. Such a wonderful deal!",
 		"answer3": "Ask for money",
 		"score3": 250,
+	},
+	{
+		//Totem
+		"scenario": "You find a totem by the road. It's most definitely old and carved out of rock. For some reason it looks quite eerie and it gives off an unsettling vibe.",
+		"reply1": "You kicked it and a native seer appeared and he was in awe of your great deed. He quickly brought the entire tribe to your knees. Apparently you kicked the devil himself. When you found out that's the case, the smile disappeared from your face.",
+		"answer1": "Kick it",
+		"score1": 250,
+		"reply2": "Oh, if only you knew what the totem represented... It was none other than the devil himself. Still, *he* was most probably pleased with your action and maybe he reserved a V.I.P spot in hell for you...",
+		"answer2": "Pray",
+		"score2": 750,
+		"reply3": "It felt like... Hugging a rock. It was hard and cold. But did you really have to do it? What did you expect? For the totem to hug back?",
+		"answer3": "Hug it",
+		"score3": 1000,
+	},
+	{
+		//Cave
+		"scenario": "The sky was going dark and you were looking for a place to rest when your eyes found a cave. You entered it and there was no end.",
+		"reply1": "You walked through the maze for half an hour when you saw a light. You found the magical entrance to the fairy world. Too bad everything was made out of glitter. Welp back into the cave we go…",
+		"answer1": "Go deeper",
+		"score1": 500,
+		"reply2": "You slept there. And you slept there, and you slept there. Everything went well until you remembered that the floor of the cave was harder than diamonds. Your back now hurts as much as your head.",
+		"answer2": "Just sleep near the entrance",
+		"score2": 750,
+		"reply3": "You slept in the open and absolutely fucking nothing happened.",
+		"answer3": "Sleep in the open",
+		"score3": 500,
 	}
 ];

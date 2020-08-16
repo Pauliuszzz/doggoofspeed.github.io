@@ -73,11 +73,11 @@ function reply3() {
 	
 //Next scenario
 function next_scenario(mult) {
-	if(hp <= 0 || count == 18){
+	if(hp <= 0 || count == 20){
 		if(localStorage.getItem('MaxSurvived') < count){
 			localStorage.setItem('MaxSurvived', count);
 		}
-		if(count == 18){
+		if(count == 20){
 			$('#EndCard').removeClass('hidden');
 		}
 		if(hp <= 0){
