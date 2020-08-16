@@ -87,7 +87,7 @@ function next_scenario() {
 			$('#EndScore').html('Your score: ' + score + '<br>Highscore: ' + localStorage.getItem('Highscore') + '<br>Average Score: ' + Math.round(localStorage.getItem('AverageHighscore')) + '<br>Matches played: ' + localStorage.getItem('ArcadeMatches'));
 	}
 	$('.xpmessage').removeClass('hidden');
-	setTimeout(function(){ $('.xpmessage').addClass('hidden');}, 2000);
+	setTimeout(function(){ $('.xpmessage').addClass('hidden');}, 1000);
 	$('.replydiv').hide();
 	$('#ButtonOne, #ButtonTwo, #ButtonThree').prop('disabled', false);
 	$('#ButtonFour').prop('disabled', true);

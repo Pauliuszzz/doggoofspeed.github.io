@@ -157,6 +157,7 @@ input {
 	left: 0;
 	background: linear-gradient(to bottom right, #f3904f, #3b4371);
 	animation: wrong 3s;
+	will-change: opacity;
 }
 
 *, :after, :before {

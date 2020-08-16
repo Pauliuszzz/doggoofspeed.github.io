@@ -200,7 +200,8 @@ button:active {
     position: absolute;
     bottom: 3em;
     width: 100%;
-    animation: comein 2s;
+    animation: comein 1s;
+    will-change: opacity, color;
 }
 
 *, :after, :before {
