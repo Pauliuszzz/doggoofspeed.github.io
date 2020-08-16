@@ -26,7 +26,6 @@ body {
     background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
     text-align: center;
     color: #212529;
-    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -49,10 +48,9 @@ nav {
     bottom: 0;
     width: 100%;
     display: flex;
-	flex-direction: row;
-	justify-content: center;
+    flex-direction: row;
+    justify-content: center;
     position: fixed;
-    order: 1;
 }
 
 #EndCard {
@@ -187,8 +185,6 @@ button:active {
 	justify-content: center;
 	width: 100%;
 	margin-bottom: 4em;
-    animation: fadein .35s;
-    will-change: opacity, transform;
 }
 
 .flexmain > div {

@@ -43,6 +43,7 @@ h3 {
 nav {
 	border-radius: 15px 15px 0px 0px !important;
 	border-style: solid none none none !important;
+	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: 0;
 	background-color: #410600;
@@ -163,6 +164,18 @@ button:disabled {
 	background: rgba(0, 0, 0, .3);
 }
 
+.hpmessage {
+    position: absolute;
+    bottom: 3em;
+    width: 100%;
+}
+
+.hpmessage > .hptext {
+	margin: 0.5em auto;
+	width: 30%;
+	animation: comein 2s;
+}
+
 *, :after, :before {
 	box-sizing: inherit;
 }
@@ -174,6 +187,26 @@ button:disabled {
         transform: scale(1.25);
 		opacity: 0;
 	}
+}
+
+@keyframes comein {
+	0% {
+        opacity: 0;
+    }
+    10%, 30%, 50% {
+		transform: rotate(10deg) translateX(10px);
+        opacity: 1;
+	}
+	20%, 40%, 60% {
+		transform: rotate(-10deg) translateX(-10px);
+	}
+	65%, 90% {
+		transform: rotate(0deg) translateX(10px);
+		opacity: 1;
+	}
+    100% {
+        opacity: 0;
+    }
 }
 
 @media (min-width: 80em) {

@@ -97,6 +97,9 @@ nav {
 	flex-flow: column wrap;
 	align-items: center;
 	margin-bottom: 4em;
+}
+
+.modes > div > div {
 	animation: fadein .35s;
 	will-change: opacity, transform;
 }

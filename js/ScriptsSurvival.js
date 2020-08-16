@@ -44,6 +44,9 @@ function reply1() {
 	$('#ButtonTwo, #ButtonThree').prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage1;
+	if ($('.hpmessage').hasClass('hidden') === true) {
+		$('.hptext').html('-' + scenarios[count].damage1 + 'Hp');
+	}
 }
 function reply2() {
 	$('#reply-text').html(scenarios[count].reply2);
@@ -52,6 +55,9 @@ function reply2() {
 	$('#ButtonOne, #ButtonThree').prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage2;
+	if ($('.hpmessage').hasClass('hidden') === true) {
+		$('.hptext').html('-' + scenarios[count].damage2 + 'Hp');
+	}
 }
 function reply3() {
 	$('#reply-text').html(scenarios[count].reply3);
@@ -60,6 +66,9 @@ function reply3() {
 	$('#ButtonOne, #ButtonTwo').prop('disabled', true);
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage3;
+	if ($('.hpmessage').hasClass('hidden') === true) {
+		$('.hptext').html('-' + scenarios[count].damage3 + 'Hp');
+	}
 }
 	
 //Next scenario
@@ -94,7 +103,10 @@ function next_scenario(mult) {
 	}
 	if(hp <= 90 && hp == hpbfr) {
 		hp = hp + 10;
+		$('.hptext').html('+10Hp');
 	}
+	$('.hpmessage').removeClass('hidden');
+	setTimeout(function(){ $('.hpmessage').addClass('hidden');}, 2000);
 	count++;
 	$('#progressslider').css('width', hp + '%');
 	$('.replydiv').hide();
