@@ -46,6 +46,9 @@ function reply1() {
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score1 + 'Xp');
 	}
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx1').play();
+	}
 }
 function reply2() {
 	$('#reply-text').html(scenarios[count].reply2);
@@ -56,6 +59,9 @@ function reply2() {
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score2 + 'Xp');
 	}
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx2').play();
+	}
 }
 function reply3() {
 	$('#reply-text').html(scenarios[count].reply3);
@@ -65,6 +71,9 @@ function reply3() {
 	score = score + scenarios[count].score3;
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score3 + 'Xp');
+	}
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx3').play();
 	}
 }
 	
@@ -93,4 +102,7 @@ function next_scenario() {
 	$('#ButtonFour').prop('disabled', true);
 	count++;
 	text();
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx4').play();
+	}
 }

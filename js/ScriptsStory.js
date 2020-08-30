@@ -39,6 +39,9 @@ function text() {
 			if (scenarios[count].skipto1 != null){
 				count = scenarios[count].skipto1;
 			}
+				if (localStorage.getItem('sound') == 'true') {
+					document.getElementById('btnsfx1').play();
+				}
 	}
 	function reply2() {
 		if(scenarios[count].reply2 != null){
@@ -50,6 +53,9 @@ function text() {
 			if (scenarios[count].skipto2 != null){
 				count = scenarios[count].skipto2;
 			}
+				if (localStorage.getItem('sound') == 'true') {
+					document.getElementById('btnsfx2').play();
+				}
 	}
 	function reply3() {
 		if(scenarios[count].reply3 != null){
@@ -61,6 +67,9 @@ function text() {
 			if (scenarios[count].skipto3 != null){
 				count = scenarios[count].skipto3;
 			}
+				if (localStorage.getItem('sound') == 'true') {
+					document.getElementById('btnsfx3').play();
+				}
 	}
 
 //Next scenario
@@ -77,4 +86,7 @@ function text() {
 		$('.buttondiv').show();
 		quit = scenarios[count].quit;
 		text();
+			if (localStorage.getItem('sound') == 'true') {
+				document.getElementById('btnsfx4').play();
+			}
 	}

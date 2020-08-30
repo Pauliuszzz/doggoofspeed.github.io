@@ -47,6 +47,9 @@ function reply1() {
 	if ($('.hpmessage').hasClass('hidden') == true) {
 		$('.hptext').html('-' + scenarios[count].damage1 + 'Hp');
 	}
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx1').play();
+	}
 }
 function reply2() {
 	$('#reply-text').html(scenarios[count].reply2);
@@ -58,6 +61,9 @@ function reply2() {
 	if ($('.hpmessage').hasClass('hidden') == true) {
 		$('.hptext').html('-' + scenarios[count].damage2 + 'Hp');
 	}
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx2').play();
+	}
 }
 function reply3() {
 	$('#reply-text').html(scenarios[count].reply3);
@@ -68,6 +74,9 @@ function reply3() {
 	hp = hp - scenarios[count].damage3;
 	if ($('.hpmessage').hasClass('hidden') == true) {
 		$('.hptext').html('-' + scenarios[count].damage3 + 'Hp');
+	}
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx3').play();
 	}
 }
 	
@@ -94,7 +103,6 @@ function next_scenario(mult) {
 		}
 			else {
 				localStorage.setItem('AverageCount', (localStorage.getItem('AverageCount') * (localStorage.getItem('SurvivalMatches')-1) + count)/localStorage.getItem('SurvivalMatches'));
-				console.log(localStorage.getItem('AverageCount'));
 			}
 		$('#EndText').html('You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...');
 		if (localStorage.getItem('MaxSurvived') == null ) {
@@ -116,4 +124,7 @@ function next_scenario(mult) {
 	$('#ButtonOne, #ButtonTwo, #ButtonThree').prop('disabled', false);
 	$('#ButtonFour').prop('disabled', true);
 	text();
+	if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx4').play();
+	}
 }

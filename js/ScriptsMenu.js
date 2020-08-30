@@ -1,15 +1,20 @@
 var clicks = 0;
 
-//Debugging easter egg
-function clearStorage(){
-	if(clicks < 5){
-		clicks++;
-	}
-	if(clicks == 5){
-		alert('You have found an easter egg. Your save data has been deleted.');
-		localStorage.clear();
-		location.reload();
-	}
+window.onload = function onload() {
+    if (localStorage.getItem('sound') == undefined) {
+        $('.soundbg').removeClass('hidden');
+    }
+};
+
+//Sound controller
+function soundYes() {
+    localStorage.setItem('sound', true);
+    location.reload();
+}
+
+function soundNo() {
+    localStorage.setItem('sound', false);
+    location.reload();
 }
 
 //Switcher machanism
@@ -19,6 +24,9 @@ function StorySwitch(){
     $('#story, nav').removeClass('hidden');
     $('body').removeClass('arcade survival');
     $('body').css('background-color', '#5E7668');
+    if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx1').play();
+	}
 }
 
 function ArcadeSwitch(){
@@ -27,13 +35,20 @@ function ArcadeSwitch(){
     $('#arcade, nav').removeClass('hidden');
     $('body').removeClass('story survival');
     $('body').css('background-color', '#8E3E6C');
+    if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx2').play();
+	}
 }
+
 function SurvivalSwitch(){
 	$('#home, #story, #arcade').addClass('hidden');
     $('body').addClass('survival');
     $('#survival, nav').removeClass('hidden');
     $('body').removeClass('story arcade');
     $('body').css('background-color', '#8E3939');
+    if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx3').play();
+	}
 }
 
 //Story mode ending counter
@@ -139,4 +154,9 @@ function clearSurvival() {
         localStorage.removeItem(key);
     }
     location.reload();
+}
+
+//Opens Settings Menu
+function settings() {
+    $('.soundbg').removeClass('hidden');
 }

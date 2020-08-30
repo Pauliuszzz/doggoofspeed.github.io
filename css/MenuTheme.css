@@ -312,7 +312,12 @@ nav {
 		font-size: 28px; 
 	}
 
-	div.card {
+	.card {
 		padding-top: 3em;
+	}
+	
+	.surviv {
+		height: 15em !important;
+		padding-top: 0;
 	}
 }
