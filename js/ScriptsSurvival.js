@@ -94,9 +94,15 @@ function next_scenario(mult) {
 		}
 		if(count == 20){
 			$('#EndCard').removeClass('hidden');
+			if (localStorage.getItem('sound') == 'true') {
+				document.getElementById('endCard').play();
+			}
 		}
 		if(hp <= 0){
 			$('#DeadCard').removeClass('hidden');
+			if (localStorage.getItem('sound') == 'true') {
+				document.getElementById('deadCard').play();
+			}
 		}
 		$('.flexmain').hide();
 		var matches = localStorage.getItem('SurvivalMatches');

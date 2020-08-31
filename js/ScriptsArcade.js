@@ -80,6 +80,9 @@ function reply3() {
 //Next scenario
 function next_scenario() {
 	if(count >= 10){
+		if (localStorage.getItem('sound') == 'true') {
+			document.getElementById('endCard').play();
+		}
 		if(localStorage.getItem('Highscore') < score){
 			localStorage.setItem('Highscore', score);
 		}

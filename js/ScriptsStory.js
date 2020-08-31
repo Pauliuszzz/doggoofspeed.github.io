@@ -81,6 +81,9 @@ function text() {
 		if(quit == true){
 			endingcounter();
 			$('.flexmain').hide();
+			if (localStorage.getItem('sound') == 'true') {
+				document.getElementById('endCard').play();
+			}
 		}
 		if (scenarios.length > count + 1) {
 			count++;
