@@ -232,7 +232,8 @@ nav {
 	left: 0;
 	backdrop-filter: blur(4px);
 	padding-top: 5em;
-	animation: fadein 1s;
+	animation: fadein 0.35s;
+	overflow-y: scroll;
 }
 
 /* ANIMATIONS */

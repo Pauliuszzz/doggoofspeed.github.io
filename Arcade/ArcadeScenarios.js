@@ -44,7 +44,7 @@ scenarios = [
 		"reply1": "While you were thinking of a wish the star fell down...<br>...on your head, it started bleeding.",
 		"answer1": "Stop and think of a wish",
 		"score1": 0,
-		"reply2": "You were lucky, since 5 minutes after running you heard something very loud behind you. Oh? What's that? Is that not the sound of a meteorite? Well, you turned around and saw a huge bear, so now I can assure you that that, in fact, was not a flying rock. You played dead, although you almost didn't have to.",
+		"reply2": "You were lucky, since 5 minutes after running you heard something very loud behind you. Oh? What's that? Is that not the sound of a meteorite? Well, you turned around and saw a huge bear, so now I can assure you that, in fact, was not a flying rock. You played dead, although you almost didn't have to.",
 		"answer2": "Run for your life in case it is a meteorite",
 		"score2": 0,
 		"reply3": "Since you wanted to continue walking, that was exactly what you did. Hey, who said dreams couldn't be true!",

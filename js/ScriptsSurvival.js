@@ -7,6 +7,9 @@ window.onload = function onload() {
 	$('.replydiv').hide();
 	shuffle(scenarios);
 	text();
+	if (localStorage.getItem('blur') != 'true') {
+        $('nav').css({'backdrop-filter': 'none'});
+    }
 };
 
 //Array Shuffle

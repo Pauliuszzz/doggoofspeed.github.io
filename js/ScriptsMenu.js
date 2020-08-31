@@ -4,6 +4,13 @@ window.onload = function onload() {
     if (localStorage.getItem('sound') == undefined) {
         $('.soundbg').removeClass('hidden');
     }
+    if (localStorage.getItem('blur') == undefined) {
+        localStorage.setItem('blur', true);
+    }
+    if (localStorage.getItem('blur') != 'true') {
+        $('.settingbg').css({'backdrop-filter': 'none', 'background-color': '#2c2c2c'});
+        $('nav').css({'backdrop-filter': 'none'});
+    }
 };
 
 //Sound controller
@@ -14,6 +21,16 @@ function soundYes() {
 
 function soundNo() {
     localStorage.setItem('sound', false);
+    location.reload();
+}
+
+function blurYes() {
+    localStorage.setItem('blur', true);
+    location.reload();
+}
+
+function blurNo() {
+    localStorage.setItem('blur', false);
     location.reload();
 }
 
@@ -159,4 +176,5 @@ function clearSurvival() {
 //Opens Settings Menu
 function settings() {
     $('.settingbg').removeClass('hidden');
+    $('.modes').addClass('hidden');
 }

@@ -47,7 +47,7 @@ function reply1() {
 		$('.xptext').html('+' + scenarios[count].score1 + 'Xp');
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx1').play();
+		document.getElementById('btnsfx').play();
 	}
 }
 function reply2() {
@@ -60,7 +60,7 @@ function reply2() {
 		$('.xptext').html('+' + scenarios[count].score2 + 'Xp');
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx2').play();
+		document.getElementById('btnsfx').play();
 	}
 }
 function reply3() {
@@ -73,7 +73,7 @@ function reply3() {
 		$('.xptext').html('+' + scenarios[count].score3 + 'Xp');
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx3').play();
+		document.getElementById('btnsfx').play();
 	}
 }
 	
@@ -103,6 +103,6 @@ function next_scenario() {
 	count++;
 	text();
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx4').play();
+		document.getElementById('btnsfx').play();
 	}
 }
