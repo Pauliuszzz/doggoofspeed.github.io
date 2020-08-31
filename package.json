@@ -1,0 +1,62 @@
+{
+  "name": "io.projectpassage.doggoofspeed",
+  "version": "1.0.0",
+  "config": {
+    "forge": {
+      "packagerConfig": {},
+      "makers": [
+        {
+          "name": "@electron-forge/maker-zip",
+          "config": {
+            "name": "io.projectpassage.doggoofspeed"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
+  },
+  "description": "A text based adventure game",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "make": "electron-forge make",
+    "package": "electron-forge package"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoggoOfSpeed/doggoofspeed.github.io.git"
+  },
+  "author": "DoggoOfSpeed (Vytautas Butėnas)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoggoOfSpeed/doggoofspeed.github.io/issues"
+  },
+  "homepage": "https://github.com/DoggoOfSpeed/doggoofspeed.github.io#readme",
+  "devDependencies": {
+    "@electron-forge/cli": "^6.0.0-beta.53",
+    "@electron-forge/maker-deb": "^6.0.0-beta.53",
+    "@electron-forge/maker-rpm": "^6.0.0-beta.53",
+    "@electron-forge/maker-squirrel": "^6.0.0-beta.53",
+    "@electron-forge/maker-zip": "^6.0.0-beta.53",
+    "electron": "^10.1.0"
+  },
+  "dependencies": {
+    "@electron-forge/plugin-webpack": "^6.0.0-beta.53",
+    "create-electron-app": "^1.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "jquery": "^3.5.1"
+  }
+}
