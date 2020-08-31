@@ -158,5 +158,5 @@ function clearSurvival() {
 
 //Opens Settings Menu
 function settings() {
-    $('.soundbg').removeClass('hidden');
+    $('.settingbg').removeClass('hidden');
 }

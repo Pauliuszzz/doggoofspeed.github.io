@@ -10,6 +10,7 @@
 	<meta name='google' content='notranslate'>
 	<meta name='description' content='Project Passage is a small text based adventure game made entirely in Html, Css and Javascript.'>
 	<link rel='stylesheet' href='css/MenuTheme.css'>
+	<link rel='manifest' href='manifest.json'>
 	<audio id="btnsfx1" src="resources/btnsfx1.ogg" preload="auto"></audio>
 	<audio id="btnsfx2" src="resources/btnsfx2.ogg" preload="auto"></audio>
 	<audio id="btnsfx3" src="resources/btnsfx3.ogg" preload="auto"></audio>
@@ -48,7 +49,7 @@
 			<h1 class='passage'>Passage</h1>
 		</div>
 	</header>
-	<a style='position: absolute; right: 0; top: 0; margin: 5px' onClick='settings()'><svg class='icon'><use xlink:href='#settings'/></svg></a>
+	<a class='settingsbtn' onClick='settings()'><svg class='icon'><use xlink:href='#settings'/></svg></a>
 	<div class='modes' id='home' style='margin: 0'>
 		<div class='flexhome'>
 			<div class='shadow acrylic greeter'>
@@ -136,8 +137,8 @@
 			<a onClick='clearSurvival()' class='button shadow'>Reset Stats</a>
 		</div>
 	</div>
-	<div class='soundbg hidden' style="position: fixed; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); top: 0; left: 0; backdrop-filter: blur(4px); padding-top: 5em">
-		<div class='soundyn acrylic' style='padding: 10px; width: 200px; margin: auto'>
+	<div class='settingbg hidden'>
+		<div class='soundyn acrylic' style='padding: 10px; width: 250px; margin: auto'>
 			<svg class='icon' style='width: 150px; height: 150px; margin: auto'><use xlink:href='#sound'/></svg><br>
 			<a class='button shadow' onClick='soundYes()'>Yes</a>
 			<a class='button shadow' onClick='soundNo()'>No</a>
