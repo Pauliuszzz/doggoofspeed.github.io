@@ -236,6 +236,13 @@ nav {
 	overflow-y: scroll;
 }
 
+.settingpanel {
+	padding: 10px;
+	width: 250px;
+	margin: auto;
+	margin-top: 1em;
+}
+
 /* ANIMATIONS */
 
 @keyframes fadein {
@@ -346,5 +353,9 @@ nav {
 	.surviv {
 		height: 15em !important;
 		padding-top: 0;
+	}
+
+	.settingpanel > p {
+		font-size: 26px; 
 	}
 }
