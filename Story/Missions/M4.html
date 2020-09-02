@@ -53,6 +53,36 @@
 		<a href='../../index.html' class='shadow icon-only'><img src='../../resources/home.svg' alt='Home'></a>
 		<a href='./M4.html' class='shadow icon-only'><img src='../../resources/refresh.svg' alt='Refresh'></a>
 	</div>
+	<div class='hidden acrylic shadow' id='TheoCard'>
+		<h3>The Conspirator is:</h3>
+		<input list="names" id='Theoname' class='acrylic' name='fname'>
+		<input list="surnames" id='Theosurname' class='acrylic' name='fname'>
+		<button onclick='validateTheo()' class='button acrylic'>Submit</button>
+		<a class='homebtn' href='../../index.html'><img src='../../resources/home.svg' alt='Home'></a>
+		<a class='hintbtn' onClick='theoHint()'><img src='../../resources/help.svg' alt='Hint'></a>
+	</div>
+	<div class='hidden acrylic shadow' id='StarragCard'>
+		<h3>The Conspirator is:</h3>
+		<input list="names" id='Starragname' class='acrylic' name='fname'>
+		<input list="surnames" id='Starragsurname' class='acrylic' name='fname'>
+		<button onclick='validateStarrag()' class='button acrylic'>Submit</button>
+		<a class='homebtn' href='../../index.html'><img src='../../resources/home.svg' alt='Home'></a>
+		<a class='hintbtn' onClick='starragHint()'><img src='../../resources/help.svg' alt='Hint'></a>
+	</div>
+	<div class='hidden acrylic shadow' id='DuddingCard'>
+		<h3>The Conspirator is:</h3>
+		<input list="names" id='Duddingname' class='acrylic' name='fname'>
+		<input list="surnames" id='Duddingsurname' class='acrylic' name='fname'>
+		<button onclick='validateDudding()' class='button acrylic'>Submit</button>
+		<a class='homebtn' href='../../index.html'><img src='../../resources/home.svg' alt='Home'></a>
+		<a class='hintbtn' onClick='duggingHint()'><img src='../../resources/help.svg' alt='Hint'></a>
+	</div>
+	<div class='hidden acrylic shadow hintbox'>
+		<p class='hinttext'></p>
+	</div>
+	<div class='wrong hidden'>
+		<h1>Wrong<br>Answer</h1>
+	</div>
 	<datalist id="names">
 		<option value="Henry">
 		<option value="Jonathan">
@@ -71,33 +101,6 @@
 		<option value="Hilton">
 		<option value="Starrag">
 	</datalist>
-	<div class='hidden acrylic shadow' id='TheoCard'>
-		<h3>The Conspirator is:</h3>
-		<input list="names" id='Theoname' class='acrylic' name='fname'>
-		<input list="surnames" id='Theosurname' class='acrylic' name='fname'>
-		<button onclick='validateTheo()' class='button acrylic'>Submit</button>
-		<a class='hintbtn' onClick='theoHint()'><img src='../../resources/help.svg' alt='Hint'></a>
-	</div>
-	<div class='hidden acrylic shadow' id='StarragCard'>
-		<h3>The Conspirator is:</h3>
-		<input list="names" id='Starragname' class='acrylic' name='fname'>
-		<input list="surnames" id='Starragsurname' class='acrylic' name='fname'>
-		<button onclick='validateStarrag()' class='button acrylic'>Submit</button>
-		<a class='hintbtn' onClick='starragHint()'><img src='../../resources/help.svg' alt='Hint'></a>
-	</div>
-	<div class='hidden acrylic shadow' id='DuddingCard'>
-		<h3>The Conspirator is:</h3>
-		<input list="names" id='Duddingname' class='acrylic' name='fname'>
-		<input list="surnames" id='Duddingsurname' class='acrylic' name='fname'>
-		<button onclick='validateDudding()' class='button acrylic'>Submit</button>
-		<a class='hintbtn' onClick='duggingHint()'><img src='../../resources/help.svg' alt='Hint'></a>
-	</div>
-	<div class='hidden acrylic shadow hintbox'>
-		<p class='hinttext'></p>
-	</div>
-	<div class='wrong hidden'>
-		<h1>Wrong<br>Answer</h1>
-	</div>
 	<nav class='shadow acrylic'>
 		<button id='ButtonFour' class='button acrylic shadow' style='margin: .5em'  onClick='next_scenario()'>Continue</button>
 	</nav>

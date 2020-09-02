@@ -162,13 +162,17 @@ input {
 	will-change: opacity;
 }
 
-.hintbtn {
+.hintbtn, .homebtn {
 	position: absolute;
 	right: 0;
 	bottom: 0;
 	margin: 10px;
 	height: 24px;
 	width: 24px;
+}
+
+.homebtn {
+	left: 0;
 }
 
 *, :after, :before {
@@ -218,6 +222,14 @@ input {
 
 	.flexmain > div > .button {
 		width: 100%;
+	}
+
+	img {
+        transform: scale(1.5);
+	}
+	
+	.hintbtn, .homebtn {
+		margin: 18px;
 	}
 }
 
