@@ -12,14 +12,16 @@ function text() {
 	$('#ButtonOne').html(scenarios[count].answer1);
 	$('#ButtonTwo').html(scenarios[count].answer2);
 	$('#ButtonThree').html(scenarios[count].answer3);
-	if (scenarios[count].answer1 == null) {
-		$('#ButtonOne').hide();
-	}
-	if (scenarios[count].answer2 == null) {
-		$('#ButtonTwo').hide();
-	}
-	if (scenarios[count].answer3 == null) {
-		$('#ButtonThree').hide();
+	switch (undefined) {
+		case scenarios[count].answer1:
+			$('#ButtonOne').hide();
+			break;
+		case scenarios[count].answer2:
+			$('#ButtonTwo').hide();
+			break;
+		case scenarios[count].answer3:
+			$('#ButtonThree').hide();
+			break;
 	}
 	if(scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
 		$('#ButtonFour').prop('disabled', false);

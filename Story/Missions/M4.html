@@ -21,11 +21,11 @@
 			margin-top: 33vh;
 		}
 	</style>
-	<audio id="btnsfx1" src="../../resources/btnsfx1.ogg" preload="auto"></audio>
-	<audio id="btnsfx2" src="../../resources/btnsfx2.ogg" preload="auto"></audio>
-	<audio id="btnsfx3" src="../../resources/btnsfx3.ogg" preload="auto"></audio>
-	<audio id="btnsfx4" src="../../resources/btnsfx4.ogg" preload="auto"></audio>
-	<audio id="endCard" src="../../resources/endCard.ogg" preload="auto"></audio>
+	<audio id="btnsfx1" src="../../resources/btnsfx1.ogg" preload="none"></audio>
+	<audio id="btnsfx2" src="../../resources/btnsfx2.ogg" preload="none"></audio>
+	<audio id="btnsfx3" src="../../resources/btnsfx3.ogg" preload="none"></audio>
+	<audio id="btnsfx4" src="../../resources/btnsfx4.ogg" preload="none"></audio>
+	<audio id="endCard" src="../../resources/endCard.ogg" preload="none"></audio>
 </head>
 <body id='body'>
 	<header>
@@ -53,20 +53,47 @@
 		<a href='../../index.html' class='shadow icon-only'><img src='../../resources/home.svg' alt='Home'></a>
 		<a href='./M4.html' class='shadow icon-only'><img src='../../resources/refresh.svg' alt='Refresh'></a>
 	</div>
+	<datalist id="names">
+		<option value="Henry">
+		<option value="Jonathan">
+		<option value="Rogan">
+		<option value="Brother">
+		<option value="Edgar">
+		<option value="Finn">
+		<option value="Nilus">
+	</datalist>
+	<datalist id="surnames">
+		<option value="Theo">
+		<option value="Stone">
+		<option value="Dudding">
+		<option value="Hopkins">
+		<option value="Wiggins">
+		<option value="Hilton">
+		<option value="Starrag">
+	</datalist>
 	<div class='hidden acrylic shadow' id='TheoCard'>
 		<h3>The Conspirator is:</h3>
-		<input type='text' id='Theoname' class='acrylic' name='fname'>
+		<input list="names" id='Theoname' class='acrylic' name='fname'>
+		<input list="surnames" id='Theosurname' class='acrylic' name='fname'>
 		<button onclick='validateTheo()' class='button acrylic'>Submit</button>
+		<a class='hintbtn' onClick='theoHint()'><img src='../../resources/help.svg' alt='Hint'></a>
 	</div>
 	<div class='hidden acrylic shadow' id='StarragCard'>
 		<h3>The Conspirator is:</h3>
-		<input type='text' id='Starragname' class='acrylic' name='fname'>
+		<input list="names" id='Starragname' class='acrylic' name='fname'>
+		<input list="surnames" id='Starragsurname' class='acrylic' name='fname'>
 		<button onclick='validateStarrag()' class='button acrylic'>Submit</button>
+		<a class='hintbtn' onClick='starragHint()'><img src='../../resources/help.svg' alt='Hint'></a>
 	</div>
 	<div class='hidden acrylic shadow' id='DuddingCard'>
 		<h3>The Conspirator is:</h3>
-		<input type='text' id='Duddingname' class='acrylic' name='fname'>
+		<input list="names" id='Duddingname' class='acrylic' name='fname'>
+		<input list="surnames" id='Duddingsurname' class='acrylic' name='fname'>
 		<button onclick='validateDudding()' class='button acrylic'>Submit</button>
+		<a class='hintbtn' onClick='duggingHint()'><img src='../../resources/help.svg' alt='Hint'></a>
+	</div>
+	<div class='hidden acrylic shadow hintbox'>
+		<p class='hinttext'></p>
 	</div>
 	<div class='wrong hidden'>
 		<h1>Wrong<br>Answer</h1>
@@ -110,10 +137,10 @@
 		document.getElementById('M4').innerHTML = 'Conspiracists found: ' + localStorage.getItem('M4-Endings') + '/3';
 	}
 	function validateTheo() {
-		var x = document.getElementById('Theoname').value;
+		var x = document.getElementById('Theoname').value + ' ' + document.getElementById('Theosurname').value;
 		if (x == 'Brother Theo') {
 			$('#EndCard').removeClass('hidden');
-			$('#TheoCard').addClass('hidden');
+			$('#TheoCard, .hintbox').addClass('hidden');
 		}
   			else {
     			$('.wrong').removeClass('hidden');
@@ -121,10 +148,10 @@
 			}
 	}
 	function validateStarrag() {
-		var x = document.getElementById('Starragname').value;
-		if (x == 'Rogan Starrag' || x == 'Starrag Rogan') {
+		var x = document.getElementById('Starragname').value + ' ' + document.getElementById('Starragsurname').value;
+		if (x == 'Rogan Starrag') {
 			$('#EndCard').removeClass('hidden');
-			$('#StarragCard').addClass('hidden');
+			$('#StarragCard, .hintbox').addClass('hidden');
 		}
   			else {
 				$('.wrong').removeClass('hidden');
@@ -132,15 +159,27 @@
 			}
 	}
 	function validateDudding() {
-		var x = document.getElementById('Duddingname').value;
-		if (x == 'Finn Dudding' || x == 'Dudding Finn') {
+		var x = document.getElementById('Duddingname').value + ' ' + document.getElementById('Duddingsurname').value;
+		if (x == 'Finn Dudding') {
 			$('#EndCard').removeClass('hidden');
-			$('#DuddingCard').addClass('hidden');
+			$('#DuddingCard, .hintbox').addClass('hidden');
 		}
   			else {
     			$('.wrong').removeClass('hidden');
 				setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
 			}
+	}
+	function theoHint() {
+		$('.hintbox').removeClass('hidden');
+		$('.hinttext').html(('This character can be met in the mission ') + ('To Ìgil').bold());
+	}
+	function starragHint() {
+		$('.hintbox').removeClass('hidden');
+		$('.hinttext').html(('This character can be met in the mission ') + ('Fight to survive').bold());
+	}
+	function duggingHint() {
+		$('.hintbox').removeClass('hidden');
+		$('.hinttext').html(('This character can be met in the mission ') + ('Flower Fest').bold());
 	}
 	</script>
 </body>

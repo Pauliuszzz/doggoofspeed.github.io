@@ -1,15 +1,30 @@
 var clicks = 0;
 
 window.onload = function onload() {
-    if (localStorage.getItem('sound') == undefined) {
-        $('.soundbg').removeClass('hidden');
+    switch (localStorage.getItem('sound')) {
+        case 'true':
+            $('.btnsoundy').css({'background': 'rgba(100,255,100,0.5)'});
+            break;
+        case 'false':
+            $('.btnsoundn').css({'background': 'rgba(255,100,100,0.5)'});
+            break;
+        case undefined:
+            $('.settingpanel').addClass('hidden');
+            $('.settingbg, .soundpanel').removeClass('hidden');
+            break;
     }
-    if (localStorage.getItem('blur') == undefined) {
-        localStorage.setItem('blur', true);
-    }
-    if (localStorage.getItem('blur') != 'true') {
-        $('.settingbg').css({'backdrop-filter': 'none', 'background-color': '#2c2c2c'});
-        $('nav').css({'backdrop-filter': 'none'});
+    switch (localStorage.getItem('blur')) {
+        case 'true':
+            $('.btnblury').css({'background': 'rgba(100,255,100,0.5)'});
+            break;
+        case 'false':
+            $('.btnblurn').css({'background': 'rgba(255,100,100,0.5)'});
+            $('.settingbg').css({'backdrop-filter': 'none', 'background-color': '#2c2c2c'});
+            $('nav').css({'backdrop-filter': 'none'});
+            break;
+        case undefined:
+            localStorage.setItem('blur', true);
+            break;
     }
 };
 
@@ -23,6 +38,8 @@ function soundNo() {
     localStorage.setItem('sound', false);
     location.reload();
 }
+
+//Blur controller
 
 function blurYes() {
     localStorage.setItem('blur', true);

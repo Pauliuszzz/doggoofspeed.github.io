@@ -125,7 +125,7 @@ input {
 	will-change: opacity, transform;
 }
 
-#EndCard, #TheoCard, #StarragCard, #DuddingCard {
+#EndCard, #TheoCard, #StarragCard, #DuddingCard, .hintbox {
 	margin: .5em auto;
 	width: 75%;
 	padding: 1em;
@@ -145,7 +145,8 @@ input {
 }
 
 input {
-	width: 70%;
+	width: 30%;
+	margin: 5px;
 	height: 2em;
 	color: white;
 }
@@ -159,6 +160,15 @@ input {
 	background: linear-gradient(to bottom right, #f3904f, #3b4371);
 	animation: wrong 3s;
 	will-change: opacity;
+}
+
+.hintbtn {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	margin: 10px;
+	height: 24px;
+	width: 24px;
 }
 
 *, :after, :before {
