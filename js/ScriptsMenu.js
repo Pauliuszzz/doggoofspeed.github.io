@@ -8,7 +8,7 @@ window.onload = function onload() {
         case 'false':
             $('.btnsoundn').css({'background': 'rgba(255,100,100,0.5)'});
             break;
-        case undefined:
+        case null:
             $('.settingpanel').addClass('hidden');
             $('.settingbg, .soundpanel').removeClass('hidden');
             break;
@@ -22,7 +22,7 @@ window.onload = function onload() {
             $('.settingbg').css({'backdrop-filter': 'none', 'background-color': '#2c2c2c'});
             $('nav').css({'backdrop-filter': 'none'});
             break;
-        case undefined:
+        case null:
             localStorage.setItem('blur', true);
             break;
     }
