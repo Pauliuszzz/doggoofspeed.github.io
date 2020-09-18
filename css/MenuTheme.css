@@ -192,21 +192,8 @@ nav {
 	width: 24px;
 }
 
-.reset {
+.reset, .resetsurvival {
 	width: 70%;
-}
-
-.surviv {
-	height: auto !important;
-	padding-top: 0;
-}
-
-.surviv > p {
-	font-size: 22px;
-}
-
-.surviv > p > .trophy {
-	margin-right: 5px;
 }
 
 .settingsbtn {
@@ -217,6 +204,15 @@ nav {
 	top: 0;
 	margin: 5px;
 	transition: 0.35s;
+}
+
+.settingsClose {
+	position: absolute;
+	width: 36px;
+    height: 36px;
+	top: 0;
+	left: 0;
+	margin: 10px;
 }
 
 .settingsbtn:active {
@@ -239,8 +235,7 @@ nav {
 .settingpanel {
 	padding: 10px;
 	width: 250px;
-	margin: auto;
-	margin-bottom: 1em;
+	margin: 2em auto;
 }
 
 /* ANIMATIONS */
@@ -319,19 +314,12 @@ nav {
 		margin-top: -1.5em;
 	}
 
-	.surviv {
-		height: 12em !important;
-		padding-top: 0;
-	}
-
-	.easy, .hard {
-		width: 32px;
-		height: 32px;
-		margin: 2px;
-	}
-
 	.reset {
 		width: 52%;
+	}
+
+	.resetsurvival {
+		width: 79%;
 	}
 
 	@keyframes slidein {
@@ -348,11 +336,6 @@ nav {
 
 	.card {
 		padding-top: 3em;
-	}
-	
-	.surviv {
-		height: 15em !important;
-		padding-top: 0;
 	}
 
 	.settingpanel > p {

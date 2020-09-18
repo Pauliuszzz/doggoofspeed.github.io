@@ -159,7 +159,7 @@ if (localStorage.getItem('MaxSurvived') > 0 && localStorage.getItem('MaxSurvived
 	    $('#SurvivalMode').html('Max scenarios survived: 0<br>Max scenarios survived(hard): 0<br>Average scenarios survived: 0<br>Matches played: 0');
     }
 if (localStorage.getItem('MaxSurvived') == 20) {
-    $('.easy').css('fill', 'gold');
+    $('.normal').css('fill', 'gold');
 }
 if (localStorage.getItem('MaxSurvivedHard') == 20) {
     $('.hard').css('fill', 'gold');
@@ -193,5 +193,5 @@ function clearSurvival() {
 //Opens Settings Menu
 function settings() {
     $('.settingbg').removeClass('hidden');
-    $('.modes').addClass('hidden');
+    $('.modes, nav').addClass('hidden');
 }
