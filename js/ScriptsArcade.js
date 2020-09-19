@@ -2,7 +2,7 @@ var count = 0;
 var score = 0;
 
 window.onload = function onload() {
-	$('#ButtonFour').prop('disabled', true);
+	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	shuffle(scenarios);
 	text();
@@ -40,8 +40,8 @@ function text() {
 function reply1() {
 	$('#reply-text').html(scenarios[count].reply1);
 	$('.replydiv').show();
-	$('#ButtonFour').prop('disabled', false);
-	$('#ButtonTwo, #ButtonThree').prop('disabled', true);
+	$('#ButtonFour').removeClass('disabled');
+	$('#ButtonTwo, #ButtonThree').addClass('disabled');
 	score = score + scenarios[count].score1;
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score1 + 'Xp');
@@ -53,8 +53,8 @@ function reply1() {
 function reply2() {
 	$('#reply-text').html(scenarios[count].reply2);
 	$('.replydiv').show();
-	$('#ButtonFour').prop('disabled', false);
-	$('#ButtonOne, #ButtonThree').prop('disabled', true);
+	$('#ButtonFour').removeClass('disabled');
+	$('#ButtonOne, #ButtonThree').addClass('disabled');
 	score = score + scenarios[count].score2;
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score2 + 'Xp');
@@ -66,8 +66,8 @@ function reply2() {
 function reply3() {
 	$('#reply-text').html(scenarios[count].reply3);
 	$('.replydiv').show();
-	$('#ButtonFour').prop('disabled', false);
-	$('#ButtonOne, #ButtonTwo').prop('disabled', true);
+	$('#ButtonFour').removeClass('disabled');
+	$('#ButtonOne, #ButtonTwo').addClass('disabled');
 	score = score + scenarios[count].score3;
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score3 + 'Xp');
@@ -101,8 +101,8 @@ function next_scenario() {
 	$('.xpmessage').removeClass('hidden');
 	setTimeout(function(){ $('.xpmessage').addClass('hidden');}, 1000);
 	$('.replydiv').hide();
-	$('#ButtonOne, #ButtonTwo, #ButtonThree').prop('disabled', false);
-	$('#ButtonFour').prop('disabled', true);
+	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled');
+	$('#ButtonFour').addClass('disabled');
 	count++;
 	text();
 	if (localStorage.getItem('sound') == 'true') {

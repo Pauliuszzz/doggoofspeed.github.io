@@ -1,5 +1,5 @@
 window.onload = function onload() {
-	$('#ButtonFour').prop('disabled', true);
+	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	text();
 	if (localStorage.getItem('blur') != 'true') {
@@ -24,12 +24,12 @@ function text() {
 			break;
 	}
 	if(scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
-		$('#ButtonFour').prop('disabled', false);
+		$('#ButtonFour').removeClass('disabled');
 		$('.replydiv').hide();
 		$('.buttondiv').hide();
 	}
 		else{
-			$('#ButtonFour').prop('disabled', true);
+			$('#ButtonFour').addClass('disabled');
 		}
 }
 
@@ -39,8 +39,8 @@ function text() {
 			$('#reply-text').html(scenarios[count].reply1);
 			$('.replydiv').show();
 		}
-		$('#ButtonFour').prop('disabled', false);
-		$('#ButtonTwo, #ButtonThree').prop('disabled', true);
+		$('#ButtonFour').removeClass('disabled');
+		$('#ButtonTwo, #ButtonThree').addClass('disabled');
 			if (scenarios[count].skipto1 != null){
 				count = scenarios[count].skipto1;
 			}
@@ -53,8 +53,8 @@ function text() {
 			$('#reply-text').html(scenarios[count].reply2);
 			$('.replydiv').show();
 		}
-		$('#ButtonFour').prop('disabled', false);
-		$('#ButtonOne, #ButtonThree').prop('disabled', true);
+		$('#ButtonFour').removeClass('disabled');
+		$('#ButtonOne, #ButtonThree').addClass('disabled');
 			if (scenarios[count].skipto2 != null){
 				count = scenarios[count].skipto2;
 			}
@@ -67,8 +67,8 @@ function text() {
 			$('#reply-text').html(scenarios[count].reply3);
 			$('.replydiv').show();
 		}
-		$('#ButtonFour').prop('disabled', false);
-		$('#ButtonOne, #ButtonTwo').prop('disabled', true);
+		$('#ButtonFour').removeClass('disabled');
+		$('#ButtonOne, #ButtonTwo').addClass('disabled');
 			if (scenarios[count].skipto3 != null){
 				count = scenarios[count].skipto3;
 			}
@@ -79,7 +79,7 @@ function text() {
 
 //Next scenario
 	function next_scenario(mult){
-		$('#ButtonOne, #ButtonTwo, #ButtonThree').prop('disabled', false).show();
+		$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
 		if(quit == true){
 			endingcounter();
 			$('.flexmain').hide();

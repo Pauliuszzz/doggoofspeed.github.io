@@ -3,7 +3,7 @@ var hpbfr;
 var hp = 100;
 
 window.onload = function onload() {
-	$('#ButtonFour').prop('disabled', true);
+	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	shuffle(scenarios);
 	text();
@@ -43,8 +43,8 @@ function text() {
 function reply1() {
 	$('#reply-text').html(scenarios[count].reply1);
 	$('.replydiv').show();
-	$('#ButtonFour').prop('disabled', false);
-	$('#ButtonTwo, #ButtonThree').prop('disabled', true);
+	$('#ButtonFour').removeClass('disabled');
+	$('#ButtonTwo, #ButtonThree').addClass('disabled');
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage1;
 	if ($('.hpmessage').hasClass('hidden') == true) {
@@ -57,8 +57,8 @@ function reply1() {
 function reply2() {
 	$('#reply-text').html(scenarios[count].reply2);
 	$('.replydiv').show();
-	$('#ButtonFour').prop('disabled', false);
-	$('#ButtonOne, #ButtonThree').prop('disabled', true);
+	$('#ButtonFour').removeClass('disabled');
+	$('#ButtonOne, #ButtonThree').addClass('disabled');
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage2;
 	if ($('.hpmessage').hasClass('hidden') == true) {
@@ -71,8 +71,8 @@ function reply2() {
 function reply3() {
 	$('#reply-text').html(scenarios[count].reply3);
 	$('.replydiv').show();
-	$('#ButtonFour').prop('disabled', false);
-	$('#ButtonOne, #ButtonTwo').prop('disabled', true);
+	$('#ButtonFour').removeClass('disabled');
+	$('#ButtonOne, #ButtonTwo').addClass('disabled');
 	hpbfr = hp;
 	hp = hp - scenarios[count].damage3;
 	if ($('.hpmessage').hasClass('hidden') == true) {
@@ -130,8 +130,8 @@ function next_scenario(mult) {
 	count++;
 	$('#progressslider').css('width', hp + '%');
 	$('.replydiv').hide();
-	$('#ButtonOne, #ButtonTwo, #ButtonThree').prop('disabled', false);
-	$('#ButtonFour').prop('disabled', true);
+	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled');
+	$('#ButtonFour').addClass('disabled');
 	text();
 	if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx4').play();

@@ -107,11 +107,6 @@ button:active {
 	transform:scale(.98)
 }
 
-button:disabled {
-	opacity:.4;
-	cursor: not-allowed
-}
-
 *,*:focus,*:hover{
     outline: none;
 }
@@ -180,6 +175,11 @@ button:disabled {
 
 *, :after, :before {
 	box-sizing: inherit;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: .65;
 }
 
 /* ANIMATIONS */
