@@ -1,5 +1,3 @@
-var clicks = 0;
-
 window.onload = function onload() {
     switch (localStorage.getItem('sound')) {
         case 'true':
@@ -9,7 +7,7 @@ window.onload = function onload() {
             $('.btnsoundn').css({'background': 'rgba(255,100,100,0.5)'});
             break;
         case null:
-            $('.settingpanel').addClass('hidden');
+            $('.settingpanel, .settingsClose').addClass('hidden');
             $('.settingbg, .soundpanel').removeClass('hidden');
             break;
     }

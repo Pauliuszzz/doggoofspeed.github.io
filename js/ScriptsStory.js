@@ -78,7 +78,7 @@ function text() {
 	}
 
 //Next scenario
-	function next_scenario(mult){
+	function nextScenario(mult){
 		$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
 		if(quit == true){
 			endingcounter();

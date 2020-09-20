@@ -2,13 +2,13 @@
 <html lang='en'>
 <head>
 	<title>Project Passage - Story</title>
-	<link rel='icon' type='image/png' href='../../resources/Project_Passage.png'/>
-	<meta name='theme-color' content='#448763'>
+	<link rel='icon' type='image/png' href='../resources/Project_Passage.png'/>
+	<meta name='theme-color' content='#71b280'>
 	<meta charset='UTF-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1'>
 	<meta name='google' content='notranslate'>
 	<meta name='description' content='Mission 2 of the text based adventure game Project Passage.'>
-	<link rel='stylesheet' href='../../css/StoryTheme.css' media='screen'>
+	<link rel='stylesheet' href='../css/StoryTheme.css' media='screen'>
 	<style>
 		body {
 			background: linear-gradient(to bottom right, #71b280, #134e5e) fixed;
@@ -17,11 +17,11 @@
 			text-shadow: 2px 2px #134e5e;
 		}
 	</style>
-	<audio id="btnsfx1" src="../../resources/btnsfx1.ogg" preload="none"></audio>
-	<audio id="btnsfx2" src="../../resources/btnsfx2.ogg" preload="none"></audio>
-	<audio id="btnsfx3" src="../../resources/btnsfx3.ogg" preload="none"></audio>
-	<audio id="btnsfx4" src="../../resources/btnsfx4.ogg" preload="none"></audio>
-	<audio id="endCard" src="../../resources/endCard.ogg" preload="none"></audio>
+	<audio id="btnsfx1" src="../resources/btnsfx1.ogg" preload="none"></audio>
+	<audio id="btnsfx2" src="../resources/btnsfx2.ogg" preload="none"></audio>
+	<audio id="btnsfx3" src="../resources/btnsfx3.ogg" preload="none"></audio>
+	<audio id="btnsfx4" src="../resources/btnsfx4.ogg" preload="none"></audio>
+	<audio id="endCard" src="../resources/endCard.ogg" preload="none"></audio>
 </head>
 <body id='body'>
 	<header>
@@ -46,16 +46,16 @@
 	<div class='card hidden acrylic shadow' id='EndCard'>
 		<h3>Mission 2 Completed</h3>
 		<p id='M2'></p>
-		<a href='../../index.html' class='shadow icon-only'><img src='../../resources/home.svg' alt='Home'></a>
-		<a href='./M2.html' class='shadow icon-only'><img src='../../resources/refresh.svg' alt='Refresh'></a>
-		<a href='./M3.html' class='shadow icon-only'><img src='../../resources/forward.svg' alt='Forward'></a>
+		<a href='../index.html' class='shadow icon-only'><img src='../resources/home.svg' alt='Home'></a>
+		<a href='./M2.html' class='shadow icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
+		<a href='./M3.html' class='shadow icon-only'><img src='../resources/forward.svg' alt='Forward'></a>
 	</div>
 	<nav class='shadow acrylic'>
-		<button id='ButtonFour' class='button acrylic shadow' style='margin: .5em' onClick='next_scenario()'>Continue</button>
+		<button id='ButtonFour' class='button acrylic shadow' style='margin: .5em' onClick='nextScenario()'>Continue</button>
 	</nav>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
-	<script src='../../js/ScriptsStory.js' defer></script>
-	<script src='../Scenarios/M2Scenarios.js' async></script>
+	<script src='../js/ScriptsStory.js' defer></script>
+	<script src='Scenarios/M2Scenarios.js' async></script>
 	<script>
 	var endings = localStorage.getItem('M2-Endings');
 	var quit = false;
