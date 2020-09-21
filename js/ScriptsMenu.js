@@ -21,6 +21,7 @@ window.onload = function onload() {
             $('nav').css({'backdrop-filter': 'none'});
             $('.flexhome > div, .flexmissions > div, .flexarcadesurvival > div').css({'animation': 'none'});
             $('.acrylic').css({'background-color': '#292929'})
+            $('p, h2, svg, .button').addClass('shadow')
             break;
         case null:
             localStorage.setItem('fx', true);
@@ -201,5 +202,8 @@ function clearSurvival() {
 //Opens Settings Menu
 function settings() {
     $('.settingbg').removeClass('hidden');
-    $('.nav').addClass('hidden');
+    $('nav').addClass('hidden');
+    if (localStorage.getItem('fx') == 'false') {
+        $('.acrylic').css({'background-color': 'rgb(44, 44, 44)'})
+    }
 }
