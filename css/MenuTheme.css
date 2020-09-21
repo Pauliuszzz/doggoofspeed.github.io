@@ -264,20 +264,11 @@ nav {
 }
 
 @keyframes hover {
-	0% {
-		transform: rotate3d(1, 1, 1, 0deg);
-	}
-	20% {
-		transform: rotate3d(1, 1, 0.2, 10deg);
+	20%, 80% {
+		transform: translate3d(0, -0.5em, 0);
 	}
 	50% {
-		transform: rotate3d(1, 1, 0.2, -10deg);
-	}
-	80% {
-		transform: rotate3d(1, 1, 0.2, 10deg);
-	}
-	100% {
-		transform: rotate3d(1, 1, 1, 0deg);
+		transform: translate3d(0, 0.5em, 0);
 	}
 }
 
