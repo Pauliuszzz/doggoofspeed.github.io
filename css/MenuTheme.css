@@ -55,6 +55,7 @@ nav {
 	position: fixed;
 	border-style: solid none none none !important;
 	animation: slidein .35s forwards;
+	transition: background-color .35s;
 }
 
 .passage {

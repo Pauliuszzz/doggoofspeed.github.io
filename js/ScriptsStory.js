@@ -2,7 +2,7 @@ window.onload = function onload() {
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	text();
-	if (localStorage.getItem('blur') != 'true') {
+	if (localStorage.getItem('fx') != 'true') {
         $('nav').css({'backdrop-filter': 'none'});
     }
 }

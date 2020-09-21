@@ -7,7 +7,7 @@ window.onload = function onload() {
 	$('.replydiv').hide();
 	shuffle(scenarios);
 	text();
-	if (localStorage.getItem('blur') != 'true') {
+	if (localStorage.getItem('fx') != 'true') {
         $('nav').css({'backdrop-filter': 'none'});
     }
 };
