@@ -71,6 +71,16 @@ nav {
 	margin-bottom: .5em;
 }
 
+.flexmissions > div, .flexhome > div, .flexarcadesurvival > div {
+	animation: hover 15s infinite;
+}
+
+.flexmissions > div:nth-child(1), .flexhome > div:nth-child(1), .flexarcadesurvival > div:nth-child(1) { animation-delay: .5s }
+.flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2) { animation-delay: 1s }
+.flexmissions > div:nth-child(3), .flexhome > div:nth-child(3), .flexarcadesurvival > div:nth-child(3) { animation-delay: 1.5s }
+.flexmissions > div:nth-child(4) { animation-delay: 2s }
+.flexmissions > div:nth-child(5) { animation-delay: 2.5s }
+
 .card {
 	margin: 10px 10px 5px;
 	width: 100%;
@@ -250,6 +260,24 @@ nav {
 @keyframes slidein {
 	to {
 		bottom: 0;
+	}
+}
+
+@keyframes hover {
+	0% {
+		transform: rotate3d(1, 1, 1, 0deg);
+	}
+	20% {
+		transform: rotate3d(1, 1, 0.2, 10deg);
+	}
+	50% {
+		transform: rotate3d(1, 1, 0.2, -10deg);
+	}
+	80% {
+		transform: rotate3d(1, 1, 0.2, 10deg);
+	}
+	100% {
+		transform: rotate3d(1, 1, 1, 0deg);
 	}
 }
 
