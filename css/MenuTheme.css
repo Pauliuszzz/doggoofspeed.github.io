@@ -266,10 +266,10 @@ nav {
 
 @keyframes hover {
 	20%, 80% {
-		transform: translate3d(0, -0.5em, 0);
+		transform: translate3d(0, -1em, 0);
 	}
 	50% {
-		transform: translate3d(0, 0.5em, 0);
+		transform: translate3d(0, 1em, 0);
 	}
 }
 
