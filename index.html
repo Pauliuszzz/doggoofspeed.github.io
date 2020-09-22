@@ -96,9 +96,6 @@
 				<p id='M4'></p>
 				<a href='Story/M4.html' id='M4-play' class='button shadow'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			  </div>
-			  <div class='card acrylic shadow'>
-				<a onClick='clearStory()' class='button shadow'>Reset Stats</a>
-			</div>
 		</div>
 	</div>
 	<div class='modes hidden' id='arcade'>
@@ -110,9 +107,6 @@
 			<div class='card acrylic shadow'>
 				<p id='ArcadeMode'></p>
 			</div>
-		</div>
-		<div class='acrylic shadow reset'>
-			<a onClick='clearArcade()' class='button shadow'>Reset Stats</a>
 		</div>
 	</div>
 	<div class='modes hidden' id='survival'>
@@ -132,21 +126,21 @@
 				<p id='SurvivalMode'></p>
 			</div>
 		</div>
-		<div class='acrylic shadow resetsurvival'>
-			<a onClick='clearSurvival()' class='button shadow'>Reset Stats</a>
-		</div>
 	</div>
 	<div class='settingbg hidden'>
 		<a class='settingsClose' onClick='location.reload()'><svg class='icon'><use xlink:href='#back'/></svg></a>
-		<div class='acrylic settingpanel soundpanel'>
+		<div class='acrylic shadow settingpanel soundpanel'>
 			<svg class='icon' style='width: 150px; height: 150px; margin: auto'><use xlink:href='#sound'/></svg><br>
 			<a class='button shadow btnsoundy' onClick='soundYes()'>On</a>
 			<a class='button shadow btnsoundn' onClick='soundNo()'>Off</a>
 		</div>
-		<div class='acrylic settingpanel'>
+		<div class='acrylic shadow settingpanel'>
 			<p>Additional Effects (may impact performance)</p>
 			<a class='button shadow btnfxy' onClick='fxYes()'>On</a>
 			<a class='button shadow btnfxn' onClick='fxNo()'>Off</a>
+		</div>
+		<div class='acrylic shadow settingpanel'>
+			<a onClick='resetEverything()' class='button shadow'>Reset Stats</a>
 		</div>
 		<div class='acrylic settingpanel' style='margin-bottom: 3em'>
 			<h2>Made by:</h2>

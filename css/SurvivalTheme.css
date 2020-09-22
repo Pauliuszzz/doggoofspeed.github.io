@@ -33,6 +33,7 @@ h1 {
 	font-size: 2.5em;
 	line-height: 1.2;
 	letter-spacing: -.1rem;
+	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h3 {
@@ -86,7 +87,6 @@ div#EndCard,  div#DeadCard{
 }
 
 .passage {
-	text-shadow: 2px 2px red;
 	font-family: Bitmgothic;
 }
 
@@ -151,8 +151,12 @@ button:active {
     width: 70%;
     margin: auto;
 	animation: fadein .35s;
+	animation: hover 10s infinite;
 	will-change: opacity, transform;
 }
+
+.flexmain > div:nth-child(2) { animation-delay: .5s }
+.flexmain > div:nth-child(3) { animation-delay: 1s }
 
 .acrylic {
 	border-radius: 15px;
@@ -188,6 +192,15 @@ button:active {
 	from {
         transform: scale(1.25);
 		opacity: 0;
+	}
+}
+
+@keyframes hover {
+	20%, 80% {
+		transform: translate3d(0, -0.3em, 0);
+	}
+	50% {
+		transform: translate3d(0, 0.3em, 0);
 	}
 }
 

@@ -26,6 +26,7 @@ h1 {
 	font-size: 2.5em;
 	line-height: 1.2;
 	letter-spacing: -.1rem;
+	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h2, h3 {
@@ -60,7 +61,6 @@ nav {
 
 .passage {
 	font-family: Bitmgothic;
-	text-shadow: 2px 2px #1A1D20;
 }
 
 .flexmissions, .flexhome, .flexarcadesurvival {
@@ -73,14 +73,13 @@ nav {
 }
 
 .flexmissions > div, .flexhome > div, .flexarcadesurvival > div {
-	animation: hover 15s infinite;
+	animation: hover 10s infinite;
 }
 
-.flexmissions > div:nth-child(1), .flexhome > div:nth-child(1), .flexarcadesurvival > div:nth-child(1) { animation-delay: .5s }
-.flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2) { animation-delay: 1s }
-.flexmissions > div:nth-child(3), .flexhome > div:nth-child(3), .flexarcadesurvival > div:nth-child(3) { animation-delay: 1.5s }
-.flexmissions > div:nth-child(4) { animation-delay: 2s }
-.flexmissions > div:nth-child(5) { animation-delay: 2.5s }
+.flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2) { animation-delay: 0.5s }
+.flexmissions > div:nth-child(3), .flexhome > div:nth-child(3), .flexarcadesurvival > div:nth-child(3) { animation-delay: 1s }
+.flexmissions > div:nth-child(4) { animation-delay: 1.5s }
+.flexmissions > div:nth-child(5) { animation-delay: 2s }
 
 .card {
 	margin: 10px 10px 5px;
@@ -266,10 +265,10 @@ nav {
 
 @keyframes hover {
 	20%, 80% {
-		transform: translate3d(0, -1em, 0);
+		transform: translate3d(0, -0.5em, 0);
 	}
 	50% {
-		transform: translate3d(0, 1em, 0);
+		transform: translate3d(0, 0.5em, 0);
 	}
 }
 

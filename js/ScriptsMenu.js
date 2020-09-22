@@ -175,27 +175,8 @@ if (localStorage.getItem('MaxSurvivedHard') == 20) {
 }
 
 //Clears progress
-function clearStory() {
-    let keysToRemove = ['M1-Endings', 'M2-Endings', 'M3-Endings', 'M4-Endings', 'M1-1', 'M1-2', 'M1-3', 'M1-4', 'M1-5', 'M2-1', 'M2-2', 'M2-3', 'M2-4', 'M2-5', 'M2-6', 'M2-7', 'M2-8', 'M2-9', 'M2-10', 'M3-1', 'M3-2', 'M3-3', 'M3-4', 'M3-5', 'M3-6', 'M3-7', 'M4-1', 'M4-2', 'M4-3'];
-    for (key of keysToRemove) {
-        localStorage.removeItem(key);
-    }
-    location.reload();
-}
-
-function clearArcade() {
-    let keysToRemove = ['Highscore', 'AverageHighscore', 'ArcadeMatches'];
-    for (key of keysToRemove) {
-        localStorage.removeItem(key);
-    }
-    location.reload();
-}
-
-function clearSurvival() {
-    let keysToRemove = ['MaxSurvived', 'AverageCount', 'SurvivalMatches'];
-    for (key of keysToRemove) {
-        localStorage.removeItem(key);
-    }
+function resetEverything() {
+    localStorage.clear();
     location.reload();
 }
 

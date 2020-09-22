@@ -38,6 +38,7 @@ h1 {
 	line-height: 1.2;
     letter-spacing: -.1rem;
     color: white;
+    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 nav {
@@ -83,7 +84,6 @@ h3 {
 }
 
 .passage {
-	text-shadow: 2px 2px #ff00f3;
     font-family: Bitmgothic;
 }
 
@@ -192,8 +192,12 @@ button:active {
     width: 70%;
     margin: auto;
     animation: fadein .35s;
+    animation: hover 10s infinite;
     will-change: opacity, transform;
 }
+
+.flexmain > div:nth-child(2) { animation-delay: .5s }
+.flexmain > div:nth-child(3) { animation-delay: 1s }
 
 .xpmessage {
     font-family: Pixel;
@@ -215,6 +219,15 @@ button:active {
 	from {
         transform: scale(1.25);
 		opacity: 0;
+	}
+}
+
+@keyframes hover {
+	20%, 80% {
+		transform: translate3d(0, -0.3em, 0);
+	}
+	50% {
+		transform: translate3d(0, 0.3em, 0);
 	}
 }
 

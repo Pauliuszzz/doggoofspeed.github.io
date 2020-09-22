@@ -4,7 +4,10 @@ window.onload = function onload() {
 	text();
 	if (localStorage.getItem('fx') != 'true') {
         $('nav').css({'backdrop-filter': 'none'});
-    }
+	}
+	if (localStorage.getItem('fx') == 'false'){
+		$('.flexmain > div').css({'animation': 'none'});
+	}
 }
 
 function text() {
