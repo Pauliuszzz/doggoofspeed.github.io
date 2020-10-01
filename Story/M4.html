@@ -36,24 +36,24 @@
 	</header>
 	<div class='flexmain'>
 		<div class='textdiv'>
-			<p class='scenario acrylic shadow' id='scenario-text'></p>
+			<p class='scenario acrylic' id='scenario-text'></p>
 		</div>
 		<div class='replydiv'>
-			<p class='reply acrylic shadow' id='reply-text'></p>
+			<p class='reply acrylic' id='reply-text'></p>
 		</div>
 		<div class='buttondiv'>
-			<button id='ButtonOne' class='button acrylic shadow' onClick='reply1()'></button>
-			<button id='ButtonTwo' class='button acrylic shadow' onClick='reply2()'></button>
-			<button id='ButtonThree' class='button acrylic shadow' onClick='reply3()'></button>
+			<button id='ButtonOne' class='button acrylic' onClick='reply1()'></button>
+			<button id='ButtonTwo' class='button acrylic' onClick='reply2()'></button>
+			<button id='ButtonThree' class='button acrylic' onClick='reply3()'></button>
 		</div>
 	</div>
-	<div class='hidden acrylic shadow' id='EndCard'>
+	<div class='hidden acrylic' id='EndCard'>
 		<h3>Mission 4 Completed</h3>
 		<p id='M4'></p>
-		<a href='../index.html' class='shadow icon-only'><img src='../resources/home.svg' alt='Home'></a>
-		<a href='./M4.html' class='shadow icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
+		<a href='../index.html' class='icon-only'><img src='../resources/home.svg' alt='Home'></a>
+		<a href='./M4.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
 	</div>
-	<div class='hidden acrylic shadow' id='TheoCard'>
+	<div class='hidden acrylic' id='TheoCard'>
 		<h3>The Conspirator is:</h3>
 		<input list="names" id='Theoname' class='acrylic' name='fname'>
 		<input list="surnames" id='Theosurname' class='acrylic' name='fname'>
@@ -61,7 +61,7 @@
 		<a class='homebtn' href='../index.html'><img src='../resources/home.svg' alt='Home'></a>
 		<a class='hintbtn' onClick='theoHint()'><img src='../resources/help.svg' alt='Hint'></a>
 	</div>
-	<div class='hidden acrylic shadow' id='StarragCard'>
+	<div class='hidden acrylic' id='StarragCard'>
 		<h3>The Conspirator is:</h3>
 		<input list="names" id='Starragname' class='acrylic' name='fname'>
 		<input list="surnames" id='Starragsurname' class='acrylic' name='fname'>
@@ -69,7 +69,7 @@
 		<a class='homebtn' href='../index.html'><img src='../resources/home.svg' alt='Home'></a>
 		<a class='hintbtn' onClick='starragHint()'><img src='../resources/help.svg' alt='Hint'></a>
 	</div>
-	<div class='hidden acrylic shadow' id='DuddingCard'>
+	<div class='hidden acrylic' id='DuddingCard'>
 		<h3>The Conspirator is:</h3>
 		<input list="names" id='Duddingname' class='acrylic' name='fname'>
 		<input list="surnames" id='Duddingsurname' class='acrylic' name='fname'>
@@ -77,7 +77,7 @@
 		<a class='homebtn' href='../index.html'><img src='../resources/home.svg' alt='Home'></a>
 		<a class='hintbtn' onClick='duggingHint()'><img src='../resources/help.svg' alt='Hint'></a>
 	</div>
-	<div class='hidden acrylic shadow hintbox'>
+	<div class='hidden acrylic hintbox'>
 		<p class='hinttext'></p>
 	</div>
 	<div class='wrong hidden'>
@@ -101,8 +101,8 @@
 		<option value="Hilton">
 		<option value="Starrag">
 	</datalist>
-	<nav class='shadow acrylic'>
-		<button id='ButtonFour' class='button acrylic shadow' style='margin: .5em'  onClick='nextScenarioNew()'>Continue</button>
+	<nav class='acrylic'>
+		<button id='ButtonFour' class='button acrylic' style='margin: .5em'  onClick='nextScenarioNew()'>Continue</button>
 	</nav>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
 	<script src='../js/ScriptsStory.js' defer></script>
@@ -197,15 +197,26 @@
 //Next scenario
 	function nextScenarioNew(mult){
 		$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
-		if(quit == true){
-			if (scenarios[count].ending1 == true) {
-				$('#TheoCard').removeClass('hidden');
-			}
-			if (scenarios[count].ending2 == true) {
-				$('#StarragCard').removeClass('hidden');
-			}
-			if (scenarios[count].ending3 == true) {
-				$('#DuddingCard').removeClass('hidden');
+		if (quit == true){
+			switch (Object.keys(scenarios[count]).pop()) {
+			case 'ending1':
+				if (localStorage.getItem('M4-1') == null){
+					endings++;
+					localStorage.setItem('M4-1', 1);
+				}
+				break;
+			case 'ending2':
+				if (localStorage.getItem('M4-2') == null){
+					endings++;
+					localStorage.setItem('M4-2', 1);
+				}
+				break;
+			case 'ending3':
+				if (localStorage.getItem('M4-3') == null){
+					endings++;
+					localStorage.setItem('M4-3', 1);
+				}
+				break;
 			}
 			$('.flexmain').hide();
 			if (localStorage.getItem('sound') == 'true') {

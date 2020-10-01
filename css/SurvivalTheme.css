@@ -59,12 +59,11 @@ nav {
 }
 
 div#EndCard,  div#DeadCard{
-	animation: fadein .35s;
 	margin: 1em auto;
 	width: 75%;
 	border-radius: 15px;
 	padding: 1em;
-	box-shadow: none;
+	animation: fadein .35s;
 	will-change: opacity, transform;
 }
 
@@ -131,10 +130,6 @@ button:active {
 
 .hidden {
     display: none;
-}
-
-.shadow {
-	filter: drop-shadow(2px 2px 4px black);
 }
 
 .flexmain {

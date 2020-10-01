@@ -29,26 +29,26 @@
 	</header>
 	<div class='flexmain'>
 		<div class='textdiv'>
-			<p class='scenario acrylic shadow' id='scenario-text'></p>
+			<p class='scenario acrylic' id='scenario-text'></p>
 		</div>
 		<div class='replydiv'>
-			<p class='reply acrylic shadow' id='reply-text'></p>
+			<p class='reply acrylic' id='reply-text'></p>
 		</div>
 		<div class='buttondiv'>
-			<button id='ButtonOne' class='button acrylic shadow' onClick='reply1()'></button>
-			<button id='ButtonTwo' class='button acrylic shadow' onClick='reply2()'></button>
-			<button id='ButtonThree' class='button acrylic shadow' onClick='reply3()'></button>
+			<button id='ButtonOne' class='button acrylic' onClick='reply1()'></button>
+			<button id='ButtonTwo' class='button acrylic' onClick='reply2()'></button>
+			<button id='ButtonThree' class='button acrylic' onClick='reply3()'></button>
 		</div>
 	</div>
-	<div class='card hidden acrylic shadow' id='EndCard'>
+	<div class='card hidden acrylic' id='EndCard'>
 		<h3>Mission 3 Completed</h3>
 		<p id='M3'></p>
-		<a href='../index.html' class='shadow icon-only'><img src='../resources/home.svg' alt='Home'></a>
-		<a href='./M3.html' class='shadow icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
-		<a href='./M4.html' class='shadow icon-only'><img src='../resources/forward.svg' alt='Forward'></a>
+		<a href='../index.html' class='icon-only'><img src='../resources/home.svg' alt='Home'></a>
+		<a href='./M3.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
+		<a href='./M4.html' class='icon-only'><img src='../resources/forward.svg' alt='Forward'></a>
 	</div>
-	<nav class='shadow acrylic'>
-		<button id='ButtonFour' class='button acrylic shadow' style='margin: .5em' onClick='nextScenario()'>Continue</button>
+	<nav class='acrylic'>
+		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario()'>Continue</button>
 	</nav>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
 	<script src='../js/ScriptsStory.js' defer></script>
@@ -61,33 +61,49 @@
 	
 	//Ending Counter
 	function endingcounter(){
-		if (scenarios[count].ending1 == true && localStorage.getItem('M3-1') == null) {
-			endings++;
-			localStorage.setItem('M3-1', 1);
-		}
-		if (scenarios[count].ending2 == true && localStorage.getItem('M3-2') == null) {
-			endings++;
-			localStorage.setItem('M3-2', 1);
-		}
-		if (scenarios[count].ending3 == true && localStorage.getItem('M3-3') == null) {
-			endings++;
-			localStorage.setItem('M3-3', 1);
-		}
-		if (scenarios[count].ending4 == true && localStorage.getItem('M3-4') == null) {
-			endings++;
-			localStorage.setItem('M3-4', 1);
-		}
-		if (scenarios[count].ending5 == true && localStorage.getItem('M3-5') == null) {
-			endings++;
-			localStorage.setItem('M3-5', 1);
-		}
-		if (scenarios[count].ending6 == true && localStorage.getItem('M3-6') == null) {
-			endings++;
-			localStorage.setItem('M3-6', 1);
-		}
-		if (scenarios[count].ending7 == true && localStorage.getItem('M3-7') == null) {
-			endings++;
-			localStorage.setItem('M3-7', 1);
+		switch (Object.keys(scenarios[count]).pop()) {
+			case 'ending1':
+				if (localStorage.getItem('M3-1') == null){
+					endings++;
+					localStorage.setItem('M3-1', 1);
+				}
+				break;
+			case 'ending2':
+				if (localStorage.getItem('M3-2') == null){
+					endings++;
+					localStorage.setItem('M3-2', 1);
+				}
+				break;
+			case 'ending3':
+				if (localStorage.getItem('M3-3') == null){
+					endings++;
+					localStorage.setItem('M3-3', 1);
+				}
+				break;
+			case 'ending4':
+				if (localStorage.getItem('M3-4') == null){
+					endings++;
+					localStorage.setItem('M3-4', 1);
+				}
+				break;
+			case 'ending5':
+				if (localStorage.getItem('M3-5') == null){
+					endings++;
+					localStorage.setItem('M3-5', 1);
+				}
+				break;
+			case 'ending6':
+				if (localStorage.getItem('M3-6') == null){
+					endings++;
+					localStorage.setItem('M3-6', 1);
+				}
+				break;
+			case 'ending7':
+				if (localStorage.getItem('M3-7') == null){
+					endings++;
+					localStorage.setItem('M3-7', 1);
+				}
+				break;
 		}
 		localStorage.setItem('M3-Endings', endings);
 		document.getElementById('M3').innerHTML = 'Endings achieved: ' + localStorage.getItem('M3-Endings') + '/7';

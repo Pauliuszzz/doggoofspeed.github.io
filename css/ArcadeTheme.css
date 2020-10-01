@@ -56,10 +56,10 @@ nav {
 }
 
 #EndCard {
-    animation: fadein 0.35s;
     width: 75%;
     margin: auto;
     padding: 0;
+    animation: fadein 0.35s;
     will-change: opacity, transform;
 }
 
@@ -206,7 +206,7 @@ button:active {
     bottom: 3em;
     width: 100%;
     animation: comein 1s;
-    will-change: opacity, color;
+    will-change: opacity, background-color;
 }
 
 *, :after, :before {

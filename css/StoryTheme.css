@@ -95,7 +95,6 @@ input {
 .flexmain > div {
 	width: 70%;
 	margin: auto;
-	animation: fadein .35s;
 	animation: hover 10s infinite;
 	will-change: opacity, transform;
 }
@@ -120,7 +119,9 @@ input {
 	font-size: 1em;
 	margin: 10px auto;
 	padding: 5px;
-	border: thin solid rgb(111, 185, 143);
+}
+
+.reply {
 	animation: fadein .35s;
 	will-change: opacity, transform;
 }
@@ -129,7 +130,6 @@ input {
 	margin: 1em auto;
 	width: 75%;
 	padding: 1em;
-	box-shadow: none;
 	animation: fadein .35s;
 	will-change: opacity, transform;
 }

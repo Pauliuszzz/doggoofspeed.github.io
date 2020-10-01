@@ -23,7 +23,7 @@
 			<h1 class='passage'>Passage</h1>
 		</div>
 	</header>
-	<div class='shadow acrylic' id='progressbar' style='width: 75%; margin: auto;'>
+	<div class='acrylic' id='progressbar' style='width: 75%; margin: auto;'>
 		<div class='acrylic' id='progressslider' role='progressbar'><p style='margin: auto 1em'>HP</p></div>
 	</div>
 	<div class='flexmain'>
@@ -34,18 +34,18 @@
 			<p class='reply acrylic' id='reply-text'></p>
 		</div>
 		<div class='buttondiv'>
-			<button id='ButtonOne' class='button acrylic shadow' onClick='reply1()'></button>
-			<button id='ButtonTwo' class='button acrylic shadow' onClick='reply2()'></button>
-			<button id='ButtonThree' class='button acrylic shadow' onClick='reply3()'></button>
+			<button id='ButtonOne' class='button acrylic' onClick='reply1()'></button>
+			<button id='ButtonTwo' class='button acrylic' onClick='reply2()'></button>
+			<button id='ButtonThree' class='button acrylic' onClick='reply3()'></button>
 		</div>
 	</div>
-	<div class='hidden shadow acrylic' id='DeadCard'>
+	<div class='hidden acrylic' id='DeadCard'>
 		<div>
 			<h3>You have died!</h3>
 		  <p id='DeadText' style='margin: 0;'></p>
 		</div>
 	  </div>
-	  <div class='hidden shadow acrylic' id='EndCard'>
+	  <div class='hidden acrylic' id='EndCard'>
 		<div>
 		  <h3>You have completed survival mode!</h3>
 		  <p id='EndText' style='margin: 0;'></p>
@@ -54,9 +54,9 @@
 	<div class='hpmessage hidden'>
 		<p class='hptext'></p>
 	</div>
-	<nav class='shadow acrylic'>
+	<nav class='acrylic'>
 		<a href='../index.html' class='navigation'><img src='../resources/home.svg' alt='Home'></a>
-		<button id='ButtonFour' type='button' class='button acrylic shadow' style='width: 30%;' onClick='nextScenario()'>Continue</button>
+		<button id='ButtonFour' type='button' class='button acrylic' style='width: 30%;' onClick='nextScenario()'>Continue</button>
 		<a href='./Survival.html' class='navigation'><img src='../resources/refresh.svg' alt='Home'></a>
 	</nav>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
