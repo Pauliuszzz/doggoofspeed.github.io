@@ -6,7 +6,7 @@ var scenarios = [
     "scenario": "They were.. They were building something... The building looked strong and the bricks were a sight to behold. The foundation was already built. What could it be?",
     "answer1": "Ask the workers",
     "answer2": "Look for some clues",
-    "skipto2": 6,
+    "skipto2": 8,
   },
   //Brother Theo
   {
@@ -43,7 +43,7 @@ var scenarios = [
     "scenario": "The first place that intrigued you was the base of the building, so that was the first place you went. The thing that you noticed was that the building had curved walls meaning that it was going to be a tower. You found 3 people inside: 2 were workers and 1 wasn't. He was punching the wall and yet it seemed like no one was bothered to see him.",
     "answer1": "Follow the boxer",
     "answer2": "Go back outside",
-    "skipto2": 11,
+    "skipto2": 13,
   },
   {
     "scenario": "You followed the weird boxer. First, he went to eat and so did you. Apparently you were brought here to work. But hey, at least they gave food.",

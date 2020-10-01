@@ -2,12 +2,6 @@ window.onload = function onload() {
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	text();
-	if (localStorage.getItem('fx') != 'true') {
-        $('nav').css({'backdrop-filter': 'none'});
-	}
-	if (localStorage.getItem('fx') == 'false'){
-		$('.flexmain > div').css({'animation': 'none'});
-	}
 }
 
 function text() {
@@ -45,7 +39,7 @@ function text() {
 		$('#ButtonFour').removeClass('disabled');
 		$('#ButtonTwo, #ButtonThree').addClass('disabled');
 			if (scenarios[count].skipto1 != null){
-				count = scenarios[count].skipto1;
+				count = (scenarios[count].skipto1 - 2);
 			}
 				if (localStorage.getItem('sound') == 'true') {
 					document.getElementById('btnsfx1').play();
@@ -59,7 +53,7 @@ function text() {
 		$('#ButtonFour').removeClass('disabled');
 		$('#ButtonOne, #ButtonThree').addClass('disabled');
 			if (scenarios[count].skipto2 != null){
-				count = scenarios[count].skipto2;
+				count = (scenarios[count].skipto2 - 2);
 			}
 				if (localStorage.getItem('sound') == 'true') {
 					document.getElementById('btnsfx2').play();
@@ -73,7 +67,7 @@ function text() {
 		$('#ButtonFour').removeClass('disabled');
 		$('#ButtonOne, #ButtonTwo').addClass('disabled');
 			if (scenarios[count].skipto3 != null){
-				count = scenarios[count].skipto3;
+				count = (scenarios[count].skipto3 - 2);
 			}
 				if (localStorage.getItem('sound') == 'true') {
 					document.getElementById('btnsfx3').play();

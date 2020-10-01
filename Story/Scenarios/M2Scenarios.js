@@ -29,16 +29,16 @@ var scenarios = [
 		"scenario": "You had a night's sleep. In the morning you decided to find some work and get some money, to stop doing nothing and to do something, to stand up and move your hands to improve your society, or yourself, to stop singing around, to stop rolling on the ground, to stop yawning all day round.",
 		"answer1": "Go to the bar",
 		"answer2": "Read the announcement board",
-		"skipto2": 15,
+		"skipto2": 17,
   },
   //Bar
   {
 		"scenario": "The bar is fairly empty. There are maybe 5 people excluding you. They are all sitting at the same table. Whispering to each other.",
 		"answer1": "Sneak up on them and try to overhear something.",
     "answer2": "Ask them if you could help.",
-    "skipto2": 7,
+    "skipto2": 9,
 		"answer3": "Ask the bartender if he has a job",
-		"skipto3": 10,
+		"skipto3": 12,
   },
   //Brawl
   {
@@ -73,9 +73,9 @@ var scenarios = [
 		"scenario": "Lucky for you, the club is open every evening. You can bet on:<br>Rogan Starag - the richest brawler in the club.<br>Edgar Wiggins - the small and quick one.<br>Nilus Stone - his name doesn't decieve. He is as strong as a rock.",
 		"answer1": "Rogan Starrag",
     "answer2": "Edgar Wiggins",
-    "skipto2": 13,
+    "skipto2": 15,
 		"answer3": "Nilus Stone",
-		"skipto3": 14,
+		"skipto3": 16,
   },
   {
     "scenario": "You bid for Rogan. He won both matches. Could he be bring other competitors? Eh, it doesn't matter anyways. You got your winnigs.",
@@ -97,9 +97,9 @@ var scenarios = [
 		"scenario": "The announcement board has 3 job offers:<br>1. An agressive mice infestation was reported in the lumberjack's house nearby. For more info and payment, contact the lumberjack.<br>2. Grave robbers have been seen last night in the Ìgil's graveyard. For more info, contact The bailiff.<br>3. Men are needed to help town's guards fight bandits. For more info, contact Lord Duding.",
 		"answer1": "Mice infestation",
 		"answer2": "Grave robbers",
-		"skipto2": 19,
+		"skipto2": 21,
 		"answer3": "Bandit hunt",
-		"skipto3": 24,
+		"skipto3": 26,
   },
   //Mice Infestation
   {
@@ -127,9 +127,9 @@ var scenarios = [
 		"scenario": "It was your time to shine. You saw 6 people tonight. They must have recruited someone new. You could clearly see everyone, except the guy digging the hole.",
     "answer1": "Focus on remembering their faces",
     "answer2": "Focus on remembering their physical features",
-    "skipto2": 23,
+    "skipto2": 25,
     "answer3": "Focus on remembering their clothing",
-    "skipto3": 23   
+    "skipto3": 25   
   },
   {
     "scenario": "You went to the baillif later that morning and drew him all the faces you could see. He thanked you and rewarded handsomely.",
@@ -149,7 +149,7 @@ var scenarios = [
 		"scenario": "You went east looking for the bandits. They were last seen in a small forest. You were a few kilometers from Ìgil when 2 of the villagers decided to attack the other 3 villagers, including me. While they attacked unexpectedly, we had the advantage in numbers. They managed to injure one of us, but after a while they realised, that if they continue fighting, they'll lose. Scared, they decided to run away.",
 		"answer1": "Try to catch them",
     "answer2": "Make sure the injured villager survives.",
-    "skipto2": 27
+    "skipto2": 29
   },
   {
     "scenario": "You tried to catch them, but you weren't fast enough. When you came back to the injured villager, he was dead. Lord Dudding had mixed feelings. He was happy that the bandit's identities were revealed, but extremely heart broken by the villager's death. You got your payment.",

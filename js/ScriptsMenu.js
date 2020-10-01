@@ -7,24 +7,9 @@ window.onload = function onload() {
             $('.btnsoundn').css({'background': 'rgba(255,100,100,0.5)'});
             break;
         case null:
-            $('.settingpanel, .settingsClose').addClass('hidden');
-            $('.settingbg, .soundpanel').removeClass('hidden');
-            break;
-    }
-    switch (localStorage.getItem('fx')) {
-        case 'true':
-            $('.btnfxy').css({'background': 'rgba(100,255,100,0.5)'});
-            break;
-        case 'false':
-            $('.btnfxn').css({'background': 'rgba(255,100,100,0.5)'});
-            $('.settingbg').css({'backdrop-filter': 'none', 'background-color': '#2c2c2c'});
-            $('nav').css({'backdrop-filter': 'none'});
-            $('.flexhome > div, .flexmissions > div, .flexarcadesurvival > div').css({'animation': 'none'});
-            $('.acrylic').css({'background-color': '#292929'})
-            $('p, h2, svg, .button').addClass('shadow')
-            break;
-        case null:
-            localStorage.setItem('fx', true);
+            SettingSwitch()
+            $('.card, .settingsClose').addClass('hidden');
+            $('setting, .soundpanel').removeClass('hidden');
             break;
     }
 };
@@ -40,58 +25,42 @@ function soundNo() {
     location.reload();
 }
 
-//Fx controller
-function fxYes() {
-    localStorage.setItem('fx', true);
-    location.reload();
-}
-
-function fxNo() {
-    localStorage.setItem('fx', false);
-    location.reload();
-}
-
 //Switcher machanism
 function StorySwitch(){
     $('#home, #arcade, #survival').addClass('hidden');
-    $('body').addClass('story');
     $('#story, nav').removeClass('hidden');
     $('body').removeClass('arcade survival');
     $('body').css('background-color', '#5E7668');
-    if (localStorage.getItem('fx') == 'false') {
-        $('.acrylic').css({'background-color': '#2E3933'})
-    }
     if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx1').play();
 	}
 }
 
-function ArcadeSwitch(){
+function ArcadeSwitch() {
 	$('#home, #story, #survival').addClass('hidden');
-    $('body').addClass('arcade');
     $('#arcade, nav').removeClass('hidden');
-    $('body').removeClass('story survival');
     $('body').css('background-color', '#8E3E6C');
-    if (localStorage.getItem('fx') == 'false') {
-        $('.acrylic').css({'background-color': '#451E35'})
-    }
     if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx2').play();
 	}
 }
 
-function SurvivalSwitch(){
+function SurvivalSwitch() {
 	$('#home, #story, #arcade').addClass('hidden');
-    $('body').addClass('survival');
     $('#survival, nav').removeClass('hidden');
-    $('body').removeClass('story arcade');
     $('body').css('background-color', '#8E3939');
-    if (localStorage.getItem('fx') == 'false') {
-        $('.acrylic').css({'background-color': '#451C1C'})
-    }
     if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx3').play();
 	}
+}
+
+function SettingSwitch() {
+	$('#home, #story, #arcade, #survival').addClass('hidden');
+    $('#setting, .settingsClose').removeClass('hidden');
+    $('nav').addClass('hidden');
+    if (localStorage.getItem('sound') == 'true') {
+		document.getElementById('btnsfx3').play();
+    }
 }
 
 //Story mode ending counter
@@ -178,13 +147,4 @@ if (localStorage.getItem('MaxSurvivedHard') == 20) {
 function resetEverything() {
     localStorage.clear();
     location.reload();
-}
-
-//Opens Settings Menu
-function settings() {
-    $('.settingbg').removeClass('hidden');
-    $('nav').addClass('hidden');
-    if (localStorage.getItem('fx') == 'false') {
-        $('.acrylic').css({'background-color': 'rgb(44, 44, 44)'})
-    }
 }

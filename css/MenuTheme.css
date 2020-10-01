@@ -63,7 +63,7 @@ nav {
 	font-family: Bitmgothic;
 }
 
-.flexmissions, .flexhome, .flexarcadesurvival {
+.flexmissions, .flexhome, .flexarcadesurvival, .flexsettings {
 	display: flex;
 	flex-flow: column;
 	align-items: center;
@@ -72,14 +72,14 @@ nav {
 	margin-bottom: .5em;
 }
 
-.flexmissions > div, .flexhome > div, .flexarcadesurvival > div {
+.flexmissions > div, .flexhome > div, .flexarcadesurvival > div, .flexsettings > div {
 	animation: hover 10s infinite;
 }
 
-.flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2) { animation-delay: 0.5s }
-.flexmissions > div:nth-child(3), .flexhome > div:nth-child(3), .flexarcadesurvival > div:nth-child(3) { animation-delay: 1s }
-.flexmissions > div:nth-child(4) { animation-delay: 1.5s }
-.flexmissions > div:nth-child(5) { animation-delay: 2s }
+.flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2), .flexsettings > div:nth-child(2) { animation-delay: .3s }
+.flexmissions > div:nth-child(3), .flexhome > div:nth-child(3), .flexarcadesurvival > div:nth-child(3), .flexsettings > div:nth-child(3) { animation-delay: .6s }
+.flexmissions > div:nth-child(4), .flexsettings > div:nth-child(4) { animation-delay: .9s }
+.flexmissions > div:nth-child(5), .flexsettings > div:nth-child(5) { animation-delay: 1.2s }
 
 .card {
 	margin: 10px 10px 5px;
@@ -98,15 +98,11 @@ nav {
 .info {
 	width: 70%;
 	margin: auto;
-	margin-top: 2em;
+	margin-top: 1em;
 }
 
 .modes {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: center;
 	margin-bottom: 4em;
-	-webkit-animation: fadein .35s;;
 	animation: fadein .35s;
 	will-change: opacity, transform;
 }
@@ -195,10 +191,6 @@ nav {
 	width: 24px;
 }
 
-.reset, .resetsurvival {
-	width: 70%;
-}
-
 .settingsbtn {
 	position: absolute;
 	width: 36px;
@@ -210,38 +202,30 @@ nav {
 }
 
 .settingsClose {
-	position: absolute;
+	position: fixed;
 	width: 36px;
     height: 36px;
 	top: 0;
 	left: 0;
 	margin: 10px;
+	animation: fadein .35s;
+	will-change: opacity, transform;
 }
 
 .settingsbtn:active {
 	transform: rotate(360deg);
 }
 
-.settingbg {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.7);
-	top: 0;
-	left: 0;
-	backdrop-filter: blur(4px);
-	padding-top: 1em;
-	overflow-y: scroll;
-	animation: fadein 0.35s;
-	will-change: opacity, transform;
-}
-
 .settingpanel {
-	padding: 10px;
-	width: 250px;
-	margin: 2em auto;
+	width: 70%;
+	margin: auto;
+	margin-top: 1em;
+	padding: 1em;
 }
 
+.soundpanel {
+	margin-top: 2em;
+}
 /* ANIMATIONS */
 
 @keyframes fadein {
@@ -283,12 +267,12 @@ nav {
 		height: 36px;
 	}
 
-	.flexmissions, .flexhome, .flexarcadesurvival {
+	.flexmissions, .flexhome, .flexarcadesurvival, .flexsettings {
 		flex-flow: row wrap;
 		width: 100%;
 	}
 
-	.flexhome {
+	.flexhome, .flexsettings {
 		transform: translateY(25%);
 	}
 
@@ -303,7 +287,7 @@ nav {
 		padding-top: 2em;
 	}
 
-	.greeter, .info {
+	.greeter, .info, .settingpanel {
 		width: 25%;
 		height: 15em;
 		margin: 0 3%;

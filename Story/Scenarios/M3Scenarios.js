@@ -6,7 +6,7 @@ var scenarios = [
       "scenario": "It was a lovely day, when people began building something in the main street. They were building flower stands. What could they be celebrating was the only question in your head.",
       "reply1": "\"It's the great flower festival tommorow. Don't you know?\" An old lady said. She must know what she is talking about. She is old after all",
       "answer1": "Ask why they are building flower stands",
-      "skipto1": 6,
+      "skipto1": 8,
       "answer2": "Buy some flowers",
     },
     //Flowers
@@ -14,22 +14,22 @@ var scenarios = [
       "scenario": "You were about to buy some daisies, but then you noticed how overpriced they are and had to rethink the decision. It was a total ripoff.",
       "answer1": "Still buy the flowers",
       "answer2": "Ask for a discount",
-      "skipto2": 3,
+      "skipto2": 5,
       "answer3": "Don't buy the flowers",
-      "skipto3": 6,
+      "skipto3": 8,
     },
     {
       "scenario": "You looked at your wallet, and it was empty. You had no choise but to go back home and get some money. When you came back, the price was even higher. That slimy merchant!",
       "answer1": "Pay the premium",
-      "skipto1": 4,
+      "skipto1": 6,
       "answer2": "Don't buy the flowers",
-      "skipto2": 6,
+      "skipto2": 8,
     },
     {
       "scenario": "You asked for a discount. And expected one too, but oh boy how wrong you were. The seller decided to increase the already absurd price. You were furiuos, but intrigued.",
       "answer1": "Pay the premium",
       "answer2": "Don't buy the flowers",
-      "skipto2": 6,
+      "skipto2": 8,
     },
     {
       "scenario": "You got the flowers... But at what cost?",
@@ -56,14 +56,14 @@ var scenarios = [
       "scenario": "Nothing was really out of place, except the high amount of flowers, although I guess it is the Flower fest after all. Also, the person behind the counter - \"Finn\" was kind of suspicious",
       "answer1": "Keep an eye on the suspicious trader",
       "answer2": "Go around and search for flowers to sell",
-      "skipto2": 14,
+      "skipto2": 16,
     },
     //Suspicious Merchant
     {
       "scenario": "You were going around and around the main street for the fifth time when suddenly the merchant left his kiosk. Your curiosity was aroused.",
       "answer1": "Take a closer look at his kiosk",
       "answer2": "Try to tail him",
-      "skipto2": 11,
+      "skipto2": 13,
     },
     {
       "scenario": "You took a look at his work place and you found nothing extraordinary... Except some papers. They were about some \"Tower of Igil\". Wierd... No such tower existed. Suddenly your head started aching and your vision went dark... Perhaps you saw something you shouldn't have.",
@@ -74,7 +74,7 @@ var scenarios = [
       "scenario": "He went to a construction site. The people working there wore fairly nice clothes, and looked overall wealthy. It was weird to see them work such a dirty job.",
       "answer1": "Ask what they are building",
       "answer2": "Continue tailing the merchant",
-      "skipto2": 13,
+      "skipto2": 15,
     },
     {
       "scenario": "Apparently they were building a tower... They also warned you not to tresspass, apparently things could get ugly. And they definately got ugly. Soon somebody hit you in the head. You lost your consciounsess",
@@ -91,14 +91,14 @@ var scenarios = [
       "scenario": "You went into the fields and unsurprisingly they were empty. Not a single flower. Those foolish people destroying nature...",
       "answer1": "Continue the search in the forest.",
       "answer2": "Continue and search the hills.",
-      "skipto2": 18,
+      "skipto2": 20,
     },
     //Forest
     {
       "scenario": "While going through the forest you saw a recently abandoned camp. It was left in a horrible condition. There were some flowers in the camp. Maybe the people who stopped here were flower merchants...",
       "answer1": "Just take the flowers and get out",
       "answer2": "Search around the camp",
-      "skipto2": 17,
+      "skipto2": 19,
     },
     {
       "scenario": "You had hopes, that you could sell the flowers at a high margin, but you weren't the only one with the eyes on the prize. Somebody from behind saw your flowers and attacked you. Your eyes went dark.",

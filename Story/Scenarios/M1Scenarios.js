@@ -25,7 +25,7 @@ var scenarios = [
 		"answer2": "Ask where are they going",
 		"reply3": "You joined the group. Apparently, they were accusing one of the monks from the monastery of protecting witches. Monk's name was Brother Theo. Since the monastery denied any wrong doings, the villagers decided to take matters into their own hands.",
 		"answer3": "Join them",
-		"skipto3": 5
+		"skipto3": 7
 	},
 	{
 		"scenario": "After 1h you find a nice place to rest. You find some interesting things. Most likely somebody from the group you saw lost it",
@@ -48,9 +48,9 @@ var scenarios = [
 	{
 		"scenario": "Now you must pick which road you will go.",
 		"answer1": "Go the longer route",
-		"skipto1": 10,
+		"skipto1": 12,
 		"answer2": "Go the shorter route",
-		"skipto2": 12
+		"skipto2": 14
 	},
 
 	//Route Monk
@@ -97,7 +97,7 @@ var scenarios = [
 		"answer2": "Go and investigate",
 		"reply3": "You went back to the intersection. The beggar was no longer there. You chose the main road this time.",
 		"answer3": "Go back to the intersection, and pick the shorter route instead",
-		"skipto3": 12
+		"skipto3": 14
 	},
 	{
 		"scenario": "You were kidnapped. From what the pirates were speaking, you understood, that they were planning to sell you as a serf to a local lord. They were planning to kidnap more people in the meantime. Next day another farmer joined you in the suffering. One night you and the farmer managed to untie yourselves.",
@@ -115,10 +115,10 @@ var scenarios = [
 		"reply1": "The water is cold and refreshing. You feel like you've ascended.",
 		"answer1": "Drink from it",
 		"reply2": "You put your feet there and sigh...",
-		"skipto2": 14,
+		"skipto2": 16,
 		"answer2": "Wash your feet",
 		"answer3": "Follow it instead of the road",
-		"skipto3": 15
+		"skipto3": 17
 	},
 	{
 		"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily you are quite close to the city.",

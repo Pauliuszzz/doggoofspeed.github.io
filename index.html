@@ -44,24 +44,25 @@
 		</symbol>
 	</svg>
 	<header>
+		<a class='settingsClose hidden' onClick='location.reload()'><svg class='icon'><use xlink:href='#back'/></svg></a>
 		<div style='margin-top: 1em'>
 			<h1 class='project'>Project</h1>
 			<h1 class='passage'>Passage</h1>
 		</div>
 	</header>
-	<a class='settingsbtn' onClick='settings()'><svg class='icon'><use xlink:href='#settings'/></svg></a>
-	<div class='modes' id='home' style='margin: 0'>
+	<a class='settingsbtn' onClick='SettingSwitch()'><svg class='icon'><use xlink:href='#settings'/></svg></a>
+	<div class='modes' id='home'>
 		<div class='flexhome'>
-			<div class='shadow acrylic greeter'>
+			<div class='acrylic greeter'>
 				<a class='switchesmain switchestory' onclick='StorySwitch()'><svg class='icon storyicon'><use xlink:href='#storyicon'/></svg><p>Story Mode</p></a>
 				<a class='switchesmain switcharcade' onclick='ArcadeSwitch()'><svg class='icon arcadeicon'><use xlink:href='#arcadeicon'/></svg><p>Arcade Mode</p></a>
 				<a class='switchesmain switchsurvival' onclick='SurvivalSwitch()'><svg class='icon survivalicon'><use xlink:href='#survivalicon'/></svg><p style='margin: 0'>Survival Mode</p></a>
 			</div>
-			<div class='shadow acrylic info' style='text-align: left'>
+			<div class='acrylic info' style='text-align: left'>
 				<h2>New:</h2>
 				<p>Bug and exploit fixes, some UI and UX improvements.</p>
 			</div>
-			<div class='shadow acrylic info' style='text-align: left'>
+			<div class='acrylic info' style='text-align: left'>
 				<h2>Up next:</h2>
 				<p>Mission 5, Apk, and more.</p>
 				<h2>Version:</h2>
@@ -72,45 +73,45 @@
 	<div class='modes hidden' id='story'>
 		<h1 style='margin: .5em;'>Story Mode</h1>
 		<div class='flexmissions'>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<svg class='icon trophy finM1'><use xlink:href='#trophy'/></svg>
 				<h2 style='text-shadow: 2px 2px #3498db'>To Ìgil</h2>
 				<p id='M1'></p>
-				<a href='Story/M1.html' class='button shadow'><svg class='icon'><use xlink:href='#play'/></svg></a>
+				<a href='Story/M1.html' class='button'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			</div>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<svg class='icon trophy finM2'><use xlink:href='#trophy'/></svg>
 				<h2 style='text-shadow: 2px 2px #134e5e'>Fight to survive</h2>
 				<p id='M2'></p>
-				<a href='Story/M2.html' id='M2-play' class='button shadow'><svg class='icon'><use xlink:href='#play'/></svg></a>
+				<a href='Story/M2.html' id='M2-play' class='button'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			</div>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<svg class='icon trophy finM3'><use xlink:href='#trophy'/></svg>
 				<h2 style='text-shadow: 2px 2px #7b4397'>Flower Fest</h2>
 				<p id='M3'></p>
-				<a href='Story/M3.html' id='M3-play' class='button shadow'><svg class='icon'><use xlink:href='#play'/></svg></a>
+				<a href='Story/M3.html' id='M3-play' class='button'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			  </div>
-			  <div class='card acrylic shadow'>
+			  <div class='card acrylic'>
 				<svg class='icon trophy finM4'><use xlink:href='#trophy'/></svg>
 				<h2 style='text-shadow: 2px 2px #3b4371'>Conspiracy</h2>
 				<p id='M4'></p>
-				<a href='Story/M4.html' id='M4-play' class='button shadow'><svg class='icon'><use xlink:href='#play'/></svg></a>
+				<a href='Story/M4.html' id='M4-play' class='button'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			  </div>
-			  <div class='card acrylic shadow'>
+			  <div class='card acrylic'>
 				<svg class='icon trophy finM4'><use xlink:href='#trophy'/></svg>
 				<h2 style='text-shadow: 2px 2px #3b4371'>The Great Escape</h2>
 				<p id='M5'></p>
-				<a href='Story/M4.html' id='M4-play' class='button shadow'><svg class='icon'><use xlink:href='#play'/></svg></a>
+				<a href='Story/M4.html' id='M4-play' class='button'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			  </div>
 		</div>
 	</div>
 	<div class='modes hidden' id='arcade'>
 		<h1 style='margin: .5em;'>Arcade Mode</h1>
 		<div class='flexarcadesurvival'>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<a href='Arcade/Arcade.html'><svg class='icon' style='width: 160px; height: 160px'><use xlink:href='#play'/></svg></a>
 			</div>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<p id='ArcadeMode'></p>
 			</div>
 		</div>
@@ -118,44 +119,39 @@
 	<div class='modes hidden' id='survival'>
 		<h1 style='margin: .5em;'>Survival Mode</h1>
 		<div class='flexarcadesurvival'>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<svg class='icon trophy normal'><use xlink:href='#trophy'/></svg>
 				<h3>Normal</h3>
 				<a class='playbig' href='Survival/Survival.html'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			</div>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<svg class='icon trophy hard'><use xlink:href='#trophy'/></svg>
 				<h3>Hard</h3>
 				<a class='playbig' href='Survival/Hardcore.html'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			</div>
-			<div class='card acrylic shadow'>
+			<div class='card acrylic'>
 				<p id='SurvivalMode'></p>
 			</div>
 		</div>
 	</div>
-	<div class='settingbg hidden'>
-		<a class='settingsClose' onClick='location.reload()'><svg class='icon'><use xlink:href='#back'/></svg></a>
-		<div class='acrylic shadow settingpanel soundpanel'>
-			<svg class='icon' style='width: 150px; height: 150px; margin: auto'><use xlink:href='#sound'/></svg><br>
-			<a class='button shadow btnsoundy' onClick='soundYes()'>On</a>
-			<a class='button shadow btnsoundn' onClick='soundNo()'>Off</a>
-		</div>
-		<div class='acrylic shadow settingpanel'>
-			<p>Additional Effects (may impact performance)</p>
-			<a class='button shadow btnfxy' onClick='fxYes()'>On</a>
-			<a class='button shadow btnfxn' onClick='fxNo()'>Off</a>
-		</div>
-		<div class='acrylic shadow settingpanel'>
-			<a onClick='resetEverything()' style='font-size: 1.5em;'>Reset Stats</a>
-		</div>
-		<div class='acrylic settingpanel' style='margin-bottom: 3em'>
-			<h2>Made by:</h2>
-			<p>Vytautas Butenas</p>
-			<h2>Sound effects:</h2>
-			<p>opengameart.com<br>kenney.nl</p>
+	<div class='modes hidden' id='setting'>
+		<div class='flexsettings'>
+			<div class='acrylic card soundpanel' style='padding: 1em 0'>
+				<svg class='icon' style='width: 150px; height: 150px; margin: auto'><use xlink:href='#sound'/></svg><br>
+				<a class='button btnsoundy' onClick='soundYes()'>On</a>
+				<a class='button btnsoundn' onClick='soundNo()'>Off</a>
+			</div>
+			<div class='acrylic card' style='padding: 1em 0'>
+				<h2>Credits:</h2>
+				<p>Vytautas Butenas<br>opengameart.com<br>kenney.nl</p>
+			</div>
+			<div class='acrylic card' style='padding: 1em 0'>
+				<h2>Reset Stats</h2>
+				<a onClick='resetEverything()' class='button'>Reset</a>
+			</div>
 		</div>
 	</div>
-	<nav class='shadow acrylic hidden'>
+	<nav class='acrylic hidden'>
 		<a class='switches' onclick='StorySwitch()'><svg class='iconsmol storyicon'><use xlink:href='#storyicon'/></svg></a>
 		<a class='switches' onclick='ArcadeSwitch()'><svg class='iconsmol arcadeicon'><use xlink:href='#arcadeicon'/></svg></a>
 		<a class='switches' onclick='SurvivalSwitch()'><svg class='iconsmol survivalicon'><use xlink:href='#survivalicon'/></svg></a>
