@@ -2,12 +2,14 @@ window.onload = function onload() {
     switch (localStorage.getItem('sound')) {
         case 'true':
             $('.btnsoundy').css({'background': 'rgba(100,255,100,0.5)'});
+            $('#home').removeClass('hidden');
             break;
         case 'false':
             $('.btnsoundn').css({'background': 'rgba(255,100,100,0.5)'});
+            $('#home').removeClass('hidden');
             break;
         case null:
-            SettingSwitch()
+            SettingSwitch();
             $('.card, .settingsClose').addClass('hidden');
             $('setting, .soundpanel').removeClass('hidden');
             break;
@@ -31,6 +33,7 @@ function StorySwitch(){
     $('#story, nav').removeClass('hidden');
     $('body').removeClass('arcade survival');
     $('body').css('background-color', '#5E7668');
+    $('.modes').css('margin-bottom', '4em');
     if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx1').play();
 	}
@@ -40,6 +43,7 @@ function ArcadeSwitch() {
 	$('#home, #story, #survival').addClass('hidden');
     $('#arcade, nav').removeClass('hidden');
     $('body').css('background-color', '#8E3E6C');
+    $('.modes').css('margin-bottom', '4em');
     if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx2').play();
 	}
@@ -49,6 +53,7 @@ function SurvivalSwitch() {
 	$('#home, #story, #arcade').addClass('hidden');
     $('#survival, nav').removeClass('hidden');
     $('body').css('background-color', '#8E3939');
+    $('.modes').css('margin-bottom', '4em');
     if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx3').play();
 	}
@@ -116,6 +121,20 @@ if (localStorage.getItem('M4-Endings') != null) {
         else {
             $('#M4').html('Conspiracists found: 0/3');
         }
+
+if (localStorage.getItem('M5-Endings') != null) {
+    $('#M5').html('Endings achieved: ' + localStorage.getItem('M5-Endings') + '/?<br>Failures achieved:' + localStorage.getItem('M5-Failures') + '/?');
+    if (localStorage.getItem('M5-Endings') == 3 && localStorage.getItem('M5-Endings') == 3) {
+        $('.finM5').css('fill', 'gold');
+    }
+}
+    else if (localStorage.getItem('M4-Endings') == null) {
+        $('#M5').html('Find all the conspirators to unlock');
+        $('#M5-play').addClass('disabled');
+    }
+        else {
+            $('#M5').html('Endings achieved: 0/?<br>Failures achieved: 0/?');
+            }
 
 //Tells progress
 if(localStorage.getItem('Highscore') > 0){

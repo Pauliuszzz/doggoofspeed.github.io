@@ -200,22 +200,13 @@
 		if (quit == true){
 			switch (Object.keys(scenarios[count]).pop()) {
 			case 'ending1':
-				if (localStorage.getItem('M4-1') == null){
-					endings++;
-					localStorage.setItem('M4-1', 1);
-				}
+				$('#TheoCard').removeClass('hidden');
 				break;
 			case 'ending2':
-				if (localStorage.getItem('M4-2') == null){
-					endings++;
-					localStorage.setItem('M4-2', 1);
-				}
+				$('#StarragCard').removeClass('hidden');
 				break;
 			case 'ending3':
-				if (localStorage.getItem('M4-3') == null){
-					endings++;
-					localStorage.setItem('M4-3', 1);
-				}
+				$('#DuddingCard').removeClass('hidden');
 				break;
 			}
 			$('.flexmain').hide();
