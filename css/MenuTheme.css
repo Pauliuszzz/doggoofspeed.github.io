@@ -74,6 +74,8 @@ nav {
 
 .flexmissions > div, .flexhome > div, .flexarcadesurvival > div, .flexsettings > div {
 	animation: hover 10s infinite;
+	will-change: transform;
+	box-shadow: 5px 10px 8px rgba(0, 0, 0, .5);
 }
 
 .flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2), .flexsettings > div:nth-child(2) { animation-delay: .3s }
