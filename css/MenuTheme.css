@@ -75,7 +75,6 @@ nav {
 .flexmissions > div, .flexhome > div, .flexarcadesurvival > div, .flexsettings > div {
 	animation: hover 10s infinite;
 	will-change: transform;
-	box-shadow: 5px 10px 8px rgba(0, 0, 0, .5);
 }
 
 .flexmissions > div:nth-child(2), .flexhome > div:nth-child(2), .flexarcadesurvival > div:nth-child(2), .flexsettings > div:nth-child(2) { animation-delay: .3s }
@@ -128,35 +127,14 @@ nav {
 	height: 24px;
 }
 
-.switchestory:hover, .storyicon:hover {
-	fill: #6fb98f;
-	color: #6fb98f;
+.switchstory:hover, .switcharcade:hover, .switchsurvival:hover {
+	transform: scale(0.90);
 }
 
-.switchestory:active, .storyicon:active {
-	fill: #48775c;
-	color: #48775c;
+.switchstory:active, .switcharcade:active, .switchsurvival:active {
+	transform: scale(0.75);
 }
 
-.switcharcade:hover, .arcadeicon:hover {
-	fill: #8E3E6C;
-	color: #8E3E6C;
-}
-
-.switcharcade:active, .arcadeicon:active {
-	fill: #642c4c;
-	color: #642c4c;
-}
-
-.switchsurvival:hover, .survivalicon:hover {
-	fill: #8E3939;
-	color: #8E3939;
-}
-
-.switchsurvival:active, .survivalicon:active {
-	fill: #662929;
-	color: #662929;
-}
 
 .button {
 	height: auto;
@@ -182,6 +160,7 @@ nav {
 	border-radius: 15px;
 	border: thin solid #ddd;
 	background-color: rgba(0, 0, 0, .5);
+	box-shadow: 7px 7px 7px rgba(0, 0, 0, .3);
 }
 
 .trophy {
@@ -213,8 +192,12 @@ nav {
 	will-change: opacity, transform;
 }
 
+.settingsbtn:hover {
+	transform: scale(0.90);
+}
+
 .settingsbtn:active {
-	transform: rotate(360deg);
+	transform: rotate(360deg), scale(0.90);
 }
 
 .settingpanel {

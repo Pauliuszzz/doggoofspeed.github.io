@@ -139,6 +139,7 @@ input {
 	border-radius: 15px;
 	border: thin solid #ddd;
 	background: rgba(0, 0, 0, .3);
+	box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
 }
 
 .hidden {

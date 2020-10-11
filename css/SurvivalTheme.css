@@ -144,9 +144,13 @@ button:active {
 
 .flexmain > div {
     width: 70%;
-    margin: auto;
-	animation: fadein .35s;
+	margin: auto;
 	animation: hover 10s infinite;
+	will-change: opacity, transform;
+}
+
+.reply {
+	animation: fadein .35s;
 	will-change: opacity, transform;
 }
 
@@ -157,6 +161,7 @@ button:active {
 	border-radius: 15px;
 	border: thin solid #8E0E00;
 	background: rgba(0, 0, 0, .5);
+	box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
 }
 
 .hpmessage {
