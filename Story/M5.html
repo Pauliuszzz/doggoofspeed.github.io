@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<title>Project Passage - Story</title>
+	<link rel='icon' type='image/png' href='../resources/Project_Passage.png'/>
+	<meta name='theme-color' content='#C04848'>
+	<meta charset='UTF-8'>
+	<meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1'>
+	<link rel='stylesheet' href='../css/StoryTheme.css' media='screen'>
+	<style>
+		body {
+			background: linear-gradient(to bottom right, #C04848, #480048) fixed;
+		}
+	</style>
+	<audio id="btnsfx1" src="../resources/btnsfx1.ogg" preload="none"></audio>
+	<audio id="btnsfx2" src="../resources/btnsfx2.ogg" preload="none"></audio>
+	<audio id="btnsfx3" src="../resources/btnsfx3.ogg" preload="none"></audio>
+	<audio id="btnsfx4" src="../resources/btnsfx4.ogg" preload="none"></audio>
+	<audio id="endCard" src="../resources/endCard.ogg" preload="none"></audio>
+</head>
+<body id='body'>
+	<header>
+		<div style='margin: 1em'>
+			<h1 class='project'>Project</h1>
+			<h1 class='passage'>Passage</h1>
+		</div>
+	</header>
+	<div class='flexmain'>
+		<div class='textdiv'>
+			<p class='scenario acrylic' id='scenario-text'></p>
+		</div>
+		<div class='replydiv'>
+			<p class='reply acrylic' id='reply-text'></p>
+		</div>
+		<div class='buttondiv'>
+			<button id='ButtonOne' class='button acrylic' onClick='reply1()'></button>
+			<button id='ButtonTwo' class='button acrylic' onClick='reply2()'></button>
+			<button id='ButtonThree' class='button acrylic' onClick='reply3()'></button>
+		</div>
+	</div>
+	<div class='card hidden acrylic' id='EndCard'>
+		<h3>Mission 5 Completed</h3>
+		<p id='M3'></p>
+		<a href='../index.html' class='icon-only'><img src='../resources/home.svg' alt='Home'></a>
+		<a href='./M3.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
+		<a href='./M4.html' class='icon-only'><img src='../resources/forward.svg' alt='Forward'></a>
+	</div>
+	<nav class='acrylic'>
+		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario()'>Continue</button>
+	</nav>
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
+	<script src='../js/ScriptsStory.js' defer></script>
+	<script src='Scenarios/M5Scenarios.js' async></script>
+	<script>
+		var endings = localStorage.getItem('M3-Endings');
+		var quit = false;
+		var path = 0;
+		var count = 0;
+	
+	//Ending Counter
+	function endingcounter(){
+		switch (Object.keys(scenarios[count]).pop()) {
+			case 'ending1':
+				if (localStorage.getItem('M3-1') == null){
+					endings++;
+					localStorage.setItem('M3-1', 1);
+				}
+				break;
+			case 'ending2':
+				if (localStorage.getItem('M3-2') == null){
+					endings++;
+					localStorage.setItem('M3-2', 1);
+				}
+				break;
+			case 'ending3':
+				if (localStorage.getItem('M3-3') == null){
+					endings++;
+					localStorage.setItem('M3-3', 1);
+				}
+				break;
+			case 'ending4':
+				if (localStorage.getItem('M3-4') == null){
+					endings++;
+					localStorage.setItem('M3-4', 1);
+				}
+				break;
+			case 'ending5':
+				if (localStorage.getItem('M3-5') == null){
+					endings++;
+					localStorage.setItem('M3-5', 1);
+				}
+				break;
+			case 'ending6':
+				if (localStorage.getItem('M3-6') == null){
+					endings++;
+					localStorage.setItem('M3-6', 1);
+				}
+				break;
+			case 'ending7':
+				if (localStorage.getItem('M3-7') == null){
+					endings++;
+					localStorage.setItem('M3-7', 1);
+				}
+				break;
+		}
+		localStorage.setItem('M5-Endings', endings);
+		document.getElementById('M5').innerHTML = 'Endings achieved: ' + localStorage.getItem('M5-Endings') + '/?';
+		$('div#EndCard').removeClass('hidden');
+	}
+	</script>
+</body>
+</html>

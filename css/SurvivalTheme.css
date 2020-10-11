@@ -99,11 +99,16 @@ div#EndCard,  div#DeadCard{
 	color: white !important;
 	border: 2px solid #8E0E00;
 	border-radius: 10px;
+	transition: .35s;
 	-webkit-tap-highlight-color: transparent;
 }
 
+button:hover {
+	transform: scale(.95);
+}
+
 button:active {
-	transform:scale(.98)
+	transform: scale(.8);
 }
 
 *,*:focus,*:hover{

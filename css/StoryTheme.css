@@ -66,7 +66,7 @@ nav {
 	color: white !important;
 	border-radius: 10px;
 	background: transparent;
-	transition: all .35s;
+	transition: .35s;
 	-webkit-tap-highlight-color: transparent;
 }
 

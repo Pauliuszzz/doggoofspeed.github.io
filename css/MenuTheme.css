@@ -131,11 +131,11 @@ nav {
 	transition: 0.35s;
 }
 
-.switchstory:hover, .switcharcade:hover, .switchsurvival:hover, .button:hover {
+.switchstory:hover, .switcharcade:hover, .switchsurvival:hover, .button:hover, .playbig:hover > svg{
 	transform: scale(.9);
 }
 
-.switchstory:active, .switcharcade:active, .switchsurvival:active, .button:active {
+.switchstory:active, .switcharcade:active, .switchsurvival:active, .button:active, .playbig:active > svg{
 	transform: scale(.75);
 }
 
@@ -159,6 +159,7 @@ nav {
 .playbig > svg {
 	height: 5em;
 	width: 5em;
+	transition: .35s;
 }
 
 .acrylic {

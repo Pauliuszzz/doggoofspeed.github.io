@@ -131,25 +131,26 @@ h3 {
 	white-space: normal;
 	line-height: normal;
     margin: 5px;
-    color: #212529;
     font-weight: 400;
     text-transform: none;
+    transition: .35s;
     -webkit-tap-highlight-color: transparent;
 }
 
-button:active {
-	transform:scale(.98)
-}
-
-*,*:focus,*:hover{
-    outline: none;
-}
-
-.button:hover {
+button:hover {
     border: 2px inset white;
     background: silver;
     color: #424242;
     box-shadow: -1px -1px #000;
+	transform: scale(.95);
+}
+
+button:active {
+	transform: scale(.8);
+}
+
+*,*:focus,*:hover{
+    outline: none;
 }
 
 .disabled {
