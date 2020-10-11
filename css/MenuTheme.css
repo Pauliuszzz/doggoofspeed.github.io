@@ -42,6 +42,7 @@ a {
 	color: white;
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
+	transition: 0.35s;
 }
 
 nav {
@@ -126,13 +127,16 @@ nav {
 	width: 24px;
 	height: 24px;
 }
-
-.switchstory:hover, .switcharcade:hover, .switchsurvival:hover {
-	transform: scale(0.90);
+.switchstory, .switcharcade, .switchsurvival {
+	transition: 0.35s;
 }
 
-.switchstory:active, .switcharcade:active, .switchsurvival:active {
-	transform: scale(0.75);
+.switchstory:hover, .switcharcade:hover, .switchsurvival:hover, .button:hover {
+	transform: scale(.9);
+}
+
+.switchstory:active, .switcharcade:active, .switchsurvival:active, .button:active {
+	transform: scale(.75);
 }
 
 
@@ -144,6 +148,7 @@ nav {
 	border-radius: 10px;
 	background: transparent;
 	display: inline-block;
+	transition: 0.35s;
 }
 
 .disabled {
@@ -192,12 +197,8 @@ nav {
 	will-change: opacity, transform;
 }
 
-.settingsbtn:hover {
-	transform: scale(0.90);
-}
-
 .settingsbtn:active {
-	transform: rotate(360deg), scale(0.90);
+	transform: rotate(360deg) scale(0.90);
 }
 
 .settingpanel {

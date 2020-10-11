@@ -70,8 +70,12 @@ nav {
 	-webkit-tap-highlight-color: transparent;
 }
 
+button:hover {
+	transform: scale(.95);
+}
+
 button:active {
-	transform:scale(.98)
+	transform: scale(.8);
 }
 
 input {
