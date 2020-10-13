@@ -55,18 +55,6 @@ nav {
     position: fixed;
 }
 
-#EndCard {
-    width: 75%;
-    margin: auto;
-    padding: 0;
-    animation: fadein 0.35s;
-    will-change: opacity, transform;
-}
-
-#EndScore {
-    margin: 1em;
-}
-
 h3 {
     color: white;
     display: block;
@@ -115,6 +103,14 @@ h3 {
 
 .hidden {
 	display: none;
+}
+
+a > img {
+    transition: .35s;
+}
+
+a:hover > img {
+    transform: scale(.95);
 }
 
 .button {
@@ -199,7 +195,6 @@ button:active {
 
 .flexmain > div:nth-child(2) { animation-delay: .3s }
 .flexmain > div:nth-child(3) { animation-delay: .6s }
-.flexmain > div:nth-child(4) { animation-delay: .9s }
 
 .xpmessage {
     font-family: Pixel;
@@ -209,6 +204,18 @@ button:active {
     width: 100%;
     animation: comein 1s;
     will-change: opacity, background-color;
+}
+
+#EndCard {
+    width: 75%;
+    margin: auto;
+    padding: 0;
+    animation: fadein 0.35s;
+    will-change: opacity, transform;
+}
+
+#EndScore {
+    margin: 1em;
 }
 
 *, :after, :before {
@@ -268,6 +275,10 @@ button:active {
     img {
         transform: scale(1.5);
     }
+
+    a:hover > img {
+		transform: scale(1.4);
+	}
 
 	.flexmain {
 		flex-direction: row;

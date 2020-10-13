@@ -89,6 +89,14 @@ div#EndCard,  div#DeadCard{
 	font-family: Bitmgothic;
 }
 
+a > img {
+	transition: .35s;
+}
+
+a:hover > img {
+	transform: scale(.95);
+}
+
 .button {
 	width: 50%;
 	font-size: .8em;
@@ -240,7 +248,11 @@ button:active {
 
     img {
         transform: scale(1.5);
-    }
+	}
+	
+	a:hover > img {
+		transform: scale(1.4);
+	}
 
 	.flexmain {
 		flex-direction: row;
