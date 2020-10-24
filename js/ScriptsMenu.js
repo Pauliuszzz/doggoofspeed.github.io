@@ -10,7 +10,7 @@ window.onload = function onload() {
             break;
         case null:
             SettingSwitch();
-            $('.card, .settingsClose').addClass('hidden');
+            $('.card, .settingsClose, .settingsbtn').addClass('hidden');
             $('setting, .soundpanel').removeClass('hidden');
             break;
     }

@@ -29,13 +29,8 @@ h1 {
 	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-h2, h3 {
-	margin: 10px;
-}
-
-p {
-	margin: 5px;
-	padding: 5px;
+p, h2, h3 {
+	margin: 10px 20px;
 }
 
 a {
@@ -166,7 +161,7 @@ nav {
 	border-radius: 15px;
 	border: thin solid #ddd;
 	background-color: rgba(0, 0, 0, .5);
-	box-shadow: 7px 7px 7px rgba(0, 0, 0, .3);
+	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
 }
 
 .trophy {
@@ -317,6 +312,10 @@ nav {
 @media (min-width: 120em) {
 	body {
 		font-size: 28px; 
+	}
+
+	.trophy {
+		margin-top: -2.5em;
 	}
 
 	.card {
