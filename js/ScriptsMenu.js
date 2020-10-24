@@ -1,7 +1,7 @@
+$('body').append('<audio id="btnsfx1" src="resources/btnsfx1.ogg" preload="auto"></audio>', '<audio id="btnsfx2" src="resources/btnsfx2.ogg" preload="auto"></audio>', '<audio id="btnsfx3" src="resources/btnsfx3.ogg" preload="auto"></audio>', '<audio id="btnsfx4" src="resources/btnsfx4.ogg" preload="auto"></audio>');
 window.onload = function onload() {
     switch (localStorage.getItem('sound')) {
         case 'true':
-            $('body').append('<audio id="btnsfx1" src="resources/btnsfx1.ogg" preload="auto"></audio>', '<audio id="btnsfx2" src="resources/btnsfx2.ogg" preload="auto"></audio>', '<audio id="btnsfx3" src="resources/btnsfx3.ogg" preload="auto"></audio>', '<audio id="btnsfx4" src="resources/btnsfx4.ogg" preload="auto"></audio>');
             $('.btnsoundy').css({'background': 'rgba(100,255,100,0.5)'});
             $('#home').removeClass('hidden');
             break;
