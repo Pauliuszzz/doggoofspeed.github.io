@@ -104,6 +104,11 @@ h3 {
 	display: none;
 }
 
+img {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
 a > img {
   transition: .35s;
 }
