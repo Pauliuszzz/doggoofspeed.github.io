@@ -22,8 +22,7 @@ html {
 }
 
 body {
-	font-family: "MS Sans Serif", "Tahoma", "Verdana", "sans-serif";
-  background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
+  font-family: "MS Sans Serif", "Tahoma", "Verdana", "sans-serif";
   text-align: center;
   color: #212529;
   margin: 0;
@@ -265,7 +264,7 @@ button:active {
 
 @media (min-width: 80em) {
 	body {
-		font-size: 24px; 
+    font-size: 24px;
   }
     
   .scenario, .reply {

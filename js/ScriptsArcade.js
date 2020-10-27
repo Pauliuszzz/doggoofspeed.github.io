@@ -1,6 +1,24 @@
 var count = 0;
 var score = 0;
 
+switch (Math.floor(Math.random() * Math.floor(3))){
+  case 0:
+    $('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
+    if ($(window).width() >= 1280) {
+      $('body').css('background-size', '25%')
+    }
+    break;
+  case 1:
+    $('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
+    break;
+  case 2:
+    $('body').css({'background': 'url(../resources/pattern.jpg) center repeat fixed, #008080', 'background-size': '25%'})
+    if ($(window).width() >= 1280) {
+      $('body').css('background-size', '10%')
+    }
+    break;
+}
+
 window.onload = function onload() {
   if (localStorage.getItem('sound') == 'true') {
     $('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg" preload="none"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg" preload="none"></audio>')
