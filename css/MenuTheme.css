@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Bitmgothic";
+  font-family: "Bitmgothic";
 	src: url('Bitmgothic.woff2');
 	font-display: swap;
 }
 
 @font-face {
-    font-family: "Century Gothic Bold";
+  font-family: "Century Gothic Bold";
 	src: url('CenturyGothic-Bold.woff2');
 	font-display: swap;
 }
@@ -147,8 +147,8 @@ nav {
 }
 
 .disabled {
-    pointer-events: none;
-    opacity: .65;
+  pointer-events: none;
+  opacity: .65;
 }
 
 .playbig > svg {
@@ -175,7 +175,7 @@ nav {
 .settingsbtn {
 	position: absolute;
 	width: 36px;
-    height: 36px;
+  height: 36px;
 	right: 0;
 	top: 0;
 	margin: 5px;
@@ -185,7 +185,7 @@ nav {
 .settingsClose {
 	position: fixed;
 	width: 36px;
-    height: 36px;
+  height: 36px;
 	top: 0;
 	left: 0;
 	margin: 10px;

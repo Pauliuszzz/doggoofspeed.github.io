@@ -1,34 +1,34 @@
 @font-face {
-    font-family: "Bitmgothic";
-    src: url('Bitmgothic.woff2');
-    font-display: swap;
+  font-family: "Bitmgothic";
+  src: url('Bitmgothic.woff2');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Century Gothic Bold";
-    src: url('CenturyGothic-Bold.woff2');
-    font-display: swap;
+  font-family: "Century Gothic Bold";
+  src: url('CenturyGothic-Bold.woff2');
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pixel";
-    src: url('Pixel.woff2');
-    font-display: swap;
+  font-family: "Pixel";
+  src: url('Pixel.woff2');
+  font-display: swap;
 }
 
 html {
-    min-height: 100%;
-    box-sizing: border-box;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 body {
 	font-family: "MS Sans Serif", "Tahoma", "Verdana", "sans-serif";
-    background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
-    text-align: center;
-    color: #212529;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF);
+  text-align: center;
+  color: #212529;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -36,69 +36,69 @@ h1 {
 	font-weight: bold;
 	font-size: 2.5em;
 	line-height: 1.2;
-    letter-spacing: -.1rem;
-    color: white;
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  letter-spacing: -.1rem;
+  color: white;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 nav {
-    background: rgb(214, 211, 206);
-    margin: 0;
-    border: 1px outset #fff;
-    height: 3em;
-    padding: .2em;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    position: fixed;
+  background: rgb(214, 211, 206);
+  margin: 0;
+  border: 1px outset #fff;
+  height: 3em;
+  padding: .2em;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
 }
 
 h3 {
-    color: white;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-align: left;
-    font-size: 1.5em;
+  color: white;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  font-size: 1.5em;
 	margin: .5em;
-    font-weight: normal;
+  font-weight: normal;
 }
 
 .project {
-    font-family: "Century Gothic Bold";
+  font-family: "Century Gothic Bold";
 }
 
 .passage {
-    font-family: Bitmgothic;
+  font-family: Bitmgothic;
 }
 
 .scenario, .reply, .score {
 	font-size: 1em;
 	margin: 10px auto;
 	padding: 5px;
-    border: 2px solid;
-    border-color: transparent #424242 #424242 transparent;
-    background: silver;
-    animation: fadein .35s;
-    will-change: opacity, transform;
+  border: 2px solid;
+  border-color: transparent #424242 #424242 transparent;
+  background: silver;
+  animation: fadein .35s;
+  will-change: opacity, transform;
 }
 
 .score {
-    margin: 0px;
-    display: inline-block;
-    border-color: transparent #545C4F #545C4F transparent;
-    background: #A7D18C;
+  margin: 0px;
+  display: inline-block;
+  border-color: transparent #545C4F #545C4F transparent;
+  background: #A7D18C;
 }
 
 .navigation {
-    margin: auto 10%;
+  margin: auto 10%;
 	font-size: .8em;
 	height: 2.2em;
-    line-height: 2.8em;
-    -webkit-tap-highlight-color: transparent;
+  line-height: 2.8em;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hidden {
@@ -106,38 +106,38 @@ h3 {
 }
 
 a > img {
-    transition: .35s;
+  transition: .35s;
 }
 
 a:hover > img {
-    transform: scale(.95);
+  transform: scale(.95);
 }
 
 .button {
-    border: 2px outset;
-    border-color: transparent #424242 #424242 transparent;
-    background: silver;
-    border-radius: 1px;
-    margin-top: 10px;
-    width: 50%;
+  border: 2px outset;
+  border-color: transparent #424242 #424242 transparent;
+  background: silver;
+  border-radius: 1px;
+  margin-top: 10px;
+  width: 50%;
 	font-size: .8em;
 	min-height: 1.5em;
 	line-height: 2em;
 	padding: .25em 1em;
 	white-space: normal;
 	line-height: normal;
-    margin: 5px;
-    font-weight: 400;
-    text-transform: none;
-    transition: .35s;
-    -webkit-tap-highlight-color: transparent;
+  margin: 5px;
+  font-weight: 400;
+  text-transform: none;
+  transition: .35s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-    border: 2px inset white;
-    background: silver;
-    color: #424242;
-    box-shadow: -1px -1px #000;
+  border: 2px inset white;
+  background: silver;
+  color: #424242;
+  box-shadow: -1px -1px #000;
 	transform: scale(.95);
 }
 
@@ -146,35 +146,35 @@ button:active {
 }
 
 *,*:focus,*:hover{
-    outline: none;
+  outline: none;
 }
 
 .disabled {
-    cursor: default;
-    background-color: silver;
-    border-style: outset;
-    color: grey;
-    text-shadow: 1px 1px white;
-    opacity: .4;
-    pointer-events: none;
+  cursor: default;
+  background-color: silver;
+  border-style: outset;
+  color: grey;
+  text-shadow: 1px 1px white;
+  opacity: .4;
+  pointer-events: none;
 }
 
 .card {
-    border: 2px solid;
-    border-color: transparent #424242 #424242 transparent;
-    background: silver;
+  border: 2px solid;
+  border-color: transparent #424242 #424242 transparent;
+  background: silver;
 }
 
 .card-header{
-    background: linear-gradient(to left,#08216b,#a5cef7);
-    color: #fff;
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-left: 5px;
-    text-align: left;
-    border-bottom: 1px solid rgba(0,0,0,.125);
+  background: linear-gradient(to left,#08216b,#a5cef7);
+  color: #fff;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 5px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
 .flexmain {
@@ -186,47 +186,47 @@ button:active {
 }
 
 .flexmain > div {
-    width: 70%;
-    margin: auto;
-    animation: fadein .35s;
-    animation: hover 10s infinite;
-    will-change: opacity, transform;
+  width: 70%;
+  margin: auto;
+  animation: fadein .35s;
+  animation: hover 10s infinite;
+  will-change: opacity, transform;
 }
 
 .flexmain > div:nth-child(2) { animation-delay: .3s }
 .flexmain > div:nth-child(3) { animation-delay: .6s }
 
 .xpmessage {
-    font-family: Pixel;
-    color: white;
-    position: absolute;
-    bottom: 3em;
-    width: 100%;
-    animation: comein 1s;
-    will-change: opacity, background-color;
+  font-family: Pixel;
+  color: white;
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
+  animation: comein 1s;
+  will-change: opacity, background-color;
 }
 
 #EndCard {
-    width: 75%;
-    margin: auto;
-    padding: 0;
-    animation: fadein 0.35s;
-    will-change: opacity, transform;
+  width: 75%;
+  margin: auto;
+  padding: 0;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
 #EndScore {
-    margin: 1em;
+  margin: 1em;
 }
 
 *, :after, :before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 /* ANIMATIONS */
 
 @keyframes fadein {
 	from {
-        transform: scale(1.25);
+    transform: scale(1.25);
 		opacity: 0;
 	}
 }
@@ -242,41 +242,41 @@ button:active {
 
 @keyframes comein {
 	0% {
-        opacity: 0;
-    }
-    10%, 25% {
-        color: red;
-        opacity: 1;
-    }
-    15%, 30% {
-        color: blue;
-    }
-    20%, 35% {
-        color: #00ff00;
-    }
-    40%, 90% {
-        color: white;
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+    opacity: 0;
+  }
+  10%, 25% {
+    color: red;
+    opacity: 1;
+  }
+  15%, 30% {
+    color: blue;
+  }
+  20%, 35% {
+    color: #00ff00;
+  }
+  40%, 90% {
+    color: white;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 80em) {
 	body {
 		font-size: 24px; 
-    }
+  }
     
-    .scenario, .reply {
+  .scenario, .reply {
 		margin: 5px auto;
-    }
+  }
     
-    img {
-        transform: scale(1.5);
-    }
+  img {
+    transform: scale(1.5);
+  }
 
-    a:hover > img {
+  a:hover > img {
 		transform: scale(1.4);
 	}
 
@@ -301,9 +301,9 @@ button:active {
 @media (min-width: 120em) {
 	body {
 		font-size: 28px; 
-    }
+  }
     
-    img {
-        transform: scale(2);
-    }
+  img {
+    transform: scale(2);
+  }
 }

@@ -133,7 +133,7 @@ var scenarios = [
     "skipto2": 21
   },
   {
-    "scenario": "The wait for the sun to set was like torture for you, but you managed to stay awake. You sneakily went outside your tent. What you saw shocked you. The guards were everywhere they had torches. Apparently, a worker escaped and all of them were looking for him.<br>As you wanted to escape as fast as possible you ignored all the voices in your head warning you to stop. You hid behind one tent, then another. So, you made your way to the wall.<br>You were already a meter above the ground when you suddenly realised that 3 guards were looking at you.<br>You jumped down and surrendered. After all, the odds were severely against you. After seeing your passiveness, the guards decided beat you up only a little. Still you were now heavily monitored and that removed all your chances of escaping.",
+    "scenario": "The wait for the sun to set was like torture for you, but you managed to stay awake. You sneakily went outside your tent. What you saw shocked you. The guards were everywhere they had torches. Apparently, a worker escaped and all of them were looking for him.<br>As you wanted to escape as fast as possible you ignored all the voices in your head warning you to stop. You hid behind one tent, then another. So, you made your way to the wall.<br>You were already a meter above the ground when you suddenly realised that 3 guards were looking at you.<br>You jumped down and surrendered. After all, the odds were severely against you. After seeing your passiveness, the guards decided to beat you up only a little. Still you were now heavily monitored and that removed all your chances of escaping.",
     "quit": true,
     "failure7": true,
   },
@@ -219,16 +219,16 @@ var scenarios = [
   //Monastery
   {
     "scenario": "You ran to the monastery. Once inside you had to find a place to hide. You had to find it quick, since the guards were right around the corner.",
-    "reply1": "You climed up the tree. And you hid there.",
+    "reply1": "You climbed up the tree. And you hid there.",
     "answer1": "Climb the money tree",
     "reply2": "You hid in there for a while. Sadly, the guards described you as a dangerous criminal, so every monk in the monastery began searching for you.",
-    "answer2": "Hide in one of the monasterie's rooms",
+    "answer2": "Hide in one of the monasteries’ rooms",
     "skipto2": 43
   },
   {
-    "scenario": "The three guards came next to the tree, but instead of checking it they kneeled and started praying. After all that was the holy money tree. After a good minute the guards left to investigate the monasterie's rooms, leaving you alone.",
-    "answer1": "Run away now",
-    "reply2": "You waited and you waited. The guards really took their time, but they finally came out. They were almost out of your sight when a branch broke and fell down. One guard came to investigate.",
+    "scenario": "The three guards came next to the tree, but instead of checking it they kneeled and started praying. After all that was the holy money tree. After a good minute, the guards left to investigate the monasterie's rooms, leaving you alone.",
+    "answer1": "Run away",
+    "reply2": "You waited, and you waited. The guards really took their time, but they finally came out. They were almost out of your sight when a branch broke and fell down. One guard came to investigate.",
     "answer2": "Wait for the guards to go back to their posts",
     "skipto2": 39
   },
@@ -252,7 +252,7 @@ var scenarios = [
     "failure9": true,
   },
   {
-    "scenario": "You jumped from the tree and you were going to run, but your legs hurt so bad from the fall, you could barely walk. The guard was quick and he hit you so hard that you blacked out.",
+    "scenario": "You jumped from the tree and you were going to run, but your legs hurt so bad from the fall, you could barely walk. The guard was quick, and he hit you so hard that you blacked out.",
     "quit": true,
     "failure10": true,
   },
@@ -265,11 +265,11 @@ var scenarios = [
     "scenario": "You had to act fast to hide from the monks and the guards. The room you were in was a mess, so you had a chance at hiding here. Also, you could try jumping out the window and hope noone sees you...",
     "reply1": "It was the time for monks to search the room you were in. They were really scared of you, but the stress didn't help them search. You managed to slip through them. You were finally free.",
     "answer1": "Hide in the room",
-    "reply2": "You ran and you jumped and you landed. The the outside was so empty... That most probably was because everyone really wanted to find you. You were finally free.",
+    "reply2": "You ran, and you jumped, and you landed. The the outside was so empty... That most probably was because everyone really wanted to find you. You were finally free.",
     "answer2": "Jump through the window",
   },
   {
-    "scenario": "The only thing left now was to meet Lord Dudding himself.<br>That in itself wasn't very hard. Everyone knew where he lived and getting through the guoard was a breeze after they heard your story.",
+    "scenario": "The only thing left now was to meet Lord Dudding himself.<br>That in itself wasn't awfully hard. Everyone knew where he lived and getting through the guoard was a breeze after they heard your story.",
     "quit": true,
     "ending8": true,
   },
@@ -279,7 +279,7 @@ var scenarios = [
   },
   {
     "scenario": "It whould be pretty scary just to be there, but when you know that a few guards are looking for you with the intent to kill... That only makes it scarier. You had to hide!",
-    "reply1": "The ground was very cold and you could easily imagine some dead zombies rising from there. Then you heard footsteps.",
+    "reply1": "The ground was very cold, and you could easily imagine some dead zombies rising from there. Then you heard footsteps.",
     "answer1": "Hide behind a tombstone",
     "reply2": "At this point it was a late evening, so everything was dark. You had a good chance to be unnoticed by the guards. Then the wind started blowing and you heard somebody sing.",
     "answer2": "Climb up a tree",
@@ -287,7 +287,7 @@ var scenarios = [
   },
   //Graveyard tombstone
   {
-    "scenario": "You looked around, but saw nothing. The footprints came closer and closer. At this point you were ready to scream, but after remembering that there are a few guards looking for you, you decided to think about what to do before going ape mode.",
+    "scenario": "You looked around but saw nothing. The footprints came closer and closer. At this point you were ready to scream, but after remembering that there are a few guards looking for you, you decided to think about what to do before going ape mode.",
     "reply1": "You decided to take a run at the exit. Hey, after all running has gotten you so far. You managed to run out of the gravyard without meeting the guards. Who knows what stopped them from searching for you...",
     "answer1": "Run",
     "skipto1": 49,
@@ -353,7 +353,7 @@ var scenarios = [
     "skipto2": 58
   },
   {
-    "scenario": "Everybody laughed. \"Ha ha, you stole something? Don't worry, we got you.\"<br>And so they did. Soon the guards came into the bar searched every single corner, but didn't find you. You thanked everybody and headed out.",
+    "scenario": "Everybody laughed. \"Ha ha, you stole something? Don't worry, we got you.\"<br>And so they did. Soon the guards came into the bar searched every single corner but didn't find you. You thanked everybody and headed out.",
   },
   {
     "scenario": "All you had to do is go to Lord Dudding. That was as easy to do as to say.",
@@ -361,13 +361,13 @@ var scenarios = [
     "ending11": true,
   },
   {
-    "scenario": "The guy picked you up and pinned to the wall. He said \"That chair was for my friend and as I can tell, you ain't my friend\". At the same time the front doors opened and 2 guards came in. Too bad you and the guy who pinned you to the wall easily grabbed other people's attension. The guards easily recognised you and you were a dead man.",
+    "scenario": "The guy picked you up and pinned to the wall. He said \"That chair was for my friend and as I can tell, you ain't my friend\". At the same time the front doors opened, and 2 guards came in. Too bad you and the guy who pinned you to the wall easily grabbed other people's attension. The guards easily recognised you and you were a dead man.",
     "quit": true,
     "failure14": true,
   },
   //Bar Door
   {
-    "scenario": "At the same time when you were wrestling with the door, the entrance opened and 2 guards came in. You quickly panicked and ran up the stairs to the second floor. Too bad it was empty. There were no places to hide in. The only thing that stood out to you was a giant wardrobe.",
+    "scenario": "At the same time when you were wrestling with the door, the entrance opened, and 2 guards came in. You quickly panicked and ran up the stairs to the second floor. Too bad it was empty. There were no places to hide in. The only thing that stood out to you was a giant wardrobe.",
     "answer1": "Hide inside the wardrobe",
     "answer2": "Hide behind the wardrobe",
     "skipto2": 61
@@ -378,17 +378,17 @@ var scenarios = [
     "failure15": true,
   },
   {
-    "scenario": "You quickly slipped behind the wardrobe. It was ancient. Only a few seconds later the guards were already on the second floor. They quickly checked the insides of the wardrobe, they checked under the bed and then left. That is it they left.",
+    "scenario": "You quickly slipped behind the wardrobe. It was ancient. Only a few seconds later the guards were already on the second floor. They quickly checked the insides of the wardrobe, they checked under the bed and then left. That is it, they left.",
   },
   {
-    "scenario": "Now that the guards were no longer on the same floor, you had to think of a way to escape the bar. There were only 2 real ways. You could walk out through the front door and hope that the guards have already left the bar or you can jump out the window and hope you don't get injured.",
+    "scenario": "Now that the guards were no longer on the same floor, you had to think of a way to escape the bar. There were only 2 real ways. You could walk out through the front door and hope that the guards have already left the bar, or you can jump out the window and hope you don't get injured.",
     "reply1": "And so you went back to the first floor, you went throught the door and surprisingly there were no guard in sight. You sighed with relief. You were finally free.",
     "answer1": "Walk out through the front door",
     "skipto1": 64,
     "answer2": "Jump through the window",
   },
   {
-    "scenario": "You jumped through the window. At the exact moment your feet left the ground, you started feeling like you were falling to your death. And indeed you died. You weren't a 20 year-old who could do anything he wanted. Your body failed you and so you became a puddle of organs.",
+    "scenario": "You jumped through the window. At the exact moment, your feet left the ground, you started feeling like you were falling to your death. And indeed, you died. You weren't a 20-year-old who could do anything he wanted. Your body failed you and so you became a puddle of organs.",
     "quit": true,
     "failure16": true,
   },
@@ -402,7 +402,7 @@ var scenarios = [
     "scenario": "The bartender lead you to the cellar. It was full of food and drinks. You were almost ready to have a feast, but then remembered that this wasn't a nice way to thank the bartender. While hungry, you were safe for now atleast.",
   },
   {
-    "scenario": "Or atleast that was what you thought. A few minutes later the door opened and you saw 2 guards came in. Behind them was the bartender, playing with a bag of golden coins.",
+    "scenario": "Or atleast that was what you thought. A few minutes later the door opened, and you saw 2 guards came in. Behind them was the bartender, playing with a bag of golden coins.",
     "quit": true,
     "failure17": true,
   },

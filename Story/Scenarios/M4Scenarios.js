@@ -3,7 +3,7 @@ var scenarios = [
     "scenario": "You opened your eyes. Everything was hurting. You found yourself on the ground. There were many people around. None were surprised by your presence.",
   },
   {
-    "scenario": "They were.. They were building something... The building looked strong and the bricks were a sight to behold. The foundation was already built. What could it be?",
+    "scenario": "They were... They were building something... The building looked strong and the bricks were a sight to behold. The foundation was already built. What could it be?",
     "answer1": "Ask the workers",
     "answer2": "Look for some clues",
     "skipto2": 8,
@@ -22,7 +22,7 @@ var scenarios = [
     "scenario": "The day was coming to a close. You had a tent. It was nowhere as comfortable as the bed in your house, but you had no choice. You set your goal to escape this place as soon as possible.",
   },
   {
-    "scenario": "The night was horrible... You could hear the screams of poor innocent souls. You barely managed to wake yourself. The sun was very hot too. Add those things up and you've got hell on earth.",
+    "scenario": "The night was horrible... You could hear the screams of poor innocent souls. You barely managed to wake yourself. The sun was ridiculously hot too. Add those things up and you've got hell on earth.",
   },
   {
     "scenario": "While working you saw a black shadow fly through. You thought it was a bird or a hallucination, but interest got the better of you. You followed the black dot through the camp. He went to a tent.",
@@ -46,7 +46,7 @@ var scenarios = [
     "skipto2": 13,
   },
   {
-    "scenario": "You followed the weird boxer. First, he went to eat and so did you. Apparently you were brought here to work. But hey, at least they gave food.",
+    "scenario": "You followed the weird boxer. First, he went to eat and so did you. Apparently, you were brought here to work. But hey, at least they gave food.",
     "reply1": "The soup was actually half decent. It was just hot water with some mushrooms, but it is hard to ruin soup...",
     "answer1": "Pick the soup",
     "reply2": "The salad was pretty much just some grass, cucumbers and a tomato mashed into one bowl.",

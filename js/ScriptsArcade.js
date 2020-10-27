@@ -2,6 +2,9 @@ var count = 0;
 var score = 0;
 
 window.onload = function onload() {
+  if (localStorage.getItem('sound') == 'true') {
+    $('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg" preload="none"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg" preload="none"></audio>')
+  }
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	shuffle(scenarios);
@@ -10,12 +13,12 @@ window.onload = function onload() {
 
 //Array Shuffle
 function shuffle(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
 }
 
 //Text
@@ -79,11 +82,11 @@ function reply3() {
 	
 //Next scenario
 function nextScenario() {
-	if(count >= 10){
+	if (count >= 10){
 		if (localStorage.getItem('sound') == 'true') {
 			document.getElementById('endCard').play();
 		}
-		if(localStorage.getItem('Highscore') < score){
+		if (localStorage.getItem('Highscore') < score){
 			localStorage.setItem('Highscore', score);
 		}
 		$('.flexmain, #score-text').hide();

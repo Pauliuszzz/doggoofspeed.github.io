@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Bitmgothic";
+  font-family: "Bitmgothic";
 	src: url("Bitmgothic.woff2");
 	font-display: swap;
 }
 
 @font-face {
-    font-family: "Century Gothic Bold";
+  font-family: "Century Gothic Bold";
 	src: url("CenturyGothic-Bold.woff2");
 	font-display: swap;
 }
@@ -24,7 +24,7 @@ body {
 	overflow-x: hidden;
 	line-height: 1.6;
 	margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 h1 {
@@ -120,7 +120,7 @@ button:active {
 }
 
 *,*:focus,*:hover{
-    outline: none;
+  outline: none;
 }
 
 .scenario, .reply {
@@ -142,7 +142,7 @@ button:active {
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .flexmain {
@@ -156,7 +156,7 @@ button:active {
 }
 
 .flexmain > div {
-    width: 70%;
+  width: 70%;
 	margin: auto;
 	animation: hover 10s infinite;
 	will-change: opacity, transform;
@@ -178,9 +178,9 @@ button:active {
 }
 
 .hpmessage {
-    position: absolute;
-    bottom: 3em;
-    width: 100%;
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
 }
 
 .hpmessage > .hptext {
@@ -195,15 +195,15 @@ button:active {
 }
 
 .disabled {
-    pointer-events: none;
-    opacity: .65;
+  pointer-events: none;
+  opacity: .65;
 }
 
 /* ANIMATIONS */
 
 @keyframes fadein {
 	from {
-        transform: scale(1.25);
+    transform: scale(1.25);
 		opacity: 0;
 	}
 }
@@ -219,11 +219,11 @@ button:active {
 
 @keyframes comein {
 	0% {
-        opacity: 0;
-    }
-    10%, 30%, 50% {
+    opacity: 0;
+  }
+  10%, 30%, 50% {
 		transform: rotate(10deg) translateX(10px);
-        opacity: 1;
+    opacity: 1;
 	}
 	20%, 40%, 60% {
 		transform: rotate(-10deg) translateX(-10px);
@@ -232,22 +232,22 @@ button:active {
 		transform: rotate(0deg) translateX(10px);
 		opacity: 1;
 	}
-    100% {
-        opacity: 0;
-    }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 80em) {
 	body {
 		font-size: 24px; 
-    }
+  }
 	
 	.scenario, .reply {
 		margin: 5px auto;
 	}
 
-    img {
-        transform: scale(1.5);
+  img {
+    transform: scale(1.5);
 	}
 	
 	a:hover > img {
@@ -280,9 +280,9 @@ button:active {
 @media (min-width: 120em) {
 	body {
 		font-size: 28px; 
-    }
+  }
     
-    img {
-        transform: scale(2);
-    }
+  img {
+    transform: scale(2);
+  }
 }

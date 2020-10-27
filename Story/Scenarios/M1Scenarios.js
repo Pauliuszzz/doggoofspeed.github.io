@@ -5,21 +5,21 @@ var scenarios = [
 		"answer1": "Go there asap",
 		"reply2": "You picked up the last loaf of bread and headed out.",
 		"answer2": "Get ready, and then go",
-		"reply3": "You slept and got some energy atleast.",
+		"reply3": "You slept and got some energy at least.",
 		"answer3": "Go there tomorrow"
 	},
 	{
 		"scenario": "While walking you encounter a running monk. He seems to be in quite a hurry. Although you often trust people of cloth, you are weirdly scared by him.",
 		"reply1":  "\"Umm... Work reasons of course\" he said.",
 		"answer1": "Ask where he is going",
-		"reply2": "\"None of your buisness\" he said.",
+		"reply2": "\"None of your business\" he said.",
 		"answer2": "Ask which way is Ìgil",
-		"reply3": "He hastly gave you a blessing and ran away.",
+		"reply3": "He hastily gave you a blessing and ran away.",
 		"answer3": "Ask for a blessing"
 	},
 	{
 		"scenario": "After 10 minutes of walking you see a large group of people coming your way.",
-		"reply1": "You hid and they didn't see you.",
+		"reply1": "You hid, and they didn't see you.",
 		"answer1": "Hide from them",
 		"reply2": "They said they were looking for a monk, who is being accused of witchcraft.",
 		"answer2": "Ask where are they going",
@@ -54,7 +54,7 @@ var scenarios = [
 	},
 	//Route Monk
 	{
-		"scenario": "The monk ran into a field and you did too. The trees were huge, it felt like they were judging the mob. You weren't angry at the monk, just curious. After a fruitless day some villagers decided to leave. While you and the others set up a camp for the night. The villagers were poor, but friendly. They gave you some bread.",
+		"scenario": "The monk ran into a field and you did too. The trees were huge, it felt like they were judging the mob. You weren't angry at the monk, just curious. After a fruitless day, some villagers decided to leave. While you and the others set up a camp for the night. The villagers were poor, but friendly. They gave you some bread.",
 		"reply1": "The bread finally gave you something to chew. You haven't been glad to eat a bread like this your whole life.",
 		"answer1": "Accept the bread",
 		"reply2": "Gotta be hungry for another day then...",
@@ -76,9 +76,9 @@ var scenarios = [
 		"scenario": "It only got colder and colder, darker and darker and scarier and scarier. You heard something in front of you. There was a black, clothed figure standing in the middle of the road.",
 		"reply1": "Oh boy did you panic.",
 		"answer1": "Panic",
-		"reply2": "You paniced as much as humanly possible.",
+		"reply2": "You panicked as much as humanly possible.",
 		"answer2": "Panic more",
-		"reply3": "You screamd like no man has ever screamed.",
+		"reply3": "You screamed like no man has ever screamed.",
 		"answer3": "Run away screaming"
 	},
 	{
@@ -118,7 +118,7 @@ var scenarios = [
 		"skipto3": 17
 	},
 	{
-		"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily you are quite close to the city.",
+		"scenario": "Suddenly you felt very dizzy. That damn water must have been poisonous! Luckily, you are quite close to the city.",
 		"reply1": "While you did reach a house, it was locked, with no-one inside. You passed out. A wagon passing by saw and took you and brought you to the monastery hospital in Ìgil.",
 		"answer1": "Hurry up and run to the closest house",
 		"reply2": "It really didn't get better. You passed out. A wagon passing by saw and took you and brought you to the monastery hospital in Ìgil.",
@@ -129,11 +129,11 @@ var scenarios = [
 		"ending3": true
 	},
 	{
-		"scenario": "...It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily a carriage going to Ìgil saw you, and brought you to the monastery hospital in Ìgil.",
+		"scenario": "...It felt good until you saw an electric eel. You got electrocuted so bad, you passed out. Luckily, a carriage going to Ìgil saw you and brought you to the monastery hospital in Ìgil.",
 		"quit": true,
 		"ending4": true
 	},
-	{
+  	{
 		"scenario": "The water is cold, refreshing and relaxing. You know what isn't relaxing? The fact that without even noticing you ended up in a bandit camp.",
 		"reply1": "They were guarding the road, but not their actual camp. You put some grass and some dirt in their soup. You even managed to eat some of it. That soup might have been tasty, but you can't erase days of hungriness with just a spoon of soup. That is whay when you came to Ìgil your first destination was monastery - the only place to get free food.",
 		"answer1": "Try to sabotage them",

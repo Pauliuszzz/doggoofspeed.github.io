@@ -3,6 +3,9 @@ var hpbfr;
 var hp = 100;
 
 window.onload = function onload() {
+  if (localStorage.getItem('sound') == 'true') {
+    $('body').append('<audio id="btnsfx1" src="../resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="../resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="../resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="../resources/btnsfx4.ogg"></audio>', '<audio id="deadCard" src="../resources/deadCard.ogg" preload="none"></audio>', '<audio id="endCard" src="../resources/endCard.ogg" preload="none"></audio>')
+  }
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	shuffle(scenarios);
@@ -11,12 +14,12 @@ window.onload = function onload() {
 
 //Array Shuffle
 function shuffle(array) {
-    for (var i = array.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = array[i];
-        array[i] = array[j];
-        array[j] = temp;
-    }
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
 }
 
 //Text
@@ -82,20 +85,20 @@ function reply3() {
 	
 //Next scenario
 function nextScenario(mult) {
-	if(hp <= 0 || count == 20){
-		if(localStorage.getItem('MaxSurvived') < count && hardcore == false){
+	if (hp <= 0 || count == 20){
+		if (localStorage.getItem('MaxSurvived') < count && hardcore == false){
 			localStorage.setItem('MaxSurvived', count);
 		}
-		if(localStorage.getItem('MaxSurvivedHard') < count && hardcore == true){
+		if (localStorage.getItem('MaxSurvivedHard') < count && hardcore == true){
 			localStorage.setItem('MaxSurvivedHard', count);
 		}
-		if(count == 20){
+		if (count == 20){
 			$('#EndCard').removeClass('hidden');
 			if (localStorage.getItem('sound') == 'true') {
 				document.getElementById('endCard').play();
 			}
 		}
-		if(hp <= 0){
+		if (hp <= 0){
 			$('#DeadCard').removeClass('hidden');
 			if (localStorage.getItem('sound') == 'true') {
 				document.getElementById('deadCard').play();

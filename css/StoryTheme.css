@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Bitmgothic";
+  font-family: "Bitmgothic";
 	src: url("Bitmgothic.woff2");
 	font-display: swap;
 }
 
 @font-face {
-    font-family: "Century Gothic Bold";
+  font-family: "Century Gothic Bold";
 	src: url("CenturyGothic-Bold.woff2");
 	font-display: swap;
 }
@@ -23,7 +23,7 @@ body {
 	overflow-x: hidden;
 	line-height: 1.6;
 	margin: 0;
-    padding: 0;
+  padding: 0;
 }
 
 h1 {
@@ -83,7 +83,7 @@ input {
 }
 
 *,*:focus,*:hover{
-    outline: none;
+  outline: none;
 }
 
 .flexmain {
@@ -182,12 +182,12 @@ input {
 }
 
 *, :after, :before {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 .disabled {
-    pointer-events: none;
-    opacity: .65;
+  pointer-events: none;
+  opacity: .65;
 }
 
 @keyframes hover {
@@ -225,7 +225,7 @@ input {
 
 	.scenario, .reply {
 		margin: 5px auto;
-    }
+  }
 
 	.flexmain {
 		flex-direction: row;
@@ -245,7 +245,7 @@ input {
 	}
 
 	img {
-        transform: scale(1.5);
+    transform: scale(1.5);
 	}
 	
 	.hintbtn, .homebtn {
