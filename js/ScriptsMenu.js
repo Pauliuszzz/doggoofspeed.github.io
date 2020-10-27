@@ -123,18 +123,20 @@ if (localStorage.getItem('M4-Endings') != null) {
             $('#M4').html('Conspiracists found: 0/3');
         }
 
-if (localStorage.getItem('M5-Endings') != null) {
-    $('#M5').html('Endings achieved: ' + localStorage.getItem('M5-Endings') + '/?<br>Failures achieved:' + localStorage.getItem('M5-Failures') + '/?');
-    if (localStorage.getItem('M5-Endings') == 3 && localStorage.getItem('M5-Endings') == 3) {
+if (localStorage.getItem('M5-Endings') != null | localStorage.getItem('M5-Endings') != null) {
+    $('#M5').html('Endings achieved: ' + localStorage.getItem('M5-Endings') + '/12<br>Failures achieved: ' + localStorage.getItem('M5-Failures') + '/17');
+    if (localStorage.getItem('M5-Endings') == 12 && localStorage.getItem('M5-Failures') == 17) {
         $('.finM5').css('fill', 'gold');
     }
+    console.log(localStorage.getItem('M4-Endings'))
 }
-    else if (localStorage.getItem('M4-Endings') == null) {
+    else if (localStorage.getItem('M4-Endings') < 3) {
         $('#M5').html('Find all the conspirators to unlock');
         $('#M5-play').addClass('disabled');
     }
         else {
-            $('#M5').html('Endings achieved: 0/?<br>Failures achieved: 0/?');
+            $('#M5').html('Endings achieved: 0/12<br>Failures achieved: 0/17');
+            console.log(localStorage.getItem('M4-Endings'))
             }
 
 //Tells progress

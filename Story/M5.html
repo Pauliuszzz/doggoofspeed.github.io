@@ -40,10 +40,9 @@
 	</div>
 	<div class='card hidden acrylic' id='EndCard'>
 		<h3>Mission 5 Completed</h3>
-		<p id='M3'></p>
+		<p id='M5'></p>
 		<a href='../index.html' class='icon-only'><img src='../resources/home.svg' alt='Home'></a>
-		<a href='./M3.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
-		<a href='./M4.html' class='icon-only'><img src='../resources/forward.svg' alt='Forward'></a>
+		<a href='./M5.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
 	</div>
 	<nav class='acrylic'>
 		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario()'>Continue</button>
@@ -52,59 +51,201 @@
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M5Scenarios.js' async></script>
 	<script>
-		var endings = localStorage.getItem('M3-Endings');
+		var endings = localStorage.getItem('M5-Endings');
+		var failures = localStorage.getItem('M5-Failures');
+		console.log(endings)
 		var quit = false;
-		var path = 0;
 		var count = 0;
 	
 	//Ending Counter
 	function endingcounter(){
 		switch (Object.keys(scenarios[count]).pop()) {
 			case 'ending1':
-				if (localStorage.getItem('M3-1') == null){
+				if (localStorage.getItem('M5-1') == null){
 					endings++;
-					localStorage.setItem('M3-1', 1);
+					localStorage.setItem('M5-1', 1);
 				}
 				break;
 			case 'ending2':
-				if (localStorage.getItem('M3-2') == null){
+				if (localStorage.getItem('M5-2') == null){
 					endings++;
-					localStorage.setItem('M3-2', 1);
+					localStorage.setItem('M5-2', 1);
 				}
 				break;
 			case 'ending3':
-				if (localStorage.getItem('M3-3') == null){
+				if (localStorage.getItem('M5-3') == null){
 					endings++;
-					localStorage.setItem('M3-3', 1);
+					localStorage.setItem('M5-3', 1);
 				}
 				break;
 			case 'ending4':
-				if (localStorage.getItem('M3-4') == null){
+				if (localStorage.getItem('M5-4') == null){
 					endings++;
-					localStorage.setItem('M3-4', 1);
+					localStorage.setItem('M5-4', 1);
 				}
 				break;
 			case 'ending5':
-				if (localStorage.getItem('M3-5') == null){
+				if (localStorage.getItem('M5-5') == null){
 					endings++;
-					localStorage.setItem('M3-5', 1);
+					localStorage.setItem('M5-5', 1);
 				}
 				break;
 			case 'ending6':
-				if (localStorage.getItem('M3-6') == null){
+				if (localStorage.getItem('M5-6') == null){
 					endings++;
-					localStorage.setItem('M3-6', 1);
+					localStorage.setItem('M5-6', 1);
 				}
 				break;
 			case 'ending7':
-				if (localStorage.getItem('M3-7') == null){
+				if (localStorage.getItem('M5-7') == null){
 					endings++;
-					localStorage.setItem('M3-7', 1);
+					localStorage.setItem('M5-7', 1);
+				}
+				break;
+			case 'ending8':
+				if (localStorage.getItem('M5-8') == null){
+					endings++;
+					localStorage.setItem('M5-8', 1);
+				}
+				break;
+			case 'ending9':
+				if (localStorage.getItem('M5-9') == null){
+					endings++;
+					localStorage.setItem('M5-9', 1);
+				}
+				break;
+			case 'ending10':
+				if (localStorage.getItem('M5-10') == null){
+					endings++;
+					localStorage.setItem('M5-10', 1);
+				}
+				break;
+			case 'ending11':
+				if (localStorage.getItem('M5-11') == null){
+					endings++;
+					localStorage.setItem('M5-11', 1);
+				}
+				break;
+			case 'ending12':
+				if (localStorage.getItem('M5-12') == null){
+					endings++;
+					localStorage.setItem('M5-12', 1);
+				}
+				break;
+			//Failures
+			case 'failure1':
+				if (localStorage.getItem('M5-F1') == null){
+					failures++;
+					localStorage.setItem('M5-F1', 1);
+				}
+				break;
+			case 'failure2':
+				if (localStorage.getItem('M5-F2') == null){
+					failures++;
+					localStorage.setItem('M5-F2', 1);
+				}
+				break;
+			case 'failure3':
+				if (localStorage.getItem('M5-F3') == null){
+					failures++;
+					localStorage.setItem('M5-F3', 1);
+				}
+				break;
+			case 'failure4':
+				if (localStorage.getItem('M5-F4') == null){
+					failures++;
+					localStorage.setItem('M5-F4', 1);
+				}
+				break;
+			case 'failure5':
+				if (localStorage.getItem('M5-F5') == null){
+					failures++;
+					localStorage.setItem('M5-F5', 1);
+				}
+				break;
+			case 'failure6':
+				if (localStorage.getItem('M5-F6') == null){
+					failures++;
+					localStorage.setItem('M5-F6', 1);
+				}
+				break;
+			case 'failure7':
+				if (localStorage.getItem('M5-F7') == null){
+					failures++;
+					localStorage.setItem('M5-F7', 1);
+				}
+				break;
+			case 'failure8':
+				if (localStorage.getItem('M5-F8') == null){
+					failures++;
+					localStorage.setItem('M5-F8', 1);
+				}
+				break;
+			case 'failure9':
+				if (localStorage.getItem('M5-F9') == null){
+					failures++;
+					localStorage.setItem('M5-F9', 1);
+				}
+				break;
+			case 'failure10':
+				if (localStorage.getItem('M5-F10') == null){
+					failures++;
+					localStorage.setItem('M5-F10', 1);
+				}
+				break;
+			case 'failure11':
+				if (localStorage.getItem('M5-F11') == null){
+					failures++;
+					localStorage.setItem('M5-F11', 1);
+				}
+				break;
+			case 'failure12':
+				if (localStorage.getItem('M5-F12') == null){
+					failures++;
+					localStorage.setItem('M5-F12', 1);
+				}
+				break;
+			case 'failure13':
+				if (localStorage.getItem('M5-F13') == null){
+					failures++;
+					localStorage.setItem('M5-F13', 1);
+				}
+				break;
+			case 'failure14':
+				if (localStorage.getItem('M5-F14') == null){
+					failures++;
+					localStorage.setItem('M5-F14', 1);
+				}
+				break;
+			case 'failure15':
+				if (localStorage.getItem('M5-F15') == null){
+					failures++;
+					localStorage.setItem('M5-F15', 1);
+				}
+				break;
+			case 'failure16':
+				if (localStorage.getItem('M5-F16') == null){
+					failures++;
+					localStorage.setItem('M5-F16', 1);
+				}
+				break;
+			case 'failure17':
+				if (localStorage.getItem('M5-F17') == null){
+					failures++;
+					localStorage.setItem('M5-F17', 1);
 				}
 				break;
 		}
+		if (endings == null) {
+			endings = 0;
+		}
+		if (failures == null) {
+			failures = 0;
+		}
 		localStorage.setItem('M5-Endings', endings);
-		document.getElementById('M5').innerHTML = 'Endings achieved: ' + localStorage.getItem('M5-Endings') + '/?';
+		localStorage.setItem('M5-Failures', failures);
+		console.log(endings)
+		document.getElementById('M5').innerHTML = 'Endings achieved: ' + localStorage.getItem('M5-Endings') + '/12<br>Failures achieved: ' + localStorage.getItem('M5-Failures') + '/17';
 		$('div#EndCard').removeClass('hidden');
 	}
 	</script>

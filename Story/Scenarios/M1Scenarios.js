@@ -52,7 +52,6 @@ var scenarios = [
 		"answer2": "Go the shorter route",
 		"skipto2": 14
 	},
-
 	//Route Monk
 	{
 		"scenario": "The monk ran into a field and you did too. The trees were huge, it felt like they were judging the mob. You weren't angry at the monk, just curious. After a fruitless day some villagers decided to leave. While you and the others set up a camp for the night. The villagers were poor, but friendly. They gave you some bread.",
@@ -87,7 +86,6 @@ var scenarios = [
 		"quit": true,
 		"ending1": true
 	},
-
 	//Route Bandit
 	{
 		"scenario": "You decide to go the longer route. After an hour of walking you hear a loud bang somewhere in front of you.",
@@ -108,7 +106,6 @@ var scenarios = [
 		"quit": true,
 		"ending2": true
 	},
-	
 	//Route Stream
 	{
 		"scenario": "After a good hour of walking you notice a small stream beside the road.",

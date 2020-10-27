@@ -20,19 +20,19 @@ function text() {
 			$('#ButtonThree').hide();
 			break;
 	}
-	if(scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
+	if (scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
 		$('#ButtonFour').removeClass('disabled');
 		$('.replydiv').hide();
 		$('.buttondiv').hide();
 	}
-		else{
+		else {
 			$('#ButtonFour').addClass('disabled');
 		}
 }
 
 //Replies
 	function reply1() {
-		if(scenarios[count].reply1 != null){
+		if (scenarios[count].reply1 != null){
 			$('#reply-text').html(scenarios[count].reply1);
 			$('.replydiv').show();
 		}
@@ -46,7 +46,7 @@ function text() {
 				}
 	}
 	function reply2() {
-		if(scenarios[count].reply2 != null){
+		if (scenarios[count].reply2 != null){
 			$('#reply-text').html(scenarios[count].reply2);
 			$('.replydiv').show();
 		}
@@ -60,7 +60,7 @@ function text() {
 				}
 	}
 	function reply3() {
-		if(scenarios[count].reply3 != null){
+		if (scenarios[count].reply3 != null){
 			$('#reply-text').html(scenarios[count].reply3);
 			$('.replydiv').show();
 		}
