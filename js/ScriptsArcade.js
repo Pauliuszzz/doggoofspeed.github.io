@@ -1,15 +1,46 @@
 var count = 0;
 var score = 0;
 
-switch (Math.floor(Math.random() * Math.floor(3))){
+switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
+	case 9:
+	case 8:
+	case 7:
+	case 6:
+	case 5:
+	case 4:
+	case 3:
+		scenarios = scenarios1.concat(scenarios2)
+		var bgNumber = 2;
+		var maxLength = 9;
+		break;
+	case 2:
+		scenarios = scenarios1.concat(scenarios2)
+		var bgNumber = 1;
+		var maxLength = 9;
+		break;
+	case 1:
+		scenarios = scenarios1
+		var bgNumber = 1;
+		var maxLength = 9;
+		break;
+	case 0:
+		scenarios = scenarios1
+		var bgNumber = 1;
+		var maxLength = 4;
+		break;
+}
+
+console.log(scenarios.length)
+
+switch (Math.floor(Math.random() * Math.floor(bgNumber))){
   case 0:
-    $('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
-    if ($(window).width() >= 1280) {
-      $('body').css('background-size', '25%')
-    }
+		$('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
     break;
   case 1:
-    $('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
+		$('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
+    if ($(window).width() >= 1280) {
+      $('body').css('background-size', '25%')
+		}
     break;
   case 2:
     $('body').css({'background': 'url(../resources/pattern.jpg) center repeat fixed, #008080', 'background-size': '25%'})
@@ -100,7 +131,7 @@ function reply3() {
 	
 //Next scenario
 function nextScenario() {
-	if (count >= 10){
+	if (count >= maxLength){
 		if (localStorage.getItem('sound') == 'true') {
 			document.getElementById('endCard').play();
 		}

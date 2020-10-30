@@ -48,7 +48,6 @@
 	<script>
 		var endings = localStorage.getItem('M5-Endings');
 		var failures = localStorage.getItem('M5-Failures');
-		console.log(endings)
 		var quit = false;
 		var count = 0;
 	
@@ -239,7 +238,6 @@
 		}
 		localStorage.setItem('M5-Endings', endings);
 		localStorage.setItem('M5-Failures', failures);
-		console.log(endings)
 		document.getElementById('M5').innerHTML = 'Endings achieved: ' + localStorage.getItem('M5-Endings') + '/12<br>Failures achieved: ' + localStorage.getItem('M5-Failures') + '/17';
 		$('div#EndCard').removeClass('hidden');
 	}

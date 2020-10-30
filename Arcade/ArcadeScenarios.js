@@ -1,4 +1,4 @@
-scenarios = [
+scenarios1 = [
 	{
 		//Crashed Airplane
 		"scenario": "It was a calm evening when you stumbled upon a crashed airplane.",
@@ -129,6 +129,8 @@ scenarios = [
 		"answer3": "Play with him",
 		"score3": 0
 	},
+]
+scenarios2 = [
 	{
 		//Circus
 		"scenario": "You were sleeping when you overheard festive music. After going to the source, you found a traveling circus.",
@@ -259,6 +261,8 @@ scenarios = [
 		"answer3": "Hug it",
 		"score3": 1000,
 	},
+],
+scenarios3 = [
 	{
 		//Cave
 		"scenario": "The sky was going dark and you were looking for a place to rest when your eyes found a cave. You entered it and there was no end.",

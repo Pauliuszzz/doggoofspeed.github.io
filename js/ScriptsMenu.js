@@ -44,6 +44,18 @@ switch (localStorage.getItem('ArcadeLevel')) {
       $('.aLevelUp').removeClass('disabled');
     }
     break;
+  case '1':
+    $('#arcadeUpgrade').html('Highscore: <i>' + localStorage.getItem('Highscore') + '/7000</i><br>Award: <i>More Scenarios</i>')
+    if (localStorage.getItem('Highscore') >= 7000) {
+      $('.aLevelUp').removeClass('disabled');
+    }
+    break;
+  case '2':
+    $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(localStorage.getItem('AverageHighscore')) + '/5000</i><br>Award: <i>New Background</i>')
+    if (Math.round(localStorage.getItem('AverageHighscore')) >= 5000) {
+      $('.aLevelUp').removeClass('disabled');
+    }
+    break;
 }
 
 function LevelUpA() {
