@@ -1,3 +1,5 @@
+if (localStorage.getItem('ArcadeMatches') == null) {localStorage.setItem('ArcadeMatches', 0)}
+
 window.onload = function onload() {
   switch (localStorage.getItem('sound')) {
     case 'true':
@@ -15,18 +17,43 @@ window.onload = function onload() {
       $('setting, .soundpanel').removeClass('hidden');
       break;
     }
+  if (localStorage.getItem('reloadArcade') == 1) {
+    ArcadeSwitch()
+    localStorage.setItem('reloadArcade', 0)
+  }
 };
 
 //Sound controller
-function soundYes() {
-  localStorage.setItem('sound', true);
+function sound(yn) {
+  if (yn == 0) {
+    localStorage.setItem('sound', true)
+  }
+  else if (yn == 1) { 
+    localStorage.setItem('sound', false) 
+  }
   location.reload();
 }
 
-function soundNo() {
-  localStorage.setItem('sound', false);
-  location.reload();
+//Arcade Levels
+switch (localStorage.getItem('ArcadeLevel')) {
+  case null:
+  case '0':
+    localStorage.setItem('ArcadeLevel', 0);
+    $('#arcadeUpgrade').html('Matches played: <i>' + localStorage.getItem('ArcadeMatches') + '/3</i><br>Award: <i>Match length from 5 to 10</i>');
+    if (localStorage.getItem('ArcadeMatches') >= 3) {
+      $('.aLevelUp').removeClass('disabled');
+    }
+    break;
 }
+
+function LevelUpA() {
+  let al = parseInt(localStorage.getItem('ArcadeLevel'));
+  localStorage.setItem('ArcadeLevel', al + 1);
+  localStorage.setItem('reloadArcade', 1);
+  location.reload()
+}
+
+$('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1))
 
 //Switcher machanism
 function StorySwitch(){
@@ -165,6 +192,6 @@ if (localStorage.getItem('MaxSurvivedHard') == 20) {
 
 //Clears progress
 function resetEverything() {
-    localStorage.clear();
-    location.reload();
+  localStorage.clear();
+  location.reload();
 }
