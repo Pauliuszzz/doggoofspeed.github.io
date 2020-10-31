@@ -3,75 +3,6 @@ var score = 0;
 var kXP = 0;
 localStorage.setItem('kXPstrg', 0)
 
-switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
-	case 9:
-	case 8:
-	case 7:
-	case 6:
-	case 5:
-	case 4:
-		scenarios = scenarios1.concat(scenarios2);
-		var musicNumber = 2;
-		var bgNumber = 2;
-		var maxLength = 9;
-		break;
-	case 3:
-		scenarios = scenarios1.concat(scenarios2);
-		var musicNumber = 1;
-		var bgNumber = 2;
-		var maxLength = 9;
-		break;
-	case 2:
-		scenarios = scenarios1.concat(scenarios2);
-		var musicNumber = 1;
-		var bgNumber = 1;
-		var maxLength = 9;
-		break;
-	case 1:
-		scenarios = scenarios1;
-		var musicNumber = 1;
-		var bgNumber = 1;
-		var maxLength = 9;
-		break;
-	case 0:
-		scenarios = scenarios1;
-		var musicNumber = 1;
-		var bgNumber = 1;
-		var maxLength = 4;
-		break;
-}
-
-console.log(scenarios.length)
-
-switch (Math.floor(Math.random() * Math.floor(bgNumber))){
-  case 0:
-		$('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
-    break;
-  case 1:
-		$('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
-    if ($(window).width() >= 1280) {
-      $('body').css('background-size', '25%')
-		}
-    break;
-  case 2:
-    $('body').css({'background': 'url(../resources/pattern.jpg) center repeat fixed, #008080', 'background-size': '25%'})
-    if ($(window).width() >= 1280) {
-      $('body').css('background-size', '10%')
-    }
-    break;
-}
-
-switch (Math.floor(Math.random() * Math.floor(musicNumber))){
-  case 0:
-		var theme = new Audio('../resources/Arcade1.ogg');
-    break;
-  case 1:
-		var theme = new Audio('../resources/Arcade2.ogg');
-    break;
-  case 2:
-    break;
-}
-
 window.onload = function onload() {
   if (localStorage.getItem('sound') == 'true') {
 		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg"></audio>')
@@ -79,6 +10,71 @@ window.onload = function onload() {
   }
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
+	switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
+		case 9:
+		case 8:
+		case 7:
+		case 6:
+		case 5:
+		case 4:
+			scenarios = scenarios1.concat(scenarios2);
+			var musicNumber = 2;
+			var bgNumber = 2;
+			var maxLength = 9;
+			break;
+		case 3:
+			scenarios = scenarios1.concat(scenarios2);
+			var musicNumber = 1;
+			var bgNumber = 2;
+			var maxLength = 9;
+			break;
+		case 2:
+			scenarios = scenarios1.concat(scenarios2);
+			var musicNumber = 1;
+			var bgNumber = 1;
+			var maxLength = 9;
+			break;
+		case 1:
+			scenarios = scenarios1;
+			var musicNumber = 1;
+			var bgNumber = 1;
+			var maxLength = 9;
+			break;
+		case 0:
+			scenarios = scenarios1;
+			var musicNumber = 1;
+			var bgNumber = 1;
+			var maxLength = 4;
+			break;
+	}
+	switch (Math.floor(Math.random() * Math.floor(bgNumber))){
+		case 0:
+			$('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
+			break;
+		case 1:
+			$('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
+			if ($(window).width() >= 1280) {
+				$('body').css('background-size', '25%')
+			}
+			break;
+		case 2:
+			$('body').css({'background': 'url(../resources/pattern.jpg) center repeat fixed, #008080', 'background-size': '25%'})
+			if ($(window).width() >= 1280) {
+				$('body').css('background-size', '10%')
+			}
+			break;
+	}
+	
+	switch (Math.floor(Math.random() * Math.floor(musicNumber))){
+		case 0:
+			var theme = new Audio('../resources/Arcade1.ogg');
+			break;
+		case 1:
+			var theme = new Audio('../resources/Arcade2.ogg');
+			break;
+		case 2:
+			break;
+	}
 	shuffle(scenarios);
 	text();
 };
