@@ -56,6 +56,12 @@ switch (localStorage.getItem('ArcadeLevel')) {
       $('.aLevelUp').removeClass('disabled');
     }
     break;
+  case '3':
+    $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + localStorage.getItem('kXPstrg') + '/5</i><br>Award: <i>New Music</i>')
+    if (localStorage.getItem('kXPstrg') >= 5) {
+      $('.aLevelUp').removeClass('disabled');
+    }
+    break;
 }
 
 function LevelUpA() {

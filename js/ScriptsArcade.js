@@ -1,5 +1,7 @@
 var count = 0;
 var score = 0;
+var kXP = 0;
+localStorage.setItem('kXPstrg', 0)
 
 switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
 	case 9:
@@ -8,23 +10,32 @@ switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
 	case 6:
 	case 5:
 	case 4:
+		scenarios = scenarios1.concat(scenarios2);
+		var musicNumber = 2;
+		var bgNumber = 2;
+		var maxLength = 9;
+		break;
 	case 3:
-		scenarios = scenarios1.concat(scenarios2)
+		scenarios = scenarios1.concat(scenarios2);
+		var musicNumber = 1;
 		var bgNumber = 2;
 		var maxLength = 9;
 		break;
 	case 2:
-		scenarios = scenarios1.concat(scenarios2)
+		scenarios = scenarios1.concat(scenarios2);
+		var musicNumber = 1;
 		var bgNumber = 1;
 		var maxLength = 9;
 		break;
 	case 1:
-		scenarios = scenarios1
+		scenarios = scenarios1;
+		var musicNumber = 1;
 		var bgNumber = 1;
 		var maxLength = 9;
 		break;
 	case 0:
-		scenarios = scenarios1
+		scenarios = scenarios1;
+		var musicNumber = 1;
 		var bgNumber = 1;
 		var maxLength = 4;
 		break;
@@ -50,9 +61,21 @@ switch (Math.floor(Math.random() * Math.floor(bgNumber))){
     break;
 }
 
+switch (Math.floor(Math.random() * Math.floor(musicNumber))){
+  case 0:
+		var theme = new Audio('../resources/Arcade1.ogg');
+    break;
+  case 1:
+		var theme = new Audio('../resources/Arcade2.ogg');
+    break;
+  case 2:
+    break;
+}
+
 window.onload = function onload() {
   if (localStorage.getItem('sound') == 'true') {
-    $('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg" preload="none"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg" preload="none"></audio>')
+		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg"></audio>')
+		loopify("../resources/Arcade2.ogg");
   }
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
@@ -98,6 +121,9 @@ function reply1() {
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score1 + 'Xp');
 	}
+	if (scenarios[count].score1 == 1000) {
+		kXP++
+	}
 	if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx').play();
 	}
@@ -110,6 +136,9 @@ function reply2() {
 	score = score + scenarios[count].score2;
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score2 + 'Xp');
+	}
+	if (scenarios[count].score2 == 1000) {
+		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx').play();
@@ -124,6 +153,9 @@ function reply3() {
 	if ($('.xpmessage').hasClass('hidden') == true) {
 		$('.xptext').html('+' + scenarios[count].score3 + 'Xp');
 	}
+	if (scenarios[count].score3 == 1000) {
+		kXP++
+	}
 	if (localStorage.getItem('sound') == 'true') {
 		document.getElementById('btnsfx').play();
 	}
@@ -137,6 +169,10 @@ function nextScenario() {
 		}
 		if (localStorage.getItem('Highscore') < score){
 			localStorage.setItem('Highscore', score);
+		}
+		if (kXP >= localStorage.getItem('kXPstrg')) {
+			localStorage.setItem('kXPstrg', kXP);
+			console.log(kXP)
 		}
 		$('.flexmain, #score-text').hide();
 		$('#EndCard').removeClass('hidden');

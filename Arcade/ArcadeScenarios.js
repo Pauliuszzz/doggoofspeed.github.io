@@ -60,9 +60,9 @@ scenarios1 = [
 		"reply2": "You eat it and become french. Why? Because the french eat frogs would be my guess.",
 		"answer2": "Eat it",
 		"score2": 1000,
-		"reply3": "The frog was very angry, but in the end, it was just a frog, and couldn't do anything.",
+		"reply3": "After being thrown out the frog became very angry, but it was just a frog and couldn't do much. You otherwise were consumed by guilt for the next half an hour.",
 		"answer3": "Throw out it of the wagon",
-		"score3": 250
+		"score3": 0
 	},
 	{
 		//Sleep
