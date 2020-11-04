@@ -62,7 +62,7 @@ scenarios1 = [
 		"score2": 1000,
 		"reply3": "After being thrown out the frog became very angry, but it was just a frog and couldn't do much. You otherwise were consumed by guilt for the next half an hour.",
 		"answer3": "Throw out it of the wagon",
-		"score3": 0
+		"score3": 500
 	},
 	{
 		//Sleep

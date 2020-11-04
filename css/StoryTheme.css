@@ -78,10 +78,6 @@ button:active {
 	transform: scale(.8);
 }
 
-input {
-	border-radius: 15px !important;
-}
-
 *,*:focus,*:hover{
   outline: none;
 }
@@ -143,7 +139,7 @@ input {
 	border-radius: 15px;
 	border: thin solid #ddd;
 	background: rgba(0, 0, 0, .3);
-	box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
 }
 
 .hidden {
@@ -155,6 +151,7 @@ input {
 	margin: 10px;
 	padding: 10px;
 	color: white;
+	border-radius: 15px !important;
 }
 
 .wrong {

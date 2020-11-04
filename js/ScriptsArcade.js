@@ -1,6 +1,9 @@
 var count = 0;
 var score = 0;
 var kXP = 0;
+var maxLength
+var musicNumber
+var bgNumber
 localStorage.setItem('kXPstrg', 0)
 
 window.onload = function onload() {
@@ -12,33 +15,33 @@ window.onload = function onload() {
 		case 5:
 		case 4:
 			scenarios = scenarios1.concat(scenarios2);
-			var musicNumber = 2;
-			var bgNumber = 2;
-			var maxLength = 9;
+			musicNumber = 2;
+			bgNumber = 2;
+			maxLength = 9;
 			break;
 		case 3:
 			scenarios = scenarios1.concat(scenarios2);
-			var musicNumber = 1;
-			var bgNumber = 2;
-			var maxLength = 9;
+			musicNumber = 1;
+			bgNumber = 2;
+			maxLength = 9;
 			break;
 		case 2:
 			scenarios = scenarios1.concat(scenarios2);
-			var musicNumber = 1;
-			var bgNumber = 1;
-			var maxLength = 9;
+			musicNumber = 1;
+			bgNumber = 1;
+			maxLength = 9;
 			break;
 		case 1:
 			scenarios = scenarios1;
-			var musicNumber = 1;
-			var bgNumber = 1;
-			var maxLength = 9;
+			musicNumber = 1;
+			bgNumber = 1;
+			maxLength = 9;
 			break;
 		case 0:
 			scenarios = scenarios1;
-			var musicNumber = 1;
-			var bgNumber = 1;
-			var maxLength = 4;
+			musicNumber = 1;
+			bgNumber = 1;
+			maxLength = 4;
 			break;
 	}
 
@@ -168,7 +171,6 @@ function nextScenario() {
 		}
 		if (kXP >= localStorage.getItem('kXPstrg')) {
 			localStorage.setItem('kXPstrg', kXP);
-			console.log(kXP)
 		}
 		$('.flexmain, #score-text').hide();
 		$('#EndCard').removeClass('hidden');

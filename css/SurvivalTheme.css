@@ -174,7 +174,7 @@ button:active {
 	border-radius: 15px;
 	border: thin solid #8E0E00;
 	background: rgba(0, 0, 0, .5);
-	box-shadow: 7px 7px 7px rgba(0, 0, 0, .5);
+	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
 }
 
 .hpmessage {
