@@ -108,34 +108,34 @@ function reply3() {
 			}
 			break;
 		case 'ending6':
-				if (endings[5] == '0'){
-					endings[5] = '1';
-				}
+			if (endings[5] == '0'){
+				endings[5] = '1';
+			}
 			break;
 		case 'ending7':
-				if (endings[6] == '0'){
-					endings[6] = '1';
-				}
+			if (endings[6] == '0'){
+				endings[6] = '1';
+			}
 			break;
 		case 'ending7':
-				if (endings[6] == '0'){
-					endings[6] = '1';
-				}
+			if (endings[6] == '0'){
+				endings[6] = '1';
+			}
 			break;
 		case 'ending8':
-				if (endings[7] == '0'){
-					endings[7] = '1';
-				}
+			if (endings[7] == '0'){
+				endings[7] = '1';
+			}
 			break;
 		case 'ending9':
-				if (endings[8] == '0'){
-					endings[8] = '1';
-				}
+			if (endings[8] == '0'){
+				endings[8] = '1';
+			}
 			break;
 		case 'ending10':
-				if (endings[9] == '0'){
-					endings[9] = '1';
-				}
+			if (endings[9] == '0'){
+				endings[9] = '1';
+			}
 			break;
 	}
 	$('div#EndCard').removeClass('hidden');
