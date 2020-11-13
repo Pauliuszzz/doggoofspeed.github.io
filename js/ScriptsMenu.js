@@ -116,8 +116,8 @@ function SettingSwitch() {
 
 //Story mode ending counter
 if (localStorage.getItem('M1-Endings') != null) {
-  $('#M1').html('Endings achieved: ' + localStorage.getItem('M1-Endings') + '/5');
-  if (localStorage.getItem('M1-Endings') == 5) {
+  $('#M1').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length + '/5');
+  if (JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length == 5) {
     $('.finM1').css('fill', 'gold');
   }
 }
@@ -126,8 +126,8 @@ if (localStorage.getItem('M1-Endings') != null) {
   }
 
 if (localStorage.getItem('M2-Endings') != null) {
-  $('#M2').html('Endings achieved: ' + localStorage.getItem('M2-Endings') + '/10');
-  if (localStorage.getItem('M2-Endings') == 10) {
+  $('#M2').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M2-Endings')).filter(x => x == '1').length + '/10');
+  if (JSON.parse(localStorage.getItem('M2-Endings')).filter(x => x == '1').length == 10) {
     $('.finM2').css('fill', 'gold');
   }
 }
@@ -140,8 +140,8 @@ if (localStorage.getItem('M2-Endings') != null) {
     }
 
 if (localStorage.getItem('M3-Endings') != null) {
-  $('#M3').html('Endings achieved: ' + localStorage.getItem('M3-Endings') + '/7');
-  if (localStorage.getItem('M3-Endings') == 7) {
+  $('#M3').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M3-Endings')).filter(x => x == '1').length + '/7');
+  if (JSON.parse(localStorage.getItem('M3-Endings')).filter(x => x == '1').length == 7) {
     $('.finM3').css('fill', 'gold');
   }
 }

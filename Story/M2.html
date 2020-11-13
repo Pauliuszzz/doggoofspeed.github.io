@@ -47,78 +47,19 @@
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M2Scenarios.js' async></script>
 	<script>
-		var endings = localStorage.getItem('M2-Endings');
+		if (localStorage.getItem('M2-Endings') == null) {
+			var endings = ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'];
+		}
+		else {
+			var endings = JSON.parse(localStorage.getItem('M2-Endings'));
+		}
 		var quit = false;
 		var count = 0;
 
-    //Ending Counter
-  function endingcounter(){
-	  switch (Object.keys(scenarios[count]).pop()) {
-			case 'ending1':
-				if (localStorage.getItem('M2-1') == null){
-					endings++;
-					localStorage.setItem('M2-1', 1);
-				}
-				break;
-			case 'ending2':
-				if (localStorage.getItem('M2-2') == null){
-					endings++;
-					localStorage.setItem('M2-2', 1);
-				}
-				break;
-			case 'ending3':
-				if (localStorage.getItem('M2-3') == null){
-					endings++;
-					localStorage.setItem('M2-3', 1);
-				}
-				break;
-			case 'ending4':
-				if (localStorage.getItem('M2-4') == null){
-					endings++;
-					localStorage.setItem('M2-4', 1);
-				}
-				break;
-			case 'ending5':
-				if (localStorage.getItem('M2-5') == null){
-					endings++;
-					localStorage.setItem('M2-5', 1);
-				}
-				break;
-			case 'ending6':
-				if (localStorage.getItem('M2-6') == null){
-					endings++;
-					localStorage.setItem('M2-6', 1);
-				}
-				break;
-			case 'ending7':
-				if (localStorage.getItem('M2-7') == null){
-					endings++;
-					localStorage.setItem('M2-7', 1);
-				}
-				break;
-			case 'ending8':
-				if (localStorage.getItem('M2-8') == null){
-					endings++;
-					localStorage.setItem('M2-8', 1);
-				}
-				break;
-			case 'ending9':
-				if (localStorage.getItem('M2-9') == null){
-					endings++;
-					localStorage.setItem('M2-9', 1);
-				}
-				break;
-			case 'ending10':
-				if (localStorage.getItem('M2-10') == null){
-					endings++;
-					localStorage.setItem('M2-10', 1);
-				}
-				break;
+		function save () {
+			localStorage.setItem('M2-Endings', JSON.stringify(endings));
+			$('#M2').html('Endings achieved: ' + endings.filter(x => x == '1').length + '/10');
 		}
-	localStorage.setItem('M2-Endings', endings);
-	document.getElementById('M2').innerHTML = 'Endings achieved: ' + localStorage.getItem('M2-Endings') + '/10';
-	$('div#EndCard').removeClass('hidden');
-}
-</script>
+	</script>
 </body>
 </html>

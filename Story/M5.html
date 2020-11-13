@@ -46,13 +46,14 @@
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M5Scenarios.js' async></script>
 	<script>
-		var endings = localStorage.getItem('M5-Endings');
-		var failures = localStorage.getItem('M5-Failures');
+		window.onload = function onload() {
+			M5 = true;
+		}
 		var quit = false;
 		var count = 0;
 	
 	//Ending Counter
-	function endingcounter(){
+	function endingcounter5() {
 		switch (Object.keys(scenarios[count]).pop()) {
 			case 'ending1':
 				if (localStorage.getItem('M5-1') == null){

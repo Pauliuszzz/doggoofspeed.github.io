@@ -56,40 +56,10 @@
 		var quit = false;
 		var count = 0;
 
-  //Ending Counter
-	function endingcounter() {
-		switch (Object.keys(scenarios[count]).pop()) {
-			case 'ending1':
-				if (endings[0] == '0'){
-					endings[0] = '1';
-				}
-				break;
-			case 'ending2':
-				if (endings[1] == '0'){
-					endings[1] = '1';
-				}
-				break;
-			case 'ending3':
-				if (endings[2] == '0'){
-					endings[2] = '1';
-				}
-
-				break;
-			case 'ending4':
-				if (endings[3] == '0'){
-					endings[3] = '1';
-				}
-				break;
-			case 'ending5':
-				if (endings[4] == '0'){
-					endings[4] = '1';
-				}
-				break;
+		function save () {
+			localStorage.setItem('M1-Endings', JSON.stringify(endings));
+			$('#M1').html('Endings achieved: ' + endings.filter(x => x == '1').length + '/5');
 		}
-		localStorage.setItem('M1-Endings', JSON.stringify(endings));
-		$('#M1').html('Endings achieved: ' + endings.filter(x => x == '1').length + '/5');
-		$('div#EndCard').removeClass('hidden');
-	}
-</script>
+	</script>
 </body>
 </html>
