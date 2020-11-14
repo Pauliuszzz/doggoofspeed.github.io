@@ -28,13 +28,13 @@ function text() {
 	$('#ButtonOne').html(scenarios[count].answer1);
 	$('#ButtonTwo').html(scenarios[count].answer2);
 	$('#ButtonThree').html(scenarios[count].answer3);
-	if (scenarios[count].answer1 == null) {
+	if (!scenarios[count].answer1) {
 		$('#ButtonOne').hide();
 	}
-	if (scenarios[count].answer2 == null) {
+	if (!scenarios[count].answer2) {
 		$('#ButtonTwo').hide();
 	}
-	if (scenarios[count].answer3 == null) {
+	if (!scenarios[count].answer3) {
 		$('#ButtonThree').hide();
 	}
 }
@@ -51,7 +51,7 @@ function reply1() {
 		$('.hptext').html('-' + scenarios[count].damage1 + 'Hp');
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx1').play();
+		$('#btnsfx1').get(0).play();
 	}
 }
 function reply2() {
@@ -65,7 +65,7 @@ function reply2() {
 		$('.hptext').html('-' + scenarios[count].damage2 + 'Hp');
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx2').play();
+		$('#btnsfx2').get(0).play();
 	}
 }
 function reply3() {
@@ -79,7 +79,7 @@ function reply3() {
 		$('.hptext').html('-' + scenarios[count].damage3 + 'Hp');
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx3').play();
+		$('#btnsfx3').get(0).play();
 	}
 }
 	
@@ -95,26 +95,26 @@ function nextScenario(mult) {
 		if (count == 20){
 			$('#EndCard').removeClass('hidden');
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('endCard').play();
+			  $('#endCard').get(0).play();
 			}
 		}
 		if (hp <= 0){
 			$('#DeadCard').removeClass('hidden');
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('deadCard').play();
+				$('#deadCard').get(0).play();
 			}
 		}
 		$('.flexmain').hide();
 		var matches = localStorage.getItem('SurvivalMatches');
 		localStorage.setItem('SurvivalMatches', ++matches);
-		if (localStorage.getItem('AverageCount') == null){
+		if (!localStorage.getItem('AverageCount')){
 			localStorage.setItem('AverageCount', count);
 		}
 			else {
 				localStorage.setItem('AverageCount', (localStorage.getItem('AverageCount') * (localStorage.getItem('SurvivalMatches')-1) + count)/localStorage.getItem('SurvivalMatches'));
 			}
 		$('#EndText').html('You finally reached your destination - a shop. You bought some eggs and some bread. Time to go home...');
-		if (localStorage.getItem('MaxSurvived') == null ) {
+		if (!localStorage.getItem('MaxSurvived')) {
 			$('#DeadText').html('Scenarios survived: ' + count + '<br>Max scenarios survived: 0');
 		}
 			else {
@@ -134,6 +134,6 @@ function nextScenario(mult) {
 	$('#ButtonFour').addClass('disabled');
 	text();
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx4').play();
+		$('#btnsfx4').get(0).play();
 	}
 }

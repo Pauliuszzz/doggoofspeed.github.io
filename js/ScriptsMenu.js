@@ -87,7 +87,7 @@ function StorySwitch(){
   $('body').css('background-color', '#5E7668');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx1').play();
+		$('#btnsfx1').get(0).play();
 	}
 }
 
@@ -97,7 +97,7 @@ function ArcadeSwitch() {
   $('body').css('background-color', '#8E3E6C');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx2').play();
+		$('#btnsfx2').get(0).play();
 	}
 }
 
@@ -107,7 +107,7 @@ function SurvivalSwitch() {
   $('body').css('background-color', '#8E3939');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx3').play();
+		$('#btnsfx3').get(0).play();
 	}
 }
 
@@ -116,7 +116,7 @@ function SettingSwitch() {
   $('#setting, .settingsClose').removeClass('hidden');
   $('nav').addClass('hidden');
   if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx3').play();
+		$('#btnsfx3').get(0).play();
   }
 }
 

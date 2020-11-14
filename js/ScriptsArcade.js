@@ -124,7 +124,7 @@ function reply1() {
 		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx').play();
+		$('#btnsfx').get(0).play();
 	}
 }
 function reply2() {
@@ -140,7 +140,7 @@ function reply2() {
 		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx').play();
+		$('#btnsfx').get(0).play();
 	}
 }
 function reply3() {
@@ -156,7 +156,7 @@ function reply3() {
 		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx').play();
+		$('#btnsfx').get(0).play();
 	}
 }
 	
@@ -164,7 +164,7 @@ function reply3() {
 function nextScenario() {
 	if (count >= maxLength){
 		if (localStorage.getItem('sound') == 'true') {
-			document.getElementById('endCard').play();
+			$('#endCard').get(0).play();
 		}
 		if (localStorage.getItem('Highscore') < score){
 			localStorage.setItem('Highscore', score);
@@ -192,6 +192,6 @@ function nextScenario() {
 	count++;
 	text();
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx').play();
+		$('#btnsfx').get(0).play();
 	}
 }

@@ -112,7 +112,7 @@
 	}
 
 	function validateTheo() {
-		var x = document.getElementById('Theoname').value + ' ' + document.getElementById('Theosurname').value;
+		var x = $('#Theoname').val() + ' ' + $('#Theosurname').val();
 		if (x == 'Brother Theo') {
 			$('#EndCard').removeClass('hidden');
 			$('#TheoCard, .hintbox').addClass('hidden');
@@ -120,7 +120,7 @@
 				endings[0] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('endCard').play();
+				$('#endCard').get(0).play();
 			}
 			save();
 		}
@@ -131,7 +131,7 @@
 	}
 
 	function validateStarrag() {
-		var x = document.getElementById('Starragname').value + ' ' + document.getElementById('Starragsurname').value;
+		var x = $('#Starragname').val() + ' ' + $('#Starragsurname').val();
 		if (x == 'Rogan Starrag') {
 			$('#EndCard').removeClass('hidden');
 			$('#StarragCard, .hintbox').addClass('hidden');
@@ -139,7 +139,7 @@
 				endings[1] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('endCard').play();
+				$('#endCard').get(0).play();
 			}
 			save();
 		}
@@ -150,7 +150,7 @@
 	}
 
 	function validateDudding() {
-		var x = document.getElementById('Duddingname').value + ' ' + document.getElementById('Duddingsurname').value;
+		var x = $('#Duddingname').val() + ' ' + $('#Duddingsurname').val();
 		if (x == 'Finn Dudding') {
 			$('#EndCard').removeClass('hidden');
 			$('#DuddingCard, .hintbox').addClass('hidden');
@@ -158,7 +158,8 @@
 				endings[2] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('endCard').play();
+				
+				$('#endCard').get(0).play();
 			}
 			save();
 		}
@@ -200,7 +201,7 @@
 			}
 			$('.flexmain').hide();
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('endCard').play();
+				$('#endCard').get(0).play();
 			}
 		}
 		if (scenarios.length > count + 1) {
@@ -211,7 +212,7 @@
 		quit = scenarios[count].quit;
 		text();
 			if (localStorage.getItem('sound') == 'true') {
-				document.getElementById('btnsfx4').play();
+				$('#btnsfx4').get(0).play();
 			}
 	}
 	</script>

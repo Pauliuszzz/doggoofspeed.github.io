@@ -130,8 +130,7 @@ button:active {
 	margin: 1em auto;
 	width: 75%;
 	padding: 1em;
-	animation: fadein .35s;
-	animation: hover 10s infinite;
+	animation: hover 10s infinite, fadein .35s;
 	will-change: opacity, transform;
 }
 

@@ -46,7 +46,7 @@ function reply1() {
 		count = (scenarios[count].skipto1 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx1').play();
+		$('#btnsfx1').get(0).play();
 	}
 }
 function reply2() {
@@ -60,7 +60,7 @@ function reply2() {
 		count = (scenarios[count].skipto2 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx2').play();
+		$('#btnsfx2').get(0).play();
 	}
 }
 function reply3() {
@@ -74,7 +74,7 @@ function reply3() {
 	  count = (scenarios[count].skipto3 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx3').play();
+		$('#btnsfx3').get(0).play();
 	}
 }
 
@@ -153,7 +153,7 @@ function nextScenario(mission){
     }
 		$('.flexmain').hide();
 		if (localStorage.getItem('sound') == 'true') {
-			document.getElementById('endCard').play();
+			$('#endCard').get(0).play();
 		}
 	}
 	if (scenarios.length > count + 1) {
@@ -164,6 +164,6 @@ function nextScenario(mission){
 	quit = scenarios[count].quit;
 	text();
 	if (localStorage.getItem('sound') == 'true') {
-		document.getElementById('btnsfx4').play();
+		$('#btnsfx4').get(0).play();
 	}
 }

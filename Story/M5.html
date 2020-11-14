@@ -229,9 +229,9 @@
 		if (failures == null) {
 			failures = 0;
 		}
-		localStorage.setItem('M5-Endings', endings);
-		localStorage.setItem('M5-Failures', failures);
-		document.getElementById('M5').innerHTML = 'Endings achieved: ' + localStorage.getItem('M5-Endings') + '/12<br>Failures achieved: ' + localStorage.getItem('M5-Failures') + '/17';
+		localStorage.setItem('M5-Endings', JSON.stringify(endings));
+		localStorage.setItem('M5-Failures', JSON.stringify(failures));
+		$('#M5').html('Endings achieved: ' + endings.filter(x => x == '1').length + '/12<br>Failures achieved: ' + failures.filter(x => x == '1').length + '/17');
 		$('div#EndCard').removeClass('hidden');
 	}
 	</script>
