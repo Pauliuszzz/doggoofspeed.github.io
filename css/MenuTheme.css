@@ -265,7 +265,7 @@ nav {
 		width: 25%;
 		height: 10em;
 		margin: 1%;
-		padding-top: 2em;
+		padding-top: 1em;
 	}
 
 	.greeter, .info, .settingpanel {
@@ -291,7 +291,7 @@ nav {
 	}
 
 	.trophy {
-		margin-top: -1.5em;
+		margin-top: -.5em;
 	}
 
 	.reset {
@@ -315,14 +315,18 @@ nav {
 	}
 
 	.trophy {
-		margin-top: -2.5em;
+		margin-top: -1em;
 	}
 
 	.card {
-		padding-top: 3em;
+		padding-top: 1.5em;
 	}
 
 	.settingpanel > p {
 		font-size: 26px; 
+	}
+
+	.greeter, .info, .settingpanel {
+		height: 14em;
 	}
 }

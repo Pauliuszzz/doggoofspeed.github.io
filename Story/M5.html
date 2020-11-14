@@ -40,15 +40,14 @@
 		<a href='./M5.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
 	</div>
 	<nav class='acrylic'>
-		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario()'>Continue</button>
+		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario(5)'>Continue</button>
 	</nav>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M5Scenarios.js' async></script>
 	<script>
-		window.onload = function onload() {
-			M5 = true;
-		}
+		var endings = JSON.parse(localStorage.getItem('M5-Endings'));
+		var failures = JSON.parse(localStorage.getItem('M5-Failures'));
 		var quit = false;
 		var count = 0;
 	
@@ -56,75 +55,68 @@
 	function endingcounter5() {
 		switch (Object.keys(scenarios[count]).pop()) {
 			case 'ending1':
-				if (localStorage.getItem('M5-1') == null){
-					endings++;
-					localStorage.setItem('M5-1', 1);
+				if (endings[0] == '0'){
+					endings[0] = '1';
 				}
 				break;
 			case 'ending2':
-				if (localStorage.getItem('M5-2') == null){
-					endings++;
-					localStorage.setItem('M5-2', 1);
+				if (endings[1] == '0'){
+					endings[1] = '1';
 				}
 				break;
 			case 'ending3':
-				if (localStorage.getItem('M5-3') == null){
-					endings++;
-					localStorage.setItem('M5-3', 1);
+				if (endings[2] == '0'){
+					endings[2] = '1';
 				}
 				break;
 			case 'ending4':
-				if (localStorage.getItem('M5-4') == null){
-					endings++;
-					localStorage.setItem('M5-4', 1);
+				if (endings[3] == '0'){
+					endings[3] = '1';
 				}
 				break;
 			case 'ending5':
-				if (localStorage.getItem('M5-5') == null){
-					endings++;
-					localStorage.setItem('M5-5', 1);
+				if (endings[4] == '0'){
+					endings[4] = '1';
 				}
 				break;
 			case 'ending6':
-				if (localStorage.getItem('M5-6') == null){
-					endings++;
-					localStorage.setItem('M5-6', 1);
+				if (endings[5] == '0'){
+					endings[5] = '1';
 				}
 				break;
 			case 'ending7':
-				if (localStorage.getItem('M5-7') == null){
-					endings++;
-					localStorage.setItem('M5-7', 1);
+				if (endings[6] == '0'){
+					endings[6] = '1';
+				}
+				break;
+			case 'ending7':
+				if (endings[6] == '0'){
+					endings[6] = '1';
 				}
 				break;
 			case 'ending8':
-				if (localStorage.getItem('M5-8') == null){
-					endings++;
-					localStorage.setItem('M5-8', 1);
+				if (endings[7] == '0'){
+					endings[7] = '1';
 				}
 				break;
 			case 'ending9':
-				if (localStorage.getItem('M5-9') == null){
-					endings++;
-					localStorage.setItem('M5-9', 1);
+				if (endings[8] == '0'){
+					endings[8] = '1';
 				}
 				break;
 			case 'ending10':
-				if (localStorage.getItem('M5-10') == null){
-					endings++;
-					localStorage.setItem('M5-10', 1);
+				if (endings[9] == '0'){
+					endings[9] = '1';
 				}
 				break;
 			case 'ending11':
-				if (localStorage.getItem('M5-11') == null){
-					endings++;
-					localStorage.setItem('M5-11', 1);
+				if (endings[10] == '0'){
+					endings[10] = '1';
 				}
 				break;
 			case 'ending12':
-				if (localStorage.getItem('M5-12') == null){
-					endings++;
-					localStorage.setItem('M5-12', 1);
+				if (endings[11] == '0'){
+					endings[11] = '1';
 				}
 				break;
 			//Failures

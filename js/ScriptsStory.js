@@ -25,10 +25,9 @@ function text() {
 			$('#ButtonThree').hide();
 			break;
 	}
-	if (scenarios[count].answer1 == null && scenarios[count].answer2 == null && scenarios[count].answer3 == null){
+	if (!scenarios[count].answer1 && !scenarios[count].answer2 && !scenarios[count].answer3){
 		$('#ButtonFour').removeClass('disabled');
-		$('.replydiv').hide();
-		$('.buttondiv').hide();
+		$('.replydiv, .buttondiv').hide();
 	}
 		else {
 			$('#ButtonFour').addClass('disabled');
@@ -37,13 +36,13 @@ function text() {
 
 //Replies
 function reply1() {
-	if (scenarios[count].reply1 != null){
+	if (scenarios[count].reply1){
 		$('#reply-text').html(scenarios[count].reply1);
 		$('.replydiv').show();
 	}
 	$('#ButtonFour').removeClass('disabled');
 	$('#ButtonTwo, #ButtonThree').addClass('disabled');
-	if (scenarios[count].skipto1 != null){
+	if (scenarios[count].skipto1){
 		count = (scenarios[count].skipto1 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
@@ -51,13 +50,13 @@ function reply1() {
 	}
 }
 function reply2() {
-	if (scenarios[count].reply2 != null){
+	if (scenarios[count].reply2){
 		$('#reply-text').html(scenarios[count].reply2);
 		$('.replydiv').show();
 	}
 	$('#ButtonFour').removeClass('disabled');
 	$('#ButtonOne, #ButtonThree').addClass('disabled');
-	if (scenarios[count].skipto2 != null){
+	if (scenarios[count].skipto2){
 		count = (scenarios[count].skipto2 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
@@ -65,13 +64,13 @@ function reply2() {
 	}
 }
 function reply3() {
-	if (scenarios[count].reply3 != null){
+	if (scenarios[count].reply3){
 	  $('#reply-text').html(scenarios[count].reply3);
 	  $('.replydiv').show();
 	}
 	$('#ButtonFour').removeClass('disabled');
 	$('#ButtonOne, #ButtonTwo').addClass('disabled');
-	if (scenarios[count].skipto3 != null){
+	if (scenarios[count].skipto3){
 	  count = (scenarios[count].skipto3 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
@@ -79,8 +78,8 @@ function reply3() {
 	}
 }
 
-  //Ending Counter
-  function endingcounter() {
+//Ending Counter
+function endingcounter() {
 	switch (Object.keys(scenarios[count]).pop()) {
 		case 'ending1':
 			if (endings[0] == '0'){
@@ -143,13 +142,15 @@ function reply3() {
 }
 
 //Next scenario
-function nextScenario(mult){
-	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
+function nextScenario(mission){
+  $('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
 	if (quit == true){
-		endingcounter();
-		if (M5 == true) {
+    if (mission == 5) {
 			endingcounter5();
-		}
+    }
+    else {
+      endingcounter();
+    }
 		$('.flexmain').hide();
 		if (localStorage.getItem('sound') == 'true') {
 			document.getElementById('endCard').play();

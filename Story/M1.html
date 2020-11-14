@@ -41,18 +41,13 @@
 		<a href='./M2.html' class='icon-only'><img src='../resources/forward.svg' alt='Forward'></a>
 	</div>
 	<nav class='acrylic'>
-		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario()'>Continue</button>
+		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario(1)'>Continue</button>
 	</nav>
 	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js' defer></script>
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M1Scenarios.js' async></script>
 	<script>
-		if (localStorage.getItem('M1-Endings') == null) {
-			var endings = ['0', '0', '0', '0', '0'];
-		}
-		else {
-			var endings = JSON.parse(localStorage.getItem('M1-Endings'));
-		}
+		var endings = JSON.parse(localStorage.getItem('M1-Endings'));
 		var quit = false;
 		var count = 0;
 

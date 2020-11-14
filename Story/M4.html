@@ -101,19 +101,14 @@
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M4Scenarios.js' async></script>
 	<script>
-		if (localStorage.getItem('M4-Endings') == null) {
-			var endings = ['0', '0', '0'];
-		}
-		else {
-			var endings = JSON.parse(localStorage.getItem('M4-Endings'));
-		}
+		var endings = JSON.parse(localStorage.getItem('M4-Endings'));
 		var quit = false;
 		var count = 0;
 	
 	//Ending Counter
-	function endingScript(){
-		localStorage.setItem('M4-Endings', endings);
-		document.getElementById('M4').innerHTML = 'Conspiracists found: ' + localStorage.getItem('M4-Endings') + '/3';
+	function save () {
+		localStorage.setItem('M4-Endings', JSON.stringify(endings));
+		$('#M4').html('Conspiracists found: ' + endings.filter(x => x == '1').length + '/3');
 	}
 
 	function validateTheo() {
@@ -121,14 +116,13 @@
 		if (x == 'Brother Theo') {
 			$('#EndCard').removeClass('hidden');
 			$('#TheoCard, .hintbox').addClass('hidden');
-			if (localStorage.getItem('M4-1') == null) {
-				endings++;
-				localStorage.setItem('M4-1', 1);
+			if (endings[0] == '0'){
+				endings[0] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
 				document.getElementById('endCard').play();
 			}
-			endingScript();
+			save();
 		}
   			else {
     			$('.wrong').removeClass('hidden');
@@ -141,14 +135,13 @@
 		if (x == 'Rogan Starrag') {
 			$('#EndCard').removeClass('hidden');
 			$('#StarragCard, .hintbox').addClass('hidden');
-			if (localStorage.getItem('M4-2') == null) {
-				endings++;
-				localStorage.setItem('M4-2', 1);
+			if (endings[1] == '0'){
+				endings[1] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
 				document.getElementById('endCard').play();
 			}
-			endingScript();
+			save();
 		}
   			else {
 				$('.wrong').removeClass('hidden');
@@ -161,14 +154,13 @@
 		if (x == 'Finn Dudding') {
 			$('#EndCard').removeClass('hidden');
 			$('#DuddingCard, .hintbox').addClass('hidden');
-			if (localStorage.getItem('M4-3') == null) {
-				endings++;
-				localStorage.setItem('M4-3', 1);
+			if (endings[2] == '0'){
+				endings[2] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
 				document.getElementById('endCard').play();
 			}
-			endingScript();
+			save();
 		}
   			else {
     			$('.wrong').removeClass('hidden');

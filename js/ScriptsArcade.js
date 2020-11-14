@@ -99,13 +99,13 @@ function text() {
 	$('#ButtonTwo').html(scenarios[count].answer2);
 	$('#ButtonThree').html(scenarios[count].answer3);
 	$('#score-text').html('Score: ' + score);
-	if (scenarios[count].answer1 == null) {
+	if (!scenarios[count].answer1) {
 		$('#ButtonOne').hide();
 	}
-	if (scenarios[count].answer2 == null) {
+	if (!scenarios[count].answer2) {
 		$('#ButtonTwo').hide();
 	}
-	if (scenarios[count].answer3 == null) {
+	if (!scenarios[count].answer3) {
 		$('#ButtonThree').hide();
 	}
 }
@@ -176,7 +176,7 @@ function nextScenario() {
 		$('#EndCard').removeClass('hidden');
 		var matches = localStorage.getItem('ArcadeMatches');
 		localStorage.setItem('ArcadeMatches', ++matches);
-		if (localStorage.getItem('AverageHighscore') == null){
+		if (!localStorage.getItem('AverageHighscore')){
 			localStorage.setItem('AverageHighscore', score);
 		}
 			else {

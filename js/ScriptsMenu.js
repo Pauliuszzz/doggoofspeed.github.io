@@ -1,4 +1,10 @@
-if (localStorage.getItem('ArcadeMatches') == null) {localStorage.setItem('ArcadeMatches', 0)}
+if (!localStorage.getItem('ArcadeMatches')) {localStorage.setItem('ArcadeMatches', 0)}
+if (!localStorage.getItem('M1-Endings')) {localStorage.setItem('M1-Endings', JSON.stringify(['0', '0', '0', '0', '0']))}
+if (!localStorage.getItem('M2-Endings')) {localStorage.setItem('M2-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
+if (!localStorage.getItem('M3-Endings')) {localStorage.setItem('M3-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0']))}
+if (!localStorage.getItem('M4-Endings')) {localStorage.setItem('M4-Endings', JSON.stringify(['0', '0', '0']))}
+if (!localStorage.getItem('M5-Endings')) {localStorage.setItem('M5-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
+if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
 
 window.onload = function onload() {
   switch (localStorage.getItem('sound')) {
@@ -115,72 +121,54 @@ function SettingSwitch() {
 }
 
 //Story mode ending counter
-if (localStorage.getItem('M1-Endings') != null) {
-  $('#M1').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length + '/5');
-  if (JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length == 5) {
-    $('.finM1').css('fill', 'gold');
-  }
+$('#M1').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length + '/5');
+if (JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length == 5) {
+  $('.finM1').css('fill', 'gold');
 }
-  else {
-    $('#M1').html('Endings achieved: 0/5');
-  }
-
-if (localStorage.getItem('M2-Endings') != null) {
+  //Mission 2
+if (JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length > 0) {
   $('#M2').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M2-Endings')).filter(x => x == '1').length + '/10');
   if (JSON.parse(localStorage.getItem('M2-Endings')).filter(x => x == '1').length == 10) {
     $('.finM2').css('fill', 'gold');
   }
 }
-  else if (localStorage.getItem('M1-Endings') == null) {
+  else if (JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length == 0) {
     $('#M2').html('Finish previous missions to unlock');
     $('#M2-play').addClass('disabled');
   }
-    else {
-      $('#M2').html('Endings achieved: 0/10');
-    }
-
-if (localStorage.getItem('M3-Endings') != null) {
+  //Mission 3
+if (JSON.parse(localStorage.getItem('M2-Endings')).filter(x => x == '1').length > 0) {
   $('#M3').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M3-Endings')).filter(x => x == '1').length + '/7');
   if (JSON.parse(localStorage.getItem('M3-Endings')).filter(x => x == '1').length == 7) {
     $('.finM3').css('fill', 'gold');
   }
 }
-  else if (localStorage.getItem('M2-Endings') == null) {
+  else if (JSON.parse(localStorage.getItem('M2-Endings')).filter(x => x == '1').length == 0) {
     $('#M3').html('Finish previous missions to unlock');
     $('#M3-play').addClass('disabled');
-  }   
-    else {
-      $('#M3').html('Endings achieved: 0/7');
-      $('#M4-play').addClass('disabled');
-    }
-
-if (localStorage.getItem('M4-Endings') != null) {
-  $('#M4').html('Conspiracists found: ' + localStorage.getItem('M4-Endings') + '/3');
-  if (localStorage.getItem('M4-Endings') == 3) {
+  }
+  //Mission 4
+if (JSON.parse(localStorage.getItem('M3-Endings')).filter(x => x == '1').length > 0) {
+  $('#M4').html('Conspiracists found: ' + JSON.parse(localStorage.getItem('M4-Endings')).filter(x => x == '1').length + '/3');
+  if (JSON.parse(localStorage.getItem('M4-Endings')).filter(x => x == '1').length == 3) {
     $('.finM4').css('fill', 'gold');
   }
 }
-  else if (localStorage.getItem('M3-Endings') == null) {
+  else if (JSON.parse(localStorage.getItem('M3-Endings')).filter(x => x == '1').length == 0) {
     $('#M4').html('Finish previous missions to unlock');
     $('#M4-play').addClass('disabled');
   }
-    else {
-      $('#M4').html('Conspiracists found: 0/3');
-    }
-
-if (localStorage.getItem('M5-Endings') != null | localStorage.getItem('M5-Endings') != null) {
-  $('#M5').html('Endings achieved: ' + localStorage.getItem('M5-Endings') + '/12<br>Failures achieved: ' + localStorage.getItem('M5-Failures') + '/17');
-  if (localStorage.getItem('M5-Endings') == 12 && localStorage.getItem('M5-Failures') == 17) {
+  //Mission 5
+if (JSON.parse(localStorage.getItem('M4-Endings')).filter(x => x == '1').length > 2) {
+  $('#M5').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M5-Endings')).filter(x => x == '1').length + '/12<br>Failures achieved: ' + JSON.parse(localStorage.getItem('M5-Failures')).filter(x => x == '1').length + '/17');
+  if (JSON.parse(localStorage.getItem('M5-Endings')).filter(x => x == '1').length == 12 && JSON.parse(localStorage.getItem('M4-Failures')).filter(x => x == '1').length == 17) {
     $('.finM5').css('fill', 'gold');
   }
 }
-  else if (localStorage.getItem('M4-Endings') < 3) {
+  else if (JSON.parse(localStorage.getItem('M4-Endings')).filter(x => x == '1').length < 3) {
     $('#M5').html('Find all the conspirators to unlock');
     $('#M5-play').addClass('disabled');
   }
-    else {
-      $('#M5').html('Endings achieved: 0/12<br>Failures achieved: 0/17');
-    }
 
 //Tells progress
 if (localStorage.getItem('Highscore') > 0){
@@ -192,10 +180,10 @@ if (localStorage.getItem('Highscore') > 0){
 if (localStorage.getItem('MaxSurvived') > 0 && localStorage.getItem('MaxSurvivedHard') > 0){
 	$('#SurvivalMode').html('Max scenarios survived: ' + localStorage.getItem('MaxSurvived') + '<br>Max scenarios survived (hard): ' + localStorage.getItem('MaxSurvivedHard') +'<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
 }
-  else if (localStorage.getItem('MaxSurvived') > 0 && localStorage.getItem('MaxSurvivedHard') == null) {
+  else if (localStorage.getItem('MaxSurvived') > 0 && !localStorage.getItem('MaxSurvivedHard')) {
 	  $('#SurvivalMode').html('Max scenarios survived: ' + localStorage.getItem('MaxSurvived') + '<br>Max scenarios survived (hard): 0<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
   }
-    else if (localStorage.getItem('MaxSurvived') == null && localStorage.getItem('MaxSurvivedHard') > 0){
+    else if (!localStorage.getItem('MaxSurvived') && localStorage.getItem('MaxSurvivedHard') > 0){
 	    $('#SurvivalMode').html('Max scenarios survived: 0<br>Max scenarios survived (hard): ' + localStorage.getItem('MaxSurvivedHard') +'<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
     }
       else {
