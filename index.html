@@ -94,7 +94,7 @@
 			  </div>
 			  <div class='card acrylic'>
 				<svg class='icon trophy finM5'><use xlink:href='#trophy'/></svg>
-				<h2 style='text-shadow: 2px 2px #3b4371'>The Great Escape</h2>
+				<h2 style='text-shadow: 2px 2px #3b4371'>The Escape</h2>
 				<p id='M5'></p>
 				<a href='Story/M5.html' id='M5-play' class='button'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			  </div>
@@ -111,9 +111,6 @@
 				<p id='arcadeUpgrade'></p>
 				<a class='button aLevelUp disabled' onClick='LevelUpA()'>Upgrade</a>
 			</div>
-			<div class='card acrylic'>
-				<p id='ArcadeMode'></p>
-			</div>
 		</div>
 	</div>
 	<div class='modes hidden' id='survival'>
@@ -129,9 +126,6 @@
 				<h2>Hard</h2>
 				<a class='playbig' href='Survival/Hardcore.html'><svg class='icon'><use xlink:href='#play'/></svg></a>
 			</div>
-			<div class='card acrylic'>
-				<p id='SurvivalMode'></p>
-			</div>
 		</div>
 	</div>
 	<div class='modes hidden' id='setting'>
@@ -146,8 +140,22 @@
 				<p>Vytautas Butenas<br>opengameart.com<br>kenney.nl</p>
 			</div>
 			<div class='acrylic card' style='padding: 1em 0'>
+				<h2>Show All Stats</h2>
+				<a onClick='StatSwitch()' class='button'>Show</a>
 				<h2>Reset Stats</h2>
 				<a onClick='resetEverything()' class='button'>Reset</a>
+			</div>
+		</div>
+	</div>
+	<div class='modes hidden' id='stats'>
+		<div class='flexsettings'>
+			<div class='acrylic card' style='padding: 1em 0'>
+				<h2 style='margin: .5em;'>Arcade Mode</h2>
+				<p id='ArcadeMode'></p>
+			</div>
+			<div class='acrylic card' style='padding: 1em 0'>
+				<h2 style='margin: .5em;'>Survival Mode</h2>
+				<p id='SurvivalMode'></p>
 			</div>
 		</div>
 	</div>

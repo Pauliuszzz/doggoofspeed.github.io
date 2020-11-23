@@ -120,6 +120,14 @@ function SettingSwitch() {
   }
 }
 
+function StatSwitch() {
+  $('#setting').addClass('hidden');
+  $('#stats').removeClass('hidden');
+  if (localStorage.getItem('sound') == 'true') {
+		$('#btnsfx3').get(0).play();
+  }
+}
+
 //Story mode ending counter
 $('#M1').html('Endings achieved: ' + JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length + '/5');
 if (JSON.parse(localStorage.getItem('M1-Endings')).filter(x => x == '1').length == 5) {
