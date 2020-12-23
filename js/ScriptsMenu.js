@@ -1,3 +1,14 @@
+//Checks if snow should be added
+var d = new Date();
+var n = d.getMonth();
+
+if ( n == 11 || n == 0 || n == 1 ) {
+  var snow = document.createElement('script')
+  snow.setAttribute("type","text/javascript")
+  snow.setAttribute("src", "js/snowstorm-min.js")
+  document.getElementsByTagName("body")[0].appendChild(snow)
+}
+
 if (!localStorage.getItem('ArcadeMatches')) {localStorage.setItem('ArcadeMatches', 0)}
 if (!localStorage.getItem('M1-Endings')) {localStorage.setItem('M1-Endings', JSON.stringify(['0', '0', '0', '0', '0']))}
 if (!localStorage.getItem('M2-Endings')) {localStorage.setItem('M2-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}

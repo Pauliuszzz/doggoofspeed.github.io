@@ -1,5 +1,16 @@
 var M5 = false;
 
+//Checks if snow should be added
+var d = new Date();
+var n = d.getMonth();
+
+if ( n == 11 || n == 0 || n == 1 ) {
+  var snow = document.createElement('script')
+  snow.setAttribute("type","text/javascript")
+  snow.setAttribute("src", "../js/snowstorm-min.js")
+  document.getElementsByTagName("body")[0].appendChild(snow)
+}
+
 window.onload = function onload() {
   if (localStorage.getItem('sound') == 'true') {
     $('body').append('<audio id="btnsfx1" src="../resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="../resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="../resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="../resources/btnsfx4.ogg"></audio>', '<audio id="endCard" src="../resources/endCard.ogg"></audio>')
