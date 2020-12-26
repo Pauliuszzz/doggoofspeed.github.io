@@ -196,23 +196,14 @@ if (localStorage.getItem('Highscore') > 0){
   else{
 	  $('#ArcadeMode').html('Highscore: 0<br>Average Score: 0<br>Matches played: 0');
   }
-if (localStorage.getItem('MaxSurvived') > 0 && localStorage.getItem('MaxSurvivedHard') > 0){
-	$('#SurvivalMode').html('Max scenarios survived: ' + localStorage.getItem('MaxSurvived') + '<br>Max scenarios survived (hard): ' + localStorage.getItem('MaxSurvivedHard') +'<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
+if (localStorage.getItem('MaxSurvived') > 0) {
+	$('#SurvivalMode').html('Max scenarios survived: ' + localStorage.getItem('MaxSurvived') +'<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
 }
-  else if (localStorage.getItem('MaxSurvived') > 0 && !localStorage.getItem('MaxSurvivedHard')) {
-	  $('#SurvivalMode').html('Max scenarios survived: ' + localStorage.getItem('MaxSurvived') + '<br>Max scenarios survived (hard): 0<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
-  }
-    else if (!localStorage.getItem('MaxSurvived') && localStorage.getItem('MaxSurvivedHard') > 0){
-	    $('#SurvivalMode').html('Max scenarios survived: 0<br>Max scenarios survived (hard): ' + localStorage.getItem('MaxSurvivedHard') +'<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
+    else {
+	    $('#SurvivalMode').html('Max scenarios survived: 0<br>Average scenarios survived: 0<br>Matches played: 0');
     }
-      else {
-	      $('#SurvivalMode').html('Max scenarios survived: 0<br>Max scenarios survived(hard): 0<br>Average scenarios survived: 0<br>Matches played: 0');
-      }
 if (localStorage.getItem('MaxSurvived') == 20) {
     $('.normal').css('fill', 'gold');
-}
-if (localStorage.getItem('MaxSurvivedHard') == 20) {
-    $('.hard').css('fill', 'gold');
 }
 
 //Clears progress

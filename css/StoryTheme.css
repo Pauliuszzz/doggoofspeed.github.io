@@ -178,12 +178,25 @@ input {
 }
 
 *, :after, :before {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 .disabled {
-  pointer-events: none;
-  opacity: .65;
+  	pointer-events: none;
+  	opacity: .65;
+}
+
+.togglediv {
+	right: 0; 
+	top: 0; 
+	width: 2em; 
+	height: 2em;
+	margin: 10px 0 0 10px
+}
+
+#toggle {
+	background: none;
+	border: none;
 }
 
 @keyframes hover {

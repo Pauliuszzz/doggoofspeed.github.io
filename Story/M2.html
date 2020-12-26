@@ -15,7 +15,8 @@
 </head>
 <body>
 	<header>
-		<div style='margin: 1em'>
+		<div class='togglediv'><button id='toggle'><img src='../resources/play.svg' alt='Play'></button></div>
+		<div style='margin: -1em 1em 1em 1em'>
 			<h1 class='project'>Project</h1>
 			<h1 class='passage'>Passage</h1>
 		</div>
@@ -50,6 +51,7 @@
 		var endings = JSON.parse(localStorage.getItem('M2-Endings'));
 		var quit = false;
 		var count = 0;
+		var mission = 'M2';
 
 		function save () {
 			localStorage.setItem('M2-Endings', JSON.stringify(endings));

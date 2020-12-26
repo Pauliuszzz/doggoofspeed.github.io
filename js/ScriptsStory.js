@@ -1,5 +1,3 @@
-var M5 = false;
-
 //Checks if snow should be added
 var d = new Date();
 var n = d.getMonth();
@@ -12,13 +10,26 @@ if ( n == 11 || n == 0 || n == 1 ) {
 }
 
 window.onload = function onload() {
-  if (localStorage.getItem('sound') == 'true') {
-    $('body').append('<audio id="btnsfx1" src="../resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="../resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="../resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="../resources/btnsfx4.ogg"></audio>', '<audio id="endCard" src="../resources/endCard.ogg"></audio>')
-  }
+	if (localStorage.getItem('sound') == 'true') {
+		$('body').append('<audio id="btnsfx1" src="../resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="../resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="../resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="../resources/btnsfx4.ogg"></audio>', '<audio id="endCard" src="../resources/endCard.ogg"></audio>', '<audio id="theme" src="../resources/' + mission + '.ogg" loop>')
+	}
+	var toggle = document.getElementById("toggle");
+	var theme = document.getElementById("theme");
+	console.log(toggle, theme);
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	text();
 }
+
+toggle.addEventListener("click", function(){
+	if (theme.paused){
+	  theme.play();
+	  toggle.innerHTML = "<img src='../resources/pause.svg' alt='Pause'>";
+	} else {
+	  theme.pause();
+	  toggle.innerHTML = "<img src='../resources/play.svg' alt='Play'>";
+	}
+});
 
 function text() {
 	$('#scenario-text').html(scenarios[count].scenario);
