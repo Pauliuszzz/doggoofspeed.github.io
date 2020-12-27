@@ -10,6 +10,7 @@ if ( n == 11 || n == 0 || n == 1 ) {
 }
 
 if (!localStorage.getItem('ArcadeMatches')) {localStorage.setItem('ArcadeMatches', 0)}
+if (!localStorage.getItem('SurvivalMatches')) {localStorage.setItem('SurvivalMatches', 0)}
 if (!localStorage.getItem('M1-Endings')) {localStorage.setItem('M1-Endings', JSON.stringify(['0', '0', '0', '0', '0']))}
 if (!localStorage.getItem('M2-Endings')) {localStorage.setItem('M2-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
 if (!localStorage.getItem('M3-Endings')) {localStorage.setItem('M3-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0']))}
@@ -18,6 +19,8 @@ if (!localStorage.getItem('M5-Endings')) {localStorage.setItem('M5-Endings', JSO
 if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
 
 window.onload = function onload() {
+  arcadeLevel()
+  survivalLevel()
   switch (localStorage.getItem('sound')) {
     case 'true':
       $('body').append('<audio id="btnsfx1" src="resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="resources/btnsfx4.ogg"></audio>');
@@ -34,10 +37,6 @@ window.onload = function onload() {
       $('setting, .soundpanel').removeClass('hidden');
       break;
     }
-  if (localStorage.getItem('reloadArcade') == 1) {
-    ArcadeSwitch()
-    localStorage.setItem('reloadArcade', 0)
-  }
 };
 
 //Sound controller
@@ -52,43 +51,67 @@ function sound(yn) {
 }
 
 //Arcade Levels
-switch (localStorage.getItem('ArcadeLevel')) {
-  case null:
-  case '0':
-    localStorage.setItem('ArcadeLevel', 0);
-    $('#arcadeUpgrade').html('Matches played: <i>' + localStorage.getItem('ArcadeMatches') + '/3</i><br>Award: <i>Match length from 5 to 10</i>');
-    if (localStorage.getItem('ArcadeMatches') >= 3) {
-      $('.aLevelUp').removeClass('disabled');
-    }
-    break;
-  case '1':
-    $('#arcadeUpgrade').html('Highscore: <i>' + localStorage.getItem('Highscore') + '/7000</i><br>Award: <i>More Scenarios</i>')
-    if (localStorage.getItem('Highscore') >= 7000) {
-      $('.aLevelUp').removeClass('disabled');
-    }
-    break;
-  case '2':
-    $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(localStorage.getItem('AverageHighscore')) + '/5000</i><br>Award: <i>New Background</i>')
-    if (Math.round(localStorage.getItem('AverageHighscore')) >= 5000) {
-      $('.aLevelUp').removeClass('disabled');
-    }
-    break;
-  case '3':
-    $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + localStorage.getItem('kXPstrg') + '/5</i><br>Award: <i>New Music</i>')
-    if (localStorage.getItem('kXPstrg') >= 5) {
-      $('.aLevelUp').removeClass('disabled');
-    }
-    break;
+function arcadeLevel() {
+  switch (localStorage.getItem('ArcadeLevel')) {
+    case null:
+    case '0':
+      localStorage.setItem('ArcadeLevel', 0);
+      $('#arcadeUpgrade').html('Matches played: <i>' + localStorage.getItem('ArcadeMatches') + '/3</i><br>Award: <i>Match length (5 > 7)</i>');
+      if (localStorage.getItem('ArcadeMatches') >= 3) {
+        $('.aLevelUp').removeClass('disabled');
+      }
+      break;
+    case '1':
+      $('#arcadeUpgrade').html('Highscore: <i>' + localStorage.getItem('Highscore') + '/5000</i><br>Award: <i>More Scenarios</i>')
+      if (localStorage.getItem('Highscore') >= 5000) {
+        $('.aLevelUp').removeClass('disabled');
+      }
+      break;
+    case '2':
+      $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(localStorage.getItem('AverageHighscore')) + '/5000</i><br>Award: <i>New Background</i>')
+      if (Math.round(localStorage.getItem('AverageHighscore')) >= 5000) {
+        $('.aLevelUp').removeClass('disabled');
+      }
+      break;
+    case '3':
+      $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + localStorage.getItem('kXPstrg') + '/5</i><br>Award: <i>New Music</i>')
+      if (localStorage.getItem('kXPstrg') >= 5) {
+        $('.aLevelUp').removeClass('disabled');
+      }
+      break;
+  }
 }
 
 function LevelUpA() {
   let al = parseInt(localStorage.getItem('ArcadeLevel'));
   localStorage.setItem('ArcadeLevel', al + 1);
-  localStorage.setItem('reloadArcade', 1);
-  location.reload()
+  $('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1))
+  arcadeLevel()
+}
+
+//Survival Levels
+function survivalLevel() {
+  switch (localStorage.getItem('SurvivalLevel')) {
+    case null:
+    case '0':
+      localStorage.setItem('SurvivalLevel', 0);
+      $('#survivalUpgrade').html('Matches played: <i>' + localStorage.getItem('SurvivalMatches') + '/3</i><br>Award: <i>Match length from 5 to 10</i>');
+      if (localStorage.getItem('SurvivalMatches') >= 3) {
+        $('.sLevelUp').removeClass('disabled');
+      }
+      break;
+  }
+}
+
+function LevelUpS() {
+  let sl = parseInt(localStorage.getItem('SurvivalLevel'));
+  localStorage.setItem('SurvivalLevel', sl + 1);
+  $('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) + 1))
+  survivalLevel()
 }
 
 $('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1))
+$('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) + 1))
 
 //Switcher machanism
 function StorySwitch(){

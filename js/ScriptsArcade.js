@@ -29,25 +29,25 @@ window.onload = function onload() {
 			scenarios = scenarios1.concat(scenarios2);
 			musicNumber = 2;
 			bgNumber = 2;
-			maxLength = 9;
+			maxLength = 6;
 			break;
 		case 3:
 			scenarios = scenarios1.concat(scenarios2);
 			musicNumber = 1;
 			bgNumber = 2;
-			maxLength = 9;
+			maxLength = 6;
 			break;
 		case 2:
 			scenarios = scenarios1.concat(scenarios2);
 			musicNumber = 1;
 			bgNumber = 1;
-			maxLength = 9;
+			maxLength = 6;
 			break;
 		case 1:
 			scenarios = scenarios1;
 			musicNumber = 1;
 			bgNumber = 1;
-			maxLength = 9;
+			maxLength = 6;
 			break;
 		case 0:
 			scenarios = scenarios1;
