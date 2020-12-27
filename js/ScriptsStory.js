@@ -21,7 +21,7 @@ window.onload = function onload() {
 	text();
 }
 
-toggle.addEventListener("click", function(){
+toggle.addEventListener('mousedown', function(){
 	if (theme.paused){
 	  theme.play();
 	  toggle.innerHTML = "<img src='../resources/pause.svg' alt='Pause'>";
