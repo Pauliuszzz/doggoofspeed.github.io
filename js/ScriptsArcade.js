@@ -19,6 +19,8 @@ if ( n == 11 || n == 0 || n == 1 ) {
 
 
 window.onload = function onload() {
+	var toggle = $("#toggle");
+	var theme;
 	switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
 		case 9:
 		case 8:
@@ -77,22 +79,34 @@ window.onload = function onload() {
 	
 	switch (Math.floor(Math.random() * Math.floor(musicNumber))){
 		case 0:
-			var theme = new Audio('../resources/Arcade1.ogg');
+			$('body').append('<audio id="theme" src="../resources/Arcade1.ogg" loop></audio>')
+			var theme = $("#theme");
 			break;
 		case 1:
-			var theme = new Audio('../resources/Arcade2.ogg');
+			$('body').append('<audio id="theme" src="../resources/Arcade2.ogg" loop></audio>')
+			var theme = $("#theme");
 			break;
 		case 2:
 			break;
 	}
-  if (localStorage.getItem('sound') == 'true') {
+  	if (localStorage.getItem('sound') == 'true') {
 		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg"></audio>')
-  }
+  	}
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	shuffle(scenarios);
 	text();
 };
+
+toggle.addEventListener("click", function(){
+	if (theme.paused){
+	  theme.play();
+	  toggle.innerHTML = "<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>";
+	} else {
+	  theme.pause();
+	  toggle.innerHTML = "<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>";
+	}
+});
 
 //Array Shuffle
 function shuffle(array) {
@@ -185,7 +199,7 @@ function nextScenario() {
 			localStorage.setItem('kXPstrg', kXP);
 		}
 		$('.flexmain, #score-text').hide();
-		$('#EndCard').removeClass('hidden');
+		$('#EndCard, #LevelCard').removeClass('hidden');
 		var matches = localStorage.getItem('ArcadeMatches');
 		localStorage.setItem('ArcadeMatches', ++matches);
 		if (!localStorage.getItem('AverageHighscore')){
@@ -195,6 +209,7 @@ function nextScenario() {
 				localStorage.setItem('AverageHighscore', (localStorage.getItem('AverageHighscore') * (localStorage.getItem('ArcadeMatches')-1) + score)/localStorage.getItem('ArcadeMatches'));
 			}
 			$('#EndScore').html('Your score: ' + score + '<br>Highscore: ' + localStorage.getItem('Highscore') + '<br>Average Score: ' + Math.round(localStorage.getItem('AverageHighscore')) + '<br>Matches played: ' + localStorage.getItem('ArcadeMatches'));
+		arcadeLevel();
 	}
 	$('.xpmessage').removeClass('hidden');
 	setTimeout(function(){ $('.xpmessage').addClass('hidden');}, 1000);

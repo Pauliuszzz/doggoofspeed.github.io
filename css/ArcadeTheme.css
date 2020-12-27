@@ -122,22 +122,19 @@ a:hover > img {
   border-color: transparent #424242 #424242 transparent;
   background: silver;
   border-radius: 1px;
-  margin-top: 10px;
   width: 50%;
 	font-size: .8em;
 	min-height: 1.5em;
-	line-height: 2em;
 	padding: .25em 1em;
 	white-space: normal;
 	line-height: normal;
-  margin: 5px;
-  font-weight: 400;
+  margin: 10px 5px 5px 5px;
   text-transform: none;
   transition: .35s;
-  -webkit-tap-highlight-color: transparent;
+  user-select: none;
 }
 
-button:hover {
+.button:hover {
   border: 2px inset white;
   background: silver;
   color: #424242;
@@ -145,7 +142,7 @@ button:hover {
 	transform: scale(.95);
 }
 
-button:active {
+.button:active {
 	transform: scale(.8);
 }
 
@@ -181,6 +178,10 @@ button:active {
   border-bottom: 1px solid rgba(0,0,0,.125);
 }
 
+.card-body {
+  padding: 10px;
+}
+
 .flexmain {
 	display: flex;
 	flex-flow: column;
@@ -210,9 +211,9 @@ button:active {
   will-change: opacity, background-color;
 }
 
-#EndCard {
+#EndCard, #LevelCard {
   width: 75%;
-  margin: auto;
+  margin: 0 auto 10px auto;
   padding: 0;
   animation: fadein 0.35s;
   will-change: opacity, transform;
@@ -220,6 +221,19 @@ button:active {
 
 #EndScore {
   margin: 1em;
+}
+
+.togglediv {
+	right: 0; 
+	top: 0; 
+	width: 2em; 
+	height: 2em;
+	margin: 10px 0 0 10px
+}
+
+#toggle {
+	background: none;
+	border: none;
 }
 
 *, :after, :before {

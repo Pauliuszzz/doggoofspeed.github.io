@@ -13,8 +13,8 @@ window.onload = function onload() {
 	if (localStorage.getItem('sound') == 'true') {
 		$('body').append('<audio id="btnsfx1" src="../resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="../resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="../resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="../resources/btnsfx4.ogg"></audio>', '<audio id="endCard" src="../resources/endCard.ogg"></audio>', '<audio id="theme" src="../resources/' + mission + '.ogg" loop>')
 	}
-	var toggle = document.getElementById("toggle");
-	var theme = document.getElementById("theme");
+	var toggle = $("#toggle");
+	var theme = $("#theme");
 	console.log(toggle, theme);
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
