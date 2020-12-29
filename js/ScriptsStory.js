@@ -19,8 +19,7 @@ window.onload = function onload() {
 	text();
 }
 
-$("#toggle").on('touchstart click', function(e){
-    e.stopPropagation(); e.preventDefault();
+$("#toggle").on('click', function(e){
 	if (theme.paused){
 	  theme.play();
 	  $("#toggle").html("<img src='../resources/pause.svg' alt='Pause'>");
