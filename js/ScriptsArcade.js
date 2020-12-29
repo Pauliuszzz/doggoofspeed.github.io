@@ -19,7 +19,6 @@ if ( n == 11 || n == 0 || n == 1 ) {
 
 
 window.onload = function onload() {
-	var toggle = $("#toggle");
 	var theme;
 	switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
 		case 9:
@@ -98,13 +97,14 @@ window.onload = function onload() {
 	text();
 };
 
-toggle.addEventListener('mousedown', function(){
+$("#toggle").on('touchstart click', function(e){
+    e.stopPropagation(); e.preventDefault();
 	if (theme.paused){
 	  theme.play();
-	  toggle.innerHTML = "<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>";
+	  $("#toggle").html("<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>");
 	} else {
 	  theme.pause();
-	  toggle.innerHTML = "<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>";
+	  $("#toggle").html("<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>");
 	}
 });
 
