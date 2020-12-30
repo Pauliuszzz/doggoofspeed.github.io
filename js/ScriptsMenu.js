@@ -25,18 +25,19 @@ if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', J
 
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 
-window.onload = function onload() {
+$(window).on('load', function(){
+  $('.lds-ellipsis').fadeOut()
   arcadeLevel()
   survivalLevel()
   switch (localStorage.getItem('sound')) {
     case 'true':
       $('body').append('<audio id="btnsfx1" src="resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="resources/btnsfx4.ogg"></audio>');
       $('.btnsoundy').css({'background': 'rgba(100,255,100,0.5)'});
-      $('#home').removeClass('hidden');
+      setTimeout(function(){ $('#home').fadeIn()}, 400);
       break;
     case 'false':
       $('.btnsoundn').css({'background': 'rgba(255,100,100,0.5)'});
-      $('#home').removeClass('hidden');
+      setTimeout(function(){ $('#home').fadeIn()}, 400);
       break;
     case null:
       SettingSwitch();
@@ -44,7 +45,7 @@ window.onload = function onload() {
       $('setting, .soundpanel').removeClass('hidden');
       break;
     }
-};
+})
 
 //Sound controller
 function sound(yn) {
@@ -62,8 +63,8 @@ $('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) 
 
 //Switcher machanism
 function StorySwitch(){
-  $('#home, #arcade, #survival').addClass('hidden');
-  $('#story, nav').removeClass('hidden');
+  $('#home, #arcade, #survival, #setting').fadeOut()
+  setTimeout(function(){ $('#story, nav').fadeIn()}, 400);
   $('body').removeClass('arcade survival');
   $('body').css('background-color', '#5E7668');
   $('.modes').css('margin-bottom', '4em');
@@ -73,8 +74,9 @@ function StorySwitch(){
 }
 
 function ArcadeSwitch() {
-	$('#home, #story, #survival').addClass('hidden');
-  $('#arcade, nav').removeClass('hidden');
+  $('#home, #story, #survival, #setting').fadeOut()
+  setTimeout(function(){ $('#arcade, nav').fadeIn()}, 400);
+  $('body').removeClass('story survival');
   $('body').css('background-color', '#8E3E6C');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
@@ -83,8 +85,8 @@ function ArcadeSwitch() {
 }
 
 function SurvivalSwitch() {
-	$('#home, #story, #arcade').addClass('hidden');
-  $('#survival, nav').removeClass('hidden');
+  $('#home, #story, #arcade, #setting').fadeOut();
+  setTimeout(function(){ $('#survival, nav').fadeIn()}, 400);
   $('body').css('background-color', '#8E3939');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
@@ -93,17 +95,16 @@ function SurvivalSwitch() {
 }
 
 function SettingSwitch() {
-	$('#home, #story, #arcade, #survival').addClass('hidden');
-  $('#setting, .settingsClose').removeClass('hidden');
-  $('nav').addClass('hidden');
+  $('#home, #story, #arcade, #survival').fadeOut();
+  setTimeout(function(){ $('#setting, nav').fadeIn()}, 400);
   if (localStorage.getItem('sound') == 'true') {
 		$('#btnsfx3').get(0).play();
   }
 }
 
 function StatSwitch() {
-  $('#setting').addClass('hidden');
-  $('#stats').removeClass('hidden');
+  $('#setting').fadeOut();
+  setTimeout(function(){ $('#stats').fadeIn()}, 400);
   if (localStorage.getItem('sound') == 'true') {
 		$('#btnsfx3').get(0).play();
   }

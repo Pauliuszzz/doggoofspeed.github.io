@@ -9,6 +9,7 @@
 	<meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1'>
 	<meta name='description' content='Project Passage is a small text based adventure game made entirely in Html, Css and Javascript.'>
 	<link rel='stylesheet' href='css/MenuTheme.css'>
+	<link rel='stylesheet' href='css/loading.css'>
 	<link rel='manifest' href='manifest.json'>
 </head>
 <body>
@@ -39,12 +40,12 @@
 		</symbol>
 	</svg>
 	<header>
-		<a class='settingsClose hidden' onClick='location.reload()'><svg class='icon'><use xlink:href='#back'/></svg></a>
 		<div style='margin-top: 1em'>
 			<h1 class='project'>Project</h1>
 			<h1 class='passage'>Passage</h1>
 		</div>
 	</header>
+	<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 	<a class='settingsbtn' onClick='SettingSwitch()'><svg class='icon'><use xlink:href='#settings'/></svg></a>
 	<div class='modes hidden' id='home'>
 		<div class='flexhome'>

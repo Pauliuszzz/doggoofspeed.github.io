@@ -182,17 +182,6 @@ nav {
 	transition: 0.35s;
 }
 
-.settingsClose {
-	position: fixed;
-	width: 36px;
-  height: 36px;
-	top: 0;
-	left: 0;
-	margin: 10px;
-	animation: fadein .35s;
-	will-change: opacity, transform;
-}
-
 .settingsbtn:active {
 	transform: rotate(360deg) scale(0.90);
 }
@@ -208,13 +197,6 @@ nav {
 	margin-top: 2em;
 }
 /* ANIMATIONS */
-
-@keyframes fadein {
-	from {
-		transform: scale(1.25);
-		opacity: 0;
-	}
-}
 
 @keyframes slidein {
 	to {

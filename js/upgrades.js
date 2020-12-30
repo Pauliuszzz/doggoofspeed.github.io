@@ -1,5 +1,6 @@
 //This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
+var arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
 
 //Arcade Levels
 function arcadeLevel() {
@@ -26,8 +27,44 @@ function arcadeLevel() {
         }
         break;
       case '3':
-        $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + arcadeInfo[3] + '/5</i><br>Award: <i>New Music</i>')
-        if (arcadeInfo[3] >= 5) {
+        $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + arcadeInfo[3] + '/4</i><br>Award: <i>New Music</i>')
+        if (arcadeInfo[3] >= 4) {
+          $('.aLevelUp').removeClass('disabled');
+        }
+        break;
+      case '4':
+        $('#arcadeUpgrade').html('Get less than 1000XP in a match: <i>' + Math.min(...arcadeHistory) + '/1000</i><br>Award: <i>Match length (7 > 9)</i>')
+        if (Math.min(...arcadeHistory) <= 1000) {
+          $('.aLevelUp').removeClass('disabled');
+        }
+        break;
+      case '5':
+        $('#arcadeUpgrade').html('')
+        if ('') {
+          $('.aLevelUp').removeClass('disabled');
+        }
+        break;
+      case '6':
+        $('#arcadeUpgrade').html('')
+        if ('') {
+          $('.aLevelUp').removeClass('disabled');
+        }
+        break;
+      case '7':
+        $('#arcadeUpgrade').html('')
+        if ('') {
+          $('.aLevelUp').removeClass('disabled');
+        }
+        break;
+      case '8':
+        $('#arcadeUpgrade').html('')
+        if ('') {
+          $('.aLevelUp').removeClass('disabled');
+        }
+        break;
+      case '9':
+        $('#arcadeUpgrade').html('')
+        if ('') {
           $('.aLevelUp').removeClass('disabled');
         }
         break;

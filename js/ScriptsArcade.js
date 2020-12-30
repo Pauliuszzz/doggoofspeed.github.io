@@ -12,6 +12,9 @@ var arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
 var d = new Date();
 var n = d.getMonth();
 
+console.log(Math.min(...arcadeHistory))
+console.table(arcadeHistory)
+
 if ( n == 11 || n == 0 || n == 1 ) {
   var snow = document.createElement('script')
   snow.setAttribute("type","text/javascript")
@@ -28,6 +31,11 @@ window.onload = function onload() {
 		case 7:
 		case 6:
 		case 5:
+			scenarios = scenarios1.concat(scenarios2);
+			musicNumber = 2;
+			bgNumber = 2;
+			maxLength = 8;
+			break;
 		case 4:
 			scenarios = scenarios1.concat(scenarios2);
 			musicNumber = 2;
