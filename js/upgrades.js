@@ -1,3 +1,6 @@
+//This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
+var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
+
 //Arcade Levels
 function arcadeLevel() {
     $('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1))
@@ -5,26 +8,26 @@ function arcadeLevel() {
       case null:
       case '0':
         localStorage.setItem('ArcadeLevel', 0);
-        $('#arcadeUpgrade').html('Matches played: <i>' + localStorage.getItem('ArcadeMatches') + '/3</i><br>Award: <i>Match length (5 > 7)</i>');
-        if (localStorage.getItem('ArcadeMatches') >= 3) {
+        $('#arcadeUpgrade').html('Matches played: <i>' + arcadeInfo[0] + '/3</i><br>Award: <i>Match length (5 > 7)</i>');
+        if (arcadeInfo[0] >= 3) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '1':
-        $('#arcadeUpgrade').html('Highscore: <i>' + localStorage.getItem('Highscore') + '/5000</i><br>Award: <i>More Scenarios</i>')
-        if (localStorage.getItem('Highscore') >= 5000) {
+        $('#arcadeUpgrade').html('Highscore: <i>' + arcadeInfo[1] + '/5000</i><br>Award: <i>More Scenarios</i>')
+        if (arcadeInfo[1] >= 5000) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '2':
-        $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(localStorage.getItem('AverageHighscore')) + '/5000</i><br>Award: <i>New Background</i>')
-        if (Math.round(localStorage.getItem('AverageHighscore')) >= 5000) {
+        $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(arcadeInfo[2]) + '/5000</i><br>Award: <i>New Background</i>')
+        if (Math.round(arcadeInfo[2]) >= 5000) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '3':
-        $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + localStorage.getItem('kXPstrg') + '/5</i><br>Award: <i>New Music</i>')
-        if (localStorage.getItem('kXPstrg') >= 5) {
+        $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + arcadeInfo[3] + '/5</i><br>Award: <i>New Music</i>')
+        if (arcadeInfo[3] >= 5) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;

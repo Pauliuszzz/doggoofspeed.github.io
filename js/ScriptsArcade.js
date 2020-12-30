@@ -4,7 +4,9 @@ var kXP = 0;
 var maxLength
 var musicNumber
 var bgNumber
-localStorage.setItem('kXPstrg', 0)
+//This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
+var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
+var arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
 
 //Checks if snow should be added
 var d = new Date();
@@ -191,24 +193,25 @@ function nextScenario() {
 		if (localStorage.getItem('sound') == 'true') {
 			$('#endCard').get(0).play();
 		}
-		if (localStorage.getItem('Highscore') < score){
-			localStorage.setItem('Highscore', score);
+		if (arcadeInfo[1] < score){
+			arcadeInfo[1] = score;
 		}
-		if (kXP >= localStorage.getItem('kXPstrg')) {
-			localStorage.setItem('kXPstrg', kXP);
+		if (kXP > arcadeInfo[3]) {
+			arcadeInfo[3] = kXP;
 		}
 		$('.flexmain, #score-text').hide();
 		$('#EndCard, #LevelCard').removeClass('hidden');
-		var matches = localStorage.getItem('ArcadeMatches');
-		localStorage.setItem('ArcadeMatches', ++matches);
-		if (!localStorage.getItem('AverageHighscore')){
-			localStorage.setItem('AverageHighscore', score);
+		arcadeInfo[0]++
+		arcadeHistory.push(score)
+		if (arcadeHistory.length > 10) {
+			arcadeHistory.shift()
 		}
-			else {
-				localStorage.setItem('AverageHighscore', (localStorage.getItem('AverageHighscore') * (localStorage.getItem('ArcadeMatches')-1) + score)/localStorage.getItem('ArcadeMatches'));
-			}
-			$('#EndScore').html('Your score: ' + score + '<br>Highscore: ' + localStorage.getItem('Highscore') + '<br>Average Score: ' + Math.round(localStorage.getItem('AverageHighscore')) + '<br>Matches played: ' + localStorage.getItem('ArcadeMatches'));
+		arcadeInfo[2] = arcadeHistory.reduce((a, b) => a + b, 0)/arcadeHistory.length
+		$('#EndScore').html('Your score: ' + score + '<br>Highscore: ' + arcadeInfo[1] + '<br>Average Score: ' + Math.round(arcadeInfo[2]) + '<br>Matches played: ' + arcadeInfo[0]);
 		arcadeLevel();
+		console.table(arcadeInfo)
+		localStorage.setItem('ArcadeStats', JSON.stringify(arcadeInfo));
+		localStorage.setItem('ArcadeHistory', JSON.stringify(arcadeHistory));
 	}
 	$('.xpmessage').removeClass('hidden');
 	setTimeout(function(){ $('.xpmessage').addClass('hidden');}, 1000);

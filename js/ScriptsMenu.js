@@ -9,7 +9,12 @@ if ( n == 11 || n == 0 || n == 1 ) {
   document.getElementsByTagName("body")[0].appendChild(snow)
 }
 
-if (!localStorage.getItem('ArcadeMatches')) {localStorage.setItem('ArcadeMatches', 0)}
+//This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
+if (!localStorage.getItem('ArcadeStats')) {localStorage.setItem('ArcadeStats', JSON.stringify([0, 0, 0, 0]))}
+if (!localStorage.getItem('ArcadeHistory')) {localStorage.setItem('ArcadeHistory', JSON.stringify([]))}
+var ahistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
+console.log(ahistory.length)
+console.log(ahistory)
 if (!localStorage.getItem('SurvivalMatches')) {localStorage.setItem('SurvivalMatches', 0)}
 if (!localStorage.getItem('M1-Endings')) {localStorage.setItem('M1-Endings', JSON.stringify(['0', '0', '0', '0', '0']))}
 if (!localStorage.getItem('M2-Endings')) {localStorage.setItem('M2-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
@@ -17,6 +22,8 @@ if (!localStorage.getItem('M3-Endings')) {localStorage.setItem('M3-Endings', JSO
 if (!localStorage.getItem('M4-Endings')) {localStorage.setItem('M4-Endings', JSON.stringify(['0', '0', '0']))}
 if (!localStorage.getItem('M5-Endings')) {localStorage.setItem('M5-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
 if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
+
+var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 
 window.onload = function onload() {
   arcadeLevel()
@@ -153,18 +160,8 @@ if (JSON.parse(localStorage.getItem('M4-Endings')).filter(x => x == '1').length 
   }
 
 //Tells progress
-if (localStorage.getItem('Highscore') > 0){
-	$('#ArcadeMode').html('Highscore: ' + localStorage.getItem('Highscore') + '<br>Average Score: ' + Math.round(localStorage.getItem('AverageHighscore')) + '<br>Matches played: ' + localStorage.getItem('ArcadeMatches'));
-}
-  else{
-	  $('#ArcadeMode').html('Highscore: 0<br>Average Score: 0<br>Matches played: 0');
-  }
-if (localStorage.getItem('MaxSurvived') > 0) {
+	$('#ArcadeMode').html('Highscore: ' + arcadeInfo[1] + '<br>Average Score: ' + arcadeInfo[2] + '<br>Matches played: ' + arcadeInfo[0]);
 	$('#SurvivalMode').html('Max scenarios survived: ' + localStorage.getItem('MaxSurvived') +'<br>Average scenarios survived: ' + Math.round(localStorage.getItem('AverageCount')) + '<br>Matches played: ' + localStorage.getItem('SurvivalMatches'));
-}
-    else {
-	    $('#SurvivalMode').html('Max scenarios survived: 0<br>Average scenarios survived: 0<br>Matches played: 0');
-    }
 if (localStorage.getItem('MaxSurvived') == 20) {
     $('.normal').css('fill', 'gold');
 }
