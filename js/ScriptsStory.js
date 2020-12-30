@@ -19,7 +19,7 @@ window.onload = function onload() {
 	text();
 }
 
-$("#toggle").on('click', function(e){
+$("#toggle").on(touchEvent, function(e){
 	if (theme.paused){
 	  theme.play();
 	  $("#toggle").html("<img src='../resources/pause.svg' alt='Pause'>");

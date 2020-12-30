@@ -7,6 +7,7 @@ var bgNumber
 //This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 var arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 
 //Checks if snow should be added
 var d = new Date();
@@ -107,7 +108,7 @@ window.onload = function onload() {
 	text();
 };
 
-$("#toggle").on('click', function(e){
+$("#toggle").on(touchEvent, function(e){
 	if (theme.paused){
 	  theme.play();
 	  $("#toggle").html("<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>");
