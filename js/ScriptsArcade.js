@@ -111,6 +111,13 @@ window.onload = function onload() {
 $("#toggle").on(touchEvent, function(e){
 	if (theme.paused){
 	  theme.play();
+	  theme.addEventListener('timeupdate', function(){
+		var buffer = .44
+		if(this.currentTime > this.duration - buffer){
+			this.currentTime = 0
+			this.play()
+		}
+		});
 	  $("#toggle").html("<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>");
 	} else {
 	  theme.pause();

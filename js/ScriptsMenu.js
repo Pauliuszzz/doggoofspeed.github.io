@@ -40,8 +40,9 @@ $(window).on('load', function(){
       setTimeout(function(){ $('#home').fadeIn()}, 400);
       break;
     case null:
-      SettingSwitch();
+      SettingSwitch(true);
       $('.card, .settingsClose, .settingsbtn').addClass('hidden');
+      $('nav').fadeOut()
       $('setting, .soundpanel').removeClass('hidden');
       break;
     }
@@ -94,9 +95,14 @@ function SurvivalSwitch() {
 	}
 }
 
-function SettingSwitch() {
+function SettingSwitch(first) {
   $('#home, #story, #arcade, #survival').fadeOut();
-  setTimeout(function(){ $('#setting, nav').fadeIn()}, 400);
+  if (first == true) {
+    setTimeout(function(){ $('#setting').fadeIn()}, 400);
+  }
+    else {
+      setTimeout(function(){ $('#setting, nav').fadeIn()}, 400);
+    }
   if (localStorage.getItem('sound') == 'true') {
 		$('#btnsfx3').get(0).play();
   }

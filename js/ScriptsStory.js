@@ -1,3 +1,5 @@
+let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+
 //Checks if snow should be added
 var d = new Date();
 var n = d.getMonth();
@@ -21,11 +23,18 @@ window.onload = function onload() {
 
 $("#toggle").on(touchEvent, function(e){
 	if (theme.paused){
-	  theme.play();
+		theme.play()
+	  	theme.addEventListener('timeupdate', function(){
+		var buffer = .44
+		if(this.currentTime > this.duration - buffer){
+			this.currentTime = 0
+			this.play()
+		}
+	});
 	  $("#toggle").html("<img src='../resources/pause.svg' alt='Pause'>");
 	} else {
 	  theme.pause();
-	  $("#toggle").html("<img src='../resources/pause.svg' alt='Pause'>");
+	  $("#toggle").html("<img src='../resources/play.svg' alt='Play'>");
 	}
 });
 

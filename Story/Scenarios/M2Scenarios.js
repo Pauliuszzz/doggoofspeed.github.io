@@ -14,7 +14,7 @@ var scenarios = [
     "answer2": "Go back to the monastery and ask if they need any workers",
   },
   {
-    "scenario": "You were walking through the street when you overheard two guards talking.<br>- Eh, did ya see those bastards fighting? They were outa their minds<br>- Ye, it was crazy. Don't you want to join those bastards at the bar? You are pretty good.<br>- Nah, man. My boss said there is a bandit camp nearby. Duty is duty",
+    "scenario": "You were walking through the street when you overheard two guards talking.<br>- Eh, did ya see those bastards fighting? They were outa their minds<br>- Ye, it was crazy. Don't you want to join those bastards at the bar? You are pretty good.<br>- Nah, man. My boss said there is a bandit camp nearby. Duty is duty.",
   },
   {
     "scenario": "It was late at night when you overheard a  woman screaming:<br>A thieve! Give back my belongings or I'll have to notify the guards. Your face will be on the board. The whole town will try to catch ya!",
