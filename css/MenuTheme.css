@@ -196,11 +196,19 @@ nav {
 .soundpanel {
 	margin-top: 2em;
 }
+
 /* ANIMATIONS */
 
 @keyframes slidein {
 	to {
 		bottom: 0;
+	}
+}
+
+@keyframes fadein {
+	from {
+    	transform: scale(1.25);
+		opacity: 0;
 	}
 }
 

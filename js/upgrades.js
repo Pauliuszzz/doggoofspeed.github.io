@@ -21,8 +21,8 @@ function arcadeLevel() {
         }
         break;
       case '2':
-        $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(arcadeInfo[2]) + '/5000</i><br>Award: <i>New Background</i>')
-        if (Math.round(arcadeInfo[2]) >= 5000) {
+        $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(arcadeInfo[2]) + '/4000</i><br>Award: <i>New Background</i>')
+        if (Math.round(arcadeInfo[2]) >= 4000) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
@@ -38,35 +38,39 @@ function arcadeLevel() {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
+        //here
       case '5':
-        $('#arcadeUpgrade').html('')
-        if ('') {
+        $('#arcadeUpgrade').html('Highscore: <i>' + arcadeInfo[1] + '/6500</i><br>Award: <i>More Scenarios</i>')
+        if (arcadeInfo[1] >= 6500) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '6':
-        $('#arcadeUpgrade').html('')
-        if ('') {
+        $('#arcadeUpgrade').html('Average Highscore: <i>' + Math.round(arcadeInfo[2]) + '/5000</i><br>Award: <i>New Background</i>')
+        if (Math.round(arcadeInfo[2]) >= 5000) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '7':
-        $('#arcadeUpgrade').html('')
-        if ('') {
+        $('#arcadeUpgrade').html('1000XP gotten in one game: <i>' + arcadeInfo[3] + '/7</i><br>Award: <i>New Music</i>')
+        if (arcadeInfo[3] >= 7) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '8':
-        $('#arcadeUpgrade').html('')
-        if ('') {
+        $('#arcadeUpgrade').html('Get less than 1000XP in a match: <i>' + Math.min(...arcadeHistory) + '/1000</i><br>Award: <i>Match length (9 > 10)</i>')
+        if (Math.min(...arcadeHistory) <= 1000) {
           $('.aLevelUp').removeClass('disabled');
         }
         break;
       case '9':
-        $('#arcadeUpgrade').html('')
-        if ('') {
+        $('#arcadeUpgrade').html('Highscore: <i>' + arcadeInfo[1] + '/7500</i><br>Award: <i>More Scenarios</i>')
+        if (arcadeInfo[1] >= 7500) {
           $('.aLevelUp').removeClass('disabled');
         }
+        break;
+      case '9':
+        $('#arcadeUpgrade').html('This is the end. There are no more missions.')
         break;
     }
   }

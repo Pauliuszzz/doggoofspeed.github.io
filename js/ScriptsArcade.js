@@ -23,82 +23,9 @@ if ( n == 11 || n == 0 || n == 1 ) {
   document.getElementsByTagName("body")[0].appendChild(snow)
 }
 
-
 window.onload = function onload() {
 	var theme;
-	switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
-		case 9:
-		case 8:
-		case 7:
-		case 6:
-		case 5:
-			scenarios = scenarios1.concat(scenarios2);
-			musicNumber = 2;
-			bgNumber = 2;
-			maxLength = 8;
-			break;
-		case 4:
-			scenarios = scenarios1.concat(scenarios2);
-			musicNumber = 2;
-			bgNumber = 2;
-			maxLength = 6;
-			break;
-		case 3:
-			scenarios = scenarios1.concat(scenarios2);
-			musicNumber = 1;
-			bgNumber = 2;
-			maxLength = 6;
-			break;
-		case 2:
-			scenarios = scenarios1.concat(scenarios2);
-			musicNumber = 1;
-			bgNumber = 1;
-			maxLength = 6;
-			break;
-		case 1:
-			scenarios = scenarios1;
-			musicNumber = 1;
-			bgNumber = 1;
-			maxLength = 6;
-			break;
-		case 0:
-			scenarios = scenarios1;
-			musicNumber = 1;
-			bgNumber = 1;
-			maxLength = 4;
-			break;
-	}
-
-	switch (Math.floor(Math.random() * Math.floor(bgNumber))){
-		case 0:
-			$('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
-			break;
-		case 1:
-			$('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
-			if ($(window).width() >= 1280) {
-				$('body').css('background-size', '25%')
-			}
-			break;
-		case 2:
-			$('body').css({'background': 'url(../resources/pattern.jpg) center repeat fixed, #008080', 'background-size': '25%'})
-			if ($(window).width() >= 1280) {
-				$('body').css('background-size', '10%')
-			}
-			break;
-	}
-	
-	switch (Math.floor(Math.random() * Math.floor(musicNumber))){
-		case 0:
-			$('body').append('<audio id="theme" src="../resources/Arcade1.ogg" loop></audio>')
-			var theme = $("#theme");
-			break;
-		case 1:
-			$('body').append('<audio id="theme" src="../resources/Arcade2.ogg" loop></audio>')
-			var theme = $("#theme");
-			break;
-		case 2:
-			break;
-	}
+	loadInfo();
   	if (localStorage.getItem('sound') == 'true') {
 		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg"></audio>')
   	}
@@ -107,6 +34,23 @@ window.onload = function onload() {
 	shuffle(scenarios);
 	text();
 };
+
+function refresh() {
+	count = 0;
+	score = 0;
+	kXP = 0;
+	arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
+	arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
+	$('.flexmain, #score-text').show();
+	$('#EndCard, #LevelCard').addClass('hidden');
+	$('#score-text').html('Score: ' + score);
+	loadInfo();
+	shuffle(scenarios);
+	$('.replydiv').hide();
+	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled');
+	$('#ButtonFour').addClass('disabled');
+	text();
+}
 
 $("#toggle").on(touchEvent, function(e){
 	if (theme.paused){
@@ -238,5 +182,108 @@ function nextScenario() {
 	text();
 	if (localStorage.getItem('sound') == 'true') {
 		$('#btnsfx').get(0).play();
+	}
+}
+
+function loadInfo() {
+	switch (parseInt(localStorage.getItem('ArcadeLevel'))) {
+		case 11:
+		case 10:
+			scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);
+			musicNumber = 3;
+			bgNumber = 3;
+			maxLength = 9;
+			break;
+		case 9:
+			scenarios = scenarios1.concat(scenarios2, scenarios3);
+			musicNumber = 3;
+			bgNumber = 3;
+			maxLength = 9;
+			break;
+		case 8:
+			scenarios = scenarios1.concat(scenarios2, scenarios3);
+			musicNumber = 3;
+			bgNumber = 3;
+			maxLength = 8;
+			break;
+		case 7:
+			scenarios = scenarios1.concat(scenarios2, scenarios3);
+			musicNumber = 2;
+			bgNumber = 3;
+			maxLength = 8;
+			break;
+		case 6:
+			scenarios = scenarios1.concat(scenarios2, scenarios3);
+			musicNumber = 2;
+			bgNumber = 2;
+			maxLength = 8;
+			break;
+		case 5:
+			scenarios = scenarios1.concat(scenarios2);
+			musicNumber = 2;
+			bgNumber = 2;
+			maxLength = 8;
+			break;
+		case 4:
+			scenarios = scenarios1.concat(scenarios2);
+			musicNumber = 2;
+			bgNumber = 2;
+			maxLength = 6;
+			break;
+		case 3:
+			scenarios = scenarios1.concat(scenarios2);
+			musicNumber = 1;
+			bgNumber = 2;
+			maxLength = 6;
+			break;
+		case 2:
+			scenarios = scenarios1.concat(scenarios2);
+			musicNumber = 1;
+			bgNumber = 1;
+			maxLength = 6;
+			break;
+		case 1:
+			scenarios = scenarios1;
+			musicNumber = 1;
+			bgNumber = 1;
+			maxLength = 6;
+			break;
+		case 0:
+			scenarios = scenarios1;
+			musicNumber = 1;
+			bgNumber = 1;
+			maxLength = 4;
+			break;
+	}
+
+	switch (Math.floor(Math.random() * Math.floor(bgNumber))){
+		case 0:
+			$('body').css('background', 'repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)');
+			break;
+		case 1:
+			$('body').css({'background': 'url(../resources/statue.png) center repeat fixed, #008080', 'background-size': '50%'})
+			if ($(window).width() >= 1280) {
+				$('body').css('background-size', '25%')
+			}
+			break;
+		case 2:
+			$('body').css({'background': 'url(../resources/pattern.jpg) center repeat fixed, #008080', 'background-size': '25%'})
+			if ($(window).width() >= 1280) {
+				$('body').css('background-size', '10%')
+			}
+			break;
+	}
+	
+	switch (Math.floor(Math.random() * Math.floor(musicNumber))){
+		case 0:
+			$('body').append('<audio id="theme" src="../resources/Arcade1.ogg" loop></audio>')
+			var theme = $("#theme");
+			break;
+		case 1:
+			$('body').append('<audio id="theme" src="../resources/Arcade2.ogg" loop></audio>')
+			var theme = $("#theme");
+			break;
+		case 2:
+			break;
 	}
 }
