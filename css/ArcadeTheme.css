@@ -16,6 +16,10 @@
   font-display: swap;
 }
 
+* {
+  cursor: pointer;
+}
+
 html {
   min-height: 100%;
   box-sizing: border-box;
