@@ -36,12 +36,14 @@ p, h2, h3 {
 a {
 	color: white;
 	-webkit-tap-highlight-color: transparent;
+	-webkit-user-select: none;
 	user-select: none;
 	transition: 0.35s;
 }
 
 nav {
 	border-radius: 15px 15px 0px 0px !important;
+	-webkit-backdrop-filter: blur(4px);
 	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: -4em;
