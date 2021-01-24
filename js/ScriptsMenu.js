@@ -13,8 +13,6 @@ if ( n == 11 || n == 0 || n == 1 ) {
 if (!localStorage.getItem('ArcadeStats')) {localStorage.setItem('ArcadeStats', JSON.stringify([0, 0, 0, 0]))}
 if (!localStorage.getItem('ArcadeHistory')) {localStorage.setItem('ArcadeHistory', JSON.stringify([]))}
 var ahistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
-console.log(ahistory.length)
-console.log(ahistory)
 if (!localStorage.getItem('SurvivalMatches')) {localStorage.setItem('SurvivalMatches', 0)}
 if (!localStorage.getItem('M1-Endings')) {localStorage.setItem('M1-Endings', JSON.stringify(['0', '0', '0', '0', '0']))}
 if (!localStorage.getItem('M2-Endings')) {localStorage.setItem('M2-Endings', JSON.stringify(['0', '0', '0', '0', '0', '0', '0', '0', '0', '0']))}
