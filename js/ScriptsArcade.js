@@ -23,7 +23,7 @@ window.onload = function onload() {
 	var theme;
 	loadInfo();
   	if (localStorage.getItem('sound') == 'true') {
-		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendCard.ogg"></audio>')
+		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendcard.ogg"></audio>')
   	}
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
