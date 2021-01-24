@@ -13,9 +13,6 @@ let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
 var d = new Date();
 var n = d.getMonth();
 
-console.log(Math.min(...arcadeHistory))
-console.table(arcadeHistory)
-
 if ( n == 11 || n == 0 || n == 1 ) {
   var snow = document.createElement('script')
   snow.setAttribute("type","text/javascript")

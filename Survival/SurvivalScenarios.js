@@ -1,4 +1,5 @@
-scenarios = [
+//Todo: replace doll scenario with cave scenario
+scenarios1 = [
 	{
 		//Crashed Airplane
 		"scenario": "It was a calm evening when you stumbled upon a crashed airplane.",
@@ -10,7 +11,7 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "It rained during the night, so I guess staying in the plane was worth it,",
 		"answer3": "Use it as a bed",
-		"damage3": 0,
+		"damage3": 0
 	},
 	{
 		//Bob the Kitten
@@ -23,7 +24,7 @@ scenarios = [
 		"damage2": 60,
 		"reply3": "Bob was quick, but the laser beam was quicker. He stopped and started crying for being the failure that he is.",
 		"answer3": "Tease him with a cheap laser you bought a few days ago",
-		"damage3": 0,
+		"damage3": 0
 	},
 	{
 		//Bandit
@@ -36,7 +37,7 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "While you had a good idea, you didn't have marshmallows, so when he untied you hoping to have a nice evening, you broke his heart and ran away...",
 		"answer3": "Invite him to burn some marshmallows above a bonfire and talk about the bandit's mental health problems",
-		"damage3": 10,
+		"damage3": 10
 	},
 	{
 		//Shooting Star
@@ -49,7 +50,7 @@ scenarios = [
 		"damage2": 50,
 		"reply3": "Since you wanted to continue walking, that was exactly what you did. Hey, who said dreams couldn't be true!",
 		"answer3": "Continue walking",
-		"damage3": 0,
+		"damage3": 0
 	},
 	{
 		//Frog
@@ -62,7 +63,7 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "The frog was very angry, but in the end it was just a frog, and couldn't do anything.",
 		"answer3": "Throw out it of the wagon",
-		"damage3": 0,
+		"damage3": 0
 	},
 	{
 		//Sleep
@@ -75,7 +76,7 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "Staying awake all night is usually not good for your health and sleep schedule and this time is no different.",
 		"answer3": "Stay awake all night",
-		"damage3": 20,
+		"damage3": 20
 	},
 	{
 		//Abandoned House
@@ -88,7 +89,7 @@ scenarios = [
 		"damage2": 0,
 		"reply3": "You didn't have guns and the best alternative was a kitchen knife, but you still managed to break the door. Inside you found some antidepressants. You can finally feel happy for an hour!",
 		"answer3": "Run in guns blazing",
-		"damage3": 0,
+		"damage3": 0
 	},	
 	{
 		//Doll
@@ -101,7 +102,7 @@ scenarios = [
 		"damage2": 60,
 		"reply3": "Apparently the doll was linked with a trap. After you moved the doll a cloud of arrows came from the bushes and killed you.",
 		"answer3": "Put it aside so no one runs over it",
-		"damage3": 100,
+		"damage3": 100
 	},	
 	{
 		//Antaniukas
@@ -114,7 +115,7 @@ scenarios = [
 		"damage2": 10,
 		"reply3": "He refused to take the toy and gave me an hour-long explanation between car models and car toys",
 		"answer3": "Give him a toy car",
-		"damage3": 5,
+		"damage3": 5
 	},	
 	{
 		//Paulius the Tiger
@@ -127,8 +128,10 @@ scenarios = [
 		"damage2": 50,
 		"reply3": "Tigers understand the word \"Playing\" as biting and fighting, so this realy didn't end well for you.",
 		"answer3": "Play with him",
-		"damage3": 100,
+		"damage3": 100
 	},
+];
+scenarios2 = [
 	{
 		//Circus
 		"scenario": "You were sleeping when you overheard festive music. After going to the source, you found a traveling circus.",
@@ -140,7 +143,7 @@ scenarios = [
 		"damage2": 0,
 		"reply3": "You go there and to stroke it. Sadly the zebra wasn't in a very good mood and kicked you so hard you died.",
 		"answer3": "Inspect the zebra",
-		"damage3": 100,
+		"damage3": 100
 	},
 	{
 		//Stasiukas the Donkey
@@ -153,7 +156,7 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "You put it inside, grab some popcorn, and watch the two battle it out. It's animal cruelty, but no one else sees it, so it's fine.",
 		"answer3": "Put another donkey inside",
-		"damage3": 20,
+		"damage3": 20
 	},
 	{
 		//Poppy field
@@ -166,7 +169,7 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "Apparently you started screaming like an idiot, you ran like one too. Atleast that is what the townsfolk told you after you woke up in a hospital. They didn't let you out for 2 days.",
 		"answer3": "Have a mental breakdown",
-		"damage3": 20,
+		"damage3": 20
 	},
 	{	
 		//Sweet House
@@ -179,7 +182,7 @@ scenarios = [
 		"damage2": 40,
 		"reply3": "Ƭ̶͇̬̈́̑́̋̀̀̎̽́̾̓̔͒̌́̚̚н̴̢̨̙͙̞̹̯̘͈̠̼̣̹̩͚̖̩̰̠͕͍̦͂̆̀̿͋͊͑ͅɛ̴̨̢̛̪͖̬̩̰̰̠̯̻̟̙͓̹͉̒͐͛̑̐̉̽̾̊͊̐̇̐̀̓́̀̑́͒̈́̈́͋̈̔͆͆̿̽̓̿̎̕͝ ̶̧̞̩̫͕̰̠̮̣̮̱̞͍̆͗̈́͒̐͛̀̋͗̎̈́͆̋͌͐͒́͗̏̋̿̋̇͂̔͂̾͑͊͋̇̊̀̊͗͗͘̕͜͝ͅͅʌ̷̧̡̨̧̮̬̤͚̰̬̘͚͖̮̙͇̯̝̠̬̪͚̬͖̬̥̹̺̰̬̖̪͊̑͗͝ͅσ̴͕̻̬̜̪̠̤̫̥͎̠͖̲̗̞̟͉̞͙͚͇̺̩͈̝̯̖̦̌̿̈́̅͘͜͜͜͝ΐ̶̧̛̛̛̣͙̯͚̤̱̦͈̩͙͌͂̊́͌͗̑͆̎̀̆͌̒̍͋̈́̆͂̑́̓̅̅̒̕͘͘̚͝∂̸̡̢̛̬̳͚͔͇̹̝̰͕̰̣̣̯͈̝̭̲̗̦̬̰̤̼̿͌̆͒͑̔̋͒͋͊̋̿̈́́̒̅̈́̓̾͑͘͘̕͝ ̸̡̛̠̜͙̤̘̥̺̠̥̺͍͕̝̈́̽̈́̒̄̔̀̌̌̿̐͑̎̋̾̿̐͌̄̉̍̇̅͆̏́͐͐̎̌͛̕̕͝ͅc̷̢̧̢̨̖̬̲̲͓͙̟̳̝̜̯͉̦͓̰̯̝͈̰̬̰͍̯̰͎̜̎̅̈́͒̃̿͆̀́̾̔̂̆͛̇̚̕͝͠͠σ̸̢̡̡̛͍̱̹̲̟̰͍͔̝̻͚̳̖͉͆͐̆̿̊̇̔͌̏̍͊̈́͊͌́͂̀̃̓̂͂͐͒́͊̄͌̇͘͝͠͝и̷̜͖̫̹̠̫̗̭̫̔͊̄̈͂̈́͋̎̍̃̍͌̔ƨ̴̡̛̟̟̤̲̺͔̙͔̖̪̈́͛͊̅͛̂̉̔͊͌̈́͐̀̿̓͗̅̑̅͆̔̒̕̕͝͝͠͝ͅʋ̸̝̣̱̈̋͂̃͆̏́̔͑̊͑̔̆̓̉͗̅͐͂̃̀͗̄͂̎̉̽͒̋̄͂̀̃̕̚̕͝͝м̸̢̡̡̢̨͓̣̬̹̩͔̮̜̙̥̮̟̩̺̫̤̗͎̟̻̝̼͉̣̥̞͎̺̒͛̍͗̋͊̃̆͊̏̐ɛ̵̧̧̧̡̳̯̺͚̩̳͓͓̭̟̺̰̟̦͔̘̠̟̤̬̟̰͖̪͚͉̣͎̄̄̽͊͌̓͊̐̉̐͆͜͜ƨ̸̧̞̙̲̱̗̤̥̖̹̞͍͍̜̘̭̐̂̀̾̇̅͋͋̆̃̽́̃̌̿́̈́̐̇̑̄̄̐́͂͐͘͜ͅ ̴̢̟̮̳̗͕̫̖͍̪̻̳̦̯̭̳̲̥̝̌̔͑̅̎́̓̚ͅɛ̶̫̳̩͓̈́̉̓̈͋͊̉̆̉͗̓͗̈̌̿̓͑̀͆̓̂̓͋͑̏́̈́̅̐̀͝͝͠ʌ̵̳̟̘̼͈̠̥͑̐̄̊̓̄̐̈́͗͆̊͛̔ɛ̸̢̧̧̙̳̺̟͉̠̺̗̩̻̣͓̗̺̟̮̜̰̰̓̌̂̈̂̍̍͑̊̍̓͑̋̒̄̈́̂̇͌̃̏̑͌͌̔͘͘̚͜͜͝͝ͅя̸̛̛̛͍̥̱̖̻̻̹̹̤̬̭̺͇̤͈̯̤͕͕͈̥̰̅̎͌̆͐͐̏̆̅͑̉͂̏̐̄͋͑̿͑̿͆̎̃̒͒̓̑̓͒̊͌͘͝ͅʏ̴̢̥̬͙̪͓̙̻͎̰̜̄̉̐̊̀̊̽̒̾̽̈̋͋͗̇͛̅̕͠т̴̝̯͇͔̬͖̐̉̉͛̐̉̑͛̌̚̚͠н̵̧̨̨͖͈͓̬̳͉̳͈̯̟͓̻̞̹̜̟͍̤̯̱̜̣͓̞͔͕͍̜̬̪̍̋̒̇̈́̔͐͐̽̀̉ͅι̶̳̐̀̒̈́̿̈͗͑͂͊̄̎͂̀̌̓́̍̍͒̾̑̀̏̒̈́̏̓̐̃͘͘̕͠и̴̧̧̡̛̯̺̬̻̰̖̮̇̌͑͐̎͐̾̒̓̓̐͑͋͘͘̕͜͝͝ɢ̶̧̛̛̩̙̜͔̀̈̏̉̀͗͐̀͐̀̈́͗̑͆́̀͐̎͑͒̈́͛̒͆̿̂̂͑́͗̌̇̑͜͠",
 		"answer3": "Summon a black hole to remove this house from the face of the earth",
-		"damage3": 666,
+		"damage3": 666
 	},
 	{	
 		//Jonas the coke addict
@@ -192,7 +195,7 @@ scenarios = [
 		"damage2": 0,
 		"reply3": "After talking with him for 5 minutes you are sure that he is a <i>noob</i>, who doesn't even know he's a noob who doesn't even know all the chemical compounds inside the most popular modern-day fizzy drinks.",
 		"answer3": "Talk with him about soda",
-		"damage3": 0,
+		"damage3": 0
 	},
 	{
 		//GPS
@@ -218,7 +221,7 @@ scenarios = [
 		"damage2": 0,
 		"reply3": "You try to eat it, but it isn't that tasty. In fact you feel a bit dizzy. That is what happens when plants pick quantity over quality.",
 		"answer3": "Eat it",
-		"damage3": 50,
+		"damage3": 50
 	},
 	{
 		//Merchant
@@ -231,7 +234,7 @@ scenarios = [
 		"damage2": 0,
 		"reply3": "You ignored him.",
 		"answer3": "Ignore him",
-		"damage3": 0,
+		"damage3": 0
 	},
 	{
 		//Leprechaun
@@ -244,7 +247,7 @@ scenarios = [
 		"damage2": 10,
 		"reply3": "He gives you money in excange for you soul. Such a wonderful deal!",
 		"answer3": "Ask for money",
-		"damage3": 50,
+		"damage3": 50
 	},
 	{
 		//Totem
@@ -257,8 +260,10 @@ scenarios = [
 		"damage2": 30,
 		"reply3": "It felt like... Hugging a rock. It was hard and cold. But did you really have to do it? What did you expect? For the totem to hug back?",
 		"answer3": "Hug it",
-		"damage3": 0,
+		"damage3": 0
 	},
+];
+scenarios3 = [
 	{
 		//Cave
 		"scenario": "The sky was going dark and you were looking for a place to rest when your eyes found a cave. You entered it and there was no end.",
@@ -270,6 +275,6 @@ scenarios = [
 		"damage2": 100,
 		"reply3": "You slept in the open and absolutely fucking nothing happened.",
 		"answer3": "Sleep in the open",
-		"damage3": 0,
+		"damage3": 0
 	}
 ];

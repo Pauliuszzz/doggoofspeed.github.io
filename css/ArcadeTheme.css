@@ -106,7 +106,6 @@ h3 {
 
 img {
   image-rendering: pixelated;
-  image-rendering: crisp-edges;
 }
 
 a > img {
@@ -131,6 +130,7 @@ a:hover > img {
   margin: 10px 5px 5px 5px;
   text-transform: none;
   transition: .35s;
+  -webkit-user-select: none;
   user-select: none;
 }
 
