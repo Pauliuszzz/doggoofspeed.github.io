@@ -4,7 +4,7 @@ var arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
 
 //Arcade Levels
 function arcadeLevel() {
-    $('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1))
+    $('.aLevelH2').html('Level ' + localStorage.getItem('ArcadeLevel'))
     switch (localStorage.getItem('ArcadeLevel')) {
       case null:
       case '0':
@@ -80,12 +80,12 @@ function arcadeLevel() {
     localStorage.setItem('ArcadeLevel', al + 1);
     $('.aLevelUp').addClass('disabled');
     arcadeLevel();
-    $('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1));
+    $('.aLevelH2').html('Level ' + localStorage.getItem('ArcadeLevel'));
   }
   
   //Survival Levels
   function survivalLevel() {
-    $('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) + 1))
+    $('.sLevelH2').html('Level ' + localStorage.getItem('SurvivalLevel'))
     switch (localStorage.getItem('SurvivalLevel')) {
       case null:
       case '0':
@@ -102,6 +102,6 @@ function arcadeLevel() {
     let sl = parseInt(localStorage.getItem('SurvivalLevel'));
     localStorage.setItem('SurvivalLevel', sl + 1);
     survivalLevel();
-    $('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) + 1));
+    $('.sLevelH2').html('Level ' + localStorage.getItem('SurvivalLevel'));
     $('.sLevelUp').addClass('disabled');
   }

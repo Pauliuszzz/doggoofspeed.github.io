@@ -63,9 +63,6 @@ function sound(yn) {
   location.reload();
 }
 
-$('.aLevelH2').html('Level ' + (parseInt(localStorage.getItem('ArcadeLevel')) + 1))
-$('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) + 1))
-
 //Switcher machanism
 function StorySwitch(){
   $('#home, #arcade, #survival, #setting, #stats, #levelInfo').addClass('hidden');
