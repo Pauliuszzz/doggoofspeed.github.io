@@ -4,6 +4,9 @@ var kXP = 0;
 var maxLength
 var musicNumber
 var bgNumber
+var btnsfx
+var endCard
+var theme
 //This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 var arcadeHistory = JSON.parse(localStorage.getItem('ArcadeHistory'))
@@ -20,10 +23,10 @@ if ( n == 11 || n == 0 || n == 1 ) {
 }
 
 window.onload = function onload() {
-	var theme;
 	loadInfo();
   	if (localStorage.getItem('sound') == 'true') {
-		$('body').append('<audio id="btnsfx" src="../resources/abtnsfx.ogg"></audio>', '<audio id="endCard" src="../resources/aendcard.ogg"></audio>')
+		btnsfx = new Audio('../resources/abtnsfx.ogg');
+		endCard = new Audio('../resources/aendcard.ogg');
   	}
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
@@ -107,7 +110,7 @@ function reply1() {
 		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx').get(0).play();
+		btnsfx.play();
 	}
 }
 function reply2() {
@@ -123,7 +126,7 @@ function reply2() {
 		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx').get(0).play();
+		btnsfx.play();
 	}
 }
 function reply3() {
@@ -139,7 +142,7 @@ function reply3() {
 		kXP++
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx').get(0).play();
+		btnsfx.play();
 	}
 }
 	
@@ -147,7 +150,7 @@ function reply3() {
 function nextScenario() {
 	if (count >= maxLength){
 		if (localStorage.getItem('sound') == 'true') {
-			$('#endCard').get(0).play();
+			endCard.play();
 		}
 		if (arcadeInfo[1] < score){
 			arcadeInfo[1] = score;
@@ -165,7 +168,6 @@ function nextScenario() {
 		arcadeInfo[2] = arcadeHistory.reduce((a, b) => a + b, 0)/arcadeHistory.length
 		$('#EndScore').html('Your score: ' + score + '<br>Highscore: ' + arcadeInfo[1] + '<br>Average Score: ' + Math.round(arcadeInfo[2]) + '<br>Matches played: ' + arcadeInfo[0]);
 		arcadeLevel();
-		console.table(arcadeInfo)
 		localStorage.setItem('ArcadeStats', JSON.stringify(arcadeInfo));
 		localStorage.setItem('ArcadeHistory', JSON.stringify(arcadeHistory));
 	}
@@ -177,7 +179,7 @@ function nextScenario() {
 	count++;
 	text();
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx').get(0).play();
+		btnsfx.play();
 	}
 }
 
@@ -272,12 +274,10 @@ function loadInfo() {
 	
 	switch (Math.floor(Math.random() * Math.floor(musicNumber))){
 		case 0:
-			$('body').append('<audio id="theme" src="../resources/Arcade1.ogg" loop></audio>')
-			var theme = $("#theme");
+			theme = new Audio('../resources/Arcade1.ogg')
 			break;
 		case 1:
-			$('body').append('<audio id="theme" src="../resources/Arcade2.ogg" loop></audio>')
-			var theme = $("#theme");
+			theme = new Audio('../resources/Arcade2.ogg')
 			break;
 		case 2:
 			break;

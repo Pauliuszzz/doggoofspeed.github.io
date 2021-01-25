@@ -1,3 +1,7 @@
+var btnsfx1
+var btnsfx2
+var btnsfx3
+
 //Checks if snow should be added
 var d = new Date();
 var n = d.getMonth();
@@ -29,7 +33,9 @@ $(window).on('load', function(){
   survivalLevel()
   switch (localStorage.getItem('sound')) {
     case 'true':
-      $('body').append('<audio id="btnsfx1" src="resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="resources/btnsfx4.ogg"></audio>');
+      btnsfx1 = new Audio('resources/btnsfx1.ogg')
+      btnsfx2 = new Audio('resources/btnsfx2.ogg')
+      btnsfx3 = new Audio('resources/btnsfx3.ogg')
       $('.btnsoundy').css({'background': 'rgba(100,255,100,0.5)'});
       setTimeout(function(){ $('#home').removeClass('hidden')}, 400);
       break;
@@ -62,43 +68,45 @@ $('.sLevelH2').html('Level ' + (parseInt(localStorage.getItem('SurvivalLevel')) 
 
 //Switcher machanism
 function StorySwitch(){
-  $('#home, #arcade, #survival, #setting, #stats').addClass('hidden');
+  $('#home, #arcade, #survival, #setting, #stats, #levelInfo').addClass('hidden');
   $('#story, nav').removeClass('hidden');
   $('body').removeClass('arcade survival');
   $('body').css('background-color', '#5E7668');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx1').get(0).play();
+		btnsfx1.play();
 	}
 }
 
 function ArcadeSwitch() {
-  $('#home, #story, #survival, #setting, #stats').addClass('hidden');
+  $('#home, #story, #survival, #setting, #stats, #levelInfo').addClass('hidden');
   $('#arcade, nav').removeClass('hidden');
   $('body').removeClass('story survival');
   $('body').css('background-color', '#8E3E6C');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx2').get(0).play();
+		btnsfx2.play();
 	}
 }
 
 function SurvivalSwitch() {
-  $('#home, #story, #arcade, #setting, #stats').addClass('hidden');
+  $('#home, #story, #arcade, #setting, #stats, #levelInfo').addClass('hidden');
   $('#survival, nav').removeClass('hidden');
   $('body').css('background-color', '#8E3939');
   $('.modes').css('margin-bottom', '4em');
   if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx3').get(0).play();
+		btnsfx3.play();
 	}
 }
 
 function SettingSwitch(first) {
-  $('#home, #story, #arcade, #survival, #stats').addClass('hidden');
-  $('#setting, .settingsClose').removeClass('hidden');
-  $('nav').fadeIn()
+  $('#home, #story, #arcade, #survival, #stats, #levelInfo').addClass('hidden');
+  $('#setting').removeClass('hidden');
+  if (localStorage.getItem('sound') != null) {
+    $('nav').fadeIn()
+  }
   if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx3').get(0).play();
+		btnsfx3.play();
   }
 }
 
@@ -106,7 +114,15 @@ function StatSwitch() {
   $('#setting').addClass('hidden'); 
   $('#stats').removeClass('hidden');
   if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx3').get(0).play();
+		btnsfx3.play();
+  }
+}
+
+function levelInfo() {
+  $('#arcade, #survival').addClass('hidden'); 
+  $('#levelInfo').removeClass('hidden');
+  if (localStorage.getItem('sound') == 'true') {
+		btnsfx3.play();
   }
 }
 

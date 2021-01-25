@@ -43,8 +43,6 @@ a {
 
 nav {
 	border-radius: 15px 15px 0px 0px !important;
-	-webkit-backdrop-filter: blur(4px);
-	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: -4em;
 	width: 100%;
@@ -199,6 +197,12 @@ nav {
 	margin-top: 2em;
 }
 
+#levelInfo {
+	text-align: left;
+	margin: 1em auto 4em auto;
+	width: 70%;
+}
+
 /* ANIMATIONS */
 
 @keyframes slidein {
@@ -293,6 +297,11 @@ nav {
 	.resetsurvival {
 		width: 79%;
 	}
+
+	#levelInfo {
+		width: 50%;
+	}
+	
 
 	@keyframes slidein {
 		to {

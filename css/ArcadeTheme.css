@@ -244,6 +244,10 @@ a:hover > img {
   box-sizing: inherit;
 }
 
+.alevelcard {
+  margin-bottom: 4em !important;
+}
+
 /* ANIMATIONS */
 
 @keyframes fadein {
