@@ -42,16 +42,16 @@ h1 {
 
 nav {
   background: rgb(214, 211, 206);
-  margin: 0;
   border: 1px outset #fff;
   height: 3em;
   padding: .2em;
-  bottom: 0;
+  bottom: -3em;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   position: fixed;
+  animation: slidein .35s forwards;
 }
 
 h3 {
@@ -120,15 +120,12 @@ a:hover > img {
   border: 2px outset;
   border-color: transparent #424242 #424242 transparent;
   background: silver;
-  border-radius: 1px;
   width: 50%;
 	font-size: .8em;
 	min-height: 1.5em;
 	padding: .25em 1em;
-	white-space: normal;
 	line-height: normal;
   margin: 10px 5px 5px 5px;
-  text-transform: none;
   transition: .35s;
   -webkit-user-select: none;
   user-select: none;
@@ -146,7 +143,7 @@ a:hover > img {
 	transform: scale(.8);
 }
 
-*,*:focus,*:hover{
+*,*:focus,*:hover {
   outline: none;
 }
 
@@ -166,7 +163,7 @@ a:hover > img {
   background: silver;
 }
 
-.card-header{
+.card-header {
   background: linear-gradient(to left,#08216b,#a5cef7);
   color: #fff;
   display: block;
@@ -187,15 +184,16 @@ a:hover > img {
 	flex-flow: column;
 	justify-content: center;
 	width: 100%;
-	margin-bottom: 4em;
+  margin-bottom: 4em;
+  animation: fadein .35s;
+  will-change: opacity, transform;
 }
 
 .flexmain > div {
   width: 70%;
   margin: auto;
-  animation: fadein .35s;
   animation: hover 10s infinite;
-  will-change: opacity, transform;
+  will-change: transform;
 }
 
 .flexmain > div:nth-child(2) { animation-delay: .3s }
@@ -245,6 +243,12 @@ a:hover > img {
 }
 
 /* ANIMATIONS */
+
+@keyframes slidein {
+	to {
+		bottom: 0;
+	}
+}
 
 @keyframes fadein {
 	from {
