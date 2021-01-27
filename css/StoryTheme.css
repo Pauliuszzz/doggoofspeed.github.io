@@ -13,12 +13,12 @@
 html {
 	min-height: 100%;
 	box-sizing: border-box;
+	position: relative;
 }
 
 body {
 	font-family: "Arial", "sans-serif";
 	text-align: center;
-	background-position: 50% 50%;
 	color: white;
 	overflow-x: hidden;
 	line-height: 1.6;
@@ -44,12 +44,8 @@ h3 {
 nav {
 	border-radius: 15px 15px 0px 0px !important;
 	border-style: solid none none none !important;
-	-webkit-backdrop-filter: blur(4px);
-	backdrop-filter: blur(4px);
 	height: 3em;
 	bottom: 0;
-	padding-left: .2em;
-	padding-right: .2em;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
@@ -211,7 +207,7 @@ input {
 
 @keyframes fadein {
 	from {
-		transform: scale(1.25);
+		transform: scale(.8);
 		opacity: 0;
 	}
 }

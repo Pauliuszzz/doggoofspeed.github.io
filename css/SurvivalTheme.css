@@ -204,7 +204,7 @@ button:active {
 
 @keyframes fadein {
 	from {
-    	transform: scale(1.25);
+    	transform: scale(.8);
 		opacity: 0;
 	}
 }

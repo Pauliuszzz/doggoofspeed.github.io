@@ -18,6 +18,7 @@ body {
 	margin: 0;
 	transition: background-color .35s;
 	overflow-x: hidden;
+	width: 100%
 }
 
 h1 {
@@ -44,14 +45,12 @@ a {
 nav {
 	border-radius: 15px 15px 0px 0px !important;
 	height: 3em;
-	bottom: -4em;
 	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	position: fixed;
 	border-style: solid none none none !important;
-	transition: background-color .35s;
 	animation: slidein .35s forwards;
 }
 
@@ -213,7 +212,7 @@ nav {
 
 @keyframes fadein {
 	from {
-    	transform: scale(1.25);
+    	transform: scale(.8);
 		opacity: 0;
 	}
 }

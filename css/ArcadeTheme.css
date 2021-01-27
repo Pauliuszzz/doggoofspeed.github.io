@@ -16,10 +16,6 @@
   font-display: swap;
 }
 
-* {
-  cursor: pointer;
-}
-
 html {
   min-height: 100%;
   box-sizing: border-box;
@@ -252,7 +248,7 @@ a:hover > img {
 
 @keyframes fadein {
 	from {
-    transform: scale(1.25);
+    transform: scale(.8);
 		opacity: 0;
 	}
 }

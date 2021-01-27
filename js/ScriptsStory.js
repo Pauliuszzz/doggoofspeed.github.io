@@ -1,4 +1,9 @@
-let touchEvent = 'ontouchstart' in window ? 'touchstart' : 'click';
+var btnsfx1
+var btnsfx2
+var btnsfx3
+var btnsfx4
+var endCard
+var theme
 
 //Checks if snow should be added
 var d = new Date();
@@ -12,16 +17,18 @@ if ( n == 11 || n == 0 || n == 1 ) {
 }
 
 window.onload = function onload() {
-	if (localStorage.getItem('sound') == 'true') {
-		$('body').append('<audio id="btnsfx1" src="../resources/btnsfx1.ogg"></audio>', '<audio id="btnsfx2" src="../resources/btnsfx2.ogg"></audio>', '<audio id="btnsfx3" src="../resources/btnsfx3.ogg"></audio>', '<audio id="btnsfx4" src="../resources/btnsfx4.ogg"></audio>', '<audio id="endCard" src="../resources/endCard.ogg"></audio>', '<audio id="theme" src="../resources/' + mission + '.ogg" loop>')
-	}
-	var theme = $("#theme");
+	btnsfx1 = new Audio('../resources/btnsfx1.ogg')
+	btnsfx2 = new Audio('../resources/btnsfx2.ogg')
+	btnsfx3 = new Audio('../resources/btnsfx3.ogg')
+	btnsfx4 = new Audio('../resources/btnsfx4.ogg')
+	endCard = new Audio('../resources/endCard.ogg')
+	theme = new Audio('../resources/' + mission + '.ogg')
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	text();
 }
 
-$("#toggle").on(touchEvent, function(e){
+$("#toggle").on('click', function(e){
 	if (theme.paused){
 		theme.play()
 	  	theme.addEventListener('timeupdate', function(){
@@ -75,7 +82,7 @@ function reply1() {
 		count = (scenarios[count].skipto1 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx1').get(0).play();
+		btnsfx1.play();
 	}
 }
 function reply2() {
@@ -89,7 +96,7 @@ function reply2() {
 		count = (scenarios[count].skipto2 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx2').get(0).play();
+		btnsfx2.play();
 	}
 }
 function reply3() {
@@ -103,7 +110,7 @@ function reply3() {
 	  count = (scenarios[count].skipto3 - 2);
 	}
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx3').get(0).play();
+		btnsfx3.play();
 	}
 }
 
@@ -182,7 +189,7 @@ function nextScenario(mission){
     }
 		$('.flexmain').hide();
 		if (localStorage.getItem('sound') == 'true') {
-			$('#endCard').get(0).play();
+			endCard.play();
 		}
 	}
 	if (scenarios.length > count + 1) {
@@ -193,6 +200,6 @@ function nextScenario(mission){
 	quit = scenarios[count].quit;
 	text();
 	if (localStorage.getItem('sound') == 'true') {
-		$('#btnsfx4').get(0).play();
+		btnsfx4.play();
 	}
 }
