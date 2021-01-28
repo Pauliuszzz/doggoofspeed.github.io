@@ -90,6 +90,7 @@ function reply1() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx1.play();
 	}
+	$('nav').scrollIntoView();
 }
 function reply2() {
 	if (scenarios[count].reply2){
@@ -104,6 +105,7 @@ function reply2() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx2.play();
 	}
+	$('nav').scrollIntoView();
 }
 function reply3() {
 	if (scenarios[count].reply3){
@@ -118,6 +120,7 @@ function reply3() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx3.play();
 	}
+	$('nav').scrollIntoView();
 }
 
 //Ending Counter
