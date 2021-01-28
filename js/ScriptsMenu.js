@@ -27,10 +27,6 @@ if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', J
 
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 
-if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-  $('.soundpanel').addClass('hidden');
-}
-
 $(window).on('load', function(){
   $('.lds-ellipsis').fadeOut()
   arcadeLevel()
@@ -56,7 +52,10 @@ $(window).on('load', function(){
         sound(1)
       }
       break;
-    }
+  }
+  if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+    $('.soundpanel').addClass('hidden');
+  }
 })
 
 //Sound controller
