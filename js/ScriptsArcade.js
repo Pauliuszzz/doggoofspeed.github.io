@@ -116,6 +116,7 @@ function reply1() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx.play();
 	}
+	$('nav').addClass('glow')
 }
 function reply2() {
 	$('#reply-text').html(scenarios[count].reply2);
@@ -132,6 +133,7 @@ function reply2() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx.play();
 	}
+	$('nav').addClass('glow')
 }
 function reply3() {
 	$('#reply-text').html(scenarios[count].reply3);
@@ -148,10 +150,12 @@ function reply3() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx.play();
 	}
+	$('nav').addClass('glow')
 }
 	
 //Next scenario
 function nextScenario() {
+	$('nav').removeClass('glow')
 	if (count >= maxLength){
 		if (localStorage.getItem('sound') == 'true') {
 			endCard.play();

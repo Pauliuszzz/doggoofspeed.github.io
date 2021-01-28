@@ -198,11 +198,26 @@ input {
 	border: none;
 }
 
+.glow {
+	animation: glow 2s infinite, slidein .35;
+}
+
 /* ANIMATIONS */
 
 @keyframes slidein {
 	to {
 		bottom: 0;
+	}
+}
+
+@keyframes glow {
+	from {
+		bottom: 0;
+		box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4);
+	}
+	to {
+		bottom: 0;
+		box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0);
 	}
 }
 

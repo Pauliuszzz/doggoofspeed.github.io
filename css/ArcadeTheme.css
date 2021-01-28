@@ -243,11 +243,26 @@ a:hover > img {
   margin-bottom: 4em !important;
 }
 
+.glow {
+	animation: glow 2s infinite, slidein .35;
+}
+
 /* ANIMATIONS */
 
 @keyframes slidein {
 	to {
 		bottom: 0;
+	}
+}
+
+@keyframes glow {
+	from {
+		bottom: 0;
+		box-shadow: 0 0 15px 0px rgba(214, 211, 206, 0.4);
+	}
+	to {
+		bottom: 0;
+		box-shadow: 0 0 40px 40px rgba(214, 211, 206, 0);
 	}
 }
 

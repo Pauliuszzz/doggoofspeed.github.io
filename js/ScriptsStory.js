@@ -70,6 +70,7 @@ function text() {
 	if (!scenarios[count].answer1 && !scenarios[count].answer2 && !scenarios[count].answer3){
 		$('#ButtonFour').removeClass('disabled');
 		$('.replydiv, .buttondiv').hide();
+		$('nav').addClass('glow')
 	}
 		else {
 			$('#ButtonFour').addClass('disabled');
@@ -90,7 +91,7 @@ function reply1() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx1.play();
 	}
-	$('nav').scrollIntoView();
+	$('nav').addClass('glow')
 }
 function reply2() {
 	if (scenarios[count].reply2){
@@ -105,7 +106,7 @@ function reply2() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx2.play();
 	}
-	$('nav').scrollIntoView();
+	$('nav').addClass('glow')
 }
 function reply3() {
 	if (scenarios[count].reply3){
@@ -120,7 +121,7 @@ function reply3() {
 	if (localStorage.getItem('sound') == 'true') {
 		btnsfx3.play();
 	}
-	$('nav').scrollIntoView();
+	$('nav').addClass('glow')
 }
 
 //Ending Counter
@@ -188,7 +189,8 @@ function endingcounter() {
 
 //Next scenario
 function nextScenario(mission){
-  $('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
+	$('nav').removeClass('glow')
+  	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
 	if (quit == true){
     if (mission == 5) {
 			endingcounter5();
