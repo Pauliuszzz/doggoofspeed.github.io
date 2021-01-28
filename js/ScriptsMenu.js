@@ -27,6 +27,10 @@ if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', J
 
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 
+if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+  ('.soundpanel').addClass('hidden');
+}
+
 $(window).on('load', function(){
   $('.lds-ellipsis').fadeOut()
   arcadeLevel()
@@ -48,6 +52,9 @@ $(window).on('load', function(){
       $('.card, .settingsClose, .settingsbtn').addClass('hidden');
       $('nav').fadeOut()
       $('setting, .soundpanel').removeClass('hidden');
+      if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+        sound(1)
+      }
       break;
     }
 })

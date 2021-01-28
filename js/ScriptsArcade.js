@@ -22,12 +22,16 @@ if ( n == 11 || n == 0 || n == 1 ) {
   document.getElementsByTagName("body")[0].appendChild(snow)
 }
 
+if (localStorage.getItem('sound') == 'false') {
+	$('.togglediv').addClass('hidden')
+}
+else {
+	btnsfx = new Audio('../resources/abtnsfx.ogg');
+	endCard = new Audio('../resources/aendcard.ogg');
+}
+
 window.onload = function onload() {
 	loadInfo();
-  	if (localStorage.getItem('sound') == 'true') {
-		btnsfx = new Audio('../resources/abtnsfx.ogg');
-		endCard = new Audio('../resources/aendcard.ogg');
-  	}
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	shuffle(scenarios);

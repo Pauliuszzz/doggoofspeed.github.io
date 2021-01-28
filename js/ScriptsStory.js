@@ -16,20 +16,19 @@ if ( n == 11 || n == 0 || n == 1 ) {
   document.getElementsByTagName("body")[0].appendChild(snow)
 }
 
-if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-	$('.togglediv').addClass('disabled')
+if (localStorage.getItem('sound') == 'false') {
+	$('.togglediv').addClass('hidden')
+}
+else {
+	btnsfx1 = new Audio('../resources/btnsfx1.ogg')
+	btnsfx2 = new Audio('../resources/btnsfx2.ogg')
+	btnsfx3 = new Audio('../resources/btnsfx3.ogg')
+	btnsfx4 = new Audio('../resources/btnsfx4.ogg')
+	endCard = new Audio('../resources/endCard.ogg')
+	theme = new Audio('../resources/' + mission + '.ogg')
 }
 
 window.onload = function onload() {
-	console.log(navigator.userAgent)
-	if ((localStorage.getItem('sound') == 'true') || !(navigator.userAgent.match(/(iPhone|iPod|iPad)/i))) {
-		btnsfx1 = new Audio('../resources/btnsfx1.ogg')
-		btnsfx2 = new Audio('../resources/btnsfx2.ogg')
-		btnsfx3 = new Audio('../resources/btnsfx3.ogg')
-		btnsfx4 = new Audio('../resources/btnsfx4.ogg')
-		endCard = new Audio('../resources/endCard.ogg')
-		theme = new Audio('../resources/' + mission + '.ogg')
-	  }
 	$('#ButtonFour').addClass('disabled');
 	$('.replydiv').hide();
 	text();
