@@ -124,6 +124,34 @@ function reply3() {
 	$('nav').addClass('glow')
 }
 
+//Next scenario
+function nextScenario(mission){
+	$('nav').removeClass('glow')
+  	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
+	if (quit == true){
+    if (mission == 5) {
+			endingcounter5();
+    }
+    else {
+      endingcounter();
+    }
+		$('.flexmain').hide();
+		if (localStorage.getItem('sound') == 'true') {
+			endCard.play();
+		}
+	}
+	if (scenarios.length > count + 1) {
+		count++;
+	}
+	$('.replydiv').hide();
+	$('.buttondiv').show();
+	quit = scenarios[count].quit;
+	text();
+	if (localStorage.getItem('sound') == 'true') {
+		btnsfx4.play();
+	}
+}
+
 //Ending Counter
 function endingcounter() {
 	switch (Object.keys(scenarios[count]).pop()) {
@@ -185,32 +213,4 @@ function endingcounter() {
 	}
 	$('div#EndCard').removeClass('hidden');
 	save();
-}
-
-//Next scenario
-function nextScenario(mission){
-	$('nav').removeClass('glow')
-  	$('#ButtonOne, #ButtonTwo, #ButtonThree').removeClass('disabled').show();
-	if (quit == true){
-    if (mission == 5) {
-			endingcounter5();
-    }
-    else {
-      endingcounter();
-    }
-		$('.flexmain').hide();
-		if (localStorage.getItem('sound') == 'true') {
-			endCard.play();
-		}
-	}
-	if (scenarios.length > count + 1) {
-		count++;
-	}
-	$('.replydiv').hide();
-	$('.buttondiv').show();
-	quit = scenarios[count].quit;
-	text();
-	if (localStorage.getItem('sound') == 'true') {
-		btnsfx4.play();
-	}
 }
