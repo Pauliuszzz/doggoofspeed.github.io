@@ -28,7 +28,7 @@ if (!localStorage.getItem('M5-Failures')) {localStorage.setItem('M5-Failures', J
 var arcadeInfo = JSON.parse(localStorage.getItem('ArcadeStats'))
 
 if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
-  ('.soundpanel').addClass('hidden');
+  $('.soundpanel').addClass('hidden');
 }
 
 $(window).on('load', function(){
