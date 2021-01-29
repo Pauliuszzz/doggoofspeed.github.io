@@ -169,8 +169,7 @@ nav {
 }
 
 .trophy {
-	right: 0;
-	position: absolute;
+	float: right;
 	margin: 5px 5px 0 0;
 	height: 24px;
 	width: 24px;
@@ -179,7 +178,7 @@ nav {
 .settingsbtn {
 	position: absolute;
 	width: 36px;
-  height: 36px;
+  	height: 36px;
 	right: 0;
 	top: 0;
 	margin: 5px;

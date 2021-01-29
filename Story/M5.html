@@ -1,228 +1,261 @@
 <!DOCTYPE html>
-<html lang='en'>
-<head>
-	<meta charset='UTF-8'>
-	<title>Project Passage - Story</title>
-	<link rel='icon' type='image/png' href='../resources/Project_Passage.png'/>
-	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<link rel='stylesheet' href='../css/StoryTheme.css' media='screen'>
-	<style>
-		body {
-			background: linear-gradient(to bottom right, #C04848, #480048) fixed;
-		}
-	</style>
-</head>
-<body>
-	<header>
-		<div class='togglediv'><button id='toggle'><img src='../resources/play.svg' alt='Play'></button></div>
-		<div style='margin: 1em'>
-			<h1 class='project'>Project</h1>
-			<h1 class='passage'>Passage</h1>
-		</div>
-	</header>
-	<div class='flexmain'>
-		<div class='textdiv'>
-			<p class='scenario acrylic' id='scenario-text'></p>
-		</div>
-		<div class='replydiv'>
-			<p class='reply acrylic' id='reply-text'></p>
-		</div>
-		<div class='buttondiv'>
-			<button id='ButtonOne' class='button acrylic' onClick='reply1()'></button>
-			<button id='ButtonTwo' class='button acrylic' onClick='reply2()'></button>
-			<button id='ButtonThree' class='button acrylic' onClick='reply3()'></button>
-		</div>
-	</div>
-	<div class='card hidden acrylic' id='EndCard'>
-		<h3>Mission 5 Completed</h3>
-		<p id='M5'></p>
-		<a href='../index.html' class='icon-only'><img src='../resources/home.svg' alt='Home'></a>
-		<a href='./M5.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
-	</div>
-	<nav class='acrylic'>
-		<button id='ButtonFour' class='button acrylic' style='margin: .5em' onClick='nextScenario(5)'>Continue</button>
-	</nav>
-	<script src='../js/jquery-3.5.1.min.js' defer></script>
-	<script src='../js/ScriptsStory.js' defer></script>
-	<script src='Scenarios/M5Scenarios.js' async></script>
-	<script>
-		var endings = JSON.parse(localStorage.getItem('M5-Endings'));
-		var failures = JSON.parse(localStorage.getItem('M5-Failures'));
-		var quit = false;
-		var count = 0;
-		var mission = 'M5';
-	
-	//Ending Counter
-	function endingcounter5() {
-		switch (Object.keys(scenarios[count]).pop()) {
-			case 'ending1':
-				if (endings[0] == '0'){
-					endings[0] = '1';
-				}
-				break;
-			case 'ending2':
-				if (endings[1] == '0'){
-					endings[1] = '1';
-				}
-				break;
-			case 'ending3':
-				if (endings[2] == '0'){
-					endings[2] = '1';
-				}
-				break;
-			case 'ending4':
-				if (endings[3] == '0'){
-					endings[3] = '1';
-				}
-				break;
-			case 'ending5':
-				if (endings[4] == '0'){
-					endings[4] = '1';
-				}
-				break;
-			case 'ending6':
-				if (endings[5] == '0'){
-					endings[5] = '1';
-				}
-				break;
-			case 'ending7':
-				if (endings[6] == '0'){
-					endings[6] = '1';
-				}
-				break;
-			case 'ending7':
-				if (endings[6] == '0'){
-					endings[6] = '1';
-				}
-				break;
-			case 'ending8':
-				if (endings[7] == '0'){
-					endings[7] = '1';
-				}
-				break;
-			case 'ending9':
-				if (endings[8] == '0'){
-					endings[8] = '1';
-				}
-				break;
-			case 'ending10':
-				if (endings[9] == '0'){
-					endings[9] = '1';
-				}
-				break;
-			case 'ending11':
-				if (endings[10] == '0'){
-					endings[10] = '1';
-				}
-				break;
-			case 'ending12':
-				if (endings[11] == '0'){
-					endings[11] = '1';
-				}
-				break;
-			//Failures
-			case 'failure1':
-				if (failures[0] == '0'){
-					failures[0] = '1';
-				}
-				break;
-			case 'failure2':
-				if (failures[1] == '0'){
-					failures[1] = '1';
-				}
-				break;
-			case 'failure3':
-				if (failures[2] == '0'){
-					failures[2] = '1';
-				}
-				break;
-			case 'failure4':
-				if (failures[3] == '0'){
-					failures[3] = '1';
-				}
-				break;
-			case 'failure5':
-				if (failures[4] == '0'){
-					failures[4] = '1';
-				}
-				break;
-			case 'failure6':
-				if (failures[5] == '0'){
-					failures[5] = '1';
-				}
-				break;
-			case 'failure7':
-				if (failures[6] == '0'){
-					failures[6] = '1';
-				}
-				break;
-			case 'failure7':
-				if (failures[6] == '0'){
-					failures[6] = '1';
-				}
-				break;
-			case 'failure8':
-				if (failures[7] == '0'){
-					failures[7] = '1';
-				}
-				break;
-			case 'failure9':
-				if (failures[8] == '0'){
-					failures[8] = '1';
-				}
-				break;
-			case 'failure10':
-				if (failures[9] == '0'){
-					failures[9] = '1';
-				}
-				break;
-			case 'failure11':
-				if (failures[10] == '0'){
-					failures[10] = '1';
-				}
-				break;
-			case 'failure12':
-				if (failures[11] == '0'){
-					failures[11] = '1';
-				}
-				break;
-			case 'failure13':
-				if (failures[12] == '0'){
-					failures[12] = '1';
-				}
-				break;
-			case 'failure14':
-				if (failures[13] == '0'){
-					failures[13] = '1';
-				}
-				break;
-			case 'failure15':
-				if (failures[14] == '0'){
-					failures[14] = '1';
-				}
-				break;
-			case 'failure16':
-				if (failures[15] == '0'){
-					failures[15] = '1';
-				}
-				break;
-			case 'failure17':
-				if (failures[16] == '0'){
-					failures[16] = '1';
-				}
-				break;
-		}
-		if (endings == null) {
-			endings = 0;
-		}
-		if (failures == null) {
-			failures = 0;
-		}
-		localStorage.setItem('M5-Endings', JSON.stringify(endings));
-		localStorage.setItem('M5-Failures', JSON.stringify(failures));
-		$('#M5').html('Endings achieved: ' + endings.filter(x => x == '1').length + '/12<br>Failures achieved: ' + failures.filter(x => x == '1').length + '/17');
-		$('div#EndCard').removeClass('hidden');
-	}
-	</script>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project Passage - Story</title>
+    <link rel="icon" type="image/png" href="../resources/Project_Passage.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/StoryTheme.css" media="screen" />
+    <style>
+      body {
+        background: linear-gradient(to bottom right, #c04848, #480048) fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="togglediv">
+        <button id="toggle">
+          <img src="../resources/play.svg" alt="Play" />
+        </button>
+      </div>
+      <div style="margin: 1em">
+        <h1 class="project">Project</h1>
+        <h1 class="passage">Passage</h1>
+      </div>
+    </header>
+    <div class="flexmain">
+      <div class="textdiv">
+        <p class="scenario acrylic" id="scenario-text"></p>
+      </div>
+      <div class="replydiv">
+        <p class="reply acrylic" id="reply-text"></p>
+      </div>
+      <div class="buttondiv">
+        <button
+          id="ButtonOne"
+          class="button acrylic"
+          onClick="reply1()"
+        ></button>
+        <button
+          id="ButtonTwo"
+          class="button acrylic"
+          onClick="reply2()"
+        ></button>
+        <button
+          id="ButtonThree"
+          class="button acrylic"
+          onClick="reply3()"
+        ></button>
+      </div>
+    </div>
+    <div class="card hidden acrylic" id="EndCard">
+      <h3>Mission 5 Completed</h3>
+      <p id="M5"></p>
+      <a href="../index.html" class="icon-only"
+        ><img src="../resources/home.svg" alt="Home"
+      /></a>
+      <a href="./M5.html" class="icon-only"
+        ><img src="../resources/refresh.svg" alt="Refresh"
+      /></a>
+    </div>
+    <nav class="acrylic">
+      <button
+        id="ButtonFour"
+        class="button acrylic"
+        style="margin: 0.5em"
+        onClick="nextScenario(5)"
+      >
+        Continue
+      </button>
+    </nav>
+    <script src="../js/jquery-3.5.1.min.js" defer></script>
+    <script src="../js/ScriptsStory.js" defer></script>
+    <script src="Scenarios/M5Scenarios.js" async></script>
+    <script>
+      var endings = JSON.parse(localStorage.getItem("M5-Endings"));
+      var failures = JSON.parse(localStorage.getItem("M5-Failures"));
+      var quit = false;
+      var count = 0;
+      var mission = "M5";
+
+      //Ending Counter
+      function endingcounter5() {
+        switch (Object.keys(scenarios[count]).pop()) {
+          case "ending1":
+            if (endings[0] == "0") {
+              endings[0] = "1";
+            }
+            break;
+          case "ending2":
+            if (endings[1] == "0") {
+              endings[1] = "1";
+            }
+            break;
+          case "ending3":
+            if (endings[2] == "0") {
+              endings[2] = "1";
+            }
+            break;
+          case "ending4":
+            if (endings[3] == "0") {
+              endings[3] = "1";
+            }
+            break;
+          case "ending5":
+            if (endings[4] == "0") {
+              endings[4] = "1";
+            }
+            break;
+          case "ending6":
+            if (endings[5] == "0") {
+              endings[5] = "1";
+            }
+            break;
+          case "ending7":
+            if (endings[6] == "0") {
+              endings[6] = "1";
+            }
+            break;
+          case "ending7":
+            if (endings[6] == "0") {
+              endings[6] = "1";
+            }
+            break;
+          case "ending8":
+            if (endings[7] == "0") {
+              endings[7] = "1";
+            }
+            break;
+          case "ending9":
+            if (endings[8] == "0") {
+              endings[8] = "1";
+            }
+            break;
+          case "ending10":
+            if (endings[9] == "0") {
+              endings[9] = "1";
+            }
+            break;
+          case "ending11":
+            if (endings[10] == "0") {
+              endings[10] = "1";
+            }
+            break;
+          case "ending12":
+            if (endings[11] == "0") {
+              endings[11] = "1";
+            }
+            break;
+          //Failures
+          case "failure1":
+            if (failures[0] == "0") {
+              failures[0] = "1";
+            }
+            break;
+          case "failure2":
+            if (failures[1] == "0") {
+              failures[1] = "1";
+            }
+            break;
+          case "failure3":
+            if (failures[2] == "0") {
+              failures[2] = "1";
+            }
+            break;
+          case "failure4":
+            if (failures[3] == "0") {
+              failures[3] = "1";
+            }
+            break;
+          case "failure5":
+            if (failures[4] == "0") {
+              failures[4] = "1";
+            }
+            break;
+          case "failure6":
+            if (failures[5] == "0") {
+              failures[5] = "1";
+            }
+            break;
+          case "failure7":
+            if (failures[6] == "0") {
+              failures[6] = "1";
+            }
+            break;
+          case "failure7":
+            if (failures[6] == "0") {
+              failures[6] = "1";
+            }
+            break;
+          case "failure8":
+            if (failures[7] == "0") {
+              failures[7] = "1";
+            }
+            break;
+          case "failure9":
+            if (failures[8] == "0") {
+              failures[8] = "1";
+            }
+            break;
+          case "failure10":
+            if (failures[9] == "0") {
+              failures[9] = "1";
+            }
+            break;
+          case "failure11":
+            if (failures[10] == "0") {
+              failures[10] = "1";
+            }
+            break;
+          case "failure12":
+            if (failures[11] == "0") {
+              failures[11] = "1";
+            }
+            break;
+          case "failure13":
+            if (failures[12] == "0") {
+              failures[12] = "1";
+            }
+            break;
+          case "failure14":
+            if (failures[13] == "0") {
+              failures[13] = "1";
+            }
+            break;
+          case "failure15":
+            if (failures[14] == "0") {
+              failures[14] = "1";
+            }
+            break;
+          case "failure16":
+            if (failures[15] == "0") {
+              failures[15] = "1";
+            }
+            break;
+          case "failure17":
+            if (failures[16] == "0") {
+              failures[16] = "1";
+            }
+            break;
+        }
+        if (endings == null) {
+          endings = 0;
+        }
+        if (failures == null) {
+          failures = 0;
+        }
+        localStorage.setItem("M5-Endings", JSON.stringify(endings));
+        localStorage.setItem("M5-Failures", JSON.stringify(failures));
+        $("#M5").html(
+          "Endings achieved: " +
+            endings.filter((x) => x == "1").length +
+            "/12<br>Failures achieved: " +
+            failures.filter((x) => x == "1").length +
+            "/17"
+        );
+        $("div#EndCard").removeClass("hidden");
+      }
+    </script>
+  </body>
 </html>

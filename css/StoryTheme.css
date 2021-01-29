@@ -1,291 +1,312 @@
 @font-face {
   font-family: "Bitmgothic";
-	src: url("Bitmgothic.woff2");
-	font-display: swap;
+  src: url("Bitmgothic.woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Century Gothic Bold";
-	src: url("CenturyGothic-Bold.woff2");
-	font-display: swap;
+  src: url("CenturyGothic-Bold.woff2");
+  font-display: swap;
 }
 
 html {
-	min-height: 100%;
-	box-sizing: border-box;
-	position: relative;
+  min-height: 100%;
+  box-sizing: border-box;
+  position: relative;
 }
 
 body {
-	font-family: "Arial", "sans-serif";
-	text-align: center;
-	color: white;
-	overflow-x: hidden;
-	line-height: 1.6;
-	margin: 0;
-	padding: 0;
+  font-family: "Arial", "sans-serif";
+  text-align: center;
+  color: white;
+  overflow-x: hidden;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-	margin: 0;
-	font-weight: bold;
-	font-size: 2.5em;
-	line-height: 1.2;
-	letter-spacing: -.1rem;
-	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0;
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h3 {
-	font-size: 1.5em;
-	margin: .5em;
-	font-weight: normal;
+  font-size: 1.5em;
+  margin: 0.5em;
+  font-weight: normal;
 }
 
 nav {
-	border-radius: 15px 15px 0px 0px !important;
-	border-style: solid none none none !important;
-	height: 3em;
-	bottom: -3em;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	position: fixed;
-	animation: slidein .35s forwards;
+  border-radius: 15px 15px 0px 0px !important;
+  border-style: solid none none none !important;
+  height: 3em;
+  bottom: -3em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
+  animation: slidein 0.35s forwards;
 }
 
 .button {
-	width: 50%;
-	font-size: .8em;
-	font-weight: 400;
-	height: auto;
-	padding: .5em;
-	margin: 5px auto;
-	color: white !important;
-	border-radius: 10px;
-	background: transparent;
-	transition: .35s;
-	-webkit-tap-highlight-color: transparent;
+  width: 50%;
+  font-size: 0.8em;
+  font-weight: 400;
+  height: auto;
+  padding: 0.5em;
+  margin: 5px auto;
+  color: white !important;
+  border-radius: 10px;
+  background: transparent;
+  transition: 0.35s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-	transform: scale(.95);
+  transform: scale(0.95);
 }
 
 button:active {
-	transform: scale(.8);
+  transform: scale(0.8);
 }
 
-*,*:focus,*:hover{
+*,
+*:focus,
+*:hover {
   outline: none;
 }
 
 .flexmain {
-	display: flex;
-	flex-flow: column;
-	justify-content: center;
-	width: 100%;
-	margin-bottom: 4em;
-	animation: fadein .35s;
-	will-change: opacity, transform;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4em;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
 .flexmain > div {
-	width: 70%;
-	margin: auto;
-	animation: hover 10s infinite;
-	will-change: transform;
+  width: 70%;
+  margin: auto;
+  animation: hover 10s infinite;
+  will-change: transform;
 }
 
-.flexmain > div:nth-child(2) { animation-delay: .3s }
-.flexmain > div:nth-child(3) { animation-delay: .6s }
+.flexmain > div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.flexmain > div:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 .icon-only {
-	margin: 10px;
+  margin: 10px;
 }
 
 .project {
-	font-family: "Century Gothic Bold";
+  font-family: "Century Gothic Bold";
 }
 
 .passage {
-	font-family: Bitmgothic;
+  font-family: Bitmgothic;
 }
 
-.scenario, .reply {
-	display: block;
-	font-size: 1em;
-	margin: 10px auto;
-	padding: 5px;
+.scenario,
+.reply {
+  display: block;
+  font-size: 1em;
+  margin: 10px auto;
+  padding: 5px;
 }
 
 .reply {
-	animation: fadein .35s;
-	will-change: opacity, transform;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
-#EndCard, #TheoCard, #StarragCard, #DuddingCard, .hintbox {
-	margin: 1em auto;
-	width: 75%;
-	padding: 1em;
-	animation: hover 10s infinite, fadein .35s;
-	will-change: opacity, transform;
+#EndCard,
+#TheoCard,
+#StarragCard,
+#DuddingCard,
+.hintbox {
+  margin: 1em auto;
+  width: 75%;
+  padding: 1em;
+  animation: hover 10s infinite, fadein 0.35s;
+  will-change: opacity, transform;
 }
 
 .acrylic {
-	border-radius: 15px;
-	border: thin solid #ddd;
-	background: rgba(0, 0, 0, .3);
-	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
+  border-radius: 15px;
+  border: thin solid #ddd;
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 }
 
 .hidden {
-	display: none;
+  display: none;
 }
 
 input {
-	width: 40%;
-	margin: 10px;
-	padding: 10px;
-	color: white;
-	border-radius: 15px !important;
+  width: 40%;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  border-radius: 15px !important;
 }
 
 .wrong {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background: linear-gradient(to bottom right, #f3904f, #3b4371);
-	animation: wrong 3s;
-	will-change: opacity;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #f3904f, #3b4371);
+  animation: wrong 3s;
+  will-change: opacity;
 }
 
-.hintbtn, .homebtn {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	margin: 10px;
-	height: 24px;
-	width: 24px;
+.hintbtn,
+.homebtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  height: 24px;
+  width: 24px;
 }
 
 .homebtn {
-	left: 0;
+  left: 0;
 }
 
-*, :after, :before {
-	box-sizing: inherit;
+*,
+:after,
+:before {
+  box-sizing: inherit;
 }
 
 .disabled {
-  	pointer-events: none;
-  	opacity: .65;
+  pointer-events: none;
+  opacity: 0.65;
 }
 
 .togglediv {
-	left: 0; 
-	top: 0; 
-	width: 2em; 
-	height: 2em;
-	margin: 10px 0 0 10px;
-	position: absolute
+  left: 0;
+  top: 0;
+  width: 2em;
+  height: 2em;
+  margin: 10px 0 0 10px;
+  position: absolute;
 }
 
 #toggle {
-	background: none;
-	border: none;
+  background: none;
+  border: none;
 }
 
 .glow {
-	animation: glow 2s infinite, slidein .35;
+  animation: glow 2s infinite, slidein 0.35;
 }
 
 /* ANIMATIONS */
 
 @keyframes slidein {
-	to {
-		bottom: 0;
-	}
+  to {
+    bottom: 0;
+  }
 }
 
 @keyframes glow {
-	from {
-		bottom: 0;
-		box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4), 0 0 15px 15px inset rgba(0, 0, 0, .1);
-	}
-	to {
-		bottom: 0;
-		box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, .1);
-	}
+  from {
+    bottom: 0;
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4),
+      0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+  }
+  to {
+    bottom: 0;
+    box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0),
+      0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+  }
 }
 
 @keyframes hover {
-	20%, 80% {
-		transform: translate3d(0, -0.3em, 0);
-	}
-	50% {
-		transform: translate3d(0, 0.3em, 0);
-	}
+  20%,
+  80% {
+    transform: translate3d(0, -0.3em, 0);
+  }
+  50% {
+    transform: translate3d(0, 0.3em, 0);
+  }
 }
 
 @keyframes fadein {
-	from {
-		transform: scale(.8);
-		opacity: 0;
-	}
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
 }
 
 @keyframes wrong {
-	0% {
-		opacity: 0;
-	}
-	25%, 75%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
+  0% {
+    opacity: 0;
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media (min-width: 80em) {
-	body {
-		font-size: 24px; 
-	}
-
-	.scenario, .reply {
-		margin: 5px auto;
+  body {
+    font-size: 24px;
   }
 
-	.flexmain {
-		flex-direction: row;
-		justify-content: center;
-		width: 100%;
-	}
+  .scenario,
+  .reply {
+    margin: 5px auto;
+  }
 
-	.flexmain > div {
-		padding-top: 2em;
-		width: 25%;
-		min-height: 15em;
-		margin: 0 3%;
-	}
+  .flexmain {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
 
-	.flexmain > div > .button {
-		width: 100%;
-	}
+  .flexmain > div {
+    padding-top: 2em;
+    width: 25%;
+    min-height: 15em;
+    margin: 0 3%;
+  }
 
-	img {
+  .flexmain > div > .button {
+    width: 100%;
+  }
+
+  img {
     transform: scale(1.5);
-	}
-	
-	.hintbtn, .homebtn {
-		margin: 18px;
-	}
+  }
+
+  .hintbtn,
+  .homebtn {
+    margin: 18px;
+  }
 }
 
 @media (min-width: 120em) {
-	body {
-		font-size: 28px; 
-	}
+  body {
+    font-size: 28px;
+  }
 }

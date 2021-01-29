@@ -121,7 +121,7 @@
 				endings[0] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
-				$('#endCard').get(0).play();
+				endCard.play();
 			}
 			save();
 		}
@@ -140,7 +140,7 @@
 				endings[1] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
-				$('#endCard').get(0).play();
+				endCard.play();
 			}
 			save();
 		}
@@ -159,7 +159,7 @@
 				endings[2] = '1';
 			}
 			if (localStorage.getItem('sound') == 'true') {
-				$('#endCard').get(0).play();
+				endCard.play();
 			}
 			save();
 		}
@@ -201,7 +201,7 @@
 			}
 			$('.flexmain').hide();
 			if (localStorage.getItem('sound') == 'true') {
-				$('#endCard').get(0).play();
+				endCard.play();
 			}
 		}
 		if (scenarios.length > count + 1) {
@@ -212,7 +212,7 @@
 		quit = scenarios[count].quit;
 		text();
 			if (localStorage.getItem('sound') == 'true') {
-				$('#btnsfx4').get(0).play();
+				btnsfx4.play();
 			}
 	}
 	</script>

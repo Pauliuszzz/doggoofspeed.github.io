@@ -1,143 +1,148 @@
 @font-face {
   font-family: "Bitmgothic";
-	src: url("Bitmgothic.woff2");
-	font-display: swap;
+  src: url("Bitmgothic.woff2");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Century Gothic Bold";
-	src: url("CenturyGothic-Bold.woff2");
-	font-display: swap;
+  src: url("CenturyGothic-Bold.woff2");
+  font-display: swap;
 }
 
 html {
-	min-height: 100%;
-	box-sizing: border-box;
+  min-height: 100%;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: "Arial", "sans-serif";
-	background: linear-gradient(to bottom, #8E0E00, black) fixed;
-	text-align: center;
-	color: white;
-	width: 100%;
-	overflow-x: hidden;
-	line-height: 1.6;
-	margin: 0;
+  font-family: "Arial", "sans-serif";
+  background: linear-gradient(to bottom, #8e0e00, black) fixed;
+  text-align: center;
+  color: white;
+  width: 100%;
+  overflow-x: hidden;
+  line-height: 1.6;
+  margin: 0;
   padding: 0;
 }
 
 h1 {
-	margin: 0;
-	font-weight: bold;
-	font-size: 2.5em;
-	line-height: 1.2;
-	letter-spacing: -.1rem;
-	text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  margin: 0;
+  font-weight: bold;
+  font-size: 2.5em;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
+  text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h3 {
-	font-size: 1.5em;
-	margin: .4em;
-	font-weight: normal;
+  font-size: 1.5em;
+  margin: 0.4em;
+  font-weight: normal;
 }
 
 nav {
-	border-radius: 15px 15px 0px 0px !important;
-	border-style: solid none none none !important;
-	height: 3em;
-	bottom: 0;
-	background-color: #410600;
-	padding-left: .2em;
-	padding-right: .2em;
-	width: 100%;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	position: fixed;
+  border-radius: 15px 15px 0px 0px !important;
+  border-style: solid none none none !important;
+  height: 3em;
+  bottom: 0;
+  background-color: #410600;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: fixed;
 }
 
-div#EndCard,  div#DeadCard{
-	margin: 1em auto;
-	width: 75%;
-	border-radius: 15px;
-	padding: 1em;
-	animation: fadein .35s;
-	will-change: opacity, transform;
+div#EndCard,
+div#DeadCard {
+  margin: 1em auto;
+  width: 75%;
+  border-radius: 15px;
+  padding: 1em;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
 #progressbar {
-	border-radius: 10px;
-	padding: 2px;
-	height: 2em;
+  border-radius: 10px;
+  padding: 2px;
+  height: 2em;
 }
-  
+
 #progressbar > div {
-	background: rgba(65, 6, 0, .1);
-	height: 100%;
-	border-radius: 8px;
-	font-size: 1em;
-	transition: width .35s ease-in-out;
+  background: rgba(65, 6, 0, 0.1);
+  height: 100%;
+  border-radius: 8px;
+  font-size: 1em;
+  transition: width 0.35s ease-in-out;
 }
 
 .project {
-	font-family: "Century Gothic Bold";
+  font-family: "Century Gothic Bold";
 }
 
 .passage {
-	font-family: Bitmgothic;
+  font-family: Bitmgothic;
 }
 
 a > img {
-	transition: .35s;
+  transition: 0.35s;
 }
 
 a:hover > img {
-	transform: scale(.95);
+  transform: scale(0.95);
 }
 
 .button {
-	width: 50%;
-	font-size: .8em;
-	font-weight: 400;
-	height: auto;
-	padding: .5em;
-	margin: 5px;
-	color: white !important;
-	border: 2px solid #8E0E00;
-	border-radius: 10px;
-	transition: .35s;
-	-webkit-tap-highlight-color: transparent;
+  width: 50%;
+  font-size: 0.8em;
+  font-weight: 400;
+  height: auto;
+  padding: 0.5em;
+  margin: 5px;
+  color: white !important;
+  border: 2px solid #8e0e00;
+  border-radius: 10px;
+  transition: 0.35s;
+  -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-	transform: scale(.95);
+  transform: scale(0.95);
 }
 
 button:active {
-	transform: scale(.8);
+  transform: scale(0.8);
 }
 
-*,*:focus,*:hover{
+*,
+*:focus,
+*:hover {
   outline: none;
 }
 
-.scenario, .reply {
-	font-size: 1em;
-	width: 100%;
-	margin: 10px auto;
-	padding: 5px;
-	border-radius: 15px;
-	animation: fadein .35s;
-	will-change: opacity, transform;
+.scenario,
+.reply {
+  font-size: 1em;
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px;
+  border-radius: 15px;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
-.navigation { 
-	margin: 12px 10%;
-	font-size: .8em;
-	height: 2.2em;
-	line-height: 2.8em;
-	-webkit-tap-highlight-color: transparent;
+.navigation {
+  margin: 12px 10%;
+  font-size: 0.8em;
+  height: 2.2em;
+  line-height: 2.8em;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hidden {
@@ -145,35 +150,39 @@ button:active {
 }
 
 .flexmain {
-	display: flex;
-	flex-flow: column;
-	justify-content: center;
-	width: 100%;
-	margin-bottom: 4em;
-	animation: fadein .35s;
-	will-change: opacity, transform;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4em;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
 .flexmain > div {
   width: 70%;
-	margin: auto;
-	animation: hover 10s infinite;
-	will-change: opacity, transform;
+  margin: auto;
+  animation: hover 10s infinite;
+  will-change: opacity, transform;
 }
 
 .reply {
-	animation: fadein .35s;
-	will-change: opacity, transform;
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
 }
 
-.flexmain > div:nth-child(2) { animation-delay: .3s }
-.flexmain > div:nth-child(3) { animation-delay: .6s }
+.flexmain > div:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.flexmain > div:nth-child(3) {
+  animation-delay: 0.6s;
+}
 
 .acrylic {
-	border-radius: 15px;
-	border: thin solid #8E0E00;
-	background: rgba(0, 0, 0, .5);
-	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
+  border-radius: 15px;
+  border: thin solid #8e0e00;
+  background: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 }
 
 .hpmessage {
@@ -183,104 +192,113 @@ button:active {
 }
 
 .hpmessage > .hptext {
-	margin: 0.5em auto;
-	width: 30%;
-	animation: comein 2s;
-	will-change: opacity, transform;
+  margin: 0.5em auto;
+  width: 30%;
+  animation: comein 2s;
+  will-change: opacity, transform;
 }
 
-*, :after, :before {
-	box-sizing: inherit;
+*,
+:after,
+:before {
+  box-sizing: inherit;
 }
 
 .disabled {
   pointer-events: none;
-  opacity: .65;
+  opacity: 0.65;
 }
 
 /* ANIMATIONS */
 
 @keyframes fadein {
-	from {
-    	transform: scale(.8);
-		opacity: 0;
-	}
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
 }
 
 @keyframes hover {
-	20%, 80% {
-		transform: translate3d(0, -0.3em, 0);
-	}
-	50% {
-		transform: translate3d(0, 0.3em, 0);
-	}
+  20%,
+  80% {
+    transform: translate3d(0, -0.3em, 0);
+  }
+  50% {
+    transform: translate3d(0, 0.3em, 0);
+  }
 }
 
 @keyframes comein {
-	0% {
+  0% {
     opacity: 0;
   }
-  10%, 30%, 50% {
-		transform: rotate(10deg) translateX(10px);
+  10%,
+  30%,
+  50% {
+    transform: rotate(10deg) translateX(10px);
     opacity: 1;
-	}
-	20%, 40%, 60% {
-		transform: rotate(-10deg) translateX(-10px);
-	}
-	65%, 90% {
-		transform: rotate(0deg) translateX(10px);
-		opacity: 1;
-	}
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-10deg) translateX(-10px);
+  }
+  65%,
+  90% {
+    transform: rotate(0deg) translateX(10px);
+    opacity: 1;
+  }
   100% {
     opacity: 0;
   }
 }
 
 @media (min-width: 80em) {
-	body {
-		font-size: 24px; 
+  body {
+    font-size: 24px;
   }
-	
-	.scenario, .reply {
-		margin: 5px auto;
-	}
+
+  .scenario,
+  .reply {
+    margin: 5px auto;
+  }
 
   img {
     transform: scale(1.5);
-	}
-	
-	a:hover > img {
-		transform: scale(1.4);
-	}
+  }
 
-	.flexmain {
-		flex-direction: row;
-		justify-content: center;
-		width: 100%;
-	}
+  a:hover > img {
+    transform: scale(1.4);
+  }
 
-	.flexmain > div {
-		padding-top: 2em;
-		width: 25%;
-		min-height: 15em;
-		margin: 0 3%;
-	}
+  .flexmain {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
 
-	.flexmain > div > .button {
-		width: 100%;
-	}
+  .flexmain > div {
+    padding-top: 2em;
+    width: 25%;
+    min-height: 15em;
+    margin: 0 3%;
+  }
 
-	#progressbar > div{
-		font-size: 1em;
-		transform: translateY(0%);
-	}
+  .flexmain > div > .button {
+    width: 100%;
+  }
+
+  #progressbar > div {
+    font-size: 1em;
+    transform: translateY(0%);
+  }
 }
 
 @media (min-width: 120em) {
-	body {
-		font-size: 28px; 
+  body {
+    font-size: 28px;
   }
-    
+
   img {
     transform: scale(2);
   }
