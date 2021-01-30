@@ -308,17 +308,6 @@ $("#ArcadeMode").html(
     "<br>Matches played: " +
     arcadeInfo[0]
 );
-$("#SurvivalMode").html(
-  "Max scenarios survived: " +
-    localStorage.getItem("MaxSurvived") +
-    "<br>Average scenarios survived: " +
-    Math.round(localStorage.getItem("AverageCount")) +
-    "<br>Matches played: " +
-    localStorage.getItem("SurvivalMatches")
-);
-if (localStorage.getItem("MaxSurvived") == 20) {
-  $(".normal").css("fill", "gold");
-}
 
 //Clears progress
 function resetEverything() {

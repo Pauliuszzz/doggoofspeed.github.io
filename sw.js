@@ -14,7 +14,6 @@ const assets = [
   "/js/ScriptsArcade.js",
   "/js/ScriptsMenu.js",
   "/js/ScriptsStory.js",
-  "/js/ScriptsSurvival.js",
   "/js/snowstorm-min.js",
   "/js/upgrades.js",
   "/resources/abtnsfx.ogg",
@@ -54,8 +53,6 @@ const assets = [
   "/Story/M3.html",
   "/Story/M4.html",
   "/Story/M5.html",
-  "/Survival/Survival.html",
-  "/Survival/SurvivalScenarios.js",
   "/index.html",
 ];
 // install event
