@@ -109,7 +109,7 @@
 	//Ending Counter
 	function save () {
 		localStorage.setItem('M4-Endings', JSON.stringify(endings));
-		$('#M4').html('Conspiracists found: ' + endings.filter(x => x == '1').length + '/3');
+		$('#M4').html('Conspiracists found: ' + endings.filter(x => x == 1).length + '/3');
 	}
 
 	function validateTheo() {
@@ -117,8 +117,8 @@
 		if (x == 'Brother Theo') {
 			$('#EndCard').removeClass('hidden');
 			$('#TheoCard, .hintbox').addClass('hidden');
-			if (endings[0] == '0'){
-				endings[0] = '1';
+			if (endings[0] == 0){
+				endings[0] = 1;
 			}
 			if (localStorage.getItem('sound') == 'true') {
 				endCard.play();
@@ -136,8 +136,8 @@
 		if (x == 'Rogan Starrag') {
 			$('#EndCard').removeClass('hidden');
 			$('#StarragCard, .hintbox').addClass('hidden');
-			if (endings[1] == '0'){
-				endings[1] = '1';
+			if (endings[1] == 0){
+				endings[1] = 1;
 			}
 			if (localStorage.getItem('sound') == 'true') {
 				endCard.play();
@@ -155,8 +155,8 @@
 		if (x == 'Finn Dudding') {
 			$('#EndCard').removeClass('hidden');
 			$('#DuddingCard, .hintbox').addClass('hidden');
-			if (endings[2] == '0'){
-				endings[2] = '1';
+			if (endings[2] == 0){
+				endings[2] = 1;
 			}
 			if (localStorage.getItem('sound') == 'true') {
 				endCard.play();

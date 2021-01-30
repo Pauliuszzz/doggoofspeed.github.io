@@ -84,7 +84,7 @@
       function save() {
         localStorage.setItem("M3-Endings", JSON.stringify(endings));
         $("#M3").html(
-          "Endings achieved: " + endings.filter((x) => x == "1").length + "/7"
+          "Endings achieved: " + endings.filter((x) => x == 1).length + "/7"
         );
       }
     </script>

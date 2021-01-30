@@ -157,58 +157,53 @@ function nextScenario(mission) {
 function endingcounter() {
   switch (Object.keys(scenarios[count]).pop()) {
     case "ending1":
-      if (endings[0] == "0") {
-        endings[0] = "1";
+      if (endings[0] == 0) {
+        endings[0] = 1;
       }
       break;
     case "ending2":
-      if (endings[1] == "0") {
-        endings[1] = "1";
+      if (endings[1] == 0) {
+        endings[1] = 1;
       }
       break;
     case "ending3":
-      if (endings[2] == "0") {
-        endings[2] = "1";
+      if (endings[2] == 0) {
+        endings[2] = 1;
       }
       break;
     case "ending4":
-      if (endings[3] == "0") {
-        endings[3] = "1";
+      if (endings[3] == 0) {
+        endings[3] = 1;
       }
       break;
     case "ending5":
-      if (endings[4] == "0") {
-        endings[4] = "1";
+      if (endings[4] == 0) {
+        endings[4] = 1;
       }
       break;
     case "ending6":
-      if (endings[5] == "0") {
-        endings[5] = "1";
+      if (endings[5] == 0) {
+        endings[5] = 1;
       }
       break;
     case "ending7":
-      if (endings[6] == "0") {
-        endings[6] = "1";
-      }
-      break;
-    case "ending7":
-      if (endings[6] == "0") {
-        endings[6] = "1";
+      if (endings[6] == 0) {
+        endings[6] = 1;
       }
       break;
     case "ending8":
-      if (endings[7] == "0") {
-        endings[7] = "1";
+      if (endings[7] == 0) {
+        endings[7] = 1;
       }
       break;
     case "ending9":
-      if (endings[8] == "0") {
-        endings[8] = "1";
+      if (endings[8] == 0) {
+        endings[8] = 1;
       }
       break;
     case "ending10":
-      if (endings[9] == "0") {
-        endings[9] = "1";
+      if (endings[9] == 0) {
+        endings[9] = 1;
       }
       break;
   }

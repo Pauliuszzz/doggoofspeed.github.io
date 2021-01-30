@@ -83,109 +83,99 @@
       function endingcounter5() {
         switch (Object.keys(scenarios[count]).pop()) {
           case "ending1":
-            if (endings[0] == "0") {
-              endings[0] = "1";
+            if (endings[0] == 0) {
+              endings[0] = 1;
             }
             break;
           case "ending2":
-            if (endings[1] == "0") {
-              endings[1] = "1";
+            if (endings[1] == 0) {
+              endings[1] = 1;
             }
             break;
           case "ending3":
-            if (endings[2] == "0") {
-              endings[2] = "1";
+            if (endings[2] == 0) {
+              endings[2] = 1;
             }
             break;
           case "ending4":
-            if (endings[3] == "0") {
-              endings[3] = "1";
+            if (endings[3] == 0) {
+              endings[3] = 1;
             }
             break;
           case "ending5":
-            if (endings[4] == "0") {
-              endings[4] = "1";
+            if (endings[4] == 0) {
+              endings[4] = 1;
             }
             break;
           case "ending6":
-            if (endings[5] == "0") {
-              endings[5] = "1";
+            if (endings[5] == 0) {
+              endings[5] = 1;
             }
             break;
           case "ending7":
-            if (endings[6] == "0") {
-              endings[6] = "1";
-            }
-            break;
-          case "ending7":
-            if (endings[6] == "0") {
-              endings[6] = "1";
+            if (endings[6] == 0) {
+              endings[6] = 1;
             }
             break;
           case "ending8":
-            if (endings[7] == "0") {
-              endings[7] = "1";
+            if (endings[7] == 0) {
+              endings[7] = 1;
             }
             break;
           case "ending9":
-            if (endings[8] == "0") {
-              endings[8] = "1";
+            if (endings[8] == 0) {
+              endings[8] = 1;
             }
             break;
           case "ending10":
-            if (endings[9] == "0") {
-              endings[9] = "1";
+            if (endings[9] == 0) {
+              endings[9] = 1;
             }
             break;
           case "ending11":
-            if (endings[10] == "0") {
-              endings[10] = "1";
+            if (endings[10] == 0) {
+              endings[10] = 1;
             }
             break;
           case "ending12":
-            if (endings[11] == "0") {
-              endings[11] = "1";
+            if (endings[11] == 0) {
+              endings[11] = 1;
             }
             break;
           //Failures
           case "failure1":
-            if (failures[0] == "0") {
-              failures[0] = "1";
+            if (failures[0] == 0) {
+              failures[0] = 1;
             }
             break;
           case "failure2":
-            if (failures[1] == "0") {
-              failures[1] = "1";
+            if (failures[1] == 0) {
+              failures[1] = 1;
             }
             break;
           case "failure3":
-            if (failures[2] == "0") {
-              failures[2] = "1";
+            if (failures[2] == 0) {
+              failures[2] = 1;
             }
             break;
           case "failure4":
-            if (failures[3] == "0") {
-              failures[3] = "1";
+            if (failures[3] == 0) {
+              failures[3] = 1;
             }
             break;
           case "failure5":
-            if (failures[4] == "0") {
-              failures[4] = "1";
+            if (failures[4] == 0) {
+              failures[4] = 1;
             }
             break;
           case "failure6":
-            if (failures[5] == "0") {
-              failures[5] = "1";
+            if (failures[5] == 0) {
+              failures[5] = 1;
             }
             break;
           case "failure7":
-            if (failures[6] == "0") {
-              failures[6] = "1";
-            }
-            break;
-          case "failure7":
-            if (failures[6] == "0") {
-              failures[6] = "1";
+            if (failures[6] == 0) {
+              failures[6] = 1;
             }
             break;
           case "failure8":
@@ -194,48 +184,48 @@
             }
             break;
           case "failure9":
-            if (failures[8] == "0") {
-              failures[8] = "1";
+            if (failures[8] == 0) {
+              failures[8] = 1;
             }
             break;
           case "failure10":
-            if (failures[9] == "0") {
-              failures[9] = "1";
+            if (failures[9] == 0) {
+              failures[9] = 1;
             }
             break;
           case "failure11":
-            if (failures[10] == "0") {
-              failures[10] = "1";
+            if (failures[10] == 0) {
+              failures[10] = 1;
             }
             break;
           case "failure12":
-            if (failures[11] == "0") {
-              failures[11] = "1";
+            if (failures[11] == 0) {
+              failures[11] = 1;
             }
             break;
           case "failure13":
-            if (failures[12] == "0") {
-              failures[12] = "1";
+            if (failures[12] == 0) {
+              failures[12] = 1;
             }
             break;
           case "failure14":
-            if (failures[13] == "0") {
-              failures[13] = "1";
+            if (failures[13] == 0) {
+              failures[13] = 1;
             }
             break;
           case "failure15":
-            if (failures[14] == "0") {
-              failures[14] = "1";
+            if (failures[14] == 0) {
+              failures[14] = 1;
             }
             break;
           case "failure16":
-            if (failures[15] == "0") {
-              failures[15] = "1";
+            if (failures[15] == 0) {
+              failures[15] = 1;
             }
             break;
           case "failure17":
-            if (failures[16] == "0") {
-              failures[16] = "1";
+            if (failures[16] == 0) {
+              failures[16] = 1;
             }
             break;
         }
@@ -249,9 +239,9 @@
         localStorage.setItem("M5-Failures", JSON.stringify(failures));
         $("#M5").html(
           "Endings achieved: " +
-            endings.filter((x) => x == "1").length +
+            endings.filter((x) => x == 1).length +
             "/12<br>Failures achieved: " +
-            failures.filter((x) => x == "1").length +
+            failures.filter((x) => x == 1).length +
             "/17"
         );
         $("div#EndCard").removeClass("hidden");
