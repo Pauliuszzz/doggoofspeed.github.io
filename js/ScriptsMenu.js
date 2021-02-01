@@ -13,7 +13,7 @@ if (n == 11 || n == 0 || n == 1) {
   document.getElementsByTagName("body")[0].appendChild(snow);
 }
 
-//This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
+//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
 if (!localStorage.getItem("ArcadeStats")) {
   localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));
 }

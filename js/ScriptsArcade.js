@@ -7,7 +7,8 @@ var bgNumber;
 var btnsfx;
 var endCard;
 var theme;
-//This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
+var ladyvar = Math.floor(Math.random() * Math.floor(4))
+//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
 var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
 var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
 
@@ -41,6 +42,7 @@ function refresh() {
   count = 0;
   score = 0;
   kXP = 0;
+  ladyvar = Math.floor(Math.random() * Math.floor(4))
   arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
   arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
   $(".flexmain, #score-text").show();

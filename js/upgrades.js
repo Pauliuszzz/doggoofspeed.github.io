@@ -1,4 +1,4 @@
-//This contains info: Arcade matches, Highscore, Average Highscore, Max 1000 points in a game
+//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
 var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
 var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
 
@@ -26,7 +26,7 @@ function arcadeLevel() {
       break;
     case "2":
       $("#arcadeUpgrade").html(
-        "Average Highscore:<br><i>" + Math.round(arcadeInfo[2]) + "/4000</i>"
+        "Average Score:<br><i>" + Math.round(arcadeInfo[2]) + "/4000</i>"
       );
       if (Math.round(arcadeInfo[2]) >= 4000) {
         $(".aLevelUp").removeClass("disabled");
@@ -63,7 +63,7 @@ function arcadeLevel() {
       break;
     case "6":
       $("#arcadeUpgrade").html(
-        "Average Highscore:<br><i>" +
+        "Average Score:<br><i>" +
           Math.round(arcadeInfo[2]) +
           "/5000</i><br>Award: <i><br>New Background</i>"
       );

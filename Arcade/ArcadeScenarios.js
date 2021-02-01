@@ -119,7 +119,7 @@ scenarios1 = [
     reply1:
       'You start talking, he tells you his deepest desires. He talks so enthusiastically, he starts crying over the fact that he doesn\'t have a "Ford Focus".',
     answer1: "Talk to him",
-    score1: 750,
+    score1: 1000,
     reply2:
       "He said that they died in a car accident. Apparently, that was the reason he became a car collector.",
     answer2: "Ask about his parents",
@@ -136,7 +136,7 @@ scenarios1 = [
     reply1:
       "You shout, he starts crying and runs back home. Was it worth it? Probably no, but now you can brag that you defeated a tiger.",
     answer1: "Shout at him",
-    score1: 750,
+    score1: 1000,
     reply2:
       "You gave him some meat, sadly he eat not only the meat but your arm too!",
     answer2: "Feed him",
@@ -160,7 +160,7 @@ scenarios1 = [
     score2: 750,
     reply3: "You slept in the open and absolutely fucking nothing happened.",
     answer3: "Sleep in the open",
-    score3: 500,
+    score3: 1000,
   },
 ];
 (scenarios2 = [
@@ -287,7 +287,7 @@ scenarios1 = [
     scenario: "A weird looking marchant passes by.",
     reply1: 'Apparently he is selling some old school technology called "GPS".',
     answer1: "Catch up to him and ask what is he selling",
-    score1: 750,
+    score1: 1000,
     reply2:
       "You catch up to him and try to sell your stuff. He angrily replies saying that he is a merchant, not a trash bin for stuff travellers no longer need.",
     answer2:
@@ -340,7 +340,7 @@ scenarios1 = [
       reply1:
         "The person you asked this question stopped for a second and then proceeded to recite the entirety of Alexander's marketing team's garbage word for word.",
       answer1: "Ask them who this Alexander is",
-      score1: 750,
+      score1: 1000,
       reply2:
         'You told exactly that to one person. Only seconds later the entire crowd looked and you and their leader exclaimed: "There can be only one!" Then everyone proceeded to beat you. Luckily you are the protagonist, meaning that no Alexander can hurt you.',
       answer2: "Tell them your name is Alexander",
@@ -490,7 +490,7 @@ scenarios4 = [
   },
 ];
 
-switch (Math.floor(Math.random() * Math.floor(4))) {
+switch (ladyvar) {
   case 0:
     scenarios4 = scenarios4.concat([
       {
@@ -498,13 +498,13 @@ switch (Math.floor(Math.random() * Math.floor(4))) {
           'You were walking down the road when a woman stopped you. She asked if she could ask you a question. Having nothing to lose, you agreed to answer. She asked, "What is your favourite colour of grilled geese?"',
         reply1: '"I\'ll keep that in mind" - She said.',
         answer1: "Yellow",
-        score1: 500,
+        score1: 1000,
         reply2: '"I\'ll keep that in mind" - She said.',
         answer2: "Blue",
         score2: 500,
         reply3: '"I\'ll keep that in mind" - She said.',
         answer3: "Red",
-        score3: 500,
+        score3: 0,
       },
     ]);
     break;
@@ -515,10 +515,10 @@ switch (Math.floor(Math.random() * Math.floor(4))) {
           'You were walking down the road when a woman stopped you. She asked if she could ask you a question. Having nothing to lose, you agreed to answer. She asked, "What are you?"',
         reply1: '"I\'ll keep that in mind" - She said.',
         answer1: "A human",
-        score1: 500,
+        score1: 0,
         reply2: '"I\'ll keep that in mind" - She said.',
         answer2: "A blood-sucking octopus",
-        score2: 500,
+        score2: 1000,
         reply3: '"I\'ll keep that in mind" - She said.',
         answer3: "A serial killer",
         score3: 500,
@@ -535,10 +535,10 @@ switch (Math.floor(Math.random() * Math.floor(4))) {
         score1: 500,
         reply2: '"I\'ll keep that in mind" - She said.',
         answer2: "700-754",
-        score2: 500,
+        score2: 0,
         reply3: '"I\'ll keep that in mind" - She said.',
         answer3: "Yes",
-        score3: 500,
+        score3: 1000,
       },
     ]);
     break;
@@ -555,7 +555,7 @@ switch (Math.floor(Math.random() * Math.floor(4))) {
         score2: 500,
         reply3: '"I\'ll keep that in mind" - She said.',
         answer3: "No",
-        score3: 500,
+        score3: 0,
       },
     ]);
     break;
@@ -566,13 +566,13 @@ switch (Math.floor(Math.random() * Math.floor(4))) {
           'You were walking down the road when a woman stopped you. She asked if she could ask you a question. Having nothing to lose, you agreed to answer. She asked, "What is your best friend\'s house address?"',
         reply1: '"I\'ll keep that in mind" - She said.',
         answer1: "I don't have friends :(",
-        score1: 500,
+        score1: 0,
         reply2: '"I\'ll keep that in mind" - She said.',
         answer2: "I'd rather keep that information private",
         score2: 500,
         reply3: '"I\'ll keep that in mind" - She said.',
         answer3: "Poopy st, 69",
-        score3: 500,
+        score3: 1000,
       },
     ]);
     break;

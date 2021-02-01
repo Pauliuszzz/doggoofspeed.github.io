@@ -44,15 +44,16 @@ a {
 
 nav {
 	border-radius: 15px 15px 0px 0px !important;
-	bottom: -3em;
+	border-style: solid none none none !important;
+	transform: translateY(3em);
+	bottom: 0;
+	width: 100vw;
 	height: 3em;
-	width: 100%;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	position: fixed;
-	border-style: solid none none none !important;
-	animation: slidein .35s forwards;
+	animation: slidein .35s forwards, glow 2s infinite;
 }
 
 .passage {
@@ -130,11 +131,11 @@ nav {
 	transition: 0.35s;
 }
 
-.switchstory:hover, .switcharcade:hover, .switchsurvival:hover, .button:hover, .playbig:hover > svg{
+.switchstory:hover, .switcharcade:hover, .switchsurvival:hover, .button:hover, .playbig:hover > svg {
 	transform: scale(.9);
 }
 
-.switchstory:active, .switcharcade:active, .switchsurvival:active, .button:active, .playbig:active > svg{
+.switchstory:active, .switcharcade:active, .switchsurvival:active, .button:active, .playbig:active > svg {
 	transform: scale(.75);
 }
 
@@ -170,7 +171,7 @@ nav {
 
 .trophy {
 	float: right;
-	margin: 5px 5px 0 0;
+	margin: 5px 5px -29px -29px;
 	height: 24px;
 	width: 24px;
 }
@@ -208,9 +209,20 @@ nav {
 
 /* ANIMATIONS */
 
+@keyframes glow {
+	from {
+	  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4),
+		0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+	}
+	to {
+	  box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0),
+		0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+	}
+}
+
 @keyframes slidein {
 	to {
-		bottom: 0;
+		transform: translateY(0);
 	}
 }
 
@@ -278,7 +290,7 @@ nav {
 		border-style: none solid none none !important;
 		transform: translateX(-3em);
 		bottom: 0;
-		width: 72px;
+		width: 3em;
 		height: 100vh;
 		flex-direction: column;
 		justify-content: center;
