@@ -286,7 +286,7 @@ $("#ArcadeMode").html(
   "Highscore: " +
     arcadeInfo[1] +
     "<br>Average Score: " +
-    arcadeInfo[2] +
+    Math.round(arcadeInfo[2]) +
     "<br>Matches played: " +
     arcadeInfo[0]
 );
