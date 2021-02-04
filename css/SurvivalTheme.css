@@ -13,18 +13,18 @@
 html {
   min-height: 100%;
   box-sizing: border-box;
+  position: relative;
 }
 
 body {
   font-family: "Arial", "sans-serif";
-  background: linear-gradient(to bottom, #8e0e00, black) fixed;
   text-align: center;
   color: white;
-  width: 100%;
   overflow-x: hidden;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 
 h1 {
@@ -39,63 +39,22 @@ h1 {
 
 h3 {
   font-size: 1.5em;
-  margin: 0.4em;
+  margin: 0.5em;
   font-weight: normal;
 }
 
 nav {
   border-radius: 15px 15px 0px 0px !important;
-  border-style: solid none none none !important;
-  height: 3em;
-  bottom: 0;
-  background-color: #410600;
-  padding-left: 0.2em;
-  padding-right: 0.2em;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  position: fixed;
-}
-
-div#EndCard,
-div#DeadCard {
-  margin: 1em auto;
-  width: 75%;
-  border-radius: 15px;
-  padding: 1em;
-  animation: fadein 0.35s;
-  will-change: opacity, transform;
-}
-
-#progressbar {
-  border-radius: 10px;
-  padding: 2px;
-  height: 2em;
-}
-
-#progressbar > div {
-  background: rgba(65, 6, 0, 0.1);
-  height: 100%;
-  border-radius: 8px;
-  font-size: 1em;
-  transition: width 0.35s ease-in-out;
-}
-
-.project {
-  font-family: "Century Gothic Bold";
-}
-
-.passage {
-  font-family: Bitmgothic;
-}
-
-a > img {
-  transition: 0.35s;
-}
-
-a:hover > img {
-  transform: scale(0.95);
+	border-style: solid none none none !important;
+  transform: translateY(3em);
+	bottom: 0;
+	width: 100vw;
+	height: 3em;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	position: fixed;
+  animation: slidein 0.35s forwards;
 }
 
 .button {
@@ -104,10 +63,10 @@ a:hover > img {
   font-weight: 400;
   height: auto;
   padding: 0.5em;
-  margin: 5px;
+  margin: 5px auto;
   color: white !important;
-  border: 2px solid #8e0e00;
   border-radius: 10px;
+  background: transparent;
   transition: 0.35s;
   -webkit-tap-highlight-color: transparent;
 }
@@ -126,29 +85,6 @@ button:active {
   outline: none;
 }
 
-.scenario,
-.reply {
-  font-size: 1em;
-  width: 100%;
-  margin: 10px auto;
-  padding: 5px;
-  border-radius: 15px;
-  animation: fadein 0.35s;
-  will-change: opacity, transform;
-}
-
-.navigation {
-  margin: 12px 10%;
-  font-size: 0.8em;
-  height: 2.2em;
-  line-height: 2.8em;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.hidden {
-  display: none;
-}
-
 .flexmain {
   display: flex;
   flex-flow: column;
@@ -163,12 +99,7 @@ button:active {
   width: 70%;
   margin: auto;
   animation: hover 10s infinite;
-  will-change: opacity, transform;
-}
-
-.reply {
-  animation: fadein 0.35s;
-  will-change: opacity, transform;
+  will-change: transform;
 }
 
 .flexmain > div:nth-child(2) {
@@ -178,24 +109,85 @@ button:active {
   animation-delay: 0.6s;
 }
 
+.icon-only {
+  margin: 10px;
+}
+
+.project {
+  font-family: "Century Gothic Bold";
+}
+
+.passage {
+  font-family: Bitmgothic;
+}
+
+.scenario,
+.reply {
+  display: block;
+  font-size: 1em;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.reply {
+  animation: fadein 0.35s;
+  will-change: opacity, transform;
+}
+
+#EndCard,
+#TheoCard,
+#StarragCard,
+#DuddingCard,
+.hintbox {
+  margin: 1em auto;
+  width: 75%;
+  padding: 1em;
+  animation: hover 10s infinite, fadein 0.35s;
+  will-change: opacity, transform;
+}
+
 .acrylic {
   border-radius: 15px;
-  border: thin solid #8e0e00;
-  background: rgba(0, 0, 0, 0.5);
+  border: thin solid #ddd;
+  background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 }
 
-.hpmessage {
-  position: absolute;
-  bottom: 3em;
-  width: 100%;
+.hidden {
+  display: none;
 }
 
-.hpmessage > .hptext {
-  margin: 0.5em auto;
-  width: 30%;
-  animation: comein 2s;
-  will-change: opacity, transform;
+input {
+  width: 40%;
+  margin: 10px;
+  padding: 10px;
+  color: white;
+  border-radius: 15px !important;
+}
+
+.wrong {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to bottom right, #f3904f, #3b4371);
+  animation: wrong 3s;
+  will-change: opacity;
+}
+
+.hintbtn,
+.homebtn {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 10px;
+  height: 24px;
+  width: 24px;
+}
+
+.homebtn {
+  left: 0;
 }
 
 *,
@@ -209,12 +201,42 @@ button:active {
   opacity: 0.65;
 }
 
+.togglediv {
+  left: 0;
+  top: 0;
+  width: 2em;
+  height: 2em;
+  margin: 10px 0 0 10px;
+  position: fixed;
+}
+
+#toggle {
+  background: none;
+  border: none;
+}
+
+.glow {
+  animation: glow 2s infinite, slidein 0.35;
+}
+
 /* ANIMATIONS */
 
-@keyframes fadein {
+@keyframes slidein {
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes glow {
   from {
-    transform: scale(0.8);
-    opacity: 0;
+    transform: translateY(0);
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4),
+      0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+  }
+  to {
+    transform: translateY(0);
+    box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0),
+      0 0 15px 15px inset rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -228,24 +250,19 @@ button:active {
   }
 }
 
-@keyframes comein {
+@keyframes fadein {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes wrong {
   0% {
     opacity: 0;
   }
-  10%,
-  30%,
-  50% {
-    transform: rotate(10deg) translateX(10px);
-    opacity: 1;
-  }
-  20%,
-  40%,
-  60% {
-    transform: rotate(-10deg) translateX(-10px);
-  }
-  65%,
-  90% {
-    transform: rotate(0deg) translateX(10px);
+  25%,
+  75% {
     opacity: 1;
   }
   100% {
@@ -261,14 +278,6 @@ button:active {
   .scenario,
   .reply {
     margin: 5px auto;
-  }
-
-  img {
-    transform: scale(1.5);
-  }
-
-  a:hover > img {
-    transform: scale(1.4);
   }
 
   .flexmain {
@@ -288,18 +297,18 @@ button:active {
     width: 100%;
   }
 
-  #progressbar > div {
-    font-size: 1em;
-    transform: translateY(0%);
+  img {
+    transform: scale(1.5);
+  }
+
+  .hintbtn,
+  .homebtn {
+    margin: 18px;
   }
 }
 
 @media (min-width: 120em) {
   body {
     font-size: 28px;
-  }
-
-  img {
-    transform: scale(2);
   }
 }
