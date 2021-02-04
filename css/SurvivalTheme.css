@@ -10,6 +10,12 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Pixel";
+  src: url("Pixel.woff2");
+  font-display: swap;
+}
+
 html {
   min-height: 100%;
   box-sizing: border-box;
@@ -24,7 +30,8 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-size: 1000% 1000% !important;
+  background-position: 0% 0% !important;
 }
 
 h1 {
@@ -45,7 +52,8 @@ h3 {
 
 nav {
   border-radius: 15px 15px 0px 0px !important;
-	border-style: solid none none none !important;
+  border-style: solid none none none !important;
+  padding: 0.2em;
   transform: translateY(3em);
 	bottom: 0;
 	width: 100vw;
@@ -79,9 +87,7 @@ button:active {
   transform: scale(0.8);
 }
 
-*,
-*:focus,
-*:hover {
+*, *:focus, *:hover {
   outline: none;
 }
 
@@ -109,6 +115,27 @@ button:active {
   animation-delay: 0.6s;
 }
 
+#progressbar {
+  border-radius: 10px;
+  padding: 2px;
+  height: 2em;
+  width: 70%;
+  margin: auto;
+}
+
+#progressslider {
+  background: rgba(65, 6, 0, 0.1);
+  height: 100%;
+  border-radius: 8px;
+  font-size: 1em;
+  box-shadow: none;
+  transition: width 0.35s ease-in-out;
+}
+
+#progressslider > p {
+  font-family: Pixel;
+}
+
 .icon-only {
   margin: 10px;
 }
@@ -121,8 +148,7 @@ button:active {
   font-family: Bitmgothic;
 }
 
-.scenario,
-.reply {
+.scenario, .reply {
   display: block;
   font-size: 1em;
   margin: 10px auto;
@@ -134,23 +160,29 @@ button:active {
   will-change: opacity, transform;
 }
 
-#EndCard,
-#TheoCard,
-#StarragCard,
-#DuddingCard,
-.hintbox {
-  margin: 1em auto;
-  width: 75%;
-  padding: 1em;
-  animation: hover 10s infinite, fadein 0.35s;
-  will-change: opacity, transform;
-}
-
 .acrylic {
   border-radius: 15px;
   border: thin solid #ddd;
   background: rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+}
+
+.hpmessage {
+  position: absolute;
+  bottom: 3em;
+}
+
+.hpmessage > .hptext {
+  margin: 0.5em auto;
+  width: 30%;
+  animation: comein 2s;
+  will-change: opacity, transform;}
+
+.navigation {
+  margin: auto 10%;
+  font-size: 0.8em;
+  height: 2.2em;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .hidden {
@@ -176,8 +208,7 @@ input {
   will-change: opacity;
 }
 
-.hintbtn,
-.homebtn {
+.hintbtn, .homebtn {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -190,9 +221,7 @@ input {
   left: 0;
 }
 
-*,
-:after,
-:before {
+* :after, :before {
   box-sizing: inherit;
 }
 
@@ -230,19 +259,16 @@ input {
 @keyframes glow {
   from {
     transform: translateY(0);
-    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4),
-      0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
   }
   to {
     transform: translateY(0);
-    box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0),
-      0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
   }
 }
 
 @keyframes hover {
-  20%,
-  80% {
+  20%, 80% {
     transform: translate3d(0, -0.3em, 0);
   }
   50% {
@@ -261,12 +287,27 @@ input {
   0% {
     opacity: 0;
   }
-  25%,
-  75% {
+  25%, 75% {
     opacity: 1;
   }
   100% {
     opacity: 0;
+  }
+}
+
+@keyframes comein {
+  0% {
+    opacity: 0;
+  }
+  10%,  30%,  50% {
+    transform: rotate(10deg) translateX(10px);
+    opacity: 1;
+  }
+  20%,  40%,  60% {
+    transform: rotate(-10deg) translateX(-10px);
+  }
+  65%,  90% {
+    transform: rotate(0deg) translateX(10px);
   }
 }
 
@@ -275,8 +316,7 @@ input {
     font-size: 24px;
   }
 
-  .scenario,
-  .reply {
+  .scenario, .reply {
     margin: 5px auto;
   }
 
@@ -301,8 +341,7 @@ input {
     transform: scale(1.5);
   }
 
-  .hintbtn,
-  .homebtn {
+  .hintbtn, .homebtn {
     margin: 18px;
   }
 }

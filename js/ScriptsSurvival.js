@@ -1,6 +1,5 @@
 var count = 0;
-var score = 0;
-var kXP = 0;
+var hp;
 var maxLength;
 var musicNumber;
 var bgNumber;
@@ -99,12 +98,9 @@ function reply1() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
-  score = score + scenarios[count].score1;
+  hp = hp - scenarios[count].damage3;
   if ($(".xpmessage").hasClass("hidden") == true) {
     $(".xptext").html("+" + scenarios[count].score1 + "Xp");
-  }
-  if (scenarios[count].score1 == 1000) {
-    kXP++;
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -117,12 +113,9 @@ function reply2() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonThree").addClass("disabled");
-  score = score + scenarios[count].score2;
+  hp = hp - scenarios[count].damage3;
   if ($(".xpmessage").hasClass("hidden") == true) {
     $(".xptext").html("+" + scenarios[count].score2 + "Xp");
-  }
-  if (scenarios[count].score2 == 1000) {
-    kXP++;
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -135,12 +128,9 @@ function reply3() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
-  score = score + scenarios[count].score3;
+  hp = hp - scenarios[count].damage3;
   if ($(".xpmessage").hasClass("hidden") == true) {
     $(".xptext").html("+" + scenarios[count].score3 + "Xp");
-  }
-  if (scenarios[count].score3 == 1000) {
-    kXP++;
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -267,16 +257,28 @@ function loadInfo() {
       bgNumber = 1;
       maxLength = 4;
       break;
-  }
+}
 
-  switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
-    case 0:
-      theme = new Audio("../resources/Arcade1.ogg");
-      break;
-    case 1:
-      theme = new Audio("../resources/Arcade2.ogg");
-      break;
-    case 2:
-      break;
+switch (Math.floor(Math.random() * Math.floor(bgNumber))) {
+  case 0:
+    $("body").css("background", "linear-gradient(rgb(100, 40, 40), black)");
+    break;
+  case 1:
+    $("body").css("background", "linear-gradient(rgb(30, 60, 30), black)");
+    break;
+  case 2:
+    $("body").css("background", "linear-gradient(rgb(30, 30, 60), black)");
+    break;
+}
+
+switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
+  case 0:
+    theme = new Audio("../resources/Arcade1.ogg");
+    break;
+  case 1:
+    theme = new Audio("../resources/Arcade2.ogg");
+    break;
+  case 2:
+    break;
   }
 }
