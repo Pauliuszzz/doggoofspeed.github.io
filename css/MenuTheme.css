@@ -197,7 +197,7 @@ nav {
 	padding: 1em;
 }
 
-.soundpanel {
+.flexsettings:first-child {
 	margin-top: 2em;
 }
 
@@ -229,6 +229,12 @@ nav {
 @keyframes fadein {
 	from {
     	transform: scale(.8);
+		opacity: 0;
+	}
+}
+
+@keyframes fadeout {
+	to {
 		opacity: 0;
 	}
 }
