@@ -1,5 +1,5 @@
 var count = 0;
-var hp;
+var hp = 100;
 var maxLength;
 var musicNumber;
 var bgNumber;
@@ -27,14 +27,12 @@ window.onload = function onload() {
 
 function refresh() {
   count = 0;
-  score = 0;
-  kXP = 0;
-  ladyvar = Math.floor(Math.random() * Math.floor(4))
-  arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
-  arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
-  $(".flexmain, #score-text").show();
+  hp = 100;
+  survivalInfo = JSON.parse(localStorage.getItem("SurvivalStats"));
+  survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
+  $(".flexmain, #hp-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
-  $("#score-text").html("Score: " + score);
+  $("#hp-text").html("-" + hp + "HP");
   loadInfo();
   shuffle(scenarios);
   $(".replydiv").hide();
@@ -53,14 +51,10 @@ $("#toggle").on("click", function (e) {
         this.play();
       }
     });
-    $("#toggle").html(
-      "<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>"
-    );
+    $("#toggle").html("<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>");
   } else {
     theme.pause();
-    $("#toggle").html(
-      "<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>"
-    );
+    $("#toggle").html("<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>");
   }
 });
 
@@ -80,7 +74,7 @@ function text() {
   $("#ButtonOne").html(scenarios[count].answer1);
   $("#ButtonTwo").html(scenarios[count].answer2);
   $("#ButtonThree").html(scenarios[count].answer3);
-  $("#score-text").html("Score: " + score);
+  $("#progressslider").css("width", hp + "%");
   if (!scenarios[count].answer1) {
     $("#ButtonOne").hide();
   }
@@ -98,9 +92,9 @@ function reply1() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
-  hp = hp - scenarios[count].damage3;
-  if ($(".xpmessage").hasClass("hidden") == true) {
-    $(".xptext").html("+" + scenarios[count].score1 + "Xp");
+  hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
+  if ($(".hpmessage").hasClass("hidden") == true) {
+    $(".hptext").html("-" + scenarios[count].score1 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -113,9 +107,9 @@ function reply2() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonThree").addClass("disabled");
-  hp = hp - scenarios[count].damage3;
-  if ($(".xpmessage").hasClass("hidden") == true) {
-    $(".xptext").html("+" + scenarios[count].score2 + "Xp");
+  hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
+  if ($(".hpmessage").hasClass("hidden") == true) {
+    $(".hptext").html("-" + scenarios[count].score2 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -128,9 +122,9 @@ function reply3() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
-  hp = hp - scenarios[count].damage3;
-  if ($(".xpmessage").hasClass("hidden") == true) {
-    $(".xptext").html("+" + scenarios[count].score3 + "Xp");
+  hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
+  if ($(".hpmessage").hasClass("hidden") == true) {
+    $(".hptext").html("-" + scenarios[count].score3 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -141,48 +135,28 @@ function reply3() {
 //Next scenario
 function nextScenario() {
   $("nav").removeClass("glow");
-  if (count >= maxLength) {
+  text();
+  if (hp <= 0) {
     if (localStorage.getItem("sound") == "true") {
       endCard.play();
     }
-    if (arcadeInfo[1] < score) {
-      arcadeInfo[1] = score;
-    }
-    if (kXP > arcadeInfo[3]) {
-      arcadeInfo[3] = kXP;
-    }
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    arcadeInfo[0]++;
-    arcadeHistory.push(score);
-    if (arcadeHistory.length > 10) {
-      arcadeHistory.shift();
+    survivalHistory.push(hp);
+    if (survivalHistory.length > 10) {
+      survivalHistory.shift();
     }
-    arcadeInfo[2] =
-      arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
-    $("#EndScore").html(
-      "Your score: " +
-        score +
-        "<br>Highscore: " +
-        arcadeInfo[1] +
-        "<br>Average Score: " +
-        Math.round(arcadeInfo[2]) +
-        "<br>Matches played: " +
-        arcadeInfo[0]
-    );
+    survivalInfo[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
     arcadeLevel();
-    localStorage.setItem("ArcadeStats", JSON.stringify(arcadeInfo));
-    localStorage.setItem("ArcadeHistory", JSON.stringify(arcadeHistory));
+    localStorage.setItem("SurvivalStats", JSON.stringify(survivalInfo));
+    localStorage.setItem("SurvivalHistory", JSON.stringify(survivalHistory));
   }
-  $(".xpmessage").removeClass("hidden");
-  setTimeout(function () {
-    $(".xpmessage").addClass("hidden");
-  }, 1000);
+  $(".hpmessage").removeClass("hidden");
+  setTimeout(function () {$(".hpmessage").addClass("hidden");}, 1000);
   $(".replydiv").hide();
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
   count++;
-  text();
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
   }

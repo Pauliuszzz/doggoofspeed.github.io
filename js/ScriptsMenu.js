@@ -14,46 +14,16 @@ if (n == 11 || n == 0 || n == 1) {
 }
 
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
-if (!localStorage.getItem("ArcadeStats")) {
-  localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));
-}
-if (!localStorage.getItem("ArcadeHistory")) {
-  localStorage.setItem("ArcadeHistory", JSON.stringify([]));
-}
+if (!localStorage.getItem("ArcadeStats")) {localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));}
+if (!localStorage.getItem("ArcadeHistory")) {localStorage.setItem("ArcadeHistory", JSON.stringify([]));}
 var ahistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
-if (!localStorage.getItem("SurvivalMatches")) {
-  localStorage.setItem("SurvivalMatches", 0);
-}
-if (!localStorage.getItem("M1-Endings")) {
-  localStorage.setItem("M1-Endings", JSON.stringify([0, 0, 0, 0, 0]));
-}
-if (!localStorage.getItem("M2-Endings")) {
-  localStorage.setItem(
-    "M2-Endings",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-  );
-}
-if (!localStorage.getItem("M3-Endings")) {
-  localStorage.setItem(
-    "M3-Endings",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0])
-  );
-}
-if (!localStorage.getItem("M4-Endings")) {
-  localStorage.setItem("M4-Endings", JSON.stringify([0, 0, 0]));
-}
-if (!localStorage.getItem("M5-Endings")) {
-  localStorage.setItem(
-    "M5-Endings",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-  );
-}
-if (!localStorage.getItem("M5-Failures")) {
-  localStorage.setItem(
-    "M5-Failures",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-  );
-}
+if (!localStorage.getItem("SurvivalMatches")) {localStorage.setItem("SurvivalMatches", 0);}
+if (!localStorage.getItem("M1-Endings")) {localStorage.setItem("M1-Endings", JSON.stringify([0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M2-Endings")) {localStorage.setItem("M2-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M3-Endings")) {localStorage.setItem("M3-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M4-Endings")) {localStorage.setItem("M4-Endings", JSON.stringify([0, 0, 0]));}
+if (!localStorage.getItem("M5-Endings")) {localStorage.setItem("M5-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M5-Failures")) {localStorage.setItem("M5-Failures",JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
 
 var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
 
