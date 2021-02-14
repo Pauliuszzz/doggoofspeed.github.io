@@ -317,6 +317,7 @@ function loadInfo() {
       theme = new Audio("../resources/Arcade2.ogg");
       break;
     case 2:
+      theme = new Audio("../resources/Arcade3.ogg");
       break;
   }
 }
