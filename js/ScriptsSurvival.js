@@ -6,7 +6,8 @@ var bgNumber;
 var btnsfx;
 var endCard;
 var theme;
-//???
+var bgvar;
+//
 var survivalInfo = JSON.parse(localStorage.getItem("SurvivalStats"));
 var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 
@@ -19,6 +20,8 @@ if (localStorage.getItem("sound") == "false") {
 
 window.onload = function onload() {
   loadInfo();
+  bgvar = Math.floor(Math.random() * Math.floor(bgNumber))
+  bgswitch();
   $("#ButtonFour").addClass("disabled");
   $(".replydiv").hide();
   shuffle(scenarios);
@@ -70,6 +73,7 @@ function shuffle(array) {
 
 //Text
 function text() {
+  bgswitch();
   $("#scenario-text").html(scenarios[count].scenario);
   $("#ButtonOne").html(scenarios[count].answer1);
   $("#ButtonTwo").html(scenarios[count].answer2);
@@ -231,18 +235,21 @@ function loadInfo() {
       bgNumber = 1;
       maxLength = 4;
       break;
+  }
 }
 
-switch (Math.floor(Math.random() * Math.floor(bgNumber))) {
-  case 0:
-    $("body").css("background", "linear-gradient(rgb(100, 40, 40), black)");
-    break;
-  case 1:
-    $("body").css("background", "linear-gradient(rgb(30, 60, 30), black)");
-    break;
-  case 2:
-    $("body").css("background", "linear-gradient(rgb(30, 30, 60), black)");
-    break;
+function bgswitch() {
+  switch (bgvar) {
+    case 0:
+      $("body").css("background", "rgb(" + hp/1.7 +"," + hp/3.3 + "," + hp/3.3 + ")");
+      break;
+    case 1:
+      $("body").css("background", "rgb(" + hp/3.3 +"," + hp/1.7 + "," + hp/3.3 + ")");
+      break;
+    case 2:
+      $("body").css("background", "rgb(" + hp/3.3 +"," + hp/3.3 + "," + hp/1.7 + ")");
+      break;
+  }
 }
 
 switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
@@ -254,5 +261,4 @@ switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
     break;
   case 2:
     break;
-  }
 }

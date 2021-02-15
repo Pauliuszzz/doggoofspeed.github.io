@@ -32,6 +32,7 @@ body {
   padding: 0;
   background-size: 1000% 1000% !important;
   background-position: 0% 0% !important;
+  transition: all .35s;
 }
 
 h1 {
