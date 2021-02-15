@@ -14,51 +14,22 @@ if (n == 11 || n == 0 || n == 1) {
 }
 
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
-if (!localStorage.getItem("ArcadeStats")) {
-  localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));
-}
-if (!localStorage.getItem("ArcadeHistory")) {
-  localStorage.setItem("ArcadeHistory", JSON.stringify([]));
-}
+if (!localStorage.getItem("ArcadeStats")) {localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));}
+if (!localStorage.getItem("ArcadeHistory")) {localStorage.setItem("ArcadeHistory", JSON.stringify([]));}
 var ahistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
-if (!localStorage.getItem("SurvivalMatches")) {
-  localStorage.setItem("SurvivalMatches", 0);
-}
-if (!localStorage.getItem("M1-Endings")) {
-  localStorage.setItem("M1-Endings", JSON.stringify([0, 0, 0, 0, 0]));
-}
-if (!localStorage.getItem("M2-Endings")) {
-  localStorage.setItem(
-    "M2-Endings",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-  );
-}
-if (!localStorage.getItem("M3-Endings")) {
-  localStorage.setItem(
-    "M3-Endings",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0])
-  );
-}
-if (!localStorage.getItem("M4-Endings")) {
-  localStorage.setItem("M4-Endings", JSON.stringify([0, 0, 0]));
-}
-if (!localStorage.getItem("M5-Endings")) {
-  localStorage.setItem(
-    "M5-Endings",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-  );
-}
-if (!localStorage.getItem("M5-Failures")) {
-  localStorage.setItem(
-    "M5-Failures",
-    JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
-  );
-}
+if (!localStorage.getItem("SurvivalMatches")) {localStorage.setItem("SurvivalMatches", 0);}
+if (!localStorage.getItem("M1-Endings")) {localStorage.setItem("M1-Endings", JSON.stringify([0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M2-Endings")) {localStorage.setItem("M2-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M3-Endings")) {localStorage.setItem("M3-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M4-Endings")) {localStorage.setItem("M4-Endings", JSON.stringify([0, 0, 0]));}
+if (!localStorage.getItem("M5-Endings")) {localStorage.setItem("M5-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
+if (!localStorage.getItem("M5-Failures")) {localStorage.setItem("M5-Failures",JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
 
 var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
 
 $(window).on("load", function () {
-  $(".lds-ellipsis").fadeOut();
+  $(".lds-ellipsis").css("animation", "fadeout .35s forwards");
+  setTimeout(function () {$(".lds-ellipsis").css("display", "none")}, 350);
   arcadeLevel();
   survivalLevel();
   switch (localStorage.getItem("sound")) {
@@ -67,15 +38,11 @@ $(window).on("load", function () {
       btnsfx2 = new Audio("resources/btnsfx2.ogg");
       btnsfx3 = new Audio("resources/btnsfx3.ogg");
       $(".btnsoundy").css({ background: "rgba(100,255,100,0.5)" });
-      setTimeout(function () {
-        $("#home").removeClass("hidden");
-      }, 400);
+      setTimeout(function () {$("#home").removeClass("hidden");}, 400);
       break;
     case "false":
       $(".btnsoundn").css({ background: "rgba(255,100,100,0.5)" });
-      setTimeout(function () {
-        $("#home").removeClass("hidden");
-      }, 400);
+      setTimeout(function () {$("#home").removeClass("hidden");}, 400);
       break;
     case null:
       SettingSwitch(true);
@@ -104,9 +71,7 @@ function sound(yn) {
 
 //Switcher machanism
 function StorySwitch() {
-  $("#home, #arcade, #survival, #setting, #stats, #levelInfo").addClass(
-    "hidden"
-  );
+  $("#home, #arcade, #survival, #setting, #stats, #levelInfo").addClass("hidden");
   $("#story, nav").removeClass("hidden");
   $("body").removeClass("arcade survival");
   $("body").css("background-color", "#5E7668");
@@ -117,9 +82,7 @@ function StorySwitch() {
 }
 
 function ArcadeSwitch() {
-  $("#home, #story, #survival, #setting, #stats, #levelInfo").addClass(
-    "hidden"
-  );
+  $("#home, #story, #survival, #setting, #stats, #levelInfo").addClass("hidden");
   $("#arcade, nav").removeClass("hidden");
   $("body").removeClass("story survival");
   $("body").css("background-color", "#8E3E6C");
@@ -143,7 +106,7 @@ function SettingSwitch(first) {
   $("#home, #story, #arcade, #survival, #stats, #levelInfo").addClass("hidden");
   $("#setting").removeClass("hidden");
   if (localStorage.getItem("sound") != null) {
-    $("nav").fadeIn();
+    $("nav").removeClass("hidden");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx3.play();
