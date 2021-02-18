@@ -45,10 +45,8 @@ $(window).on("load", function () {
       setTimeout(function () {$("#home").removeClass("hidden");}, 400);
       break;
     case null:
-      SettingSwitch(true);
       $(".card, .settingsClose, .settingsbtn").addClass("hidden");
-      $("nav").fadeOut();
-      $("setting, .soundpanel").removeClass("hidden");
+      setTimeout(function () {$("#setting, .soundpanel").removeClass("hidden");}, 400);
       if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
         sound(1);
       }
@@ -102,7 +100,7 @@ function SurvivalSwitch() {
   }
 }
 
-function SettingSwitch(first) {
+function SettingSwitch() {
   $("#home, #story, #arcade, #survival, #stats, #levelInfo").addClass("hidden");
   $("#setting").removeClass("hidden");
   if (localStorage.getItem("sound") != null) {
