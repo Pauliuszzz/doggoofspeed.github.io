@@ -24,7 +24,7 @@ window.onload = function onload() {
   bgswitch();
   $("#ButtonFour").addClass("disabled");
   $(".replydiv").hide();
-  shuffle(scenarios);
+  /* shuffle(scenarios); */
   text();
 };
 
@@ -37,7 +37,7 @@ function refresh() {
   $("#EndCard, #LevelCard").addClass("hidden");
   $("#hp-text").html("-" + hp + "HP");
   loadInfo();
-  shuffle(scenarios);
+  /* shuffle(scenarios); */
   $(".replydiv").hide();
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
@@ -78,7 +78,6 @@ function text() {
   $("#ButtonOne").html(scenarios[count].answer1);
   $("#ButtonTwo").html(scenarios[count].answer2);
   $("#ButtonThree").html(scenarios[count].answer3);
-  $("#progressslider").css("width", hp + "%");
   if (!scenarios[count].answer1) {
     $("#ButtonOne").hide();
   }
@@ -167,7 +166,7 @@ function nextScenario() {
 }
 
 function loadInfo() {
-  switch (parseInt(localStorage.getItem("ArcadeLevel"))) {
+  switch (parseInt(localStorage.getItem("SurvivalLevel"))) {
     case 11:
     case 10:
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);

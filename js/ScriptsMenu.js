@@ -15,9 +15,14 @@ if (n == 11 || n == 0 || n == 1) {
 
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
 if (!localStorage.getItem("ArcadeStats")) {localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));}
+if (!localStorage.getItem("ArcadeLevel")) {localStorage.setItem("ArcadeLevel", 0);}
 if (!localStorage.getItem("ArcadeHistory")) {localStorage.setItem("ArcadeHistory", JSON.stringify([]));}
 var ahistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
-if (!localStorage.getItem("SurvivalMatches")) {localStorage.setItem("SurvivalMatches", 0);}
+//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage
+if (!localStorage.getItem("SurvivalStats")) {localStorage.setItem("SurvivalStats", JSON.stringify([0, 0, 0, 0]));}
+if (!localStorage.getItem("SurvivalLevel")) {localStorage.setItem("SurvivalLevel", 0);}
+if (!localStorage.getItem("SurvivalHistory")) {localStorage.setItem("SurvivalHistory", JSON.stringify([]));}
+var shistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 if (!localStorage.getItem("M1-Endings")) {localStorage.setItem("M1-Endings", JSON.stringify([0, 0, 0, 0, 0]));}
 if (!localStorage.getItem("M2-Endings")) {localStorage.setItem("M2-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
 if (!localStorage.getItem("M3-Endings")) {localStorage.setItem("M3-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0]));}
@@ -47,12 +52,12 @@ $(window).on("load", function () {
     case null:
       $(".card, .settingsClose, .settingsbtn").addClass("hidden");
       setTimeout(function () {$("#setting, .soundpanel").removeClass("hidden");}, 400);
-      if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+      if (navigator.userAgent.match(/(Mac|iPhone|iPod|iPad)/i)) {
         sound(1);
       }
       break;
   }
-  if (navigator.userAgent.match(/(iPhone|iPod|iPad)/i)) {
+  if (navigator.userAgent.match(/(Mac|iPhone|iPod|iPad)/i)) {
     $(".soundpanel").addClass("hidden");
   }
 });
