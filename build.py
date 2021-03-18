@@ -3,7 +3,7 @@ import shutil
 import os.path
 
 
-# Insert the location of index.html
+# Insert export location (Default: [home]/Downloads/Project_Passage)
 exportPath = os.path.expanduser("~") + "/Downloads/Project_Passage"
 
 if (os.path.isdir(exportPath)):

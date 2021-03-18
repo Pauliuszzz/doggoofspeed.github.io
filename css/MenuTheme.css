@@ -211,12 +211,10 @@ nav {
 
 @keyframes glow {
 	from {
-	  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4),
-		0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+	  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 	}
 	to {
-	  box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0),
-		0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+	  box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 	}
 }
 

@@ -76,9 +76,7 @@ h3 {
   font-family: Bitmgothic;
 }
 
-.scenario,
-.reply,
-.score {
+.scenario, .reply, .score {
   font-size: 1em;
   margin: 10px auto;
   padding: 5px;
@@ -147,9 +145,7 @@ a:hover > img {
   transform: scale(0.8);
 }
 
-*,
-*:focus,
-*:hover {
+*, *:focus, *:hover {
   outline: none;
 }
 
@@ -219,9 +215,8 @@ a:hover > img {
   will-change: opacity, background-color;
 }
 
-#EndCard,
-#LevelCard {
-  width: 75%;
+#EndCard, #LevelCard {
+  width: 50%;
   margin: 0 auto 10px auto;
   padding: 0;
   animation: fadein 0.35s;
@@ -246,9 +241,7 @@ a:hover > img {
   border: none;
 }
 
-*,
-:after,
-:before {
+*, :after, :before {
   box-sizing: inherit;
 }
 
@@ -287,8 +280,7 @@ a:hover > img {
 }
 
 @keyframes hover {
-  20%,
-  80% {
+  20%, 80% {
     transform: translate3d(0, -0.3em, 0);
   }
   50% {
@@ -300,21 +292,17 @@ a:hover > img {
   0% {
     opacity: 0;
   }
-  10%,
-  25% {
+  10%, 25% {
     color: red;
     opacity: 1;
   }
-  15%,
-  30% {
+  15%, 30% {
     color: blue;
   }
-  20%,
-  35% {
+  20%, 35% {
     color: #00ff00;
   }
-  40%,
-  90% {
+  40%, 90% {
     color: white;
     opacity: 1;
   }
@@ -328,8 +316,7 @@ a:hover > img {
     font-size: 24px;
   }
 
-  .scenario,
-  .reply {
+  .scenario, .reply {
     margin: 5px auto;
   }
 
