@@ -107,7 +107,7 @@ h3 {
 }
 
 img {
-  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 a > img {

@@ -2,7 +2,6 @@ import os
 import shutil
 import os.path
 
-
 # Insert export location (Default: [home]/Downloads/Project_Passage)
 exportPath = os.path.expanduser("~") + "/Downloads/Project_Passage"
 
