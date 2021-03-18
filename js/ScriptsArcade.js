@@ -30,13 +30,13 @@ if (localStorage.getItem("sound") == "false") {
   endCard = new Audio("../resources/aendcard.ogg");
 }
 
-window.onload = function onload() {
+$(window).on("load", function () {
   loadInfo();
   $("#ButtonFour").addClass("disabled");
   $(".replydiv").hide();
   shuffle(scenarios);
   text();
-};
+});
 
 function refresh() {
   count = 0;
@@ -182,16 +182,7 @@ function nextScenario() {
     }
     arcadeInfo[2] =
       arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
-    $("#EndScore").html(
-      "Your score: " +
-        score +
-        "<br>Highscore: " +
-        arcadeInfo[1] +
-        "<br>Average Score: " +
-        Math.round(arcadeInfo[2]) +
-        "<br>Matches played: " +
-        arcadeInfo[0]
-    );
+    $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeInfo[1] + "<br>Average Score: " + Math.round(arcadeInfo[2]) + "<br>Matches played: " + arcadeInfo[0]);
     arcadeLevel();
     localStorage.setItem("ArcadeStats", JSON.stringify(arcadeInfo));
     localStorage.setItem("ArcadeHistory", JSON.stringify(arcadeHistory));

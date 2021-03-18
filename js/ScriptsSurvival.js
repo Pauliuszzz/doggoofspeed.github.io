@@ -18,15 +18,15 @@ if (localStorage.getItem("sound") == "false") {
   endCard = new Audio("../resources/aendcard.ogg");
 }
 
-window.onload = function onload() {
+$(window).on("load", function () {
   loadInfo();
   bgvar = Math.floor(Math.random() * Math.floor(bgNumber))
   bgswitch();
   $("#ButtonFour").addClass("disabled");
   $(".replydiv").hide();
-  /* shuffle(scenarios); */
+  shuffle(scenarios);
   text();
-};
+});
 
 function refresh() {
   count = 0;
@@ -37,7 +37,7 @@ function refresh() {
   $("#EndCard, #LevelCard").addClass("hidden");
   $("#hp-text").html("-" + hp + "HP");
   loadInfo();
-  /* shuffle(scenarios); */
+  shuffle(scenarios);
   $(".replydiv").hide();
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
@@ -150,7 +150,7 @@ function nextScenario() {
       survivalHistory.shift();
     }
     survivalInfo[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
-    arcadeLevel();
+    survivalLevel();
     localStorage.setItem("SurvivalStats", JSON.stringify(survivalInfo));
     localStorage.setItem("SurvivalHistory", JSON.stringify(survivalHistory));
   }
@@ -240,13 +240,13 @@ function loadInfo() {
 function bgswitch() {
   switch (bgvar) {
     case 0:
-      $("body").css("background", "rgb(" + hp/1.7 +"," + hp/3.3 + "," + hp/3.3 + ")");
+      $("body").css("background", "rgb(" + hp/1.7 + "," + hp/3.3 + "," + hp/3.3 + ")");
       break;
     case 1:
-      $("body").css("background", "rgb(" + hp/3.3 +"," + hp/1.7 + "," + hp/3.3 + ")");
+      $("body").css("background", "rgb(" + hp/3.3 + "," + hp/1.7 + "," + hp/3.3 + ")");
       break;
     case 2:
-      $("body").css("background", "rgb(" + hp/3.3 +"," + hp/3.3 + "," + hp/1.7 + ")");
+      $("body").css("background", "rgb(" + hp/3.3 + "," + hp/3.3 + "," + hp/1.7 + ")");
       break;
   }
 }

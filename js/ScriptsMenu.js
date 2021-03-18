@@ -133,129 +133,54 @@ function levelInfo() {
 }
 
 //Story mode ending counter
-$("#M1").html(
-  "Endings achieved: " +
-    JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1)
-      .length +
-    "/5"
-);
-if (
-  JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1)
-    .length == 5
-) {
+$("#M1").html("Endings achieved: " + JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1).length + "/5");
+if (JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1).length == 5) {
   $(".finM1").css("fill", "gold");
 }
 //Mission 2
-if (
-  JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1)
-    .length > 0
-) {
-  $("#M2").html(
-    "Endings achieved: " +
-      JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1)
-        .length +
-      "/10"
-  );
-  if (
-    JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1)
-      .length == 10
-  ) {
+if (JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1).length > 0) {
+  $("#M2").html("Endings achieved: " + JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1).length + "/10");
+  if (JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1).length == 10) {
     $(".finM2").css("fill", "gold");
   }
-} else if (
-  JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1)
-    .length == 0
-) {
+} else if (JSON.parse(localStorage.getItem("M1-Endings")).filter((x) => x == 1).length == 0) {
   $("#M2").html("Finish previous missions to unlock");
   $("#M2-play").addClass("disabled");
 }
 //Mission 3
-if (
-  JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1)
-    .length > 0
-) {
-  $("#M3").html(
-    "Endings achieved: " +
-      JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1)
-        .length +
-      "/7"
-  );
-  if (
-    JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1)
-      .length == 7
-  ) {
+if (JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1).length > 0) {
+  $("#M3").html("Endings achieved: " + JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1).length + "/7");
+  if (JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1).length == 7) {
     $(".finM3").css("fill", "gold");
   }
-} else if (
-  JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1)
-    .length == 0
-) {
+} else if (JSON.parse(localStorage.getItem("M2-Endings")).filter((x) => x == 1).length == 0) {
   $("#M3").html("Finish previous missions to unlock");
   $("#M3-play").addClass("disabled");
 }
 //Mission 4
-if (
-  JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1)
-    .length > 0
-) {
-  $("#M4").html(
-    "Conspiracists found: " +
-      JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1)
-        .length +
-      "/3"
-  );
-  if (
-    JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1)
-      .length == 3
-  ) {
+if (JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1).length > 0) {
+  $("#M4").html("Conspiracists found: " + JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1).length + "/3");
+  if (JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1).length == 3) {
     $(".finM4").css("fill", "gold");
   }
-} else if (
-  JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1)
-    .length == 0
-) {
+} else if (JSON.parse(localStorage.getItem("M3-Endings")).filter((x) => x == 1).length == 0) {
   $("#M4").html("Finish previous missions to unlock");
   $("#M4-play").addClass("disabled");
 }
 //Mission 5
-if (
-  JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1)
-    .length > 2
-) {
-  $("#M5").html(
-    "Endings achieved: " +
-      JSON.parse(localStorage.getItem("M5-Endings")).filter((x) => x == 1)
-        .length +
-      "/12<br>Failures achieved: " +
-      JSON.parse(localStorage.getItem("M5-Failures")).filter((x) => x == 1)
-        .length +
-      "/17"
+if (JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1).length > 2) {
+  $("#M5").html("Endings achieved: " + JSON.parse(localStorage.getItem("M5-Endings")).filter((x) => x == 1).length + "/12<br>Failures achieved: " + JSON.parse(localStorage.getItem("M5-Failures")).filter((x) => x == 1).length + "/17"
   );
-  if (
-    JSON.parse(localStorage.getItem("M5-Endings")).filter((x) => x == 1)
-      .length == 12 &&
-    JSON.parse(localStorage.getItem("M4-Failures")).filter((x) => x == 1)
-      .length == 17
-  ) {
+  if (JSON.parse(localStorage.getItem("M5-Endings")).filter((x) => x == 1).length == 12 && JSON.parse(localStorage.getItem("M4-Failures")).filter((x) => x == 1).length == 17) {
     $(".finM5").css("fill", "gold");
   }
-} else if (
-  JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1)
-    .length < 3
-) {
+} else if (JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1).length < 3) {
   $("#M5").html("Find all the conspirators to unlock");
   $("#M5-play").addClass("disabled");
 }
 
 //Tells progress
-$("#ArcadeMode").html(
-  "Highscore: " +
-    arcadeInfo[1] +
-    "<br>Average Score: " +
-    Math.round(arcadeInfo[2]) +
-    "<br>Matches played: " +
-    arcadeInfo[0]
-);
+$("#ArcadeMode").html("Highscore: " + arcadeInfo[1] + "<br>Average Score: " + Math.round(arcadeInfo[2]) + "<br>Matches played: " + arcadeInfo[0]);
 
 //Clears progress
 function resetEverything() {
