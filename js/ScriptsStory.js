@@ -27,11 +27,11 @@ if (localStorage.getItem("sound") == "false") {
   theme = new Audio("../resources/" + mission + ".ogg");
 }
 
-window.onload = function onload() {
+$(window).on("load", function () {
   $("#ButtonFour").addClass("disabled");
   $(".replydiv").hide();
   text();
-};
+});
 
 $("#toggle").on("click", function (e) {
   if (theme.paused) {
@@ -66,11 +66,7 @@ function text() {
       $("#ButtonThree").hide();
       break;
   }
-  if (
-    !scenarios[count].answer1 &&
-    !scenarios[count].answer2 &&
-    !scenarios[count].answer3
-  ) {
+  if (!scenarios[count].answer1 && !scenarios[count].answer2 && !scenarios[count].answer3) {
     $("#ButtonFour").removeClass("disabled");
     $(".replydiv, .buttondiv").hide();
     $("nav").addClass("glow");
@@ -95,6 +91,7 @@ function reply1() {
   }
   $("nav").addClass("glow");
 }
+
 function reply2() {
   if (scenarios[count].reply2) {
     $("#reply-text").html(scenarios[count].reply2);
@@ -110,6 +107,7 @@ function reply2() {
   }
   $("nav").addClass("glow");
 }
+
 function reply3() {
   if (scenarios[count].reply3) {
     $("#reply-text").html(scenarios[count].reply3);

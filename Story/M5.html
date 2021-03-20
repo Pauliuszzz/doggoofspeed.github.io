@@ -237,13 +237,7 @@
         }
         localStorage.setItem("M5-Endings", JSON.stringify(endings));
         localStorage.setItem("M5-Failures", JSON.stringify(failures));
-        $("#M5").html(
-          "Endings achieved: " +
-            endings.filter((x) => x == 1).length +
-            "/12<br>Failures achieved: " +
-            failures.filter((x) => x == 1).length +
-            "/17"
-        );
+        $("#M5").html("Endings achieved: " + endings.filter((x) => x == 1).length + "/12<br>Failures achieved: " + failures.filter((x) => x == 1).length + "/17");
         $("div#EndCard").removeClass("hidden");
       }
     </script>
