@@ -5,13 +5,13 @@
 }
 
 @font-face {
-  font-family: "Century Gothic Bold";
-	src: url('CenturyGothic-Bold.woff2');
+  font-family: "Lexend Regular";
+	src: url('LexendRegular.woff2');
 	font-display: swap;
 }
 
 body {
-	font-family: "Century Gothic Bold";
+	font-family: "Lexend Regular";
 	color: white;
 	background-color: #636683;
 	text-align: center;
@@ -321,6 +321,9 @@ nav {
 		width: 50%;
 	}
 	
+	.aLevelH2, .sLevelH2 {
+		margin-top: -5px;
+	}
 
 	@keyframes slidein {
 		to {
