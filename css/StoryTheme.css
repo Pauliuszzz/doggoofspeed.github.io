@@ -1,13 +1,13 @@
 @font-face {
-  font-family: "Bitmgothic";
+  font-family: Bitmgothic;
   src: url("Bitmgothic.woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Century Gothic Bold";
-  src: url("CenturyGothic-Bold.woff2");
-  font-display: swap;
+  font-family: Lexend Regular;
+	src: url('LexendRegular.woff2');
+	font-display: swap;
 }
 
 html {
@@ -17,13 +17,16 @@ html {
 }
 
 body {
-  font-family: "Arial", "sans-serif";
   text-align: center;
   color: white;
   overflow-x: hidden;
   line-height: 1.6;
   margin: 0;
   padding: 0;
+}
+
+body, button {
+  font-family: Lexend Regular;
 }
 
 h1 {
@@ -108,10 +111,6 @@ button:active {
 
 .icon-only {
   margin: 10px;
-}
-
-.project {
-  font-family: "Century Gothic Bold";
 }
 
 .passage {

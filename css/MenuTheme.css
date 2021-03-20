@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Bitmgothic";
+  font-family: Bitmgothic;
 	src: url('Bitmgothic.woff2');
 	font-display: swap;
 }
 
 @font-face {
-  font-family: "Lexend Regular";
+  font-family: Lexend Regular;
 	src: url('LexendRegular.woff2');
 	font-display: swap;
 }
 
 body {
-	font-family: "Lexend Regular";
+	font-family: Lexend Regular;
 	color: white;
 	background-color: #636683;
 	text-align: center;

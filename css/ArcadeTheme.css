@@ -1,17 +1,17 @@
 @font-face {
-  font-family: "Bitmgothic";
+  font-family: Bitmgothic;
   src: url("Bitmgothic.woff2");
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Century Gothic Bold";
-  src: url("CenturyGothic-Bold.woff2");
-  font-display: swap;
+  font-family: Lexend Regular;
+	src: url('LexendRegular.woff2');
+	font-display: swap;
 }
 
 @font-face {
-  font-family: "Pixel";
+  font-family: Pixel;
   src: url("Pixel.woff2");
   font-display: swap;
 }
@@ -22,7 +22,7 @@ html {
 }
 
 body {
-  font-family: "MS Sans Serif", "Tahoma", "Verdana", "sans-serif";
+  font-family: MS Sans Serif, Tahoma, Verdana, sans-serif;
   text-align: center;
   color: #212529;
   margin: 0;
@@ -69,7 +69,7 @@ h3 {
 }
 
 .project {
-  font-family: "Century Gothic Bold";
+  font-family: Lexend Regular;
 }
 
 .passage {
