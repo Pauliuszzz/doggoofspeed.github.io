@@ -138,7 +138,6 @@ function reply3() {
 //Next scenario
 function nextScenario() {
   $("nav").removeClass("glow");
-  text();
   if (hp <= 0) {
     if (localStorage.getItem("sound") == "true") {
       endCard.play();
@@ -160,6 +159,7 @@ function nextScenario() {
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
   count++;
+  text();
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
   }

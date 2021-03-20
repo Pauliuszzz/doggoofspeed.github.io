@@ -119,8 +119,8 @@ button:active {
   display: flex;
   flex-flow: row;
   justify-content: center;
-  width: 225px;
-  height: 75px;
+  width: 9em;
+  height: 3em;
   margin: auto;
   animation: fadein 0.35s;
   will-change: opacity, transform;
@@ -250,6 +250,11 @@ input {
 
 .glow {
   animation: glow 2s infinite, slidein 0.35;
+}
+
+.potion {
+  width: 2.75em;
+  transform: scale(1) !important;
 }
 
 /* ANIMATIONS */

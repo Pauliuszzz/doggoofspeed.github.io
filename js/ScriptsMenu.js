@@ -50,10 +50,11 @@ $(window).on("load", function () {
       setTimeout(function () {$("#home").removeClass("hidden");}, 400);
       break;
     case null:
-      $(".card, .settingsClose, .settingsbtn").addClass("hidden");
-      setTimeout(function () {$("#setting, .soundpanel").removeClass("hidden");}, 400);
       if (navigator.userAgent.match(/(Mac|iPhone|iPod|iPad)/i)) {
         sound(1);
+      } else {
+        $(".card, .settingsClose, .settingsbtn").addClass("hidden");
+        setTimeout(function () {$("#setting, .soundpanel").removeClass("hidden");}, 400);
       }
       break;
   }
