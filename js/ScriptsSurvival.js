@@ -7,7 +7,9 @@ var btnsfx;
 var endCard;
 var theme;
 var bgvar;
-//
+var potionused = [0, 0, 0];
+var ladyvar = Math.floor(Math.random() * Math.floor(4))
+//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
 var survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
 var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 
@@ -31,6 +33,7 @@ $(window).on("load", function () {
 function refresh() {
   count = 0;
   hp = 100;
+  potionused = [0, 0, 0];
   survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
   survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
   $(".flexmain, #hp-text").show();
@@ -97,7 +100,7 @@ function reply1() {
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
   hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
   if ($(".hpmessage").hasClass("hidden") == true) {
-    $(".hptext").html("-" + scenarios[count].score1 + "HP");
+    $(".hptext").html("-" + scenarios[count].damage1 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -112,7 +115,7 @@ function reply2() {
   $("#ButtonOne, #ButtonThree").addClass("disabled");
   hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
   if ($(".hpmessage").hasClass("hidden") == true) {
-    $(".hptext").html("-" + scenarios[count].score2 + "HP");
+    $(".hptext").html("-" + scenarios[count].damage2 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -127,7 +130,7 @@ function reply3() {
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
   hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
   if ($(".hpmessage").hasClass("hidden") == true) {
-    $(".hptext").html("-" + scenarios[count].score3 + "HP");
+    $(".hptext").html("-" + scenarios[count].damage3 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
     btnsfx.play();
@@ -135,13 +138,28 @@ function reply3() {
   $("nav").addClass("glow");
 }
 
+function heal() {
+  $(".hptext").html("+" + (100-hp) + "hp");
+  potionused[0] = 1;
+  hp = 100;
+  bgswitch();
+  $(".hpmessage").removeClass("hidden");
+  setTimeout(function () {$(".hpmessage").addClass("hidden");}, 1000);
+  $('#potionheal').addClass('disabledimg');
+}
+
 //Next scenario
 function nextScenario() {
   $("nav").removeClass("glow");
+  $('#potionrewind').removeClass('disabledimg')
+  if (hp <= 75 && potionused[0] == 0) {
+    $('#potionheal').removeClass('disabledimg');
+  }
   if (hp <= 0) {
     if (localStorage.getItem("sound") == "true") {
       endCard.play();
     }
+    $(".potion").addClass("disabledimg")
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
     survivalHistory.push(hp);
@@ -166,7 +184,7 @@ function nextScenario() {
 }
 
 function loadInfo() {
-  switch (localStorage.getItem("SurvivalLevel")) {
+  switch (survivalStats[4]) {
     case 11:
     case 10:
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);

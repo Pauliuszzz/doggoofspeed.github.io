@@ -188,9 +188,7 @@ function nextScenario() {
     localStorage.setItem("ArcadeHistory", JSON.stringify(arcadeHistory));
   }
   $(".xpmessage").removeClass("hidden");
-  setTimeout(function () {
-    $(".xpmessage").addClass("hidden");
-  }, 1000);
+  setTimeout(function () {$(".xpmessage").addClass("hidden");}, 1000);
   $(".replydiv").hide();
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");

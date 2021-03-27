@@ -20,9 +20,9 @@
       </div>
     </header>
     <div class="acrylic itemflex">
-      <div><img class="potion" src="../resources/heal.gif" alt="BluePotion"/></div>
-      <div><img class="potion" src="../resources/info.gif" alt="Potion"/></div>
-      <div><img class="potion" src="../resources/rewind.gif" alt="Potion"/></div>
+      <div><img class="potion disabledimg" onClick="heal()" id="potionheal" src="../resources/heal.gif" alt="BluePotion"/></div>
+      <div><img class="potion" id="potioninfo" src="../resources/info.gif" alt="Potion"/></div>
+      <div><img class="potion" id="potionrewind" src="../resources/rewind.gif" alt="Potion"/></div>
     </div>
     <div class="flexmain">
       <div class="textdiv">
@@ -32,7 +32,7 @@
         <p class="reply acrylic" id="reply-text"></p>
       </div>
       <div class="buttondiv">
-        <button id="ButtonOne" class="button acrylic" onClick="reply1()"></button>
+        <button id="ButtonOne" class="button acrylic" onClick=reply1()></button>
         <button id="ButtonTwo" class="button acrylic" onClick="reply2()"></button>
         <button id="ButtonThree" class="button acrylic" onClick="reply3()"></button>
       </div>
@@ -47,6 +47,9 @@
         <p id="survivalUpgrade"></p>
         <a class="button sLevelUp disabled" onClick="LevelUpS()">Upgrade</a>
       </div>
+    </div>
+    <div class="hpmessage hidden">
+      <p class="hptext"></p>
     </div>
     <nav class="acrylic">
       <a href="../index.html" class="navigation"><img src="../resources/home.svg" alt="Home" width="34"/></a>

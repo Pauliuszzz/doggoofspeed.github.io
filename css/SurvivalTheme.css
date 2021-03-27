@@ -19,7 +19,6 @@
 html {
   min-height: 100%;
   box-sizing: border-box;
-  position: relative;
 }
 
 body {
@@ -32,6 +31,7 @@ body {
   background-size: 1000% 1000% !important;
   background-position: 0% 0% !important;
   transition: all .35s;
+  user-select: none;
 }
 
 body, button {
@@ -126,6 +126,19 @@ button:active {
   will-change: opacity, transform;
 }
 
+.hpmessage {
+  color: white;
+  position: absolute;
+  bottom: 3em;
+  width: 100%;
+}
+
+.hptext {
+  opacity: 0;
+  animation: comein 1s;
+  will-change: opacity, background-color;
+}
+
 .icon-only {
   margin: 10px;
 }
@@ -153,18 +166,6 @@ button:active {
   box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 }
 
-.hpmessage {
-  position: absolute;
-  bottom: 3em;
-}
-
-.hpmessage > .hptext {
-  margin: 0.5em auto;
-  width: 30%;
-  animation: comein 2s;
-  will-change: opacity, transform;
-}
-
 #EndCard, #LevelCard {
   width: 50%;
   margin: 10px auto;
@@ -187,6 +188,7 @@ img {
 
 .disabledimg {
   filter: grayscale(100%);
+  pointer-events: none;
 }
 
 .hidden {
@@ -309,14 +311,18 @@ input {
     opacity: 0;
   }
   10%,  30%,  50% {
-    transform: rotate(10deg) translateX(10px);
+    transform: rotate(5deg) translateX(5px);
     opacity: 1;
   }
   20%,  40%,  60% {
-    transform: rotate(-10deg) translateX(-10px);
+    transform: rotate(-5deg) translateX(-5px);
   }
   65%,  90% {
-    transform: rotate(0deg) translateX(10px);
+    transform: rotate(0deg) translateX(5px);
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
   }
 }
 
