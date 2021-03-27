@@ -13,9 +13,8 @@ if (n == 11 || n == 0 || n == 1) {
   document.getElementsByTagName("body")[0].appendChild(snow);
 }
 
-//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
-if (!localStorage.getItem("ArcadeStats")) {localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0]));}
-if (!localStorage.getItem("ArcadeLevel")) {localStorage.setItem("ArcadeLevel", 0);}
+//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
+if (!localStorage.getItem("ArcadeStats")) {localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0, 0]));}
 if (!localStorage.getItem("ArcadeHistory")) {localStorage.setItem("ArcadeHistory", JSON.stringify([]));}
 var ahistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage
@@ -29,8 +28,6 @@ if (!localStorage.getItem("M3-Endings")) {localStorage.setItem("M3-Endings", JSO
 if (!localStorage.getItem("M4-Endings")) {localStorage.setItem("M4-Endings", JSON.stringify([0, 0, 0]));}
 if (!localStorage.getItem("M5-Endings")) {localStorage.setItem("M5-Endings", JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
 if (!localStorage.getItem("M5-Failures")) {localStorage.setItem("M5-Failures",JSON.stringify([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]));}
-
-var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
 
 $(window).on("load", function () {
   $(".lds-ellipsis").css("animation", "fadeout .35s forwards");

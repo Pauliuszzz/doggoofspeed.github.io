@@ -8,7 +8,7 @@ var btnsfx;
 var endCard;
 var theme;
 var ladyvar = Math.floor(Math.random() * Math.floor(4))
-//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game
+//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
 var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
 var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
 
@@ -202,7 +202,7 @@ function nextScenario() {
 }
 
 function loadInfo() {
-  switch (parseInt(localStorage.getItem("ArcadeLevel"))) {
+  switch (parseInt(arcadeInfo[4])) {
     case 11:
     case 10:
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);
