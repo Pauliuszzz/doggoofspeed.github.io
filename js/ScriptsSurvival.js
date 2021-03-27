@@ -8,7 +8,7 @@ var endCard;
 var theme;
 var bgvar;
 //
-var survivalInfo = JSON.parse(localStorage.getItem("SurvivalStats"));
+var survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
 var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 
 if (localStorage.getItem("sound") == "false") {
@@ -31,7 +31,7 @@ $(window).on("load", function () {
 function refresh() {
   count = 0;
   hp = 100;
-  survivalInfo = JSON.parse(localStorage.getItem("SurvivalStats"));
+  survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
   survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
   $(".flexmain, #hp-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
@@ -148,9 +148,9 @@ function nextScenario() {
     if (survivalHistory.length > 10) {
       survivalHistory.shift();
     }
-    survivalInfo[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
+    survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
     survivalLevel();
-    localStorage.setItem("SurvivalStats", JSON.stringify(survivalInfo));
+    localStorage.setItem("SurvivalStats", JSON.stringify(survivalStats));
     localStorage.setItem("SurvivalHistory", JSON.stringify(survivalHistory));
   }
   $(".hpmessage").removeClass("hidden");
@@ -166,7 +166,7 @@ function nextScenario() {
 }
 
 function loadInfo() {
-  switch (parseInt(localStorage.getItem("SurvivalLevel"))) {
+  switch (localStorage.getItem("SurvivalLevel")) {
     case 11:
     case 10:
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);

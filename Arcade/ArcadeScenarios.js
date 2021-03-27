@@ -130,6 +130,7 @@ scenarios1 = [
     score3: 1000,
   },
 ];
+
 scenarios2 = [
   {
     //Circus
@@ -262,6 +263,7 @@ scenarios2 = [
     score3: 1000,
   },
 ],
+
 scenarios3 = [
   {
     //Alexander
@@ -295,7 +297,7 @@ scenarios3 = [
     reply1: "Ah yes, great idea Watson. Moving to scare whatever the hell that thing worked wonders. It could be that your mind was focusing on dancing and forgot all the fears, but you managed to go back to the shore without having a heart attack.",
     answer1: "Start dancing like there is no tomorrow",
     score1: 1000,
-    reply2: "You started flailing arms around like a malfunctioning helicopter and you moved your legs in the same way. You could already feel the sand, yet you continued to run. Then you slipped on a rock and fell facedown. You managed to stay alive, but your face looked like a guerilla",
+    reply2: "You started flailing arms around like a malfunctioning helicopter and your legs moved the same way. You could already feel the sand, yet you continued to run. Then you slipped on a rock and fell facedown. You managed to stay alive, but your face looked like a guerilla",
     answer2: "Panic",
     score2: 250,
     reply3: "You continued swimming and diving for another 10 minutes. After exiting the lake you noticed that there was a hole in your leg. It was bleeding. You managed to cover it up quickly, due to its small size, but the damage was done. You were so traumatised, that even the thought of swimming gave you goosebumps.",
@@ -321,7 +323,7 @@ scenarios3 = [
     reply1: "The glamorous envelope had a colourful card inside it. After a further examination, you realised that this was indeed a congratulation card made for a loving father. It had some beautifully written and meticulously constructed sentences aimed at the family member. Such love was unheard of in your life. This jealousy almost had you in its grasp, when you put the letter back down and left.",
     answer1: "Peek at its contents",
     score1: 500,
-    reply2: "You started shouting with the hope that someone will hear you. Too bad the only ones that heard you were a pack of wild and hungry wolves. You started running as fast as you could. You were so scared that you didn't even look where you placed your feet. That caused you to trip. Luckily the wolves decided to not eat you as they were afraid to get infected with your stupidity",
+    reply2: "You started shouting with the hope that someone will hear you. Too bad the only ones that heard you were a pack of wild and hungry wolves. You started running as fast as you could. You were so scared that you didn't even look where you placed your feet. That caused you to trip. Luckily the wolves decided to not eat you as they were afraid to get infected with your stupidity.",
     answer2: "Start waving the letter around and try to look for its owner",
     score2: 0,
     reply3: "You took the letter. Later that day you set up a camp near a lake. Of course, you also set up a campfire. The letter helped you a lot. Although you had no idea what was inside the letter, you were warm at least.",
@@ -329,6 +331,7 @@ scenarios3 = [
     score3: 1000,
   },
 ];
+
 scenarios4 = [
   {
     //Crazy elf
@@ -359,7 +362,7 @@ scenarios4 = [
   {
     //Sword
     scenario: "You were doing what you do best - walking when something shining came into your view. Intrigued by the light you slowly started going deeper and deeper into the forest. When you were about 4 minutes from the main path you noticed that the glowing thing was a sword. It was stuck inside a rock. You noticed that someone else had tried to pull it out, not only that, there were some fresh footprints on the grass.",
-    reply1: "You firmly grabbed the sword by its handle and started pulling it out. To your surprise it was quite light, it seemed like it was made out of paper. You were so happy that you failed to notice that the bushes that the footprints lead to started moving. Suddenly 3 people surrounded you. Due to the confusion, you failed to notice the fact that the sword was no longer in your arm. The group disappeared as quickly as it appeared",
+    reply1: "You firmly grabbed the sword by its handle and started pulling it out. To your surprise it was quite light, it seemed like it was made out of paper. You were so happy that you failed to notice that the bushes that the footprints lead to started moving. Suddenly 3 people surrounded you. Due to the confusion, you failed to notice the fact that the sword was no longer in your arm. The group disappeared as quickly as it appeared.",
     answer1: "Pull the sword out yourself",
     score1: 250,
     reply2: "At first, you tried to bash it with another rock, but nothing happened. Your second idea was to bash it with an even bigger rock but yet again, nothing happened. Your last idea was bashing it with the biggest rock you could find, but even a big rock couldn’t smash it into pieces.",

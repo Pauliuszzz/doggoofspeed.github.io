@@ -17,9 +17,8 @@ if (n == 11 || n == 0 || n == 1) {
 if (!localStorage.getItem("ArcadeStats")) {localStorage.setItem("ArcadeStats", JSON.stringify([0, 0, 0, 0, 0]));}
 if (!localStorage.getItem("ArcadeHistory")) {localStorage.setItem("ArcadeHistory", JSON.stringify([]));}
 var ahistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
-//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage
-if (!localStorage.getItem("SurvivalStats")) {localStorage.setItem("SurvivalStats", JSON.stringify([0, 0, 0, 0]));}
-if (!localStorage.getItem("SurvivalLevel")) {localStorage.setItem("SurvivalLevel", 0);}
+//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
+if (!localStorage.getItem("SurvivalStats")) {localStorage.setItem("SurvivalStats", JSON.stringify([0, 0, 0, 0, 0]));}
 if (!localStorage.getItem("SurvivalHistory")) {localStorage.setItem("SurvivalHistory", JSON.stringify([]));}
 var shistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 if (!localStorage.getItem("M1-Endings")) {localStorage.setItem("M1-Endings", JSON.stringify([0, 0, 0, 0, 0]));}
@@ -178,7 +177,7 @@ if (JSON.parse(localStorage.getItem("M4-Endings")).filter((x) => x == 1).length 
 }
 
 //Tells progress
-$("#ArcadeMode").html("Highscore: " + arcadeInfo[1] + "<br>Average Score: " + Math.round(arcadeInfo[2]) + "<br>Matches played: " + arcadeInfo[0]);
+$("#ArcadeMode").html("Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
 
 //Clears progress
 function resetEverything() {

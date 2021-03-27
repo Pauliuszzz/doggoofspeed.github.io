@@ -1,33 +1,36 @@
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
-var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
+var arcadeStats = JSON.parse(localStorage.getItem("ArcadeStats"));
 var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
+//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
+var survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
+var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 
 //Arcade Levels
 function arcadeLevel() {
-  $(".aLevelH2").html("Level " + arcadeInfo[4]);
-  switch (arcadeInfo[4]) {
+  $(".aLevelH2").html("Level " + arcadeStats[4]);
+  switch (arcadeStats[4]) {
     case null:
     case 0:
-      $("#arcadeUpgrade").html("Matches played:<br><i>" + arcadeInfo[0] + "/3</i>");
-      if (arcadeInfo[0] >= 3) {
+      $("#arcadeUpgrade").html("Matches played:<br><i>" + arcadeStats[0] + "/3</i>");
+      if (arcadeStats[0] >= 3) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 1:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeInfo[1] + "/5000</i>");
-      if (arcadeInfo[1] >= 5000) {
+      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/5000</i>");
+      if (arcadeStats[1] >= 5000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 2:
-      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeInfo[2]) + "/4000</i>");
-      if (Math.round(arcadeInfo[2]) >= 4000) {
+      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeStats[2]) + "/4000</i>");
+      if (Math.round(arcadeStats[2]) >= 4000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 3:
-      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeInfo[3] + "/4</i>");
-      if (arcadeInfo[3] >= 4) {
+      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeStats[3] + "/4</i>");
+      if (arcadeStats[3] >= 4) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
@@ -38,20 +41,20 @@ function arcadeLevel() {
       }
       break;
     case 5:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeInfo[1] + "/6500</i><br>Award: <i><br>More Scenarios</i>");
-      if (arcadeInfo[1] >= 6500) {
+      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/6500</i><br>Award: <i><br>More Scenarios</i>");
+      if (arcadeStats[1] >= 6500) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 6:
-      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeInfo[2]) + "/5000</i><br>Award: <i><br>New Background</i>");
-      if (Math.round(arcadeInfo[2]) >= 5000) {
+      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeStats[2]) + "/5000</i><br>Award: <i><br>New Background</i>");
+      if (Math.round(arcadeStats[2]) >= 5000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 7:
-      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeInfo[3] + "/7</i><br>Award: <i><br>New Music</i>");
-      if (arcadeInfo[3] >= 7) {
+      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeStats[3] + "/7</i><br>Award: <i><br>New Music</i>");
+      if (arcadeStats[3] >= 7) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
@@ -62,8 +65,8 @@ function arcadeLevel() {
       }
       break;
     case 9:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeInfo[1] + "/7500</i><br>Award: <i><br>More Scenarios</i>");
-      if (arcadeInfo[1] >= 7500) {
+      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/7500</i><br>Award: <i><br>More Scenarios</i>");
+      if (arcadeStats[1] >= 7500) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
@@ -74,21 +77,20 @@ function arcadeLevel() {
 }
 
 function LevelUpA() {
-  arcadeInfo[4] = arcadeInfo[4] + 1
-  localStorage.setItem("ArcadeStats", JSON.stringify(arcadeInfo));
-  $(".aLevelUp").addClass("disabled");
+  arcadeStats[4] = arcadeStats[4] + 1
+  localStorage.setItem("ArcadeStats", JSON.stringify(arcadeStats));
   arcadeLevel();
-  $(".aLevelH2").html("Level " + arcadeInfo[4]);
+  $(".aLevelUp").addClass("disabled");
 }
 
 //Survival Levels
 function survivalLevel() {
-  $(".sLevelH2").html("Level " + localStorage.getItem("SurvivalLevel"));
+  $(".sLevelH2").html("Level " + survivalStats[4]);
   switch (localStorage.getItem("SurvivalLevel")) {
     case null:
     case 0:
       localStorage.setItem("SurvivalLevel", 0);
-      $("#survivalUpgrade").html("Matches played: <i>" + localStorage.getItem("SurvivalMatches") + "/3</i><br>Award: <i>Match length from 5 to 10</i>");
+      $("#survivalUpgrade").html("Matches played: <i>" + survivalStats[0] + "/3</i><br>Award: <i>Match length from 5 to 10</i>");
       if (localStorage.getItem("SurvivalMatches") >= 3) {
         $(".sLevelUp").removeClass("disabled");
       }
@@ -97,9 +99,8 @@ function survivalLevel() {
 }
 
 function LevelUpS() {
-  let sl = parseInt(localStorage.getItem("SurvivalLevel"));
-  localStorage.setItem("SurvivalLevel", sl + 1);
+  survivalStats[4] = survivalStats[4] + 1
+  localStorage.setItem("SurvivalStats", JSON.stringify(survivalStats));
   survivalLevel();
-  $(".sLevelH2").html("Level " + localStorage.getItem("SurvivalLevel"));
   $(".sLevelUp").addClass("disabled");
 }

@@ -9,7 +9,7 @@ var endCard;
 var theme;
 var ladyvar = Math.floor(Math.random() * Math.floor(4))
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
-var arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
+var arcadeStats = JSON.parse(localStorage.getItem("ArcadeStats"));
 var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
 
 //Checks if snow should be added
@@ -43,7 +43,7 @@ function refresh() {
   score = 0;
   kXP = 0;
   ladyvar = Math.floor(Math.random() * Math.floor(4))
-  arcadeInfo = JSON.parse(localStorage.getItem("ArcadeStats"));
+  arcadeStats = JSON.parse(localStorage.getItem("ArcadeStats"));
   arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
   $(".flexmain, #score-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
@@ -167,24 +167,24 @@ function nextScenario() {
     if (localStorage.getItem("sound") == "true") {
       endCard.play();
     }
-    if (arcadeInfo[1] < score) {
-      arcadeInfo[1] = score;
+    if (arcadeStats[1] < score) {
+      arcadeStats[1] = score;
     }
-    if (kXP > arcadeInfo[3]) {
-      arcadeInfo[3] = kXP;
+    if (kXP > arcadeStats[3]) {
+      arcadeStats[3] = kXP;
     }
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    arcadeInfo[0]++;
+    arcadeStats[0]++;
     arcadeHistory.push(score);
     if (arcadeHistory.length > 10) {
       arcadeHistory.shift();
     }
-    arcadeInfo[2] =
+    arcadeStats[2] =
       arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
-    $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeInfo[1] + "<br>Average Score: " + Math.round(arcadeInfo[2]) + "<br>Matches played: " + arcadeInfo[0]);
+    $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
     arcadeLevel();
-    localStorage.setItem("ArcadeStats", JSON.stringify(arcadeInfo));
+    localStorage.setItem("ArcadeStats", JSON.stringify(arcadeStats));
     localStorage.setItem("ArcadeHistory", JSON.stringify(arcadeHistory));
   }
   $(".xpmessage").removeClass("hidden");
@@ -202,7 +202,7 @@ function nextScenario() {
 }
 
 function loadInfo() {
-  switch (parseInt(arcadeInfo[4])) {
+  switch (arcadeStats[4]) {
     case 11:
     case 10:
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);
