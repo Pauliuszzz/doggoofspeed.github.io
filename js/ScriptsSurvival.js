@@ -16,8 +16,12 @@ var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
 if (localStorage.getItem("sound") == "false") {
   $(".togglediv").addClass("hidden");
 } else {
-  btnsfx = new Audio("../resources/abtnsfx.ogg");
-  endCard = new Audio("../resources/aendcard.ogg");
+  btnsfx1 = new Audio("../resources/btnsfx1.ogg");
+  btnsfx2 = new Audio("../resources/btnsfx2.ogg");
+  btnsfx3 = new Audio("../resources/btnsfx3.ogg");
+  btnsfx4 = new Audio("../resources/btnsfx4.ogg");
+  endCard = new Audio("../resources/endCard.ogg");
+  deadCard = new Audio("../resources/deadCard.ogg");
 }
 
 $(window).on("load", function () {
@@ -103,7 +107,7 @@ function reply1() {
     $(".hptext").html("-" + scenarios[count].damage1 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
-    btnsfx.play();
+    btnsfx1.play();
   }
   $("nav").addClass("glow");
 }
@@ -118,7 +122,7 @@ function reply2() {
     $(".hptext").html("-" + scenarios[count].damage2 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
-    btnsfx.play();
+    btnsfx2.play();
   }
   $("nav").addClass("glow");
 }
@@ -133,7 +137,7 @@ function reply3() {
     $(".hptext").html("-" + scenarios[count].damage3 + "HP");
   }
   if (localStorage.getItem("sound") == "true") {
-    btnsfx.play();
+    btnsfx3.play();
   }
   $("nav").addClass("glow");
 }
@@ -157,7 +161,7 @@ function nextScenario() {
   }
   if (hp <= 0) {
     if (localStorage.getItem("sound") == "true") {
-      endCard.play();
+      deadCard.play();
     }
     $(".potion").addClass("disabledimg")
     $(".flexmain, #score-text").hide();
@@ -179,7 +183,7 @@ function nextScenario() {
   count++;
   text();
   if (localStorage.getItem("sound") == "true") {
-    btnsfx.play();
+    btnsfx4.play();
   }
 }
 
