@@ -1,6 +1,5 @@
 var count = 0;
 var hp = 100;
-var maxLength;
 var musicNumber;
 var bgNumber;
 var btnsfx;
@@ -152,6 +151,13 @@ function heal() {
   $('#potionheal').addClass('disabledimg');
 }
 
+function info() {
+  $("#ButtonOne").html(scenarios[count].answer1 + " [-" + scenarios[count].damage1 + "HP]")
+  $("#ButtonTwo").html(scenarios[count].answer2 + " [-" + scenarios[count].damage2 + "HP]")
+  $("#ButtonThree").html(scenarios[count].answer3 + " [-" + scenarios[count].damage3 + "HP]")
+  $('#potioninfo').addClass('disabledimg');
+}
+
 //Next scenario
 function nextScenario() {
   $("nav").removeClass("glow");
@@ -163,7 +169,7 @@ function nextScenario() {
     if (localStorage.getItem("sound") == "true") {
       deadCard.play();
     }
-    $(".potion").addClass("disabledimg")
+    $(".potion").addClass("disabledimg");
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
     survivalHistory.push(hp);
@@ -174,6 +180,14 @@ function nextScenario() {
     survivalLevel();
     localStorage.setItem("SurvivalStats", JSON.stringify(survivalStats));
     localStorage.setItem("SurvivalHistory", JSON.stringify(survivalHistory));
+  }
+  if (!scenarios[(count + 1)].scenario) {
+    if (localStorage.getItem("sound") == "true") {
+      endCard.play();
+    }
+    $(".potion").addClass("disabledimg");
+    $(".flexmain, #score-text").hide();
+    $("#EndCard, #LevelCard").removeClass("hidden");
   }
   $(".hpmessage").removeClass("hidden");
   setTimeout(function () {$(".hpmessage").addClass("hidden");}, 1000);
@@ -194,67 +208,56 @@ function loadInfo() {
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);
       musicNumber = 3;
       bgNumber = 3;
-      maxLength = 9;
       break;
     case 9:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 3;
       bgNumber = 3;
-      maxLength = 9;
       break;
     case 8:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 3;
       bgNumber = 3;
-      maxLength = 8;
       break;
     case 7:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 2;
       bgNumber = 3;
-      maxLength = 8;
       break;
     case 6:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 2;
       bgNumber = 2;
-      maxLength = 8;
       break;
     case 5:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 2;
       bgNumber = 2;
-      maxLength = 8;
       break;
     case 4:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 2;
       bgNumber = 2;
-      maxLength = 6;
       break;
     case 3:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 1;
       bgNumber = 2;
-      maxLength = 6;
       break;
     case 2:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 1;
       bgNumber = 1;
-      maxLength = 6;
       break;
     case 1:
       scenarios = scenarios1;
       musicNumber = 1;
       bgNumber = 1;
-      maxLength = 6;
       break;
     case 0:
       scenarios = scenarios1;
       musicNumber = 1;
       bgNumber = 1;
-      maxLength = 4;
       break;
   }
 }

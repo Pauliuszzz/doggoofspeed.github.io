@@ -21,7 +21,7 @@
     </header>
     <div class="acrylic itemflex">
       <div><img class="potion disabledimg" onClick="heal()" id="potionheal" src="../resources/heal.gif" alt="BluePotion"/></div>
-      <div><img class="potion" id="potioninfo" src="../resources/info.gif" alt="Potion"/></div>
+      <div><img class="potion" onClick="info()" id="potioninfo" src="../resources/info.gif" alt="Potion"/></div>
       <div><img class="potion" id="potionrewind" src="../resources/rewind.gif" alt="Potion"/></div>
     </div>
     <div class="flexmain">
@@ -38,11 +38,9 @@
       </div>
     </div>
     <div class="card hidden acrylic" id="EndCard">
-      <div>
-        <h3>Game Over</h3>
+      <h3>Game Over</h3>
       <hr>
-        <h3 class="sLevelH2">placeholder</h3>
-      </div>
+      <h3 class="sLevelH2">placeholder</h3>
       <div>
         <p id="survivalUpgrade"></p>
         <a class="button sLevelUp disabled" onClick="LevelUpS()">Upgrade</a>
