@@ -76,13 +76,13 @@
     <script src="../js/ScriptsStory.js" defer></script>
     <script src="Scenarios/M2Scenarios.js" async></script>
     <script>
-      var endings = JSON.parse(localStorage.getItem("M2-Endings"));
+      var endings = localStorage.getObj("M2-Endings");
       var quit = false;
       var count = 0;
       var mission = "M2";
 
       function save() {
-        localStorage.setItem("M2-Endings", JSON.stringify(endings));
+        localStorage.setObj("M2-Endings", endings);
         $("#M2").html("Endings achieved: " + endings.filter((x) => x == 1).length + "/10");
       }
     </script>

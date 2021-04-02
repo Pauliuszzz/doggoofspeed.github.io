@@ -101,14 +101,14 @@
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M4Scenarios.js' async></script>
 	<script>
-		var endings = JSON.parse(localStorage.getItem('M4-Endings'));
+		var endings = localStorage.getObj('M4-Endings');
 		var quit = false;
 		var count = 0;
 		var mission = 'M4';
 	
 	//Ending Counter
 	function save () {
-		localStorage.setItem('M4-Endings', JSON.stringify(endings));
+		localStorage.setObj('M4-Endings', endings);
 		$('#M4').html('Conspiracists found: ' + endings.filter(x => x == 1).length + '/3');
 	}
 
@@ -120,7 +120,7 @@
 			if (endings[0] == 0){
 				endings[0] = 1;
 			}
-			if (localStorage.getItem('sound') == 'true') {
+			if (localStorage.getObj('sound') == 'true') {
 				endCard.play();
 			}
 			save();
@@ -139,7 +139,7 @@
 			if (endings[1] == 0){
 				endings[1] = 1;
 			}
-			if (localStorage.getItem('sound') == 'true') {
+			if (localStorage.getObj('sound') == 'true') {
 				endCard.play();
 			}
 			save();
@@ -158,7 +158,7 @@
 			if (endings[2] == 0){
 				endings[2] = 1;
 			}
-			if (localStorage.getItem('sound') == 'true') {
+			if (localStorage.getObj('sound') == 'true') {
 				endCard.play();
 			}
 			save();
@@ -200,7 +200,7 @@
 				break;
 			}
 			$('.flexmain').hide();
-			if (localStorage.getItem('sound') == 'true') {
+			if (localStorage.getObj('sound') == 'true') {
 				endCard.play();
 			}
 		}
@@ -211,7 +211,7 @@
 		$('.buttondiv').show();
 		quit = scenarios[count].quit;
 		text();
-			if (localStorage.getItem('sound') == 'true') {
+			if (localStorage.getObj('sound') == 'true') {
 				btnsfx4.play();
 			}
 	}

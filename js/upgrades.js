@@ -1,9 +1,24 @@
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
-var arcadeStats = JSON.parse(localStorage.getItem("ArcadeStats"));
-var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
+if (!localStorage.getObj("ArcadeStats")) {localStorage.setObj("ArcadeStats", [0, 0, 0, 0, 0]);}
+if (!localStorage.getObj("ArcadeHistory")) {localStorage.setObj("ArcadeHistory", []);}
+var ahistory = localStorage.getObj("ArcadeHistory");
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
-var survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
-var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
+if (!localStorage.getObj("SurvivalStats")) {localStorage.setObj("SurvivalStats", [0, 0, 0, 0, 0])}
+if (!localStorage.getObj("SurvivalHistory")) {localStorage.setObj("SurvivalHistory", [])}
+var shistory = localStorage.getObj("SurvivalHistory");
+if (!localStorage.getObj("M1-Endings")) {localStorage.setObj("M1-Endings", [0, 0, 0, 0, 0])}
+if (!localStorage.getObj("M2-Endings")) {localStorage.setObj("M2-Endings", [0, 0, 0, 0, 0, 0, 0, 0, 0, 0])}
+if (!localStorage.getObj("M3-Endings")) {localStorage.setObj("M3-Endings", [0, 0, 0, 0, 0, 0, 0])}
+if (!localStorage.getObj("M4-Endings")) {localStorage.setObj("M4-Endings", [0, 0, 0])}
+if (!localStorage.getObj("M5-Endings")) {localStorage.setObj("M5-Endings", [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])}
+if (!localStorage.getObj("M5-Failures")) {localStorage.setObj("M5-Failures", [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])}
+
+//This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
+var arcadeStats = localStorage.getObj("ArcadeStats");
+var arcadeHistory = localStorage.getObj("ArcadeHistory");
+//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
+var survivalStats = localStorage.getObj("SurvivalStats");
+var survivalHistory = localStorage.getObj("SurvivalHistory");
 
 //Arcade Levels
 function arcadeLevel() {
@@ -78,7 +93,7 @@ function arcadeLevel() {
 
 function LevelUpA() {
   arcadeStats[4] = arcadeStats[4] + 1
-  localStorage.setItem("ArcadeStats", JSON.stringify(arcadeStats));
+  localStorage.setObj("ArcadeStats", arcadeStats);
   arcadeLevel();
   $(".aLevelUp").addClass("disabled");
 }
@@ -86,12 +101,12 @@ function LevelUpA() {
 //Survival Levels
 function survivalLevel() {
   $(".sLevelH2").html("Level " + survivalStats[4]);
-  switch (localStorage.getItem("SurvivalLevel")) {
+  switch (localStorage.getObj("SurvivalLevel")) {
     case null:
     case 0:
-      localStorage.setItem("SurvivalLevel", 0);
+      localStorage.setObj("SurvivalLevel", 0);
       $("#survivalUpgrade").html("Matches played: <i>" + survivalStats[0] + "/3</i><br>Award: <i>Match length from 5 to 10</i>");
-      if (localStorage.getItem("SurvivalMatches") >= 3) {
+      if (localStorage.getObj("SurvivalMatches") >= 3) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
@@ -100,7 +115,7 @@ function survivalLevel() {
 
 function LevelUpS() {
   survivalStats[4] = survivalStats[4] + 1
-  localStorage.setItem("SurvivalStats", JSON.stringify(survivalStats));
+  localStorage.setObj("SurvivalStats", survivalStats);
   survivalLevel();
   $(".sLevelUp").addClass("disabled");
 }

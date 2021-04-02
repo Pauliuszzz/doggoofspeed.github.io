@@ -73,8 +73,8 @@
     <script src="../js/ScriptsStory.js" defer></script>
     <script src="Scenarios/M5Scenarios.js" async></script>
     <script>
-      var endings = JSON.parse(localStorage.getItem("M5-Endings"));
-      var failures = JSON.parse(localStorage.getItem("M5-Failures"));
+      var endings = localStorage.getObj("M5-Endings");
+      var failures = localStorage.getObj("M5-Failures");
       var quit = false;
       var count = 0;
       var mission = "M5";
@@ -235,8 +235,8 @@
         if (failures == null) {
           failures = 0;
         }
-        localStorage.setItem("M5-Endings", JSON.stringify(endings));
-        localStorage.setItem("M5-Failures", JSON.stringify(failures));
+        localStorage.setObj("M5-Endings", endings);
+        localStorage.setObj("M5-Failures", failures);
         $("#M5").html("Endings achieved: " + endings.filter((x) => x == 1).length + "/12<br>Failures achieved: " + failures.filter((x) => x == 1).length + "/17");
         $("div#EndCard").removeClass("hidden");
       }

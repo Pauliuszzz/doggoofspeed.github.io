@@ -9,10 +9,10 @@ var bgvar;
 var potionused = [0, 0, 0];
 var ladyvar = Math.floor(Math.random() * Math.floor(4))
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
-var survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
-var survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
+var survivalStats = localStorage.getObj("SurvivalStats");
+var survivalHistory = localStorage.getObj("SurvivalHistory");
 
-if (localStorage.getItem("sound") == "false") {
+if (localStorage.getObj("sound") == "false") {
   $(".togglediv").addClass("hidden");
 } else {
   btnsfx1 = new Audio("../resources/btnsfx1.ogg");
@@ -37,8 +37,9 @@ function refresh() {
   count = 0;
   hp = 100;
   potionused = [0, 0, 0];
-  survivalStats = JSON.parse(localStorage.getItem("SurvivalStats"));
-  survivalHistory = JSON.parse(localStorage.getItem("SurvivalHistory"));
+  survivalStats = localStorage.getObj("SurvivalStats");
+  survivalHistory = localStorage.getObj("SurvivalHistory");
+  $('#potionheal, #potioninfo').removeClass('disabledimg');
   $(".flexmain, #hp-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
   $("#hp-text").html("-" + hp + "HP");
@@ -105,7 +106,7 @@ function reply1() {
   if ($(".hpmessage").hasClass("hidden") == true) {
     $(".hptext").html("-" + scenarios[count].damage1 + "HP");
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx1.play();
   }
   $("nav").addClass("glow");
@@ -120,7 +121,7 @@ function reply2() {
   if ($(".hpmessage").hasClass("hidden") == true) {
     $(".hptext").html("-" + scenarios[count].damage2 + "HP");
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx2.play();
   }
   $("nav").addClass("glow");
@@ -135,7 +136,7 @@ function reply3() {
   if ($(".hpmessage").hasClass("hidden") == true) {
     $(".hptext").html("-" + scenarios[count].damage3 + "HP");
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx3.play();
   }
   $("nav").addClass("glow");
@@ -166,7 +167,7 @@ function nextScenario() {
     $('#potionheal').removeClass('disabledimg');
   }
   if (hp <= 0) {
-    if (localStorage.getItem("sound") == "true") {
+    if (localStorage.getObj("sound") == "true") {
       deadCard.play();
     }
     $(".potion").addClass("disabledimg");
@@ -178,11 +179,11 @@ function nextScenario() {
     }
     survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
     survivalLevel();
-    localStorage.setItem("SurvivalStats", JSON.stringify(survivalStats));
-    localStorage.setItem("SurvivalHistory", JSON.stringify(survivalHistory));
+    localStorage.setObj("SurvivalStats", survivalStats);
+    localStorage.setObj("SurvivalHistory", survivalHistory);
   }
   if (!scenarios[(count + 1)].scenario) {
-    if (localStorage.getItem("sound") == "true") {
+    if (localStorage.getObj("sound") == "true") {
       endCard.play();
     }
     $(".potion").addClass("disabledimg");
@@ -196,7 +197,7 @@ function nextScenario() {
   $("#ButtonFour").addClass("disabled");
   count++;
   text();
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx4.play();
   }
 }

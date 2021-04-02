@@ -9,21 +9,10 @@ var endCard;
 var theme;
 var ladyvar = Math.floor(Math.random() * Math.floor(4))
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
-var arcadeStats = JSON.parse(localStorage.getItem("ArcadeStats"));
-var arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
+var arcadeStats = localStorage.getObj("ArcadeStats");
+var arcadeHistory = localStorage.getObj("ArcadeHistory");
 
-//Checks if snow should be added
-var d = new Date();
-var n = d.getMonth();
-
-if (n == 11 || n == 0 || n == 1) {
-  var snow = document.createElement("script");
-  snow.setAttribute("type", "text/javascript");
-  snow.setAttribute("src", "../js/snowstorm-min.js");
-  document.getElementsByTagName("body")[0].appendChild(snow);
-}
-
-if (localStorage.getItem("sound") == "false") {
+if (localStorage.getObj("sound") == "false") {
   $(".togglediv").addClass("hidden");
 } else {
   btnsfx = new Audio("../resources/abtnsfx.ogg");
@@ -43,8 +32,8 @@ function refresh() {
   score = 0;
   kXP = 0;
   ladyvar = Math.floor(Math.random() * Math.floor(4))
-  arcadeStats = JSON.parse(localStorage.getItem("ArcadeStats"));
-  arcadeHistory = JSON.parse(localStorage.getItem("ArcadeHistory"));
+  arcadeStats = localStorage.getObj("ArcadeStats");
+  arcadeHistory = localStorage.getObj("ArcadeHistory");
   $(".flexmain, #score-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
   $("#score-text").html("Score: " + score);
@@ -118,7 +107,7 @@ function reply1() {
   if (scenarios[count].score1 == 1000) {
     kXP++;
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx.play();
   }
   $("nav").addClass("glow");
@@ -136,7 +125,7 @@ function reply2() {
   if (scenarios[count].score2 == 1000) {
     kXP++;
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx.play();
   }
   $("nav").addClass("glow");
@@ -154,7 +143,7 @@ function reply3() {
   if (scenarios[count].score3 == 1000) {
     kXP++;
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx.play();
   }
   $("nav").addClass("glow");
@@ -164,7 +153,7 @@ function reply3() {
 function nextScenario() {
   $("nav").removeClass("glow");
   if (count >= maxLength) {
-    if (localStorage.getItem("sound") == "true") {
+    if (localStorage.getObj("sound") == "true") {
       endCard.play();
     }
     if (arcadeStats[1] < score) {
@@ -184,8 +173,8 @@ function nextScenario() {
       arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
     $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
     arcadeLevel();
-    localStorage.setItem("ArcadeStats", JSON.stringify(arcadeStats));
-    localStorage.setItem("ArcadeHistory", JSON.stringify(arcadeHistory));
+    localStorage.setObj("ArcadeStats", arcadeStats);
+    localStorage.setObj("ArcadeHistory", arcadeHistory);
   }
   $(".xpmessage").removeClass("hidden");
   setTimeout(function () {$(".xpmessage").addClass("hidden");}, 1000);
@@ -194,7 +183,7 @@ function nextScenario() {
   $("#ButtonFour").addClass("disabled");
   count++;
   text();
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx.play();
   }
 }

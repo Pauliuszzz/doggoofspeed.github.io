@@ -5,18 +5,7 @@ var btnsfx4;
 var endCard;
 var theme;
 
-//Checks if snow should be added
-var d = new Date();
-var n = d.getMonth();
-
-if (n == 11 || n == 0 || n == 1) {
-  var snow = document.createElement("script");
-  snow.setAttribute("type", "text/javascript");
-  snow.setAttribute("src", "../js/snowstorm-min.js");
-  document.getElementsByTagName("body")[0].appendChild(snow);
-}
-
-if (localStorage.getItem("sound") == "false") {
+if (localStorage.getObj("sound") == "false") {
   $(".togglediv").addClass("hidden");
 } else {
   btnsfx1 = new Audio("../resources/btnsfx1.ogg");
@@ -86,7 +75,7 @@ function reply1() {
   if (scenarios[count].skipto1) {
     count = scenarios[count].skipto1 - 2;
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx1.play();
   }
   $("nav").addClass("glow");
@@ -102,7 +91,7 @@ function reply2() {
   if (scenarios[count].skipto2) {
     count = scenarios[count].skipto2 - 2;
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx2.play();
   }
   $("nav").addClass("glow");
@@ -118,7 +107,7 @@ function reply3() {
   if (scenarios[count].skipto3) {
     count = scenarios[count].skipto3 - 2;
   }
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx3.play();
   }
   $("nav").addClass("glow");
@@ -135,7 +124,7 @@ function nextScenario(mission) {
       endingcounter();
     }
     $(".flexmain").hide();
-    if (localStorage.getItem("sound") == "true") {
+    if (localStorage.getObj("sound") == "true") {
       endCard.play();
     }
   }
@@ -146,7 +135,7 @@ function nextScenario(mission) {
   $(".buttondiv").show();
   quit = scenarios[count].quit;
   text();
-  if (localStorage.getItem("sound") == "true") {
+  if (localStorage.getObj("sound") == "true") {
     btnsfx4.play();
   }
 }
