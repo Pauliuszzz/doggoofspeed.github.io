@@ -39,7 +39,8 @@ function refresh() {
   potionused = [0, 0, 0];
   survivalStats = localStorage.getObj("SurvivalStats");
   survivalHistory = localStorage.getObj("SurvivalHistory");
-  $('#potionheal, #potioninfo').removeClass('disabledimg');
+  $('#potioninfo').removeClass('disabledimg');
+  $('#potionheal, #potionshield').addClass('disabledimg');
   $(".flexmain, #hp-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
   $("#hp-text").html("-" + hp + "HP");
@@ -153,19 +154,22 @@ function heal() {
 }
 
 function info() {
+  potionused[1] = 1;
   $("#ButtonOne").html(scenarios[count].answer1 + " [-" + scenarios[count].damage1 + "HP]")
   $("#ButtonTwo").html(scenarios[count].answer2 + " [-" + scenarios[count].damage2 + "HP]")
   $("#ButtonThree").html(scenarios[count].answer3 + " [-" + scenarios[count].damage3 + "HP]")
   $('#potioninfo').addClass('disabledimg');
 }
 
+function shield() {
+  potionused[2] = 1;
+  $('#potionshield').addClass('disabledimg');
+}
+
 //Next scenario
 function nextScenario() {
   $("nav").removeClass("glow");
   $('#potionrewind').removeClass('disabledimg')
-  if (hp <= 75 && potionused[0] == 0) {
-    $('#potionheal').removeClass('disabledimg');
-  }
   if (hp <= 0) {
     if (localStorage.getObj("sound") == "true") {
       deadCard.play();
@@ -196,6 +200,12 @@ function nextScenario() {
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
   count++;
+  if (hp <= 75 && potionused[0] == 0) {
+    $('#potionheal').removeClass('disabledimg');
+  }
+  if (count > 0 && potionused[2] == 0) {
+    $('#potionshield').removeClass('disabledimg');
+  }
   text();
   if (localStorage.getObj("sound") == "true") {
     btnsfx4.play();
