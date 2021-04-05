@@ -7,7 +7,8 @@ var endCard;
 var theme;
 var bgvar;
 var potionused = [0, 0, 0];
-var ladyvar = Math.floor(Math.random() * Math.floor(4))
+var ladyvar = Math.floor(Math.random() * Math.floor(4));
+var halfdmg;
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
 var survivalStats = localStorage.getObj("SurvivalStats");
 var survivalHistory = localStorage.getObj("SurvivalHistory");
@@ -39,8 +40,8 @@ function refresh() {
   potionused = [0, 0, 0];
   survivalStats = localStorage.getObj("SurvivalStats");
   survivalHistory = localStorage.getObj("SurvivalHistory");
-  $('#potioninfo').removeClass('disabledimg');
-  $('#potionheal, #potionshield').addClass('disabledimg');
+  $('#potioninfo, #potionshield').removeClass('disabledimg');
+  $('#potionheal').addClass('disabledimg');
   $(".flexmain, #hp-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
   $("#hp-text").html("-" + hp + "HP");
@@ -103,8 +104,12 @@ function reply1() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
-  hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
-  if ($(".hpmessage").hasClass("hidden") == true) {
+  if (halfdmg == true) {
+    halfdmg = false;
+    hp - (scenarios[count].damage1 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage1 / 2);
+    $(".hptext").html("-" + scenarios[count].damage1 / 2 + "HP");
+  } else {
+    hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
     $(".hptext").html("-" + scenarios[count].damage1 + "HP");
   }
   if (localStorage.getObj("sound") == "true") {
@@ -118,8 +123,12 @@ function reply2() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonThree").addClass("disabled");
-  hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
-  if ($(".hpmessage").hasClass("hidden") == true) {
+  if (halfdmg == true) {
+    halfdmg = false;
+    hp - (scenarios[count].damage2 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage2 / 2);
+    $(".hptext").html("-" + scenarios[count].damage2 / 2 + "HP");
+  } else {
+    hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
     $(".hptext").html("-" + scenarios[count].damage2 + "HP");
   }
   if (localStorage.getObj("sound") == "true") {
@@ -133,8 +142,12 @@ function reply3() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
-  hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
-  if ($(".hpmessage").hasClass("hidden") == true) {
+  if (halfdmg == true) {
+    halfdmg = false;
+    hp - (scenarios[count].damage3 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage3 / 2);
+    $(".hptext").html("-" + scenarios[count].damage3 / 2 + "HP");
+  } else {
+    hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
     $(".hptext").html("-" + scenarios[count].damage3 + "HP");
   }
   if (localStorage.getObj("sound") == "true") {
@@ -163,13 +176,13 @@ function info() {
 
 function shield() {
   potionused[2] = 1;
+  halfdmg = true;
   $('#potionshield').addClass('disabledimg');
 }
 
 //Next scenario
 function nextScenario() {
   $("nav").removeClass("glow");
-  $('#potionrewind').removeClass('disabledimg')
   if (hp <= 0) {
     if (localStorage.getObj("sound") == "true") {
       deadCard.play();
@@ -195,16 +208,13 @@ function nextScenario() {
     $("#EndCard, #LevelCard").removeClass("hidden");
   }
   $(".hpmessage").removeClass("hidden");
-  setTimeout(function () {$(".hpmessage").addClass("hidden");}, 1000);
+  $("#ButtonOne, #ButtonTwo, #ButtonThree").addClass("disabled")
+  setTimeout(function () {$(".hpmessage").addClass("hidden"); $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled")}, 1000);
   $(".replydiv").hide();
-  $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
   count++;
   if (hp <= 75 && potionused[0] == 0) {
     $('#potionheal').removeClass('disabledimg');
-  }
-  if (count > 0 && potionused[2] == 0) {
-    $('#potionshield').removeClass('disabledimg');
   }
   text();
   if (localStorage.getObj("sound") == "true") {
