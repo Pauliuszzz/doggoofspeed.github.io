@@ -12,7 +12,7 @@ var ladyvar = Math.floor(Math.random() * Math.floor(4))
 var arcadeStats = localStorage.getObj("ArcadeStats");
 var arcadeHistory = localStorage.getObj("ArcadeHistory");
 
-if (localStorage.getObj("sound") == "false") {
+if (localStorage.getObj("sound") == false) {
   $(".togglediv").addClass("hidden");
 } else {
   btnsfx = new Audio("../resources/abtnsfx.ogg");
@@ -131,7 +131,7 @@ function reply3() {
 function reply() {
   $(".replydiv").show();
   $("#ButtonFour").removeClass("disabled");
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx.play();
   }
   $("nav").addClass("glow");
@@ -142,7 +142,7 @@ function nextScenario() {
   document.activeElement.blur()
   $("nav").removeClass("glow");
   if (count >= maxLength) {
-    if (localStorage.getObj("sound") == "true") {
+    if (localStorage.getObj("sound") == true) {
       endCard.play();
     }
     arcadeStats[0]++;
@@ -167,7 +167,7 @@ function nextScenario() {
   $("#ButtonFour").addClass("disabled");
   count++;
   text();
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx.play();
   }
 }

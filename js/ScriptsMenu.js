@@ -50,7 +50,7 @@ function StorySwitch() {
   $("body").removeClass("arcade survival");
   $("body").css("background-color", "#5E7668");
   $(".modes").css("margin-bottom", "4em");
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx1.play();
   }
 }
@@ -61,7 +61,7 @@ function ArcadeSwitch() {
   $("body").removeClass("story survival");
   $("body").css("background-color", "#8E3E6C");
   $(".modes").css("margin-bottom", "4em");
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx2.play();
   }
 }
@@ -71,7 +71,7 @@ function SurvivalSwitch() {
   $("#survival, nav").removeClass("hidden");
   $("body").css("background-color", "#8E3939");
   $(".modes").css("margin-bottom", "4em");
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
 }
@@ -82,7 +82,7 @@ function SettingSwitch() {
   if (localStorage.getObj("sound") != null) {
     $("nav").removeClass("hidden");
   }
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
 }
@@ -90,7 +90,7 @@ function SettingSwitch() {
 function StatSwitch() {
   $("#setting").addClass("hidden");
   $("#stats").removeClass("hidden");
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
 }
@@ -104,7 +104,7 @@ function levelInfo(x) {
   }
   $("#arcade, #survival").addClass("hidden");
   $("#levelInfo").removeClass("hidden");
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
 }

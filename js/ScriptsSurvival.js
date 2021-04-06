@@ -15,7 +15,7 @@ var replied = false;
 var survivalStats = localStorage.getObj("SurvivalStats");
 var survivalHistory = localStorage.getObj("SurvivalHistory");
 
-if (localStorage.getObj("sound") == "false") {
+if (localStorage.getObj("sound") == false) {
   $(".togglediv").addClass("hidden");
 } else {
   btnsfx1 = new Audio("../resources/btnsfx1.ogg");
@@ -65,10 +65,10 @@ $("#toggle").on("click", function (e) {
         this.play();
       }
     });
-    $("#toggle").html("<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>");
+    $("#toggle").html("<img src='../resources/pause.svg' style='transform: scale(.95);' alt='Pause'>");
   } else {
     theme.pause();
-    $("#toggle").html("<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>");
+    $("#toggle").html("<img src='../resources/play.svg' style='transform: scale(.95);' alt='Play'>");
   }
 });
 
@@ -118,7 +118,7 @@ function reply1() {
     survivalStats[3] = Math.max(survivalStats[3], noDmg);
     noDmg = 0;
   }
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx1.play();
   }
   reply();
@@ -141,7 +141,7 @@ function reply2() {
     survivalStats[3] = Math.max(survivalStats[3], noDmg);
     noDmg = 0;
   }
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx2.play();
   }
   reply();
@@ -164,7 +164,7 @@ function reply3() {
     survivalStats[3] = Math.max(survivalStats[3], noDmg);
     noDmg = 0;
   }
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
   reply();
@@ -209,13 +209,13 @@ function nextScenario() {
   $("nav").removeClass("glow");
   if (hp <= 0 || !scenarios[count+1]) {
     if (hp <= 0) {
-      if (localStorage.getObj("sound") == "true") {
+      if (localStorage.getObj("sound") == true) {
         deadCard.play();
       }
       $("#overText").html("You have died!");
     }
     if (!scenarios[count + 1]) {
-      if (localStorage.getObj("sound") == "true") {
+      if (localStorage.getObj("sound") == true) {
         endCard.play();
       }
       $("#overText").html("You have survived!");
@@ -247,7 +247,7 @@ function nextScenario() {
   if (potionused[2] == 0) {
     $('#potionshield').removeClass('disabledimg');
   }
-  if (localStorage.getObj("sound") == "true") {
+  if (localStorage.getObj("sound") == true) {
     btnsfx4.play();
   }
   replied = false;
@@ -325,12 +325,13 @@ function loadInfo() {
   }
   switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
     case 0:
-      theme = new Audio("../resources/Arcade1.ogg");
+      theme = new Audio("../resources/Survival1.ogg");
       break;
     case 1:
-      theme = new Audio("../resources/Arcade2.ogg");
+      theme = new Audio("../resources/Survival2.ogg");
       break;
     case 2:
+      theme = new Audio("../resources/Survival3.ogg");
       break;
   }
   switch (itemNumber) {
