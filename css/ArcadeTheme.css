@@ -36,7 +36,7 @@ h1 {
   font-weight: bold;
   font-size: 2.5em;
   line-height: 1.2;
-  letter-spacing: -0.1rem;
+  letter-spacing: -.1rem;
   color: white;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
@@ -45,7 +45,7 @@ h1 {
 nav {
   background: rgb(214, 211, 206);
   border: 1px outset #fff;
-  padding: 0.2em;
+  padding: .2em;
   transform: translateY(3em);
 	bottom: 0;
 	width: 100vw;
@@ -54,7 +54,7 @@ nav {
 	flex-direction: row;
 	justify-content: center;
   position: fixed;
-  animation: slidein 0.35s forwards;
+  animation: slidein .35s forwards;
 }
 
 h3 {
@@ -65,7 +65,7 @@ h3 {
   text-overflow: ellipsis;
   text-align: left;
   font-size: 1.5em;
-  margin: 0.5em;
+  margin: .5em;
   font-weight: normal;
 }
 
@@ -84,7 +84,7 @@ h3 {
   border: 2px solid;
   border-color: transparent #424242 #424242 transparent;
   background: silver;
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
@@ -97,7 +97,7 @@ h3 {
 
 .navigation {
   margin: auto 10%;
-  font-size: 0.8em;
+  font-size: .8em;
   height: 2.2em;
   line-height: 2.8em;
   -webkit-tap-highlight-color: transparent;
@@ -112,11 +112,11 @@ img {
 }
 
 a > img {
-  transition: 0.35s;
+  transition: .35s;
 }
 
 a:hover > img {
-  transform: scale(0.95);
+  transform: scale(.95);
 }
 
 .button {
@@ -124,12 +124,12 @@ a:hover > img {
   border-color: transparent #424242 #424242 transparent;
   background: silver;
   width: 50%;
-  font-size: 0.8em;
+  font-size: .8em;
   min-height: 1.5em;
-  padding: 0.25em 1em;
+  padding: .25em 1em;
   line-height: normal;
   margin: 10px 5px 5px 5px;
-  transition: 0.35s;
+  transition: .35s;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -139,11 +139,11 @@ a:hover > img {
   background: silver;
   color: #424242;
   box-shadow: -1px -1px #000;
-  transform: scale(0.95);
+  transform: scale(.95);
 }
 
 .button:active {
-  transform: scale(0.8);
+  transform: scale(.8);
 }
 
 *, *:focus, *:hover {
@@ -156,7 +156,7 @@ a:hover > img {
   border-style: outset;
   color: grey;
   text-shadow: 1px 1px white;
-  opacity: 0.4;
+  opacity: .4;
   pointer-events: none;
 }
 
@@ -175,7 +175,7 @@ a:hover > img {
   text-overflow: ellipsis;
   padding-left: 5px;
   text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  border-bottom: 1px solid rgba(0, 0, 0, .125);
 }
 
 .card-body {
@@ -188,7 +188,7 @@ a:hover > img {
   justify-content: center;
   width: 100%;
   margin-bottom: 4em;
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
@@ -200,10 +200,10 @@ a:hover > img {
 }
 
 .flexmain > div:nth-child(2) {
-  animation-delay: 0.3s;
+  animation-delay: .3s;
 }
 .flexmain > div:nth-child(3) {
-  animation-delay: 0.6s;
+  animation-delay: .6s;
 }
 
 .xpmessage {
@@ -220,7 +220,7 @@ a:hover > img {
   width: 50%;
   margin: 0 auto 10px auto;
   padding: 0;
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
@@ -251,7 +251,7 @@ a:hover > img {
 }
 
 .glow {
-  animation: glow 2s infinite, slidein 0.35;
+  animation: glow 2s infinite, slidein .35;
 }
 
 /* ANIMATIONS */
@@ -265,7 +265,7 @@ a:hover > img {
 @keyframes glow {
   from {
     transform: translateY(0);
-    box-shadow: 0 0 15px 0px rgba(214, 211, 206, 0.3);
+    box-shadow: 0 0 15px 0px rgba(214, 211, 206, .3);
   }
   to {
     transform: translateY(0);
@@ -275,17 +275,17 @@ a:hover > img {
 
 @keyframes fadein {
   from {
-    transform: scale(0.8);
+    transform: scale(.8);
     opacity: 0;
   }
 }
 
 @keyframes hover {
   20%, 80% {
-    transform: translate3d(0, -0.3em, 0);
+    transform: translate3d(0, -.15em, 0);
   }
   50% {
-    transform: translate3d(0, 0.3em, 0);
+    transform: translate3d(0, .15em, 0);
   }
 }
 
@@ -344,6 +344,15 @@ a:hover > img {
 
   .flexmain > div > .button {
     width: 100%;
+  }
+
+  @keyframes hover {
+    20%, 80% {
+      transform: translate3d(0, -.3em, 0);
+    }
+    50% {
+      transform: translate3d(0, .3em, 0);
+    }
   }
 }
 

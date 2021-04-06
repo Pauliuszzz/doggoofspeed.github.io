@@ -12,11 +12,11 @@ $(window).on("load", function () {
       btnsfx1 = new Audio("resources/btnsfx1.ogg");
       btnsfx2 = new Audio("resources/btnsfx2.ogg");
       btnsfx3 = new Audio("resources/btnsfx3.ogg");
-      $(".btnsoundy").css({ background: "rgba(100,255,100,0.5)" });
+      $(".btnsoundy").css({ background: "rgba(100,255,100,.5)" });
       setTimeout(function () {$("#home").removeClass("hidden");}, 400);
       break;
     case false:
-      $(".btnsoundn").css({ background: "rgba(255,100,100,0.5)" });
+      $(".btnsoundn").css({ background: "rgba(255,100,100,.5)" });
       setTimeout(function () {$("#home").removeClass("hidden");}, 400);
       break;
     case null:

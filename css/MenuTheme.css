@@ -40,7 +40,7 @@ a {
 	-webkit-tap-highlight-color: transparent;
 	-webkit-user-select: none;
 	user-select: none;
-	transition: 0.35s;
+	transition: .35s;
 }
 
 nav {
@@ -130,7 +130,7 @@ nav {
 	height: 24px;
 }
 .switchstory, .switcharcade, .switchsurvival {
-	transition: 0.35s;
+	transition: .35s;
 }
 
 .switchstory:hover, .switcharcade:hover, .switchsurvival:hover, .button:hover, .playbig:hover > svg {
@@ -150,7 +150,7 @@ nav {
 	border-radius: 10px;
 	background: transparent;
 	display: inline-block;
-	transition: 0.35s;
+	transition: .35s;
 }
 
 .disabled {
@@ -185,11 +185,11 @@ nav {
 	right: 0;
 	top: 0;
 	margin: 5px;
-	transition: 0.35s;
+	transition: .35s;
 }
 
 .settingsbtn:active {
-	transform: rotate(360deg) scale(0.90);
+	transform: rotate(360deg) scale(.90);
 }
 
 .settingpanel {
@@ -213,10 +213,10 @@ nav {
 
 @keyframes glow {
 	from {
-	  box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+	  box-shadow: 0 0 15px 0px rgba(0, 0, 0, .4), 0 0 15px 15px inset rgba(0, 0, 0, .1);
 	}
 	to {
-	  box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+	  box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, .1);
 	}
 }
 
@@ -241,12 +241,10 @@ nav {
 
 @keyframes hover {
 	20%, 80% {
-		-webkit-transform: translate3d(0, -0.5em, 0);
-		transform: translate3d(0, -0.5em, 0);
+		transform: translate3d(0, -.15em, 0);
 	}
 	50% {
-		-webkit-transform: translate3d(0, -0.5em, 0);
-		transform: translate3d(0, 0.5em, 0);
+		transform: translate3d(0, .15em, 0);
 	}
 }
 
@@ -334,6 +332,15 @@ nav {
 	@keyframes slidein {
 		to {
 			transform: translateX(0em);
+		}
+	}
+
+	@keyframes hover {
+		20%, 80% {
+			transform: translate3d(0, -.3em, 0);
+		}
+		50% {
+			transform: translate3d(0, .3em, 0);
 		}
 	}
 }
