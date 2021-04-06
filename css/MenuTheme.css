@@ -327,6 +327,10 @@ nav {
 		margin-top: -5px;
 	}
 
+	#stats > div > div {
+		width: 33%;
+	}
+
 	@keyframes slidein {
 		to {
 			transform: translateX(0em);

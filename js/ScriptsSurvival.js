@@ -112,7 +112,12 @@ function reply1() {
     hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
     $(".hptext").html("-" + scenarios[count].damage1 + "HP");
   }
-  scenarios[count].damage1 == 0 ? noDmg++ : noDmg = 0;
+  if (scenarios[count].damage1 == 0) {
+    noDmg++
+  } else {
+    survivalStats[3] = Math.max(survivalStats[3], noDmg);
+    noDmg = 0;
+  }
   if (localStorage.getObj("sound") == "true") {
     btnsfx1.play();
   }
@@ -130,7 +135,12 @@ function reply2() {
     hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
     $(".hptext").html("-" + scenarios[count].damage2 + "HP");
   }
-  scenarios[count].damage2 == 0 ? noDmg++ : noDmg = 0;
+  if (scenarios[count].damage2 == 0) {
+    noDmg++
+  } else {
+    survivalStats[3] = Math.max(survivalStats[3], noDmg);
+    noDmg = 0;
+  }
   if (localStorage.getObj("sound") == "true") {
     btnsfx2.play();
   }
@@ -148,7 +158,12 @@ function reply3() {
     hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
     $(".hptext").html("-" + scenarios[count].damage3 + "HP");
   }
-  scenarios[count].damage3 == 0 ? noDmg++ : noDmg = 0;
+  if (scenarios[count].damage3 == 0) {
+    noDmg++
+  } else {
+    survivalStats[3] = Math.max(survivalStats[3], noDmg);
+    noDmg = 0;
+  }
   if (localStorage.getObj("sound") == "true") {
     btnsfx3.play();
   }
@@ -164,6 +179,7 @@ function reply() {
 }
 
 function heal() {
+  survivalStats[5] = Math.max(survivalStats[5], (100 - hp))
   $(".hptext").html("+" + (100-hp) + "hp");
   potionused[0] = 1;
   hp = 100;
@@ -207,7 +223,6 @@ function nextScenario() {
     survivalStats[0]++;
     survivalStats[1] = Math.max(survivalStats[1], count);
     survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
-    survivalStats[3] = Math.max(survivalStats[3], noDmg);
     $(".potion").addClass("disabledimg");
     $(".flexmain").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
@@ -245,56 +260,87 @@ function loadInfo() {
       scenarios = scenarios1.concat(scenarios2, scenarios3, scenarios4);
       musicNumber = 3;
       bgNumber = 3;
+      itemNumber = 3;
       break;
     case 9:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 3;
       bgNumber = 3;
+      itemNumber = 3;
       break;
     case 8:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 3;
       bgNumber = 3;
+      itemNumber = 2;
       break;
     case 7:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 2;
       bgNumber = 3;
+      itemNumber = 2;
       break;
     case 6:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
       musicNumber = 2;
       bgNumber = 2;
+      itemNumber = 2;
       break;
     case 5:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 2;
       bgNumber = 2;
+      itemNumber = 2;
       break;
     case 4:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 2;
       bgNumber = 2;
+      itemNumber = 1;
       break;
     case 3:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 1;
       bgNumber = 2;
+      itemNumber = 1;
       break;
     case 2:
       scenarios = scenarios1.concat(scenarios2);
       musicNumber = 1;
       bgNumber = 1;
+      itemNumber = 1;
       break;
     case 1:
       scenarios = scenarios1;
       musicNumber = 1;
       bgNumber = 1;
+      itemNumber = 1;
       break;
     case 0:
       scenarios = scenarios1;
       musicNumber = 1;
       bgNumber = 1;
+      itemNumber = 0;
+      break;
+  }
+  switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
+    case 0:
+      theme = new Audio("../resources/Arcade1.ogg");
+      break;
+    case 1:
+      theme = new Audio("../resources/Arcade2.ogg");
+      break;
+    case 2:
+      break;
+  }
+  switch (itemNumber) {
+    case 3:
+      $('#potionshield').removeClass('hidden');
+    case 2:
+      $('#potioninfo').removeClass('hidden');
+    case 1:
+      $('#potionheal').removeClass('hidden');
+      $('.noitems').addClass('hidden');
       break;
   }
 }
@@ -311,15 +357,4 @@ function bgswitch() {
       $("body").css("background", "rgb(" + hp/3.3 + "," + hp/3.3 + "," + hp/1.7 + ")");
       break;
   }
-}
-
-switch (Math.floor(Math.random() * Math.floor(musicNumber))) {
-  case 0:
-    theme = new Audio("../resources/Arcade1.ogg");
-    break;
-  case 1:
-    theme = new Audio("../resources/Arcade2.ogg");
-    break;
-  case 2:
-    break;
 }

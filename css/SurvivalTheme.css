@@ -43,21 +43,21 @@ h1 {
   font-weight: bold;
   font-size: 2.5em;
   line-height: 1.2;
-  letter-spacing: -0.1rem;
+  letter-spacing: -.1rem;
   text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 h3 {
   font-size: 1.5em;
-  margin: 0.5em 0.5em 0.2em 0.5em;
+  margin: .5em .5em .2em .5em;
   font-weight: normal;
 }
 
 nav {
   border-radius: 15px 15px 0px 0px !important;
   border-style: solid none none none !important;
-  padding: 0.2em;
+  padding: .2em;
   transform: translateY(3em);
 	bottom: 0;
 	width: 100vw;
@@ -66,7 +66,7 @@ nav {
 	flex-direction: row;
 	justify-content: center;
 	position: fixed;
-  animation: slidein 0.35s forwards;
+  animation: slidein .35s forwards;
 }
 
 hr {
@@ -75,24 +75,24 @@ hr {
 
 .button {
   width: 50%;
-  font-size: 0.8em;
+  font-size: .8em;
   font-weight: 400;
   height: auto;
-  padding: 0.5em;
+  padding: .5em;
   margin: 5px auto;
   color: white !important;
   border-radius: 10px;
   background: transparent;
-  transition: 0.35s;
+  transition: .35s;
   -webkit-tap-highlight-color: transparent;
 }
 
 button:hover {
-  transform: scale(0.95);
+  transform: scale(.95);
 }
 
 button:active {
-  transform: scale(0.8);
+  transform: scale(.8);
 }
 
 *, *:focus, *:hover {
@@ -105,7 +105,7 @@ button:active {
   justify-content: center;
   width: 100%;
   margin-bottom: 4em;
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
@@ -116,8 +116,8 @@ button:active {
   will-change: transform;
 }
 
-.flexmain > div:nth-child(2) {animation-delay: 0.3s;}
-.flexmain > div:nth-child(3) {animation-delay: 0.6s;}
+.flexmain > div:nth-child(2) {animation-delay: .3s;}
+.flexmain > div:nth-child(3) {animation-delay: .6s;}
 
 .itemflex {
   display: flex;
@@ -126,7 +126,7 @@ button:active {
   width: 9em;
   height: 3em;
   margin: auto;
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
@@ -159,28 +159,28 @@ button:active {
 }
 
 .reply {
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
 .acrylic {
   border-radius: 15px;
   border: thin solid #ddd;
-  background: rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, .3);
+  box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
 }
 
 #EndCard {
   width: 50%;
   margin: 10px auto;
   padding: 10px;
-  animation: fadein 0.35s;
+  animation: fadein .35s;
   will-change: opacity, transform;
 }
 
 .navigation {
   margin: auto 10%;
-  font-size: 0.8em;
+  font-size: .8em;
   height: 2.2em;
   -webkit-tap-highlight-color: transparent;
 }
@@ -232,7 +232,7 @@ input {
 
 .disabled {
   pointer-events: none;
-  opacity: 0.65;
+  opacity: .65;
 }
 
 .togglediv {
@@ -250,7 +250,7 @@ input {
 }
 
 .glow {
-  animation: glow 2s infinite, slidein 0.35;
+  animation: glow 2s infinite, slidein .35;
 }
 
 .potion {
@@ -258,6 +258,12 @@ input {
   image-rendering: crisp-edges;
   width: 2.75em;
   transform: scale(1) !important;
+}
+
+.noitems {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-70%);
 }
 
 /* ANIMATIONS */
@@ -271,26 +277,26 @@ input {
 @keyframes glow {
   from {
     transform: translateY(0);
-    box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.4), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 0px rgba(0, 0, 0, .4), 0 0 15px 15px inset rgba(0, 0, 0, .1);
   }
   to {
     transform: translateY(0);
-    box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px 40px rgba(255, 255, 255, 0), 0 0 15px 15px inset rgba(0, 0, 0, .1);
   }
 }
 
 @keyframes hover {
   20%, 80% {
-    transform: translate3d(0, -0.3em, 0);
+    transform: translate3d(0, -.15em, 0);
   }
   50% {
-    transform: translate3d(0, 0.3em, 0);
+    transform: translate3d(0, .15em, 0);
   }
 }
 
 @keyframes fadein {
   from {
-    transform: scale(0.8);
+    transform: scale(.8);
     opacity: 0;
   }
 }
@@ -359,6 +365,15 @@ input {
 
   .hintbtn, .homebtn {
     margin: 18px;
+  }
+
+  @keyframes hover {
+    20%, 80% {
+      transform: translate3d(0, -.3em, 0);
+    }
+    50% {
+      transform: translate3d(0, .3em, 0);
+    }
   }
 }
 
