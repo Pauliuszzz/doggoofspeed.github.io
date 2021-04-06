@@ -97,46 +97,40 @@ function text() {
 //Replies
 function reply1() {
   $("#reply-text").html(scenarios[count].reply1);
-  $(".replydiv").show();
-  $("#ButtonFour").removeClass("disabled");
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
   score = score + scenarios[count].score1;
   $(".xptext").html("+" + scenarios[count].score1 + "Xp");
   if (scenarios[count].score1 == 1000) {
     kXP++;
   }
-  if (localStorage.getObj("sound") == "true") {
-    btnsfx.play();
-  }
-  $("nav").addClass("glow");
+  reply();
 }
 
 function reply2() {
   $("#reply-text").html(scenarios[count].reply2);
-  $(".replydiv").show();
-  $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonThree").addClass("disabled");
   score = score + scenarios[count].score2;
   $(".xptext").html("+" + scenarios[count].score2 + "Xp");
   if (scenarios[count].score2 == 1000) {
     kXP++;
   }
-  if (localStorage.getObj("sound") == "true") {
-    btnsfx.play();
-  }
-  $("nav").addClass("glow");
+  reply();
 }
 
 function reply3() {
   $("#reply-text").html(scenarios[count].reply3);
-  $(".replydiv").show();
-  $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
   score = score + scenarios[count].score3;
   $(".xptext").html("+" + scenarios[count].score3 + "Xp");
   if (scenarios[count].score3 == 1000) {
     kXP++;
   }
+  reply();
+}
+
+function reply() {
+  $(".replydiv").show();
+  $("#ButtonFour").removeClass("disabled");
   if (localStorage.getObj("sound") == "true") {
     btnsfx.play();
   }
@@ -145,6 +139,7 @@ function reply3() {
 
 //Next scenario
 function nextScenario() {
+  document.activeElement.blur()
   $("nav").removeClass("glow");
   if (count >= maxLength) {
     if (localStorage.getObj("sound") == "true") {

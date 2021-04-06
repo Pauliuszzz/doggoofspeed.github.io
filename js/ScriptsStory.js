@@ -115,6 +115,7 @@ function reply3() {
 
 //Next scenario
 function nextScenario(mission) {
+  document.activeElement.blur()
   $("nav").removeClass("glow");
   $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled").show();
   if (quit == true) {

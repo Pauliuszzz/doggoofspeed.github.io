@@ -96,6 +96,7 @@ function LevelUpA() {
   localStorage.setObj("ArcadeStats", arcadeStats);
   arcadeLevel();
   $(".aLevelUp").addClass("disabled");
+  document.activeElement.blur()
 }
 
 //Survival Levels
@@ -110,61 +111,61 @@ function survivalLevel() {
       }
       break;
     case 1:
-      $("#survivalUpgrade").html("Survive at least 8 scenarios:<br><i>" + survivalStats[1] + "/8</i>");
-      if (survivalStats[1] >= 8) {
+      $("#survivalUpgrade").html("Survive at least 6 scenarios:<br><i>" + survivalStats[1] + "/6</i>");
+      if (survivalStats[1] >= 6) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 2:
-      $("#arcadeUpgrade").html("Scenarios survived on average:<br><i>" + Math.round(survivalStats[2]) + "/4000</i>");
-      if (Math.round(survivalStats[2]) >= 4000) {
+      $("#survivalUpgrade").html("Scenarios survived on average:<br><i>" + Math.round(survivalStats[2]) + "/4000</i>");
+      if (Math.round(survivalStats[2]) >= 4) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 3:
-      $("#arcadeUpgrade").html("Scenarios survived without taking damage in a row:<br><i>" + arcadeStats[3] + "/4</i>");
+      $("#survivalUpgrade").html("Scenarios survived without taking damage in a row:<br><i>" + arcadeStats[3] + "/4</i>");
       if (arcadeStats[3] >= 4) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 4:
-      $("#arcadeUpgrade").html("Get less than 1000XP in a match:<br><i>" + Math.min(...arcadeHistory) + "/1000</i>");
+      $("#survivalUpgrade").html("Get less than 1000XP in a match:<br><i>" + Math.min(...arcadeHistory) + "/1000</i>");
       if (Math.min(...arcadeHistory) <= 1000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 5:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/6500</i><br>Award: <i><br>More Scenarios</i>");
+      $("#survivalUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/6500</i><br>Award: <i><br>More Scenarios</i>");
       if (arcadeStats[1] >= 6500) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 6:
-      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeStats[2]) + "/5000</i><br>Award: <i><br>New Background</i>");
+      $("#survivalUpgrade").html("Average Score:<br><i>" + Math.round(arcadeStats[2]) + "/5000</i><br>Award: <i><br>New Background</i>");
       if (Math.round(arcadeStats[2]) >= 5000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 7:
-      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeStats[3] + "/7</i><br>Award: <i><br>New Music</i>");
+      $("#survivalUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeStats[3] + "/7</i><br>Award: <i><br>New Music</i>");
       if (arcadeStats[3] >= 7) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 8:
-      $("#arcadeUpgrade").html("Get less than 1000XP in a match:<br><i>" + Math.min(...arcadeHistory) + "/1000</i><br>Award: <i><br>Match length (9 > 10)</i>");
+      $("#survivalUpgrade").html("Get less than 1000XP in a match:<br><i>" + Math.min(...arcadeHistory) + "/1000</i><br>Award: <i><br>Match length (9 > 10)</i>");
       if (Math.min(...arcadeHistory) <= 1000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 9:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/7500</i><br>Award: <i><br>More Scenarios</i>");
+      $("#survivalUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/7500</i><br>Award: <i><br>More Scenarios</i>");
       if (arcadeStats[1] >= 7500) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 9:
-      $("#arcadeUpgrade").html("This is the end. There are no more missions.");
+      $("#survivalUpgrade").html("This is the end. There are no more missions.");
       break;
   }
 }
@@ -174,4 +175,5 @@ function LevelUpS() {
   localStorage.setObj("SurvivalStats", survivalStats);
   survivalLevel();
   $(".sLevelUp").addClass("disabled");
+  document.activeElement.blur()
 }

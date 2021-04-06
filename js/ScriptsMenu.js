@@ -151,8 +151,7 @@ if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 2) {
 }
 
 //Tells progress
-$("#ArcadeMode").html("Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
-//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
+$("#ArcadeMode").html("Matches played: " + arcadeStats[0] + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>1000XP gained in a game: " + arcadeStats[3]);
 $("#SurvivalMode").html("Matches played: " + survivalStats[0] + "<br>Most scenarios survived: " + survivalStats[1] + "<br>Average scenarios survived: " + Math.round(survivalStats[2]) + "<br>Scenarios survived without taking damage in a row: " + survivalStats[3]);
 
 //Clears progress

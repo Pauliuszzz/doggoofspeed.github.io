@@ -50,7 +50,7 @@ h1 {
 
 h3 {
   font-size: 1.5em;
-  margin: 0.5em;
+  margin: 0.5em 0.5em 0.2em 0.5em;
   font-weight: normal;
 }
 
@@ -185,11 +185,6 @@ button:active {
   -webkit-tap-highlight-color: transparent;
 }
 
-img {
-  image-rendering: pixelated;
-  image-rendering: crisp-edges;
-}
-
 .disabledimg {
   filter: grayscale(100%);
   pointer-events: none;
@@ -259,6 +254,8 @@ input {
 }
 
 .potion {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
   width: 2.75em;
   transform: scale(1) !important;
 }

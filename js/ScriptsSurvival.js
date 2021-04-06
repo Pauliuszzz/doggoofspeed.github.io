@@ -10,6 +10,7 @@ var potionused = [0, 0, 0];
 var ladyvar = Math.floor(Math.random() * Math.floor(4));
 var halfdmg;
 var noDmg = 0;
+var replied = false;
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
 var survivalStats = localStorage.getObj("SurvivalStats");
 var survivalHistory = localStorage.getObj("SurvivalHistory");
@@ -102,8 +103,6 @@ function text() {
 //Replies
 function reply1() {
   $("#reply-text").html(scenarios[count].reply1);
-  $(".replydiv").show();
-  $("#ButtonFour").removeClass("disabled");
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
   if (halfdmg == true) {
     halfdmg = false;
@@ -117,13 +116,11 @@ function reply1() {
   if (localStorage.getObj("sound") == "true") {
     btnsfx1.play();
   }
-  $("nav").addClass("glow");
+  reply();
 }
 
 function reply2() {
   $("#reply-text").html(scenarios[count].reply2);
-  $(".replydiv").show();
-  $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonThree").addClass("disabled");
   if (halfdmg == true) {
     halfdmg = false;
@@ -137,13 +134,11 @@ function reply2() {
   if (localStorage.getObj("sound") == "true") {
     btnsfx2.play();
   }
-  $("nav").addClass("glow");
+  reply();
 }
 
 function reply3() {
   $("#reply-text").html(scenarios[count].reply3);
-  $(".replydiv").show();
-  $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
   if (halfdmg == true) {
     halfdmg = false;
@@ -157,7 +152,15 @@ function reply3() {
   if (localStorage.getObj("sound") == "true") {
     btnsfx3.play();
   }
+  reply();
+}
+
+function reply() {
+  $('#potionshield').addClass('disabledimg');
+  $(".replydiv").show();
+  $("#ButtonFour").removeClass("disabled");
   $("nav").addClass("glow");
+  replied = true;
 }
 
 function heal() {
@@ -186,19 +189,29 @@ function shield() {
 
 //Next scenario
 function nextScenario() {
+  document.activeElement.blur()
   $("nav").removeClass("glow");
-  if (hp <= 0) {
-    if (localStorage.getObj("sound") == "true") {
-      deadCard.play();
+  if (hp <= 0 || !scenarios[count+1]) {
+    if (hp <= 0) {
+      if (localStorage.getObj("sound") == "true") {
+        deadCard.play();
+      }
+      $("#overText").html("You have died!");
+    }
+    if (!scenarios[count + 1]) {
+      if (localStorage.getObj("sound") == "true") {
+        endCard.play();
+      }
+      $("#overText").html("You have survived!");
     }
     survivalStats[0]++;
     survivalStats[1] = Math.max(survivalStats[1], count);
     survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
     survivalStats[3] = Math.max(survivalStats[3], noDmg);
     $(".potion").addClass("disabledimg");
-    $(".flexmain, #score-text").hide();
+    $(".flexmain").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    survivalHistory.push(hp);
+    survivalHistory.push(count);
     if (survivalHistory.length > 10) {
       survivalHistory.shift();
     }
@@ -206,27 +219,23 @@ function nextScenario() {
     localStorage.setObj("SurvivalStats", survivalStats);
     localStorage.setObj("SurvivalHistory", survivalHistory);
   }
-  if (!scenarios[(count + 1)].scenario) {
-    if (localStorage.getObj("sound") == "true") {
-      endCard.play();
-    }
-    $(".potion").addClass("disabledimg");
-    $(".flexmain, #score-text").hide();
-    $("#EndCard, #LevelCard").removeClass("hidden");
-  }
   $(".hpmessage").removeClass("hidden");
   $("#ButtonOne, #ButtonTwo, #ButtonThree").addClass("disabled");
   setTimeout(function () {$(".hpmessage").addClass("hidden"); $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled")}, 1000);
   $(".replydiv").hide();
   $("#ButtonFour").addClass("disabled");
   count++;
-  if (hp <= 75 && potionused[0] == 0) {
+  text();
+  if (potionused[0] == 0) {
     $('#potionheal').removeClass('disabledimg');
   }
-  text();
+  if (potionused[2] == 0) {
+    $('#potionshield').removeClass('disabledimg');
+  }
   if (localStorage.getObj("sound") == "true") {
     btnsfx4.play();
   }
+  replied = false;
 }
 
 function loadInfo() {

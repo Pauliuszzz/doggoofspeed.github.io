@@ -8,7 +8,7 @@ scenarios1 = [
     reply2: "You try to power it up, but the badly damaged engine blows up.",
     answer2: "Try to power it up",
     damage2: 50,
-    reply3: "It rained during the night, so I guess staying in the plane was worth it,",
+    reply3: "It rained during the night, so I guess staying in the plane was worth it.",
     answer3: "Use it as a bed",
     damage3: 0,
   },
