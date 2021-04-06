@@ -9,6 +9,7 @@ var bgvar;
 var potionused = [0, 0, 0];
 var ladyvar = Math.floor(Math.random() * Math.floor(4));
 var halfdmg;
+var noDmg = 0;
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
 var survivalStats = localStorage.getObj("SurvivalStats");
 var survivalHistory = localStorage.getObj("SurvivalHistory");
@@ -112,6 +113,7 @@ function reply1() {
     hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
     $(".hptext").html("-" + scenarios[count].damage1 + "HP");
   }
+  scenarios[count].damage1 == 0 ? noDmg++ : noDmg = 0;
   if (localStorage.getObj("sound") == "true") {
     btnsfx1.play();
   }
@@ -131,6 +133,7 @@ function reply2() {
     hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
     $(".hptext").html("-" + scenarios[count].damage2 + "HP");
   }
+  scenarios[count].damage2 == 0 ? noDmg++ : noDmg = 0;
   if (localStorage.getObj("sound") == "true") {
     btnsfx2.play();
   }
@@ -150,6 +153,7 @@ function reply3() {
     hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
     $(".hptext").html("-" + scenarios[count].damage3 + "HP");
   }
+  scenarios[count].damage3 == 0 ? noDmg++ : noDmg = 0;
   if (localStorage.getObj("sound") == "true") {
     btnsfx3.play();
   }
@@ -187,6 +191,10 @@ function nextScenario() {
     if (localStorage.getObj("sound") == "true") {
       deadCard.play();
     }
+    survivalStats[0]++;
+    survivalStats[1] = Math.max(survivalStats[1], count);
+    survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
+    survivalStats[3] = Math.max(survivalStats[3], noDmg);
     $(".potion").addClass("disabledimg");
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
@@ -194,7 +202,6 @@ function nextScenario() {
     if (survivalHistory.length > 10) {
       survivalHistory.shift();
     }
-    survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
     survivalLevel();
     localStorage.setObj("SurvivalStats", survivalStats);
     localStorage.setObj("SurvivalHistory", survivalHistory);
@@ -208,7 +215,7 @@ function nextScenario() {
     $("#EndCard, #LevelCard").removeClass("hidden");
   }
   $(".hpmessage").removeClass("hidden");
-  $("#ButtonOne, #ButtonTwo, #ButtonThree").addClass("disabled")
+  $("#ButtonOne, #ButtonTwo, #ButtonThree").addClass("disabled");
   setTimeout(function () {$(".hpmessage").addClass("hidden"); $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled")}, 1000);
   $(".replydiv").hide();
   $("#ButtonFour").addClass("disabled");

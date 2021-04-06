@@ -101,9 +101,7 @@ function reply1() {
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
   score = score + scenarios[count].score1;
-  if ($(".xpmessage").hasClass("hidden") == true) {
-    $(".xptext").html("+" + scenarios[count].score1 + "Xp");
-  }
+  $(".xptext").html("+" + scenarios[count].score1 + "Xp");
   if (scenarios[count].score1 == 1000) {
     kXP++;
   }
@@ -119,9 +117,7 @@ function reply2() {
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonThree").addClass("disabled");
   score = score + scenarios[count].score2;
-  if ($(".xpmessage").hasClass("hidden") == true) {
-    $(".xptext").html("+" + scenarios[count].score2 + "Xp");
-  }
+  $(".xptext").html("+" + scenarios[count].score2 + "Xp");
   if (scenarios[count].score2 == 1000) {
     kXP++;
   }
@@ -137,9 +133,7 @@ function reply3() {
   $("#ButtonFour").removeClass("disabled");
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
   score = score + scenarios[count].score3;
-  if ($(".xpmessage").hasClass("hidden") == true) {
-    $(".xptext").html("+" + scenarios[count].score3 + "Xp");
-  }
+  $(".xptext").html("+" + scenarios[count].score3 + "Xp");
   if (scenarios[count].score3 == 1000) {
     kXP++;
   }
@@ -156,30 +150,25 @@ function nextScenario() {
     if (localStorage.getObj("sound") == "true") {
       endCard.play();
     }
-    if (arcadeStats[1] < score) {
-      arcadeStats[1] = score;
-    }
-    if (kXP > arcadeStats[3]) {
-      arcadeStats[3] = kXP;
-    }
+    arcadeStats[0]++;
+    arcadeStats[1] = Math.max(arcadeStats[1], score);
+    arcadeStats[2] = arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
+    arcadeStats[3] = Math.max(arcadeStats[3], kXP);
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    arcadeStats[0]++;
     arcadeHistory.push(score);
     if (arcadeHistory.length > 10) {
       arcadeHistory.shift();
     }
-    arcadeStats[2] =
-      arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
     $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
     arcadeLevel();
     localStorage.setObj("ArcadeStats", arcadeStats);
     localStorage.setObj("ArcadeHistory", arcadeHistory);
   }
   $(".xpmessage").removeClass("hidden");
-  setTimeout(function () {$(".xpmessage").addClass("hidden");}, 1000);
+  $("#ButtonOne, #ButtonTwo, #ButtonThree").addClass("disabled");
+  setTimeout(function () {$(".xpmessage").addClass("hidden"); $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled")}, 1000);
   $(".replydiv").hide();
-  $("#ButtonOne, #ButtonTwo, #ButtonThree").removeClass("disabled");
   $("#ButtonFour").addClass("disabled");
   count++;
   text();

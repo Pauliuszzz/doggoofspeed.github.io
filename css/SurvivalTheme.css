@@ -69,6 +69,10 @@ nav {
   animation: slidein 0.35s forwards;
 }
 
+hr {
+  width: 95%;
+}
+
 .button {
   width: 50%;
   font-size: 0.8em;
@@ -166,10 +170,10 @@ button:active {
   box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, 0.1);
 }
 
-#EndCard, #LevelCard {
+#EndCard {
   width: 50%;
   margin: 10px auto;
-  padding: 0;
+  padding: 10px;
   animation: fadein 0.35s;
   will-change: opacity, transform;
 }
