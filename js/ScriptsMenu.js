@@ -1,6 +1,7 @@
 var btnsfx1;
 var btnsfx2;
 var btnsfx3;
+var eggs = 0;
 
 $(window).on("load", function () {
   $(".lds-ellipsis").css("animation", "fadeout .35s forwards");
@@ -164,4 +165,11 @@ $("#SurvivalMode").html("Matches played: " + survivalStats[0] + "<br>Most scenar
 function resetEverything() {
   localStorage.clear();
   location.reload();
+}
+
+function egg() {
+  eggs++
+  if (eggs == 3) {
+    window.location.href = "egg/index.html";
+  }
 }

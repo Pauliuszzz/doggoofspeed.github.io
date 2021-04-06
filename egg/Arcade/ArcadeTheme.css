@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'silkscreennormal';
+    src: url('slkscr-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    font-family: "Arial", sans-serif;
+	background-color: #003b46 !important;
+}
+
+header {
+	background: rgb(0,59,70);
+	background: linear-gradient(0deg, rgba(0,59,70,1) 0%, rgba(7,87,91,1) 100%);
+    text-align: center;
+}
+
+h1, .center {
+	font-family: silkscreennormal;
+	color: white;
+	font-size: 300%;
+    text-align: center;
+	font-weight: bold;
+}
+
+p {
+	text-align: center;
+	background: #C4DFE6;
+	background-size: 50%;
+	width: 50%;
+	margin: 10px auto;
+	border-radius: 10px;
+	border: 5px solid;
+	border-color: #66A5AD;
+	padding: 5px;
+	padding-bottom: 5px;
+}
+
+.reply {
+	width: 50%;
+}
+
+.score{
+	background: #A4E4A4;
+	border-color: #99CC99;
+	width: fit-content;
+	display: inline-block;
+}
+
+button {
+	width: 25%;
+	text-align: center;
+}

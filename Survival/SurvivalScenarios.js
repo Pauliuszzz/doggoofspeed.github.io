@@ -112,7 +112,7 @@ scenarios1 = [
     reply2: "You gave him some meat, sadly he eat not only the meat, but your arm too!",
     answer2: "Feed him",
     damage2: 50,
-    reply3: "Tigers understand the word \"Playing\" as biting and fighting, so this realy didn't end well for you.",
+    reply3: "Tigers understand the word \"Playing\" as biting and fighting, so this really didn't end well for you.",
     answer3: "Play with him",
     damage3: 100,
   },

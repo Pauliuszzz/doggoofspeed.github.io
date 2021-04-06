@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Adventure - World One</title>
+	<meta name="google" content="notranslate">
+	<link href="../css/Theme.css" rel="stylesheet" type="text/css">
+	<link href="ArcadeTheme.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="../js/zepto.min.js"></script>
+	<script language="javascript" type="text/javascript" src="../js/Onload.js"></script>
+	<script src="Scenarios.js"></script>
+</head>
+
+<header>
+	<br><h1>The Great Adventure</h1><br>
+</header>
+<body>
+	<a href="../index.html" class="btn btn-primary btn-lg active" style="position:fixed; top: 0; left: 0; margin: 5px; opacity: .5">Back to main menu</a>
+	<p class="scenario" id="scenario-text"></p>
+	<p class="reply" id="reply-text"></p>
+	<p class="score" id="score-text"></p>
+	<h3><button id="ButtonOne" type="button" class="btn btn-primary btn-sm" onClick="reply1()">Answer 1</button></h3>
+	<h3><button id="ButtonTwo" type="button" class="btn btn-primary btn-sm" onClick="reply2()">Answer 2</button></h3>
+	<h3><button id="ButtonThree" type="button" class="btn btn-primary btn-sm" onClick="reply3()">Answer 3</button></h3>
+	<h3><button id="ButtonFour" type="button" class="btn btn-danger btn-sm" onClick="next_scenario()">Continue</button></h3>
+	<h3><button id="ButtonFive" type="button" class="btn btn-success btn-sm" onClick="location.reload();">Retry</button></h3>
+	<script>
+    var sc = 0;
+	var score = 0;
+	
+	//Randomiser
+	var i = scenarios.length, k , temp;
+	while(--i > 0){
+    k = Math.floor(Math.random() * (i+1));
+    temp = scenarios[k];
+    scenarios[k] = scenarios[i];
+    scenarios[i] = temp;
+	}
+    text();
+	
+	//Text
+    function text() {
+        document.getElementById("scenario-text").innerHTML = scenarios[sc].scenario;
+		document.getElementById("score-text").innerHTML = "Score: " + score;
+		if(sc == 10){
+			document.getElementById("scenario-text").innerHTML = "You have reached the (current) end. To go to the main menu, press \"Continue\".";
+			document.getElementById("ButtonOne").style.display = "none";
+			document.getElementById("ButtonTwo").style.display = "none";
+			document.getElementById("ButtonThree").style.display = "none";
+			document.getElementById("ButtonFour").disabled = false;
+			document.getElementById("ButtonFive").style.display = "initial";
+		}
+    }
+	
+	//Replies
+	function reply1() {
+		document.getElementById("reply-text").innerHTML = scenarios[sc].reply1;
+		document.getElementById("reply-text").style.display = "block";
+		document.getElementById("ButtonFour").disabled = false;
+		document.getElementById("ButtonTwo").disabled = true;
+		document.getElementById("ButtonThree").disabled = true;
+		score = score + scenarios[sc].score1;
+	}
+	function reply2() {
+		document.getElementById("reply-text").innerHTML = scenarios[sc].reply2;
+		document.getElementById("reply-text").style.display = "block";
+		document.getElementById("ButtonFour").disabled = false;
+		document.getElementById("ButtonOne").disabled = true;
+		document.getElementById("ButtonThree").disabled = true;
+		score = score + scenarios[sc].score2;
+	}
+	function reply3() {
+		document.getElementById("reply-text").innerHTML = scenarios[sc].reply3;
+		document.getElementById("reply-text").style.display = "block";
+		document.getElementById("ButtonFour").disabled = false;
+		document.getElementById("ButtonOne").disabled = true;
+		document.getElementById("ButtonTwo").disabled = true;
+		score = score + scenarios[sc].score3;
+	}
+	
+	//Next scenario
+    function next_scenario(mult) {
+		if(sc == 10){
+			window.history.back();;
+		}
+        sc++;
+		document.getElementById("reply-text").style.display = "none";
+		document.getElementById("ButtonOne").disabled = false;
+		document.getElementById("ButtonTwo").disabled = false;
+		document.getElementById("ButtonThree").disabled = false;
+		document.getElementById("ButtonFour").disabled = true;
+        prev_answer = mult;
+        text();
+    }
+</script>
+</body>
+</html>
