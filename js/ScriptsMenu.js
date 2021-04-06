@@ -95,7 +95,13 @@ function StatSwitch() {
   }
 }
 
-function levelInfo() {
+function levelInfo(x) {
+  if (x == 'a') {
+    $(".levelinfop").html("Level 1: Match length (5 > 7)<br/>Level 2: 10 new scenarios<br/>Level 3: New Background<br/>Level 4: New Music<br/>Level 5: Match length (7 > 9)<br/>Level 6: 5 new scenarios<br/>Level 7: New Background<br/>Level 8: New Music<br/>Level 9: Match length (9 > 10)<br/>Level 10: 5 new scenarios");
+  }
+  if (x == 's') {
+    $(".levelinfop").html("Level 1: New Item: Healing potion – Heals you up to 100HP<br/>Level 2: 10 new scenarios<br/>Level 3: New Background<br/>Level 4: New Music<br/> Level 5: New Item: All seeing eye - Reveals how much damage each choice does<br/>Level 6: 5 new scenarios<br/>Level 7: New Background<br/>Level 8: New Music<br/> Level 9: New Item: Shield potion – Any damage taken the following turn will be decreased by 50%.<br/>Level 10: 5 new scenarios");
+  }
   $("#arcade, #survival").addClass("hidden");
   $("#levelInfo").removeClass("hidden");
   if (localStorage.getObj("sound") == "true") {

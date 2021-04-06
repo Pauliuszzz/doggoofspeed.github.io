@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <title>Project Passage - Story</title>
-    <link rel="icon" type="image/png" href="../resources/Project_Passage.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="../css/StoryTheme.css" media="screen" />
+    <link rel="icon" type="image/png" href="../resources/Project_Passage.png"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" href="../css/StoryTheme.css" media="screen"/>
     <style>
       body {
         background: linear-gradient(to bottom right, #71b280, #134e5e) fixed;
@@ -16,7 +16,7 @@
     <header>
       <div class="togglediv">
         <button id="toggle">
-          <img src="../resources/play.svg" alt="Play" />
+          <img src="../resources/play.svg" alt="Play"/>
         </button>
       </div>
       <div style="margin: 1em">
@@ -32,45 +32,20 @@
         <p class="reply acrylic" id="reply-text"></p>
       </div>
       <div class="buttondiv">
-        <button
-          id="ButtonOne"
-          class="button acrylic"
-          onClick="reply1()"
-        ></button>
-        <button
-          id="ButtonTwo"
-          class="button acrylic"
-          onClick="reply2()"
-        ></button>
-        <button
-          id="ButtonThree"
-          class="button acrylic"
-          onClick="reply3()"
-        ></button>
+        <button id="ButtonOne" class="button acrylic" onClick="reply1()"></button>
+        <button id="ButtonTwo" class="button acrylic" onClick="reply2()"></button>
+        <button id="ButtonThree" class="button acrylic" onClick="reply3()"></button>
       </div>
     </div>
     <div class="hidden acrylic" id="EndCard">
       <h3>Mission 2 Completed</h3>
       <p id="M2"></p>
-      <a href="../index.html" class="icon-only"
-        ><img src="../resources/home.svg" alt="Home"
-      /></a>
-      <a href="./M2.html" class="icon-only"
-        ><img src="../resources/refresh.svg" alt="Refresh"
-      /></a>
-      <a href="./M3.html" class="icon-only"
-        ><img src="../resources/forward.svg" alt="Forward"
-      /></a>
+      <a href="../index.html" class="icon-only"><img src="../resources/home.svg" alt="Home"/></a>
+      <a href="./M2.html" class="icon-only"><img src="../resources/refresh.svg" alt="Refresh"/></a>
+      <a href="./M3.html" class="icon-only"><img src="../resources/forward.svg" alt="Forward"/></a>
     </div>
     <nav class="acrylic">
-      <button
-        id="ButtonFour"
-        class="button acrylic"
-        style="margin: 0.5em"
-        onClick="nextScenario(2)"
-      >
-        Continue
-      </button>
+      <button id="ButtonFour" class="button acrylic" style="margin: 0.5em" onClick="nextScenario(2)">Continue</button>
     </nav>
     <script src="../js/universal.js"></script>
     <script src="../js/zepto.min.js" defer></script>
