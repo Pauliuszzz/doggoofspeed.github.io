@@ -8,7 +8,7 @@
 body {
     font-family: "Arial", sans-serif;
 	background-color: #22C386 !important;
-	text-align: center;
+	text-align: center !important;
 }
 
 header {
