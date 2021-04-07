@@ -170,6 +170,6 @@ function resetEverything() {
 function egg() {
   eggs++
   if (eggs == 3) {
-    window.location.href = "egg/index.html";
+    window.location.href = "egg/oldgame.html";
   }
 }
