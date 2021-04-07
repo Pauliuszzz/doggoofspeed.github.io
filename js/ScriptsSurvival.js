@@ -37,6 +37,8 @@ $(window).on("load", function () {
 });
 
 function refresh() {
+  survivalStats[3] = Math.max(survivalStats[3], noDmg);
+  noDmg = 0;
   count = 0;
   hp = 100;
   potionused = [0, 0, 0];
@@ -106,6 +108,7 @@ function reply1() {
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
   if (halfdmg == true) {
     halfdmg = false;
+    survivalStats[6] = Math.max(survivalStats[6], (scenarios[count].damage1 / 2))
     hp - (scenarios[count].damage1 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage1 / 2);
     $(".hptext").html("-" + scenarios[count].damage1 / 2 + "HP");
   } else {
@@ -129,6 +132,7 @@ function reply2() {
   $("#ButtonOne, #ButtonThree").addClass("disabled");
   if (halfdmg == true) {
     halfdmg = false;
+    survivalStats[6] = Math.max(survivalStats[6], (scenarios[count].damage2 / 2))
     hp - (scenarios[count].damage2 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage2 / 2);
     $(".hptext").html("-" + scenarios[count].damage2 / 2 + "HP");
   } else {
@@ -152,6 +156,7 @@ function reply3() {
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
   if (halfdmg == true) {
     halfdmg = false;
+    survivalStats[6] = Math.max(survivalStats[6], (scenarios[count].damage3 / 2))
     hp - (scenarios[count].damage3 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage3 / 2);
     $(".hptext").html("-" + scenarios[count].damage3 / 2 + "HP");
   } else {
@@ -270,9 +275,9 @@ function loadInfo() {
       break;
     case 8:
       scenarios = scenarios1.concat(scenarios2, scenarios3);
-      musicNumber = 3;
+      musicNumber = 2;
       bgNumber = 3;
-      itemNumber = 2;
+      itemNumber = 3;
       break;
     case 7:
       scenarios = scenarios1.concat(scenarios2, scenarios3);

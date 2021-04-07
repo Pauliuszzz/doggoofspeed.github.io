@@ -3,7 +3,7 @@ if (!localStorage.getObj("ArcadeStats")) {localStorage.setObj("ArcadeStats", [0,
 if (!localStorage.getObj("ArcadeHistory")) {localStorage.setObj("ArcadeHistory", []);}
 var ahistory = localStorage.getObj("ArcadeHistory");
 //todo: switch level to end
-//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level, Max HP healed
+//This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level, Max HP healed, Hp protected
 if (!localStorage.getObj("SurvivalStats")) {localStorage.setObj("SurvivalStats", [0, 0, 0, 0, 0, 0, 0])}
 if (!localStorage.getObj("SurvivalHistory")) {localStorage.setObj("SurvivalHistory", [])}
 var shistory = localStorage.getObj("SurvivalHistory");
