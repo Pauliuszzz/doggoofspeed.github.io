@@ -154,8 +154,8 @@ function survivalLevel() {
       }
       break;
     case 8:
-      $("#survivalUpgrade").html("Have a shield protect you from 50 damage<br><i>" + survivalStats[5] + "/50</i>");
-      if (survivalStats[6] >= 80) {
+      $("#survivalUpgrade").html("Have a shield protect you from 333 damage<br><i>" + survivalStats[6] + "/333</i>");
+      if (survivalStats[6] == 333) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;

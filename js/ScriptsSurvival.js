@@ -225,16 +225,16 @@ function nextScenario() {
       }
       $("#overText").html("You have survived!");
     }
+    survivalHistory.push(count);
+    if (survivalHistory.length > 10) {
+      survivalHistory.shift();
+    }
     survivalStats[0]++;
     survivalStats[1] = Math.max(survivalStats[1], count);
     survivalStats[2] = survivalHistory.reduce((a, b) => a + b, 0) / survivalHistory.length;
     $(".potion").addClass("disabledimg");
     $(".flexmain").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    survivalHistory.push(count);
-    if (survivalHistory.length > 10) {
-      survivalHistory.shift();
-    }
     survivalLevel();
     localStorage.setObj("SurvivalStats", survivalStats);
     localStorage.setObj("SurvivalHistory", survivalHistory);

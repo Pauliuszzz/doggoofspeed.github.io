@@ -145,16 +145,16 @@ function nextScenario() {
     if (localStorage.getObj("sound") == true) {
       endCard.play();
     }
+    arcadeHistory.push(score);
+    if (arcadeHistory.length > 10) {
+      arcadeHistory.shift();
+    }
     arcadeStats[0]++;
     arcadeStats[1] = Math.max(arcadeStats[1], score);
     arcadeStats[2] = arcadeHistory.reduce((a, b) => a + b, 0) / arcadeHistory.length;
     arcadeStats[3] = Math.max(arcadeStats[3], kXP);
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    arcadeHistory.push(score);
-    if (arcadeHistory.length > 10) {
-      arcadeHistory.shift();
-    }
     $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
     arcadeLevel();
     localStorage.setObj("ArcadeStats", arcadeStats);
