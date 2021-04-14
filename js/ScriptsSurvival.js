@@ -348,6 +348,9 @@ function loadInfo() {
       $('#potionheal').removeClass('hidden');
       $('.noitems').addClass('hidden');
       break;
+    default:
+      $('.noitems').removeClass('hidden');
+      break;
   }
 }
 

@@ -122,7 +122,7 @@ if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length > 0) {
     $(".finM2").css("fill", "gold");
   }
 } else if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length == 0) {
-  $("#M2").html("Finish previous missions to unlock");
+  $("#M2").html("Finish previous mission to unlock");
   $("#M2-play").addClass("disabled");
 }
 //Mission 3
@@ -132,7 +132,7 @@ if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length > 0) {
     $(".finM3").css("fill", "gold");
   }
 } else if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length == 0) {
-  $("#M3").html("Finish previous missions to unlock");
+  $("#M3").html("Finish previous mission to unlock");
   $("#M3-play").addClass("disabled");
 }
 //Mission 4
@@ -142,7 +142,7 @@ if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length > 0) {
     $(".finM4").css("fill", "gold");
   }
 } else if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length == 0) {
-  $("#M4").html("Finish previous missions to unlock");
+  $("#M4").html("Finish previous mission to unlock");
   $("#M4-play").addClass("disabled");
 }
 //Mission 5
@@ -155,6 +155,16 @@ if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 2) {
 } else if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length < 3) {
   $("#M5").html("Find all the conspirators to unlock");
   $("#M5-play").addClass("disabled");
+}
+//Mission 6
+if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
+  $("#M6").html("Endings achieved: " + localStorage.getObj("M6-Endings").filter((x) => x == 1).length + "/3");
+  if (localStorage.getObj("M6-Endings").filter((x) => x == 1).length == 3) {
+    $(".finM6").css("fill", "gold");
+  }
+} else if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length == 0) {
+  $("#M6").html("Finish previous mission to unlock");
+  $("#M6-play").addClass("disabled");
 }
 
 //Tells progress

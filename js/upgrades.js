@@ -13,6 +13,7 @@ if (!localStorage.getObj("M3-Endings")) {localStorage.setObj("M3-Endings", [0, 0
 if (!localStorage.getObj("M4-Endings")) {localStorage.setObj("M4-Endings", [0, 0, 0])}
 if (!localStorage.getObj("M5-Endings")) {localStorage.setObj("M5-Endings", [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])}
 if (!localStorage.getObj("M5-Failures")) {localStorage.setObj("M5-Failures", [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])}
+if (!localStorage.getObj("M6-Endings")) {localStorage.setObj("M6-Endings", [0, 0, 0])}
 
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
 var arcadeStats = localStorage.getObj("ArcadeStats");
@@ -160,12 +161,12 @@ function survivalLevel() {
       }
       break;
     case 9:
-      $("#survivalUpgrade").html("Survive 25 scenarios:<br><i>" + survivalStats[1] + "/25</i>");
-      if (survivalStats[1] >= 25) {
+      $("#survivalUpgrade").html("Survive 24 scenarios:<br><i>" + survivalStats[1] + "/24</i>");
+      if (survivalStats[1] >= 24) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
-    case 9:
+    case 10:
       $("#survivalUpgrade").html("This is the end. There are no more missions.");
       break;
   }
