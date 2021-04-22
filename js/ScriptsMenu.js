@@ -46,39 +46,36 @@ function sound(yn) {
 
 //Switcher machanism
 function StorySwitch() {
-  $("#home, #arcade, #survival, #setting, #stats, #levelInfo").addClass("hidden");
+  switchMode();
   $("#story, nav").removeClass("hidden");
   $("body").removeClass("arcade survival");
   $("body").css("background-color", "#5E7668");
-  $(".modes").css("margin-bottom", "4em");
   if (localStorage.getObj("sound") == true) {
     btnsfx1.play();
   }
 }
 
 function ArcadeSwitch() {
-  $("#home, #story, #survival, #setting, #stats, #levelInfo").addClass("hidden");
+  switchMode();
   $("#arcade, nav").removeClass("hidden");
   $("body").removeClass("story survival");
   $("body").css("background-color", "#8E3E6C");
-  $(".modes").css("margin-bottom", "4em");
   if (localStorage.getObj("sound") == true) {
     btnsfx2.play();
   }
 }
 
 function SurvivalSwitch() {
-  $("#home, #story, #arcade, #setting, #stats, #levelInfo").addClass("hidden");
+  switchMode();
   $("#survival, nav").removeClass("hidden");
   $("body").css("background-color", "#8E3939");
-  $(".modes").css("margin-bottom", "4em");
   if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
 }
 
 function SettingSwitch() {
-  $("#home, #story, #arcade, #survival, #stats, #levelInfo").addClass("hidden");
+  switchMode();
   $("#setting").removeClass("hidden");
   if (localStorage.getObj("sound") != null) {
     $("nav").removeClass("hidden");
@@ -86,6 +83,11 @@ function SettingSwitch() {
   if (localStorage.getObj("sound") == true) {
     btnsfx3.play();
   }
+}
+
+function switchMode() {
+  $("#home, #story, #arcade, #survival, #stats, #levelInfo, #setting").addClass("hidden");
+  $('#title').css({"transform": "translateY(0)", "font-size": "1.5em", "margin-top": "1em"})
 }
 
 function StatSwitch() {

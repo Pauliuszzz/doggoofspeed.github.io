@@ -1,8 +1,11 @@
 .lds-ellipsis {
-  display: inline-block;
-  position: relative;
-  width: 80px;
+  display: block;
+  position: absolute;
+  width: 35px;
   height: 80px;
+  bottom: 0;
+  right: 0;
+  transform: translate(-50vw, -15vh);
 }
 
 .lds-ellipsis div {
