@@ -58,12 +58,24 @@ nav {
 }
 
 #title {
-	font-size: clamp(24px, 4vw, 4vw);
+	font-size: 4vw;
 	transform: translateY(50%);
 	transition: all .35s;
 }
 
 .passage {
+	font-family: Bitmgothic;
+	background: linear-gradient(270deg, #add8e6, #90ee90, #f08080, #b799c8);
+    background-size: 400% 400%;
+	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	text-shadow: initial;
+	transform: translateY(-100%);
+	animation: gradient 10s infinite linear;
+}
+
+.passageborder {
+	color: #000;
 	font-family: Bitmgothic;
 }
 
@@ -106,7 +118,7 @@ nav {
 	flex-direction: row;
 	justify-content: space-evenly;
 	margin-top: 2em;
-	width: 325px;
+	width: 350px;
 }
 
 .greeter > a {
@@ -255,6 +267,12 @@ nav {
 	50% {
 		transform: translate3d(0, .15em, 0);
 	}
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0% 50% }
 }
 
 @media (min-width: 80em) {

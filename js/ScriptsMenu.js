@@ -26,6 +26,7 @@ $(window).on("load", function () {
       } else {
         $(".card, .settingsClose, .settingsbtn").addClass("hidden");
         setTimeout(function () {$("#setting, .soundpanel").removeClass("hidden");}, 400);
+        switchMode();
       }
       break;
   }
