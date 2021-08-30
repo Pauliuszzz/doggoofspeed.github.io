@@ -36,7 +36,7 @@ function refresh() {
   arcadeHistory = localStorage.getObj("ArcadeHistory");
   $(".flexmain, #score-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
-  $("#score-text").html("Score: " + score);
+  $("#score-text").html(`Score: ${score}`);
   loadInfo();
   shuffle(scenarios);
   $(".replydiv").hide();
@@ -82,7 +82,7 @@ function text() {
   $("#ButtonOne").html(scenarios[count].answer1);
   $("#ButtonTwo").html(scenarios[count].answer2);
   $("#ButtonThree").html(scenarios[count].answer3);
-  $("#score-text").html("Score: " + score);
+  $("#score-text").html(`Score: ${score}`);
   if (!scenarios[count].answer1) {
     $("#ButtonOne").hide();
   }
@@ -98,8 +98,8 @@ function text() {
 function reply1() {
   $("#reply-text").html(scenarios[count].reply1);
   $("#ButtonTwo, #ButtonThree").addClass("disabled");
-  score = score + scenarios[count].score1;
-  $(".xptext").html("+" + scenarios[count].score1 + "Xp");
+  score += scenarios[count].score1;
+  $(".xptext").html(`+${scenarios[count].score1}Xp`);
   if (scenarios[count].score1 == 1000) {
     kXP++;
   }
@@ -109,8 +109,8 @@ function reply1() {
 function reply2() {
   $("#reply-text").html(scenarios[count].reply2);
   $("#ButtonOne, #ButtonThree").addClass("disabled");
-  score = score + scenarios[count].score2;
-  $(".xptext").html("+" + scenarios[count].score2 + "Xp");
+  score += scenarios[count].score2;
+  $(".xptext").html(`+${scenarios[count].score2}Xp`);
   if (scenarios[count].score2 == 1000) {
     kXP++;
   }
@@ -120,8 +120,8 @@ function reply2() {
 function reply3() {
   $("#reply-text").html(scenarios[count].reply3);
   $("#ButtonOne, #ButtonTwo").addClass("disabled");
-  score = score + scenarios[count].score3;
-  $(".xptext").html("+" + scenarios[count].score3 + "Xp");
+  score += scenarios[count].score3;
+  $(".xptext").html(`+${scenarios[count].score3}Xp`);
   if (scenarios[count].score3 == 1000) {
     kXP++;
   }
@@ -155,7 +155,7 @@ function nextScenario() {
     arcadeStats[3] = Math.max(arcadeStats[3], kXP);
     $(".flexmain, #score-text").hide();
     $("#EndCard, #LevelCard").removeClass("hidden");
-    $("#EndScore").html("Your score: " + score + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>Matches played: " + arcadeStats[0]);
+    $("#EndScore").html(`Your score: ${score}<br>Highscore: ${arcadeStats[1]}<br>Average Score: ${Math.round(arcadeStats[2])}<br>Matches played: ${arcadeStats[0]}`);
     arcadeLevel();
     localStorage.setObj("ArcadeStats", arcadeStats);
     localStorage.setObj("ArcadeHistory", arcadeHistory);
@@ -245,26 +245,16 @@ function loadInfo() {
 
   switch (Math.floor(Math.random() * Math.floor(bgNumber))) {
     case 0:
-      $("body").css(
-        "background",
-        "repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)"
-      );
+      $("body").css("background", "repeating-linear-gradient(-45deg, transparent, transparent 3px, #2a2329 3px, #2a2329 30px ) fixed, linear-gradient(to bottom right, #F19, #0CF)");
       break;
     case 1:
-      $("body").css({
-        background: "url(../resources/statue.png) center repeat fixed, #008080",
-        "background-size": "50%",
-      });
+      $("body").css({background: "url(../resources/statue.png) center repeat fixed, #008080", "background-size": "50%",});
       if ($(window).width() >= 1280) {
         $("body").css("background-size", "25%");
       }
       break;
     case 2:
-      $("body").css({
-        background:
-          "url(../resources/pattern.jpg) center repeat fixed, #008080",
-        "background-size": "25%",
-      });
+      $("body").css({background: "url(../resources/pattern.jpg) center repeat fixed, #008080", "background-size": "25%",});
       if ($(window).width() >= 1280) {
         $("body").css("background-size", "10%");
       }

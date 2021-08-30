@@ -94,7 +94,7 @@ function arcadeLevel() {
 }
 
 function LevelUpA() {
-  arcadeStats[4] = arcadeStats[4] + 1
+  arcadeStats[4] += 1
   localStorage.setObj("ArcadeStats", arcadeStats);
   $(".aLevelUp").addClass("disabled");
   arcadeLevel();
@@ -173,7 +173,7 @@ function survivalLevel() {
 }
 
 function LevelUpS() {
-  survivalStats[4] = survivalStats[4] + 1
+  survivalStats[4] += 1
   localStorage.setObj("SurvivalStats", survivalStats);
   $(".sLevelUp").addClass("disabled");
   survivalLevel();

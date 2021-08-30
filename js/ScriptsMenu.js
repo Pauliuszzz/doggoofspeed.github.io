@@ -118,13 +118,13 @@ function levelInfo(x) {
 }
 
 //Story mode ending counter
-$("#M1").html("Endings achieved: " + localStorage.getObj("M1-Endings").filter((x) => x == 1).length + "/5");
+$("#M1").html(`Endings achieved: ${localStorage.getObj("M1-Endings").filter((x) => x == 1).length}/5`);
 if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length == 5) {
   $(".finM1").css("fill", "gold");
 }
 //Mission 2
 if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length > 0) {
-  $("#M2").html("Endings achieved: " + localStorage.getObj("M2-Endings").filter((x) => x == 1).length + "/10");
+  $("#M2").html(`Endings achieved: ${localStorage.getObj("M2-Endings").filter((x) => x == 1).length}/10`);
   if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length == 10) {
     $(".finM2").css("fill", "gold");
   }
@@ -134,7 +134,7 @@ if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length > 0) {
 }
 //Mission 3
 if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length > 0) {
-  $("#M3").html("Endings achieved: " + localStorage.getObj("M3-Endings").filter((x) => x == 1).length + "/7");
+  $("#M3").html(`Endings achieved: ${localStorage.getObj("M3-Endings").filter((x) => x == 1).length}/7`);
   if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length == 7) {
     $(".finM3").css("fill", "gold");
   }
@@ -144,7 +144,7 @@ if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length > 0) {
 }
 //Mission 4
 if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length > 0) {
-  $("#M4").html("Conspiracists found: " + localStorage.getObj("M4-Endings").filter((x) => x == 1).length + "/3");
+  $("#M4").html(`Conspiracists found: ${localStorage.getObj("M4-Endings").filter((x) => x == 1).length}/3`);
   if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length == 3) {
     $(".finM4").css("fill", "gold");
   }
@@ -154,7 +154,7 @@ if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length > 0) {
 }
 //Mission 5
 if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 2) {
-  $("#M5").html("Endings achieved: " + localStorage.getObj("M5-Endings").filter((x) => x == 1).length + "/12<br>Failures achieved: " + localStorage.getObj("M5-Failures").filter((x) => x == 1).length + "/17"
+  $("#M5").html(`Endings achieved: ${localStorage.getObj("M5-Endings").filter((x) => x == 1).length}/12<br>Failures achieved: ${localStorage.getObj("M5-Failures").filter((x) => x == 1).length}/17`
   );
   if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length == 12 && localStorage.getObj("M4-Failures").filter((x) => x == 1).length == 17) {
     $(".finM5").css("fill", "gold");
@@ -165,7 +165,7 @@ if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 2) {
 }
 //Mission 6
 if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
-  $("#M6").html("Endings achieved: " + localStorage.getObj("M6-Endings").filter((x) => x == 1).length + "/3");
+  $("#M6").html(`Endings achieved: ${localStorage.getObj("M6-Endings").filter((x) => x == 1).length}/3`);
   if (localStorage.getObj("M6-Endings").filter((x) => x == 1).length == 3) {
     $(".finM6").css("fill", "gold");
   }
@@ -175,8 +175,8 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
 }
 
 //Tells progress
-$("#ArcadeMode").html("Matches played: " + arcadeStats[0] + "<br>Highscore: " + arcadeStats[1] + "<br>Average Score: " + Math.round(arcadeStats[2]) + "<br>1000XP gained in a game: " + arcadeStats[3]);
-$("#SurvivalMode").html("Matches played: " + survivalStats[0] + "<br>Most scenarios survived: " + survivalStats[1] + "<br>Average scenarios survived: " + Math.round(survivalStats[2]) + "<br>Scenarios survived without taking damage in a row: " + survivalStats[3]);
+$("#ArcadeMode").html(`Matches played: ${arcadeStats[0]}<br>Highscore: ${arcadeStats[1]}<br>Average Score: ${Math.round(arcadeStats[2])}<br>1000XP gained in a game: ${arcadeStats[3]}`);
+$("#SurvivalMode").html(`Matches played: ${survivalStats[0]}<br>Most scenarios survived: ${survivalStats[1]}<br>Average scenarios survived: ${Math.round(survivalStats[2])}<br>Scenarios survived without taking damage in a row: ${survivalStats[3]}`);
 
 //Clears progress
 function resetEverything() {

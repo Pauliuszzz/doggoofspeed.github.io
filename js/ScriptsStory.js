@@ -13,7 +13,7 @@ if (localStorage.getObj("sound") == "false") {
   btnsfx3 = new Audio("../resources/btnsfx3.ogg");
   btnsfx4 = new Audio("../resources/btnsfx4.ogg");
   endCard = new Audio("../resources/endCard.ogg");
-  theme = new Audio("../resources/" + mission + ".ogg");
+  theme = new Audio(`../resources/${mission}.ogg`);
 }
 
 $(window).on("load", function () {

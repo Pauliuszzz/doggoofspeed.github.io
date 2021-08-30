@@ -48,7 +48,7 @@ function refresh() {
   $('#potionheal').addClass('disabledimg');
   $(".flexmain, #hp-text").show();
   $("#EndCard, #LevelCard").addClass("hidden");
-  $("#hp-text").html("-" + hp + "HP");
+  $("#hp-text").html(`-${hp}HP`);
   loadInfo();
   shuffle(scenarios);
   $(".replydiv").hide();
@@ -110,10 +110,10 @@ function reply1() {
     halfdmg = false;
     survivalStats[6] = Math.max(survivalStats[6], (scenarios[count].damage1 / 2))
     hp - (scenarios[count].damage1 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage1 / 2);
-    $(".hptext").html("-" + scenarios[count].damage1 / 2 + "HP");
+    $(".hptext").html(`-${scenarios[count].damage1 / 2}HP`);
   } else {
     hp - scenarios[count].damage1 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage1;
-    $(".hptext").html("-" + scenarios[count].damage1 + "HP");
+    $(".hptext").html(`-${scenarios[count].damage1}HP`);
   }
   if (scenarios[count].damage1 == 0) {
     noDmg++
@@ -134,10 +134,10 @@ function reply2() {
     halfdmg = false;
     survivalStats[6] = Math.max(survivalStats[6], (scenarios[count].damage2 / 2))
     hp - (scenarios[count].damage2 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage2 / 2);
-    $(".hptext").html("-" + scenarios[count].damage2 / 2 + "HP");
+    $(".hptext").html(`-${scenarios[count].damage2 / 2}HP`);
   } else {
     hp - scenarios[count].damage2 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage2;
-    $(".hptext").html("-" + scenarios[count].damage2 + "HP");
+    $(".hptext").html(`-${scenarios[count].damage2}HP`);
   }
   if (scenarios[count].damage2 == 0) {
     noDmg++
@@ -158,10 +158,10 @@ function reply3() {
     halfdmg = false;
     survivalStats[6] = Math.max(survivalStats[6], (scenarios[count].damage3 / 2))
     hp - (scenarios[count].damage3 / 2) <= 0 ? hp = 0 : hp = hp - (scenarios[count].damage3 / 2);
-    $(".hptext").html("-" + scenarios[count].damage3 / 2 + "HP");
+    $(".hptext").html(`-${scenarios[count].damage3 / 2}HP`);
   } else {
     hp - scenarios[count].damage3 <= 0 ? hp = 0 : hp = hp - scenarios[count].damage3;
-    $(".hptext").html("-" + scenarios[count].damage3 + "HP");
+    $(".hptext").html(`-${scenarios[count].damage3}HP`);
   }
   if (scenarios[count].damage3 == 0) {
     noDmg++
@@ -185,7 +185,7 @@ function reply() {
 
 function heal() {
   survivalStats[5] = Math.max(survivalStats[5], (100 - hp))
-  $(".hptext").html("+" + (100-hp) + "hp");
+  $(".hptext").html(`+${(100-hp)}HP`);
   potionused[0] = 1;
   hp = 100;
   bgswitch();
@@ -196,9 +196,9 @@ function heal() {
 
 function info() {
   potionused[1] = 1;
-  $("#ButtonOne").html(scenarios[count].answer1 + " [-" + scenarios[count].damage1 + "HP]")
-  $("#ButtonTwo").html(scenarios[count].answer2 + " [-" + scenarios[count].damage2 + "HP]")
-  $("#ButtonThree").html(scenarios[count].answer3 + " [-" + scenarios[count].damage3 + "HP]")
+  $("#ButtonOne").html(`${scenarios[count].answer1} [-${scenarios[count].damage1}HP]`)
+  $("#ButtonTwo").html(`${scenarios[count].answer2} [-${scenarios[count].damage2}HP]`)
+  $("#ButtonThree").html(`${scenarios[count].answer3} [-${scenarios[count].damage3}HP]`)
   $('#potioninfo').addClass('disabledimg');
 }
 
@@ -354,13 +354,13 @@ function loadInfo() {
 function bgswitch() {
   switch (bgvar) {
     case 0:
-      $("body").css("background", "rgb(" + hp/1.7 + "," + hp/3.3 + "," + hp/3.3 + ")");
+      $("body").css("background", `rgb(${hp/1.7},${hp/3.3},${hp/3.3})`);
       break;
     case 1:
-      $("body").css("background", "rgb(" + hp/3.3 + "," + hp/1.7 + "," + hp/3.3 + ")");
+      $("body").css("background", `rgb(${hp/3.3},${hp/1.7},${hp/3.3})`);
       break;
     case 2:
-      $("body").css("background", "rgb(" + hp/3.3 + "," + hp/3.3 + "," + hp/1.7 + ")");
+      $("body").css("background", `rgb(${hp/3.3},${hp/3.3},${hp/1.7})`);
       break;
   }
 }
