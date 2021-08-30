@@ -24,65 +24,65 @@ var survivalHistory = localStorage.getObj("SurvivalHistory");
 
 //Arcade Levels
 function arcadeLevel() {
-  $(".aLevelH2").html("Level " + arcadeStats[4]);
+  $(".aLevelH2").html(`Level ${arcadeStats[4]}`);
   switch (arcadeStats[4]) {
     case null:
     case 0:
-      $("#arcadeUpgrade").html("Matches played:<br><i>" + arcadeStats[0] + "/3</i>");
+      $("#arcadeUpgrade").html(`Matches played:<br><i>${arcadeStats[0]}/3</i>`);
       if (arcadeStats[0] >= 3) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 1:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/5000</i>");
+      $("#arcadeUpgrade").html(`Highscore:<br><i>${arcadeStats[1]}/5000</i>`);
       if (arcadeStats[1] >= 5000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 2:
-      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeStats[2]) + "/4000</i>");
+      $("#arcadeUpgrade").html(`Average Score:<br><i>${Math.round(arcadeStats[2])}/4000</i>`);
       if (Math.round(arcadeStats[2]) >= 4000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 3:
-      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeStats[3] + "/4</i>");
+      $("#arcadeUpgrade").html(`1000XP gotten in one game:<br><i>${arcadeStats[3]}/4</i>`);
       if (arcadeStats[3] >= 4) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 4:
-      $("#arcadeUpgrade").html("Get less than 1000XP in a match:<br><i>" + Math.min(...arcadeHistory) + "/1000</i>");
+      $("#arcadeUpgrade").html(`Get less than 1000XP in a match:<br><i>${Math.min(...arcadeHistory)}/1000</i>`);
       if (Math.min(...arcadeHistory) <= 1000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 5:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/6500</i>");
+      $("#arcadeUpgrade").html(`Highscore:<br><i>${arcadeStats[1]}/6500</i>`);
       if (arcadeStats[1] >= 6500) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 6:
-      $("#arcadeUpgrade").html("Average Score:<br><i>" + Math.round(arcadeStats[2]) + "/5000</i>");
+      $("#arcadeUpgrade").html(`Average Score:<br><i>${Math.round(arcadeStats[2])}/5000</i>`);
       if (Math.round(arcadeStats[2]) >= 5000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 7:
-      $("#arcadeUpgrade").html("1000XP gotten in one game:<br><i>" + arcadeStats[3] + "/7</i>");
+      $("#arcadeUpgrade").html(`1000XP gotten in one game:<br><i>${arcadeStats[3]}/7</i>`);
       if (arcadeStats[3] >= 7) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 8:
-      $("#arcadeUpgrade").html("Get less than 1000XP in a match:<br><i>" + Math.min(...arcadeHistory) + "/1000</i>");
+      $("#arcadeUpgrade").html(`Get less than 1000XP in a match:<br><i>${Math.min(...arcadeHistory)}/1000</i>`);
       if (Math.min(...arcadeHistory) <= 1000) {
         $(".aLevelUp").removeClass("disabled");
       }
       break;
     case 9:
-      $("#arcadeUpgrade").html("Highscore:<br><i>" + arcadeStats[1] + "/7500</i><br>Award: <i><br>More Scenarios</i>");
+      $("#arcadeUpgrade").html(`Highscore:<br><i>${arcadeStats[1]}/7500</i><br>Award: <i><br>More Scenarios</i>`);
       if (arcadeStats[1] >= 7500) {
         $(".aLevelUp").removeClass("disabled");
       }
@@ -103,65 +103,65 @@ function LevelUpA() {
 
 //Survival Levels
 function survivalLevel() {
-  $(".sLevelH2").html("Level " + survivalStats[4]);
+  $(".sLevelH2").html(`Level ${survivalStats[4]}`);
   switch (survivalStats[4]) {
     case null:
     case 0:
-      $("#survivalUpgrade").html("Matches played:<br><i>" + survivalStats[0] + "/3</i>");
+      $("#survivalUpgrade").html(`Matches played:<br><i>${survivalStats[0]}/3</i>`);
       if (survivalStats[0] >= 3) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 1:
-      $("#survivalUpgrade").html("Survive at least 6 scenarios:<br><i>" + survivalStats[1] + "/6</i>");
+      $("#survivalUpgrade").html(`Survive at least 6 scenarios:<br><i>${survivalStats[1]}/6</i>`);
       if (survivalStats[1] >= 6) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 2:
-      $("#survivalUpgrade").html("Scenarios survived on average:<br><i>" + Math.round(survivalStats[2]) + "/5</i>");
+      $("#survivalUpgrade").html(`Scenarios survived on average:<br><i>${Math.round(survivalStats[2])}/5</i>`);
       if (Math.round(survivalStats[2]) >= 5) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 3:
-      $("#survivalUpgrade").html("Scenarios survived without taking damage in a row:<br><i>" + survivalStats[3] + "/4</i>");
+      $("#survivalUpgrade").html(`Scenarios survived without taking damage in a row:<br><i>${survivalStats[3]}/4</i>`);
       if (survivalStats[3] >= 4) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 4:
-      $("#survivalUpgrade").html("Heal for 80HP or more in one match:<br><i>" + survivalStats[5] + "/80</i>");
+      $("#survivalUpgrade").html(`Heal for 80HP or more in one match:<br><i>${survivalStats[5]}/80</i>`);
       if (survivalStats[5] >= 80) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 5:
-      $("#survivalUpgrade").html("Survive at least 12 scenarios:<br><i>" + survivalStats[1] + "/12</i>");
+      $("#survivalUpgrade").html(`Survive at least 12 scenarios:<br><i>${survivalStats[1]}/12</i>`);
       if (survivalStats[1] >= 12) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 6:
-      $("#survivalUpgrade").html("Scenarios survived on average:<br><i>" + Math.round(survivalStats[2]) + "/10</i>");
+      $("#survivalUpgrade").html(`Scenarios survived on average:<br><i>${Math.round(survivalStats[2])}/10</i>`);
       if (Math.round(survivalStats[2]) >= 10) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 7:
-      $("#survivalUpgrade").html("Scenarios survived without taking damage in a row:<br><i>" + survivalStats[3] + "/7</i>");
+      $("#survivalUpgrade").html(`Scenarios survived without taking damage in a row:<br><i>${survivalStats[3]}/7</i>`);
       if (survivalStats[3] >= 7) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 8:
-      $("#survivalUpgrade").html("Have a shield protect you from 333 damage<br><i>" + survivalStats[6] + "/333</i>");
+      $("#survivalUpgrade").html(`Have a shield protect you from 333 damage<br><i>${survivalStats[6]}/333</i>`);
       if (survivalStats[6] == 333) {
         $(".sLevelUp").removeClass("disabled");
       }
       break;
     case 9:
-      $("#survivalUpgrade").html("Survive 24 scenarios:<br><i>" + survivalStats[1] + "/24</i>");
+      $("#survivalUpgrade").html(`Survive 24 scenarios:<br><i>${survivalStats[1]}/24</i>`);
       if (survivalStats[1] >= 24) {
         $(".sLevelUp").removeClass("disabled");
       }

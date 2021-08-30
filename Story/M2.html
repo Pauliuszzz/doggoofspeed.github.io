@@ -59,7 +59,7 @@
 
       function save() {
         localStorage.setObj("M2-Endings", endings);
-        $("#M2").html("Endings achieved: " + endings.filter((x) => x == 1).length + "/10");
+        $("#M2").html(`Endings achieved: ${endings.filter((x) => x == 1).length}/10`);
       }
     </script>
   </body>

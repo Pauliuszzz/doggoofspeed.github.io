@@ -58,7 +58,7 @@ nav {
 }
 
 #title {
-	font-size: max(7vw, 24px);/*24px*/;
+	font-size: max(7vw, 24px);
 	transform: translateY(50%);
 	transition: all .35s;
 }
@@ -195,6 +195,13 @@ nav {
 	border: thin solid #ddd;
 	background-color: rgba(0, 0, 0, .5);
 	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
+}
+
+.flow {
+	float: left;
+	margin: 5px -29px 5px 8px;
+	height: 24px;
+	width: 24px;
 }
 
 .trophy {
