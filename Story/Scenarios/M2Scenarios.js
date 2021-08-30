@@ -17,8 +17,8 @@ var scenarios = [
     scenario: "You were walking through the street when you overheard two guards talking.<br>- Eh, did ya see those bastards fighting? They were outa their minds<br>- Ye, it was crazy. Don't you want to join those bastards at the bar? You are pretty good.<br>- Nah, man. My boss said there is a bandit camp nearby. Duty is duty.",
   },
   {
-    scenario: "It was late at night when you overheard a  woman screaming:<br>A thieve! Give back my belongings or I'll have to notify the guards. Your face will be on the board. The whole town will try to catch ya!",
-    reply1: "It was dark, and you were tired. You didn't manage to catch the thieve.",
+    scenario: "It was late at night when you overheard a  woman screaming:<br>A thief! Give back my belongings or I'll have to notify the guards. Your face will be on the board. The whole town will try to catch ya!",
+    reply1: "It was dark, and you were tired. You didn't manage to catch the thief.",
     answer1: "Try to catch the thief",
     reply2: "After a minute you lost him. It was dark and you were tired. Tomorrow will be interesting.",
     answer2: "Follow the thief to his hideout",
@@ -26,7 +26,7 @@ var scenarios = [
     answer3: "Ignore it",
   },
   {
-    scenario: "You had a night's sleep. In the morning you decided to find some work and get some money, to stop doing nothing and to do something, to stand up and move your hands to improve your society, or yourself, to stop singing around, to stop rolling on the ground, to stop yawning all day round.",
+    scenario: "You had a night's sleep. In the morning you decided to find some work and get some money, to stop doing nothing and to do something, to stand up and move your hands to improve the society, or yourself, to stop singing around, to stop rolling on the ground, to stop yawning all day round.",
     answer1: "Go to the bar",
     answer2: "Read the announcement board",
     skipto2: 17,

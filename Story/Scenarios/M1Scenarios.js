@@ -40,7 +40,7 @@ var scenarios = [
     scenario: "After another hour of walking you see a beggar residing on the sidewalk. He is warni-, no, insisting that you to don't go through the shorter road.",
     reply1: 'To your question he answers with only one word: "Life".',
     answer1: "Ask how he ended up on the road.",
-    reply2: "\"You're the one who needs help. If you go the way you are heading, you will die a gruesome death.\" He sais with passion. Are those just an old man's tales, or is he serious?",
+    reply2: "\"You're the one who needs help. If you go the way you are heading, you will die a gruesome death.\" He said with passion. Are those just an old man's tales, or is he serious?",
     answer2: "Ask if he needs any help.",
     reply3: '"There are monsters, there are giant beasts that have taken lives of many travellers." He warns you.',
     answer3: "Ask why is the main road dangerous.",

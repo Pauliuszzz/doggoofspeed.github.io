@@ -1,6 +1,6 @@
 var scenarios = [
   {
-    scenario: "You now had some money... You were already in alot better position than the others living here. You bought a little shed in the outskirts of Ìgil. The future was looking bright.",
+    scenario: "You now had some money... You were already in a better position than the others living here. You bought a little shed in the outskirts of Ìgil. The future was looking bright.",
   },
   {
     scenario: "It was a lovely day when people began building something in the main street. They were building flower stands. What could they be celebrating was the only question in your head.",
