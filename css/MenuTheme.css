@@ -345,8 +345,8 @@ nav {
 		margin: 100% auto;
 	}
 
-	.trophy {
-		margin-top: -.5em;
+	.trophy, .flow {
+		margin-top: -.8em;
 	}
 
 	.reset {
@@ -390,7 +390,7 @@ nav {
 		font-size: 28px; 
 	}
 
-	.trophy {
+	.trophy, .flow {
 		margin-top: -1em;
 	}
 
