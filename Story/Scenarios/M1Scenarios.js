@@ -82,7 +82,7 @@ var scenarios = [
     answer3: "Run away screaming",
   },
   {
-    scenario: "You and the other villagers decided to go to Ìgil. You told them your problem and they recommended you go to the monastery. Apparently, they help people who suffer from nature's mischief.",
+    scenario: "You and the other villagers decided to go to Ìgil. You told them your problem and they recommended you go to the monastery. Apparently, they also suspected one of their member's corruption and were ready to help everyone who could help punish the sinner.",
     quit: true,
     ending1: true,
   },

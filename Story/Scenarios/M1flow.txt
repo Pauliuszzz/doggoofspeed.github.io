@@ -1,0 +1,11 @@
+ %%{init: {'theme': 'dark', 'themeVariables': { 'edgeLabelBackground': '#262829', 'labelTextColor': 'white'}}}%%
+graph TD
+    0[Start] --> 1[Monk encounter] --> 2[Crowd encounter]
+    2 --> 7[Join the crowd] --> 8[Evening with the villagers] --> 9[The hike to the forest] --> 10[Spooky forest] --> 3e[Departure to Ìgil]
+    2 --> 3[Ignore the crowd] --> 4[Persecutors' camp] --> 5[The threatening beggar] --> 6[The intersection]
+    6 --> 12[Long route] --> 13[Kidnapping] --> 13a[Successful escape]
+    12 --> 14
+    6 --> 14[Short route]
+    14 -->|Drink water| 15[Water poisoning] --> 15a[Hospital]
+    14 -->|Wash legs| 16[Electric eel] --> 16a[Hospital]
+    14 -->|Follow the stream| 17[Bandit camp] --> 17a[Successful escape]

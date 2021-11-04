@@ -57,6 +57,7 @@ nav {
 	justify-content: center;
 	position: fixed;
   animation: slidein .35s forwards;
+  backdrop-filter: blur(8px);
 }
 
 .button {

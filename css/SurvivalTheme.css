@@ -68,6 +68,7 @@ nav {
   align-items: center;
 	position: fixed;
   animation: slidein .35s forwards;
+  backdrop-filter: blur(8px);
 }
 
 hr {

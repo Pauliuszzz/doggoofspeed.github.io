@@ -55,6 +55,7 @@ nav {
 	justify-content: center;
 	position: fixed;
 	animation: slidein .35s forwards, glow 2s infinite;
+	backdrop-filter: blur(8px);
 }
 
 #title {
@@ -193,8 +194,8 @@ nav {
 .acrylic {
 	border-radius: 15px;
 	border: thin solid #ddd;
-	background-color: rgba(0, 0, 0, .5);
 	box-shadow: 0 0 15px 15px inset rgba(0, 0, 0, .1);
+	background-color: rgba(0, 0, 0, .5);
 }
 
 .flow {
