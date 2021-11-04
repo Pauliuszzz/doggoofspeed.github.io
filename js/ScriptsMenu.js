@@ -174,6 +174,30 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
   $("#M6-play").addClass("disabled");
 }
 
+//Shows flowcharts
+function flowchart(x) {
+  $("#flowchartcard").removeClass("hidden");
+  $("body").addClass("noscroll");
+  if (x == 1) {
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%" style="border:none;"></iframe>')
+  }
+  if (x == 2) {
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M2Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+  }
+  if (x == 3) {
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M3Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+  }
+  if (x == 4) {
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M4Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+  }
+  if (x == 5) {
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M5Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+  }
+  if (x == 6) {
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M6Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+  }
+}
+
 //Tells progress
 $("#ArcadeMode").html(`Matches played: ${arcadeStats[0]}<br>Highscore: ${arcadeStats[1]}<br>Average Score: ${Math.round(arcadeStats[2])}<br>1000XP gained in a game: ${arcadeStats[3]}`);
 $("#SurvivalMode").html(`Matches played: ${survivalStats[0]}<br>Most scenarios survived: ${survivalStats[1]}<br>Average scenarios survived: ${Math.round(survivalStats[2])}<br>Scenarios survived without taking damage in a row: ${survivalStats[3]}`);
