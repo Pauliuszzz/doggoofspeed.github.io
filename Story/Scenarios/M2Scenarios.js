@@ -1,6 +1,6 @@
 var scenarios = [
   {
-    scenario: "You woke up on the ground. It seems that you weren't the only one unlucky. People were sick due to malnutrition and they couldn't spare you a bed. The monastery was the only place they could go.",
+    scenario: "You woke up on the ground. It seems that you weren't the only onlucky one. People were sick due to malnutrition and they couldn't spare you a bed. The monastery was the only place they could go.",
     reply1: "They give you free food and you ask for more? That is very rude. It is no surprize they kicked you out for being a spoiled brat. ",
     answer1: "Ask for more food",
     reply2: "You thanked the monks and headed out.",
@@ -17,7 +17,7 @@ var scenarios = [
     scenario: "You were walking through the street when you overheard two guards talking.<br>- Eh, did ya see those bastards fighting? They were outa their minds<br>- Ye, it was crazy. Don't you want to join those bastards at the bar? You are pretty good.<br>- Nah, man. My boss said there is a bandit camp nearby. Duty is duty.",
   },
   {
-    scenario: "It was late at night when you overheard a  woman screaming:<br>A thief! Give back my belongings or I'll have to notify the guards. Your face will be on the board. The whole town will try to catch ya!",
+    scenario: "It was late at night when you overheard a woman screaming:<br>A thief! Give back my belongings or I'll have to notify the guards. Your face will be on the board. The whole town will try to catch ya!",
     reply1: "It was dark, and you were tired. You didn't manage to catch the thief.",
     answer1: "Try to catch the thief",
     reply2: "After a minute you lost him. It was dark and you were tired. Tomorrow will be interesting.",
@@ -54,7 +54,7 @@ var scenarios = [
     scenario: "You approached the table while the thugs were talking. You interrupted them by asking if they need help. They were quite sceptical of you. For a good reason.",
   },
   {
-    scenario: "They accepted you on one condition - telling somebody about their plans would cost your head. They were planning to rob lord Duding's mother's grave. They heard she was burried with a good amount of coin.",
+    scenario: "They accepted you on one condition - telling somebody about their plans would cost your head. They were planning to rob Lord Duding's mother's grave. They heard she was burried with a good amount of coin.",
     reply1: "You can't. Remember about your head.",
     answer1: "Run away, and tell the guards about their plan.",
     reply2: "Very well. I see you value your head.",

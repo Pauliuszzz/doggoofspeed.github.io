@@ -1,7 +1,7 @@
 var btnsfx1;
 var btnsfx2;
 var btnsfx3;
-var eggs = 0;
+var egg1 = 0; egg6 = 0;;
 
 if(window.localStorage==undefined){
   alert('Your browser doesn\'t support saving progress. \nTry again in a different browser.');
@@ -176,26 +176,37 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
 
 //Shows flowcharts
 function flowchart(x) {
-  $("#flowchartcard").removeClass("hidden");
+  $("#flowchartcard, #close").removeClass("hidden");
   $("body").addClass("noscroll");
   if (x == 1) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%" style="border:none;"></iframe>')
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%"></iframe>')
   }
   if (x == 2) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M2Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M2Flow.svg" width="90%" height="90%"></iframe>')
   }
   if (x == 3) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M3Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M3Flow.svg" width="90%" height="90%"></iframe>')
   }
   if (x == 4) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M4Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M4Flow.svg" width="90%" height="90%"></iframe>')
   }
   if (x == 5) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M5Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M5Flow.svg" width="90%" height="90%"></iframe>')
   }
   if (x == 6) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M6Flow.svg" width="100%" height="100%" style="border:none;"></iframe>')
+    $("#flowchartflex").html('<iframe src="Story/Scenarios/M6Flow.svg" width="90%" height="90%"></iframe>')
   }
+}
+
+function showvid() {
+  $("#videocard, #close").removeClass("hidden");
+  $("#videoflex").html('<video id="silentmov" style="border-radius: 16px" controls><source src="resources/Golly!.webm" type="video/webm">Your browser does not support the video tag.</video>')
+}
+
+function closemenu() {
+  $("body").removeClass("noscroll");
+  $("#flowchartcard, #videocard, #close").addClass("hidden");
+  $("#flowchartflex, #videoflex").html('')
 }
 
 //Tells progress
@@ -208,9 +219,18 @@ function resetEverything() {
   location.reload();
 }
 
-function egg() {
-  eggs++
-  if (eggs == 3) {
-    window.location.href = "egg/oldgame.html";
+function egg(x) {
+  if (x == 1) {
+    egg1++;
+    if (egg1 == 3) {
+      showvid();
+      egg1 = 0;
+    }
+  }
+  if (x == 6) {
+    egg6++
+    if (egg6 == 3) {
+      window.location.href = "egg/oldgame.html";
+    }
   }
 }

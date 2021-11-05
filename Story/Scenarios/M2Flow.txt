@@ -1,0 +1,13 @@
+graph TD
+    0(Hospital) --> 1(Money making) --> 2(Overhear a conversation) --> 3(Thief encounter) --> 4(Search for work) --> 5(Find thugs in a bar) --> 6(Try listening in) --> 7(Get caught) --> 8(Beat them up) --> fin(Live to see another day)
+    5 --> 9(Offer help) --> 10(Get accepted) --> 11(Deface a grave<br>and get them money) --> fin
+    5 --> 12(Ask bartender if he has a job) --> 13(Get invited to a fight club) --> 14a(Bet on Rogan Starrag) --> fin
+    13 --> 14b(Bet on Edgar Wiggins) --> fin
+    13 --> 14c(Bet on Nilus Stone) --> fin
+    4 --> 17(Announcement board) --> 18(Help with the<br>mice infestation) --> fin
+    21 --> 22(Contact bailiff) --> 23(Get your job) --> 24(Investigate) --> 25a(Get important info) --> fin
+    17 --> 21(Find info on grave robbers) -..-> 11
+    24 --> 25b(Get useless info) --> fin
+    17 --> 26(Contact Lord Dudding<br>and get the job) --> 27(Encounter bandits) --> 28(Try and fail to<br>catch the bandits) --> fin
+    27 --> 29(Help the injured villager) --> fin
+    style fin stroke:green,stroke-width:4px, stroke-dasharray: 5 5

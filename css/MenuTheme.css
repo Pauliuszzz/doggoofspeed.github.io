@@ -35,6 +35,11 @@ p, h2, h3 {
 	margin: 10px 20px;
 }
 
+h2 {
+	margin-top: 15px;
+	white-space: nowrap;
+}
+
 a {
 	color: white;
 	-webkit-tap-highlight-color: transparent;
@@ -243,15 +248,22 @@ nav {
 	width: 70%;
 }
 
-#flowchartflex {
+#flowchartflex, #videoflex {
 	margin-top: 2.5%;
 	display: flex;
 	justify-content: center;
 	width: 100%;
 	height: 100%;
+	animation: fadein .35s;
+	will-change: opacity, transform;
 }
 
-#flowchartcard {
+#videoflex {
+	margin: 0;
+	align-items: center;
+}
+
+#flowchartcard, #videocard {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -265,6 +277,22 @@ nav {
 .noscroll {
 	overflow-y: hidden;
   	overflow-x: hidden;
+}
+
+#silentmov {
+	width: min(480px, 100%);
+}
+
+#close {
+	z-index: 101;
+	position: absolute;
+	margin: 16px;
+	top: 0;
+	left: 0;
+}
+
+iframe {
+	border: none;
 }
 
 /* ANIMATIONS */
@@ -324,9 +352,14 @@ nav {
 		font-size: 24px; 
 	}
 
-	.icon, .settingsbtn {
+	.settingsbtn {
 		width: 48px;
 		height: 48px;
+	}
+
+	.icon {
+		width: 42px;
+		height: 42px;
 	}
 
 	.iconsmol {
