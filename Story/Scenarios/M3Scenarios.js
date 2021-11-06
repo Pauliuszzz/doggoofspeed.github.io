@@ -19,7 +19,7 @@ var scenarios = [
     skipto3: 8,
   },
   {
-    scenario: "You looked at your wallet, and it was empty. You had no choise but to go back home and get some money. When you came back, the price was even higher. That slimy merchant!",
+    scenario: "You looked at your wallet, and it was empty. You had no choice but to go back home and get some money. When you came back, the price was even higher. That slimy merchant!",
     answer1: "Pay the premium",
     skipto1: 6,
     answer2: "Don't buy the flowers",
@@ -35,7 +35,7 @@ var scenarios = [
     scenario: "You got the flowers... But at what cost?",
   },
   {
-    scenario: "At an extremely high cost infact! Paying so much in public was a bad idea. Some thugs saw you and your money. They came over, hit you in your head and your vision went dark...",
+    scenario: "At an extremely high cost in fact! Paying so much in public was a bad idea. Some thugs saw you and your money. They came over, hit you in your head and your vision went dark...",
     quit: true,
     ending1: true,
   },

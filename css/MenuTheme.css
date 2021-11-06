@@ -275,15 +275,14 @@ nav {
 }
 
 .noscroll {
-	overflow-y: hidden;
-  	overflow-x: hidden;
+	overflow: hidden;
 }
 
 #silentmov {
 	width: min(480px, 100%);
 }
 
-#close {
+#close, .up, .right {
 	z-index: 101;
 	position: absolute;
 	margin: 16px;
@@ -291,8 +290,38 @@ nav {
 	left: 0;
 }
 
+.up {
+	left: 50%;
+	transform: translateX(-100%) rotate(-90deg);
+}
+
+.down {
+	z-index: 101;
+	position: absolute;
+	margin: 16px;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-100%) rotate(90deg);
+}
+
+.right {
+	top: 50%;
+	transform: translateY(-100%) rotate(180deg);
+}
+
+.left {
+	z-index: 101;
+	position: absolute;
+	margin: 16px;
+	right: 0;
+	top: 50%;
+	transform: translateY(-100%);
+}
+
 iframe {
 	border: none;
+	transform: scale(2);
+	overflow: visible;
 }
 
 /* ANIMATIONS */

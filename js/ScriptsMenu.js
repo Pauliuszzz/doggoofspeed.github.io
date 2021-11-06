@@ -2,6 +2,7 @@ var btnsfx1;
 var btnsfx2;
 var btnsfx3;
 var egg1 = 0; egg6 = 0;;
+var iframex = 0, iframey = 0;
 
 if(window.localStorage==undefined){
   alert('Your browser doesn\'t support saving progress. \nTry again in a different browser.');
@@ -207,6 +208,35 @@ function closemenu() {
   $("body").removeClass("noscroll");
   $("#flowchartcard, #videocard, #close").addClass("hidden");
   $("#flowchartflex, #videoflex").html('')
+}
+
+function right() {
+  if(iframey < 70) {
+    iframey += 20;
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+  }
+}
+
+function left() {
+  if(iframey > -70) {
+    iframey -= 20;
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+  }
+}
+
+function up() {
+  if(iframex < 70) {
+    iframex += 20;
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+  }
+}
+
+
+function down() {
+  if(iframex > -70) {
+    iframex -= 20;
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+  }
 }
 
 //Tells progress
