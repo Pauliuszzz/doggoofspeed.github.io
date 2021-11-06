@@ -225,7 +225,7 @@ function left() {
 }
 
 function up() {
-  if(iframex < 70) {
+  if(iframex < 50) {
     iframex += 20;
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
   }
@@ -233,7 +233,7 @@ function up() {
 
 
 function down() {
-  if(iframex > -70) {
+  if(iframex > -50) {
     iframex -= 20;
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
   }
