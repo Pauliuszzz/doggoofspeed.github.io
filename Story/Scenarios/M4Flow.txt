@@ -1,0 +1,5 @@
+graph TD
+    0(Wake up) --> 1(Realise that you are<br>in a construction site) --> 2(Question the other workers) --> 3(Start thinking up ways of escape) --> 4(Live through the night) --> 5(Notice a fast shadow and follow him) --> 6(Find a letter in his tent) --> fin(Figure out who is<br>responsible for your kidnapping)
+    1 --> 8(Start searching for clues) --> 9(Follow a suspicious boxer to the canteen) --> 10(Follow the boxer to the bar) --> 11(Follow the boxer to his tent) --> 12(Find a letter in his tent) --> fin
+    8 --> 13(Find an odd building) --> 14(Try to it during the night) --> 15(Find out it has been locked) --> 16(Find a way to enter) --> 17(Enter the building) --> 18(Find a letter in the bedroom) --> fin
+    style fin stroke:green,stroke-width:4px, stroke-dasharray: 5 5

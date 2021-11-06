@@ -248,7 +248,7 @@ nav {
 	width: 70%;
 }
 
-#flowchartflex, #videoflex {
+#flowchartflex, #videoflex, #hintflex {
 	margin-top: 2.5%;
 	display: flex;
 	justify-content: center;
@@ -258,12 +258,16 @@ nav {
 	will-change: opacity, transform;
 }
 
-#videoflex {
+#videoflex, #hintflex {
 	margin: 0;
 	align-items: center;
 }
 
-#flowchartcard, #videocard {
+#hintflex {
+	flex-direction: column;
+}
+
+#flowchartcard, #videocard, #hintcard {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -282,7 +286,7 @@ nav {
 	width: min(480px, 100%);
 }
 
-#close, .up, .right {
+.up, .right {
 	z-index: 101;
 	position: absolute;
 	margin: 16px;
@@ -316,6 +320,14 @@ nav {
 	right: 0;
 	top: 50%;
 	transform: translateY(-100%);
+}
+
+#close {
+	z-index: 101;
+	position: absolute;
+	margin: 16px;
+	top: 0;
+	left: 0;
 }
 
 iframe {

@@ -3,6 +3,7 @@ var btnsfx2;
 var btnsfx3;
 var egg1 = 0; egg6 = 0;;
 var iframex = 0, iframey = 0;
+var flowcharts = localStorage.getObj("Flowcharts");
 
 if(window.localStorage==undefined){
   alert('Your browser doesn\'t support saving progress. \nTry again in a different browser.');
@@ -176,26 +177,31 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
 }
 
 //Shows flowcharts
-function flowchart(x) {
-  $("#flowchartcard, #close").removeClass("hidden");
+function flowchart(x, y) {
   $("body").addClass("noscroll");
-  if (x == 1) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%"></iframe>')
+  if(flowcharts[x-1] == 1) {
+    $("#flowchartcard, #close").removeClass("hidden");
+    if (x == 1) {
+      $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%"></iframe>')
+    }
+    if (x == 2) {
+      $("#flowchartflex").html('<iframe src="Story/Scenarios/M2Flow.svg" width="90%" height="90%"></iframe>')
+    }
+    if (x == 3) {
+      $("#flowchartflex").html('<iframe src="Story/Scenarios/M3Flow.svg" width="90%" height="90%"></iframe>')
+    }
+    if (x == 4) {
+      $("#flowchartflex").html('<iframe src="Story/Scenarios/M4Flow.svg" width="90%" height="90%"></iframe>')
+    }
+    if (x == 5) {
+      $("#flowchartflex").html('<iframe src="Story/Scenarios/M5Flow.svg" width="90%" height="90%"></iframe>')
+    }
+    if (x == 6) {
+      $("#flowchartflex").html('<iframe src="Story/Scenarios/M6Flow.svg" width="90%" height="90%"></iframe>')
+    }
   }
-  if (x == 2) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M2Flow.svg" width="90%" height="90%"></iframe>')
-  }
-  if (x == 3) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M3Flow.svg" width="90%" height="90%"></iframe>')
-  }
-  if (x == 4) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M4Flow.svg" width="90%" height="90%"></iframe>')
-  }
-  if (x == 5) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M5Flow.svg" width="90%" height="90%"></iframe>')
-  }
-  if (x == 6) {
-    $("#flowchartflex").html('<iframe src="Story/Scenarios/M6Flow.svg" width="90%" height="90%"></iframe>')
+  else {
+    clue(x, y);
   }
 }
 
@@ -204,10 +210,15 @@ function showvid() {
   $("#videoflex").html('<video id="silentmov" style="border-radius: 16px" controls><source src="resources/Golly!.webm" type="video/webm">Your browser does not support the video tag.</video>')
 }
 
+function clue(x, y) {
+  $("#hintcard, #close").removeClass("hidden");
+  $("#hinttext").html(`To unlock Flowchart Nr. ${x} find an easter egg.<br>Hint: ${y}`)
+}
+
 function closemenu() {
   $("body").removeClass("noscroll");
-  $("#flowchartcard, #videocard, #close").addClass("hidden");
-  $("#flowchartflex, #videoflex").html('')
+  $("#flowchartcard, #videocard, #hintcard, #close").addClass("hidden");
+  $("#flowchartflex, #videoflex, #hinttext").html('')
 }
 
 function right() {
@@ -230,7 +241,6 @@ function up() {
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
   }
 }
-
 
 function down() {
   if(iframex > -50) {
@@ -255,6 +265,8 @@ function egg(x) {
     if (egg1 == 3) {
       showvid();
       egg1 = 0;
+      flowcharts[0] = 1;
+      localStorage.setObj("Flowcharts", flowcharts);
     }
   }
   if (x == 6) {
