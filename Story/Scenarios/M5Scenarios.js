@@ -399,7 +399,7 @@ var scenarios = [
   },
   //Bar Bartender
   {
-    scenario: "The bartender lead you to the cellar. It was full of food and drinks. You were almost ready to have a feast, but then remembered that this wasn't a nice way to thank the bartender. While hungry, you were safe for now atleast.",
+    scenario: "The bartender lead you to the cellar. It was full of food and drinks. You were almost ready to have a feast, but then remembered that this wasn't a nice way to thank the bartender. While hungry, you were safe for now at least.",
   },
   {
     scenario: "Or at least that was what you thought. A few minutes later the door opened, and you saw 2 guards came in. Behind them was the bartender, playing with a bag of golden coins.",

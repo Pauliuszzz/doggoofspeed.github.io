@@ -1,7 +1,7 @@
 var btnsfx1;
 var btnsfx2;
 var btnsfx3;
-var egg1 = 0; egg6 = 0;;
+var egg1 = 0, egg2 = 0, egg3 = 0, egg4 = 0, egg5 = 0, egg6 = 0;
 var iframex = 0, iframey = 0;
 var flowcharts = localStorage.getObj("Flowcharts");
 
@@ -132,7 +132,7 @@ if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length > 0) {
   }
 } else if (localStorage.getObj("M1-Endings").filter((x) => x == 1).length == 0) {
   $("#M2").html("Finish previous mission to unlock");
-  $("#M2-play").addClass("disabled");
+  $("#M2-play, #M2-flow").addClass("disabled");
 }
 //Mission 3
 if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length > 0) {
@@ -142,7 +142,7 @@ if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length > 0) {
   }
 } else if (localStorage.getObj("M2-Endings").filter((x) => x == 1).length == 0) {
   $("#M3").html("Finish previous mission to unlock");
-  $("#M3-play").addClass("disabled");
+  $("#M3-play, #M3-flow").addClass("disabled");
 }
 //Mission 4
 if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length > 0) {
@@ -152,10 +152,10 @@ if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length > 0) {
   }
 } else if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length == 0) {
   $("#M4").html("Finish previous mission to unlock");
-  $("#M4-play").addClass("disabled");
+  $("#M4-play, #M4-flow").addClass("disabled");
 }
 //Mission 5
-if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 2) {
+if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 0) {
   $("#M5").html(`Endings achieved: ${localStorage.getObj("M5-Endings").filter((x) => x == 1).length}/12<br>Failures achieved: ${localStorage.getObj("M5-Failures").filter((x) => x == 1).length}/17`
   );
   if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length == 12 && localStorage.getObj("M4-Failures").filter((x) => x == 1).length == 17) {
@@ -163,7 +163,7 @@ if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 2) {
   }
 } else if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length < 3) {
   $("#M5").html("Find all the conspirators to unlock");
-  $("#M5-play").addClass("disabled");
+  $("#M5-play, #M5-flow").addClass("disabled");
 }
 //Mission 6
 if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
@@ -173,7 +173,7 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
   }
 } else if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length == 0) {
   $("#M6").html("Finish previous mission to unlock");
-  $("#M6-play").addClass("disabled");
+  $("#M6-play, #M6-flow").addClass("disabled");
 }
 
 //Shows flowcharts
@@ -262,6 +262,8 @@ function resetEverything() {
 function egg(x) {
   if (x == 1) {
     egg1++;
+    $("#title > *").addClass("shake");
+    setTimeout(function(){$("#title > *").removeClass("shake")}, 200);
     if (egg1 == 3) {
       showvid();
       egg1 = 0;
@@ -269,9 +271,24 @@ function egg(x) {
       localStorage.setObj("Flowcharts", flowcharts);
     }
   }
-  if (x == 6) {
-    egg6++
-    if (egg6 == 3) {
+  if (x == 2 && localStorage.getObj("M1-Endings").filter((x) => x == 1).length > 0) {
+    egg2++
+    $(".me").addClass("shake");
+    setTimeout(function(){$(".me").removeClass("shake")}, 200);
+    if (egg2 == 3) {
+      $(".me").html(`It's-a me,<br>Vytautas Butėnas🥰`)
+      egg2 = 0;
+      flowcharts[1] = 1;
+      localStorage.setObj("Flowcharts", flowcharts);
+    }
+  }
+  if (x == 3 && localStorage.getObj("M2-Endings").filter((x) => x == 1).length > 0) {
+    egg3++
+    $(".version").addClass("shake");
+    setTimeout(function(){$(".version").removeClass("shake")}, 200);
+    if (egg3 == 3) {
+      flowcharts[2] = 1;
+      localStorage.setObj("Flowcharts", flowcharts);
       window.location.href = "egg/oldgame.html";
     }
   }

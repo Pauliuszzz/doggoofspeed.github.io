@@ -7,7 +7,9 @@ var bgNumber;
 var btnsfx;
 var endCard;
 var theme;
+var egg5 = 0;
 var ladyvar = Math.floor(Math.random() * Math.floor(4))
+var flowcharts = localStorage.getObj("Flowcharts");
 //This contains info: Arcade matches, Highscore, Average Score, Max 1000 points in a game, Level
 var arcadeStats = localStorage.getObj("ArcadeStats");
 var arcadeHistory = localStorage.getObj("ArcadeHistory");
@@ -46,23 +48,34 @@ function refresh() {
 }
 
 $("#toggle").on("click", function (e) {
-  if (theme.paused) {
-    theme.play();
-    theme.addEventListener("timeupdate", function () {
-      var buffer = 0.44;
-      if (this.currentTime > this.duration - buffer) {
-        this.currentTime = 0;
-        this.play();
-      }
-    });
-    $("#toggle").html(
-      "<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>"
-    );
-  } else {
-    theme.pause();
-    $("#toggle").html(
-      "<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>"
-    );
+  if (flowcharts[4] == 0) egg5++;
+  if (egg5 <= 10) {
+    if (theme.paused) {
+      theme.play();
+      theme.addEventListener("timeupdate", function () {
+        var buffer = 0.44;
+        if (this.currentTime > this.duration - buffer) {
+          this.currentTime = 0;
+          this.play();
+        }
+      });
+      $("#toggle").html(
+        "<img src='../resources/apause.png' style='transform: scale(.95);' alt='Pause'>"
+      );
+    } else {
+      theme.pause();
+      $("#toggle").html(
+        "<img src='../resources/aplay.png' style='transform: scale(.95);' alt='Play'>"
+      );
+    }
+  }
+  else if (egg5 == 11) {
+    egg5++
+    $(".xptext").html(`Flowchart unlocked`);
+    $(".xpmessage").removeClass("hidden");
+    setTimeout(function () {$(".xpmessage").addClass("hidden")}, 1000);
+    flowcharts[4] = 1;
+    localStorage.setObj("Flowcharts", flowcharts);
   }
 });
 

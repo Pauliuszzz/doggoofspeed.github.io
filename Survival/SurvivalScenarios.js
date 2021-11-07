@@ -161,7 +161,7 @@ scenarios2 = [
   {
     //Poppy field
     scenario: "Out of nowhere a poppy field appeared. It wouldn't be a problem if your path went around it. But no, it went straight through.",
-    reply1: "Apparently you started screaming like an idiot, you ran like one too. Atleast that is what the townsfolk told you after you woke up in a hospital. They didn't let you out for 2 days.",
+    reply1: "Apparently you started screaming like an idiot, you ran like one too. At least that is what the townsfolk told you after you woke up in a hospital. They didn't let you out for 2 days.",
     answer1: "Have a mental breakdown",
     damage1: 20,
     reply2: "When walking you hear something behind the bushes (probably wolves). Oh no. OH NO. <b>OH FUCK!</b>.",

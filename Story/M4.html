@@ -43,6 +43,7 @@
 		<p id='M4'></p>
 		<a href='../index.html' class='icon-only'><img src='../resources/home.svg' alt='Home'></a>
 		<a href='./M4.html' class='icon-only'><img src='../resources/refresh.svg' alt='Refresh'></a>
+		<a href="./M5.html" class="icon-only"><img src="../resources/forward.svg" alt="Forward"/></a>
 	</div>
 	<div class='hidden acrylic' id='TheoCard'>
 		<h3>The Conspirator is:</h3>
@@ -79,6 +80,7 @@
 		<option value="Jonathan">
 		<option value="Rogan">
 		<option value="Brother">
+		<option value="Novac">
 		<option value="Edgar">
 		<option value="Finn">
 		<option value="Nilus">
@@ -88,6 +90,7 @@
 		<option value="Stone">
 		<option value="Dudding">
 		<option value="Hopkins">
+		<option value="Darwin">
 		<option value="Wiggins">
 		<option value="Hilton">
 		<option value="Starrag">
@@ -100,6 +103,7 @@
 	<script src='../js/ScriptsStory.js' defer></script>
 	<script src='Scenarios/M4Scenarios.js' async></script>
 	<script>
+		var flowcharts = localStorage.getObj("Flowcharts");
 		var endings = localStorage.getObj('M4-Endings');
 		var quit = false;
 		var count = 0;
@@ -124,10 +128,17 @@
 			}
 			save();
 		}
-  			else {
-    			$('.wrong').removeClass('hidden');
-				setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
-			}
+		else if (x == 'Novac Darwin' && flowcharts[3] == 0){
+			flowcharts[3] = 1;
+			localStorage.setObj("Flowcharts", flowcharts);
+			$('.wrong').html('<h1>Wrong answer,<br>but a flowchart<br>has been unlocked</h1>')
+    		$('.wrong').removeClass('hidden');
+			setTimeout(function(){ $('.wrong').addClass('hidden'); $('.wrong').html('<h1>Wrong<br>Answer</h1>')}, 3000);
+		}
+  		else {
+    		$('.wrong').removeClass('hidden');
+			setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
+		}
 	}
 
 	function validateStarrag() {
@@ -143,10 +154,17 @@
 			}
 			save();
 		}
-  			else {
-				$('.wrong').removeClass('hidden');
-				setTimeout(function(){ $('.wrong').addClass('hidden'); }, 3000);
-			}
+		else if (x == 'Novac Darwin' && flowcharts[3] == 0){
+			flowcharts[3] = 1;
+			localStorage.setObj("Flowcharts", flowcharts);
+			$('.wrong').html('<h1>Wrong answer,<br>but a flowchart<br>has been unlocked</h1>')
+    		$('.wrong').removeClass('hidden');
+			setTimeout(function(){ $('.wrong').addClass('hidden'); $('.wrong').html('<h1>Wrong<br>Answer</h1>')}, 3000);
+		}
+		else {
+			$('.wrong').removeClass('hidden');
+			setTimeout(function(){ $('.wrong').addClass('hidden'); }, 3000);
+		}
 	}
 
 	function validateDudding() {
@@ -162,10 +180,17 @@
 			}
 			save();
 		}
-  			else {
-    			$('.wrong').removeClass('hidden');
-				setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
-			}
+		else if (x == 'Novac Darwin' && flowcharts[3] == 0){
+			flowcharts[3] = 1;
+			localStorage.setObj("Flowcharts", flowcharts);
+			$('.wrong').html('<h1>Wrong answer,<br>but a flowchart<br>has been unlocked</h1>')
+    		$('.wrong').removeClass('hidden');
+			setTimeout(function(){ $('.wrong').addClass('hidden'); $('.wrong').html('<h1>Wrong<br>Answer</h1>')}, 3000);
+		}
+  		else {
+    		$('.wrong').removeClass('hidden');
+			setTimeout(function(){ $('.wrong').addClass('hidden');}, 3000);
+		}
 	}
 
 	function theoHint() {
@@ -210,9 +235,9 @@
 		$('.buttondiv').show();
 		quit = scenarios[count].quit;
 		text();
-			if (localStorage.getObj('sound') == 'true') {
-				btnsfx4.play();
-			}
+		if (localStorage.getObj("sound") == true) {
+    		btnsfx4.play();
+  		}
 	}
 	</script>
 </body>
