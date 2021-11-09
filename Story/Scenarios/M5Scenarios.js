@@ -200,9 +200,13 @@ var scenarios = [
   },
   {
     scenario: "So, you were going to go for the gate. Luckily for you there was no need for preparations, as you would have to just sneak to the other side of the wall. The hardest part was waiting for midnight.<br>It was time for you to move. You were waiting for the guards to turn around and the moment they did, you started going for the exit. You were already past the gate when you heard someone shouting at you. Why are they here so early? Were they just late when you were making the guard patrol list?<br>You were so shocked, that you froze. Too bad the guards didn't. They caught up very quickly. Only then you remembered to calm yourself down. Too bad that didn't help escaping the guards. You were caught and placed under constant watch.",
+    quit: true,
+    failure9: true,
   },
   {
     scenario: "So, you were going to go for the gate. Luckily for you there was no need for preparations, as you would have to just sneak to the other side of the wall. The hardest part was waiting for midnight.<br>When the time came, you quietly walked to the gate. The guards were so distracted, they didn't even notice you. Around 5 min. later they moved. You slowly looked around and after making sure everything is safe you slowly walked out. When you were about 20 meters from the fence you noticed that the guards came. Too bad your choice to go at it slowly only hindered the escape.<br>Nevertheless you were caught and placed under constant watch, throwing away all your hopes.",
+    quit: true,
+    failure10: true,
   },
   //RUN!!!
   {
@@ -238,7 +242,7 @@ var scenarios = [
     ending6: true,
   },
   {
-    scenario: "The guard was most definatelly going to see you. You had to act quick.",
+    scenario: "The guard was most definitelly going to see you. You had to act quick.",
     answer1: "Continue hiding in the tree",
     reply2: "You climbed down and offered him a deal to which he somehow agreed to: He was going to leave you alone and in exchange lord Dudding was going to grant him a plot of land. It was quite brave of you to offer something that wasn't yours, but at least he left you alone.",
     answer2: "Try bribing the guard",
@@ -249,12 +253,12 @@ var scenarios = [
   {
     scenario: "You continued hiding, but there really wasn't much you could do. You were cought and beaten to death.",
     quit: true,
-    failure9: true,
+    failure11: true,
   },
   {
     scenario: "You jumped from the tree and you were going to run, but your legs hurt so bad from the fall, you could barely walk. The guard was quick, and he hit you so hard that you blacked out.",
     quit: true,
-    failure10: true,
+    failure12: true,
   },
   {
     scenario: "Now you had to meet lord Dudding. That wasn't very hard, as the guards easily let you through after hearing your horrible story.",
@@ -269,7 +273,7 @@ var scenarios = [
     answer2: "Jump through the window",
   },
   {
-    scenario: "The only thing left now was to meet Lord Dudding himself.<br>That in itself wasn't awfully hard. Everyone knew where he lived and getting through the guoard was a breeze after they heard your story.",
+    scenario: "The only thing left now was to meet Lord Dudding himself.<br>That in itself wasn't awfully hard. Everyone knew where he lived and getting through the guard was a breeze after they heard your story.",
     quit: true,
     ending8: true,
   },
@@ -299,7 +303,7 @@ var scenarios = [
   {
     scenario: "You continued hiding. The footprints didn't stop. You were soon surrounded by a group of guards. There really was no explanation of how you didn't see them, but it was too late.",
     quit: true,
-    failure11: true,
+    failure13: true,
   },
   {
     scenario: "You quickly ran over to Lord Dudding's palace. You ran so quickly, that there were no mysterious footprints in the world that could catch you. With your horror story you managed to get through the guards and meet Dudding himself.",
@@ -319,12 +323,12 @@ var scenarios = [
   {
     scenario: "You jumped and landed. You landed fairly poorly, as you leg now ached. Too bad that the sound of the fall also invited two guards. Now your leg was the least of your worries.",
     quit: true,
-    failure12: true,
+    failure14: true,
   },
   {
     scenario: "You started singing after a few seconds the entire graveyard was full of diffrent voices. Who knew that the dead really liked singing... Just kidding, you were so exhausted from all the running you started hallucinating. The guards easily tracked you down and your escape attempt was over.",
     quit: true,
-    failure13: true,
+    failure15: true,
   },
   {
     scenario: "You quickly ran over to Lord Dudding's palace. You ran so quickly, that there was no ghost in the world that could catch you. With your horror story you managed to get through the guards and meet Dudding himself.",
@@ -363,7 +367,7 @@ var scenarios = [
   {
     scenario: "The guy picked you up and pinned to the wall. He said \"That chair was for my friend and as I can tell, you ain't my friend\". At the same time the front doors opened, and 2 guards came in. Too bad you and the guy who pinned you to the wall easily grabbed other people's attension. The guards easily recognised you and you were a dead man.",
     quit: true,
-    failure14: true,
+    failure16: true,
   },
   //Bar Door
   {
@@ -375,7 +379,7 @@ var scenarios = [
   {
     scenario: "The wardrobe was big and so were its doors. It took you quite a few seconds just to open the door. Closing the doors from the inside would have been difficult too, but the guards were already on the second floor. You were caught",
     quit: true,
-    failure15: true,
+    failure17: true,
   },
   {
     scenario: "You quickly slipped behind the wardrobe. It was ancient. Only a few seconds later the guards were already on the second floor. They quickly checked the insides of the wardrobe, they checked under the bed and then left. That is it, they left.",
@@ -390,7 +394,7 @@ var scenarios = [
   {
     scenario: "You jumped through the window. At the exact moment, your feet left the ground, you started feeling like you were falling to your death. And indeed, you died. You weren't a 20-year-old who could do anything he wanted. Your body failed you and so you became a puddle of organs.",
     quit: true,
-    failure16: true,
+    failure18: true,
   },
   {
     scenario: "Although you were happy, you remembered what you had to do quite quickly. You ran to warn Lord Dudding. He had to be aware of the conspiracy against him.",
@@ -404,6 +408,6 @@ var scenarios = [
   {
     scenario: "Or at least that was what you thought. A few minutes later the door opened, and you saw 2 guards came in. Behind them was the bartender, playing with a bag of golden coins.",
     quit: true,
-    failure17: true,
+    failure19: true,
   },
 ];

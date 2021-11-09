@@ -1,0 +1,30 @@
+graph LR
+    0(Set out to escape) --> 1(Create a plan) --> 2(Decide to organise a riot) --> 3(Try to find someone trusted by the workers) --> 3a(Fail to recruit the brute) --> fail1(Failure)
+    3 --> 4(Successfuly recruit a farmer) --> 5(Think of ways to expand your influence) --> 6(Put out posters) --> fail1
+    5 --> 7(Invite a random group of friends) --> fail1
+    5 --> 10(Recruit more farmers) --> 11(Decide on how to riot) --> 12(Start randomly attacking the guards) --> fail1
+    11 --> 13(Fucking die) --> fail1
+    11 --> 14(Just start rioting) --> 15(Successfuly attract more rioters) --> fin1(Successful escape)
+    1 --> 16(Try to sneak out at night) --> 17(Pick the best opportunity) --> 17a(Decide how to act<br>in case of an emergency) --> 18(Decide how fast you plan on going) -->|4| fin2(Successful escape)
+    18 -->|5| fail2(Failure)
+    1 --> 35(RUN!!!) --> 36(Run to the monastery) --> 37(Hide in the money tree) --> 38(Run away as fas as possible) --> fin3(Successful escape)
+    37 --> 39(Wait a bit to make sure the guards are away) --> 40(Accidentally draw attention<br>of the guards) --> 40a(Try to stay still) --> fail3(Failure)
+    40 --> 41(Try to run away) --> fail3
+    40 --> 42(Try to bribe the guard) --> fin3
+    36 --> 43(Hide inside the monastery) --> fin3
+    35 --> 45(Run to the graveyard) --> 46(Decide where to hide) --> 47(Hind behind a tombstone) --> 48(Get spooked) --> fin3
+    48 --> fail3
+    46 --> 50(Hind behind a tree) --> 51(Hear a strange sound) --> fin3
+    51 -->|2| fail3
+    35 --> 54(Run to the bar) --> 55(Try to blend in) --> 56(Explain your situation) --> fin3
+    55 --> 57(Stay silent) --> fail3
+    54 --> 59(Run out of the bar through the back door) --> 60(Door is locked) --> 60a(Run to the second floor) --> 61(Hide inside a wardrobe) --> fail3
+    60a --> 62(Hide behind the wardrobe) --> 63(Avoid getting detected) --> 64(Exit the bar through the front door) --> fin3
+    63 --> 64a(Exit through the window) --> fail3
+    54 --> 65(Ask the bartender for a place to hide) --> 66(Top 10 anime betrayals of all time) --> fail3
+    style fin1 stroke:green,stroke-width:4px, stroke-dasharray: 5 5
+    style fin2 stroke:green,stroke-width:4px, stroke-dasharray: 5 5
+    style fin3 stroke:green,stroke-width:4px, stroke-dasharray: 5 5
+    style fail1 stroke:red,stroke-width:4px, stroke-dasharray: 5 5
+    style fail2 stroke:red,stroke-width:4px, stroke-dasharray: 5 5
+    style fail3 stroke:red,stroke-width:4px, stroke-dasharray: 5 5

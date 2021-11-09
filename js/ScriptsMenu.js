@@ -156,9 +156,9 @@ if (localStorage.getObj("M3-Endings").filter((x) => x == 1).length > 0) {
 }
 //Mission 5
 if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length > 0) {
-  $("#M5").html(`Endings achieved: ${localStorage.getObj("M5-Endings").filter((x) => x == 1).length}/12<br>Failures achieved: ${localStorage.getObj("M5-Failures").filter((x) => x == 1).length}/17`
+  $("#M5").html(`Endings achieved: ${localStorage.getObj("M5-Endings").filter((x) => x == 1).length}/12<br>Failures achieved: ${localStorage.getObj("M5-Failures").filter((x) => x == 1).length}/19`
   );
-  if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length == 12 && localStorage.getObj("M4-Failures").filter((x) => x == 1).length == 17) {
+  if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length == 12 && localStorage.getObj("M5-Failures").filter((x) => x == 1).length == 19) {
     $(".finM5").css("fill", "gold");
   }
 } else if (localStorage.getObj("M4-Endings").filter((x) => x == 1).length < 3) {

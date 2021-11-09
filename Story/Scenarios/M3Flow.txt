@@ -1,1 +1,11 @@
- 
+graph TD
+    0(Reflect on your journey) --> 1(Notice people building kiosks) --> 2(Think about<br>buying a flower) --> 3(Ask for a discount) --> 4(Get scammed) --> fin(Get kidnapped)
+    2 --> 2b(Try to buy for the full price) --> 4
+    1 --> 8(Explore the main street) --> 9(Notice Finn's stand) --> 10(Investigate the<br>suspicious trader) --> 11(Investigate his stand) --> fin
+    10 --> 13(Follow him to a<br>construction site) --> 14(Ask around) --> fin
+    13 --> 15(Continue following the merchant) --> fin
+    9 --> 16(Search for flowers to sell) --> 17(Go to the forest) --> 18(Find a camp) --> 18a(Get away) --> 18b(Set up a flower stand) --> fin2(Get kidnapped anyway)
+    18 --> 19(Investigate the camp) --> fin
+    16 --> 20(Pick some flowers) --> 20a(Breathe a sigh of relief) --> 20b(Realise that you managed<br>to avoid getting kidnapped)--> fin2
+    style fin stroke:red,stroke-width:4px, stroke-dasharray: 5 5
+    style fin2 stroke:red,stroke-width:4px, stroke-dasharray: 5 5

@@ -1,7 +1,7 @@
 graph TD
     0(Start) --> 1(Meet monk) --> 2(Meet the persecuting crowd)
     2 --> 7(Join the crowd) --> 8(Evening with the villagers) --> 9(Hike to the forest) --> 10(Get spooked) --> 3e(Follow the returning villagers to Ìgil) --> fin
-    2 --> 3(Ignore the crowd) --> 4(Examin the persecutors' camp) --> 5(Meet the threatening beggar) --> 6(The intersection)
+    2 --> 3(Ignore the crowd) --> 4(Examine the persecutors' camp) --> 5(Meet the threatening beggar) --> 6(The intersection)
     6 --> 12(Long route) --> 13(Get kidnapped) --> 13a(Bandit camp) --> 13b(Successful escape) --> fin
     12 --> 14
     6 --> 14(Short route)

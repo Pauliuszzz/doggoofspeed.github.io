@@ -10,7 +10,7 @@ var scenarios = [
   },
   //Brother Theo
   {
-    scenario: 'The workers were tired. When approached they looked like they were about to cry. "Another one" said a worker as he bit the dust from exhaustion. You really wanted to help them, but you truly couldn\'t.',
+    scenario: 'The workers were tired. Their eyes were red and it seemed like they had been druged. Although you felt fine, you probably weren\'t supposed to. When approached they looked like they were about to cry. "Another one" said a worker as he bit the dust from exhaustion. You really wanted to help them, but you truly couldn\'t.',
     reply1: '"The middle of Ìgil, can\'t you see?" one worker said. And indeed, only now you noticed the humble houses and the dusty streets. Although you were in the city, the construction grounds were hidden from the town by a giant fence.',
     answer1: "Ask what's this place",
     reply2: '"I don\'t really know, but it looks like it is going to be a tower..." one worker said',
