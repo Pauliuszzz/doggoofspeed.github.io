@@ -337,8 +337,6 @@ nav {
 
 iframe {
 	border: none;
-	transform: scale(2);
-	overflow: visible;
 }
 
 .shake {

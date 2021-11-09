@@ -4,6 +4,17 @@ var btnsfx3;
 var egg1 = 0, egg2 = 0, egg3 = 0, egg4 = 0, egg5 = 0, egg6 = 0;
 var iframex = 0, iframey = 0;
 var flowcharts = localStorage.getObj("Flowcharts");
+var z;
+var mobile;
+
+let details = navigator.userAgent;
+let regexp = /android|iphone|kindle|ipad/i;
+let isMobileDevice = regexp.test(details);
+if (isMobileDevice) {
+  mobile = 1;
+} else {
+  mobile = 0;
+}
 
 if(window.localStorage==undefined){
   alert('Your browser doesn\'t support saving progress. \nTry again in a different browser.');
@@ -177,9 +188,11 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
 }
 
 //Shows flowcharts
-function flowchart(x, y) {
+function flowchart(x, y, s) {
+  z = s;
   $("body").addClass("noscroll");
   if(flowcharts[x-1] == 1) {
+    if(mobile == 1) z = 2*z
     $("#flowchartcard, #close").removeClass("hidden");
     if (x == 1) {
       $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%"></iframe>')
@@ -199,6 +212,7 @@ function flowchart(x, y) {
     if (x == 6) {
       $("#flowchartflex").html('<iframe src="Story/Scenarios/M6Flow.svg" width="90%" height="90%"></iframe>')
     }
+    $('#flowchartflex').css("transform", `scale(${z})`);
   }
   else {
     clue(x, y);
@@ -222,30 +236,30 @@ function closemenu() {
 }
 
 function right() {
-  if(iframey < 70) {
-    iframey += 20;
-    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+  if(iframey < (35*z)) {
+    iframey += 40;
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 
 function left() {
-  if(iframey > -70) {
-    iframey -= 20;
-    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+  if(iframey > -(35*z)) {
+    iframey -= 40;
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 
 function up() {
-  if(iframex < 50) {
+  if(iframex < (35*z)) {
     iframex += 20;
-    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 
 function down() {
-  if(iframex > -50) {
+  if(iframex > -(35*z)) {
     iframex -= 20;
-    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%)`)
+    $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 

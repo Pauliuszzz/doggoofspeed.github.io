@@ -205,6 +205,16 @@
               failures[16] = 1;
             }
             break;
+          case "failure18":
+            if (failures[17] == 0) {
+              failures[17] = 1;
+            }
+            break;
+          case "failure19":
+            if (failures[18] == 0) {
+              failures[18] = 1;
+            }
+            break;
         }
         if (endings == null) {
           endings = 0;
@@ -214,7 +224,7 @@
         }
         localStorage.setObj("M5-Endings", endings);
         localStorage.setObj("M5-Failures", failures);
-        $("#M5").html(`Endings achieved: ${endings.filter((x) => x == 1).length}/12<br>Failures achieved: ${failures.filter((x) => x == 1).length}/17`);
+        $("#M5").html(`Endings achieved: ${endings.filter((x) => x == 1).length}/12<br>Failures achieved: ${failures.filter((x) => x == 1).length}/19`);
         $("div#EndCard").removeClass("hidden");
       }
     </script>
