@@ -343,6 +343,12 @@ iframe {
 	animation: shake .2s;
 }
 
+@media (max-width: 80em) {
+	iframe {
+		transform: scale(2);
+	}
+}
+
 /* ANIMATIONS */
 
 @keyframes glow {

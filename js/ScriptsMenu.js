@@ -2,7 +2,7 @@ var btnsfx1;
 var btnsfx2;
 var btnsfx3;
 var egg1 = 0, egg2 = 0, egg3 = 0, egg4 = 0, egg5 = 0, egg6 = 0;
-var iframex = 0, iframey = 0;
+var iframex, iframey;
 var flowcharts = localStorage.getObj("Flowcharts");
 var z;
 var mobile;
@@ -11,9 +11,9 @@ let details = navigator.userAgent;
 let regexp = /android|iphone|kindle|ipad/i;
 let isMobileDevice = regexp.test(details);
 if (isMobileDevice) {
-  mobile = 1;
+  mobile = 2;
 } else {
-  mobile = 0;
+  mobile = 1;
 }
 
 if(window.localStorage==undefined){
@@ -189,10 +189,11 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
 
 //Shows flowcharts
 function flowchart(x, y, s) {
+  iframex = 0;
+  iframey = 0;
   z = s;
   $("body").addClass("noscroll");
   if(flowcharts[x-1] == 1) {
-    if(mobile == 1) z = 2*z
     $("#flowchartcard, #close").removeClass("hidden");
     if (x == 1) {
       $("#flowchartflex").html('<iframe src="Story/Scenarios/M1Flow.svg" width="90%" height="90%"></iframe>')
@@ -236,28 +237,28 @@ function closemenu() {
 }
 
 function right() {
-  if(iframey < (35*z)) {
+  if(iframey < (40*z*mobile)) {
     iframey += 40;
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 
 function left() {
-  if(iframey > -(35*z)) {
+  if(iframey > -(40*z*mobile)) {
     iframey -= 40;
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 
 function up() {
-  if(iframex < (35*z)) {
+  if(iframex < (40*z*mobile)) {
     iframex += 20;
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
 }
 
 function down() {
-  if(iframex > -(35*z)) {
+  if(iframex > -(40*z*mobile)) {
     iframex -= 20;
     $("#flowchartflex").css("transform", `translate(${iframey}%, ${iframex}%) scale(${z})`)
   }
