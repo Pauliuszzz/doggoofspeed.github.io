@@ -47,13 +47,10 @@ function text() {
   switch (undefined) {
     case scenarios[count].answer1:
       $("#ButtonOne").hide();
-      break;
     case scenarios[count].answer2:
       $("#ButtonTwo").hide();
-      break;
     case scenarios[count].answer3:
       $("#ButtonThree").hide();
-      break;
   }
   if (!scenarios[count].answer1 && !scenarios[count].answer2 && !scenarios[count].answer3) {
     $("#ButtonFour").removeClass("disabled");
@@ -139,62 +136,47 @@ function nextScenario(mission) {
   if (localStorage.getObj("sound") == true) {
     btnsfx4.play();
   }
+  if (mission == 6 && count == 1) roadblock();
 }
 
 //Ending Counter
 function endingcounter() {
   switch (Object.keys(scenarios[count]).pop()) {
     case "ending1":
-      if (endings[0] == 0) {
         endings[0] = 1;
-      }
       break;
     case "ending2":
-      if (endings[1] == 0) {
         endings[1] = 1;
-      }
       break;
     case "ending3":
-      if (endings[2] == 0) {
         endings[2] = 1;
-      }
       break;
     case "ending4":
-      if (endings[3] == 0) {
         endings[3] = 1;
-      }
       break;
     case "ending5":
-      if (endings[4] == 0) {
         endings[4] = 1;
-      }
       break;
     case "ending6":
-      if (endings[5] == 0) {
         endings[5] = 1;
-      }
       break;
     case "ending7":
-      if (endings[6] == 0) {
         endings[6] = 1;
-      }
       break;
     case "ending8":
-      if (endings[7] == 0) {
         endings[7] = 1;
-      }
       break;
     case "ending9":
-      if (endings[8] == 0) {
         endings[8] = 1;
-      }
       break;
     case "ending10":
-      if (endings[9] == 0) {
         endings[9] = 1;
-      }
       break;
   }
-  $("div#EndCard").removeClass("hidden");
+  if (Object.keys(scenarios[count]).pop() == "failure") {
+    $("div#FailureCard").removeClass("hidden");
+  } else {
+    $("div#EndCard").removeClass("hidden");
+  }
   save();
 }

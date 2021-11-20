@@ -274,6 +274,30 @@ input {
   }
 }
 
+@keyframes drunk {
+  0% {
+    transform: rotate(0deg) scale(1);
+    filter: saturate(1);
+  }
+  40% {
+    transform: rotate(10deg) scale(2);
+    filter: saturate(2);
+  }
+  80% {
+    transform: rotate(-20deg) scale(0.7);
+    filter: saturate(4);
+  }
+  90% {
+    transform: rotate(720deg) scale(0.1);
+    filter: saturate(10);
+  }
+  100% {
+    transform: rotate(1080deg) scale(1);
+    filter: saturate(1);
+  }
+}
+
+
 @keyframes glow {
   from {
     transform: translateY(0);

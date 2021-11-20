@@ -186,6 +186,10 @@ if (localStorage.getObj("M5-Endings").filter((x) => x == 1).length > 0) {
   $("#M6").html("Finish previous mission to unlock");
   $("#M6-play, #M6-flow").addClass("disabled");
 }
+//Epilogue
+if (localStorage.getObj("M6-Endings").filter((x) => x == 1).length != 3) {
+  $("#M7-play").addClass("disabled");
+}
 
 //Shows flowcharts
 function flowchart(x, y, s) {

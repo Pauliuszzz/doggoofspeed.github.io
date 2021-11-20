@@ -111,10 +111,11 @@ nav {
 }
 
 .flexmissions > div:nth-child(2), .flexarcadesurvival > div:nth-child(2), .flexsettings > div:nth-child(2) { animation-delay: .3s }
-.flexmissions > div:nth-child(3), .flexarcadesurvival > div:nth-child(3), .flexsettings > div:nth-child(3) { animation-delay: .6s }
-.flexmissions > div:nth-child(4), .flexsettings > div:nth-child(4) { animation-delay: .9s }
-.flexmissions > div:nth-child(5), .flexsettings > div:nth-child(5) { animation-delay: 1.2s }
-.flexmissions > div:nth-child(6), .flexsettings > div:nth-child(6) { animation-delay: 1.3s }
+.flexmissions > div:nth-child(3) .flexsettings > div:nth-child(3) { animation-delay: .6s }
+.flexmissions > div:nth-child(4) { animation-delay: .9s }
+.flexmissions > div:nth-child(5) { animation-delay: 1.2s }
+.flexmissions > div:nth-child(6) { animation-delay: 1.5s }
+.flexmissions > div:nth-child(7) { animation-delay: 1.8s }
 
 .card {
 	margin: 10px 10px 5px;
@@ -343,6 +344,17 @@ iframe {
 	animation: shake .2s;
 }
 
+#M7-play {
+	height: auto;
+	padding: .125em 1em;
+	border: thin solid #ddd;
+	margin: 7px;
+	border-radius: 10px;
+	background: transparent;
+	display: block;
+	transition: .35s;
+}
+
 @media (max-width: 80em) {
 	iframe {
 		transform: scale(2);
@@ -453,6 +465,12 @@ iframe {
 		height: 10em;
 		margin: 1%;
 		padding-top: 1em;
+	}
+	
+	div.epilogue {
+		width: 25%;
+		height: auto;
+		padding-top: 0 !important;
 	}
 
 	nav {

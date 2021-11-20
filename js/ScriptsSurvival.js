@@ -11,6 +11,9 @@ var ladyvar = Math.floor(Math.random() * Math.floor(4));
 var halfdmg;
 var noDmg = 0;
 var replied = false;
+var drunk = 0;
+var flowcharts = localStorage.getObj("Flowcharts");
+var forever = true;
 //This contains info: Survival matches, Max survived, Average survival, Max times in a row without taking damage, Level
 var survivalStats = localStorage.getObj("SurvivalStats");
 var survivalHistory = localStorage.getObj("SurvivalHistory");
@@ -24,6 +27,8 @@ if (localStorage.getObj("sound") == false) {
   btnsfx4 = new Audio("../resources/btnsfx4.ogg");
   endCard = new Audio("../resources/endCard.ogg");
   deadCard = new Audio("../resources/deadCard.ogg");
+  beer = new Audio("../resources/beer.ogg");
+  burp = new Audio("../resources/burp.ogg");
 }
 
 $(window).on("load", function () {
@@ -184,6 +189,7 @@ function reply() {
 }
 
 function heal() {
+  drunk++;
   survivalStats[5] = Math.max(survivalStats[5], (100 - hp))
   $(".hptext").html(`+${(100-hp)}HP`);
   potionused[0] = 1;
@@ -195,6 +201,7 @@ function heal() {
 }
 
 function info() {
+  drunk++;
   potionused[1] = 1;
   $("#ButtonOne").html(`${scenarios[count].answer1} [-${scenarios[count].damage1}HP]`)
   $("#ButtonTwo").html(`${scenarios[count].answer2} [-${scenarios[count].damage2}HP]`)
@@ -203,6 +210,7 @@ function info() {
 }
 
 function shield() {
+  drunk++;
   potionused[2] = 1;
   halfdmg = true;
   $('#potionshield').addClass('disabledimg');
@@ -256,6 +264,13 @@ function nextScenario() {
     btnsfx4.play();
   }
   replied = false;
+  if (drunk == 3) {
+    flowcharts[5] = 1;
+    localStorage.setObj("Flowcharts", flowcharts);
+    $("html").css("animation", "drunk 10s infinite");
+    beer.play();
+    setTimeout(function () {burp.play()}, 7000);
+  }
 }
 
 function loadInfo() {

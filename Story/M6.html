@@ -41,18 +41,36 @@
       <a href="../index.html" class="icon-only"><img src="../resources/home.svg" alt="Home"/></a>
       <a href="./M6.html" class="icon-only"><img src="../resources/refresh.svg" alt="Refresh"/></a>
     </div>
+    <div class="hidden acrylic" id="FailureCard">
+      <h3>Mission 6 Failed</h3>
+      <a href="../index.html" class="icon-only"><img src="../resources/home.svg" alt="Home"/></a>
+      <a href="./M6.html" class="icon-only"><img src="../resources/refresh.svg" alt="Refresh"/></a>
+    </div>
     <nav class="acrylic">
-      <button id="ButtonFour"class="button acrylic" style="margin: .5em" onClick="nextScenario(1)">Continue</button>
+      <button id="ButtonFour"class="button acrylic" style="margin: .5em" onClick="nextScenario(6)">Continue</button>
     </nav>
     <script src="../js/universal.js"></script>
     <script src="../js/zepto.min.js" defer></script>
     <script src="../js/ScriptsStory.js" defer></script>
-    <script src="Scenarios/M1Scenarios.js" async></script>
+    <script src="Scenarios/M6Scenarios.js" async></script>
     <script>
       var endings = localStorage.getObj("M6-Endings");
+      var endings4 = localStorage.getObj("M4-Endings");
       var quit = false;
       var count = 0;
       var mission = "M6";
+
+      function roadblock() {
+        if (endings4[0] == 0) {
+          $("#ButtonOne").addClass("disabled").html("Discover more culprits in \"Conspiracy\" to unlock");
+        }
+        if (endings4[1] == 0) {
+          $("#ButtonTwo").addClass("disabled").html("Discover more culprits in \"Conspiracy\" to unlock");
+        }
+        if (endings4[2] == 0) {
+          $("#ButtonThree").addClass("disabled").html("Discover more culprits in \"Conspiracy\" to unlock");
+        }
+      }
 
       function save() {
         localStorage.setObj("M6-Endings", endings);

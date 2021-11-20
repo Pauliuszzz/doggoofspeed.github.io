@@ -130,7 +130,7 @@ button:active {
   will-change: opacity, transform;
 }
 
-#EndCard, #TheoCard, #StarragCard, #DuddingCard, .hintbox {
+#EndCard, #FailureCard, #TheoCard, #StarragCard, #DuddingCard, .hintbox {
   margin: 1em auto;
   width: 75%;
   padding: 1em;
