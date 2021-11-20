@@ -355,9 +355,9 @@ iframe {
 	transition: .35s;
 }
 
-@media (max-width: 80em) {
+@media (max-width: 600px) {
 	iframe {
-		transform: scale(2);
+		transform: scale(1.5);
 	}
 }
 

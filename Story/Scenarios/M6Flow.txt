@@ -1,0 +1,11 @@
+graph TD
+    8 --> 9a(Incarcerate him)
+    0(Meet Lord Dudding) --> 1(Explain the situation) --> 2(Pursue Theo) --> 3(Think what to do next) --> 4(Expose his misdeeds to the public) --> 5(Start a protest) --> 6(Look for him in the monastery) --> 7(Find Theo's shelter) --> 8(Judge him) --> 9(Kill him) --> fin1(Epilogue)
+    4 -->|2| fin2
+    6 -->|2| fin2
+    7 --> fin2
+    1 --> 10(Pursue Starrag) --> 11(Think what to do next) --> 12(Give yourself the advantage) -->|2| fin2(Fail)
+    12 --> fin1
+    1 --> 19(Pursue Finn) --> 20(Think what to do next) --> 21(Wait for the reinforcements to come) --> 22(Take Finn into custody) --> 23(Never see him again) --> fin1
+    style fin1 stroke:green,stroke-width:4px, stroke-dasharray: 5 5
+    style fin2 stroke:red,stroke-width:4px, stroke-dasharray: 5 5
